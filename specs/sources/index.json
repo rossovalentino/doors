@@ -1,0 +1,1971 @@
+{
+  "multiwindow_apps_20261022": {
+    "status": "implementation_pending_native_validation_P12_partial",
+    "design": "docs/design/multiwindow-apps-20261022.md",
+    "master_audit": "docs/design/p11-p12-master-audit-20261022.md",
+    "scope": "Shared native per-window models; Explorer/Preview owned tab transfer after destination admission; independent app windows; Explorer-style document captions; tabbed Notes with undo/save guards and Markdown source toolbar; wallpaper-tinted native chrome; Preview crop and one-level image undo; twelve-process capacity and versioned telemetry",
+    "limits": {
+      "app_windows": 4,
+      "document_tabs": 8,
+      "processes": 12,
+      "sections": 32,
+      "window_owners": 8,
+      "window_total": 24,
+      "registered_and_captured_bytes": 201326592,
+      "preview_image_and_undo_bytes_per_window": 16777216
+    },
+    "native_image": null,
+    "evidence": {},
+    "phase_complete": false,
+    "user_goal_complete": false,
+    "historical_prerequisites_missing": [
+      "reports/runs/host-1791804427914736400-32560/report.json",
+      "reports/runs/host-1792303566097472600-17116/report.json"
+    ],
+    "owner_volume_used": false,
+    "limitations": [
+      "No exact1:1 qualification",
+      "Full Unicode/IME/accessibility/clipboard and dynamic/fractional DPI remain P12 gaps",
+      "Preview PDF/Office/playback/OCR and full editing providers unavailable",
+      "Monitor GPU/network/control providers unavailable",
+      "CMD/PowerShell/WSL engines unavailable",
+      "No sustained frame cadence/input-to-photon claim",
+      "Native admission/recovery/resource pressure and concurrent edit conflict qualification pending"
+    ]
+  },
+  "reference_apps_20261022": {
+    "status": "bounded_native_checkpoint_P12_partial",
+    "design": "docs/design/reference-apps-20261022.md",
+    "scope": "Monitor ten destinations plus CPU/Memory drilldowns; Preview reference tabs/toolbar/canvas/rail/filmstrip/information layout; native glyphs, measured text, matched paint/hit bounds, real bounded existing providers",
+    "owner_reference_index": "reports/runs/reference-apps-owner-20261022/index.json",
+    "development_image": "out/images/host-1792646238237329400-21896-desktop-dev/image.json",
+    "runtime_source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+    "evidence": {
+      "build": {
+        "report": "reports/runs/host-1792646238237329400-21896/report.json",
+        "sha256": "77b0e4021ce10d772b88bc524632ee3f04211bbb28ac482290b4fab53ea092c6",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 3
+      },
+      "full_host": {
+        "report": "reports/runs/host-1792645717405923900-29208/report.json",
+        "sha256": "f0269d86fe9ce952b0f3cb12d8b9d4e5499f97122df8527ed3bb5b92c12a7d9c",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      },
+      "captures": {
+        "report": "reports/runs/host-1792646345819545300-29844/report.json",
+        "sha256": "8443e16d9cbc71e0356f90279f0c72d1e481a53abdf4fa3e458556c9ff11f096",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 58
+      },
+      "monitor": {
+        "report": "reports/runs/host-1792645257563497100-10380/report.json",
+        "sha256": "c6dd34ce1a9ae794ef30f926c4e2256d9bc9e6af5bec78ebaf2d313cef4f2f2a",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 21
+      },
+      "preview": {
+        "report": "reports/runs/host-1792646365322138800-33104/report.json",
+        "sha256": "0e1bbebb0b2234c8798d6605c5848578dd178df009718bf74ecec8db99381e43",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 34
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792645459154832100-30028/report.json",
+        "sha256": "b0a42a1850c8aa1ee708b2b1387725247b3eab42aea65564fc65d8d7ff7596c0",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 9
+      },
+      "assets": {
+        "report": "reports/runs/host-1792646037420132000-17112/report.json",
+        "sha256": "87053efbc8485b95a89da6927a4c3d303cf0e5b51122d0c2519aba3e93f19b7b",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      }
+    },
+    "host_tests": {
+      "passed": 812,
+      "summaries": 40,
+      "nonzero": 34,
+      "zero": 6
+    },
+    "affected_host": {
+      "command": "cargo test --locked -p door-preview --all-targets",
+      "exit_code": 0,
+      "log": "target/reference-wrap-host.log",
+      "sha256": "1f7cd61c00ba9840e790af5dd852ca9d2f519222a39fd9490bde2068a5c98db2",
+      "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "passed": 16,
+      "summaries": [
+        15,
+        1
+      ],
+      "scope": "After the final two Preview paint-only fixes; overlaps the full812 suite and is not added to it"
+    },
+    "host_captures_report": "reports/runs/host-1792646345819545300-29844/report.json",
+    "native_selection": {
+      "boots": 6,
+      "monitor": 1,
+      "preview": 3,
+      "explorer": 2,
+      "scope": "Selected current suites; Monitor/Explorer run on the earlier image with identical executable/core payloads. Additional earlier reruns are not summed."
+    },
+    "source_bridge": {
+      "changed_paths": [
+        "desktop/preview/src/presentation.rs"
+      ],
+      "prior_monitor_explorer_source": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+      "full_host_assets_source": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+      "final_runtime_source": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "changed_executable": "door-preview",
+      "changed_initfs_payload": "bin/door-preview.elf",
+      "scope": "Only Preview presentation changes: text format disabled state, empty-pane wrapping, stacked Convert instruction overlap. Full host812 plus16 affected tests; current native Preview. Independent exact source/artifact review.",
+      "unchanged_artifacts": 22,
+      "total_artifacts": 23,
+      "unchanged_initfs_file_payloads": 19,
+      "total_initfs_file_payloads": 20
+    },
+    "review_receipt": "reports/runs/reference-apps-review-20261022/review.json",
+    "out_budget": {
+      "bytes": 9187571074,
+      "limit_bytes": 20000000000,
+      "within_budget": true,
+      "scope": "out only; target/reports excluded"
+    },
+    "owner_storage": "out/session/user.raw absent; not initialized",
+    "historical_gate_blocker": "Missing original reports/runs/host-1791804427914736400-32560/report.json; do not recreate historical evidence",
+    "limits": [
+      "Exact pixel equality and sustained60FPS/input latency are not established",
+      "Startup/network/GPU/control providers unavailable; logs are bounded session observations",
+      "Preview PDF/Office/media playback/OCR/recording/crop/markup/batch providers unavailable",
+      "Opaque themed client material, integer DPI and ASCII atlas remain; Unicode filenames use visible fallback",
+      "Terminal/Settings native workflows were not repeated in this revision; preserve their prior evidence",
+      "P12 partial; owner storage absent and historical P00 evidence missing"
+    ]
+  },
+  "evidence_availability_20261022": {
+    "date": "2026-10-22",
+    "status": "owner_deleted_reports_runs_during_cleanup",
+    "owner_confirmed": true,
+    "recovery_requested": false,
+    "historical_report_links": "missing; preserved historical claims/identities are not reconstructed or requalified",
+    "new_evidence_policy": "compact current tests/captures only; existing owner volumes untouched"
+  },
+  "explorer_revision_20261022": {
+    "status": "implemented_bounded_native_diagnostic_passed_final_shared_run_pending",
+    "design": "docs/design/explorer-modern.md",
+    "references": "docs/references/explorer-20261022/sources.json",
+    "actual_icons": "HaydenReeve/WindowsIcons commit9442e3ef014520d4337409a24be10b970a36d66b; installedEdgePDF; pinnedSegoeFluent glyphs",
+    "layout": "40DIPintegratedtabs,roundednavigation,fullcommandbar,190DIPrail,centered208DIPheroes,sixcolumnsat2048",
+    "behavior": "relevantformatpreview,object-checkedmetadata/rename/deletion,usercreateddurabletags,tabstates,scrolledrail/pane,actualfoldercontentsicons",
+    "native_diagnostic": "reports/runs/host-1792606069303592400-11016/report.json",
+    "native_diagnostic_report_sha256": "91d91b76ba6f479461ae7c0c023951ac67f6312c6c6fb1c1423ac06a1da28d81",
+    "native_behavior_check": "explorer-modern-native passed; two boots, object26 preserved, exact rawdisk tag/payload audit, leaked0 each",
+    "aggregate_report_status": "failed source stability from concurrent other app source/docs; Explorer guest sources unchanged",
+    "private_volume_used": true,
+    "owner_volume_used": false,
+    "full_windows_backend_parity": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "phase_closed": false,
+    "remaining": "final stable common image/test;critic; clipboard/checked cross-directory transfer/share/trash/recursive-size/timestamps/PDF/Office/media/3D providers; fractional scaling, fullUnicode and exact LCD subpixel raster parity",
+    "native_diagnostic_evidence_available": false,
+    "evidence_loss": "Owner confirmed deletion duringcleanup; earlier diagnostic facts observed but artifacts absent. Compact final rerun pending.",
+    "host_tests": 757,
+    "host_executables": 36,
+    "host_log": "target/explorer-all-host.log; exit0",
+    "critic": "reports/critics/p12-explorer-modern-critic.json; final narrow bounds fix verified in focused host tests"
+  },
+  "terminal_native_preview_20261022": {
+    "status": "native_preview_diagnostic_passed_final_shared_validation_pending",
+    "design": "docs/design/terminal-native-preview.md",
+    "native_engine": "bounded native file commands",
+    "frame": "existing trusted Window server integrated56DIP caption",
+    "material": "cached trusted selected-wallpaper blur",
+    "fonts": "pinned Segoe UI and Cascadia Mono",
+    "icons": "pinned WindowsIcons, Segoe Fluent and owner-approved official profile artwork",
+    "cmd": "runtime_required",
+    "powershell": "runtime_required",
+    "wsl": "work_in_progress",
+    "full_command_compatibility": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "host_tests": 756,
+    "native_report": "removed_by_owner_cleanup_current_regeneration_pending",
+    "native_checks": 12,
+    "native_boots": 2,
+    "source_stable": false,
+    "owner_volume_used": false,
+    "verify": "reports/runs/host-1792606052917956000-23184/report.json;dependency review lock mismatch",
+    "phase_closed": false
+  },
+  "settings_reference_20261022": {
+    "status": "visual_refinement_native_validation_pending",
+    "pages": 6,
+    "design": "docs/design/advanced-settings.md",
+    "references": "docs/references/advanced-settings-20261022/sources.json",
+    "original_device_frames": true,
+    "device_screen_art": "Pinned Windows classic Bloom, light and dark,18 lossless density/form/theme variants",
+    "theme_selection": "Actual View palette dark value; no manual per-device wallpaper toggle",
+    "device_selection": "Validated OEM ACPI profile2 laptop,8 tablet, otherwise neutral monitor",
+    "typography": "Pinned hinted Segoe UI,8 cached styles including regular16/semibold16",
+    "shadows": "Existing finite Gaussian cached coverage, no per-frame blur",
+    "disk_inventory": "Authenticated read-only GPT extents and device capabilities",
+    "host_preview": "reports/runs/host-1792605680207877200-4824/report.json",
+    "diagnostic_native": "reports/runs/host-1792603189607660900-11340/report.json",
+    "diagnostic_checks": 18,
+    "native_source_stability": false,
+    "verify": "reports/runs/host-1792604089881300400-6712/report.json; failed dependency review lock mismatch",
+    "full_windows_functionality": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "phase_closed": false
+  },
+  "advanced_settings_20261021": {
+    "status": "implemented_partial_validation_pending",
+    "design": "docs/design/advanced-settings.md",
+    "pages": 16,
+    "total_surfaces": 33,
+    "native_mutation": "version-checked typed registry edits and explicit path creation",
+    "other_available": "endpoint discovery, launch environment and identity snapshots, local object metadata, explicit diagnostics, existing durable desktop preferences",
+    "full_windows_functionality": false,
+    "missing_providers": "devices/drivers, disks/partitions, networking, service control, environment management, boot policy, group policy, event logs, scheduling, accounts/groups, ACL/sharing, metrics, power, backup",
+    "review_findings_fixed": 4,
+    "phase_closed": false
+  },
+  "native_viewer_title_gestures": {
+    "status": "accepted_bounded",
+    "design": "docs/design/native-viewer-title-gestures.md",
+    "critic": "reports/critics/p12-native-viewer-title-critic.json",
+    "critic_sha256": "e94b89a5844a58eff7dce2959930fceeadeeef521142f5407f6fb531a9be539d",
+    "tested_source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+    "source_files": 2176,
+    "host_tests": 701,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792591251813159200-20208/report.json",
+    "desktop_report": "reports/runs/host-1792591397538206500-4716/report.json",
+    "desktop_checks": 265,
+    "desktop_sessions": 10,
+    "motion_report": "reports/runs/host-1792592768657718900-23532/report.json",
+    "motion_checks": 19,
+    "retained_report": "reports/runs/host-1792592950790636300-22216/report.json",
+    "drag_frames": 136,
+    "drag_paths": [
+      136,
+      0,
+      0,
+      0
+    ],
+    "compose_ticks": 141,
+    "transfer_ticks": 65,
+    "tick_ms": 10,
+    "mean_elapsed_paint_scope_ms": 15.147058823529411,
+    "maximum_ms": 30,
+    "fps_qualified": false,
+    "visible_sdl_quality": "unqualified",
+    "fractional_scale": "open",
+    "automatic_mode": [
+      2560,
+      1600
+    ],
+    "actual_integer_scale": 2,
+    "owner_volume_used": false,
+    "new_packages_or_unsafe": false,
+    "actual_artifacts": 21,
+    "unchanged_artifacts": 19,
+    "phase_closed": false,
+    "cumulative_verify": "Legacy8GB reservation stops beforetests atout16893274320B,under20GBcap;originalmissingP00report32560",
+    "owner_concepts": "docs/design/unified-apps-owner-concepts.md",
+    "next": "Settings Advanced with real administration providers, then Explorer/Preview/Terminal/Monitor; existing Snap/Search/trash/performance work remains open"
+  },
+  "cached_move_composition": {
+    "status": "accepted_bounded",
+    "design": "docs/design/cached-window-shadows.md",
+    "critic": "reports/critics/p12-cached-move-critic.json",
+    "critic_sha256": "c585591abeb1937de6930ba08ce81fd859f4b4d0f4edd6d7af3f9942afc24f76",
+    "tested_source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+    "host_tests": 693,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792584182484269500-18476/report.json",
+    "desktop_report": "reports/runs/host-1792584328840936600-16756/report.json",
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "motion_report": "reports/runs/host-1792585335870637000-5768/report.json",
+    "motion_checks": 19,
+    "retained_report": "reports/runs/host-1792585469473964700-23656/report.json",
+    "drag_paint_scopes": 137,
+    "drag_paths": [
+      136,
+      0,
+      0,
+      1
+    ],
+    "compose_ticks": 133,
+    "transfer_ticks": 75,
+    "tick_millis": 10,
+    "mean_elapsed_drag_scope_ms": 15.182481751824817,
+    "maximum_drag_scope_ms": 30,
+    "measurement": "Monotonic elapsed including scheduling/input; one extra taskbar paint compared with136scene baseline; not pure CPU, FPS or input latency",
+    "actual_artifacts": 21,
+    "unchanged_artifacts": 19,
+    "changed_artifacts": [
+      "Window",
+      "Workspace"
+    ],
+    "new_packages_or_unsafe": false,
+    "documents_source": "assets/icons/windows/documents-current.source.json",
+    "fps_qualified": false,
+    "phase_closed": false,
+    "cumulative_verify": "Legacy8GB admission reserve fails before tests atout16892989473B; below20GB retention cap. Original missing P00 report32560 still blocks check-spec.",
+    "next": "Native host display/DPI and truthful scale controls, modern Explorer tabs/header/columns and selection, drag-to-restore/Snap, Search presentation and shared hover; then durable trash and real app providers. P12 remains partial."
+  },
+  "motion_measurement": {
+    "status": "accepted_bounded",
+    "design": "docs/design/motion-measurement.md",
+    "critic": "reports/critics/p12-motion-measurement-critic.json",
+    "critic_sha256": "682d0fed3345b9ac842dff582c7978047b27de40e7df0fd19db67ffb042d1b32",
+    "tested_source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+    "host_tests": 684,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792580358816014400-22272/report.json",
+    "desktop_report": "reports/runs/host-1792579067070844800-12664/report.json",
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "motion_report": "reports/runs/host-1792580220114666900-13752/report.json",
+    "motion_checks": 19,
+    "motion_drag_paints": 136,
+    "motion_drag_compose_ticks": 303,
+    "motion_drag_transfer_ticks": 66,
+    "clock_resolution_ms": 10,
+    "mean_drag_elapsed_ms": 27.13235294117647,
+    "measurement": "Monotonic elapsed returned paint scopes; not pure CPU time or input latency",
+    "retained_report": "reports/runs/host-1792580479064519200-19836/report.json",
+    "guest_changed": [
+      "Window only;20/21 actual artifacts unchanged"
+    ],
+    "unsafe_or_new_dependencies": false,
+    "fps_qualified": false,
+    "phase_closed": false,
+    "cumulative_verify": "Blocked before execution by legacy8GB reserve at16,892,906,266B out; original missing P00 also unresolved",
+    "new_owner_reference": "reports/runs/user-reference-20261021-display-snap/index.json",
+    "followup": "docs/design/display-and-snap-followup.md",
+    "next": "Composition profiling/optimization, native host display and scale, Documents artwork, drag-to-restore/Snap and remaining Explorer/trash/providers"
+  },
+  "desktop_first_run": {
+    "status": "accepted_bounded",
+    "design": "docs/build/desktop-first-run.md",
+    "critic": "reports/critics/p12-first-run-critic.json",
+    "critic_sha256": "e09d829f7ee50e20a09c188e56186bb2928b4ca6309fca554e637b3645ffd458",
+    "tested_source": "e48c2d806f9dfb721fcdcd06ba28d06f28697d50f59bdc63115dd6e3c59f7187",
+    "host_tests": 674,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792576596573475700-10848/report.json",
+    "default_report": "reports/runs/host-1792576447590346000-7548/report.json",
+    "software_report": "reports/runs/host-1792576528479420000-15136/report.json",
+    "retained_report": "reports/runs/host-1792576720130797300-26392/report.json",
+    "initializer_report": "reports/runs/host-1792576816945398800-12436/report.json",
+    "owner_volume": "out/session/user.raw; created NEW explicitly; mutable owner data, never a test fixture",
+    "owner_initial_bytes": 134217728,
+    "initialization_reserve_bytes": 335544320,
+    "interactive_layout": "retained v2 after valid DesktopOptions parsing",
+    "guest_changed": false,
+    "phase_closed": false,
+    "next": "All-frame motion timing and scanout overhead, remaining modern Explorer and real trash/providers"
+  },
+  "control_row_alignment": {
+    "status": "accepted_bounded",
+    "design": "docs/design/control-row-alignment.md",
+    "critic": "reports/critics/p12-control-alignment-critic.json",
+    "critic_sha256": "4d6ad6ba2c28502fd1f945c846213e6e42c0e6cb2b8f713f82be4932fc91d8c8",
+    "guest_source_sha256": "d40843fde9aff7f29b0c3a51ca254b3368e9f5c55b972b178cc07d1366a1e9fb",
+    "final_host_source_sha256": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+    "host_report": "reports/runs/host-1792575398772802800-24816/report.json",
+    "desktop_report": "reports/runs/host-1792571769273006100-24104/report.json",
+    "retained_report": "reports/runs/host-1792575514788093600-10952/report.json",
+    "host_tests": 668,
+    "host_executables": 34,
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "standalone_consumer_checks_each": {
+      "notes": 39,
+      "files": 19,
+      "remove": 15
+    },
+    "standalone_boots": 12,
+    "new_packages_or_unsafe": false,
+    "new_icons": [
+      "Explorer Home",
+      "txt Notepad file association"
+    ],
+    "other_filetypes": "open",
+    "host_abort_cause": "unresolved; preserve two failed reports and passed diagnostics",
+    "phase_closed": false,
+    "next": "Safe first-run owner-volume initialization, measured motion, modern Explorer and durable trash/providers"
+  },
+  "owner_detail_followup": {
+    "status": "open",
+    "design": "docs/design/windows-detail-followup.md",
+    "user_reference_index": "reports/runs/user-reference-20261021-alignment/index.json",
+    "external_drive_offer": "D: USB NTFS Backup; identified read-only, no files relocated",
+    "computer_use": "Stopped again by physical Escape; no more host UI this turn",
+    "phase_closed": false
+  },
+  "desktop_output_layout_migration": {
+    "status": "accepted_bounded",
+    "design": "docs/build/output-layout-v2.md",
+    "critic": "reports/critics/p12-output-layout-v2-critic.json",
+    "critic_sha256": "f76b17c65fbb9656f2e66faf0ba5e0d7a4c49143ff238b1efdd92e9d6c2d68ed",
+    "tested_source_sha256": "aa1e6789d41cedb70e6cc7bf5c38d3f49c7ac6fb287c3ce0bf5c8a9336042b6e",
+    "desktop_report": "reports/runs/host-1792565964145546900-15756/report.json",
+    "scope": "exact test desktop-current; short new builds/images/qemu retained with their run",
+    "out_limit_bytes": 20000000000,
+    "legacy_admission_reserve_bytes": 8000000000,
+    "v2_metadata_reserve_bytes": 134217728,
+    "historical_receipts_unchanged": true,
+    "phase_closed": false
+  },
+  "storage_transport_recovery": {
+    "status": "accepted_bounded",
+    "design": "docs/design/storage-connection-recovery.md",
+    "critic": "reports/critics/p12-storage-connect-critic.json",
+    "critic_sha256": "e65a6ff56f9cc105e16d3647e1b1859d92104116ccf8aab999a53f29f4b3357b",
+    "tested_source_sha256": "021b83a6619bac9b37703c910a8c09a04bfebb3eb8df62103e01225110aeb9c7",
+    "host_report": "reports/runs/host-1792561439334369300-21252/report.json",
+    "desktop_report": "reports/runs/host-1792561538750199300-21160/report.json",
+    "foundation_report": "reports/runs/host-1792562620715950700-17280/report.json",
+    "sdk_report": "reports/runs/host-1792561159414076200-24192/report.json",
+    "native_gui_fault_injection_qualified": false,
+    "phase_closed": false,
+    "next": "Versioned output retention, then measured 4K motion and P12 toolkit/providers"
+  },
+  "generated_output_policy": {
+    "scope": "out only",
+    "limit_bytes": 20000000000,
+    "target_and_reports_excluded": true,
+    "status": "accepted_bounded",
+    "critic": "reports/critics/p12-output-budget-critic.json",
+    "critic_sha256": "e66ed0f6a36dcdd310e804336b037bf2ab84957a3962479bb7407d6d57874e31",
+    "qualification_source": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+    "phase_closed": false,
+    "design": "docs/build/output-storage.md",
+    "availability": "reports/artifacts/p12-output-availability.json"
+  },
+  "schema_version": 1,
+  "record_kind": "source_ledger",
+  "sources": [
+    {
+      "id": "MASTER-001",
+      "publisher": "supplied by project owner",
+      "title": "Door OS master engineering specification",
+      "revision": "fresh-project baseline 1.1, 12 October 2026",
+      "locator": "DOOR_OS_MASTER_SPECIFICATION.md",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37",
+      "relevant_sections": [
+        1,
+        2,
+        5,
+        8,
+        85,
+        86,
+        91,
+        92,
+        98,
+        131,
+        133,
+        137,
+        138,
+        143,
+        144
+      ],
+      "permitted_use_review": "authorized project reference; publication rights not inferred",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "original BootInfo envelope",
+        "phase scope and ownership",
+        "repository records"
+      ],
+      "unresolved": [
+        "future tables and acquired hardware contracts"
+      ]
+    },
+    {
+      "id": "RUST-LAYOUT",
+      "publisher": "Rust project",
+      "title": "Rust Reference: Type layout",
+      "url": "https://doc.rust-lang.org/reference/type-layout.html",
+      "revision": "rolling public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "relevant_sections": [
+        "Rust representation",
+        "alignment"
+      ],
+      "permitted_use_review": "public interface documentation consulted; no implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "Rust default representation is not a wire ABI"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "CARGO-WORKSPACES",
+      "publisher": "Rust project",
+      "title": "Cargo Book: Workspaces",
+      "url": "https://doc.rust-lang.org/cargo/reference/workspaces.html",
+      "revision": "rolling public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "relevant_sections": [
+        "workspace manifest",
+        "shared package/lints"
+      ],
+      "permitted_use_review": "public documentation consulted",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "workspace dependency and lint boundaries"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "RUST-UEFI",
+      "publisher": "Rust project",
+      "title": "rustc book: unknown-uefi targets",
+      "url": "https://doc.rust-lang.org/rustc/platform-support/unknown-uefi.html",
+      "revision": "rolling public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "relevant_sections": [
+        "target requirements"
+      ],
+      "permitted_use_review": "public documentation consulted",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "separate firmware compilation target"
+      ],
+      "unresolved": [
+        "P02 firmware transition implementation"
+      ]
+    },
+    {
+      "id": "UEFI-MEMORY-211",
+      "publisher": "UEFI Forum",
+      "title": "UEFI Specification 2.11: Boot Services",
+      "url": "https://uefi.org/specs/UEFI/2.11/07_Services_Boot_Services.html",
+      "revision": "2.11",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "relevant_sections": [
+        "7.2.1",
+        "7.2.3"
+      ],
+      "permitted_use_review": "public normative interface contract consulted; no firmware implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "memory type numbering",
+        "4096-byte memory pages",
+        "EFI_MEMORY_RUNTIME bit 63",
+        "runtime reservation"
+      ],
+      "unresolved": [
+        "P02 complete producer ownership conversion and final map transition"
+      ]
+    },
+    {
+      "id": "ELF-GABI-HEADER",
+      "publisher": "System V ABI publisher",
+      "title": "ELF header",
+      "url": "https://refspecs.linuxfoundation.org/elf/gabi4+/ch4.eheader.html",
+      "revision": "public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "public format/tool interface consulted; no foreign OS implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "ELF64 header widths, machine and executable class"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "ELF-GABI-PROGRAM",
+      "publisher": "System V ABI publisher",
+      "title": "Program headers",
+      "url": "https://refspecs.linuxfoundation.org/elf/gabi4+/ch5.pheader.html",
+      "revision": "public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "public format/tool interface consulted; no foreign OS implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "Loadable extents, permissions, alignment, zero-fill"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "MICROSOFT-PE",
+      "publisher": "Microsoft",
+      "title": "PE format",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/debug/pe-format",
+      "revision": "public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "public format/tool interface consulted; no foreign OS implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "PE32+ headers, sections, directories and symbol tables"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "QEMU-INVOKE",
+      "publisher": "QEMU project",
+      "title": "System invocation",
+      "url": "https://www.qemu.org/docs/master/system/invocation.html",
+      "revision": "public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "public format/tool interface consulted; no foreign OS implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "Versioned machines, argument syntax, pflash, serial and option comma escaping"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "QEMU-IMAGES",
+      "publisher": "QEMU project",
+      "title": "Disk images",
+      "url": "https://www.qemu.org/docs/master/system/images.html",
+      "revision": "public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "public format/tool interface consulted; no foreign OS implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "Virtual FAT directory backend and readonly default"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "MSVC-PDBALTPATH",
+      "publisher": "Microsoft",
+      "title": "Alternate PDB path",
+      "url": "https://learn.microsoft.com/en-us/cpp/build/reference/pdbaltpath-use-alternate-pdb-path",
+      "revision": "public documentation retrieved on date",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "public format/tool interface consulted; no foreign OS implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "Stable debug reference paths"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "OVMF-QEMU-102",
+      "publisher": "QEMU / TianoCore",
+      "title": "QEMU distributed EDK2/OVMF code, variable template and notices",
+      "url": "https://github.com/qemu/qemu/tree/698104725efad4b29079d857dfdebbd804e34c99/pc-bios",
+      "revision": "698104725efad4b29079d857dfdebbd804e34c99",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "locator": "specs/sources/emulator-acquisition.json",
+      "permitted_use_review": "Local development firmware; upstream notices retained; no firmware code incorporated into Door",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "acquired code/vars identities and source"
+      ],
+      "unresolved": [
+        "future platform profiles and physical firmware qualification"
+      ]
+    },
+    {
+      "id": "UEFI-BOOT-RELEASE",
+      "publisher": "UEFI Forum",
+      "title": "Boot services, media and GOP normative specification",
+      "url": "https://github.com/UEFI/UEFI-Specification-Release/tree/82804ed40f173589b372fa303d1e69956dcfa153/source",
+      "revision": "82804ed40f173589b372fa303d1e69956dcfa153",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "Public interface/format contract or general firmware support; no Windows/foreign compatibility implementation",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P02 interfaces and constrained formats"
+      ],
+      "unresolved": [
+        "Future platform profiles and broader semantics"
+      ]
+    },
+    {
+      "id": "UEFI-RS-041",
+      "publisher": "uefi-rs project",
+      "title": "Pinned firmware support library and exit/map lifetime implementation",
+      "url": "https://docs.rs/uefi/0.41.0/uefi/boot/fn.exit_boot_services.html",
+      "revision": "0.41.0",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "Public interface/format contract or general firmware support; no Windows/foreign compatibility implementation",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P02 interfaces and constrained formats"
+      ],
+      "unresolved": [
+        "Future platform profiles and broader semantics"
+      ]
+    },
+    {
+      "id": "QEMU-FWCFG",
+      "publisher": "QEMU project",
+      "title": "Firmware configuration interface",
+      "url": "https://www.qemu.org/docs/master/specs/fw_cfg.html",
+      "revision": "retrieved 2026-10-12",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "Public interface/format contract or general firmware support; no Windows/foreign compatibility implementation",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P02 interfaces and constrained formats"
+      ],
+      "unresolved": [
+        "Future platform profiles and broader semantics"
+      ]
+    },
+    {
+      "id": "GNU-USTAR",
+      "publisher": "GNU project",
+      "title": "GNU tar standard archive header description",
+      "url": "https://www.gnu.org/software/tar/manual/tar.pdf",
+      "revision": "GNU tar 1.35 public header extract",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-12",
+      "snapshot_sha256": null,
+      "permitted_use_review": "Public interface/format contract or general firmware support; no Windows/foreign compatibility implementation",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P02 interfaces and constrained formats"
+      ],
+      "unresolved": [
+        "Future platform profiles and broader semantics"
+      ]
+    },
+    {
+      "facts_supported": [
+        "four-level paging, permissions and local INVLPG retirement",
+        "long-mode GDT/TSS/IDT, IST/trap frames and IRET",
+        "xAPIC timer and explicit x87/MMX/SSE state preservation",
+        "FS-based per-thread context and enabled x87/MMX/SSE2 preservation",
+        "INIT/SIPI low-page startup and observed CPU readiness",
+        "generation-acknowledged remote TLB invalidation",
+        "P05 trusted SYSCALL stack, SWAPGS and checked IRET return",
+        "Private CPL3 mappings and exact-instruction user-copy fault recovery"
+      ],
+      "retrieval_date": "2026-10-12",
+      "relevant_sections": [
+        "4.5",
+        "4.6",
+        "4.10.4",
+        "6.14",
+        "8.7",
+        "11.5.4",
+        "14.1.3",
+        "3.4.4",
+        "9.4.3",
+        "9.4.4.1",
+        "11.6",
+        "5.8.8"
+      ],
+      "retrieval_status": "acquired",
+      "reviewer": "project implementation agents",
+      "id": "INTEL-SDM-3-081",
+      "snapshot_sha256": "cbd7336e8da8a3a9086b0fa0f9743e1e9b380abc90a95cfe3404472e7f47cd12",
+      "revision": "Order 325384-081US, September 2023",
+      "url": "https://cdrdv2-public.intel.com/789582/325384-sdm-vol-3abcd.pdf",
+      "publisher": "Intel",
+      "local_path": "out/acquisitions/cpu-reference/325384-081US.pdf",
+      "unresolved": [
+        "protected userspace and broader enabled state",
+        "physical hardware and CPU hotplug"
+      ],
+      "permitted_use_review": "Public normative hardware/table contract consulted; original Door implementation, no foreign OS code adopted",
+      "bytes": 8951081,
+      "title": "Intel 64 and IA-32 Architectures Software Developer's Manual, Volume 3 (3A, 3B, 3C, 3D)"
+    },
+    {
+      "facts_supported": [
+        "UEFI RSDP discovery and checksums",
+        "XSDT table pointers",
+        "MADT CPU/LAPIC/IOAPIC and override layouts",
+        "FADT PM timer and legacy flags"
+      ],
+      "retrieval_date": "2026-10-12",
+      "relevant_sections": [
+        "5.2.5",
+        "5.2.6",
+        "5.2.8",
+        "5.2.9",
+        "5.2.12"
+      ],
+      "retrieval_status": "acquired",
+      "reviewer": "project implementation agents",
+      "id": "ACPI-65-SOFTWARE",
+      "snapshot_sha256": "c150004f19cb4c4b0c67de7378f9c9e847c14a95701c52ba207f494cd9f0258d",
+      "revision": "ACPI 6.5, official release commit 5dabe6f37fbe753d90292a2a419105be5d55a778",
+      "url": "https://raw.githubusercontent.com/UEFI/ACPI-Specification-Release/5dabe6f37fbe753d90292a2a419105be5d55a778/source/05_ACPI_Software_Programming_Model.rst",
+      "publisher": "UEFI Forum",
+      "local_path": "out/acquisitions/acpi-reference/05_ACPI_Software_Programming_Model.rst",
+      "unresolved": [
+        "AML and general power/device routing",
+        "ACPI1/RSDT fallback outside selected profile"
+      ],
+      "permitted_use_review": "Public normative hardware/table contract consulted; original Door implementation, no foreign OS code adopted",
+      "bytes": 669735,
+      "title": "ACPI Specification 6.5, software programming model"
+    },
+    {
+      "facts_supported": [
+        "3.579545 MHz fixed PM timer",
+        "24/32-bit timer width and register read behavior"
+      ],
+      "retrieval_date": "2026-10-12",
+      "relevant_sections": [
+        "4.8.2.1",
+        "4.8.3.3"
+      ],
+      "retrieval_status": "acquired",
+      "reviewer": "project implementation agents",
+      "id": "ACPI-65-HARDWARE",
+      "snapshot_sha256": "16323bba21ed3f642edf5b6ebd6796d316aaa2d730613e5ec45d2af2ac61a822",
+      "revision": "ACPI 6.5, official release commit 5dabe6f37fbe753d90292a2a419105be5d55a778",
+      "url": "https://raw.githubusercontent.com/UEFI/ACPI-Specification-Release/5dabe6f37fbe753d90292a2a419105be5d55a778/source/04_ACPI_Hardware_Specification.rst",
+      "publisher": "UEFI Forum",
+      "local_path": "out/acquisitions/acpi-reference/04_ACPI_Hardware_Specification.rst",
+      "unresolved": [
+        "physical platform and power-transition qualification"
+      ],
+      "permitted_use_review": "Public normative hardware/table contract consulted; original Door implementation, no foreign OS code adopted",
+      "bytes": 126174,
+      "title": "ACPI Specification 6.5, hardware specification"
+    },
+    {
+      "facts_supported": [
+        "exact selected ACPI edition"
+      ],
+      "retrieval_date": "2026-10-12",
+      "relevant_sections": [
+        "edition title and document index"
+      ],
+      "retrieval_status": "acquired",
+      "reviewer": "project implementation agents",
+      "id": "ACPI-65-EDITION",
+      "snapshot_sha256": "ee9fcb8f9a1b85a9c07990cc611245bf238cfbb0dd28c6e35b5f99e0a709177d",
+      "revision": "Release ACPI_6.5, commit 5dabe6f37fbe753d90292a2a419105be5d55a778",
+      "url": "https://raw.githubusercontent.com/UEFI/ACPI-Specification-Release/5dabe6f37fbe753d90292a2a419105be5d55a778/source/index.rst",
+      "publisher": "UEFI Forum",
+      "local_path": "out/acquisitions/acpi-reference/index.rst",
+      "unresolved": [],
+      "permitted_use_review": "Public normative hardware/table contract consulted; original Door implementation, no foreign OS code adopted",
+      "bytes": 1545,
+      "title": "ACPI Specification 6.5 release index"
+    },
+    {
+      "id": "VIRTIO-12",
+      "publisher": "OASIS",
+      "title": "Virtual I/O Device (VIRTIO) Version 1.2",
+      "revision": "1.2",
+      "url": "https://docs.oasis-open.org/virtio/virtio/v1.2/virtio-v1.2.html",
+      "local_path": "out/acquisitions/storage-reference/virtio-v1.2.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "c6df8f2a77893595b7030dcd36dd1f6a6f581107e1e461d8d13d59bbc4f1eb3a",
+      "bytes": 2677962,
+      "relevant_sections": [
+        "2 device status/features/split queues",
+        "3 initialization/reset",
+        "4.1 PCI transport",
+        "5.2 block device"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "2 device status/features/split queues",
+        "3 initialization/reset",
+        "4.1 PCI transport",
+        "5.2 block device"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "FAT32-103",
+      "publisher": "Microsoft Corporation",
+      "title": "EFI FAT32 File System Specification",
+      "revision": "1.03, 2000-12-06, primary document mirror",
+      "url": "https://www.isdaman.com/alsos/protocols/fats/fatgen103.pdf",
+      "local_path": "out/acquisitions/storage-reference/fatgen103.pdf",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "67903fec9748b0198b474d3c8a6f98e0ecdb0c2f6ad33863d983ab6722c26fb2",
+      "bytes": 168521,
+      "relevant_sections": [
+        "BPB and FAT type by cluster count",
+        "FAT32 FSInfo and backup boot",
+        "short directory entries and FAT chains"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "BPB and FAT type by cluster count",
+        "FAT32 FSInfo and backup boot",
+        "short directory entries and FAT chains"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "EXT-DISK-SUPER",
+      "publisher": "Linux kernel documentation maintainers",
+      "title": "ext filesystem disk structures: super",
+      "revision": "rolling published documentation, pinned acquired bytes",
+      "url": "https://docs.kernel.org/filesystems/ext4/super.html",
+      "local_path": "out/acquisitions/storage-reference/ext4-super.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "089d7382e0911bd223483c8f6d27fbb73dba20f59912d3de91a4fae772275226",
+      "bytes": 46509,
+      "relevant_sections": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "EXT-DISK-GROUP_DESCR",
+      "publisher": "Linux kernel documentation maintainers",
+      "title": "ext filesystem disk structures: group_descr",
+      "revision": "rolling published documentation, pinned acquired bytes",
+      "url": "https://docs.kernel.org/filesystems/ext4/group_descr.html",
+      "local_path": "out/acquisitions/storage-reference/ext4-group_descr.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "3ce89f2ae13b9ebe784a130799718d092622f4bd1d12f05128566bb76d215202",
+      "bytes": 17056,
+      "relevant_sections": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "EXT-DISK-BITMAPS",
+      "publisher": "Linux kernel documentation maintainers",
+      "title": "ext filesystem disk structures: bitmaps",
+      "revision": "rolling published documentation, pinned acquired bytes",
+      "url": "https://docs.kernel.org/filesystems/ext4/bitmaps.html",
+      "local_path": "out/acquisitions/storage-reference/ext4-bitmaps.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "4603a9d4d8d5bd54123b8de5768c6f31870fb355a311f6c6c0c8ab61b0124c10",
+      "bytes": 10417,
+      "relevant_sections": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "EXT-DISK-INODES",
+      "publisher": "Linux kernel documentation maintainers",
+      "title": "ext filesystem disk structures: inodes",
+      "revision": "rolling published documentation, pinned acquired bytes",
+      "url": "https://docs.kernel.org/filesystems/ext4/inodes.html",
+      "local_path": "out/acquisitions/storage-reference/ext4-inodes.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "ff4aa1b5f547918d2e52f9421c527255df3a04d5104d0348e4e2744198b3a029",
+      "bytes": 40072,
+      "relevant_sections": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "EXT-DISK-IFORK",
+      "publisher": "Linux kernel documentation maintainers",
+      "title": "ext filesystem disk structures: ifork",
+      "revision": "rolling published documentation, pinned acquired bytes",
+      "url": "https://docs.kernel.org/filesystems/ext4/ifork.html",
+      "local_path": "out/acquisitions/storage-reference/ext4-ifork.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "895cb52f1f5bbfe9ce60a82b74be993dc06afb0dbc82f681a9c391605bf35389",
+      "bytes": 24632,
+      "relevant_sections": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "EXT-DISK-DIRECTORY",
+      "publisher": "Linux kernel documentation maintainers",
+      "title": "ext filesystem disk structures: directory",
+      "revision": "rolling published documentation, pinned acquired bytes",
+      "url": "https://docs.kernel.org/filesystems/ext4/directory.html",
+      "local_path": "out/acquisitions/storage-reference/ext4-directory.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "0a166308e9e7c534398b21e7b6fd5aa083a23c9565b84501267d741a6f7afa70",
+      "bytes": 32625,
+      "relevant_sections": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "permitted_use_review": "Normative on-disk/device interface reference only; original Rust implementation, no external implementation port or document redistribution.",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "legacy ext2-compatible structures only; no ext4 implementation adopted"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "UEFI-GPT-210",
+      "publisher": "UEFI Forum",
+      "title": "UEFI Specification 2.10 section 5 GPT disk layout",
+      "revision": "2.10",
+      "url": "https://uefi.org/specs/UEFI/2.10/05_GUID_Partition_Table_Format.html",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": null,
+      "relevant_sections": [
+        "5.2 protective MBR",
+        "5.3 GPT headers, entries, CRC and backup"
+      ],
+      "permitted_use_review": "Public normative format consulted through browser; direct HTML/PDF download returned403; no implementation copied",
+      "reviewer": "project implementation agents",
+      "facts_supported": [
+        "GPT bounds, stable GUID identity, mirrored headers and CRC32"
+      ],
+      "unresolved": [
+        "local byte snapshot unavailable"
+      ]
+    },
+    {
+      "id": "PCI-REFERENCE-qemu-10.2-pci-host.c",
+      "publisher": "QEMU project",
+      "title": "hw/pci/pci_host.c",
+      "revision": "v10.2.0",
+      "url": "https://raw.githubusercontent.com/qemu/qemu/v10.2.0/hw/pci/pci_host.c",
+      "local_path": "out/acquisitions/storage-reference/qemu-10.2-pci-host.c",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "067a7b2400cef17a10808e03e2a5760fe214181b26f21e491d9bde2478ed36e4",
+      "bytes": 7874,
+      "relevant_sections": [
+        "PCI configuration mechanism1 address/data port semantics"
+      ],
+      "permitted_use_review": "Interface/register facts consulted only. Original Rust implementation, no code linked or copied; QEMU GPL2-or-later source and Linux syscall-note register-header provenance retained.",
+      "reviewer": "driver implementation agent",
+      "facts_supported": [
+        "PCI configuration mechanism1 address/data port semantics"
+      ],
+      "unresolved": [
+        "Physical PCI hardware unqualified"
+      ]
+    },
+    {
+      "id": "PCI-REFERENCE-qemu-10.2-pci-regs.h",
+      "publisher": "QEMU project",
+      "title": "include/standard-headers/linux/pci_regs.h",
+      "revision": "v10.2.0",
+      "url": "https://raw.githubusercontent.com/qemu/qemu/v10.2.0/include/standard-headers/linux/pci_regs.h",
+      "local_path": "out/acquisitions/storage-reference/qemu-10.2-pci-regs.h",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "9aa08710fbc0e979e05c9c86c2d78926ae83942a3e7e0068b54f23e016a82c24",
+      "bytes": 67293,
+      "relevant_sections": [
+        "PCI command/status/BAR/capability register definitions"
+      ],
+      "permitted_use_review": "Interface/register facts consulted only. Original Rust implementation, no code linked or copied; QEMU GPL2-or-later source and Linux syscall-note register-header provenance retained.",
+      "reviewer": "driver implementation agent",
+      "facts_supported": [
+        "PCI command/status/BAR/capability register definitions"
+      ],
+      "unresolved": [
+        "Physical PCI hardware unqualified"
+      ]
+    },
+    {
+      "id": "PCI-REFERENCE-qemu-10.2-q35.c",
+      "publisher": "QEMU project",
+      "title": "hw/pci-host/q35.c",
+      "revision": "v10.2.0",
+      "url": "https://raw.githubusercontent.com/qemu/qemu/v10.2.0/hw/pci-host/q35.c",
+      "local_path": "out/acquisitions/storage-reference/qemu-10.2-q35.c",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": "4b85e819d3a45e7709e283aa80d69ba47d7706e7f4d41551f9b6e16e99f78b74",
+      "bytes": 26144,
+      "relevant_sections": [
+        "q35 conventional PCI configuration port registration"
+      ],
+      "permitted_use_review": "Interface/register facts consulted only. Original Rust implementation, no code linked or copied; QEMU GPL2-or-later source and Linux syscall-note register-header provenance retained.",
+      "reviewer": "driver implementation agent",
+      "facts_supported": [
+        "q35 conventional PCI configuration port registration"
+      ],
+      "unresolved": [
+        "Physical PCI hardware unqualified"
+      ]
+    },
+    {
+      "id": "INTEL-ICH9-316972",
+      "publisher": "Intel",
+      "title": "ICH9 Family Datasheet",
+      "revision": "316972-004 August2008",
+      "url": "https://www.intel.co.uk/content/dam/doc/datasheet/io-controller-hub-9-datasheet.pdf",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-13",
+      "snapshot_sha256": null,
+      "relevant_sections": [
+        "PCI configuration address/data registers"
+      ],
+      "permitted_use_review": "Public primary register contract consulted in browser; direct PDF acquisition403. No implementation copied.",
+      "reviewer": "driver implementation agent",
+      "facts_supported": [
+        "conventional x86 PCI configuration access"
+      ],
+      "unresolved": [
+        "local byte snapshot unavailable"
+      ]
+    },
+    {
+      "facts_supported": [
+        "P07 selected namespace, sharing, authorization and registry behavior"
+      ],
+      "bytes": 67904,
+      "retrieval_status": "acquired",
+      "unresolved": [
+        "Full Windows compatibility is outside the bounded P07 development contract"
+      ],
+      "relevant_sections": [
+        "Naming Files, Paths, and Namespaces"
+      ],
+      "publisher": "Microsoft",
+      "reviewer": "project implementation agent",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file",
+      "permitted_use_review": "Public interface facts consulted for original Rust implementation. Reference HTML is retained only under ignored acquisitions; no Microsoft implementation or assets incorporated.",
+      "id": "MS-WINDOWS-PATHS",
+      "snapshot_sha256": "c24a49e65d22b5e59244e03682118f6a2fceb7c494dfe87154dd558998e56bf7",
+      "revision": "rolling public documentation retrieved on date",
+      "title": "Naming Files, Paths, and Namespaces",
+      "local_path": "out/acquisitions/persistence-reference/windows-names.html",
+      "retrieval_date": "2026-10-13"
+    },
+    {
+      "facts_supported": [
+        "P07 selected namespace, sharing, authorization and registry behavior"
+      ],
+      "bytes": 115313,
+      "retrieval_status": "acquired",
+      "unresolved": [
+        "Full Windows compatibility is outside the bounded P07 development contract"
+      ],
+      "relevant_sections": [
+        "CreateFileW"
+      ],
+      "publisher": "Microsoft",
+      "reviewer": "project implementation agent",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-createfilew",
+      "permitted_use_review": "Public interface facts consulted for original Rust implementation. Reference HTML is retained only under ignored acquisitions; no Microsoft implementation or assets incorporated.",
+      "id": "MS-CREATEFILEW",
+      "snapshot_sha256": "eb3d9c3bb97b71cfdc4c70c8144aabe5bc460f151463a5f1d2b8f04d55ca74ff",
+      "revision": "rolling public documentation retrieved on date",
+      "title": "CreateFileW",
+      "local_path": "out/acquisitions/persistence-reference/createfilew.html",
+      "retrieval_date": "2026-10-13"
+    },
+    {
+      "facts_supported": [
+        "P07 selected namespace, sharing, authorization and registry behavior"
+      ],
+      "bytes": 50194,
+      "retrieval_status": "acquired",
+      "unresolved": [
+        "Full Windows compatibility is outside the bounded P07 development contract"
+      ],
+      "relevant_sections": [
+        "How AccessCheck Works"
+      ],
+      "publisher": "Microsoft",
+      "reviewer": "project implementation agent",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/secauthz/how-dacls-control-access-to-an-object",
+      "permitted_use_review": "Public interface facts consulted for original Rust implementation. Reference HTML is retained only under ignored acquisitions; no Microsoft implementation or assets incorporated.",
+      "id": "MS-DACL-ACCESS",
+      "snapshot_sha256": "f046bbb15d919e8f8112cc09a71fa2ef07ddf102e9f06a32a517961138d7f136",
+      "revision": "rolling public documentation retrieved on date",
+      "title": "How AccessCheck Works",
+      "local_path": "out/acquisitions/persistence-reference/dacl-access.html",
+      "retrieval_date": "2026-10-13"
+    },
+    {
+      "facts_supported": [
+        "P07 selected namespace, sharing, authorization and registry behavior"
+      ],
+      "bytes": 47571,
+      "retrieval_status": "acquired",
+      "unresolved": [
+        "Full Windows compatibility is outside the bounded P07 development contract"
+      ],
+      "relevant_sections": [
+        "Registry"
+      ],
+      "publisher": "Microsoft",
+      "reviewer": "project implementation agent",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry",
+      "permitted_use_review": "Public interface facts consulted for original Rust implementation. Reference HTML is retained only under ignored acquisitions; no Microsoft implementation or assets incorporated.",
+      "id": "MS-REGISTRY",
+      "snapshot_sha256": "a359a05a483863c8267677f4768b9f28c234e9931d08b171aef48badadb5abf2",
+      "revision": "rolling public documentation retrieved on date",
+      "title": "Registry",
+      "local_path": "out/acquisitions/persistence-reference/registry.html",
+      "retrieval_date": "2026-10-13"
+    },
+    {
+      "facts_supported": [
+        "P07 selected namespace, sharing, authorization and registry behavior"
+      ],
+      "bytes": 52705,
+      "retrieval_status": "acquired",
+      "unresolved": [
+        "Full Windows compatibility is outside the bounded P07 development contract"
+      ],
+      "relevant_sections": [
+        "Registry Value Types"
+      ],
+      "publisher": "Microsoft",
+      "reviewer": "project implementation agent",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-value-types",
+      "permitted_use_review": "Public interface facts consulted for original Rust implementation. Reference HTML is retained only under ignored acquisitions; no Microsoft implementation or assets incorporated.",
+      "id": "MS-REGISTRY-TYPES",
+      "snapshot_sha256": "cd7af63464462c358cbda681c24c0260467dd424a380a1b85f9dbc7ee754b9f1",
+      "revision": "rolling public documentation retrieved on date",
+      "title": "Registry Value Types",
+      "local_path": "out/acquisitions/persistence-reference/registry-value-types.html",
+      "retrieval_date": "2026-10-13"
+    },
+    {
+      "facts_supported": [
+        "P07 selected namespace, sharing, authorization and registry behavior"
+      ],
+      "bytes": 52551,
+      "retrieval_status": "acquired",
+      "unresolved": [
+        "Full Windows compatibility is outside the bounded P07 development contract"
+      ],
+      "relevant_sections": [
+        "Registry Key Security and Access Rights"
+      ],
+      "publisher": "Microsoft",
+      "reviewer": "project implementation agent",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-key-security-and-access-rights",
+      "permitted_use_review": "Public interface facts consulted for original Rust implementation. Reference HTML is retained only under ignored acquisitions; no Microsoft implementation or assets incorporated.",
+      "id": "MS-REGISTRY-SECURITY",
+      "snapshot_sha256": "ca67de27b01539192ca30aa4508a7618a7f84cb370c7409fc54ee222b7b5eb4d",
+      "revision": "rolling public documentation retrieved on date",
+      "title": "Registry Key Security and Access Rights",
+      "local_path": "out/acquisitions/persistence-reference/registry-security.html",
+      "retrieval_date": "2026-10-13"
+    },
+    {
+      "id": "MS-WINDOWS-PATH-LIMITS",
+      "title": "Maximum Path Length Limitation",
+      "publisher": "Microsoft",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation",
+      "revision": "rolling public documentation retrieved on date",
+      "retrieval_date": "2026-10-13",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/persistence-reference/windows-path-limits.html",
+      "snapshot_sha256": "9771650cebfa4dce056c3e5866c902c83f87cb13ac2d878003b52d70f242a4b8",
+      "bytes": 55579,
+      "relevant_sections": [
+        "ordinary slash conversion and exact extended prefixes"
+      ],
+      "facts_supported": [
+        "Ordinary file paths convert forward slashes to separators; extended prefix paths preserve distinct parsing"
+      ],
+      "permitted_use_review": "Public interface facts consulted for original Rust implementation; reference HTML retained in ignored acquisitions, no Microsoft implementation or assets incorporated.",
+      "reviewer": "project implementation agent and independent critic",
+      "unresolved": [
+        "General long-path and UNC interoperability remain unsupported in the P07 bounded profile"
+      ]
+    },
+    {
+      "id": "RUST-GLOBALALLOC-1.94.1",
+      "title": "Rust core::alloc::GlobalAlloc",
+      "publisher": "Rust Project",
+      "url": "https://doc.rust-lang.org/1.94.1/core/alloc/trait.GlobalAlloc.html",
+      "revision": "1.94.1 (e408947bf 2026-03-25)",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "acquisition": "Installed pinned rust-docs component; versioned web retrieval unavailable, local identical-version documentation copied",
+      "local_path": "out/acquisitions/native-runtime-reference/global-alloc-1.94.1.html",
+      "snapshot_sha256": "3d703ed88d451c68c120b278d006431fc3d60ee735772b0de0f0b6fc4c4d439b",
+      "bytes": 25056,
+      "relevant_sections": [
+        "Safety",
+        "Re-entrance",
+        "alloc/dealloc/realloc ownership and failure contracts"
+      ],
+      "facts_supported": [
+        "Allocator alignment, non-unwinding, null failure and exact layout ownership requirements"
+      ],
+      "permitted_use_review": "Public interface documentation consulted for original Door allocator; no example implementation copied; local reference retained under ignored acquisitions",
+      "reviewer": "project implementation agent",
+      "unresolved": [
+        "Actual guest allocation and concurrent cleanup remain subject to P08 qualification"
+      ]
+    },
+    {
+      "id": "MSVC-LINK-14.44.35230",
+      "title": "Installed Microsoft Incremental Linker",
+      "publisher": "Microsoft",
+      "revision": "14.44.35230.0",
+      "retrieval_date": "2026-11-12",
+      "retrieval_status": "locally_available",
+      "local_path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe",
+      "snapshot_sha256": "49a5df25c3182a22684375b1d62a025016deffccea247894fe5ca2c85610c6a6",
+      "bytes": 3252616,
+      "facts_supported": [
+        "Current host linker identity reported by actual executable"
+      ],
+      "permitted_use_review": "Preexisting owner-installed Visual Studio tool, invoked locally only; no copying or redistribution",
+      "reviewer": "project implementation agent",
+      "evidence": "reports/environment.json",
+      "change": "Observed host patch 14.44.35229.0 to 14.44.35230.0 (a Visual Studio Installer servicing update during the first P17 gate attempt, 2026-11-12); earlier gates keep their pins; the cumulative P17 gate requalifies the current toolchain. Earlier: 14.44.35228.0 to 14.44.35229.0 (P08)",
+      "unresolved": []
+    },
+    {
+      "id": "MS-P09-X64-ABI",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: x64-abi",
+      "url": "https://learn.microsoft.com/en-us/cpp/build/x64-calling-convention?view=msvc-170",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/x64-abi.html",
+      "snapshot_sha256": "c48ea445cdde49a163e678f7ebe536506234fd53697c2bb62eca9b7acb52287f",
+      "bytes": 70145,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-PE-FORMAT",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: pe-format",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/debug/pe-format",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/pe-format.html",
+      "snapshot_sha256": "3535b75e7cbd983c6f2570e83f6e2fc4ebb760da760e3e55fa23f5443dc93c2e",
+      "bytes": 281747,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-GETSTDHANDLE",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: getstdhandle",
+      "url": "https://learn.microsoft.com/en-us/windows/console/getstdhandle",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/getstdhandle.html",
+      "snapshot_sha256": "29a0d3f8300f6870fa146d268f182b5c53e790fc898839a6b64be1d96860a6dc",
+      "bytes": 58049,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-WRITEFILE",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: writefile",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-writefile",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/writefile.html",
+      "snapshot_sha256": "5bcc6ebcfe0e767c8fd6f60eea76e110db49cb4cb28a2fca1d6f039d38d7ecc1",
+      "bytes": 72442,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-EXITPROCESS",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: exitprocess",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/exitprocess.html",
+      "snapshot_sha256": "d929ba34633df7d783d494a494bcaca571015b76cb1d748a4df96201c886785e",
+      "bytes": 55657,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-TEB",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: teb",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/ns-winternl-teb",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/teb.html",
+      "snapshot_sha256": "3af0319a12a90347c22643f3e23e39299b345645df830c284d628202f32dfb70",
+      "bytes": 52684,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-PEB",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: peb",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/ns-winternl-peb",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/peb.html",
+      "snapshot_sha256": "22f05e28d467feebb8a6b9d622a7c8c17687e8c37e9490f437a12e7acdf89210",
+      "bytes": 52768,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-PARAMETERS",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: parameters",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/ns-winternl-rtl_user_process_parameters",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/parameters.html",
+      "snapshot_sha256": "9b06d7dbea1cd85a08e62e95eea2c8929e6db36c6e7414d1744dcb8bc7ac544f",
+      "bytes": 50121,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-GETLASTERROR",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: getlasterror",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/getlasterror.html",
+      "snapshot_sha256": "38505d73f2387dd374f5dbd545e6bacd8de4302800c2f77b6ee28eb034ca848c",
+      "bytes": 53456,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-P09-SETLASTERROR",
+      "publisher": "Microsoft",
+      "title": "Windows initial execution contract: setlasterror",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-setlasterror",
+      "revision": "Public documentation acquired 2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/setlasterror.html",
+      "snapshot_sha256": "54f056239621bcc8705155e67017c90a7863f1baf80f5de82a0a1fb4ee398e32",
+      "bytes": 52178,
+      "permitted_use_review": "Public interface/layout facts consulted for original implementation; no implementation copied; snapshots remain ignored local reference",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "P09 PE, Windows x64 ABI, initial export or public state-layout contract"
+      ],
+      "unresolved": [
+        "Only the declared P09 subset is implemented; current cumulative qualification and critic acceptance are recorded in project/phases.json"
+      ]
+    },
+    {
+      "id": "MS-SDK-19041-WINNT.H",
+      "publisher": "Microsoft",
+      "title": "Installed SDK public declarations winnt.h",
+      "revision": "Windows SDK10.0.19041.0, x64 layout",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "locally_available",
+      "local_path": "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h",
+      "snapshot_sha256": "be490e4517ccd0d90d88b6e751f027babd501f704f53da5b596a5d88c718ee03",
+      "bytes": 776716,
+      "permitted_use_review": "Owner-installed SDK consulted locally for public declarations and compiled independent fixture; header and system DLL redistribution not authorized or performed",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "NT_TIB stack/Self, TEB PEB pointer, PEB parameters/session, RTL_USER_PROCESS_PARAMETERS counted UTF16 fields"
+      ],
+      "unresolved": [
+        "Version-sensitive fields are pinned to this selected profile"
+      ]
+    },
+    {
+      "id": "MS-SDK-19041-WINTERNL.H",
+      "publisher": "Microsoft",
+      "title": "Installed SDK public declarations winternl.h",
+      "revision": "Windows SDK10.0.19041.0, x64 layout",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "locally_available",
+      "local_path": "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winternl.h",
+      "snapshot_sha256": "1ef3b6cc6a83ccdd5fb904733aa9059725bad5af7393d6afa989fdbf941cdc7c",
+      "bytes": 28927,
+      "permitted_use_review": "Owner-installed SDK consulted locally for public declarations and compiled independent fixture; header and system DLL redistribution not authorized or performed",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "NT_TIB stack/Self, TEB PEB pointer, PEB parameters/session, RTL_USER_PROCESS_PARAMETERS counted UTF16 fields"
+      ],
+      "unresolved": [
+        "Version-sensitive fields are pinned to this selected profile"
+      ]
+    },
+    {
+      "id": "MS-SDK-19041-NTSTATUS.H",
+      "publisher": "Microsoft",
+      "title": "Installed SDK status declarations ntstatus.h",
+      "revision": "Windows SDK10.0.19041.0",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "locally_available",
+      "local_path": "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/ntstatus.h",
+      "snapshot_sha256": "d2951ca6325ee290e09a4c236e31c5c4c56f7c5b3a3afbfe2ed217daeb14ebb9",
+      "bytes": 646910,
+      "permitted_use_review": "Locally installed public scalar API declarations consulted; no implementation copied or SDK redistribution",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "Pinned NTSTATUS and Win32 error numeric values, including invalid user buffer1784"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "MS-SDK-19041-WINERROR.H",
+      "publisher": "Microsoft",
+      "title": "Installed SDK status declarations winerror.h",
+      "revision": "Windows SDK10.0.19041.0",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "locally_available",
+      "local_path": "C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared/winerror.h",
+      "snapshot_sha256": "607481285e8609a6cc5510dc2987115510f620fbc8a6e427afe8f426cede01cd",
+      "bytes": 1521126,
+      "permitted_use_review": "Locally installed public scalar API declarations consulted; no implementation copied or SDK redistribution",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "Pinned NTSTATUS and Win32 error numeric values, including invalid user buffer1784"
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "MS-P09-NTWRITEFILE",
+      "publisher": "Microsoft",
+      "title": "Public native adapter contract: ntwritefile",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/ntifs/nf-ntifs-ntwritefile",
+      "revision": "Public documentation acquired2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/ntwritefile.html",
+      "snapshot_sha256": "22c9fd2670a568c0927a2d00c26cc27a93163cd0fd65ac0ce5bdd358530500e5",
+      "bytes": 58802,
+      "permitted_use_review": "Public ABI/interface facts consulted for original implementation; no implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "NT write argument widths, IO_STATUS_BLOCK completion and error translation conventions"
+      ],
+      "unresolved": [
+        "P09 implements only its declared synchronous console/current-process subset"
+      ]
+    },
+    {
+      "id": "MS-P09-RTLNTSTATUSTODOSERROR",
+      "publisher": "Microsoft",
+      "title": "Public native adapter contract: rtlntstatustodoserror",
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-rtlntstatustodoserror",
+      "revision": "Public documentation acquired2026-10-15",
+      "retrieval_date": "2026-10-15",
+      "retrieval_status": "acquired",
+      "local_path": "out/acquisitions/windows-p09-reference/rtlntstatustodoserror.html",
+      "snapshot_sha256": "5453f9967b9af4c6c1e679a3ba0df39056b3b79975b2675a75fa0220ac77a3ef",
+      "bytes": 50507,
+      "permitted_use_review": "Public ABI/interface facts consulted for original implementation; no implementation copied",
+      "reviewer": "project implementation agent",
+      "facts_supported": [
+        "NT write argument widths, IO_STATUS_BLOCK completion and error translation conventions"
+      ],
+      "unresolved": [
+        "P09 implements only its declared synchronous console/current-process subset"
+      ]
+    },
+    {
+      "id": "P12-QOI-001",
+      "publisher": "qoi-rust contributors",
+      "title": "QOI safe Rust no_std codec and pinned crate0.4.1",
+      "locator": "https://github.com/aldanor/qoi-rust",
+      "retrieval_status": "acquired",
+      "retrieval_date": "2026-10-19",
+      "local_paths": [
+        "Cargo.lock",
+        "graphics/window-server/src/wallpaper.rs"
+      ],
+      "use": "bounded lossless3840x2400 wallpaper decode; source dimensions validated before allocation",
+      "qualification": "current guest resolution gate pending"
+    }
+  ],
+  "assets": [
+    {
+      "scope": "Unmodified regular and semibold fonts; substitution for Segoe UI Variable",
+      "license": "OFL-1.1",
+      "manifest": "assets/fonts/selawik/provenance.json",
+      "id": "MS-SELAWIK-1.01"
+    },
+    {
+      "scope": "Twenty-five pinned20px Fluent SVGs with deterministic A8 exports",
+      "license": "MIT",
+      "manifest": "assets/icons/fluent/manifest.json",
+      "id": "MS-FLUENT-ICONS"
+    },
+    {
+      "scope": "Twelve pinned Windows ICOs with exact16/20/24/32/40px premultiplied BGRA exports",
+      "license": "not_declared",
+      "manifest": "assets/icons/windows/manifest.json",
+      "id": "WINDOWS-ICONS-LOCAL"
+    },
+    {
+      "scope": "Owner-requested local Windows 11 CUR artwork; exact32px exports preserve hotspots, alpha and monochrome inversion",
+      "license": "not_declared",
+      "manifest": "assets/cursors/windows/manifest.json",
+      "id": "WINDOWS-CURSORS-LOCAL"
+    },
+    {
+      "id": "SEGOE-UI-LOCAL",
+      "manifest": "assets/fonts/segoe-ui/provenance.json",
+      "license": "Windows supplied; distribution unreviewed",
+      "scope": "Unmodified local Segoe UI regular/semibold selected by native reference apps and server"
+    },
+    {
+      "id": "WINDOWS-BLOOM-LOCAL",
+      "manifest": "assets/wallpapers/windows/manifest.json",
+      "license": "not_declared",
+      "scope": "Pinned3840x2400 Bloom JPEG, lossless PNG/QOI and retained diagnostic BGR exports"
+    },
+    {
+      "id": "WINDOWS-WALLPAPERS-LOCAL",
+      "manifest": "assets/wallpapers/windows/collection.json",
+      "license": "not_declared",
+      "scope": "Pinned3840x2400 dark Bloom, Glow and Sunrise; deterministic separate offline resource pack and small previews"
+    },
+    {
+      "id": "WINDOWS-WALLPAPERS-26H2-LOCAL",
+      "manifest": "assets/wallpapers/windows/26h2/manifest.json",
+      "license": "not_declared",
+      "scope": "The 18 built-in Windows 11 26H2 theme pictures (Windows, Glow, Captured Motion, Sunrise, Flow) as the original baseline JPEGs from the owner's C:\\Windows\\Web\\Wallpaper, packed unmodified into the desktop resource pack (DOORART2) with a 640x400 Settings preview for each picture new in it; theme definitions from C:\\Windows\\Resources\\Themes"
+    },
+    {
+      "id": "SETTINGS-CATEGORIES-LOCAL",
+      "manifest": "assets/icons/windows-settings/manifest.json",
+      "license": "Microsoft reference assets",
+      "scope": "Nine local category PNGs and E702/E895 raster exports from pinned Segoe Fluent Icons"
+    },
+    {
+      "id": "SEGOE-FLUENT-ICONS-LOCAL",
+      "manifest": "assets/fonts/segoe-fluent-icons/provenance.json",
+      "license": "EULA retained locally",
+      "scope": "Host-only downloaded original font; bounded Bluetooth/Sync glyph exports embedded in guest"
+    }
+  ],
+  "windows_reference": {
+    "status": "reference_and_exploratory_guest_tested",
+    "identity": "Microsoft Windows10Pro10.0.19045 x64, local installed system",
+    "report": "reports/runs/host-1792064679197219400-15756/report.json",
+    "fixture_sha256": "624bdf13b479601ceb5c3691d52cb2cd434e6b13c907ecf7327710895da81296",
+    "source": "tests/fixtures/windows-x64/main.c and abi.asm",
+    "toolchain": "profiles/build/windows-x64.json",
+    "exit_code": 73,
+    "measured_invalid_write_buffer_error": 1784,
+    "scope": "Same original C/MASM EXE; Win64 nonvolatile GPR/XMM and stack/shadow checks, zero write, invalid handles/buffers/selector and LastError; no Windows DLL copied",
+    "guest_report": "reports/runs/host-1792065024570271200-13884/report.json"
+  },
+  "project_license": "pending_owner_decision",
+  "p10_fixture_review": {
+    "source": "tests/fixtures/windows-base",
+    "toolchain": "profiles/build/windows-x64.json",
+    "contract": "specs/abi/windows-base-p10.md",
+    "scope": "Original SDK C/MASM EXE and TLS DLL with ordinary Windows/C ABI imports, same bytes on Windows and Door; original Ntdll/Kernel32/Msvcrt in Door only. Development evidence is listed here; authoritative cumulative qualification/critic are in the phase ledger.",
+    "windows_reference": "reports/runs/host-1792174824725805700-14604/report.json",
+    "guest_save": "reports/runs/host-1792174865715473100-15160/report.json",
+    "guest_reopen": "reports/runs/host-1792174922197741800-20364/report.json",
+    "relocated_tls_reference": "reports/runs/host-1792175589979925500-15984/report.json",
+    "relocated_tls_guest": "reports/runs/host-1792175655408328200-21236/report.json",
+    "review_corrections": "TLS templates use final relocated mapped bytes; startup imports/forwarders cannot depend on a deferred DLL. Mandatory host and child prerequisite receipts reject contradictory exit, timeout, output-limit, spawn and cleanup fields. Only immutable historical P00 records may omit the output-limit field. Final evidence and critic acceptance are recorded in project/phases.json."
+  },
+  "p11_visual_reference": {
+    "font_substitution": "Selawik1.01",
+    "capture_status": "not_acquired",
+    "public_target": "Windows 11 26H2 26300.9711",
+    "fidelity": "not_qualified",
+    "ui_changes_source": "https://learn.microsoft.com/en-us/windows/whats-new/whats-new-windows-11-version-26h2",
+    "release_source": "https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information",
+    "document": "docs/design/windows11-reference.md",
+    "fluent_icon_commit": "a347af95478f989038cccbf085978865264c048a",
+    "retrieval_date": "2026-10-18",
+    "winui_commit": "ba3a8d59e6de4e2b86ca4f61c78bc26ccf129afd"
+  },
+  "p12_visual_reference": {
+    "document": "docs/design/desktop-explorer-reference.md",
+    "image": "docs/references/windows11-desktop-explorer.png",
+    "sha256": "290aabcce0f77846795aaea4f62ae459d2ec6a8e9749f73436fe6a7059c395c3",
+    "source": "Owner-supplied screenshot",
+    "capture_dimensions": "1470x834",
+    "build_and_dpi": "unknown",
+    "guest_dimensions": "native physical-pixel modes 1024x768 through3840x2160; owner monitor2560x1600",
+    "fidelity": "not_qualified",
+    "selection": "Historical owner screenshot; installed Windows11 build26200.9711 now supersedes it as the primary modern layout reference"
+  },
+  "p12_application_references": {
+    "retrieval_date": "2026-10-19",
+    "settings": "https://support.microsoft.com/en-us/windows/experience/exploring-windows-settings",
+    "explorer": "https://support.microsoft.com/en-us/windows/experience/fileexplorer/file-explorer-in-windows",
+    "notepad": "https://learn.microsoft.com/en-us/windows-insider/release-notes/apps/notepad",
+    "windows_icon_commit": "9442e3ef014520d4337409a24be10b970a36d66b",
+    "runtime": "Downloaded source files and BGRA exports embedded with include_bytes; no runtime HTTP, API or scraping",
+    "fidelity": "not_qualified",
+    "settings_layout": "docs/design/settings-reference.md",
+    "settings_icons": "assets/icons/windows-settings/manifest.json",
+    "fluent_font": "assets/fonts/segoe-fluent-icons/provenance.json",
+    "desktop_selection": "https://learn.microsoft.com/en-us/windows/win32/uxguide/inter-mouse",
+    "display_scaling": "https://support.microsoft.com/en-us/accessibility/windows/make-text-and-apps-bigger",
+    "settings_category_pictures": "docs/references/settings-pages/sources.json"
+  },
+  "p12_shell_references": {
+    "retrieval_date": "2026-10-20",
+    "offline_picture_inventory": "docs/references/desktop-shell/sources.json",
+    "start": "https://microsoft.design/articles/start-fresh-redesigning-windows-start-menu/",
+    "caption": "https://learn.microsoft.com/en-us/windows/apps/design/basics/titlebar-design",
+    "taskbar": "https://support.microsoft.com/en-us/windows/experience/personalization/customize-the-taskbar-in-windows",
+    "reference_limits": "Mixed historical external category captures with unknown build/DPI; owner Home/Explorer baselines retained; no frozen full Windows VM or quantitative pixel/motion qualification",
+    "owner_identity": "Original SVG adaptation of owner cyan open-door reference; deterministic local exports"
+  },
+  "p12_address_responsiveness_references": {
+    "retrieval_date": "2026-10-20",
+    "path_contract": "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file",
+    "known_folders": "https://learn.microsoft.com/en-us/windows/win32/shell/knownfolderid",
+    "explorer_navigation": "https://support.microsoft.com/en-us/accessibility/windows/use-a-screen-reader-to-explore-and-navigate-file-explorer-in-windows",
+    "qemu_display": "https://www.qemu.org/docs/master/system/keys.html",
+    "visual_baseline": "Historical owner2021 untabbed screenshot retained; current primary baseline is installed Windows11 build26200.9711",
+    "implementation_limits": "Supported native storage aliases only; no copied Windows runtime or complete known-folder API"
+  },
+  "p12_desktop_controls_references": {
+    "retrieval_date": "2026-10-20",
+    "inventory": "docs/references/desktop-shell/sources.json",
+    "design": "docs/design/desktop-controls.md",
+    "taskbar": "https://blogs.windows.com/windows-insider/2026/05/15/improving-windows-quality-making-taskbar-and-start-more-personal/",
+    "context_menu": "https://blogs.windows.com/windows-insider/2026/08/17/improving-file-explorer-context-menu-faster-simpler-and-more-customizable/",
+    "rollout": "https://blogs.windows.com/windowsexperience/2026/10/15/whats-new-in-windows-11-everyday-experiences-reimagined/",
+    "qualification": "Reference-based implemented subset; no frozen Windows reference VM, pixel/motion equivalence or full latest shell claim"
+  },
+  "p12_rendering_references": {
+    "retrieval_date": "2026-10-21",
+    "design": "docs/design/rendering-responsiveness.md",
+    "lcd": "https://learn.microsoft.com/en-us/windows/win32/directwrite/introducing-directwrite",
+    "alpha_limit": "https://learn.microsoft.com/en-us/windows/win32/api/dwrite_1/ne-dwrite_1-dwrite_text_antialias_mode",
+    "taskbar": "https://support.microsoft.com/en-us/windows/experience/personalization/customize-the-taskbar-in-windows",
+    "primary_baseline": "Installed Windows11 Pro25H2 build26200.9711,2560x1600,150%,dark; controlled Settings dark/light observations, Background/Storage, Explorer, Calculator, Notepad and Paint; owner-configured installation; desktop input stopped on owner Escape",
+    "whpx": "https://www.qemu.org/docs/master/system/whpx.html",
+    "ramfb": "https://github.com/qemu/qemu/blob/master/hw/display/ramfb.c",
+    "fw_cfg": "https://www.qemu.org/docs/master/specs/fw_cfg.html"
+  },
+  "p12_checked_rename_references": {
+    "retrieval_date": "2026-10-21",
+    "design": "docs/design/files-mutations.md",
+    "names": "https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file",
+    "primary_baseline": "Installed Windows11 build26200.9711: F2 basename selection, command-bar and target context Rename",
+    "implemented_scope": "Authenticated same-parent optimistic object/version rename, current traversal/ACL/delete-sharing, durable commit; no full Windows namespace claim"
+  },
+  "p12_followup_references": {
+    "retrieval_date": "2026-10-21",
+    "typography": "https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/typography",
+    "tabs": "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/tab-view",
+    "font_backend_candidate": "https://docs.rs/swash/0.2.10/swash/scale/index.html",
+    "status": "Hinted1x/2x/3x caches selected and bounded critic accepted; native constructor comparison and current full regression recorded in typography-cache.md",
+    "taskbar_rollout": "https://blogs.windows.com/windows-insider/2026/07/31/announcing-new-builds-for-31-july-2026/",
+    "taskbar_comparison": "Rechecked2026-10-21; desktop-controls.md distinguishes preview horizontal small-bar limits from Door vertical compact extension and current missing labels/catalog/Start controls."
+  },
+  "p12_rpc_latency_references": {
+    "design": "docs/design/rpc-responsiveness.md",
+    "contract": "specs/abi/native-platform-v1.md",
+    "implementation": "frameworks/service-client/src/rpc.rs",
+    "source": "Original Door SDK/syscall/scheduler contracts; no external implementation imported",
+    "measurement_scope": "128 cached metadata calls, pinned single-CPU TCG, immutable private saved disk; not FPS or full-app latency"
+  },
+  "p12_hinted_text_references": {
+    "design": "docs/design/typography-cache.md",
+    "typography": "https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/typography",
+    "optical_size": "https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz",
+    "engine": "https://github.com/googlefonts/fontations/tree/0e939934004776b1982982428a7ce748e61b0310/skrifa",
+    "reference_method": "Owner installed font, host-only original evaluation; not a Windows screenshot or Microsoft ClearType implementation"
+  },
+  "p12_cpu_composition": {
+    "design": "docs/design/cpu-composition.md",
+    "references": "Existing native-window and service envelope contracts; no implementation imported",
+    "implementation": "Original Door checked clipping/source-over and native window authority",
+    "review": "Bounded change accepted; reports/critics/p12-cpu-composition-critic.json, SHAa06e1d75765bf8f5ab3843dce5300d20812ab8a43a2ba7e07b52fcb35c07e07f. Original geometry/source-over and native authority; no imported implementation."
+  },
+  "p12_avatar_coverage": {
+    "design": "docs/design/avatar-coverage.md",
+    "source": "Original Door sixteen-sample rounded geometry, generated by assets.rs; no imported implementation.",
+    "status": "Bounded independent review accepted; reports/critics/p12-avatar-coverage-critic.json SHAc6d92c8b9da0270cbd9640fddebba26aa4734b0cafae53d6c61f604d8bfc9f3a."
+  },
+  "p12_desktop_launch": {
+    "design": "docs/design/desktop-launch.md",
+    "qemu": "https://www.qemu.org/docs/master/system/whpx.html",
+    "implementation": "Original shared Door launch policy over existing checked profiles; no imported implementation",
+    "status": "Bounded independent acceptance; reports/critics/p12-desktop-launch-critic.json SHA9ede1210c78c6d2690cd93dbba7d7a1d4a0c6957ffc8658640c729157d7eedbe"
+  },
+  "p12_notes_editing": {
+    "design": "docs/design/notes-editing.md",
+    "implementation": "Original Door document/history/layout and Storage consumer; no imported implementation",
+    "keyboard_reference": "https://support.microsoft.com/en-au/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec",
+    "status": "Bounded independent acceptance: reports/critics/p12-notes-editing-critic.json SHA585bee910480b5c21d4ba76b16cdd685a240b2dd78f30353c41af9a3ad5a5dfd"
+  },
+  "p12_text_navigation": {
+    "design": "docs/design/text-navigation.md",
+    "implementation": "Original Door measured controller, layout cache and visual caret affinity",
+    "reference": "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/text-box",
+    "status": "Bounded independent acceptance: reports/critics/p12-text-navigation-critic.json SHAa4610d6350791d12dab8d1dfd5f7dbc5fb3304e44e5496d66b7499a92481515a"
+  },
+  "p12_document_save": {
+    "design": "docs/design/checked-document-save.md",
+    "implementation": "Original Door checked replacement over existing authenticated service, namespace and redo journal",
+    "reference": "specs/contracts/persistent-namespace-v1.md, storage-journal-v1.md and ADR0012/0013",
+    "status": "Bounded independent acceptance; reports/critics/p12-document-save-critic.json SHA7135f4ef2ae93662a1fed477a3f48fcd238cf670dbed09eb08e664892acbd60b; current evidence in checked-document-save.md"
+  },
+  "p12_document_dialogs": {
+    "design": "docs/design/document-dialogs.md",
+    "reference": "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/dialogs-and-flyouts/dialogs",
+    "retrieved": "2026-10-21",
+    "implementation": "Original Door shared dialog and prompt intent over existing input/Window/Storage",
+    "status": "Bounded independent acceptance; reports/critics/p12-document-dialogs-critic.json SHA57bd280f5265c24d09d6287b00f60a795fec89962561746419d95dfa2b7ffe85; evidence in document-dialogs.md"
+  },
+  "p12_file_deletion": {
+    "design": "docs/design/files-deletion.md",
+    "state": "accepted_bounded",
+    "implementation": "Original checked observed-child removal over existing authenticated namespace/journal",
+    "references": [
+      "https://learn.microsoft.com/en-us/windows/win32/fileio/closing-and-deleting-files",
+      "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/dialogs-and-flyouts/dialogs"
+    ],
+    "retrieved": "2026-10-21",
+    "critic": {
+      "path": "reports/critics/p12-files-deletion-critic.json",
+      "sha256": "d085856ad7ea987b2bb4ebb2f6f959a50fc5f0142e38e1c282d635940a365133"
+    }
+  }
+}

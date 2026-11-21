@@ -1,0 +1,431 @@
+{
+  "binary_modified": false,
+  "fixtures": {
+    "wingui-editor": {
+      "id": "F2",
+      "sha256": "dd48114a6aad10c06e3cf325975cffb0c3e8a03091296561c1749324c95dd3c1",
+      "source_sha256": "4e75e4beafbaef067a6b7b76572a33a5379b49ad54492277233f94cadce63ee7"
+    },
+    "wingui-editor-rc": {
+      "id": "F2-RC",
+      "sha256": "4c085ce5755de2041fb025f057202356419e20b83c72c4c3aadfa754daca5b00",
+      "source_sha256": "4e75e4beafbaef067a6b7b76572a33a5379b49ad54492277233f94cadce63ee7"
+    },
+    "wingui-hang": {
+      "id": "F3",
+      "sha256": "5e0bc7a9338fc3aec43061c9af8a56e9ba5bbd3d53716dd5ade8b10c4faa460d",
+      "source_sha256": "4cfa09bbc078b44a82d034171921b1af03f160067e0a9e442bbb4575cb461226"
+    },
+    "wingui-selftest": {
+      "id": "F1",
+      "sha256": "ab4c01fc59170db9dda0034fc991f5f546c5525508cfa874a823d66f1c1a0d95",
+      "source_sha256": "f7b0f9d43e171afa075b6320012f9e972dee578453f9b9f10f5b3d40541ba46f"
+    }
+  },
+  "identity": {
+    "architecture": "64-bit",
+    "build": "26300",
+    "caption": "Microsoft Windows 11 Pro",
+    "version": "10.0.26300"
+  },
+  "identity_command": "command-22",
+  "launches": [
+    {
+      "argument": "",
+      "command": "command-23",
+      "directory": "f1-0",
+      "exit": 75,
+      "fixture": "wingui-selftest",
+      "pass": 0,
+      "results_file": "wingui-selftest.results"
+    },
+    {
+      "argument": "--reopen",
+      "command": "command-24",
+      "directory": "f1-0",
+      "exit": 76,
+      "fixture": "wingui-selftest",
+      "pass": 0,
+      "results_file": "wingui-selftest-reopen.results"
+    },
+    {
+      "argument": "--probe",
+      "command": "command-25",
+      "directory": "f1-probe-0",
+      "exit": 77,
+      "fixture": "wingui-selftest",
+      "pass": 0,
+      "results_file": "wingui-selftest-probe.results"
+    },
+    {
+      "argument": "--selftest",
+      "command": "command-26",
+      "directory": "f2-0",
+      "exit": 80,
+      "fixture": "wingui-editor",
+      "pass": 0,
+      "results_file": "wingui-editor.results"
+    },
+    {
+      "argument": "--reopen",
+      "command": "command-27",
+      "directory": "f2-0",
+      "exit": 81,
+      "fixture": "wingui-editor",
+      "pass": 0,
+      "results_file": "wingui-editor.results"
+    },
+    {
+      "argument": "--selftest",
+      "command": "command-28",
+      "directory": "f2-rc-0",
+      "exit": 80,
+      "fixture": "wingui-editor-rc",
+      "pass": 0,
+      "results_file": "wingui-editor-rc.results"
+    },
+    {
+      "argument": "--reopen",
+      "command": "command-29",
+      "directory": "f2-rc-0",
+      "exit": 81,
+      "fixture": "wingui-editor-rc",
+      "pass": 0,
+      "results_file": "wingui-editor-rc.results"
+    },
+    {
+      "argument": "--selftest",
+      "command": "command-30",
+      "directory": "f3-0",
+      "exit": 82,
+      "fixture": "wingui-hang",
+      "pass": 0,
+      "results_file": "wingui-hang.results"
+    },
+    {
+      "argument": "--reject",
+      "command": "command-31",
+      "directory": "f3-0",
+      "exit": 83,
+      "fixture": "wingui-hang",
+      "pass": 0,
+      "results_file": "wingui-hang.results"
+    },
+    {
+      "argument": "",
+      "command": "command-32",
+      "directory": "f1-1",
+      "exit": 75,
+      "fixture": "wingui-selftest",
+      "pass": 1,
+      "results_file": "wingui-selftest.results"
+    },
+    {
+      "argument": "--selftest",
+      "command": "command-33",
+      "directory": "f2-1",
+      "exit": 80,
+      "fixture": "wingui-editor",
+      "pass": 1,
+      "results_file": "wingui-editor.results"
+    },
+    {
+      "argument": "--selftest",
+      "command": "command-34",
+      "directory": "f2-rc-1",
+      "exit": 80,
+      "fixture": "wingui-editor-rc",
+      "pass": 1,
+      "results_file": "wingui-editor-rc.results"
+    },
+    {
+      "argument": "--selftest",
+      "command": "command-35",
+      "directory": "f3-1",
+      "exit": 82,
+      "fixture": "wingui-hang",
+      "pass": 1,
+      "results_file": "wingui-hang.results"
+    }
+  ],
+  "metrics": {
+    "f1_probe": {
+      "probes": {
+        "create_child_without_parent": {
+          "error": "1406",
+          "ret": "0"
+        },
+        "create_create_minus_one": {
+          "error": "0",
+          "ret": "0"
+        },
+        "create_invalid_parent": {
+          "error": "1400",
+          "ret": "0"
+        },
+        "create_nccreate_false": {
+          "error": "2989",
+          "ret": "0"
+        },
+        "create_unknown_class": {
+          "error": "1407",
+          "ret": "0"
+        },
+        "cross_thread_insend": {
+          "error": "1",
+          "ret": "1"
+        },
+        "destroy_destroyed": {
+          "error": "1400",
+          "ret": "0"
+        },
+        "destroy_other_thread": {
+          "error": "5",
+          "ret": "0"
+        },
+        "edit_en_change": {
+          "error": "0",
+          "ret": "14"
+        },
+        "gettext_destroyed": {
+          "error": "2989",
+          "ret": "0"
+        },
+        "hung_late_delivery": {
+          "error": "0",
+          "ret": "0"
+        },
+        "is_hung_after": {
+          "error": "2989",
+          "ret": "1"
+        },
+        "is_hung_initial": {
+          "error": "2989",
+          "ret": "0"
+        },
+        "iswindow_destroyed": {
+          "error": "2989",
+          "ret": "0"
+        },
+        "msgbox_result": {
+          "error": "0",
+          "ret": "2"
+        },
+        "nested_insend": {
+          "error": "0",
+          "ret": "0"
+        },
+        "peek_destroyed": {
+          "error": "1400",
+          "ret": "0"
+        },
+        "post_destroyed": {
+          "error": "1400",
+          "ret": "0"
+        },
+        "register_duplicate_class": {
+          "error": "1410",
+          "ret": "0"
+        },
+        "save_buffer_small": {
+          "error": "12291",
+          "ret": "1"
+        },
+        "save_buffer_small_reported": {
+          "error": "0",
+          "ret": "1"
+        },
+        "save_cancel": {
+          "error": "0",
+          "ret": "0"
+        },
+        "save_ok": {
+          "error": "0",
+          "ret": "1"
+        },
+        "save_struct_size": {
+          "error": "1",
+          "ret": "0"
+        },
+        "send_destroyed": {
+          "error": "1400",
+          "ret": "0"
+        },
+        "send_timeout_busy": {
+          "error": "1460",
+          "ret": "0"
+        },
+        "send_timeout_busy_waited": {
+          "error": "0",
+          "ret": "1"
+        },
+        "send_timeout_destroyed": {
+          "error": "1400",
+          "ret": "0"
+        },
+        "send_timeout_hung_abort": {
+          "error": "2989",
+          "ret": "0"
+        },
+        "send_timeout_hung_fast": {
+          "error": "0",
+          "ret": "1"
+        },
+        "settext_destroyed": {
+          "error": "1400",
+          "ret": "1"
+        },
+        "timer_count": {
+          "error": "0",
+          "ret": "3"
+        },
+        "unregister_class_in_use": {
+          "error": "1412",
+          "ret": "0"
+        },
+        "unregister_missing_class": {
+          "error": "1411",
+          "ret": "0"
+        }
+      },
+      "raster": "crc=dffa76c5 bytes=32768",
+      "traces": {
+        "create": "M:0024,M:0081,M:0083,M:0001,P:10c9,P:10ca,P:10cb",
+        "destroy": "M:0046,M:0047,M:0002,B:0002,S:0002,E:0002,B:0082,S:0082,E:0082,M:0082",
+        "order": "O:0b03,O:0a01,O:0a02,M:000f",
+        "reject_create": "R:0024,R:0081,R:0083,R:0001,R:0002,R:0082",
+        "reject_nc": "R:0024,R:0081,R:0082",
+        "show": "M:0018,M:0046,M:0047,M:0005,M:0003,M:000f"
+      }
+    },
+    "raster": {
+      "bytes": 32768,
+      "sha256": "bf0d3aadf28a9e072409bbf531c8b434768a0e368ea77e3f20e67f9ee2826b95"
+    }
+  },
+  "outcome": "passed",
+  "policy": "Owner-approved read-only reference: small fixture windows open briefly on the owner's desktop; every input is a message to the fixture's own windows; no input injection, no setting changes; dialogs pass OFN_DONTADDTORECENT",
+  "record_kind": "windows_gui_reference",
+  "registry": {
+    "after": [
+      {
+        "bytes": 50441,
+        "exit": 0,
+        "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32",
+        "sha256": "bfa62290aa768e2a5be87069bffa2e5370ed14195c37934352e93039b71db430"
+      },
+      {
+        "bytes": 2,
+        "exit": 0,
+        "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs",
+        "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+      }
+    ],
+    "before": [
+      {
+        "bytes": 45252,
+        "exit": 0,
+        "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32",
+        "sha256": "d158353dd4d5c022e0eabc34479a67f02bb0a6ab6c5aedac225ca409fdd61e04"
+      },
+      {
+        "bytes": 2,
+        "exit": 0,
+        "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs",
+        "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+      }
+    ],
+    "comdlg32_restore": {
+      "diff": {
+        "deleted_subkeys": [],
+        "deleted_values": [
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\CIDSizeMRU\\1",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\CIDSizeMRU\\2",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\CIDSizeMRU\\3",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\FirstFolder\\13",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\FirstFolder\\14",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\FirstFolder\\15"
+        ],
+        "key_deleted": false,
+        "restored_values": [
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\CIDSizeMRU\\MRUListEx",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\FirstFolder\\MRUListEx",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRULegacy\\0",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRULegacy\\1",
+          "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRULegacy\\2"
+        ]
+      },
+      "export_after_restore_sha256": "45d7fd19a8a156402bd2f7038a38b7e713234dc00a0760dae3cddba01620770f",
+      "export_before_sha256": "45d7fd19a8a156402bd2f7038a38b7e713234dc00a0760dae3cddba01620770f",
+      "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32",
+      "method": "reg export snapshot before the run; afterwards only values absent from the snapshot are deleted (and subkeys the run created), and changed or missing values are re-imported byte-for-byte from the snapshot's own data; the key itself is never deleted",
+      "query_after_restore": [
+        {
+          "bytes": 45252,
+          "exit": 0,
+          "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32",
+          "sha256": "d158353dd4d5c022e0eabc34479a67f02bb0a6ab6c5aedac225ca409fdd61e04"
+        },
+        {
+          "bytes": 2,
+          "exit": 0,
+          "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs",
+          "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+        }
+      ],
+      "snapshot": "comdlg32-before.reg",
+      "values_restored_exactly": true
+    },
+    "common_dialog_mru_changed": true,
+    "note": "OFN_DONTADDTORECENT keeps RecentDocs unchanged; the Explorer-style dialog still updates its ComDlg32 MRU lists during the run; the run's changes to the key are undone value by value afterwards",
+    "recent_documents_unchanged": true
+  },
+  "results": {
+    "f1-probe/wingui-selftest-probe.results": {
+      "bytes": 3038,
+      "sha256": "e945b9be8e1792d96a7b735ee56230170b2cce990616d112d624012663c279ff",
+      "text": "WINDOWS_GUI_STAGE create\r\nWINDOWS_GUI_STAGE show\r\nWINDOWS_GUI_STAGE raster\r\nWINDOWS_GUI_STAGE order\r\nWINDOWS_GUI_STAGE input\r\nWINDOWS_GUI_STAGE menu\r\nWINDOWS_GUI_STAGE timer\r\nWINDOWS_GUI_STAGE msgbox\r\nWINDOWS_GUI_STAGE reentrant\r\nWINDOWS_GUI_STAGE destroyed\r\nWINDOWS_GUI_STAGE rejected\r\nWINDOWS_GUI_STAGE hung\r\nWINDOWS_GUI_STAGE dialog\r\nWINDOWS_GUI_STAGE dialog-cancel\r\nWINDOWS_GUI_STAGE dialog-small\r\nWINDOWS_GUI_STAGE dialog-save\r\nWINDOWS_GUI_STAGE file\r\nWINDOWS_GUI_STAGE destroy\r\nWINDOWS_GUI_PROBE name=register_duplicate_class ret=0 error=1410\r\nWINDOWS_GUI_PROBE name=edit_en_change ret=14 error=0\r\nWINDOWS_GUI_PROBE name=timer_count ret=3 error=0\r\nWINDOWS_GUI_PROBE name=msgbox_result ret=2 error=0\r\nWINDOWS_GUI_PROBE name=nested_insend ret=0 error=0\r\nWINDOWS_GUI_PROBE name=cross_thread_insend ret=1 error=1\r\nWINDOWS_GUI_PROBE name=destroy_other_thread ret=0 error=5\r\nWINDOWS_GUI_PROBE name=iswindow_destroyed ret=0 error=2989\r\nWINDOWS_GUI_PROBE name=send_destroyed ret=0 error=1400\r\nWINDOWS_GUI_PROBE name=post_destroyed ret=0 error=1400\r\nWINDOWS_GUI_PROBE name=destroy_destroyed ret=0 error=1400\r\nWINDOWS_GUI_PROBE name=gettext_destroyed ret=0 error=2989\r\nWINDOWS_GUI_PROBE name=settext_destroyed ret=1 error=1400\r\nWINDOWS_GUI_PROBE name=peek_destroyed ret=0 error=1400\r\nWINDOWS_GUI_PROBE name=send_timeout_destroyed ret=0 error=1400\r\nWINDOWS_GUI_PROBE name=create_unknown_class ret=0 error=1407\r\nWINDOWS_GUI_PROBE name=create_child_without_parent ret=0 error=1406\r\nWINDOWS_GUI_PROBE name=create_invalid_parent ret=0 error=1400\r\nWINDOWS_GUI_PROBE name=create_nccreate_false ret=0 error=2989\r\nWINDOWS_GUI_PROBE name=create_create_minus_one ret=0 error=0\r\nWINDOWS_GUI_PROBE name=unregister_class_in_use ret=0 error=1412\r\nWINDOWS_GUI_PROBE name=unregister_missing_class ret=0 error=1411\r\nWINDOWS_GUI_PROBE name=is_hung_initial ret=0 error=2989\r\nWINDOWS_GUI_PROBE name=send_timeout_busy ret=0 error=1460\r\nWINDOWS_GUI_PROBE name=send_timeout_busy_waited ret=1 error=0\r\nWINDOWS_GUI_PROBE name=is_hung_after ret=1 error=2989\r\nWINDOWS_GUI_PROBE name=send_timeout_hung_abort ret=0 error=2989\r\nWINDOWS_GUI_PROBE name=send_timeout_hung_fast ret=1 error=0\r\nWINDOWS_GUI_PROBE name=hung_late_delivery ret=0 error=0\r\nWINDOWS_GUI_PROBE name=save_struct_size ret=0 error=1\r\nWINDOWS_GUI_PROBE name=save_cancel ret=0 error=0\r\nWINDOWS_GUI_PROBE name=save_buffer_small ret=1 error=12291\r\nWINDOWS_GUI_PROBE name=save_buffer_small_reported ret=1 error=0\r\nWINDOWS_GUI_PROBE name=save_ok ret=1 error=0\r\nWINDOWS_GUI_TRACE phase=create entries=M:0024,M:0081,M:0083,M:0001,P:10c9,P:10ca,P:10cb\r\nWINDOWS_GUI_TRACE phase=show entries=M:0018,M:0046,M:0047,M:0005,M:0003,M:000f\r\nWINDOWS_GUI_TRACE phase=order entries=O:0b03,O:0a01,O:0a02,M:000f\r\nWINDOWS_GUI_TRACE phase=reject_nc entries=R:0024,R:0081,R:0082\r\nWINDOWS_GUI_TRACE phase=reject_create entries=R:0024,R:0081,R:0083,R:0001,R:0002,R:0082\r\nWINDOWS_GUI_TRACE phase=destroy entries=M:0046,M:0047,M:0002,B:0002,S:0002,E:0002,B:0082,S:0082,E:0082,M:0082\r\nWINDOWS_GUI_PROBE raster crc=dffa76c5 bytes=32768\r\n"
+    },
+    "f1/wingui-selftest-reopen.results": {
+      "bytes": 45,
+      "sha256": "6e0c804b7c939871138805cc4a37118d9d725727ac8ad2db2987ce7690cd0e7c",
+      "text": "WINDOWS_GUI_REOPEN dialog=1 file=1 bytes=58\r\n"
+    },
+    "f1/wingui-selftest.results": {
+      "bytes": 142,
+      "sha256": "db1b4ed78b06db727f091f394fa1c7a75a71b8a643bf313cd33279fc2cfec9fc",
+      "text": "WINDOWS_GUI_OK create=1 order=1 paint_crc=dffa76c5 input=1 menu=1 timer=1 msgbox=1 reentrant=1 destroyed=1 rejected=1 hung=1 dialog=1 file=1\r\n"
+    },
+    "f2-rc/wingui-editor-rc.results": {
+      "bytes": 1658,
+      "sha256": "352f58044151039e15da688744372a1800c4daf4bda33983b2a6d096df5af20b",
+      "text": "EDITOR_START variant=rc mode=selftest\r\nEDITOR_PROBE name=accelerators value=6\r\nEDITOR_PROBE name=status_last_part value=4294967295\r\nEDITOR_PROBE name=status_clicks value=1\r\nEDITOR_PROBE name=en_change_typed value=30\r\nEDITOR_ORDER name=outer steps=1,2,3\r\nEDITOR_ORDER name=query steps=11,40,31,50,21\r\nEDITOR_ORDER name=cross steps=60,65,70\r\nEDITOR_PROBE name=cross_insend value=1\r\nEDITOR_PROBE name=destroy_self_result value=85\r\nEDITOR_PROBE name=destroy_self_parentnotify value=1\r\nEDITOR_PROBE name=send_destroyed_error value=1400\r\nEDITOR_PROBE name=about_button value=1\r\nEDITOR_PROBE name=about_result value=1\r\nEDITOR_PROBE name=about_checks value=7\r\nEDITOR_CHROME event=open x=760 y=120 w=320 h=200\r\nEDITOR_PROBE name=chrome_client_w value=320\r\nEDITOR_PROBE name=chrome_client_h value=200\r\nEDITOR_PROBE name=chrome_window_x value=760\r\nEDITOR_PROBE name=chrome_window_y value=120\r\nEDITOR_PROBE name=chrome_window_w value=320\r\nEDITOR_PROBE name=chrome_window_h value=200\r\nEDITOR_PROBE name=chrome_small_w value=200\r\nEDITOR_PROBE name=chrome_small_h value=120\r\nEDITOR_CHROME event=close x=800 y=150 w=360 h=230\r\nEDITOR_DIALOG kind=save result=1 name=doors-editor-λ.txt offset_ok=1\r\nEDITOR_SAVE result=1 name=doors-editor-λ.txt chars=31 bytes=35 crc=c3ed8c4b\r\nEDITOR_OK variant=rc menu=1 accelerators=1 strings=1 edit=1 reentrant=1 about=1 chrome=1 save=1\r\nEDITOR_EXIT variant=rc code=80\r\nEDITOR_START variant=rc mode=reopen\r\nEDITOR_DIALOG kind=open result=1 name=doors-editor-λ.txt offset_ok=1\r\nEDITOR_OPEN result=1 name=doors-editor-λ.txt bytes=35 chars=31 crc=c3ed8c4b\r\nEDITOR_REOPEN variant=rc dialog=1 text=1 chars=31\r\nEDITOR_EXIT variant=rc code=81\r\n"
+    },
+    "f2/wingui-editor.results": {
+      "bytes": 1670,
+      "sha256": "ebc7b56d35145bcfe71dec0647924338ee0c09ee6ff4534ee6d8ff8842ca0406",
+      "text": "EDITOR_START variant=code mode=selftest\r\nEDITOR_PROBE name=accelerators value=6\r\nEDITOR_PROBE name=status_last_part value=4294967295\r\nEDITOR_PROBE name=status_clicks value=1\r\nEDITOR_PROBE name=en_change_typed value=30\r\nEDITOR_ORDER name=outer steps=1,2,3\r\nEDITOR_ORDER name=query steps=11,40,31,50,21\r\nEDITOR_ORDER name=cross steps=60,65,70\r\nEDITOR_PROBE name=cross_insend value=1\r\nEDITOR_PROBE name=destroy_self_result value=85\r\nEDITOR_PROBE name=destroy_self_parentnotify value=1\r\nEDITOR_PROBE name=send_destroyed_error value=1400\r\nEDITOR_PROBE name=about_button value=2\r\nEDITOR_PROBE name=about_result value=1\r\nEDITOR_PROBE name=about_checks value=7\r\nEDITOR_CHROME event=open x=760 y=120 w=320 h=200\r\nEDITOR_PROBE name=chrome_client_w value=320\r\nEDITOR_PROBE name=chrome_client_h value=200\r\nEDITOR_PROBE name=chrome_window_x value=760\r\nEDITOR_PROBE name=chrome_window_y value=120\r\nEDITOR_PROBE name=chrome_window_w value=320\r\nEDITOR_PROBE name=chrome_window_h value=200\r\nEDITOR_PROBE name=chrome_small_w value=200\r\nEDITOR_PROBE name=chrome_small_h value=120\r\nEDITOR_CHROME event=close x=800 y=150 w=360 h=230\r\nEDITOR_DIALOG kind=save result=1 name=doors-editor-λ.txt offset_ok=1\r\nEDITOR_SAVE result=1 name=doors-editor-λ.txt chars=31 bytes=35 crc=c3ed8c4b\r\nEDITOR_OK variant=code menu=1 accelerators=1 strings=1 edit=1 reentrant=1 about=1 chrome=1 save=1\r\nEDITOR_EXIT variant=code code=80\r\nEDITOR_START variant=code mode=reopen\r\nEDITOR_DIALOG kind=open result=1 name=doors-editor-λ.txt offset_ok=1\r\nEDITOR_OPEN result=1 name=doors-editor-λ.txt bytes=35 chars=31 crc=c3ed8c4b\r\nEDITOR_REOPEN variant=code dialog=1 text=1 chars=31\r\nEDITOR_EXIT variant=code code=81\r\n"
+    },
+    "f3/wingui-hang.results": {
+      "bytes": 1280,
+      "sha256": "2cf8734055f52a6ac10598556169c5c7336cbc895688e5feb8fe35c483aab053",
+      "text": "HANG_START mode=selftest\r\nHANG_PROBE name=is_hung_initial value=0\r\nHANG_PROBE name=visible value=1\r\nHANG_PROBE name=is_hung_stopped value=0\r\nHANG_PROBE name=send_normal_result value=0\r\nHANG_PROBE name=send_normal_error value=1460\r\nHANG_PROBE name=send_normal_waited value=1\r\nHANG_PROBE name=post_while_stopped value=1\r\nHANG_PROBE name=internal_text value=17\r\nHANG_PROBE name=is_hung_after value=1\r\nHANG_PROBE name=send_abort_result value=0\r\nHANG_PROBE name=send_abort_error value=1460\r\nHANG_PROBE name=send_abort_fast value=0\r\nHANG_PROBE name=send_hung_normal_result value=0\r\nHANG_PROBE name=send_hung_normal_waited value=1\r\nHANG_PROBE name=is_window_hung value=1\r\nHANG_PROBE name=pings_after_release value=0\r\nHANG_PROBE name=is_hung_released value=0\r\nHANG_PROBE name=destroy_self_result value=119\r\nHANG_PROBE name=destroyed_is_window value=0\r\nHANG_PROBE name=send_destroyed_result value=0\r\nHANG_PROBE name=send_destroyed_error value=1400\r\nHANG_PROBE name=post_destroyed value=0\r\nHANG_PROBE name=post_destroyed_error value=1400\r\nHANG_PROBE name=reject_create value=0\r\nHANG_PROBE name=reject_create_error value=0\r\nHANG_OK hung=1 abort=1 released=1 destroyed=1 rejected=1\r\nHANG_EXIT code=82\r\nHANG_START mode=reject\r\nHANG_REJECT window=0 error=0 thread_windows=0\r\nHANG_EXIT code=83\r\n"
+    }
+  },
+  "saved": {
+    "f1/wingui-selftest-λ.txt": {
+      "bytes": 58,
+      "sha256": "31008a0305f6ab95c259616e436bc81268e95b1625a0a82a3c13f6fc76060479"
+    },
+    "f2-rc/doors-editor-λ.txt": {
+      "bytes": 35,
+      "sha256": "5351e426a623fe92ed16fa50d82bb8d280906612bf736777beca3e79ad355c6b"
+    },
+    "f2/doors-editor-λ.txt": {
+      "bytes": 35,
+      "sha256": "5351e426a623fe92ed16fa50d82bb8d280906612bf736777beca3e79ad355c6b"
+    }
+  },
+  "schema_version": 1,
+  "watcher_timeout_seconds": 60
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "record_kind": "emulator_acquisition",
+  "retrieval_date": "2026-10-12",
+  "authorization": "Owner requested QEMU verification and OVMF download",
+  "qemu": {
+    "path": "C:/Program Files/qemu/qemu-system-x86_64.exe",
+    "version": "11.1.0",
+    "build": "v11.1.0-12130-ge470268ff4",
+    "sha256": "47d57a6072e0bb3bd98f87926eb129eb1736dfe818c67b3b81ef7ce4edd0b3cd",
+    "source": "Owner installed QEMU Windows package",
+    "machine": "pc-q35-11.1",
+    "cpu": "qemu64-v1",
+    "accelerator": "tcg"
+  },
+  "firmware": {
+    "source_repository": "https://github.com/qemu/qemu",
+    "revision": "698104725efad4b29079d857dfdebbd804e34c99",
+    "release": "v10.2.0",
+    "base_url": "https://raw.githubusercontent.com/qemu/qemu/698104725efad4b29079d857dfdebbd804e34c99/pc-bios/",
+    "directory": "out/acquisitions/ovmf-qemu-10.2.0",
+    "files": [
+      {
+        "name": "edk2-i386-vars.fd",
+        "bytes": 540672,
+        "sha256": "5d2ac383371b408398accee7ec27c8c09ea5b74a0de0ceea6513388b15be5d1e"
+      },
+      {
+        "name": "edk2-i386-vars.fd.bz2",
+        "bytes": 190,
+        "sha256": "83470f393b9a200838b2292a65ca5708a109005d65a6422f3fa23cb21c8179b9"
+      },
+      {
+        "name": "edk2-licenses.txt",
+        "bytes": 42903,
+        "sha256": "1ddeaed2e7d2e9ecb960bdfc1b8ee45387aff70d056d985d145949af3951657c"
+      },
+      {
+        "name": "edk2-x86_64-code.fd",
+        "bytes": 3653632,
+        "sha256": "33090cc07675baa5190d9f1e84bf5176b33bcbfa9bacac522961150cdb6dbb2a"
+      },
+      {
+        "name": "edk2-x86_64-code.fd.bz2",
+        "bytes": 1907255,
+        "sha256": "f4d7c29fccb5e1d4d851eaddc41a5c4feec7de96ca7ad9bbf96f4d09838ef973"
+      }
+    ],
+    "decompression": "Python 3.14.4 standard-library bz2; original downloads retained",
+    "permitted_use": "Public QEMU-distributed EDK2/OVMF local development firmware. Upstream notices preserved in edk2-licenses.txt; no publication or click-through agreement."
+  },
+  "preflight_report": "reports/runs/host-1791809514813790100-11700/report.json",
+  "guest_execution": "not_run"
+}

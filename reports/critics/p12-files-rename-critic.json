@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "review_kind": "independent_read_only_bounded_checked_rename_critic",
+  "record_provenance": "Saved by root from the independent /root/rendering_critic final review; reviewer remained read-only.",
+  "status": "reviewed_no_unresolved_actionable_findings_in_scope",
+  "phase": "P12",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "findings": [],
+  "scope": [
+    "Authenticated same-parent checked rename and durable reply",
+    "Current ancestry/ACL/delete-sharing, object/version and collision checks",
+    "Lossless UTF16 wire and bounded shell-name editing",
+    "F2, command bar, inline and classic context; light/dark; resize/view visibility",
+    "Explicit native SDK exercise preserving legacy service contracts"
+  ],
+  "source_binding": {
+    "current_executable_snapshot": "6a2186673ea0e2da07dd843b054b9d19c2edc09f6a77fc86c935092b672ad6dc",
+    "gui_snapshot": "2f75f8a8b1b59d4366437edd0ec59aedb33c9058093374c4a20306e3c0803f9e",
+    "changed_files": [
+      "tests/fixtures/native-workload/src/main.rs",
+      "tools/xtask/src/main.rs",
+      "tools/xtask/src/services/audit.rs",
+      "tools/xtask/src/services/demo.rs",
+      "tools/xtask/src/services/scenarios.rs"
+    ],
+    "bridge": "All five application pairs and production firmware/kernel/initfs byte-identical between full builds16368 and13324; fresh changed-test-image recovery passed.",
+    "production_initfs_sha256": "7117756ad6b3a543ec1aadc64a421899336e6ca820c398da2e1a09faebd49522",
+    "post_test_changes": "Coordinated documentation/source-ledger overlays only."
+  },
+  "evidence": [
+    {
+      "report": "reports/runs/host-1792524945754259600-13324/report.json",
+      "sha256": "63fa62d055ab31998f210111fce4427cb1a160847dc2f23e4ead67820d5d5fa2",
+      "result": "Passed unchanged;7 checks;31 product refs independently rehashed."
+    },
+    {
+      "report": "reports/runs/host-1792524945754259600-13324/desktop-build.json",
+      "sha256": "8d057981118dc91332cafb2b7ac13faa0fcc815d9cb55aa73f61e617abc38d34",
+      "result": "Five independent application pairs."
+    },
+    {
+      "report": "reports/runs/host-1792524945731516700-4824/report.json",
+      "sha256": "c8f7768244de1a9f82e6dba0800b34a421f12a907732c73e8dfcc3810883bc09",
+      "result": "Passed unchanged;531 tests/33 executables independently counted;logs match."
+    },
+    {
+      "report": "reports/runs/host-1792523990852207500-21108/report.json",
+      "sha256": "f9525d5a14eeee01d27839f68502f80291d94289d15b06bbcdef1276e0714e9d",
+      "result": "Passed unchanged;19 checks;1xTCG;2boots."
+    },
+    {
+      "report": "reports/runs/host-1792523990903138900-16640/report.json",
+      "sha256": "47e0b300d44e57bcaf090e6cb3ad086f41a8cca2658e45fbc358bb387f49e4cc",
+      "result": "Passed unchanged;19 checks;4K3xWHPX/RAMFB;2boots."
+    },
+    {
+      "report": "reports/runs/host-1792524027514902100-19056/report.json",
+      "sha256": "e64af664db721834e946d001ec7dadef8c9120f01674d205ffad59962ea9c2aa",
+      "result": "Passed unchanged;242checks;472refs rehashed;9clean native sessions."
+    },
+    {
+      "report": "reports/runs/host-1792525116311615100-23568/report.json",
+      "sha256": "97c8e5e18ab55c6a55f19fb7606e33c7709c60e68384a2b2889c6dd62a47cd04",
+      "result": "Passed unchanged;4current-test-image recovery checks;zero leaks."
+    },
+    {
+      "report": "reports/runs/host-1792525250421265300-17776/report.json",
+      "sha256": "3a71d1f8ed6475a08f8a331d025a630590080fd96a919cb373943a47fd72479d",
+      "result": "Explicit SDK exercise passed unchanged."
+    },
+    {
+      "report": "reports/runs/host-1792525253967430700-17776/report.json",
+      "sha256": "cf86ed994f0c469f956effaab4a80f0d4207759aaa6666d597fa11cf5ba3a668",
+      "result": "SDK child passed unchanged;28refs rehashed;retired manifest5/uid1001/pid11/exit71;debugexit33;zero leaks."
+    },
+    {
+      "report": "reports/runs/host-1792524945730431400-8952/report.json",
+      "sha256": "7fe05fc6ddfdd24dd7b0ce51ffe7a24aa7c85c8b732423226dd532a2c2cf2678",
+      "result": "Fresh foundation passed unchanged."
+    },
+    {
+      "report": "reports/runs/host-1792524945730431400-8952/boot-suite.json",
+      "sha256": "d272691926479125e1eb54e3d7b4b065981efa86c0977fe1d9a753365878b811",
+      "result": "42expected outcomes matched;665refs rehashed;both original demos passed."
+    }
+  ],
+  "gui": {
+    "references_per_run": 59,
+    "staged_copies_per_run": 12,
+    "object": 26,
+    "inode": 17,
+    "generation": 1,
+    "content_bytes": 28,
+    "identity_and_content_preserved_after_rename_and_reboot": true,
+    "original_disk_sha256": "46dd7e500153372d762560e5807b5cd0e236b4c416eb1769c7f6f259d18127c5",
+    "saved_and_reopened_sha256": "9628edd7209241ae4b074da918ed9047108d0bf2620f97e14ca30160ca832fd6",
+    "cleanup": "Four GUI boots completed shutdown1/leaked0; retained screenshots inspected."
+  },
+  "sdk_raw_audit": {
+    "method": "Independent read-only ext2/catalog/journal decoder and complete byte comparison",
+    "checkpoint": [
+      3,
+      5
+    ],
+    "catalog_revision": [
+      57,
+      59
+    ],
+    "source_version": [
+      23,
+      25
+    ],
+    "inode": 13,
+    "generation": 1,
+    "pattern_bytes": 4096,
+    "only_exact_catalog_revision_crc_source_version_and_journal_changed": true,
+    "baseline_preserved": true
+  },
+  "legacy_regression": {
+    "outcomes": {
+      "Passed": 27,
+      "KernelPanic": 6,
+      "Interrupted": 5,
+      "StartupFailure": 2,
+      "GuestFailure": 1,
+      "Timeout": 1
+    },
+    "smp": "Actual two/four-CPU and degraded fixtures;32TLBrounds each.",
+    "save_reopen_restart_final_identical_sha256": "5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d",
+    "corrupt_refusal": "Input preserved; sole declared catalog-CRC bit at disk offset68198440.",
+    "standard_console_commands": [
+      "help",
+      "status",
+      "file",
+      "theme",
+      "threads",
+      "exit"
+    ],
+    "standard_console": "Checkpoint4/theme1to2/catalog57to58/sourceversion23; independent exact whitelist check.",
+    "sdk_markers_in_legacy_cases": 0
+  },
+  "resolved": [
+    "Invisible editor after resize/view change",
+    "Offscreen or zero-width edit in tall narrow clients",
+    "Missing pre-mutation allocation baseline in GUI oracle",
+    "Unconditional SDK mutation isolated without weakening legacy assertions"
+  ],
+  "retained_failures": {
+    "geometry": [
+      "reports/runs/host-1792523247834814800-14804/report.json",
+      "reports/runs/host-1792523247881795800-23668/report.json",
+      "reports/runs/host-1792523391049659900-25680/report.json",
+      "reports/runs/host-1792523391049923100-7024/report.json"
+    ],
+    "foundation": {
+      "report": "reports/runs/host-1792523990931422400-8644/report.json",
+      "sha256": "404dcbf2276f7e96ecb424152579ecc1c30813b8cf24873346038fd3e9459d1b",
+      "reason": "Original unconditional SDK placement violated services-save checkpoint."
+    }
+  },
+  "limitations": [
+    "Finite same-parent rename only; no P12 closure or full Explorer.",
+    "Copy/move/trash/restore and known-folder relocation remain open.",
+    "48UTF16-unit bound and ASCII folding; UI refuses lossy UTF16 edit; Unicode shaping/IME remain open.",
+    "Post-commit transport failure remains uncertain; UI requests reopen/refresh.",
+    "No Windows1:1, universal hardware/FPS or absence-of-all-bugs claim.",
+    "Missing original P00 evidence still blocks cumulative verification; current foundation does not replace it."
+  ]
+}

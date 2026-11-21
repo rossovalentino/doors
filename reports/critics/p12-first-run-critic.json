@@ -1,0 +1,117 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "recorded_by": "/root",
+  "recording": "Normalized independent read-only review; original reports unchanged",
+  "status": "accepted_bounded",
+  "scope": "Explicit new owner volume initializer, fixed-size admission and retained interactive/default/software launch graphs",
+  "phase_closed": false,
+  "unresolved_actionable_findings": [],
+  "tested_source": "e48c2d806f9dfb721fcdcd06ba28d06f28697d50f59bdc63115dd6e3c59f7187",
+  "native_tool_source": "44e1f411123a697d3f9af95c0b1aaa36c1d0d211d2ecf27afc947c423d6967bc",
+  "host_tests": 674,
+  "host_executables": 34,
+  "bindings": {
+    "host": {
+      "run": "host-1792576596573475700-10848",
+      "report": "reports/runs/host-1792576596573475700-10848/report.json",
+      "sha256": "a59f54a15f2739eec212adfd22506a6d0cd9cb7188560429c1bd85e5a3733dc2",
+      "source": "e48c2d806f9dfb721fcdcd06ba28d06f28697d50f59bdc63115dd6e3c59f7187",
+      "checks": 0,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "default_4k": {
+      "run": "host-1792576447590346000-7548",
+      "report": "reports/runs/host-1792576447590346000-7548/report.json",
+      "sha256": "64f8790c2fcaa6eebd2d33a050ced318515d431bd7a2d8e245809c7c966b99c5",
+      "source": "44e1f411123a697d3f9af95c0b1aaa36c1d0d211d2ecf27afc947c423d6967bc",
+      "checks": 18,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "software_1x": {
+      "run": "host-1792576528479420000-15136",
+      "report": "reports/runs/host-1792576528479420000-15136/report.json",
+      "sha256": "6e5d887693ceccdd0efb0e131b8e9d5fb35c21687a60ebebaa737c40b935cfbc",
+      "source": "44e1f411123a697d3f9af95c0b1aaa36c1d0d211d2ecf27afc947c423d6967bc",
+      "checks": 18,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "retained": {
+      "run": "host-1792576720130797300-26392",
+      "report": "reports/runs/host-1792576720130797300-26392/report.json",
+      "sha256": "94ea8c142086ab9f76080badaed88f745dda8190de697ac850983f5e252dd5ec",
+      "source": "e48c2d806f9dfb721fcdcd06ba28d06f28697d50f59bdc63115dd6e3c59f7187",
+      "checks": 1,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "initializer": {
+      "run": "host-1792576816945398800-12436",
+      "report": "reports/runs/host-1792576816945398800-12436/report.json",
+      "sha256": "b322fcfa54e6ea2b23cb8c3705842d864babb6350e67e5528528b24cb8c76439",
+      "source": "e48c2d806f9dfb721fcdcd06ba28d06f28697d50f59bdc63115dd6e3c59f7187",
+      "checks": 3,
+      "success": true,
+      "inputs_unchanged": true
+    }
+  },
+  "source_bridge": {
+    "path": "reports/runs/host-1792576596573475700-10848/host-tool-only-source-bridge.json",
+    "sha256": "72ee68b03d46d65348fd72d9fae30e096e3561987236e568ec546f759d82d8af",
+    "changed_host_files": 5,
+    "guest_assets_validator_unchanged": true
+  },
+  "test_only_bridge": {
+    "path": "reports/runs/host-1792576596573475700-10848/unit-test-only-source-bridge.json",
+    "sha256": "a41d4b29f52d081016c36785e86800734843667b8d850bec55b8e094ccaa6a9f",
+    "exact_old_module_reconstructed": true,
+    "only_added_cfg_test_function": "late_busy_or_racing_owner_preserves_target_and_cleans_owned_staging",
+    "production_prefix_unchanged": true
+  },
+  "independent_audit": {
+    "each_private_launch": {
+      "checks": 18,
+      "sessions": 1,
+      "hashed_refs": 32,
+      "rgb_pairs": 10,
+      "probes": 7,
+      "private_image_entries": 3,
+      "pid_uuid_argv_bound": true,
+      "retirement": "8/8 leaked0 DEVICE8",
+      "saved_utf8": "Native density note\n",
+      "catalog_and_journal_crcs_valid": true
+    },
+    "initializer": {
+      "checks": 3,
+      "reserve_bytes": 335544320,
+      "raw_bytes": 134217728,
+      "initial_sha256": "ab043a4bb5057a6f4a749ff36af86ee5872a9b67beb7600a5812ca43414f0f12",
+      "gpt_primary_backup_and_arrays_crcs_valid": true,
+      "fat_boot_valid": true,
+      "initial_catalog_absent": true,
+      "both_clean_journal_generation0_crcs_valid": true,
+      "observation": "No QEMU/rustc before or after point-in-time read; owner hash unchanged then. Owner is mutable from now on, never a regression fixture."
+    }
+  },
+  "resolved_findings": [
+    "Late guest activity after full stage/audit prevents publication and cleans owned staging",
+    "Racing owner before publication remains byte-exact and owned staging is removed"
+  ],
+  "limits": [
+    "Private headless WHPX3x/TCG1x tested; visible SDL and actual owner boot not tested by root",
+    "File data synced before atomic no-replace publication; no crash-durable directory publication guarantee",
+    "Existing/partial/unknown owner is always refused, not repaired or reformatted",
+    "Initialization needs workspace-local same-volume hard-link support; no fallback overwrites",
+    "20GB covers only out;320MiB logical staging reserve and18GB writer guard are not a filesystem hard quota",
+    "Existing desktop early-error paths may remain unsealed; do not claim every CLI failure has complete evidence",
+    "P12 partial; original missing P00 still blocks cumulative qualification; intermittent earlier host abort cause remains open"
+  ],
+  "critic_actions": {
+    "modified_files": false,
+    "started_tests": false,
+    "host_ui": false,
+    "owner_read_only_quiescent_once": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "recorded_by": "/root",
+  "recording": "Normalized independent final read-only review; original reports and failed evidence unchanged",
+  "status": "accepted_bounded",
+  "scope": "Short retained output layout v2 for exact test desktop-current; compatible retained validation and protected Cargo-cache pruning",
+  "phase_closure": false,
+  "unresolved_actionable_findings": [],
+  "tested_source_sha256": "aa1e6789d41cedb70e6cc7bf5c38d3f49c7ac6fb287c3ce0bf5c8a9336042b6e",
+  "source_files_independently_verified": 2037,
+  "guest_source_changed": false,
+  "bindings": {
+    "host": {"run":"host-1792565842257331500-6732","report_sha256":"b5a9fc892012f35bd9d574f43e8d9bc5f7cd2f68bb4f89d9246e2c1ede129470","tests":657,"executables":33},
+    "desktop": {"run":"host-1792565964145546900-15756","report_sha256":"149644006a30a1e6245723fe6c123552cac7a72bb06515e66f427b0d781f234c","suite_sha256":"637ac5ae067b1eba4169b5ea8971513f289fba4d39ccc395401420082777beb0","build_sha256":"5fb7a92e6a0ca647e651f7582b83d7bddf81e629d98d7bbd8b33cbeb2fba5714","desktop_checks":253,"maintenance_checks":2,"actual_sessions":9,"success":true,"inputs_unchanged":true},
+    "artifact_bridge": {"path":"reports/runs/host-1792565964145546900-15756/guest-artifact-layout-bridge.json","sha256":"918bf6c95a46783245818451f051d24244654848b38f048ceaeaacb6467359b6","actual_old_new_files":21,"byte_differences":0,"independent_app_pairs":5},
+    "v2_post_prune": {"run":"host-1792566987176410400-1500","report_sha256":"0a367ee84169a578ca3e90ab3d1e498c0156bd87a60fd0394f44a364a72fbc13","checkpoint_sha256":"9c3755d605e23564997139c8b3594b14a640554e87aac2cabd7c8d819de29f36","success":true,"inputs_unchanged":true,"new_guests":false},
+    "v1_retained": {"run":"host-1792567132971595700-10352","report_sha256":"a6436a6a2341b9687193eb7f5f305342e02711819457e86ff6ee24ec8969d5aa","checkpoint_sha256":"6bb08c3e33c34c44568116583c08d0e0f4da4ead4c0a2a4fe823f3580c53a268","success":true,"inputs_unchanged":true,"new_guests":false}
+  },
+  "independent_audit": {"json_records":11,"referenced_paths_hashed":825,"source_and_private_image_entries":33,"png_ppm_rgb_pairs":178,"declared_pixel_probes":176,"canonical_owner_instance_pid_uuid_argv_bindings":9,"raw_disks_decoded":8,"catalog_and_journal_crcs_valid":true,"expected_document_bytes_exact":true,"all_sessions_zero_leaks_and_device8":true,"wide_diagnostic_bytes":[13472,3560],"wide_frame_samples":[16,7],"diagnostic_reserve_preserved":true,"reference_errors":0},
+  "raw_cross_run": {"identical_to_21160":7,"total":8,"recovery_changed_bytes":42,"recovery_sha256":"2fa2747ca5643b09fe46a13cb7837f53ff797d82b7b5e9fd62c799bf1826e92a","observed":"Directory objects25/26 swap notes/Desktop names; document32 parent25 becomes26, preserving logical pathname, version2/inode17/generation1 and exact38-byte recovery payload","catalog_revision":855,"clean_journal_generation":44,"difference":"21 catalog changes including CRC duplicated in residual journal payload","inference":"Consistent with startup mkdir RPC ordering; not serial-attested","bytes_normalized_or_edited":false},
+  "cleanup": {"receipt_sha256":"c1c58d0cfc3445bfbd5038ed6cfefecbe9bbdff205173216b2a13715bda87bec","removed_retained_cargo_leaves":40,"removed_retained_cache_bytes":205996028,"all_removed_paths_allowlisted_and_absent":true,"out_before_bytes":16758530855,"out_after_bytes":16758530855,"out_reduction_claimed":false,"protected_primary_artifacts":21,"protected_link_maps":18,"protected_import_libraries":3,"protected_app_pairs":5,"all_hashes_valid":true},
+  "resolved_findings": ["Cleanup keyed by owner and layout for sealed/current runs", "Short paths remove duplicated owner names exceeding MSVC tooling limits", "External v2 references pin cache leaves; disposable metadata does not self-pin", "Bounded metadata reserve preserves18GB writer guard"],
+  "preserved_failure": {"run":"host-1792565529903993300-9300","report_sha256":"e6ecb502d1eca23a85719126c8fd4e1d480caf737d88659b95bc82ec48cef42f","success":false,"guest_tests":"not_run","retained_streams":2,"qualification":"Preserved pre-shortening development failure; not promoted"},
+  "limitations": ["Only exact test desktop-current selects v2; other producer migration remains separate", "No new foundation execution; inheritance limited to actual byte-identical guest artifacts", "20GB covers out only; report bulk is not capped", "Legacy8GB admission and18GB live out guard remain", "Cumulative qualification not re-established; prior first missing P00 does not validate later historical dependencies", "No P12 closure, Windows fidelity, Microsoft ClearType or new rendering/FPS claim"],
+  "critic_actions": {"modified_files":false,"started_tests_or_guests":false,"used_host_ui":false,"owner_volume_present":false}
+}

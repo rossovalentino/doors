@@ -1,0 +1,20 @@
+[package]
+name = "door-settings-registry"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Typed settings registry: properties, propose/validate/commit/observe, corrupt-config recovery and permission-aware search (spec §62; allocation-free)"
+
+[dependencies]
+door-keyboard-layouts = { path = "../keyboard-layouts" }
+door-locale = { path = "../locale" }
+door-service-client = { path = "../service-client" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+door-settings-map = { path = "../settings-map" }
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"

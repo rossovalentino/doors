@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/rendering_critic",
+  "review_kind": "independent_read_only_critic",
+  "provenance": "Saved by root from rendering_critic's independent final read-only review; attributed structured record, not a critic-written workspace file.",
+  "scope": "Bounded P12 host-only interactive desktop launcher",
+  "verdict": "accepted_bounded",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "tested_source_sha256": "1c784b9b43a1f5e7b0bc0414c09aa5db42fe438da1e2fbcdf07cd7237ff0cb16",
+  "findings": [],
+  "resolved_findings": [
+    "Constructed accelerator/video/display/mode are validated before process spawn; negative cases reject wrong/duplicate/mixed/unknown/truncated argv.",
+    "Actual1x scrollbar sample replaced by inspected clear20DIP content margin."
+  ],
+  "code_review": {
+    "parser": "Pure; rejects malformed/duplicate options before image or owner-volume access.",
+    "default": "WHPX/RAMFB, visible1280x720",
+    "software": "--accelerator tcg",
+    "fixed_regressions": "Existing TCG defaults preserved",
+    "cleanup": "Original checked errors retained; selection assertion before spawn avoids post-handoff leak",
+    "automatic_fallback": false,
+    "host_feature_changes": false
+  },
+  "evidence": [
+    {
+      "report": "reports/runs/host-1792535599726462300-23328/report.json",
+      "sha256": "e7451514abc52c038e6492ce8f644d0aa953684e693046de81ad6d24094849b7",
+      "result": "555 host tests /33 executables"
+    },
+    {
+      "report": "reports/runs/host-1792535599667436000-25916/report.json",
+      "sha256": "0af29b2c9645c4aa68a348c4267c80466d6eb5dcd530950c28750d775a5e0c2e",
+      "result": "16 shared default4K native checks /WHPX RAMFB"
+    },
+    {
+      "report": "reports/runs/host-1792535599679952900-19812/report.json",
+      "sha256": "650b82e17cfef25cf440dc99167a178cbedb9ec828c8cbffb1297fe20a78a051",
+      "result": "16 shared explicit software1x native checks /TCG VGA"
+    }
+  ],
+  "native_audit": {
+    "references_verified_per_run": 39,
+    "process_argv_matches_both_selection_checks": true,
+    "actual_backends": [
+      "whpx/ramfb/3840x2160/3x",
+      "tcg/VGA,vgamem_mb=64,xres=1280,yres=720/1x"
+    ],
+    "both_displays": "none",
+    "both_cleanups": {
+      "processes": 8,
+      "threads": 8,
+      "leaked": 0
+    },
+    "both_disk_sha256": "415e6c3876dfffb771cf7ec654d7fa6be60b7ce4eb79b2157770704d99c99043",
+    "independent_raw_decode": {
+      "path": "/users/1001/notes/desktop.txt",
+      "payload": "Native density note\n",
+      "bytes": 20,
+      "object": 32,
+      "version": 3,
+      "inode": 17,
+      "generation": 1,
+      "catalog_revision": 833,
+      "catalog_crc_valid": true,
+      "mirrored_journal_generations": [
+        43,
+        43
+      ],
+      "mirrored_journal_crc_valid_and_clean": true
+    },
+    "remaining_qemu": 0,
+    "owner_disk_present": false
+  },
+  "guest_build_bridge": {
+    "report": "reports/runs/host-1792533909144315600-16216/report.json",
+    "sha256": "d1a662737810dec37b57c599be5eb18f927c55d88f3663541b0209728c38917c",
+    "manifest_sha256": "0018ccda45933f2cdfe5ed31d52d41aba5dae173e5ad9a251d185e216caa9fca",
+    "initfs_sha256": "26a050da750baa3f154ca863f898874340bd64ec707909abbc6412cb32bb915d",
+    "artifacts_rehashed": 26,
+    "independent_app_pairs": 5,
+    "guest_cargo_assets_profiles_unchanged": true,
+    "host_only_delta": [
+      "tools/xtask/src/desktop.rs",
+      "tools/xtask/src/desktop/resolution.rs",
+      "tools/xtask/src/main.rs",
+      "tools/xtask/src/session/desktop_options.rs",
+      "tools/xtask/src/session/mod.rs"
+    ],
+    "current_executable_asset_profile_inputs_rehashed": 1006,
+    "foundation": "Inherited unchanged core evidence, no fresh run claimed"
+  },
+  "retained_initial_evidence": [
+    {
+      "report": "reports/runs/host-1792535231023770600-19220/report.json",
+      "sha256": "66dd18180c05a62b8dd8b22f66205badeb14a072bced317eb9964613c4c113d9",
+      "result": "Superseded pre-assertion host pass"
+    },
+    {
+      "report": "reports/runs/host-1792535231056043200-24152/report.json",
+      "sha256": "151af6ca921866aebf3728f6e407f809a532d04a14f959c90c03aa74062ac47d",
+      "result": "Superseded pre-assertion native pass"
+    },
+    {
+      "report": "reports/runs/host-1792535231106028400-13584/report.json",
+      "sha256": "563b2cf98a2727bcf7e0f5cb04af8ee2c7063ee4cf89ea14a43e310542d2999c",
+      "result": "Retained failed scrollbar probe"
+    }
+  ],
+  "limitations": [
+    "Native runs are headless; visibleSDL selection is host-tested, visibleSDL presentation unexercised.",
+    "WHPX actual operation established on acquired host only.",
+    "No new FPS/latency-distribution/performance measurement.",
+    "Finite review is not all-defect guarantee.",
+    "P12 remains partial; missing historical P00 blocks cumulative qualification."
+  ]
+}

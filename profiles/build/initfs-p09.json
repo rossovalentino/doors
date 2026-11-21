@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "record_kind": "initfs_inputs",
+  "entries": [
+    { "artifact": "door-console", "destination": "bin/door-console.elf" },
+    { "artifact": "door-init", "destination": "bin/door-init.elf" },
+    { "artifact": "door-session", "destination": "bin/door-session.elf" },
+    { "artifact": "door-storage", "destination": "bin/door-storage.elf" },
+    { "artifact": "native-probe", "destination": "bin/native-probe.elf" },
+    { "artifact": "native-runtime", "destination": "bin/native-runtime.elf" },
+    { "artifact": "native-workload", "destination": "bin/native-workload.elf" },
+    { "source": "boot/config/boot.txt", "destination": "system/boot.txt" },
+    { "artifact": "kernel32", "class": "windows-dll", "destination": "windows/kernel32.dll" },
+    { "artifact": "ntdll", "class": "windows-dll", "destination": "windows/ntdll.dll" },
+    { "artifact": "windows-basic", "class": "windows-fixture", "destination": "windows/windows-basic.exe" }
+  ]
+}

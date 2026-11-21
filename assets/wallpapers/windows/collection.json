@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "backgrounds": [
+    {
+      "id": 1,
+      "name": "bloom-dark",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Wallpapers/Windows%2011/Desktop/Windows/img19.jpg",
+      "source_sha256": "d54262032574b15ccf541e40fa13475ffb39d8682c19383e917f3ed5e8bbca71",
+      "png_sha256": "c5b0de98da24174d7a0ca0454e809074a7b4eb7192af79ed43986efa44a7a83c",
+      "dimensions": [
+        3840,
+        2400
+      ]
+    },
+    {
+      "id": 2,
+      "name": "glow",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Wallpapers/Windows%2011/Desktop/Glow/img20.jpg",
+      "source_sha256": "6610e4c12b5ccaa2906e7584339786378d921cbaf7c4b3bc5bd585e3f955b685",
+      "png_sha256": "497b691bdf90a29fe3daec489c0c89d24735abfaec02f1cb1046a7f2b1f20ee8",
+      "dimensions": [
+        3840,
+        2400
+      ]
+    },
+    {
+      "id": 3,
+      "name": "sunrise",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Wallpapers/Windows%2011/Desktop/Sunrise/img28.jpg",
+      "source_sha256": "27786bd11e2313373246a42c7173bb953d3982665267744766e6a6649b20f3e0",
+      "png_sha256": "4d517ba0a90497e17fca12ab9d382d48daf0d9707dc0700502bf390e5847ef0a",
+      "dimensions": [
+        3840,
+        2400
+      ]
+    }
+  ],
+  "resampling": "Offline previews: area-prefiltered mip levels then bicubic cover; guest: in-place area prefilter then bilinear cover; native4K preserved"
+}

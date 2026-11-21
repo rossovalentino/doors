@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <!-- Doors open-door mark, vector master traced from the owner's 2026-10-22
+       reference (images/8.jpg, 1254 px): front panel x 319-665 (top slope -1/2,
+       bottom slope ~0.27), pale rear panel x 665-934, y 348-930; mapped into
+       this 24-unit box with 1 unit vertical padding and optical centering. -->
+  <defs>
+    <linearGradient id="front" x1="4.6" y1="21.2" x2="12.9" y2="1.4" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0230a0"/>
+      <stop offset=".3" stop-color="#0450d8"/>
+      <stop offset=".55" stop-color="#0a76f3"/>
+      <stop offset=".8" stop-color="#2bb4fa"/>
+      <stop offset="1" stop-color="#66e8ff"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="8.4" y1="0" x2="13.03" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5fe0ff" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#5fe0ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#6fe8ff" stop-opacity=".6"/>
+    </linearGradient>
+    <!-- Light from the open door: brightest at the hinge, mid-height. -->
+    <radialGradient id="rear" cx="12.7" cy="13.2" r="7.8" gradientUnits="userSpaceOnUse" gradientTransform="translate(12.7 13.2) scale(1 1.35) translate(-12.7 -13.2)">
+      <stop stop-color="#f8feff"/>
+      <stop offset=".3" stop-color="#ddf2fe"/>
+      <stop offset=".72" stop-color="#a9d2fd"/>
+      <stop offset="1" stop-color="#86bdfb"/>
+    </radialGradient>
+  </defs>
+  <path d="M12.7 5.195 Q12.7 5.095 12.8 5.095 L19.51 5.095 Q20.23 5.095 20.23 5.815 L20.23 19.95 Q20.23 20.67 19.51 20.67 L12.8 20.67 Q12.7 20.67 12.7 20.57 Z" fill="url(#rear)"/>
+  <path d="M3.77 6.002 Q3.77 5.202 4.486 4.844 L12.583 0.796 Q13.03 0.572 13.03 1.072 L13.03 22.741 Q13.03 23.241 12.547 23.113 L4.543 20.985 Q3.77 20.779 3.77 19.979 Z" fill="url(#front)"/>
+  <path d="M3.77 6.002 Q3.77 5.202 4.486 4.844 L12.583 0.796 Q13.03 0.572 13.03 1.072 L13.03 22.741 Q13.03 23.241 12.547 23.113 L4.543 20.985 Q3.77 20.779 3.77 19.979 Z" fill="url(#edge)"/>
+</svg>

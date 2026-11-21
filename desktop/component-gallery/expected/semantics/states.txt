@@ -1,0 +1,133 @@
+window "Doors UI Gallery"
+  navigation "Navigation" [FOCUSABLE] {FOCUS}
+    button "Close Navigation" {INVOKE}
+    list item "Basic input" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=1/9
+    list item "Control states" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT} pos=2/9
+    list item "Text and selection" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=3/9
+    list item "Collections" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=4/9
+    list item "Menus and toolbars" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=5/9
+    list item "Status and info" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=6/9
+    list item "Layout" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=7/9
+    list item "Dialogs" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=8/9
+    list item "Accessibility" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=9/9
+    scroll viewer "" [VERTICAL]
+      heading "Control states" level=1
+      group "Theme"
+        heading "Theme" level=2
+        combo box "Theme" value="Use system setting" [FOCUSABLE EXPANDABLE HAS_POPUP] {FOCUS EXPAND}
+        text "Pointer over, pressed and focused cells are forced visual states (paint only); disabled cells are really disabled."
+      group "State matrix"
+        heading "State matrix" level=2
+        text "Control"
+        text "Rest"
+        text "Pointer over"
+        text "Pressed"
+        text "Disabled"
+        text "Focused"
+        text "Button"
+        button "Button, rest" [FOCUSABLE] {FOCUS INVOKE}
+        button "Button, pointer over" [FOCUSABLE] {FOCUS INVOKE}
+        button "Button, pressed" [FOCUSABLE] {FOCUS INVOKE}
+        button "Button, disabled" [DISABLED] {INVOKE}
+        button "Button, focused" [FOCUSABLE] {FOCUS INVOKE}
+        text "Accent button"
+        button "Accent button, rest" [FOCUSABLE DEFAULT] {FOCUS INVOKE}
+        button "Accent button, pointer over" [FOCUSABLE DEFAULT] {FOCUS INVOKE}
+        button "Accent button, pressed" [FOCUSABLE DEFAULT] {FOCUS INVOKE}
+        button "Accent button, disabled" [DISABLED DEFAULT] {INVOKE}
+        button "Accent button, focused" [FOCUSABLE DEFAULT] {FOCUS INVOKE}
+        text "Icon button"
+        button "Icon button, rest" [FOCUSABLE] {FOCUS INVOKE}
+        button "Icon button, pointer over" [FOCUSABLE] {FOCUS INVOKE}
+        button "Icon button, pressed" [FOCUSABLE] {FOCUS INVOKE}
+        button "Icon button, disabled" [DISABLED] {INVOKE}
+        button "Icon button, focused" [FOCUSABLE] {FOCUS INVOKE}
+        text "Hyperlink"
+        link "Hyperlink, rest" [FOCUSABLE] {FOCUS INVOKE}
+        link "Hyperlink, pointer over" [FOCUSABLE] {FOCUS INVOKE}
+        link "Hyperlink, pressed" [FOCUSABLE] {FOCUS INVOKE}
+        link "Hyperlink, disabled" [DISABLED] {INVOKE}
+        link "Hyperlink, focused" [FOCUSABLE] {FOCUS INVOKE}
+        text "ToggleButton"
+        toggle button "ToggleButton, rest" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle button "ToggleButton, pointer over" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle button "ToggleButton, pressed" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle button "ToggleButton, disabled" [DISABLED CHECKABLE] {TOGGLE}
+        toggle button "ToggleButton, focused" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        text "ToggleButton (on)"
+        toggle button "ToggleButton (on), rest" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        toggle button "ToggleButton (on), pointer over" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        toggle button "ToggleButton (on), pressed" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        toggle button "ToggleButton (on), disabled" [DISABLED CHECKED CHECKABLE] {TOGGLE}
+        toggle button "ToggleButton (on), focused" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        text "CheckBox"
+        check box "CheckBox, rest" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox, pointer over" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox, pressed" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox, disabled" [DISABLED CHECKABLE] {TOGGLE}
+        check box "CheckBox, focused" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        text "CheckBox (checked)"
+        check box "CheckBox (checked), rest" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox (checked), pointer over" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox (checked), pressed" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox (checked), disabled" [DISABLED CHECKED CHECKABLE] {TOGGLE}
+        check box "CheckBox (checked), focused" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        text "CheckBox (mixed)"
+        check box "CheckBox (mixed), rest" [FOCUSABLE MIXED CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox (mixed), pointer over" [FOCUSABLE MIXED CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox (mixed), pressed" [FOCUSABLE MIXED CHECKABLE] {FOCUS TOGGLE}
+        check box "CheckBox (mixed), disabled" [DISABLED MIXED CHECKABLE] {TOGGLE}
+        check box "CheckBox (mixed), focused" [FOCUSABLE MIXED CHECKABLE] {FOCUS TOGGLE}
+        text "RadioButton"
+        group "RadioButton, rest" [FOCUSABLE] {FOCUS}
+          radio button "Option" [FOCUSABLE SELECTED] {FOCUS SELECT} pos=1/1
+        group "RadioButton, pointer over" [FOCUSABLE] {FOCUS}
+          radio button "Option" [FOCUSABLE SELECTED] {FOCUS SELECT} pos=1/1
+        group "RadioButton, pressed" [FOCUSABLE] {FOCUS}
+          radio button "Option" [FOCUSABLE SELECTED] {FOCUS SELECT} pos=1/1
+        group "RadioButton, disabled" [DISABLED]
+          radio button "Option" [FOCUSABLE DISABLED SELECTED] {FOCUS SELECT} pos=1/1
+        group "RadioButton, focused" [FOCUSABLE] {FOCUS}
+          radio button "Option" [FOCUSABLE SELECTED] {FOCUS SELECT} pos=1/1
+        text "ToggleSwitch" [OFFSCREEN]
+        toggle switch "ToggleSwitch, rest" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "ToggleSwitch, pointer over" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "ToggleSwitch, pressed" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "ToggleSwitch, disabled" [DISABLED CHECKABLE] {TOGGLE}
+        toggle switch "ToggleSwitch, focused" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        text "ToggleSwitch (on)" [OFFSCREEN]
+        toggle switch "ToggleSwitch (on), rest" [FOCUSABLE CHECKED OFFSCREEN CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "ToggleSwitch (on), pointer over" [FOCUSABLE CHECKED OFFSCREEN CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "ToggleSwitch (on), pressed" [FOCUSABLE CHECKED OFFSCREEN CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "ToggleSwitch (on), disabled" [DISABLED CHECKED OFFSCREEN CHECKABLE] {TOGGLE}
+        toggle switch "ToggleSwitch (on), focused" [FOCUSABLE CHECKED OFFSCREEN CHECKABLE] {FOCUS TOGGLE}
+        text "Slider" [OFFSCREEN]
+        slider "Slider, rest" value="40" [FOCUSABLE OFFSCREEN HORIZONTAL HAS_RANGE] {FOCUS INCREMENT DECREMENT SET_RANGE} range=0..100000@40000
+        slider "Slider, pointer over" value="40" [FOCUSABLE OFFSCREEN HORIZONTAL HAS_RANGE] {FOCUS INCREMENT DECREMENT SET_RANGE} range=0..100000@40000
+        slider "Slider, pressed" value="40" [FOCUSABLE OFFSCREEN HORIZONTAL HAS_RANGE] {FOCUS INCREMENT DECREMENT SET_RANGE} range=0..100000@40000
+        slider "Slider, disabled" value="40" [DISABLED OFFSCREEN HORIZONTAL HAS_RANGE] {INCREMENT DECREMENT SET_RANGE} range=0..100000@40000
+        slider "Slider, focused" value="40" [FOCUSABLE OFFSCREEN HORIZONTAL HAS_RANGE] {FOCUS INCREMENT DECREMENT SET_RANGE} range=0..100000@40000
+        text "TextBox" [OFFSCREEN]
+        edit "TextBox, rest" [FOCUSABLE OFFSCREEN HAS_SELECTION EDITABLE] {FOCUS SET_VALUE SET_SELECTION} sel=0..0
+        edit "TextBox, pointer over" [FOCUSABLE OFFSCREEN HAS_SELECTION EDITABLE] {FOCUS SET_VALUE SET_SELECTION} sel=0..0
+        edit "TextBox, pressed" [FOCUSABLE OFFSCREEN HAS_SELECTION EDITABLE] {FOCUS SET_VALUE SET_SELECTION} sel=0..0
+        edit "TextBox, disabled" [DISABLED OFFSCREEN HAS_SELECTION EDITABLE] {SET_VALUE SET_SELECTION} sel=0..0
+        edit "TextBox, focused" [FOCUSABLE OFFSCREEN HAS_SELECTION EDITABLE] {FOCUS SET_VALUE SET_SELECTION} sel=0..0
+        text "PasswordBox" [OFFSCREEN]
+        edit "PasswordBox, rest" [FOCUSABLE PROTECTED OFFSCREEN EDITABLE] {FOCUS SET_VALUE}
+        edit "PasswordBox, pointer over" [FOCUSABLE PROTECTED OFFSCREEN EDITABLE] {FOCUS SET_VALUE}
+        edit "PasswordBox, pressed" [FOCUSABLE PROTECTED OFFSCREEN EDITABLE] {FOCUS SET_VALUE}
+        edit "PasswordBox, disabled" [DISABLED PROTECTED OFFSCREEN EDITABLE] {SET_VALUE}
+        edit "PasswordBox, focused" [FOCUSABLE PROTECTED OFFSCREEN EDITABLE] {FOCUS SET_VALUE}
+        text "NumberBox" [OFFSCREEN]
+        spinner "NumberBox, rest" value="2" [FOCUSABLE OFFSCREEN HAS_RANGE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE INCREMENT DECREMENT SET_RANGE SET_SELECTION} range=0..99000@2000 sel=1..1
+        spinner "NumberBox, pointer over" value="2" [FOCUSABLE OFFSCREEN HAS_RANGE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE INCREMENT DECREMENT SET_RANGE SET_SELECTION} range=0..99000@2000 sel=1..1
+        spinner "NumberBox, pressed" value="2" [FOCUSABLE OFFSCREEN HAS_RANGE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE INCREMENT DECREMENT SET_RANGE SET_SELECTION} range=0..99000@2000 sel=1..1
+        spinner "NumberBox, disabled" value="2" [DISABLED OFFSCREEN HAS_RANGE HAS_SELECTION EDITABLE] {SET_VALUE INCREMENT DECREMENT SET_RANGE SET_SELECTION} range=0..99000@2000 sel=1..1
+        spinner "NumberBox, focused" value="2" [FOCUSABLE OFFSCREEN HAS_RANGE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE INCREMENT DECREMENT SET_RANGE SET_SELECTION} range=0..99000@2000 sel=1..1
+        text "ComboBox" [OFFSCREEN]
+        combo box "ComboBox, rest" value="Item" [FOCUSABLE EXPANDABLE OFFSCREEN HAS_POPUP] {FOCUS EXPAND}
+        combo box "ComboBox, pointer over" value="Item" [FOCUSABLE EXPANDABLE OFFSCREEN HAS_POPUP] {FOCUS EXPAND}
+        combo box "ComboBox, pressed" value="Item" [FOCUSABLE EXPANDABLE OFFSCREEN HAS_POPUP] {FOCUS EXPAND}
+        combo box "ComboBox, disabled" value="Item" [DISABLED EXPANDABLE OFFSCREEN HAS_POPUP] {EXPAND}
+        combo box "ComboBox, focused" value="Item" [FOCUSABLE EXPANDABLE OFFSCREEN HAS_POPUP] {FOCUS EXPAND}

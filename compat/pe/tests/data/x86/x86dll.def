@@ -1,0 +1,4 @@
+LIBRARY x86dll
+EXPORTS
+    DoorAdd
+    DoorTwice @2 NONAME

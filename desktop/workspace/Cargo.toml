@@ -1,0 +1,88 @@
+[package]
+name = "door-workspace"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+[features]
+native = []
+# One executable per desktop application (ADR 0018); all share the library.
+[[bin]]
+name = "door-files"
+path = "src/files_main.rs"
+required-features = ["native"]
+test = false
+bench = false
+[[bin]]
+name = "door-notes"
+path = "src/notes_main.rs"
+required-features = ["native"]
+test = false
+bench = false
+[[bin]]
+name = "door-settings"
+path = "src/settings_main.rs"
+required-features = ["native"]
+test = false
+bench = false
+[[bin]]
+name = "door-terminal"
+path = "src/terminal_main.rs"
+required-features = ["native"]
+test = false
+bench = false
+[[bin]]
+name = "door-search"
+path = "src/search_main.rs"
+required-features = ["native"]
+test = false
+bench = false
+[dependencies]
+door-abi = { path = "../../runtime/abi" }
+door-sys = { path = "../../runtime/sys" }
+door-rt = { path = "../../runtime/rt" }
+door-service-client = { path = "../../frameworks/service-client" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+door-vt = { path = "../../crates/vt", features = ["alloc"] }
+door-graphics-text = { path = "../../frameworks/text" }
+door-graphics-core = { path = "../../graphics/compositor" }
+door-userland = { path = "../../runtime/userland" }
+door-accessibility = { path = "../../frameworks/accessibility" }
+door-initfs = { path = "../../fs/initfs" }
+door-keyboard-layouts = { path = "../../frameworks/keyboard-layouts" }
+door-locale = { path = "../../frameworks/locale" }
+door-settings-map = { path = "../../frameworks/settings-map" }
+door-settings-registry = { path = "../../frameworks/settings-registry" }
+door-design-tokens = { path = "../../frameworks/design-tokens" }
+qoi = { version = "=0.4.1", default-features = false, features = ["alloc"] }
+zune-jpeg = { version = "=0.5.15", default-features = false }
+zune-png = { version = "=0.5.2", default-features = false }
+zune-inflate = { version = "=0.2.54", default-features = false }
+# P15 archive tools: deflate (miniz_oxide, MIT/Zlib/Apache-2.0) and WinZip
+# AES-256 (RustCrypto aes, sha1, hmac, pbkdf2; MIT/Apache-2.0), pinned.
+miniz_oxide = { version = "=0.8.9", default-features = false, features = ["with-alloc"] }
+# P15 audio: MP3 (MPEG Layer III) decoding, a no_std port of minimp3
+# (MIT OR Apache-2.0; minimp3 itself is CC0).
+nanomp3 = { version = "=0.1.1", default-features = false }
+# P15 HTTPS for apps (Weather): the Doors TLS 1.3 client.
+door-tls = { path = "../../crates/tls" }
+# Settings > VPN validates WireGuard configuration files (P15).
+door-wireguard = { path = "../../crates/wireguard" }
+# File Explorer's Digital signature details for programs.
+door-authenticode = { path = "../../crates/authenticode" }
+# Programs' own icons in File Explorer.
+door-pe-icon = { path = "../../crates/pe-icon" }
+# Programs that ask for administrator rights (their manifest).
+door-image-format = { path = "../../crates/image-format" }
+# P16 command engines: cmd.exe and Doorsh.
+door-shells = { path = "../../crates/shells" }
+aes = { version = "=0.8.4", default-features = false }
+sha1 = { version = "=0.10.6", default-features = false }
+# 7-Zip AES keys (SHA-256), RustCrypto (MIT OR Apache-2.0).
+sha2 = { version = "=0.10.9", default-features = false }
+hmac = { version = "=0.12.1", default-features = false }
+pbkdf2 = { version = "=0.12.2", default-features = false, features = ["hmac"] }
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+[lints.clippy]
+all = "warn"

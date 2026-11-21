@@ -1,0 +1,15 @@
+{
+  "file": "file-internet-shortcut.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "03e5a120e9df71485c2e5862d3bb3e07feee6c742dae8ba0a444d7bb83f8aee5",
+  "sources": {
+    "group_id": 107,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\url.dll",
+    "module_sha256": "77019320498654080a077d1a2fbd5328613b43aba8e37c43594a1680dcec5220"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

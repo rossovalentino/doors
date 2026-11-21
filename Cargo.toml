@@ -1,0 +1,155 @@
+[workspace]
+members = [
+    # Boot
+    "boot/debug",
+    "boot/uefi",
+    # Kernel
+    "kernel",
+    # Native runtime
+    "runtime/abi",
+    "runtime/rt",
+    "runtime/sys",
+    "runtime/userland",
+    # File systems
+    "fs/file-ops",
+    "fs/initfs",
+    "fs/storage-core",
+    # Shared protocol and format libraries
+    "crates/boot-protocol",
+    "crates/image-format",
+    "crates/pe-icon",
+    "crates/service-protocol",
+    "crates/com-wire",
+    "crates/shells",
+    "crates/authenticode",
+    "crates/tls",
+    "crates/wireguard",
+    # Services
+    "services",
+    "services/audio",
+    "services/network",
+    # Graphics
+    "graphics/compositor",
+    "graphics/window-server",
+    # UI frameworks
+    "frameworks/accessibility",
+    "frameworks/app-ui",
+    "frameworks/design-tokens",
+    "frameworks/keyboard-layouts",
+    "frameworks/locale",
+    "frameworks/service-client",
+    "frameworks/settings-map",
+    "frameworks/settings-registry",
+    "frameworks/text",
+    "frameworks/ui",
+    "frameworks/ui/native",
+    # Desktop apps
+    "desktop/component-gallery",
+    "desktop/ime",
+    "desktop/inbox",
+    "desktop/preview",
+    "desktop/shell",
+    "desktop/system-monitor",
+    "desktop/workspace",
+    # Native utilities
+    "apps/shell",
+    "apps/tools",
+    # Windows compatibility
+    "compat/abi",
+    "compat/dlls/comctl32",
+    "compat/dlls/comdlg32",
+    "compat/dlls/gdi32",
+    "compat/dlls/kernel32",
+    "compat/dlls/msvcrt",
+    "compat/crt",
+    "compat/dlls/ucrtbase",
+    "compat/dlls/version",
+    "compat/dlls/bcrypt",
+    "compat/dlls/secur32",
+    "compat/dlls/amsi",
+    "compat/dlls/wldp",
+    "compat/dlls/crypt32",
+    "compat/dlls/dwrite",
+    "compat/dlls/bcryptprimitives",
+    "compat/dlls/uxtheme",
+    "compat/dlls/dwmapi",
+    "compat/dlls/wtsapi32",
+    "compat/dlls/shlwapi",
+    "compat/dlls/userenv",
+    "compat/dlls/propsys",
+    "compat/dlls/rpcrt4",
+    "compat/dlls/oleacc",
+    "compat/dlls/uiautomationcore",
+    "compat/dlls/dbghelp",
+    "compat/dlls/pdh",
+    "compat/dlls/tbs",
+    "compat/dlls/ncrypt",
+    "compat/dlls/cryptui",
+    "compat/dlls/setupapi",
+    "compat/dlls/cfgmgr32",
+    "compat/dlls/hid",
+    "compat/dlls/winusb",
+    "compat/dlls/mf",
+    "compat/dlls/mfplat",
+    "compat/dlls/mfreadwrite",
+    "compat/dlls/wevtapi",
+    "compat/dlls/urlmon",
+    "compat/dlls/dhcpcsvc",
+    "compat/dlls/winspool",
+    "compat/dlls/bthprops",
+    "compat/dlls/dxgi",
+    "compat/dlls/d3d11",
+    "compat/dlls/d3d12",
+    "compat/dlls/dcomp",
+    "compat/dlls/ntdll",
+    "compat/dlls/user32",
+    "compat/dlls/ws2_32",
+    "compat/dlls/iphlpapi",
+    "compat/dlls/dnsapi",
+    "compat/dlls/winhttp",
+    "compat/dlls/winmm",
+    "compat/dlls/advapi32",
+    "compat/dlls/dsound",
+    "compat/dlls/mmdevapi",
+    "compat/dlls/taskschd",
+    "compat/dlls/wintrust",
+    "compat/dlls/ole32",
+    "compat/dlls/oleaut32",
+    "compat/dlls/shell32",
+    "compat/dlls/msi",
+    "compat/programs/imagehost",
+    "compat/programs/msiexec",
+    "compat/dlls/wininet",
+    "compat/inet",
+    "crates/http",
+    "crates/pac",
+    "crates/vt",
+    "crates/firewall",
+    "crates/cab",
+    "crates/msi",
+    "compat/gui",
+    "compat/pe",
+    # Tests and tooling
+    "tests/fixtures/native",
+    "tests/fixtures/native-workload",
+    "tools/host-assets",
+    "tools/xtask",
+]
+resolver = "3"
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.94.1"
+publish = false
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"
+
+[profile.release]
+panic = "abort"
+overflow-checks = true
+lto = "thin"
+

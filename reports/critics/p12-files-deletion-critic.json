@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/rendering_critic",
+  "mode": "independent_read_only",
+  "recorded_by": "/root from the critic's attributed structured final verdict",
+  "review_date": "2026-10-21",
+  "status": "accepted_bounded",
+  "scope": "P12 authenticated checked permanent removal of one file or empty folder and default-Cancel Files dialog",
+  "phase_closed": false,
+  "source_sha256": "68f613962734bb11949bab2a9fc47502ca38c11999d1b7216e0d300055dc1099",
+  "source_files_rehashed": 2025,
+  "remaining_blocking_findings": [],
+  "resolved_findings": [
+    "Poison owner on immediate/deferred reclamation error, including definite NoSpace.",
+    "Poison on last-close revision exhaustion after consuming the open instance.",
+    "Cancel held mouse capture before modal keyboard dispatch; a rejected action cannot retry on late release.",
+    "Bind authenticated SDK pending object/version/bytes to independently decoded paused raw state.",
+    "Bind GUI retirement to exact identities, launch mapping, marker lifetimes, counts and DEVICE8."
+  ],
+  "evidence": {
+    "host": {
+      "path": "reports/runs/host-1792553435297672200-22156/report.json",
+      "sha256": "a85a7dff622bc933bf2d10545248b6bf69e708ea9ab164d9e9d80961b0d5be5e",
+      "tests": 631,
+      "executables": 33,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "foundation": {
+      "path": "reports/runs/host-1792553453965410200-17560/report.json",
+      "sha256": "81e08e36f0f7a3423c224273192925e3f80362ffe51a0ce6044b3f15e74519d5",
+      "suite": {
+        "path": "reports/runs/host-1792553453965410200-17560/boot-suite.json",
+        "sha256": "697cc30c29d3c6c8b295b36420b2a4925627b1fcbc4cb27c3c1b6d227ed52a91"
+      },
+      "scenarios": 42,
+      "expected_outcomes": {
+        "Passed": 27,
+        "KernelPanic": 6,
+        "Interrupted": 5,
+        "StartupFailure": 2,
+        "GuestFailure": 1,
+        "Timeout": 1
+      },
+      "all_expected_outcomes_match": true,
+      "actual_receipts": 42,
+      "private_image_entries": 126,
+      "independent_core_files": 32
+    },
+    "combined": {
+      "path": "reports/runs/host-1792553435241221300-12020/report.json",
+      "sha256": "0de94c7369c551eff3289863a66292c64c730d0033f5dd3b64db6d1749ac35b9",
+      "suite": {
+        "path": "reports/runs/host-1792553435241221300-12020/desktop-suite.json",
+        "sha256": "c7d4c1021a14aa6bc28bdda3de2b6884e217e8f15218b0695d5fe4c8334ce03a"
+      },
+      "checks": 253,
+      "actual_sessions": 9,
+      "references_rehashed": 788,
+      "private_image_entries": 27,
+      "source_image_entries": 6,
+      "exact_rgb_capture_pairs": 178,
+      "pixel_checks": 176,
+      "raw_snapshots": 8,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "build": {
+      "path": "reports/runs/host-1792553435241221300-12020/desktop-build.json",
+      "sha256": "a49e2f07e17c418095515850177931d93cef6952a1ed6141bd2e02327a30b895",
+      "initfs_sha256": "e1d92788b7dc6a74546f5b22b66cb7e597650c7dcc919f97d74fb4d168e4a27d",
+      "artifacts": 21,
+      "independent_application_pairs": 5,
+      "all21_byte_identical_to_build5808": true,
+      "workspace_rounded_load_bytes": 11362304,
+      "window_rounded_load_bytes": 6778880,
+      "storage_rounded_load_bytes": 577536,
+      "sdk_rounded_load_bytes": 122880,
+      "loader_limit_bytes": 16777216
+    },
+    "sdk": {
+      "path": "reports/runs/host-1792553040234287300-18096/report.json",
+      "sha256": "2f6a1a3b7daf5072695c353604eedd20c8a684e67918950701ae91bd2a2c20b5",
+      "suite_sha256": "916f27bb1c0203d4d1f56bb89bff99a624b5ade8bbbf487afeebc35035c4f486",
+      "source_sha256": "8c435b6207ea20fa40d92e66c9b8103e72a1b242ad5e46c27e21baeb3c982be1",
+      "boots": 3,
+      "retirement_each": {
+        "processes": 5,
+        "threads": 7,
+        "leaked": 0,
+        "device_pages": 8
+      },
+      "pending": {
+        "object": 21,
+        "inode": 15,
+        "generation": 1,
+        "version": 4,
+        "bytes": 17
+      },
+      "live_read_only_raw_sha256": "8d557ef66d190d25c1eb7953a7af4885fae18de7186714137439b68d0f2155f5",
+      "reclaimed_raw_sha256": "47a3cde84d7dee527ffaac9314b6306a2f13d54a9b34e1ab3570972cfb65f6a3"
+    },
+    "deletion_gui": [
+      {
+        "path": "reports/runs/host-1792553040201685300-26476/report.json",
+        "sha256": "31b949b16b100f61d07478eed14989f83b643fa95c06ce785d730bb7b8db694b",
+        "checks": 15,
+        "boots": 2
+      },
+      {
+        "path": "reports/runs/host-1792553040201647700-24584/report.json",
+        "sha256": "318902aa505d501583023d3adae853015fa12824c98ff1465ed6c63e5e905dd6",
+        "checks": 15,
+        "boots": 2
+      }
+    ],
+    "notes": [
+      {
+        "path": "reports/runs/host-1792553675090894500-11764/report.json",
+        "sha256": "5087271460530d6ee780fd65494bfa205ed3e58cd90582a158802508a116ffb6",
+        "checks": 39,
+        "boots": 2
+      },
+      {
+        "path": "reports/runs/host-1792553675106269500-10852/report.json",
+        "sha256": "6c8f3421b2b40ca395bac8bbbcac8d5b85d02273297d15d1a6b8cb0d386d8c4f",
+        "checks": 39,
+        "boots": 2
+      }
+    ],
+    "rename": [
+      {
+        "path": "reports/runs/host-1792553848265104000-11100/report.json",
+        "sha256": "18371a5d442ca7d113aa7baccf7cb30f0379aafddb2a946c9e24ebf123fef05c",
+        "checks": 19,
+        "boots": 2
+      },
+      {
+        "path": "reports/runs/host-1792553981575661300-9252/report.json",
+        "sha256": "77c597845ed95ed95ddd98772713a7f3c8cd14a036172062ce5980e7983a6a6f",
+        "checks": 19,
+        "boots": 2
+      }
+    ],
+    "retained_revalidation": {
+      "path": "reports/runs/host-1792554451739835500-13940/report.json",
+      "sha256": "d7ee39db0d2bccbceca19e6f23941b6df13f8c52babc12ac0357becaa0fb7b97",
+      "checkpoint_sha256": "cc9b9a5e6e0628f6cb5a53c28d2d1f03703ee438dcb0c19933b8156eb5c79a9b",
+      "new_guest_execution": false,
+      "original_hash_and_source_match": true
+    }
+  },
+  "independent_audit": {
+    "source_bridge": "Build5808 to SDK/GUI source8c changes exactly3 host-tool files;8c to final68f changes14 docs/metadata plus shutdown.rs lifetime guard. Current12020 independently reproduces all21 guest artifacts.",
+    "sdk": "All prepared/pending/final catalog and journal CRCs, exact17 binary bytes, stable identity, neighbors19/20 full4096 patterned payloads, allocation maps and outside-home/journal bytes validate.",
+    "gui": "Each53 refs,6 image entries,2 actual argv,12 PPM/PNG pairs and5 probes validate. All11 raw states match across densities. Cancel/default/held/error preserve whole bytes. Folder33 deletion833→834 changes no allocation bits; file26/inode17/gen1/version2 deletion835→836 frees exactly1 inode/block and preserves unrelated state.",
+    "gui_final_raw_sha256": "9bf778ab92ea96bf814b7565de11ec3e85173d337e11e4b22165fe0e3d691e4f",
+    "gui_retirement": [
+      [
+        8,
+        8
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "gui_events": {
+      "prompts": 6,
+      "cancels": 4,
+      "removals": 2,
+      "failures": 1,
+      "ignored_release": 1
+    },
+    "consumers": "All12 Notes raw states and3 rename raw states match across densities. Rename identity/payload and exact expected saved Notes documents persist.",
+    "foundation": "All42 actual receipts/126 private image entries and32 core files validate. Original service save/reopen/restart exact5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d; corrupt fixture differs only at68198440 and stays unchanged. Console changes only declared theme/catalog/journal bytes.",
+    "combined": "All9 sessions leaked0/DEVICE8. Window diagnostics1212..13470 bytes,1..16 samples, firstframe present and >512 reserve. Shutdown binds Notes17 Save/choice0/exit0/CLIENT_EXIT, Window/Init retirement then18/18/leaked0/DEVICE8. Power gestures controller-only.",
+    "visual": "Critic and root viewed minimum1x and dark3x prompts; exact target/warning and default Cancel remain readable.",
+    "owner_disk": "out/session/user.raw remains absent."
+  },
+  "separate_follow_up": {
+    "file": "fs/storage-core/src/persistence/namespace.rs",
+    "line": 1101,
+    "issue": "Pre-existing legacy generic replacement rename directly reclaims after staging target changes; a definite generic Vfs NoSpace could leave it reusable.",
+    "boundary": "Actual Ext2/Journal write failures poison cache. Checked removal uses stronger guards; no production checked-deletion blocker demonstrated."
+  },
+  "retained_failures": [
+    {
+      "path": "reports/runs/host-1792552678696166600-21080/report.json",
+      "sha256": "225025b70fec8fe1bda1f0b78fe7f7477c1a21955673d9216efbe2c76415b399",
+      "reason": "Short prefix passed to suffix-exact pending waiter."
+    },
+    {
+      "path": "reports/runs/host-1792552687650423500-21080/report.json",
+      "sha256": "af1602181104df545202cc748e1da46436c96ae75758e1dbe70fea73da633b48",
+      "reason": "Same pending waiter failure."
+    },
+    {
+      "path": "reports/runs/host-1792552726047432000-15156/report.json",
+      "sha256": "a4f5b87bc6f4cfa13a7b43d7999d8478e3d33ef56e8c89790f8689ca5c313b16",
+      "reason": "Focus probe sampled rounded button corner."
+    },
+    {
+      "path": "reports/runs/host-1792552726067163200-9880/report.json",
+      "sha256": "978ed1f5f58a2ab73c0b970de9a5efe86d5d448aec0a7e8565a79109389ef809",
+      "reason": "Same corner probe at3x."
+    },
+    {
+      "path": "reports/runs/host-1792553435241115000-23932/report.json",
+      "sha256": "c103819aefd42d54ec01b25f1e0f9abcc0fe64353e2e11be51fa5af033db8b25",
+      "reason": "Default boot gate refused unimplemented P12 schema before guests."
+    }
+  ],
+  "cumulative_gate": {
+    "path": "reports/runs/host-1792554561349782200-24044/report.json",
+    "sha256": "85798f304583c606bb8d65c728a3e7a910b05e4ade3dd11724bbfb2add3b5330",
+    "success": false,
+    "inputs_unchanged": true,
+    "blocker": "Original missing P00 reports/runs/host-1791804427914736400-32560/report.json",
+    "new_guest_failure": false
+  },
+  "limits": [
+    "Explicit Shift+Delete only; one file or empty folder.",
+    "No recursive removal, trash/restore, undo or secure erasure.",
+    "GUI exact confirmation is limited to32 printable ASCII characters.",
+    "Injected I/O/journal/counter failures are host tests, not native GUI injected-fault qualification.",
+    "Surrogate SDK case is a rename roundtrip, not deletion while that spelling exists.",
+    "Storage transport reconnection and poisoned-volume recovery remain open.",
+    "No complete Explorer/Windows, Microsoft ClearType, FPS or full P12 claim.",
+    "Review does not prove absence of every defect."
+  ]
+}

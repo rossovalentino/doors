@@ -1,0 +1,9 @@
+# Only trusted immutable system seeds are installed; user documents are preserved.
+/system/bin/tools seed/door-tools.elf
+/system/bin/tinybasic.exe seed/tinybasic.exe
+/system/share/selawik-license.txt seed/selawik-license.txt
+/system/share/desktop-notices.txt seed/desktop-notices.txt
+/system/share/doors-chime.flac seed/doors-chime.flac
+/compat/Windows/System32/msiexec.exe seed/msiexec.exe
+# WOW64: SysWOW64\msiexec.exe is the 32-bit build; it runs 32-bit packages (and their DLL custom actions).
+/compat/Windows/SysWOW64/msiexec.exe seed/msiexec32.exe

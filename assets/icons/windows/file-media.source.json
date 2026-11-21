@@ -1,0 +1,64 @@
+{
+  "file": "file-media.ico",
+  "frames": 10,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "0de298078416bbc17a0f6646d0dc51169519f43add147e447ea6c47c0de91e75",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-16.png",
+        "sha256": "87cacd540c180fe4f4b89f7d25a5548bbd4b9ac7e51948cc129c1212baa80c65",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-20.png",
+        "sha256": "b77329a3adc77e88257831ab7fe35b74e82895d2da617f861b15cd86536ed027",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-24.png",
+        "sha256": "cc8db5437852d99fd47dc7faec5fbd6ca25b23d7c20ad170b7bfd40da2e9e336",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-32.png",
+        "sha256": "633e5c7868dc45c0dcbf8215e0a4e626f1a9a6a6d34f849b37ca3764302a5e10",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-40.png",
+        "sha256": "6364efbaac928b2db164e4d2b409e137b37c4b6fda39f075980c495a48d9f5e9",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-48.png",
+        "sha256": "c9deca18bae045e208551e67ce70fc422ae581a1ea86fbeca7ed452f16d870c9",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-64.png",
+        "sha256": "eb5cf62a429d559d715f610382f33c5a8c5be03fbbebce8b15118ca2ff85809e",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-80.png",
+        "sha256": "7dfafdfa82a63d95569a1beb3fd4f9a2764151adf48ff51fdfd8866290baf6c7",
+        "size": 80
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-96.png",
+        "sha256": "93ba104edcda6b9931a16f88485381e08158bc15b22134924bd8378cf1bafb27",
+        "size": 96
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ZuneMusic_11.2609.11.0_x64__8wekyb3d8bbwe\\Assets\\MediaPlayerFileExtension.targetsize-256.png",
+        "sha256": "e4cb424839c765330469c2cb2322145f0998ef3cc0caf03990c5dec89261a5de",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 10,
+  "use": "Owner-provided installed Windows reference; local development"
+}

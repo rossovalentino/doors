@@ -1,0 +1,661 @@
+// Doors' Task Scheduler type library (taskschd.dll): the types, member names,
+// DISPIDs and signatures Windows 11's TaskScheduler 1.0 library has, as
+// tests/fixtures/windows-com/tschedprobe.c and oleautprobe's dump read them.
+import "oaidl.idl";
+import "ocidl.idl";
+
+[uuid(E34CB9F1-C7F7-424C-BE29-027DCC09363A), version(1.0)]
+library TaskScheduler
+{
+    importlib("stdole2.tlb");
+    interface ITaskFolderCollection;
+    interface ITaskFolder;
+    interface IRegisteredTask;
+    interface IRunningTask;
+    interface IRunningTaskCollection;
+    interface ITaskDefinition;
+    interface IRegistrationInfo;
+    interface ITriggerCollection;
+    interface ITrigger;
+    interface IRepetitionPattern;
+    interface ITaskSettings;
+    interface IIdleSettings;
+    interface INetworkSettings;
+    interface IPrincipal;
+    interface IActionCollection;
+    interface IAction;
+    interface IRegisteredTaskCollection;
+    interface ITaskService;
+    interface ITaskHandler;
+    interface ITaskHandlerStatus;
+    interface ITaskVariables;
+    interface ITaskNamedValuePair;
+    interface ITaskNamedValueCollection;
+    interface IIdleTrigger;
+    interface ILogonTrigger;
+    interface ISessionStateChangeTrigger;
+    interface IEventTrigger;
+    interface ITimeTrigger;
+    interface IDailyTrigger;
+    interface IWeeklyTrigger;
+    interface IMonthlyTrigger;
+    interface IMonthlyDOWTrigger;
+    interface IBootTrigger;
+    interface IRegistrationTrigger;
+    interface IExecAction;
+    interface IExecAction2;
+    interface IShowMessageAction;
+    interface IComHandlerAction;
+    interface IEmailAction;
+    interface IPrincipal2;
+    interface ITaskSettings2;
+    interface ITaskSettings3;
+    interface IMaintenanceSettings;
+
+    typedef enum _TASK_STATE {
+        TASK_STATE_UNKNOWN = 0,
+        TASK_STATE_DISABLED = 1,
+        TASK_STATE_QUEUED = 2,
+        TASK_STATE_READY = 3,
+        TASK_STATE_RUNNING = 4
+    } TASK_STATE;
+
+    typedef enum _TASK_TRIGGER_TYPE2 {
+        TASK_TRIGGER_EVENT = 0,
+        TASK_TRIGGER_TIME = 1,
+        TASK_TRIGGER_DAILY = 2,
+        TASK_TRIGGER_WEEKLY = 3,
+        TASK_TRIGGER_MONTHLY = 4,
+        TASK_TRIGGER_MONTHLYDOW = 5,
+        TASK_TRIGGER_IDLE = 6,
+        TASK_TRIGGER_REGISTRATION = 7,
+        TASK_TRIGGER_BOOT = 8,
+        TASK_TRIGGER_LOGON = 9,
+        TASK_TRIGGER_SESSION_STATE_CHANGE = 11,
+        TASK_TRIGGER_CUSTOM_TRIGGER_01 = 12
+    } TASK_TRIGGER_TYPE2;
+
+    typedef enum _TASK_INSTANCES_POLICY {
+        TASK_INSTANCES_PARALLEL = 0,
+        TASK_INSTANCES_QUEUE = 1,
+        TASK_INSTANCES_IGNORE_NEW = 2,
+        TASK_INSTANCES_STOP_EXISTING = 3
+    } TASK_INSTANCES_POLICY;
+
+    typedef enum _TASK_COMPATIBILITY {
+        TASK_COMPATIBILITY_AT = 0,
+        TASK_COMPATIBILITY_V1 = 1,
+        TASK_COMPATIBILITY_V2 = 2,
+        TASK_COMPATIBILITY_V2_1 = 3,
+        TASK_COMPATIBILITY_V2_2 = 4,
+        TASK_COMPATIBILITY_V2_3 = 5,
+        TASK_COMPATIBILITY_V2_4 = 6
+    } TASK_COMPATIBILITY;
+
+    typedef enum _TASK_LOGON_TYPE {
+        TASK_LOGON_NONE = 0,
+        TASK_LOGON_PASSWORD = 1,
+        TASK_LOGON_S4U = 2,
+        TASK_LOGON_INTERACTIVE_TOKEN = 3,
+        TASK_LOGON_GROUP = 4,
+        TASK_LOGON_SERVICE_ACCOUNT = 5,
+        TASK_LOGON_INTERACTIVE_TOKEN_OR_PASSWORD = 6
+    } TASK_LOGON_TYPE;
+
+    typedef enum _TASK_RUNLEVEL {
+        TASK_RUNLEVEL_LUA = 0,
+        TASK_RUNLEVEL_HIGHEST = 1
+    } TASK_RUNLEVEL;
+
+    typedef enum _TASK_ACTION_TYPE {
+        TASK_ACTION_EXEC = 0,
+        TASK_ACTION_COM_HANDLER = 5,
+        TASK_ACTION_SEND_EMAIL = 6,
+        TASK_ACTION_SHOW_MESSAGE = 7
+    } TASK_ACTION_TYPE;
+
+    typedef enum _TASK_SESSION_STATE_CHANGE_TYPE {
+        TASK_CONSOLE_CONNECT = 1,
+        TASK_CONSOLE_DISCONNECT = 2,
+        TASK_REMOTE_CONNECT = 3,
+        TASK_REMOTE_DISCONNECT = 4,
+        TASK_SESSION_LOCK = 7,
+        TASK_SESSION_UNLOCK = 8
+    } TASK_SESSION_STATE_CHANGE_TYPE;
+
+    typedef enum _TASK_PROCESSTOKENSID {
+        TASK_PROCESSTOKENSID_NONE = 0,
+        TASK_PROCESSTOKENSID_UNRESTRICTED = 1,
+        TASK_PROCESSTOKENSID_DEFAULT = 2
+    } TASK_PROCESSTOKENSID;
+
+    typedef enum _TASK_RUN_FLAGS {
+        TASK_RUN_NO_FLAGS = 0,
+        TASK_RUN_AS_SELF = 1,
+        TASK_RUN_IGNORE_CONSTRAINTS = 2,
+        TASK_RUN_USE_SESSION_ID = 4,
+        TASK_RUN_USER_SID = 8
+    } TASK_RUN_FLAGS;
+
+    typedef enum _TASK_ENUM_FLAGS {
+        TASK_ENUM_HIDDEN = 1
+    } TASK_ENUM_FLAGS;
+
+    typedef enum _TASK_CREATION {
+        TASK_VALIDATE_ONLY = 1,
+        TASK_CREATE = 2,
+        TASK_UPDATE = 4,
+        TASK_CREATE_OR_UPDATE = 6,
+        TASK_DISABLE = 8,
+        TASK_DONT_ADD_PRINCIPAL_ACE = 16,
+        TASK_IGNORE_REGISTRATION_TRIGGERS = 32
+    } TASK_CREATION;
+
+    [object, uuid(79184A66-8664-423F-97F1-637356A5D812), dual, oleautomation, nonextensible]
+    interface ITaskFolderCollection : IDispatch {
+        [propget] HRESULT Count([out, retval] long* pCount);
+        [id(0), propget] HRESULT Item([in] VARIANT index, [out, retval] ITaskFolder** ppFolder);
+        [id(-4), propget] HRESULT _NewEnum([out, retval] IUnknown** ppEnum);
+    };
+
+    [object, uuid(8CFAC062-A080-4C15-9A88-AA7C2AF80DFC), dual, oleautomation, nonextensible]
+    interface ITaskFolder : IDispatch {
+        [id(1), propget] HRESULT Name([out, retval] BSTR* pName);
+        [id(0), propget] HRESULT Path([out, retval] BSTR* pPath);
+        [id(3)] HRESULT GetFolder(BSTR Path, [out, retval] ITaskFolder** ppFolder);
+        [id(4)] HRESULT GetFolders([in] long flags, [out, retval] ITaskFolderCollection** ppFolders);
+        [id(5)] HRESULT CreateFolder([in] BSTR subFolderName, [in, optional] VARIANT sddl, [out, retval] ITaskFolder** ppFolder);
+        [id(6)] HRESULT DeleteFolder(BSTR subFolderName, [in] long flags);
+        [id(7)] HRESULT GetTask([in] BSTR Path, [out, retval] IRegisteredTask** ppTask);
+        [id(8)] HRESULT GetTasks([in] long flags, [out, retval] IRegisteredTaskCollection** ppTasks);
+        [id(9)] HRESULT DeleteTask([in] BSTR Name, [in] long flags);
+        [id(10)] HRESULT RegisterTask([in] BSTR Path, [in] BSTR XmlText, [in] long flags, [in] VARIANT UserId, [in] VARIANT password, [in] TASK_LOGON_TYPE LogonType, [in, optional] VARIANT sddl, [out, retval] IRegisteredTask** ppTask);
+        [id(11)] HRESULT RegisterTaskDefinition([in] BSTR Path, [in] ITaskDefinition* pDefinition, [in] long flags, [in] VARIANT UserId, [in] VARIANT password, [in] TASK_LOGON_TYPE LogonType, [in, optional] VARIANT sddl, [out, retval] IRegisteredTask** ppTask);
+        [id(12)] HRESULT GetSecurityDescriptor(long securityInformation, [out, retval] BSTR* pSddl);
+        [id(13)] HRESULT SetSecurityDescriptor([in] BSTR sddl, [in] long flags);
+    };
+
+    [object, uuid(9C86F320-DEE3-4DD1-B972-A303F26B061E), dual, oleautomation, nonextensible]
+    interface IRegisteredTask : IDispatch {
+        [id(1), propget] HRESULT Name([out, retval] BSTR* pName);
+        [id(0), propget] HRESULT Path([out, retval] BSTR* pPath);
+        [id(2), propget] HRESULT State([out, retval] TASK_STATE* pState);
+        [id(3), propget] HRESULT Enabled([out, retval] VARIANT_BOOL* pEnabled);
+        [id(3), propput] HRESULT Enabled(VARIANT_BOOL pEnabled);
+        [id(5)] HRESULT Run([in] VARIANT params, [out, retval] IRunningTask** ppRunningTask);
+        [id(6)] HRESULT RunEx([in] VARIANT params, [in] long flags, [in] long sessionID, [in] BSTR user, [out, retval] IRunningTask** ppRunningTask);
+        [id(7)] HRESULT GetInstances([in] long flags, [out, retval] IRunningTaskCollection** ppRunningTasks);
+        [id(8), propget] HRESULT LastRunTime([out, retval] DATE* pLastRunTime);
+        [id(9), propget] HRESULT LastTaskResult([out, retval] long* pLastTaskResult);
+        [id(11), propget] HRESULT NumberOfMissedRuns([out, retval] long* pNumberOfMissedRuns);
+        [id(12), propget] HRESULT NextRunTime([out, retval] DATE* pNextRunTime);
+        [id(13), propget] HRESULT Definition([out, retval] ITaskDefinition** ppDefinition);
+        [id(14), propget] HRESULT Xml([out, retval] BSTR* pXml);
+        [id(15)] HRESULT GetSecurityDescriptor([in] long securityInformation, [out, retval] BSTR* pSddl);
+        [id(16)] HRESULT SetSecurityDescriptor([in] BSTR sddl, [in] long flags);
+        [id(17)] HRESULT Stop([in] long flags);
+        [restricted, hidden] HRESULT GetRunTimes([in] SYSTEMTIME* pstStart, [in] SYSTEMTIME* pstEnd, [in, out] unsigned long* pCount, [out] SYSTEMTIME** pRunTimes);
+    };
+
+    [object, uuid(653758FB-7B9A-4F1E-A471-BEEB8E9B834E), dual, oleautomation, nonextensible]
+    interface IRunningTask : IDispatch {
+        [id(1), propget] HRESULT Name([out, retval] BSTR* pName);
+        [id(0), propget] HRESULT InstanceGuid([out, retval] BSTR* pGuid);
+        [id(2), propget] HRESULT Path([out, retval] BSTR* pPath);
+        [id(3), propget] HRESULT State([out, retval] TASK_STATE* pState);
+        [id(4), propget] HRESULT CurrentAction([out, retval] BSTR* pName);
+        [id(5)] HRESULT Stop();
+        [id(6)] HRESULT Refresh();
+        [id(7), propget] HRESULT EnginePID([out, retval] unsigned long* pPID);
+    };
+
+    [object, uuid(6A67614B-6828-4FEC-AA54-6D52E8F1F2DB), dual, oleautomation, nonextensible]
+    interface IRunningTaskCollection : IDispatch {
+        [id(1), propget] HRESULT Count([out, retval] long* pCount);
+        [id(0), propget] HRESULT Item([in] VARIANT index, [out, retval] IRunningTask** ppRunningTask);
+        [id(-4), propget] HRESULT _NewEnum([out, retval] IUnknown** ppEnum);
+    };
+
+    [object, uuid(F5BC8FC5-536D-4F77-B852-FBC1356FDEB6), dual, oleautomation, nonextensible]
+    interface ITaskDefinition : IDispatch {
+        [id(1), propget] HRESULT RegistrationInfo([out, retval] IRegistrationInfo** ppRegistrationInfo);
+        [id(1), propput] HRESULT RegistrationInfo([in] IRegistrationInfo* ppRegistrationInfo);
+        [id(2), propget] HRESULT Triggers([out, retval] ITriggerCollection** ppTriggers);
+        [id(2), propput] HRESULT Triggers([in] ITriggerCollection* ppTriggers);
+        [id(7), propget] HRESULT Settings([out, retval] ITaskSettings** ppSettings);
+        [id(7), propput] HRESULT Settings([in] ITaskSettings* ppSettings);
+        [id(11), propget] HRESULT Data([out, retval] BSTR* pData);
+        [id(11), propput] HRESULT Data([in] BSTR pData);
+        [id(12), propget] HRESULT Principal([out, retval] IPrincipal** ppPrincipal);
+        [id(12), propput] HRESULT Principal([in] IPrincipal* ppPrincipal);
+        [id(13), propget] HRESULT Actions([out, retval] IActionCollection** ppActions);
+        [id(13), propput] HRESULT Actions([in] IActionCollection* ppActions);
+        [id(14), propget] HRESULT XmlText([out, retval] BSTR* pXml);
+        [id(14), propput] HRESULT XmlText([in] BSTR pXml);
+    };
+
+    [object, uuid(416D8B73-CB41-4EA1-805C-9BE9A5AC4A74), dual, oleautomation, nonextensible]
+    interface IRegistrationInfo : IDispatch {
+        [id(1), propget] HRESULT Description([out, retval] BSTR* pDescription);
+        [id(1), propput] HRESULT Description([in] BSTR pDescription);
+        [id(2), propget] HRESULT Author([out, retval] BSTR* pAuthor);
+        [id(2), propput] HRESULT Author([in] BSTR pAuthor);
+        [id(4), propget] HRESULT Version([out, retval] BSTR* pVersion);
+        [id(4), propput] HRESULT Version([in] BSTR pVersion);
+        [id(5), propget] HRESULT Date([out, retval] BSTR* pDate);
+        [id(5), propput] HRESULT Date([in] BSTR pDate);
+        [id(6), propget] HRESULT Documentation([out, retval] BSTR* pDocumentation);
+        [id(6), propput] HRESULT Documentation([in] BSTR pDocumentation);
+        [id(9), propget] HRESULT XmlText([out, retval] BSTR* pText);
+        [id(9), propput] HRESULT XmlText([in] BSTR pText);
+        [id(10), propget] HRESULT URI([out, retval] BSTR* pUri);
+        [id(10), propput] HRESULT URI([in] BSTR pUri);
+        [id(11), propget] HRESULT SecurityDescriptor([out, retval] VARIANT* pSddl);
+        [id(11), propput] HRESULT SecurityDescriptor([in] VARIANT pSddl);
+        [id(12), propget] HRESULT Source([out, retval] BSTR* pSource);
+        [id(12), propput] HRESULT Source([in] BSTR pSource);
+    };
+
+    [object, uuid(85DF5081-1B24-4F32-878A-D9D14DF4CB77), dual, oleautomation, nonextensible]
+    interface ITriggerCollection : IDispatch {
+        [id(1), propget] HRESULT Count([out, retval] long* pCount);
+        [id(0), propget] HRESULT Item([in] long index, [out, retval] ITrigger** ppTrigger);
+        [id(-4), propget] HRESULT _NewEnum([out, retval] IUnknown** ppEnum);
+        [id(2)] HRESULT Create([in] TASK_TRIGGER_TYPE2 Type, [out, retval] ITrigger** ppTrigger);
+        [id(4)] HRESULT Remove([in] VARIANT index);
+        [id(5)] HRESULT Clear();
+    };
+
+    [object, uuid(09941815-EA89-4B5B-89E0-2A773801FAC3), dual, oleautomation, nonextensible]
+    interface ITrigger : IDispatch {
+        [id(1), propget] HRESULT Type([out, retval] TASK_TRIGGER_TYPE2* pType);
+        [id(2), propget] HRESULT Id([out, retval] BSTR* pId);
+        [id(2), propput] HRESULT Id([in] BSTR pId);
+        [id(3), propget] HRESULT Repetition([out, retval] IRepetitionPattern** ppRepeat);
+        [id(3), propput] HRESULT Repetition([in] IRepetitionPattern* ppRepeat);
+        [id(4), propget] HRESULT ExecutionTimeLimit([out, retval] BSTR* pTimeLimit);
+        [id(4), propput] HRESULT ExecutionTimeLimit([in] BSTR pTimeLimit);
+        [id(5), propget] HRESULT StartBoundary([out, retval] BSTR* pStart);
+        [id(5), propput] HRESULT StartBoundary([in] BSTR pStart);
+        [id(6), propget] HRESULT EndBoundary([out, retval] BSTR* pEnd);
+        [id(6), propput] HRESULT EndBoundary([in] BSTR pEnd);
+        [id(7), propget] HRESULT Enabled([out, retval] VARIANT_BOOL* pEnabled);
+        [id(7), propput] HRESULT Enabled([in] VARIANT_BOOL pEnabled);
+    };
+
+    [object, uuid(7FB9ACF1-26BE-400E-85B5-294B9C75DFD6), dual, oleautomation, nonextensible]
+    interface IRepetitionPattern : IDispatch {
+        [id(1), propget] HRESULT Interval([out, retval] BSTR* pInterval);
+        [id(1), propput] HRESULT Interval([in] BSTR pInterval);
+        [id(2), propget] HRESULT Duration([out, retval] BSTR* pDuration);
+        [id(2), propput] HRESULT Duration([in] BSTR pDuration);
+        [id(3), propget] HRESULT StopAtDurationEnd([out, retval] VARIANT_BOOL* pStop);
+        [id(3), propput] HRESULT StopAtDurationEnd([in] VARIANT_BOOL pStop);
+    };
+
+    [object, uuid(8FD4711D-2D02-4C8C-87E3-EFF699DE127E), dual, oleautomation, nonextensible]
+    interface ITaskSettings : IDispatch {
+        [id(3), propget] HRESULT AllowDemandStart([out, retval] VARIANT_BOOL* pAllowDemandStart);
+        [id(3), propput] HRESULT AllowDemandStart([in] VARIANT_BOOL pAllowDemandStart);
+        [id(4), propget] HRESULT RestartInterval([out, retval] BSTR* pRestartInterval);
+        [id(4), propput] HRESULT RestartInterval([in] BSTR pRestartInterval);
+        [id(5), propget] HRESULT RestartCount([out, retval] int* pRestartCount);
+        [id(5), propput] HRESULT RestartCount([in] int pRestartCount);
+        [id(6), propget] HRESULT MultipleInstances([out, retval] TASK_INSTANCES_POLICY* pPolicy);
+        [id(6), propput] HRESULT MultipleInstances([in] TASK_INSTANCES_POLICY pPolicy);
+        [id(7), propget] HRESULT StopIfGoingOnBatteries([out, retval] VARIANT_BOOL* pStopIfOnBatteries);
+        [id(7), propput] HRESULT StopIfGoingOnBatteries([in] VARIANT_BOOL pStopIfOnBatteries);
+        [id(8), propget] HRESULT DisallowStartIfOnBatteries([out, retval] VARIANT_BOOL* pDisallowStart);
+        [id(8), propput] HRESULT DisallowStartIfOnBatteries([in] VARIANT_BOOL pDisallowStart);
+        [id(9), propget] HRESULT AllowHardTerminate([out, retval] VARIANT_BOOL* pAllowHardTerminate);
+        [id(9), propput] HRESULT AllowHardTerminate([in] VARIANT_BOOL pAllowHardTerminate);
+        [id(10), propget] HRESULT StartWhenAvailable([out, retval] VARIANT_BOOL* pStartWhenAvailable);
+        [id(10), propput] HRESULT StartWhenAvailable([in] VARIANT_BOOL pStartWhenAvailable);
+        [id(11), propget] HRESULT XmlText([out, retval] BSTR* pText);
+        [id(11), propput] HRESULT XmlText([in] BSTR pText);
+        [id(12), propget] HRESULT RunOnlyIfNetworkAvailable([out, retval] VARIANT_BOOL* pRunOnlyIfNetworkAvailable);
+        [id(12), propput] HRESULT RunOnlyIfNetworkAvailable([in] VARIANT_BOOL pRunOnlyIfNetworkAvailable);
+        [id(13), propget] HRESULT ExecutionTimeLimit([out, retval] BSTR* pExecutionTimeLimit);
+        [id(13), propput] HRESULT ExecutionTimeLimit([in] BSTR pExecutionTimeLimit);
+        [id(14), propget] HRESULT Enabled([out, retval] VARIANT_BOOL* pEnabled);
+        [id(14), propput] HRESULT Enabled([in] VARIANT_BOOL pEnabled);
+        [id(15), propget] HRESULT DeleteExpiredTaskAfter([out, retval] BSTR* pExpirationDelay);
+        [id(15), propput] HRESULT DeleteExpiredTaskAfter([in] BSTR pExpirationDelay);
+        [id(16), propget] HRESULT Priority([out, retval] int* pPriority);
+        [id(16), propput] HRESULT Priority([in] int pPriority);
+        [id(17), propget] HRESULT Compatibility([out, retval] TASK_COMPATIBILITY* pCompatLevel);
+        [id(17), propput] HRESULT Compatibility([in] TASK_COMPATIBILITY pCompatLevel);
+        [id(18), propget] HRESULT Hidden([out, retval] VARIANT_BOOL* pHidden);
+        [id(18), propput] HRESULT Hidden([in] VARIANT_BOOL pHidden);
+        [id(19), propget] HRESULT IdleSettings([out, retval] IIdleSettings** ppIdleSettings);
+        [id(19), propput] HRESULT IdleSettings([in] IIdleSettings* ppIdleSettings);
+        [id(20), propget] HRESULT RunOnlyIfIdle([out, retval] VARIANT_BOOL* pRunOnlyIfIdle);
+        [id(20), propput] HRESULT RunOnlyIfIdle([in] VARIANT_BOOL pRunOnlyIfIdle);
+        [id(21), propget] HRESULT WakeToRun([out, retval] VARIANT_BOOL* pWake);
+        [id(21), propput] HRESULT WakeToRun([in] VARIANT_BOOL pWake);
+        [id(22), propget] HRESULT NetworkSettings([out, retval] INetworkSettings** ppNetworkSettings);
+        [id(22), propput] HRESULT NetworkSettings([in] INetworkSettings* ppNetworkSettings);
+    };
+
+    [object, uuid(84594461-0053-4342-A8FD-088FABF11F32), dual, oleautomation, nonextensible]
+    interface IIdleSettings : IDispatch {
+        [id(1), propget] HRESULT IdleDuration([out, retval] BSTR* pDelay);
+        [id(1), propput] HRESULT IdleDuration([in] BSTR pDelay);
+        [id(2), propget] HRESULT WaitTimeout([out, retval] BSTR* pTimeout);
+        [id(2), propput] HRESULT WaitTimeout([in] BSTR pTimeout);
+        [id(3), propget] HRESULT StopOnIdleEnd([out, retval] VARIANT_BOOL* pStop);
+        [id(3), propput] HRESULT StopOnIdleEnd([in] VARIANT_BOOL pStop);
+        [id(4), propget] HRESULT RestartOnIdle([out, retval] VARIANT_BOOL* pRestart);
+        [id(4), propput] HRESULT RestartOnIdle([in] VARIANT_BOOL pRestart);
+    };
+
+    [object, uuid(9F7DEA84-C30B-4245-80B6-00E9F646F1B4), dual, oleautomation, nonextensible]
+    interface INetworkSettings : IDispatch {
+        [id(1), propget] HRESULT Name([out, retval] BSTR* pName);
+        [id(1), propput] HRESULT Name([in] BSTR pName);
+        [id(2), propget] HRESULT Id([out, retval] BSTR* pId);
+        [id(2), propput] HRESULT Id([in] BSTR pId);
+    };
+
+    [object, uuid(D98D51E5-C9B4-496A-A9C1-18980261CF0F), dual, oleautomation, nonextensible]
+    interface IPrincipal : IDispatch {
+        [id(1), propget] HRESULT Id([out, retval] BSTR* pId);
+        [id(1), propput] HRESULT Id([in] BSTR pId);
+        [id(2), propget] HRESULT DisplayName([out, retval] BSTR* pName);
+        [id(2), propput] HRESULT DisplayName([in] BSTR pName);
+        [id(3), propget] HRESULT UserId([out, retval] BSTR* pUser);
+        [id(3), propput] HRESULT UserId([in] BSTR pUser);
+        [id(4), propget] HRESULT LogonType([out, retval] TASK_LOGON_TYPE* pLogon);
+        [id(4), propput] HRESULT LogonType([in] TASK_LOGON_TYPE pLogon);
+        [id(5), propget] HRESULT GroupId([out, retval] BSTR* pGroup);
+        [id(5), propput] HRESULT GroupId([in] BSTR pGroup);
+        [id(6), propget] HRESULT RunLevel([out, retval] TASK_RUNLEVEL* pRunLevel);
+        [id(6), propput] HRESULT RunLevel([in] TASK_RUNLEVEL pRunLevel);
+    };
+
+    [object, uuid(02820E19-7B98-4ED2-B2E8-FDCCCEFF619B), dual, oleautomation, nonextensible]
+    interface IActionCollection : IDispatch {
+        [id(1), propget] HRESULT Count([out, retval] long* pCount);
+        [id(0), propget] HRESULT Item([in] long index, [out, retval] IAction** ppAction);
+        [id(-4), propget] HRESULT _NewEnum([out, retval] IUnknown** ppEnum);
+        [id(2), propget] HRESULT XmlText([out, retval] BSTR* pText);
+        [id(2), propput] HRESULT XmlText([in] BSTR pText);
+        [id(3)] HRESULT Create([in] TASK_ACTION_TYPE Type, [out, retval] IAction** ppAction);
+        [id(4)] HRESULT Remove([in] VARIANT index);
+        [id(5)] HRESULT Clear();
+        [id(6), propget] HRESULT Context([out, retval] BSTR* pContext);
+        [id(6), propput] HRESULT Context([in] BSTR pContext);
+    };
+
+    [object, uuid(BAE54997-48B1-4CBE-9965-D6BE263EBEA4), dual, oleautomation, nonextensible]
+    interface IAction : IDispatch {
+        [id(1), propget] HRESULT Id([out, retval] BSTR* pId);
+        [id(1), propput] HRESULT Id([in] BSTR pId);
+        [id(2), propget] HRESULT Type([out, retval] TASK_ACTION_TYPE* pType);
+    };
+
+    [object, uuid(86627EB4-42A7-41E4-A4D9-AC33A72F2D52), dual, oleautomation, nonextensible]
+    interface IRegisteredTaskCollection : IDispatch {
+        [propget] HRESULT Count([out, retval] long* pCount);
+        [id(0), propget] HRESULT Item([in] VARIANT index, [out, retval] IRegisteredTask** ppRegisteredTask);
+        [id(-4), propget] HRESULT _NewEnum([out, retval] IUnknown** ppEnum);
+    };
+
+    [object, uuid(2FABA4C7-4DA9-4013-9697-20CC3FD40F85), dual, oleautomation, nonextensible]
+    interface ITaskService : IDispatch {
+        [id(1)] HRESULT GetFolder([in] BSTR Path, [out, retval] ITaskFolder** ppFolder);
+        [id(2)] HRESULT GetRunningTasks([in] long flags, [out, retval] IRunningTaskCollection** ppRunningTasks);
+        [id(3)] HRESULT NewTask([in] unsigned long flags, [out, retval] ITaskDefinition** ppDefinition);
+        [id(4)] HRESULT Connect([in, optional] VARIANT serverName, [in, optional] VARIANT user, [in, optional] VARIANT domain, [in, optional] VARIANT password);
+        [id(5), propget] HRESULT Connected([out, retval] VARIANT_BOOL* pConnected);
+        [id(0), propget] HRESULT TargetServer([out, retval] BSTR* pServer);
+        [id(6), propget] HRESULT ConnectedUser([out, retval] BSTR* pUser);
+        [id(7), propget] HRESULT ConnectedDomain([out, retval] BSTR* pDomain);
+        [id(8), propget] HRESULT HighestVersion([out, retval] unsigned long* pVersion);
+    };
+
+    [object, uuid(839D7762-5121-4009-9234-4F0D19394F04)]
+    interface ITaskHandler : IUnknown {
+        HRESULT Start([in] IUnknown* pHandlerServices, [in] BSTR Data);
+        HRESULT Stop([out] HRESULT* pRetCode);
+        HRESULT Pause();
+        HRESULT Resume();
+    };
+
+    [object, uuid(EAEC7A8F-27A0-4DDC-8675-14726A01A38A)]
+    interface ITaskHandlerStatus : IUnknown {
+        HRESULT UpdateStatus([in] short percentComplete, [in] BSTR statusMessage);
+        HRESULT TaskCompleted([in] HRESULT taskErrCode);
+    };
+
+    [object, uuid(3E4C9351-D966-4B8B-BB87-CEBA68BB0107)]
+    interface ITaskVariables : IUnknown {
+        HRESULT GetInput([out, retval] BSTR* pInput);
+        HRESULT SetOutput([in] BSTR input);
+        HRESULT GetContext([out, retval] BSTR* pContext);
+    };
+
+    [object, uuid(39038068-2B46-4AFD-8662-7BB6F868D221), dual, oleautomation, nonextensible]
+    interface ITaskNamedValuePair : IDispatch {
+        [id(0), propget] HRESULT Name([out, retval] BSTR* pName);
+        [id(0), propput] HRESULT Name([in] BSTR pName);
+        [id(1), propget] HRESULT Value([out, retval] BSTR* pValue);
+        [id(1), propput] HRESULT Value([in] BSTR pValue);
+    };
+
+    [object, uuid(B4EF826B-63C3-46E4-A504-EF69E4F7EA4D), dual, oleautomation, nonextensible]
+    interface ITaskNamedValueCollection : IDispatch {
+        [id(1), propget] HRESULT Count([out, retval] long* pCount);
+        [id(0), propget] HRESULT Item([in] long index, [out, retval] ITaskNamedValuePair** ppPair);
+        [id(-4), propget] HRESULT _NewEnum([out, retval] IUnknown** ppEnum);
+        [id(2)] HRESULT Create([in] BSTR Name, [in] BSTR Value, [out, retval] ITaskNamedValuePair** ppPair);
+        [id(4)] HRESULT Remove([in] long index);
+        [id(5)] HRESULT Clear();
+    };
+
+    [object, uuid(D537D2B0-9FB3-4D34-9739-1FF5CE7B1EF3), dual, oleautomation, nonextensible]
+    interface IIdleTrigger : ITrigger {
+    };
+
+    [object, uuid(72DADE38-FAE4-4B3E-BAF4-5D009AF02B1C), dual, oleautomation, nonextensible]
+    interface ILogonTrigger : ITrigger {
+        [id(20), propget] HRESULT Delay([out, retval] BSTR* pDelay);
+        [id(20), propput] HRESULT Delay([in] BSTR pDelay);
+        [id(21), propget] HRESULT UserId([out, retval] BSTR* pUser);
+        [id(21), propput] HRESULT UserId([in] BSTR pUser);
+    };
+
+    [object, uuid(754DA71B-4385-4475-9DD9-598294FA3641), dual, oleautomation, nonextensible]
+    interface ISessionStateChangeTrigger : ITrigger {
+        [id(20), propget] HRESULT Delay([out, retval] BSTR* pDelay);
+        [id(20), propput] HRESULT Delay([in] BSTR pDelay);
+        [id(21), propget] HRESULT UserId([out, retval] BSTR* pUser);
+        [id(21), propput] HRESULT UserId([in] BSTR pUser);
+        [id(22), propget] HRESULT StateChange([out, retval] TASK_SESSION_STATE_CHANGE_TYPE* pType);
+        [id(22), propput] HRESULT StateChange([in] TASK_SESSION_STATE_CHANGE_TYPE pType);
+    };
+
+    [object, uuid(D45B0167-9653-4EEF-B94F-0732CA7AF251), dual, oleautomation, nonextensible]
+    interface IEventTrigger : ITrigger {
+        [id(20), propget] HRESULT Subscription([out, retval] BSTR* pQuery);
+        [id(20), propput] HRESULT Subscription([in] BSTR pQuery);
+        [id(21), propget] HRESULT Delay([out, retval] BSTR* pDelay);
+        [id(21), propput] HRESULT Delay([in] BSTR pDelay);
+        [id(22), propget] HRESULT ValueQueries([out, retval] ITaskNamedValueCollection** ppNamedXPaths);
+        [id(22), propput] HRESULT ValueQueries([in] ITaskNamedValueCollection* ppNamedXPaths);
+    };
+
+    [object, uuid(B45747E0-EBA7-4276-9F29-85C5BB300006), dual, oleautomation, nonextensible]
+    interface ITimeTrigger : ITrigger {
+        [id(20), propget] HRESULT RandomDelay([out, retval] BSTR* pRandomDelay);
+        [id(20), propput] HRESULT RandomDelay([in] BSTR pRandomDelay);
+    };
+
+    [object, uuid(126C5CD8-B288-41D5-8DBF-E491446ADC5C), dual, oleautomation, nonextensible]
+    interface IDailyTrigger : ITrigger {
+        [id(25), propget] HRESULT DaysInterval([out, retval] short* pDays);
+        [id(25), propput] HRESULT DaysInterval([in] short pDays);
+        [id(20), propget] HRESULT RandomDelay([out, retval] BSTR* pRandomDelay);
+        [id(20), propput] HRESULT RandomDelay([in] BSTR pRandomDelay);
+    };
+
+    [object, uuid(5038FC98-82FF-436D-8728-A512A57C9DC1), dual, oleautomation, nonextensible]
+    interface IWeeklyTrigger : ITrigger {
+        [id(25), propget] HRESULT DaysOfWeek([out, retval] short* pDays);
+        [id(25), propput] HRESULT DaysOfWeek([in] short pDays);
+        [id(26), propget] HRESULT WeeksInterval([out, retval] short* pWeeks);
+        [id(26), propput] HRESULT WeeksInterval([in] short pWeeks);
+        [id(20), propget] HRESULT RandomDelay([out, retval] BSTR* pRandomDelay);
+        [id(20), propput] HRESULT RandomDelay([in] BSTR pRandomDelay);
+    };
+
+    [object, uuid(97C45EF1-6B02-4A1A-9C0E-1EBFBA1500AC), dual, oleautomation, nonextensible]
+    interface IMonthlyTrigger : ITrigger {
+        [id(25), propget] HRESULT DaysOfMonth([out, retval] long* pDays);
+        [id(25), propput] HRESULT DaysOfMonth([in] long pDays);
+        [id(26), propget] HRESULT MonthsOfYear([out, retval] short* pMonths);
+        [id(26), propput] HRESULT MonthsOfYear([in] short pMonths);
+        [id(27), propget] HRESULT RunOnLastDayOfMonth([out, retval] VARIANT_BOOL* pLastDay);
+        [id(27), propput] HRESULT RunOnLastDayOfMonth([in] VARIANT_BOOL pLastDay);
+        [id(20), propget] HRESULT RandomDelay([out, retval] BSTR* pRandomDelay);
+        [id(20), propput] HRESULT RandomDelay([in] BSTR pRandomDelay);
+    };
+
+    [object, uuid(77D025A3-90FA-43AA-B52E-CDA5499B946A), dual, oleautomation, nonextensible]
+    interface IMonthlyDOWTrigger : ITrigger {
+        [id(25), propget] HRESULT DaysOfWeek([out, retval] short* pDays);
+        [id(25), propput] HRESULT DaysOfWeek([in] short pDays);
+        [id(26), propget] HRESULT WeeksOfMonth([out, retval] short* pWeeks);
+        [id(26), propput] HRESULT WeeksOfMonth([in] short pWeeks);
+        [id(27), propget] HRESULT MonthsOfYear([out, retval] short* pMonths);
+        [id(27), propput] HRESULT MonthsOfYear([in] short pMonths);
+        [id(28), propget] HRESULT RunOnLastWeekOfMonth([out, retval] VARIANT_BOOL* pLastWeek);
+        [id(28), propput] HRESULT RunOnLastWeekOfMonth([in] VARIANT_BOOL pLastWeek);
+        [id(20), propget] HRESULT RandomDelay([out, retval] BSTR* pRandomDelay);
+        [id(20), propput] HRESULT RandomDelay([in] BSTR pRandomDelay);
+    };
+
+    [object, uuid(2A9C35DA-D357-41F4-BBC1-207AC1B1F3CB), dual, oleautomation, nonextensible]
+    interface IBootTrigger : ITrigger {
+        [id(20), propget] HRESULT Delay([out, retval] BSTR* pDelay);
+        [id(20), propput] HRESULT Delay([in] BSTR pDelay);
+    };
+
+    [object, uuid(4C8FEC3A-C218-4E0C-B23D-629024DB91A2), dual, oleautomation, nonextensible]
+    interface IRegistrationTrigger : ITrigger {
+        [id(20), propget] HRESULT Delay([out, retval] BSTR* pDelay);
+        [id(20), propput] HRESULT Delay([in] BSTR pDelay);
+    };
+
+    [object, uuid(4C3D624D-FD6B-49A3-B9B7-09CB3CD3F047), dual, oleautomation, nonextensible]
+    interface IExecAction : IAction {
+        [id(10), propget] HRESULT Path([out, retval] BSTR* pPath);
+        [id(10), propput] HRESULT Path([in] BSTR pPath);
+        [id(11), propget] HRESULT Arguments([out, retval] BSTR* pArgument);
+        [id(11), propput] HRESULT Arguments([in] BSTR pArgument);
+        [id(12), propget] HRESULT WorkingDirectory([out, retval] BSTR* pWorkingDirectory);
+        [id(12), propput] HRESULT WorkingDirectory([in] BSTR pWorkingDirectory);
+    };
+
+    [object, uuid(F2A82542-BDA5-4E6B-9143-E2BF4F8987B6), dual, oleautomation, nonextensible]
+    interface IExecAction2 : IExecAction {
+        [id(13), propget] HRESULT HideAppWindow([out, retval] VARIANT_BOOL* pHideAppWindow);
+        [id(13), propput] HRESULT HideAppWindow([in] VARIANT_BOOL pHideAppWindow);
+    };
+
+    [object, uuid(505E9E68-AF89-46B8-A30F-56162A83D537), dual, oleautomation, nonextensible]
+    interface IShowMessageAction : IAction {
+        [id(10), propget] HRESULT Title([out, retval] BSTR* pTitle);
+        [id(10), propput] HRESULT Title([in] BSTR pTitle);
+        [id(11), propget] HRESULT MessageBody([out, retval] BSTR* pMessageBody);
+        [id(11), propput] HRESULT MessageBody([in] BSTR pMessageBody);
+    };
+
+    [object, uuid(6D2FD252-75C5-4F66-90BA-2A7D8CC3039F), dual, oleautomation, nonextensible]
+    interface IComHandlerAction : IAction {
+        [id(10), propget] HRESULT ClassId([out, retval] BSTR* pClsid);
+        [id(10), propput] HRESULT ClassId([in] BSTR pClsid);
+        [id(11), propget] HRESULT Data([out, retval] BSTR* pData);
+        [id(11), propput] HRESULT Data([in] BSTR pData);
+    };
+
+    [object, uuid(10F62C64-7E16-4314-A0C2-0C3683F99D40), dual, oleautomation, nonextensible]
+    interface IEmailAction : IAction {
+        [id(10), propget] HRESULT Server([out, retval] BSTR* pServer);
+        [id(10), propput] HRESULT Server([in] BSTR pServer);
+        [id(11), propget] HRESULT Subject([out, retval] BSTR* pSubject);
+        [id(11), propput] HRESULT Subject([in] BSTR pSubject);
+        [id(12), propget] HRESULT To([out, retval] BSTR* pTo);
+        [id(12), propput] HRESULT To([in] BSTR pTo);
+        [id(13), propget] HRESULT Cc([out, retval] BSTR* pCc);
+        [id(13), propput] HRESULT Cc([in] BSTR pCc);
+        [id(14), propget] HRESULT Bcc([out, retval] BSTR* pBcc);
+        [id(14), propput] HRESULT Bcc([in] BSTR pBcc);
+        [id(15), propget] HRESULT ReplyTo([out, retval] BSTR* pReplyTo);
+        [id(15), propput] HRESULT ReplyTo([in] BSTR pReplyTo);
+        [id(16), propget] HRESULT From([out, retval] BSTR* pFrom);
+        [id(16), propput] HRESULT From([in] BSTR pFrom);
+        [id(17), propget] HRESULT HeaderFields([out, retval] ITaskNamedValueCollection** ppHeaderFields);
+        [id(17), propput] HRESULT HeaderFields([in] ITaskNamedValueCollection* ppHeaderFields);
+        [id(18), propget] HRESULT Body([out, retval] BSTR* pBody);
+        [id(18), propput] HRESULT Body([in] BSTR pBody);
+        [id(19), propget] HRESULT Attachments([out, retval] SAFEARRAY(VARIANT)* pAttachements);
+        [id(19), propput] HRESULT Attachments([in] SAFEARRAY(VARIANT) pAttachements);
+    };
+
+    [object, uuid(248919AE-E345-4A6D-8AEB-E0D3165C904E), dual, oleautomation, nonextensible]
+    interface IPrincipal2 : IDispatch {
+        [id(10), propget] HRESULT ProcessTokenSidType([out, retval] TASK_PROCESSTOKENSID* pProcessTokenSidType);
+        [id(10), propput] HRESULT ProcessTokenSidType([in] TASK_PROCESSTOKENSID pProcessTokenSidType);
+        [id(11), propget] HRESULT RequiredPrivilegeCount([out, retval] long* pCount);
+        [id(12), propget] HRESULT RequiredPrivilege([in] long index, [out, retval] BSTR* pPrivilege);
+        [id(13)] HRESULT AddRequiredPrivilege([in] BSTR privilege);
+    };
+
+    [object, uuid(2C05C3F0-6EED-4C05-A15F-ED7D7A98A369), dual, oleautomation, nonextensible]
+    interface ITaskSettings2 : IDispatch {
+        [id(30), propget] HRESULT DisallowStartOnRemoteAppSession([out, retval] VARIANT_BOOL* pDisallowStart);
+        [id(30), propput] HRESULT DisallowStartOnRemoteAppSession([in] VARIANT_BOOL pDisallowStart);
+        [id(31), propget] HRESULT UseUnifiedSchedulingEngine([out, retval] VARIANT_BOOL* pUseUnifiedEngine);
+        [id(31), propput] HRESULT UseUnifiedSchedulingEngine([in] VARIANT_BOOL pUseUnifiedEngine);
+    };
+
+    [object, uuid(0AD9D0D7-0C7F-4EBB-9A5F-D1C648DCA528), dual, oleautomation, nonextensible]
+    interface ITaskSettings3 : ITaskSettings {
+        [id(30), propget] HRESULT DisallowStartOnRemoteAppSession([out, retval] VARIANT_BOOL* pDisallowStart);
+        [id(30), propput] HRESULT DisallowStartOnRemoteAppSession([in] VARIANT_BOOL pDisallowStart);
+        [id(31), propget] HRESULT UseUnifiedSchedulingEngine([out, retval] VARIANT_BOOL* pUseUnifiedEngine);
+        [id(31), propput] HRESULT UseUnifiedSchedulingEngine([in] VARIANT_BOOL pUseUnifiedEngine);
+        [id(40), propget] HRESULT MaintenanceSettings([out, retval] IMaintenanceSettings** ppMaintenanceSettings);
+        [id(40), propput] HRESULT MaintenanceSettings([in] IMaintenanceSettings* ppMaintenanceSettings);
+        [id(41)] HRESULT CreateMaintenanceSettings([out, retval] IMaintenanceSettings** ppMaintenanceSettings);
+        [id(42), propget] HRESULT Volatile([out, retval] VARIANT_BOOL* pVolatile);
+        [id(42), propput] HRESULT Volatile([in] VARIANT_BOOL pVolatile);
+    };
+
+    [object, uuid(A6024FA8-9652-4ADB-A6BF-5CFCD877A7BA), dual, oleautomation, nonextensible]
+    interface IMaintenanceSettings : IDispatch {
+        [id(34), propput] HRESULT Period([in] BSTR target);
+        [id(34), propget] HRESULT Period([out, retval] BSTR* target);
+        [id(35), propput] HRESULT Deadline([in] BSTR target);
+        [id(35), propget] HRESULT Deadline([out, retval] BSTR* target);
+        [id(36), propput] HRESULT Exclusive([in] VARIANT_BOOL target);
+        [id(36), propget] HRESULT Exclusive([out, retval] VARIANT_BOOL* target);
+    };
+
+    [uuid(0F87369F-A4E5-4CFC-BD3E-73E6154572DD)]
+    coclass TaskScheduler {
+        [default] interface ITaskService;
+    };
+
+    [uuid(F2A69DB7-DA2C-4352-9066-86FEE6DACAC9)]
+    coclass TaskHandlerPS {
+        [default] interface ITaskHandler;
+    };
+
+    [uuid(9F15266D-D7BA-48F0-93C1-E6895F6FE5AC)]
+    coclass TaskHandlerStatusPS {
+        [default] interface ITaskHandlerStatus;
+        interface ITaskVariables;
+    };
+};

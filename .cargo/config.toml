@@ -1,0 +1,8 @@
+[alias]
+xtask = "run --locked --package door-xtask --"
+# Imports the Microsoft-owned assets from this Windows PC (run once after cloning).
+host-assets = "run --locked --package door-host-assets --"
+
+# Guest commands always select an explicit target. Never set a workspace-wide
+# build.target: the orchestrator and host tests must stay host executables.
+

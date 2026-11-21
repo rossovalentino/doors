@@ -1,0 +1,23 @@
+{
+  "source": "C:/Windows/Fonts",
+  "family": "Segoe UI and Segoe UI Variable",
+  "use": "owner-requested local reference",
+  "license": "owner-local Windows font, not redistributable, private build",
+  "fonts": [
+    {
+      "file": "segoeui.ttf",
+      "sha256": "704eada12961a27fd271f7d3b09e2066520e758390c1776744eff430fee30f6e"
+    },
+    {
+      "file": "seguisb.ttf",
+      "sha256": "6c3fd894b19950b10c34bf64069ef821eaf2f58f959146306fee5b367472e501"
+    },
+    {
+      "file": "SegUIVar.ttf",
+      "sha256": "27ca1ab4bd5ad3b0404ee6a9a03b143408dbd7e5a4c9e4b2054639c03fc0f682",
+      "source": "C:/Windows/Fonts/SegUIVar.ttf",
+      "scope": "Owner-local font used by host exporter for checked hinted1x/2x/3x native glyph caches; distribution unreviewed"
+    }
+  ],
+  "runtime_use": "SegUIVar.ttf (UiVariable), segoeui.ttf and seguisb.ttf (Ui) are also loaded at run time by door-graphics-text FontSet for Unicode text (Arabic, Hebrew, Greek, Cyrillic, extended Latin); see assets/fonts/windows-unicode/provenance.json"
+}

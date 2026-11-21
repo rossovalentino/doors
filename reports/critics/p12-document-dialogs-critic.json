@@ -1,0 +1,184 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "mode": "independent_read_only",
+  "recorded_by": "/root from reviewer's final structured response",
+  "status": "accepted_bounded",
+  "reviewer_verdict": "accepted_for_bounded_P12_document_dialogs",
+  "phase_closure": false,
+  "scope": "P12 shared document modal, real Notes Close/Reload choices, canceled-close attachment/configure repair and strict retained native evidence",
+  "source": "5a26471576fe6d1453b4b6140d3cacb773c4643a3f98078a6d2071cc2ecf78cb",
+  "unresolved_actionable_findings": [],
+  "primary_evidence": {
+    "build": {
+      "path": "reports/runs/host-1792549001362687000-624/desktop-build.json",
+      "sha256": "bde52a117f079288875a6f60c9f4933f5f248de56afc50fbb132683684cf76c7",
+      "artifacts": 21,
+      "independent_application_pairs": 5,
+      "artifact_files_rehashed": 26,
+      "guest_changes_vs27548": 0,
+      "initfs_sha256": "cc1b4e38845a74d384e6fc99bc08d4e49be82589328cad5e1f988d546e48ccfa",
+      "workspace_load_bytes": 11354112,
+      "loader_limit_bytes": 16777216
+    },
+    "host": {
+      "path": "reports/runs/host-1792549001382234400-13184/report.json",
+      "sha256": "03d719ebf017ca6a1089d66e86279fb49470410e10d5d24877c7bd32da85c35e",
+      "tests": 613,
+      "executables": 33,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "desktop_current": {
+      "path": "reports/runs/host-1792549001362687000-624/report.json",
+      "sha256": "f97d5a41d15d6d8d4b533bd3628b4e7c2b87cb0225c68bf13acd315a2180af3d",
+      "checks": 253,
+      "actual_native_sessions": 9,
+      "success": true,
+      "inputs_unchanged": true,
+      "reported_references_rehashed": 763,
+      "private_and_source_image_entries_verified": 33,
+      "argv_receipts": 9,
+      "ppm_png_pairs_compared": 178,
+      "pixel_probes": 176,
+      "raw_disks_decoded": 8
+    },
+    "retained_revalidation": {
+      "path": "reports/runs/host-1792549985477805800-3528/report.json",
+      "sha256": "822ffdbad27bb79906f4565bab29fafce2c7dc2f9a7d1b90acd7980b3ba534e1",
+      "checkpoint_sha256": "235c0fbeffa4f0f7dc0ab97eac0ce7f9e63b30256387e51be78585826eee3976",
+      "success": true,
+      "inputs_unchanged": true,
+      "new_guest_execution": false
+    }
+  },
+  "dedicated_native_evidence": {
+    "notes_1x": {
+      "run": "host-1792545881713124100-26836",
+      "sha256": "066f114f270a4b822290ca4403cff3573adeb4e82bcfa40a278ae7218fb2752a",
+      "checks": 39,
+      "boots": 2
+    },
+    "notes_3x": {
+      "run": "host-1792545881673347000-11840",
+      "sha256": "09aa3b8b7f9cc2ce3a6fa8d5ad518a1614296455a041f6b75e40342ae6c42567",
+      "checks": 39,
+      "boots": 2
+    },
+    "files_1x": {
+      "run": "host-1792545881719104500-20356",
+      "sha256": "b17e8844d02ea57d3889dd75a1fe2b2185cc295e97c1fec9263d6c839e13702d",
+      "checks": 19,
+      "boots": 2
+    },
+    "files_3x": {
+      "run": "host-1792545881783842800-20960",
+      "sha256": "1f561e01baadfffe8436b1f78c252a6d6d1fc70fc5fef21ba5c308a5d9deca46",
+      "checks": 19,
+      "boots": 2
+    },
+    "focused_readiness": {
+      "run": "host-1792548771301253500-24944",
+      "sha256": "9b233be63d179e355ea8c103ac907fd4d96d1e2a0095f7c7a3cf93b9393724c6",
+      "checks": 11,
+      "success": true
+    },
+    "source_bridge": "Dedicated runs used2ec1255b; final5a264715 differs only in documentation and six host files. Every guest artifact remains byte-identical."
+  },
+  "accepted_scope": [
+    "Shared measured modal layout, keyboard/mouse choice, focus/capture cancellation.",
+    "Notes real Save/Don't save/Cancel for Close and Reload; durable bytes and RAM retention.",
+    "Approved-close reconnect restores usable prompt; model/static qualification for injected loss.",
+    "Surface pending attachment retired on Close/Closing; configure reacknowledgement after cancellation.",
+    "Canonical shutdown identity/order, complete serial sealing, four-frame maximized capture and retained validation."
+  ],
+  "independent_observations": [
+    "All9 native logs have unique canonical process identities, expected exits, leaked0 and complete raw DEVICE8; counts7/7,7/7,10/11recovery,18/18,7/7,9/9,9/9,8/8,8/8.",
+    "Recovery retains injected Window-311 and restartedWindow-1; normal Window-1/INIT80.",
+    "All12 canonical ordered line references match actual INIT launch, Window Close, Notes prompt/Save/choice, kernel retirement, INIT client exit, service retirement and cleanup/device. Power gestures are controller-only.",
+    "Eight raw disks: valid catalog and both clean journal CRC headers, exact generic/recovery/resolution/density/shutdown payloads; object32/inode17/generation1 stable.",
+    "Shutdown snapshot and reboot retain22B Saved during shutdown LF at version28; catalog/journal868/79 to883/94.",
+    "Dedicated Notes densities retain identical corresponding raw images, object26/inode17/generation1, choice-dependent bytes and exact held-dismiss/client-body comparisons.",
+    "Minimum light/dark prompts visually inspected; Arrow/Ibeam probes distinct; six final legacy max captures have4 identical frames.",
+    "Window telemetry13471bytes/16samples and3650bytes/8samples includes firstframe with512reserve under16384.",
+    "No QEMU remains; owner out/session/user.raw absent."
+  ],
+  "resolved_findings": [
+    "UTF8 slicing, minimum clipping, focus-ring contrast, stationary Ibeam.",
+    "Modal click-through and physical DOWN-delivery handshake.",
+    "Save/reload error messaging and approved-close reconnect trap.",
+    "Actual repeated-Close InvalidRequest crash from stale attachment and missing configure reack.",
+    "Shutdown fixtures relying on auto-save.",
+    "Stale Settings13/15 and native-density validation; metadata downgrade bypasses.",
+    "DEVICE sealing race and incomplete maximized scanout capture."
+  ],
+  "retained_failed_evidence": [
+    [
+      "17264",
+      "ff89986250c3dff5e750f5b8e624511ac00eb470a57c2dc59b7dc5d93759d77d",
+      "Rounded resize fixture missed hit region."
+    ],
+    [
+      "23484",
+      "ab4d51e6a95049f033240c4015bc6571b4ffbcd1e2ee5d7ad5ef655fd88eab16",
+      "Same geometry error."
+    ],
+    [
+      "10596",
+      "813c15fedc998ab3673d276b683cd4b21d0373eb0e05e4add0ef2a87af0efdfb",
+      "Unhandshaken input ordering."
+    ],
+    [
+      "15676",
+      "a2b2f5f2e6ec8f6227c47dd693a56ebb690e040e1b452e15b94d50ef27e6ee0f",
+      "Same delivery prerequisite."
+    ],
+    [
+      "24092",
+      "2e4084a495ba04a4d1bbd33f1fa22206528860c7be5b661065c1590873d21632",
+      "Real repeated-Close crash."
+    ],
+    [
+      "19840",
+      "99ff675a3b5d66cc8d642e65836cb8965866994a16487770bab4d1b9780c53f7",
+      "Same crash3x."
+    ],
+    [
+      "25384",
+      "5474acdd22159bd63dc71f5be2280c4e44305fd81b1474088edbd8872143a6fb",
+      "Agent stopped verified private guest after crash confirmation."
+    ],
+    [
+      "22716",
+      "5bb4561814c82cfd14aeb3feda56bc8d20922e53cdb32b48af6dd935a47492d3",
+      "Old fixture waited at live Close prompt."
+    ],
+    [
+      "27600",
+      "ebd0af1d7d336e048ab67e6627cca54e0273cc0ced1d1a47d1d87a6dcba11993",
+      "Obsolete Settings count in validator."
+    ],
+    [
+      "21356",
+      "6bf79f3f4f99f465bd77e4329c222a0c6ca7cc6359a19061d2e46d6af7433d98",
+      "Diagnostic exposed partial maximized frame."
+    ],
+    [
+      "25112",
+      "78a9364b8086a499ea7078162057f2e29e33b6b1ca4e3737118b439cb7fadef5",
+      "New probe hit actual Files footer widget."
+    ]
+  ],
+  "foundation_inheritance": {
+    "run": "host-1792542217211656500-26940",
+    "sha256": "1e9f99f889c1f2e5d6aef656b1eadd3a952bfd7bd6a89adb10be275cee9ae384",
+    "boot_suite_sha256": "75ce99ddf63000c418c077bf93436a5a7d898a237351aa3a5f42814a4244825f",
+    "scope": "Unchanged runtime artifacts only;20 of21 guest artifacts equal22924, Workspace alone changed. No fresh foundation claim."
+  },
+  "limitations": [
+    "No injected native GUI save/reload/close I/O or approved-close service-loss tests; preservation guards have model/static coverage.",
+    "No full Unicode/IME/clipboard/accessibility, Save As, modern tabs or Notepad1:1.",
+    "Original RGB LCD renderer, no Microsoft ClearType/DirectWrite equivalence or FPS/full Windows app coverage.",
+    "Standalone Run guest_tests=not_run is legacy metadata; native execution established by9 actual argv/serial/image bindings. Revalidation correctly executes no guests.",
+    "Original missing P00 reports/runs/host-1791804427914736400-32560/report.json still blocks cumulative qualification; P12 remains partial."
+  ]
+}

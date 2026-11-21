@@ -1,0 +1,15 @@
+[package]
+name = "door-http"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Sans-IO HTTP/1.1 client core: URLs, request heads, response parsing (Content-Length, chunked, until-close), redirects, dates, and Basic/Digest/NTLM/Negotiate authentication"
+
+[dependencies]
+# Pinned RustCrypto SHA-2 (MIT OR Apache-2.0), already used by door-tls:
+# Digest's SHA-256 algorithm. MD4/MD5 (NTLM, Digest MD5) are in `auth::md`.
+sha2 = { version = "=0.10.9", default-features = false }
+
+[lints]
+workspace = true

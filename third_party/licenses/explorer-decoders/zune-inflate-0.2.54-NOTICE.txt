@@ -1,0 +1,8 @@
+/*
+ * Copyright (c) 2023.
+ *
+ * This software is free software; You can redistribute it or modify it under terms of the MIT, Apache License or Zlib license
+ */
+
+Package manifest license: MIT OR Apache-2.0 OR Zlib.
+The published0.2.54 archive and its packaged git commit omit standalone license texts. The MIT license reproduced in zune-core0.5.3-LICENSE-MIT is the same upstream project's license template; no different ownership is asserted. This package's exact source notice above is preserved.

@@ -1,0 +1,54 @@
+{
+  "file": "file-settings.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "410ed98310032e5aecc1e76c00c67c15171cdad97e6ead18822c3860d6003a0e",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-16.png",
+        "sha256": "eefefcde2af7597b23404a817478a1dc17b8accfe781e1c2abd8151a658475f6",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-20.png",
+        "sha256": "8e52614b3249973af414611c34130489196fd23867da3566513b63854257d6eb",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-24.png",
+        "sha256": "0665c7b90a0461cee741165b595472892d5506f7aee23044ac187e68a2fb6ea3",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-32.png",
+        "sha256": "39977af695a3533aedfaf76a359022cc334702a24d09add67e8571677f654975",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-40.png",
+        "sha256": "63c79327941b64ca94b1f78d4246f717efdef597d351a87b8f301175d30fb827",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-48.png",
+        "sha256": "f96988a1afc710eafa7a90fe27e49911c59b807147ed29d199023223d4af71ce",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-64.png",
+        "sha256": "fff4d3a1fa5f268bc0b6b834c433a2aeee937c8851ffbecab55e2c40f409bb66",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\inifile.targetsize-256.png",
+        "sha256": "020b9c31dbb082dfa11d7619377eb3bab1fe527c378ea1c2be01a2221bbc57be",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

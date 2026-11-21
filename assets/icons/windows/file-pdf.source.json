@@ -1,0 +1,15 @@
+{
+  "file": "file-pdf.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "43f5169902d6c18e01cb02c04abde88d18bdaebe991b0a48cb4c46f93385ea43",
+  "sources": {
+    "group_name": "IDR_X007_PDF_DOC",
+    "method": "checked named PE RT_GROUP_ICON and RT_ICON bytes; no executable loading",
+    "module": "\\\\?\\C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\155.0.4283.62\\msedge.exe",
+    "module_sha256": "c2451a012ff88e82449834de5b526ebb42b5a3fc25958d795910d2b172c975b6"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

@@ -1,0 +1,17 @@
+[package]
+name = "door-windows-gui-guest"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "PE-only support shared by the original user32/gdi32/comdlg32/comctl32: ntdll imports, checked copies, locks and runtime symbols"
+
+[features]
+guest-pe = []
+
+[dependencies]
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

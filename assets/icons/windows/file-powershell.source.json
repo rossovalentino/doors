@@ -1,0 +1,39 @@
+{
+  "file": "file-powershell.ico",
+  "frames": 5,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "2359fc3772d2586aa9d0487fd686d913455333085fce5942f6c75f5dc8c94bc4",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\ps1file.targetsize-16.png",
+        "sha256": "11ea886142218922457fff8cc79e4a05692068bd85537205ccb3665b3001cbdb",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\ps1file.targetsize-24.png",
+        "sha256": "f36bf65d76e400e2ee68474387cbd3ea4cd82e1c035424e20f7362f2015a7a2a",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\ps1file.targetsize-32.png",
+        "sha256": "67f2763565ddebe48b272a6e00529516d923359fa295a78f647465474f9adc36",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\ps1file.targetsize-48.png",
+        "sha256": "6c3cd2253d644cbeaba58873cd98ace16161a41b0203dfd8f63f5eeea7ff5ac2",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsNotepad_11.2607.14.0_x64__8wekyb3d8bbwe\\Assets\\ps1file.targetsize-256.png",
+        "sha256": "513b206c90852571dfc71c1bbd6a352e28d78d15244ac6af9c1c9e890b1b3c1c",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 5,
+  "use": "Owner-provided installed Windows reference; local development"
+}

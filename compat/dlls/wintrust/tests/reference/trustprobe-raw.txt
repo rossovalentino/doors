@@ -1,0 +1,28 @@
+== files
+signed-good.exe none=0x800b010a chain-cached=0x800b010a
+signed-revoked.exe none=0x800b010a chain-cached=0x800b010a
+hello.exe none=0x800b0100 chain-cached=0x800b0100
+readme.txt none=0x800b0003 chain-cached=0x800b0003
+missing.exe none=0x80092003 chain-cached=0x80092003
+bad-choice=0x00000057 unknown-action=0x800b0001
+== hashes
+acquire ok ok sha384 error=0x80090008
+hello.exe sha1=b9f5acc0abc955361bb383561feec21dfc8131d2 sha256=03879f52657095d5666dfe22a8eba63fcb8efa3ab2102875fc73d7c0f0c69137
+signed-good.exe sha1=b9f5acc0abc955361bb383561feec21dfc8131d2 sha256=03879f52657095d5666dfe22a8eba63fcb8efa3ab2102875fc73d7c0f0c69137
+readme.txt sha1=a4e574683d76883c90b2718c4c3ce58bcd93f71c sha256=61e09723c8f7da5d36c020622cb0b87b659324b1bdb350e542fda2ad8fcf993e
+short ok=0 error=0x0000007a size=32 query ok=1 error=0x00000000 size=20
+== catalog
+mode=0 hello=0x800b010a readme=0x800b010a sha1-tag=0x80096010 signed-copy=0x800b010a
+wrong-file=0x80096010 unknown-tag=0x800b0100 not-a-catalog=0x80092003 missing-catalog=0x80092003
+mode=1 hello=0x800b010a readme=0x800b010a sha1-tag=0x80096010 signed-copy=0x800b010a
+wrong-file=0x80096010 unknown-tag=0x800b0100 not-a-catalog=0x80092003 missing-catalog=0x80092003
+mode=2 hello=0x800b0100 readme=0x800b0100 sha1-tag=0x800b0100 signed-copy=0x800b0100
+wrong-file=0x800b0100 unknown-tag=0x800b0100 not-a-catalog=0x80092003 missing-catalog=0x80092003
+mode=3 hello=0x800b0100 readme=0x800b0100 sha1-tag=0x800b0100 signed-copy=0x800b0100
+wrong-file=0x800b0100 unknown-tag=0x800b0100 not-a-catalog=0x80092003 missing-catalog=0x80092003
+mode=4 hello=0x800b010a readme=0x800b010a sha1-tag=0x800b010a signed-copy=0x800b010a
+wrong-file=0x800b010a unknown-tag=0x800b010a not-a-catalog=0x80092003 missing-catalog=0x80092003
+mode=5 hello=0x800b010a readme=0x800b010a sha1-tag=0x800b010a signed-copy=0x800b010a
+wrong-file=0x800b010a unknown-tag=0x800b010a not-a-catalog=0x80092003 missing-catalog=0x80092003
+== system (not compared)
+acquire=1 hash-bytes=32 found=1 store=1 verified=0x00000000 catalog=C:\WINDOWS\system32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Windows-ClientCore-Win32Bridge-Package~31bf3856ad364e35~amd64~~10.0.26100.9818.cat

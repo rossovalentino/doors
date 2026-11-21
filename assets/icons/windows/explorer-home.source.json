@@ -1,0 +1,15 @@
+{
+  "file": "explorer-home.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "202b17d444dfca5555639969c40ec550b4ebeda955a1d86095781c9b19303bc4",
+  "sources": {
+    "group_id": 51380,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\shell32.dll.mun",
+    "module_sha256": "43a3b905bf93c39ae382c30c0464b6977b321b9a56c66269e197b1d0bd2b9513"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

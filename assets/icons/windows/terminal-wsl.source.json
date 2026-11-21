@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "kind": "installed_windows_icon_reference",
+  "file": "terminal-wsl.ico",
+  "sha256": "e241b25f2ede007749465ec75fe682a46fcc9a1f3a73658d468f57f37625017b",
+  "sources": {
+    "files": [
+      {
+        "path": "C:Program FilesWSLwslsettingsAssetswsl.ico",
+        "sha256": "e241b25f2ede007749465ec75fe682a46fcc9a1f3a73658d468f57f37625017b"
+      }
+    ],
+    "method": "installed ICO copied byte-for-byte (owner request 2026-11-02: DSL uses the Windows 11 WSL logo)"
+  },
+  "frames": 8,
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

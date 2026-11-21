@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "record_kind": "phase_critic_review",
+  "phase": "P01",
+  "agent": "/root/p01_critic",
+  "review_kind": "emulator_acquisition_amendment",
+  "outcome": "passed",
+  "unresolved_findings": 0,
+  "evidence_report": "reports/runs/host-1791810487804417300-34200/report.json",
+  "qualifying_report_sha256": "917980448b40468d9487ff153d41ce461bf580a153331439c076793d359de08d",
+  "reviewed_build_inputs": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "de3fed914d688165550deae7bb581490f89f64f2c07fd57145ddc3e5742d3abe"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "30e38afcf3524a8086d38b61783b709f8e15a2882cdc0c0688b5bcc1dae65812"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "46719738074cd09267f2965e2562750b337d6ad9d87f00e71acfc54eb0cec0e9"
+    },
+    {
+      "path": "DOOR_OS_MASTER_SPECIFICATION.md",
+      "sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37"
+    },
+    {
+      "path": "crates/boot-protocol/Cargo.toml",
+      "sha256": "0f576b285913461a7f9f993be82aaa4eaea7e11727ddd7a0d99bd1e1c7a5d453"
+    },
+    {
+      "path": "crates/boot-protocol/src/lib.rs",
+      "sha256": "ca7df2b05c85aa96565d3d239c4e615516207dee3d5bc38f48c65a8de28e697d"
+    },
+    {
+      "path": "crates/boot-protocol/src/memory.rs",
+      "sha256": "efb74a6922ac3b62b26bae3a881e879b75893b8ca6a05e246f89af051a83eefb"
+    },
+    {
+      "path": "crates/boot-protocol/src/wire.rs",
+      "sha256": "971ee5e06739162fcb3b811f93f3fa1739b01c638b05daf0e26daf1ac4292b11"
+    },
+    {
+      "path": "crates/boot-protocol/tests/boot_info.rs",
+      "sha256": "adfeb47265bb9d22b620a78d1a22f9f1fe87e5b67aed9c69523a854f314bf3e0"
+    },
+    {
+      "path": "crates/image-format/Cargo.toml",
+      "sha256": "a1ef1bfd8e15776cab8bbdf134a6e116e7da3c060a2b475f3a7f6d255f94888d"
+    },
+    {
+      "path": "crates/image-format/src/elf.rs",
+      "sha256": "ffdc395132e7c70e72b8ba4bf34a6a4cf3bc409c6d98fb4f585a479a230c3de3"
+    },
+    {
+      "path": "crates/image-format/src/lib.rs",
+      "sha256": "bf2145e0553e49ba26b3123f73a6ac3b5473b5b6def5d1218f517bc34eae9e5d"
+    },
+    {
+      "path": "crates/image-format/src/pe.rs",
+      "sha256": "8b2da15ebac6e7f1f4405b64196135cbf3263ecb5f137ed562fe5d500d5093d7"
+    },
+    {
+      "path": "crates/image-format/tests/images.rs",
+      "sha256": "0855ef9176afafbdc35e243262ee58133058dc447565efef33f587b8f4e0c65a"
+    },
+    {
+      "path": "profiles/build/p00.json",
+      "sha256": "1aaa4177972bc5b46a60d4166a7754f76d1c60c7509a5ded3a13b391874bded1"
+    },
+    {
+      "path": "profiles/hardware/qemu-diagnostic-x64.json",
+      "sha256": "77f3217b54e2930d756bdf77682b3cdaae8d06d72bed55d30748c7e4a4b970d1"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "6f0d5f4e45f8802ad2b3a0fe2794b07548725039ebbcfdd2437a0168f113e924"
+    },
+    {
+      "path": "specs/contracts/boot-info-v1.md",
+      "sha256": "9ab975f962397b35ec347995a6613fc95e1073cd6c9ff82e4d58cf55b8aa8202"
+    },
+    {
+      "path": "specs/contracts/build-image-v1.md",
+      "sha256": "23622b332e5871063dc33ddedbb84c56a700c3ff9bd8c321b7fa145640d31e98"
+    },
+    {
+      "path": "specs/contracts/emulator-harness-v1.md",
+      "sha256": "9b9b3d0ee8753c12239ecc9c7ff54e0062d86f6bf697dacce5f8a454a0b99f97"
+    },
+    {
+      "path": "specs/contracts/image-validation-v1.md",
+      "sha256": "22fa22ae5a9fad7831d522a0e43bc01b3ed2d9db5133ad369d510ac4bcd73e95"
+    },
+    {
+      "path": "specs/sources/dependencies.json",
+      "sha256": "39a37ffc76dbe25f2fb23232729bd41351c361e2f2de0c6e32172f04b6bd8f53"
+    },
+    {
+      "path": "specs/sources/emulator-acquisition.json",
+      "sha256": "2eba8e56e3d003419bcd7e2a0126664cf45f8e1b029d5ec8d67e6e8409d7372e"
+    },
+    {
+      "path": "specs/sources/index.json",
+      "sha256": "e7873966b2148a666cab5e74dbc80082c9cdcc6c2265eb8a71963be2c2951e04"
+    },
+    {
+      "path": "tests/support/images.rs",
+      "sha256": "e3d19e7e3a0b396fae2c3b968039379a35076ca11ccf7d138247708be4c1eade"
+    },
+    {
+      "path": "tools/xtask/Cargo.toml",
+      "sha256": "d52f7ce4b2d3b10af59c1c4eddf850df7b18ef43ffc11bd761c188cc8b5f9ab7"
+    },
+    {
+      "path": "tools/xtask/src/artifact.rs",
+      "sha256": "c452e9f5d6e6a9ccc1f6bb07294e8dd6321e336ebbd2a6e12df9090589090f67"
+    },
+    {
+      "path": "tools/xtask/src/build.rs",
+      "sha256": "74470541127af6e655f3c902f33956c6252d3f7eae7b41e3f3360af5e20664dd"
+    },
+    {
+      "path": "tools/xtask/src/doctor.rs",
+      "sha256": "e75ab2bb71efbd46f6bd9960382be75ebfafbbf8fdb484b29a2fe07394c38b9c"
+    },
+    {
+      "path": "tools/xtask/src/emulator.rs",
+      "sha256": "2ce3669d98edbb9923c0c70ee8ac94050fc066ab25bcaa6f6afa1ecc0a774da4"
+    },
+    {
+      "path": "tools/xtask/src/evidence.rs",
+      "sha256": "bde125ea39b259481b61265f81a82fa0d58528541892f3942452dccad7939b73"
+    },
+    {
+      "path": "tools/xtask/src/image.rs",
+      "sha256": "d744daf71f773effc3422c7b4a0b1bef364f4f0d68fc43ff1aadf56bae74f06d"
+    },
+    {
+      "path": "tools/xtask/src/main.rs",
+      "sha256": "4a179351fa5025ddb1aba4d45490c467873162dd188b2d0c2267f3b7597c6e0f"
+    },
+    {
+      "path": "tools/xtask/src/paths.rs",
+      "sha256": "5e6fbbe9c42d016115e0140905c2880b6dcd826d84b6150dc0cc113507341256"
+    },
+    {
+      "path": "tools/xtask/src/spec.rs",
+      "sha256": "88659e2518a7766d34f6e97a6b8d57dba30bec5016fb506a102037b53ec766df"
+    },
+    {
+      "path": "tools/xtask/src/test_support.rs",
+      "sha256": "a71f285a43fcd390d1c2d49b9b4e5c9bc75ce083f7262014d396d9e4c8dc0917"
+    }
+  ],
+  "findings_resolved": [
+    "P01-A01",
+    "P01-A02"
+  ],
+  "evidence_check": "reports/runs/critic-p01-acquisition/evidence-check-final.json",
+  "replay_log": "reports/runs/critic-p01-acquisition/final-replay.log",
+  "negative_outcomes": "reports/runs/critic-p01-acquisition/negative-outcomes-final.json",
+  "historical_foundation_review": "reports/artifacts/p01-critic-host-foundation.json",
+  "preserved_failed_gate": "reports/runs/host-1791809824762678900-25140/report.json",
+  "upstream_release_commit": "https://github.com/qemu/qemu/commit/698104725efad4b29079d857dfdebbd804e34c99",
+  "scope": "P01 acquisition/preflight amendment, current build/profile/source identities, preserved historical foundation. Actual guest boot/controller/firmware integration remains P02 and not_run.",
+  "closure_bookkeeping": "Publish this bound review, update current phase/status/handoff/evidence pointers and counts, then run check-spec before selecting P02.",
+  "limitations": [
+    "Review does not guarantee absence of every bug",
+    "Actual QEMU VM/UEFI/kernel execution has not run",
+    "TCG support is preflighted; hardware acceleration is unqualified",
+    "Original policyblocked critic caches remain untouched"
+  ],
+  "housekeeping": "Existing reusable critic probe/cache reused; no new source scripts, dependency cache copies or cleanup retries. Main code/contracts/hardware remained read-only."
+}

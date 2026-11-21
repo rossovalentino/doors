@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "record_kind": "hardware_profile",
+  "id": "qemu-desktop-whpx-x64",
+  "architecture": "amd64",
+  "firmware_kind": "uefi",
+  "machine_family": "q35",
+  "machine_version": "pc-q35-11.1",
+  "qemu_version": "11.1.0",
+  "cpu_model": "qemu64-v1",
+  "accelerator": "whpx",
+  "vcpus": 1,
+  "memory_mib": 2048,
+  "firmware": {
+    "code_path": "C:/Users/win/Desktop/Doors OS/out/acquisitions/ovmf-qemu-10.2.0/edk2-x86_64-code.fd",
+    "code_sha256": "33090cc07675baa5190d9f1e84bf5176b33bcbfa9bacac522961150cdb6dbb2a",
+    "private_vars_required": true,
+    "vars_template_sha256": "5d2ac383371b408398accee7ec27c8c09ea5b74a0de0ceea6513388b15be5d1e",
+    "vars_template": "C:/Users/win/Desktop/Doors OS/out/acquisitions/ovmf-qemu-10.2.0/edk2-i386-vars.fd"
+  },
+  "storage": {
+    "image_manifest": null,
+    "writable_targets_must_be_workspace_local": true,
+    "transport": "read-only-vvfat-via-virtio"
+  },
+  "display": {
+    "initial_backend": "gop-framebuffer",
+    "requested_mode": "1024x768",
+    "actual_mode": null,
+    "device": "ramfb"
+  },
+  "input": {
+    "selected_transport": "polled-ps2-diagnostics"
+  },
+  "network": {
+    "enabled": false,
+    "backend": null
+  },
+  "serial": {
+    "capture_required": true
+  },
+  "physical_disk_passthrough": false,
+  "runnable": true,
+  "verification_state": "not_run",
+  "qemu": {
+    "path": "C:/Program Files/qemu/qemu-system-x86_64.exe",
+    "sha256": "47d57a6072e0bb3bd98f87926eb129eb1736dfe818c67b3b81ef7ce4edd0b3cd"
+  },
+  "protocol": "emulator-harness-v1",
+  "data_disk": {
+    "format": "raw",
+    "bytes": 134217728,
+    "transport": "virtio-blk-modern",
+    "writable_targets_must_be_workspace_local": true,
+    "serial": "DOOR-P08-DATA"
+  },
+  "purpose": "Explicit interactive desktop performance profile; cumulative regression remains TCG"
+}

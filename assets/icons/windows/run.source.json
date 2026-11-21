@@ -1,0 +1,15 @@
+{
+  "file": "run.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "140326ca88fbea64e7e101430821129303bc522929cdb1ae89f75eb95e20cfeb",
+  "sources": {
+    "group_id": 25,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\shell32.dll.mun",
+    "module_sha256": "6d87f98ca14c66ebe3e3417b5c55d14351c712025a8c68f7500414290cda77cd"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

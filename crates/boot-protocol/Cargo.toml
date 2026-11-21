@@ -1,0 +1,11 @@
+[package]
+name = "door-boot-protocol"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Allocation-free, checked Door boot handoff format"
+
+[lints]
+workspace = true
+

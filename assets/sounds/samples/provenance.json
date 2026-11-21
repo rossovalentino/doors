@@ -1,0 +1,7 @@
+{
+  "use": "Original test media for Doors OS (P15 Preview playback): synthesized by desktop/workspace/src/audio_codec.rs (test `write_doors_chime`, a 660 Hz bell, 2.4 s exponential decay, 48 kHz stereo 16-bit) and encoded with the Doors FLAC encoder. Authored for this project; no third-party content.",
+  "created": "2026-11-02",
+  "files": [
+    {"file": "doors-chime.flac", "sha256": "df8e50565fcfa688dbecee45ebebccdf0770e6aac1573f1c21571446e8aba1c4"}
+  ]
+}

@@ -1,0 +1,27 @@
+[package]
+name = "door-dsound"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original DirectSound (dsound.dll) over door.audio: a software mixer for secondary buffers with volume, pan, frequency, notifications and capture"
+
+[lib]
+name = "dsound"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-windows-abi/guest-runtime", "door-sys/door-personality"]
+
+[dependencies]
+door-abi = { path = "../../../runtime/abi" }
+door-sys = { path = "../../../runtime/sys" }
+door-service-client = { path = "../../../frameworks/service-client" }
+door-service-protocol = { path = "../../../crates/service-protocol" }
+door-winmm = { path = "../winmm" }
+door-windows-abi = { path = "../../abi", features = ["guest-heap"] }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

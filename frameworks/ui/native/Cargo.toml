@@ -1,0 +1,27 @@
+[package]
+name = "door-ui-native"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Door UI platform adapter: runs door-ui applications on the Door window server"
+
+[features]
+# Publish semantic trees and serve assistive actions through door.accessibility
+# (needs the service-client/window-server accessibility hooks).
+accessibility = []
+
+[dependencies]
+door-ui = { path = ".." }
+door-accessibility = { path = "../../accessibility" }
+door-app-ui = { path = "../../app-ui" }
+door-workspace = { path = "../../../desktop/workspace" }
+door-abi = { path = "../../../runtime/abi" }
+door-rt = { path = "../../../runtime/rt" }
+door-service-client = { path = "../../service-client" }
+door-service-protocol = { path = "../../../crates/service-protocol" }
+door-graphics-core = { path = "../../../graphics/compositor" }
+door-graphics-text = { path = "../../text" }
+
+[lints]
+workspace = true

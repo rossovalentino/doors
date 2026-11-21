@@ -1,0 +1,10 @@
+[package]
+name = "door-accessibility"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Door semantic trees, the bounded versioned accessibility wire format and assistive captions"
+
+[lints]
+workspace = true

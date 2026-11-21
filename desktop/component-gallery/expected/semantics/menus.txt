@@ -1,0 +1,38 @@
+window "Doors UI Gallery"
+  navigation "Navigation" [FOCUSABLE] {FOCUS}
+    button "Close Navigation" {INVOKE}
+    list item "Basic input" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=1/9
+    list item "Control states" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/9
+    list item "Text and selection" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=3/9
+    list item "Collections" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=4/9
+    list item "Menus and toolbars" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT} pos=5/9
+    list item "Status and info" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=6/9
+    list item "Layout" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=7/9
+    list item "Dialogs" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=8/9
+    list item "Accessibility" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=9/9
+    scroll viewer "" [VERTICAL]
+      heading "Menus and toolbars" level=1
+      group "MenuBar"
+        heading "MenuBar" level=2
+        menu bar "" [FOCUSABLE] {FOCUS}
+          menu item "File" [FOCUSABLE EXPANDABLE HAS_POPUP] {EXPAND COLLAPSE} pos=1/4
+          menu item "Edit" [FOCUSABLE EXPANDABLE HAS_POPUP] {EXPAND COLLAPSE} pos=2/4
+          menu item "View" [FOCUSABLE EXPANDABLE HAS_POPUP] {EXPAND COLLAPSE} pos=3/4
+          menu item "Help" [FOCUSABLE EXPANDABLE HAS_POPUP] {EXPAND COLLAPSE} pos=4/4
+      group "CommandBar"
+        heading "CommandBar" level=2
+        tool bar "Command bar" [FOCUSABLE] {FOCUS}
+          button "New" [FOCUSABLE] {INVOKE}
+          button "Save" [FOCUSABLE] {INVOKE}
+          button "Share" [FOCUSABLE] {INVOKE}
+          button "See more" [FOCUSABLE EXPANDABLE HAS_POPUP] {INVOKE}
+      group "MenuFlyout and ContextMenu"
+        heading "MenuFlyout and ContextMenu" level=2
+        button "Show menu (or right-click anywhere)" [FOCUSABLE] {FOCUS INVOKE}
+      group "TabView"
+        heading "TabView" level=2
+        tab "Tabs" [FOCUSABLE] {FOCUS}
+          tab item "Home" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT DISMISS} pos=1/3
+          tab item "Document 1" [FOCUSABLE SELECTABLE] {FOCUS SELECT DISMISS} pos=2/3
+          tab item "Document 2" [FOCUSABLE SELECTABLE] {FOCUS SELECT DISMISS} pos=3/3
+          text "Home tab content"

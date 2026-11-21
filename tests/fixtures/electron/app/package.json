@@ -1,0 +1,7 @@
+{
+  "name": "electron-a",
+  "version": "1.0.0",
+  "description": "Doors P18 ELECTRON-A probe",
+  "main": "main.js",
+  "private": true
+}

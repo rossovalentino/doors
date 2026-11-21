@@ -1,0 +1,65 @@
+{
+  "retrieved": "2026-10-19",
+  "publisher": "Microsoft Support",
+  "reference": "https://support.microsoft.com/en-us/windows/experience/exploring-windows-settings",
+  "runtime": "Embedded local BGRA exports; no network access",
+  "icons": [
+    {
+      "file": "home.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/home.png",
+      "sha256": "0bef1276c8956cde70a1eb0d33e4cf0bdec74b3e960552d34b27f6b0eef8f0b8"
+    },
+    {
+      "file": "network-internet.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/network-internet.png",
+      "sha256": "b2355c773756d3b3d166d43978409c9e51afd466b9011119a446c7907664c61c"
+    },
+    {
+      "file": "personalization.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/personalization.png",
+      "sha256": "cc6a49331a5884320b632d7feea391be8ea7961814b030961229b47891ff943c"
+    },
+    {
+      "file": "apps.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/apps.png",
+      "sha256": "4bf2cffcb9504bafc61de68d80e04a55c870efe76a6611b7fab8f265224eeb03"
+    },
+    {
+      "file": "accounts.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/accounts.png",
+      "sha256": "111fa6e904ef512a6166c7e56a0e17ccb4981b822d34359fc47ea6dc16961d2a"
+    },
+    {
+      "file": "time-language.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/time-language.png",
+      "sha256": "d53ad1778ce0e237d4f2eed1c9594001ac965f9ad853e4a144c7b5af9eb3a2d1"
+    },
+    {
+      "file": "gaming.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/gaming.png",
+      "sha256": "fc507dc4c9995c7a6e460aeac99f18ee7979dd0dfe05274f91a8499826b49547"
+    },
+    {
+      "file": "accessibility.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/accessibility.png",
+      "sha256": "1ae36a61e87e85ee922b51c89ce00b391868cc8ef259b8c8effaa278f527d3a6"
+    },
+    {
+      "file": "security-privacy.png",
+      "source": "https://support.microsoft.com/en-us/windows/media/security-privacy.png",
+      "sha256": "62d59e028b9c7b8b50402ae98074ad64f591bfeaa511caeead698491b9b6d8c1"
+    }
+  ],
+  "glyphs": [
+    {
+      "name": "bluetooth-devices",
+      "font": "assets/fonts/segoe-fluent-icons/SegoeFluentIcons.ttf",
+      "codepoint": "E702"
+    },
+    {
+      "name": "windows-update",
+      "font": "assets/fonts/segoe-fluent-icons/SegoeFluentIcons.ttf",
+      "codepoint": "E895"
+    }
+  ]
+}

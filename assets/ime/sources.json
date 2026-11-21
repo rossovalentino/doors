@@ -1,0 +1,110 @@
+{
+  "files": [
+    {
+      "licence": "CC-BY-SA-4.0",
+      "name": "cedict_1_0_ts_utf-8_mdbg.zip",
+      "project": "CC-CEDICT (MDBG)",
+      "sha256": "f659d37afca851e524ccc1f5e32818e1ca702fa79df49f25852af0669733e9b3",
+      "url": "https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.zip",
+      "version": "rolling daily export; pinned by sha256"
+    },
+    {
+      "licence": "MIT",
+      "name": "jieba-dict.txt",
+      "project": "jieba",
+      "sha256": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+      "url": "https://raw.githubusercontent.com/fxsjy/jieba/v0.42.1/jieba/dict.txt",
+      "version": "v0.42.1"
+    },
+    {
+      "licence": "BSD-3-Clause",
+      "name": "mozc-id.def",
+      "project": "Mozc",
+      "sha256": "07a05a268c3783b7e02b36e4aa591555a2dd19a1f3c93891576740761c154f2d",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/id.def",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary00.txt",
+      "project": "Mozc",
+      "sha256": "9e07ce292932c4fff327ed8cb06274c09acca556bd8bdf7c7ef1f6173eae3b61",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary00.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary01.txt",
+      "project": "Mozc",
+      "sha256": "836fd5fd8399510de0d8ef7b33be913cca6bbaee7b712cc8045fba03f4c75a89",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary01.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary02.txt",
+      "project": "Mozc",
+      "sha256": "93943858d0cfd092b849a78def6901eaf228177e1ac5663544e865a3a1e45a9e",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary02.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary03.txt",
+      "project": "Mozc",
+      "sha256": "cb9f1b0b4a7550d682d86244a021cd17e0b15366328819e69135b5f183a1a24b",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary03.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary04.txt",
+      "project": "Mozc",
+      "sha256": "9fdc4e3948d03463de13ab5782adffbc11dd06e934cb80138c5920029cd3d2f6",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary04.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary05.txt",
+      "project": "Mozc",
+      "sha256": "199e3b0f050b691823ae7ba943090d437f51af6436b27c5f3dc69cafa12000e4",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary05.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary06.txt",
+      "project": "Mozc",
+      "sha256": "b95b14f7770ae2a824bc8e9fad8b03c1bc45c504f93a36554b8b56daa0368d2a",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary06.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary07.txt",
+      "project": "Mozc",
+      "sha256": "7f53649b529d4c8c495d3a8dd9c4d489dfe7696080f7423107ff01331174be48",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary07.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary08.txt",
+      "project": "Mozc",
+      "sha256": "50a31bb5fc1646721b00be371a5695dffab1292bda143e1e59cc70cbbdd8643f",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary08.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    },
+    {
+      "licence": "BSD-3-Clause (IPAdic-derived data: IPA licence notice)",
+      "name": "mozc-dictionary09.txt",
+      "project": "Mozc",
+      "sha256": "4e5fcd4cbfbf11395166a37b506f547fc54d20edc0884f5184ecd3fc705f0d9a",
+      "url": "https://raw.githubusercontent.com/google/mozc/ffa0d785342651fe649d13dcb6fcb2046020b10d/src/data/dictionary_oss/dictionary09.txt",
+      "version": "commit ffa0d785342651fe649d13dcb6fcb2046020b10d (13 November 2026)"
+    }
+  ],
+  "note": "Fetched only by `cargo xtask ime-dictionaries --fetch` after owner approval; hashes pinned with --pin on first acquisition.",
+  "schema": "door-ime-sources-v1"
+}

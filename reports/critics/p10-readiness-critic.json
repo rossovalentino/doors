@@ -1,0 +1,1341 @@
+{
+  "schema_version": 1,
+  "record_kind": "phase_critic_review",
+  "phase": "P10",
+  "agent": "/root/readiness_critic",
+  "outcome": "passed",
+  "unresolved_findings": 0,
+  "evidence_report": "reports/runs/host-1792235592894575300-22840/report.json",
+  "evidence_report_sha256": "64261b5ced696019b1fa79c6502bbc7d9cbaba46c190d32b81c7fd2c38cf6361",
+  "reviewed_input_count": 321,
+  "reviewed_build_inputs": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "de3fed914d688165550deae7bb581490f89f64f2c07fd57145ddc3e5742d3abe"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "e741a04abff53bba392b26f626ae465c6cc3f9b74cefbddd2bca812325c0ed39"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "9249d43b614431095a7c316aa7bbdd3b83378e72a1c981f9da6fb8986f36a5d9"
+    },
+    {
+      "path": "DOOR_OS_MASTER_SPECIFICATION.md",
+      "sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37"
+    },
+    {
+      "path": "runtime/linker/application.ld",
+      "sha256": "b688b1e21427e9091a442f3a965c8b9007a99b80429f1006ad44838c186c1748"
+    },
+    {
+      "path": "apps/shell/Cargo.toml",
+      "sha256": "5cac1307fd86de394465b610f5d4143f7ef2567e442e80acd50e499065ce9332"
+    },
+    {
+      "path": "apps/shell/src/main.rs",
+      "sha256": "6468b5d76ee92d910741fe2d04bbaf57f4ed554d2cc328393bfe0e22c791bbda"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/ctype.h",
+      "sha256": "c888b17f7407679c09298957d801457490eecb99272111f86433d12bd657c5db"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/math.h",
+      "sha256": "c888b17f7407679c09298957d801457490eecb99272111f86433d12bd657c5db"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/platform.h",
+      "sha256": "5469a84ed1c0f4315e27c0cacdcf209e8a5fcd2982c7ff4d5198fb6f010c26e6"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/stdbool.h",
+      "sha256": "c888b17f7407679c09298957d801457490eecb99272111f86433d12bd657c5db"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/stdio.h",
+      "sha256": "c888b17f7407679c09298957d801457490eecb99272111f86433d12bd657c5db"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/stdlib.h",
+      "sha256": "c888b17f7407679c09298957d801457490eecb99272111f86433d12bd657c5db"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/string.h",
+      "sha256": "c888b17f7407679c09298957d801457490eecb99272111f86433d12bd657c5db"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/include/time.h",
+      "sha256": "c888b17f7407679c09298957d801457490eecb99272111f86433d12bd657c5db"
+    },
+    {
+      "path": "tests/windows-fixtures/tinybasic/runtime.c",
+      "sha256": "e45fdaa00b30d9db4313704463b8ebfd3e5ae070983ab5839be5b8a60f1b5f16"
+    },
+    {
+      "path": "apps/tools/Cargo.toml",
+      "sha256": "3be1ebde6999baec2e2e802c52aca4531e0b0da6ebd09284ea0edc7690026eee"
+    },
+    {
+      "path": "apps/tools/src/main.rs",
+      "sha256": "5f2e30efb3f24f3a1d1162659098da8e325a6eb0f381f82656f16f57f32cfbbb"
+    },
+    {
+      "path": "boot/config/boot.txt",
+      "sha256": "b4cff7b35f1367c925d20351e4aab8be84e2bec5f4c22fc95dae466ce01c17e3"
+    },
+    {
+      "path": "boot/config/session-boot.txt",
+      "sha256": "10c1b8151a37cde3d58870cc57946ba36fee437972f48298a292389589031558"
+    },
+    {
+      "path": "boot/config/session.conf",
+      "sha256": "bc4ee91257386191661fa1644d355d91fbe85ada83f09b46e60f58b096b8ea85"
+    },
+    {
+      "path": "boot/uefi/Cargo.toml",
+      "sha256": "c85021f93028d0a6845dd2fd3ed037e90ad072459071ade997103bc70def5c4d"
+    },
+    {
+      "path": "boot/uefi/src/boot_info.rs",
+      "sha256": "45bef5e4f05d2b4b684a419d4d339718e5e81fb9ec77e3be2afa52bd7a742bc9"
+    },
+    {
+      "path": "boot/uefi/src/elf_loader.rs",
+      "sha256": "bdbed0a58447b1379ca02c664c16a6aa0d710961fd4dafbff7239381d8a6b31f"
+    },
+    {
+      "path": "boot/uefi/src/firmware.rs",
+      "sha256": "faa8e08f5947aa2290e61eb4d2a8c90d5b05a7a06b496c20076afc763eb6f123"
+    },
+    {
+      "path": "boot/uefi/src/handoff.rs",
+      "sha256": "49a24fee0c909764252bf0dacf0e619436b11d1379fbbf13cccb5ccc8f8712a8"
+    },
+    {
+      "path": "boot/uefi/src/main.rs",
+      "sha256": "879d656a5daa8d207093f328ee69fd8f500e767bd48d377cca71b31a5a248374"
+    },
+    {
+      "path": "boot/uefi/src/paging.rs",
+      "sha256": "b291483008ff7d1218837fe07b89f7021e8544ff73db065a75a58ba90635c0dd"
+    },
+    {
+      "path": "boot/uefi/src/platform.rs",
+      "sha256": "a7cc4239ebfe73f8d8e1122b374e838f3e14bad2b5a5eb8b6f35c4f4b1965019"
+    },
+    {
+      "path": "compat/abi/Cargo.toml",
+      "sha256": "2b299c66f053b2066190086d889afa4a2f8829aa336a5f26fb41fed76c0d7173"
+    },
+    {
+      "path": "compat/abi/src/apc.rs",
+      "sha256": "91696d9549a0d6a40c535f0fac09470cfa38a3a886ba800b9da7d80bc5846f3b"
+    },
+    {
+      "path": "compat/abi/src/console.rs",
+      "sha256": "e2ddffc95c94d4810cd37fe026002d0df41da4f6b3f682b2b84ed8ef3ce6d1c7"
+    },
+    {
+      "path": "compat/abi/src/exception.rs",
+      "sha256": "96d00a84b35aa0bf628aad47b1dcc9429cdb279849b26775178d2a345753c1f7"
+    },
+    {
+      "path": "compat/abi/src/file.rs",
+      "sha256": "2a5cab3abe356d2b7ef2a6f88db60999ed9b7b64b92045b24c3404b86df26145"
+    },
+    {
+      "path": "compat/abi/src/io.rs",
+      "sha256": "598d0a2fb762946f9611643af2fad4f2bc9df840e31b371ef1a4bc8c7f115da4"
+    },
+    {
+      "path": "compat/abi/src/lib.rs",
+      "sha256": "46669c4eb9a0b91b97a2726e5e575b06e76098dc8fdce3ec3c788e9f46920eac"
+    },
+    {
+      "path": "compat/abi/src/memory.rs",
+      "sha256": "aae4aa77f7340b162d95c36ab22405fe9d4b74f7d6d821b8076a6cadd2208361"
+    },
+    {
+      "path": "compat/abi/src/tls.rs",
+      "sha256": "d03e3aedd8eece44e72bf6e8f516080295b3b0d9ee893a676e3adf709a044bc9"
+    },
+    {
+      "path": "compat/dlls/kernel32/Cargo.toml",
+      "sha256": "b4f4517eae6f467a247b4371180357c69b0f683152051d18f92897a4503bac94"
+    },
+    {
+      "path": "compat/dlls/kernel32/src/guest.rs",
+      "sha256": "bca31c2cb4f309a8967016f259732a72674203a1fb6da45e6b5b73f37a4b188c"
+    },
+    {
+      "path": "compat/dlls/kernel32/src/lib.rs",
+      "sha256": "3469e14cea8f9413bb5961752030084556c2ec5f1b378b9a980fcfb18a38ef21"
+    },
+    {
+      "path": "compat/dlls/msvcrt/Cargo.toml",
+      "sha256": "7cf537337a46f8e24c278f34d55a10e4d47439042dc1f410c083f51c7a8a00c5"
+    },
+    {
+      "path": "compat/dlls/msvcrt/src/guest.rs",
+      "sha256": "d6473329bdd599d060868c0cf5d3264817224a823ac80556186759bd39c98966"
+    },
+    {
+      "path": "compat/dlls/msvcrt/src/lib.rs",
+      "sha256": "bbb22d88a28907b0a57dcac39576c892a06e50a58b0b10199e6bda04a39668c8"
+    },
+    {
+      "path": "compat/dlls/ntdll/Cargo.toml",
+      "sha256": "f1cc8db1b5e34d9e38c0033d7a9527287c2516b1703ff8bda7484bf8de1e296a"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/exception.rs",
+      "sha256": "603d301aedfc77bf20cea3f23a3975b1438180bac9f099e7cc27229bfa190fe8"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/files.rs",
+      "sha256": "7aa9128dfd6170be298c4afb6b359c8b50d6c90d263bbce9520a7413c8922155"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/guest.rs",
+      "sha256": "4853f300753fed51efb5b2d653cb0e457ddb87c457c13ef197b9234c12cbfda5"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/lib.rs",
+      "sha256": "2e585704da307c59f7841a20d3c519b2a6188fd6f8140ac39d9f686f3d8e03f7"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/loader.rs",
+      "sha256": "f84734fb78c998ba3142bec32c7efc343cf89152bca6db96ac8d6be39cd74cc2"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/memory.rs",
+      "sha256": "9cb33df65e9626b37c5de26748f168f8d4e422ff5e30068ec590b66a7e0b8e30"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/threads.rs",
+      "sha256": "179f3433c0274ab895940ddd9fbcdba0ca44a15a9f866191a7fc1f6696b40388"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/tls.rs",
+      "sha256": "d1ed85235a09e257302d5a6827ad72dd8002f87e8ced0a1e25daef0e81788d78"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/unwind.rs",
+      "sha256": "45fefd5d8c2595ff68191974fc715b744ec07e8fbb55fadab054b42ef9e4b5ec"
+    },
+    {
+      "path": "compat/dlls/ntdll/src/waits.rs",
+      "sha256": "fc8de2be5241d27c09eb6fcb2900623ae7062707a0a28fd42a4704459407951d"
+    },
+    {
+      "path": "compat/pe/Cargo.toml",
+      "sha256": "cf59d71bcc7b462601be9e917c55596409238ea482d2fc89e912105dde3d2bb8"
+    },
+    {
+      "path": "compat/pe/src/imports.rs",
+      "sha256": "2b1f905a3e3daa175a1cf80921690111b8adcd88a59fae571a97ae3aa081d549"
+    },
+    {
+      "path": "compat/pe/src/layout.rs",
+      "sha256": "afaeedbfd08f115bef0414173d84e8e46cb06110c120ee6f388cefa607a6a5d2"
+    },
+    {
+      "path": "compat/pe/src/lib.rs",
+      "sha256": "b57ec3e606d03072b6a6f27ea5256d2c132fd535b13b491893640942155fa329"
+    },
+    {
+      "path": "compat/pe/src/lifecycle.rs",
+      "sha256": "4e462530f3a677b87e31d63693c42f79bd8ea5333eadd474567c6f0b31c6125c"
+    },
+    {
+      "path": "compat/pe/src/relocations.rs",
+      "sha256": "bc656b68f018cb1670957a73d95494742b3bf60439d51beef0d194159d567cea"
+    },
+    {
+      "path": "compat/pe/src/tls.rs",
+      "sha256": "b57abab900b0357c091dc76071cbf1e30bfbc231dc48560722d11fd6d58cd9e6"
+    },
+    {
+      "path": "compat/pe/src/unwind.rs",
+      "sha256": "1f44ad76da044b3b9fa5a8900fd970850212afd7ac6ad36672ae761fa64f9c8b"
+    },
+    {
+      "path": "compat/pe/src/virtual_unwind.rs",
+      "sha256": "19c56d0a913cbc8475ce2ef029b01b18e523c7807c4d65c976e456f725893f06"
+    },
+    {
+      "path": "compat/pe/tests/lifecycle.rs",
+      "sha256": "2715a6e91a85b487fade103575991c929bfd99e832ae1a709e92a105339db8dc"
+    },
+    {
+      "path": "compat/pe/tests/loader.rs",
+      "sha256": "a5501816703d7b303210c0e211158c38413e5938188f9c7382c1dc8c1816b667"
+    },
+    {
+      "path": "compat/pe/tests/p10_metadata.rs",
+      "sha256": "ccc66368c3101bd1c1f2f479e28c2a537cbebe7decbac4dbc8ebe663cb1fdda0"
+    },
+    {
+      "path": "compat/pe/tests/support/mod.rs",
+      "sha256": "ca1ffa9d883276018229c8035f9035141522931a1f57c2194269956ef39eabb6"
+    },
+    {
+      "path": "compat/pe/tests/virtual_unwind.rs",
+      "sha256": "1de314165f5eb950410356e5c969dda78b52b317b54ebe804e00db589ce5acb5"
+    },
+    {
+      "path": "runtime/abi/Cargo.toml",
+      "sha256": "0112ff04f3441837d724be3e1d6c20f5b0911af41d2bac6653cf68182ea65323"
+    },
+    {
+      "path": "runtime/abi/src/lib.rs",
+      "sha256": "5e05e261180427b7b278bf4ecd9733ae52e5077adaace562a2bdee1d3262e66a"
+    },
+    {
+      "path": "runtime/abi/src/platform.rs",
+      "sha256": "b9a4ff20fa18f9ded4e7c70dbd1956cfd663275041bb3cf7326af4a1efe6cda3"
+    },
+    {
+      "path": "runtime/abi/src/startup.rs",
+      "sha256": "219edf81401e13fe12855fa01405fe20d623ab0c13970619bc4b4d993f042fc3"
+    },
+    {
+      "path": "runtime/abi/src/wire.rs",
+      "sha256": "c6eed16cf107519e2a4ede736bc597520c00cd4cd8b45ca8b9919882756a82e6"
+    },
+    {
+      "path": "boot/debug/Cargo.toml",
+      "sha256": "5a5dd1fa0ee4402924bc8b0cc9294042441cebaaa3efd12b38a35ff9b518ef0e"
+    },
+    {
+      "path": "boot/debug/src/lib.rs",
+      "sha256": "d41adeb8a95dc370a00a468fe1f5bd4b97553ae738e11fad8c06125cd26ad772"
+    },
+    {
+      "path": "crates/boot-protocol/Cargo.toml",
+      "sha256": "0f576b285913461a7f9f993be82aaa4eaea7e11727ddd7a0d99bd1e1c7a5d453"
+    },
+    {
+      "path": "crates/boot-protocol/src/boot.rs",
+      "sha256": "a1694c36921bcf77c330060f63c40256d7e7931a8f963566b6e5bfc140cc6e5c"
+    },
+    {
+      "path": "crates/boot-protocol/src/lib.rs",
+      "sha256": "7828bcf1896d2ba1faf1e7ae0dfe6e5d1f01e7bc800a810bae4e0ac33f20f741"
+    },
+    {
+      "path": "crates/boot-protocol/src/memory.rs",
+      "sha256": "efb74a6922ac3b62b26bae3a881e879b75893b8ca6a05e246f89af051a83eefb"
+    },
+    {
+      "path": "crates/boot-protocol/src/platform.rs",
+      "sha256": "018aac82b38c1d5f2dfab4f7cd8263396a4676cca9689f487fffea209ef120eb"
+    },
+    {
+      "path": "crates/boot-protocol/src/startup.rs",
+      "sha256": "307f9e77bea0029d8d23e17273d7d0cd5054bd60150c2e12a633586b2c743f97"
+    },
+    {
+      "path": "crates/boot-protocol/src/wire.rs",
+      "sha256": "971ee5e06739162fcb3b811f93f3fa1739b01c638b05daf0e26daf1ac4292b11"
+    },
+    {
+      "path": "crates/boot-protocol/tests/boot_info.rs",
+      "sha256": "adfeb47265bb9d22b620a78d1a22f9f1fe87e5b67aed9c69523a854f314bf3e0"
+    },
+    {
+      "path": "crates/boot-protocol/tests/kernel_handoff.rs",
+      "sha256": "bef2674be4e65a6ae82b50664537b21b6804736c1aac38249abe53df43fbde25"
+    },
+    {
+      "path": "crates/boot-protocol/tests/platform.rs",
+      "sha256": "175bf6b1915d3cd30f20340b31b4a726afdb2dc71a23698ad7b18222088a3ecd"
+    },
+    {
+      "path": "crates/boot-protocol/tests/startup.rs",
+      "sha256": "2838940a6eb0117604af7ed1a467b467419baa1b4067771b4f41de80dac2e76f"
+    },
+    {
+      "path": "crates/image-format/Cargo.toml",
+      "sha256": "a1ef1bfd8e15776cab8bbdf134a6e116e7da3c060a2b475f3a7f6d255f94888d"
+    },
+    {
+      "path": "crates/image-format/src/elf.rs",
+      "sha256": "ffdc395132e7c70e72b8ba4bf34a6a4cf3bc409c6d98fb4f585a479a230c3de3"
+    },
+    {
+      "path": "crates/image-format/src/lib.rs",
+      "sha256": "bf2145e0553e49ba26b3123f73a6ac3b5473b5b6def5d1218f517bc34eae9e5d"
+    },
+    {
+      "path": "crates/image-format/src/pe.rs",
+      "sha256": "3b20f3c954dcc6b337bbe824ed36becab39285ce5d69df45f275a12925f54bfb"
+    },
+    {
+      "path": "crates/image-format/tests/images.rs",
+      "sha256": "8960fd07e39a2806f60851b39f1b01ccbadd2925829379b58ee8fe75557c0a9c"
+    },
+    {
+      "path": "fs/initfs/Cargo.toml",
+      "sha256": "7f7db278ccdd88f19751b0e9790bd31b13d14bb339b3e58d323c23eff7c85c18"
+    },
+    {
+      "path": "fs/initfs/src/lib.rs",
+      "sha256": "10a0ce559f4226e3f9556e0110aba587c617525b3ade7de2f2122e7756a13ebe"
+    },
+    {
+      "path": "runtime/rt/Cargo.toml",
+      "sha256": "14bb01613591aa9615b866498c05bf2aaf09cc896117d55e9c76ab6c9b5fa500"
+    },
+    {
+      "path": "runtime/rt/src/heap.rs",
+      "sha256": "aba4267702d92c95b80e8cab9e0b301802edd73d6c3bf1534d9f3dcd8c31a748"
+    },
+    {
+      "path": "runtime/rt/src/lib.rs",
+      "sha256": "a99c08679f839d9db5b73577d09e10b122d645d9aec0793b091271900617bb15"
+    },
+    {
+      "path": "runtime/rt/src/thread.rs",
+      "sha256": "5a0a4cf0c0b5a6c48335b3d7382a7b5dbd12284fb83eb8b53020c20e666a24eb"
+    },
+    {
+      "path": "frameworks/service-client/Cargo.toml",
+      "sha256": "ab8c0cf4d0ff33be5a0779199333162a019f180c15f5d17bb6631c87c673e29a"
+    },
+    {
+      "path": "frameworks/service-client/src/apps.rs",
+      "sha256": "da54c5ecfbaf3aa07a7851ddf7b3a0532c2c312b6a9f1201e3814e2c677fba41"
+    },
+    {
+      "path": "frameworks/service-client/src/files.rs",
+      "sha256": "ee7b334eedd6eadbe65d3a05c923688f5aef6708c612cce1b6e087f6f10d6b40"
+    },
+    {
+      "path": "frameworks/service-client/src/lib.rs",
+      "sha256": "29aebc79dba48616d9d5f89b2eab303da8d890e669e04dac0e977ea2d11795b0"
+    },
+    {
+      "path": "frameworks/service-client/src/registry.rs",
+      "sha256": "f6fc2240361eeac8fefb89d7ea45bcf1dd779a3a4218aceb98c27f7eac7288f8"
+    },
+    {
+      "path": "frameworks/service-client/src/rpc.rs",
+      "sha256": "dadb32b6641e7acc8e70e7880736137a0ab71bb4928b5e115203658616e6b879"
+    },
+    {
+      "path": "crates/service-protocol/Cargo.toml",
+      "sha256": "fe37d663c420db2b6a3356704d49e25710af0aa3c8246ff0fd9f9f3a3e6fafc6"
+    },
+    {
+      "path": "crates/service-protocol/src/application.rs",
+      "sha256": "be7d74d3115895b8918bc9ec378faefe27dd14efb2641db03759d08e8f1ef1bb"
+    },
+    {
+      "path": "crates/service-protocol/src/files.rs",
+      "sha256": "a08ee711239167a25c2d574cce6164dbfa07710fdf672d16ffb0650fb7ded1cf"
+    },
+    {
+      "path": "crates/service-protocol/src/lib.rs",
+      "sha256": "f9ff010253b72ce44db777b558802c6d9ae75d2b2ce3d2728e59a3e652354756"
+    },
+    {
+      "path": "crates/service-protocol/src/manifest.rs",
+      "sha256": "5d6e8f14f16bae24053b29b925fc93a826afb542fb49bdd59e21f5a490011650"
+    },
+    {
+      "path": "crates/service-protocol/src/supervisor.rs",
+      "sha256": "ab8d12c4d370c2200911fd9c6bf04549d1bd58570b48d1aa6345f69e0eaf0d8d"
+    },
+    {
+      "path": "crates/service-protocol/src/wire.rs",
+      "sha256": "7eb953c63339f5948c697d2cd7d0e1c21831a1fe5a763e621189f835692fc6dd"
+    },
+    {
+      "path": "fs/storage-core/Cargo.toml",
+      "sha256": "a19aad9f74ffcd32a70a8392698f02c57940574d0c0345961d6cb6d995eef65d"
+    },
+    {
+      "path": "fs/storage-core/src/lib.rs",
+      "sha256": "5cb41cc43c7d5aa6676cbee33a242111b214ab6bdbfa05404e5f067866433b5c"
+    },
+    {
+      "path": "fs/storage-core/src/persistence/codec.rs",
+      "sha256": "2956bb5632e3396a903c9fc5f43d47672b7a44df62c38f19a1293db40aa8f177"
+    },
+    {
+      "path": "fs/storage-core/src/persistence/config.rs",
+      "sha256": "b91a0500730656e653304ddf24db886a3ca7f1aa6bd6602bea277f284fa42036"
+    },
+    {
+      "path": "fs/storage-core/src/persistence/mod.rs",
+      "sha256": "efdfa92c2b2396ec9a958082beffb7e5691b15c9b78e12895c55934e47a17443"
+    },
+    {
+      "path": "fs/storage-core/src/persistence/namespace.rs",
+      "sha256": "a918755f89a7568c356dc139faf762fccbe76def1c553ed719c801aaa877f60a"
+    },
+    {
+      "path": "fs/storage-core/src/persistence/path.rs",
+      "sha256": "4025c393244af381a181c417f29fbd01663f0f470e45175c3725814bb71833f6"
+    },
+    {
+      "path": "fs/storage-core/src/persistence/security.rs",
+      "sha256": "0ed848f8c29667594de66657076e5e1e33ae6c4c504933b1ec8b01b596bf17b2"
+    },
+    {
+      "path": "fs/storage-core/src/persistence/tests.rs",
+      "sha256": "fd2c51f81265c34e58f1014a4ef8722c7f445982e1983e2309c24e4a39d46255"
+    },
+    {
+      "path": "fs/storage-core/src/storage/block.rs",
+      "sha256": "f1254d9bdee79b9ef660567f7c7cf49006378988ef83ede92cbb8110451b1bb6"
+    },
+    {
+      "path": "fs/storage-core/src/storage/cache.rs",
+      "sha256": "3149d8d984fd57b4d03b21244c754f25e2591df6f2b3d03b28a71f62fa7bcd9d"
+    },
+    {
+      "path": "fs/storage-core/src/storage/ext2.rs",
+      "sha256": "26e57f5b90e5424d7060c87055646af3dd028c8d4a115e9465cf436382fc4154"
+    },
+    {
+      "path": "fs/storage-core/src/storage/fat32.rs",
+      "sha256": "7c6548ee71a717417cdef9f7f71c96761be449dd1357abd3a5dc30559a2828ed"
+    },
+    {
+      "path": "fs/storage-core/src/storage/gpt.rs",
+      "sha256": "65cd2b88caae988737b03d89e6e8bdd84f6f96251628c6d1499adc9eda208784"
+    },
+    {
+      "path": "fs/storage-core/src/storage/journal.rs",
+      "sha256": "44cb11f4645d4a49d86d8f973550cd218fd65ecf6bb12c6dc9064c3ec2b46809"
+    },
+    {
+      "path": "fs/storage-core/src/storage/journal_tests.rs",
+      "sha256": "f7c7730b9ef159211922d83b83fd0d021364c20bc8a347f00d5ebe93d621ddf0"
+    },
+    {
+      "path": "fs/storage-core/src/storage/mod.rs",
+      "sha256": "ec6dc3a7c0a0a65b559e92331f7296dfd643b2fb129c1c08268daa0ef10276f2"
+    },
+    {
+      "path": "fs/storage-core/src/storage/tests.rs",
+      "sha256": "b856a75cd063a37ba26d49f0e360eb436c26bf8fc15c145a4f2420ce0496f9a8"
+    },
+    {
+      "path": "fs/storage-core/src/storage/vfs.rs",
+      "sha256": "43d243e5f4a8eebcea28e087a4065f9867e0db1eeaca768bbb59cd54587a7541"
+    },
+    {
+      "path": "runtime/sys/Cargo.toml",
+      "sha256": "96d1aae4598d30a2e8aece700b1f2f4ec0acd0962873582d8bd0388a40504bf0"
+    },
+    {
+      "path": "runtime/sys/src/lib.rs",
+      "sha256": "77e5a3d356dfd9b74d3fc461e9526661bf01bd1fafc5d9680271c88918935413"
+    },
+    {
+      "path": "runtime/sys/src/platform.rs",
+      "sha256": "7fa961c1d14b694fabc50b85fd22b8b1e581e6fee125b1d072d7524327f3cd75"
+    },
+    {
+      "path": "runtime/userland/Cargo.toml",
+      "sha256": "f3a519a3799ad4724cb8accce54827bcd3fe7aaed9bec648b16ed5dddfd67ae6"
+    },
+    {
+      "path": "runtime/userland/src/lib.rs",
+      "sha256": "d3186c5b71ee5a042b4091606d11bc1fbbb49fe6d00da197a4f7dbe05102d46a"
+    },
+    {
+      "path": "kernel/Cargo.toml",
+      "sha256": "ccd940284d54bb81c1734bf71d498499b2e9a768d3fc0e9b9972026e9b4c8fba"
+    },
+    {
+      "path": "kernel/linker.ld",
+      "sha256": "e441631489dcbf6721b117305cb3778f382576cf4c4278ba0e087989699f0a0c"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/ap_start.S",
+      "sha256": "02c63f0bbed79d9273e2535768b312e5775c712bc949450d30c9a971ced99378"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/context.rs",
+      "sha256": "2ecb0a955beffc6b4176f7b8e58ca4ffdc3ba9dc56e3f2b938887751bd461573"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/cpu.rs",
+      "sha256": "02c3c7dbc338ef9969311054cfd71301a31825d4fd625aed0ce12ed841724ae7"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/entry.S",
+      "sha256": "a80329dfd4151934f315915959b08683b1d181b499bbd898acc3179e0417f3c2"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/interrupts.S",
+      "sha256": "de3c37c273f146b9fa149a018a712c5cc138f410f8da4d09436c753fbf4630fb"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/layout.rs",
+      "sha256": "6957063fc70a66b75694462f6cdfe0030de8d944134ab53752c4dbe0bc982f8e"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/mod.rs",
+      "sha256": "cd90c4130d29505450f4629524e9f42ed41e11591e50a832a54cf313d49c6ae7"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/smp.rs",
+      "sha256": "1b0f7f5ed1c2d0801ba0cf4956add9d40df69ed7f382019741198ca531044d99"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/state_probe.S",
+      "sha256": "c426bc7eff5992eca63b652c1d4cfb324aa1e5410efc5c9a098405f6d6c403c5"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/timer.rs",
+      "sha256": "a71e1c4671bb6c2b9348e778e5437696d2a71c203192ec879bba506288428fb4"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/user.rs",
+      "sha256": "1afcb058065cb839db581d414999a73fe956abd38c2869cf52954c0184d69b49"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/user_copy.S",
+      "sha256": "ba1424096e90952632f04604ca3dace9ba2b8b210871140e766d3a96acbb2bf0"
+    },
+    {
+      "path": "kernel/src/block_device.rs",
+      "sha256": "108b7768e49379591374f64093305f1ae5b08cd260f75f3482358f0f57abb47e"
+    },
+    {
+      "path": "kernel/src/console/font.rs",
+      "sha256": "9d4aced6dc1f2da249e2a46e248e4c769ee160e2702496fa2700410e88b527fb"
+    },
+    {
+      "path": "kernel/src/console/mod.rs",
+      "sha256": "8a291d88555246a6824ad32faf1d8309938e08753f6ffbc5e7a8cb780275b625"
+    },
+    {
+      "path": "kernel/src/drivers/mod.rs",
+      "sha256": "31e68336880b68ad0d193d404963683ab8328c7c70cb501d57954b3303fb2ecc"
+    },
+    {
+      "path": "kernel/src/drivers/pci.rs",
+      "sha256": "6bc5378bac93186bf525a75173f76505e8b4c0a196058f52f23df37a0a87dfe3"
+    },
+    {
+      "path": "kernel/src/drivers/queue.rs",
+      "sha256": "5e40ab71e7acafdc4316ab1ba1aaebe1782acbb64fec880ff85edcb77cb8b100"
+    },
+    {
+      "path": "kernel/src/drivers/virtio_block.rs",
+      "sha256": "d09ef349d5fa1086efb2972760c24c42be581894e6d9bbfc7367398d09e126b8"
+    },
+    {
+      "path": "kernel/src/drivers/virtio_pci.rs",
+      "sha256": "53e96b8718586ce64df811bed08cd2107c6ba0b519ab9384382c0f50fedc9de4"
+    },
+    {
+      "path": "kernel/src/execution.rs",
+      "sha256": "1a38b61beb7acaba3809a78d2b5493f602b38c97c4f11c00b7f7d9f4989e649e"
+    },
+    {
+      "path": "kernel/src/executive/channel.rs",
+      "sha256": "f5e481fe45dd08ca6cf2185d2724ad34544b0f10cc52ce8da46441dbfd85482e"
+    },
+    {
+      "path": "kernel/src/executive/channel_tests.rs",
+      "sha256": "850a11a4fa1aa556e64b33d370a769b8c75e55e34576b0f8d5462be43f659ce5"
+    },
+    {
+      "path": "kernel/src/executive/mod.rs",
+      "sha256": "941ff886d084fb1cb6dc3c8403a2291524593371cb58e37cff8dbe6e1f2c7ed2"
+    },
+    {
+      "path": "kernel/src/executive/platform.rs",
+      "sha256": "6da0adbb0f47f4bedfe2946c3c0ef599ccc47a2ff1bb8464ec9e3cae8fe80a38"
+    },
+    {
+      "path": "kernel/src/executive/platform_tests.rs",
+      "sha256": "c6e7d638dc5a5c3c0bdb58b982fc5b41eb5b50c65078274b674d1ea0a58eb284"
+    },
+    {
+      "path": "kernel/src/executive/port.rs",
+      "sha256": "1de1b76a0afd1779f83c7e9829719d196d14e3297db68c0f769db04211953b5a"
+    },
+    {
+      "path": "kernel/src/executive/tests.rs",
+      "sha256": "d06bc3bdb8b733960fdc9dbf11398300d61d3f9e3f531cdddd4b40bac1c9e511"
+    },
+    {
+      "path": "kernel/src/keyboard.rs",
+      "sha256": "0a8bb91d164c1c85af2f3866d527789dcce4475fe216efc8370d5ba6439e02d6"
+    },
+    {
+      "path": "kernel/src/lib.rs",
+      "sha256": "510fc87c897b3f78c008afd7bfce4ce258c796309f57fe182783c89727468ad9"
+    },
+    {
+      "path": "kernel/src/main.rs",
+      "sha256": "67cf91952a81ff5c7ccd2a505ef04cb3cb4dae897236ac57c0bf97a350f05cd9"
+    },
+    {
+      "path": "kernel/src/mm/address.rs",
+      "sha256": "aa67610b4428661954a1d71a9c876fadd62642c17b714638de7a733ac1759268"
+    },
+    {
+      "path": "kernel/src/mm/device.rs",
+      "sha256": "08ebcece8c39d912598308944f86353d3485dbd47830256ef250e7d7ba4a94e0"
+    },
+    {
+      "path": "kernel/src/mm/frame.rs",
+      "sha256": "716fd86c2b5ce6e7dc75f03e574d7253cebb0ebb926e91dcf1a6afab5ce93870"
+    },
+    {
+      "path": "kernel/src/mm/heap.rs",
+      "sha256": "9eee93166b9a9882f3b0977dd0a6c4f125c6809b849aade47ef7a843608bd449"
+    },
+    {
+      "path": "kernel/src/mm/mod.rs",
+      "sha256": "81cac6286f44e8ae15220b824cc23f7399cd8f70d3a1503c17e6407af695118b"
+    },
+    {
+      "path": "kernel/src/mm/paging.rs",
+      "sha256": "a629c3389e535d1a50db550dfa121157e1c7a69dd1504321ade21d99e874d0b5"
+    },
+    {
+      "path": "kernel/src/mm/process_space.rs",
+      "sha256": "50445b5039624bad95142475e93072f41abab603eacb82d8518de90d0a05962e"
+    },
+    {
+      "path": "kernel/src/mm/user_table.rs",
+      "sha256": "0fb683820ad23dba58a258222a8b26ff428e195855dbdfd4e17a87a511a2e00a"
+    },
+    {
+      "path": "kernel/src/persistence_diagnostics.rs",
+      "sha256": "8efa8d293872c795be75cdf72ca3b5d9a12d5229407612e26b4f072c75fb1a84"
+    },
+    {
+      "path": "kernel/src/platform_device.rs",
+      "sha256": "a96b6cf430232dd89bbb7a9f425a877f47d9757b68d49194072af5d6f9986631"
+    },
+    {
+      "path": "kernel/src/process/fixtures.rs",
+      "sha256": "246dc31a16a56612b210c4f372313ab504a098a4d193094080883a16da39d477"
+    },
+    {
+      "path": "kernel/src/process/image.rs",
+      "sha256": "c35fa1b73579cb78371f11f8fb0e15a2365c877fc90e84cfc11b27fd5d28b168"
+    },
+    {
+      "path": "kernel/src/process/mod.rs",
+      "sha256": "80ebe7d128fbd57ad361d049cd4728fc4b7a36ae1a65b9251f2417564c1b3f60"
+    },
+    {
+      "path": "kernel/src/process/platform.rs",
+      "sha256": "e4fd01842875e06b302a35f417cd4bcfb3c0e6d07a18211b10129714bf18590b"
+    },
+    {
+      "path": "kernel/src/process/platform/calls.rs",
+      "sha256": "79f89ba08fe8ddfd629804885e3b0b739107be9fe5faab3e0dbba21ee813883b"
+    },
+    {
+      "path": "kernel/src/process/platform/execute.rs",
+      "sha256": "53f10422e35647ab01c9648c00db431133a8d5bbd426ccf988fc232eed7ad884"
+    },
+    {
+      "path": "kernel/src/process/platform/threads.rs",
+      "sha256": "cddf95410e7a6c884edcdd0daff450690602329731cb464e9150a2e55653388a"
+    },
+    {
+      "path": "kernel/src/process/vm.rs",
+      "sha256": "720b4bc421c9c7c3cca86f9aaa58226be172c288155cc7adb731e09de70ca7ac"
+    },
+    {
+      "path": "kernel/src/process/vm/windows.rs",
+      "sha256": "939896a4a2341b99d4e5ea469ff3853d7d155be28f4601e7b08541d1b8b78683"
+    },
+    {
+      "path": "kernel/src/process/vm/windows_memory.rs",
+      "sha256": "a83dbe8b10c2c3c90925bcc051707bb562c4a8aeaef3d80044a903ec7e6a6ab6"
+    },
+    {
+      "path": "kernel/src/process/vm/windows_tls.rs",
+      "sha256": "982c8701bed42684dae0e8ba63cef0ef226e48b3671028bd78e8c042100f4d62"
+    },
+    {
+      "path": "kernel/src/process/windows.rs",
+      "sha256": "bd2edd2aa908d82427f72cc38729a31b79e995527028774a35b811e82500e177"
+    },
+    {
+      "path": "kernel/src/process/windows/diagnostics.rs",
+      "sha256": "f52285407d581f5c1aa38d1166e1ca99f4aacacd34e38ab51a86481e47af2325"
+    },
+    {
+      "path": "kernel/src/process/windows/exception.rs",
+      "sha256": "0be1542b3c15379509e75288ecef20672d938162592ac61200365cb7ad2424ad"
+    },
+    {
+      "path": "kernel/src/startup.rs",
+      "sha256": "1ce5aa8cbcce517d3bd4902fa16c113b07a698386f93384286d749aa91ef9fe0"
+    },
+    {
+      "path": "kernel/src/storage_diagnostics.rs",
+      "sha256": "40b9d3a04d09f170c75993e15b0587a9f802bd79bbf570a69cc6e6477ea9ba27"
+    },
+    {
+      "path": "kernel/src/task/mod.rs",
+      "sha256": "c367bed3376e1435c897999f8e29c769701fbe9abf51130a1eb4a4e7f0964080"
+    },
+    {
+      "path": "kernel/src/task/scheduler.rs",
+      "sha256": "5df63aa83e800f463f0a3631c4c1a004108a3498bf5179b5c15aa4a9d70015f9"
+    },
+    {
+      "path": "kernel/src/task/stop.rs",
+      "sha256": "e653602ae3e5098edb1ae8cd143fad6e7409c364b2458b1dee42197f9a3d17cf"
+    },
+    {
+      "path": "kernel/src/task/tests.rs",
+      "sha256": "369efc5512bd1ccfbdb58512641e83f23096153a1a7af9b2206ea3f9d33e0c50"
+    },
+    {
+      "path": "kernel/src/task/wait.rs",
+      "sha256": "f52a6422929700488656ebca7c8c447cb6011c902deb07e74a3456711c282759"
+    },
+    {
+      "path": "kernel/src/task_diagnostics.rs",
+      "sha256": "99dc67a7acbb5932c251bacc1135c4e5bfcd6406c4f358f97fd9550618b751a6"
+    },
+    {
+      "path": "profiles/build/dev-qemu-x64.json",
+      "sha256": "fed0c1ead5254b9a136426db99677204bbbccc666e322d28f318edb35728e1db"
+    },
+    {
+      "path": "profiles/build/initfs-p08.json",
+      "sha256": "8dac4e5f09951ae1b292c7cc1d57af611507bd47129ce41f90111d9df2f418e2"
+    },
+    {
+      "path": "profiles/build/initfs-p09.json",
+      "sha256": "bdda4b3e59390260de6554777ebd9cf0186b8053bffc9d9ef7d5e55c1b344851"
+    },
+    {
+      "path": "profiles/build/initfs-p10.json",
+      "sha256": "979fae764e28da55726fc2cdd5024bb2441533db2eca188d684ce9c6ba311961"
+    },
+    {
+      "path": "profiles/build/initfs-text.json",
+      "sha256": "c82bff2055ac00d29fd77307b6b221874eed95db89b4ad0f72a18036e74e817d"
+    },
+    {
+      "path": "profiles/build/initfs.json",
+      "sha256": "89509497b7226c3a719387f967bbe9472e7ad47fe59bf87c7c8d5cd56f8aa0a4"
+    },
+    {
+      "path": "profiles/build/p00.json",
+      "sha256": "c57caef405edd63dc59739f8076734dd1213358696a0938ec416865bf813b0a6"
+    },
+    {
+      "path": "profiles/build/session-install.txt",
+      "sha256": "062285ae266c5048877574863c9132afc8b17b1b070ea9c7cde1d4588eea6c7e"
+    },
+    {
+      "path": "profiles/build/windows-x64.json",
+      "sha256": "d70cb53c88d315487410caaa49b7faff83950c832432b2eed976163a01e94b98"
+    },
+    {
+      "path": "profiles/hardware/qemu-diagnostic-x64.json",
+      "sha256": "39968cefd662ac79e01e98e46d69656c5d234383574d8a3be759831178d67662"
+    },
+    {
+      "path": "profiles/hardware/qemu-minimal-x64.json",
+      "sha256": "e998055765de7743d322bc3a98d3c1edac50c8a6db9c8fcf83ad256555b8f8a6"
+    },
+    {
+      "path": "profiles/hardware/qemu-persistence-x64.json",
+      "sha256": "072f167104a1e931bec40b0a88b26f4e9180af70a44b1bd5d6c31458103422a4"
+    },
+    {
+      "path": "profiles/hardware/qemu-services-x64.json",
+      "sha256": "d22de9cd8ab7db08da695e2d57680b75735d065ea7ba15d4880e0f2a0b3a5e60"
+    },
+    {
+      "path": "profiles/hardware/qemu-smp2-x64.json",
+      "sha256": "d6bfdb3538634194ba48e004361a6be941f60a81136de1e79fd0ca9d21c8a4aa"
+    },
+    {
+      "path": "profiles/hardware/qemu-smp4-x64.json",
+      "sha256": "9d05853b77c5608937c929a12884f82c305d1b66148b44f7e4f71185164cf9f1"
+    },
+    {
+      "path": "profiles/hardware/qemu-storage-x64.json",
+      "sha256": "3bc0c1ad797bf4423957cb5cce0a91e11e81c7cdefac6cdb71a4472fa325f4ae"
+    },
+    {
+      "path": "profiles/hardware/qemu-windows-x64.json",
+      "sha256": "5090daf35e26aee9b868108965defb250dcffe480371caba102ec9abd8a0bf54"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "6f0d5f4e45f8802ad2b3a0fe2794b07548725039ebbcfdd2437a0168f113e924"
+    },
+    {
+      "path": "services/Cargo.toml",
+      "sha256": "5d1056e8465ded07470d293234c89c6cc34203d01d6ed6e84f2fe3a7c1ae3fd3"
+    },
+    {
+      "path": "services/linker.ld",
+      "sha256": "b688b1e21427e9091a442f3a965c8b9007a99b80429f1006ad44838c186c1748"
+    },
+    {
+      "path": "services/src/bin/console.rs",
+      "sha256": "6d784e50b07a3a5bea9d27bb2cb30544a910c7f2cf73c0d9349c902e453de6e6"
+    },
+    {
+      "path": "services/src/bin/init.rs",
+      "sha256": "b2705d6cca66be47e9a68a7d13cc73153a0014b59f3327b07f588c4519c3f7fb"
+    },
+    {
+      "path": "services/src/bin/session.rs",
+      "sha256": "1b2813924e994a7643e1c0ed55a2207f059c33e9887cf327320d558f02635fd1"
+    },
+    {
+      "path": "services/src/bin/storage.rs",
+      "sha256": "edc4e54f7782d9efd12619ba0322ef78fef9849b0d32c681f3a3000abb02b5c1"
+    },
+    {
+      "path": "services/src/console.rs",
+      "sha256": "3db7ba3d49d6e9833899b663b99819a671365fa3c2f56dda9082ebfab774a4f0"
+    },
+    {
+      "path": "services/src/init.rs",
+      "sha256": "4bf3537156d2be59daabd8ba62dc743f2c72140f4de68317fec4eaf55f2d3f12"
+    },
+    {
+      "path": "services/src/init/applications.rs",
+      "sha256": "909892fb2221c277776e484fa819fb391a6d83465f75e6e8b4656eaabf969105"
+    },
+    {
+      "path": "services/src/lib.rs",
+      "sha256": "b32197a563bd8787a24b2ccc8de40a60d2f1f66025eeb20733c174f731e20633"
+    },
+    {
+      "path": "services/src/server.rs",
+      "sha256": "c9f22195556f75f33b18acedc9cacc4eb44af29355ce04f21625bf7eeab2c31e"
+    },
+    {
+      "path": "services/src/session.rs",
+      "sha256": "a28d07a504a3dd0229787e45e076b21afcd0ebbe8cd5552b6c5b03a9a41eaf90"
+    },
+    {
+      "path": "services/src/storage.rs",
+      "sha256": "a1a88e869147fb4744adbad0de95b3d5e4253a8b1c5b8487cb2f5efa6fc99f76"
+    },
+    {
+      "path": "services/src/storage/files.rs",
+      "sha256": "996a26c1c0d2c8515364d78a3258c76192a1c76e700cec2a473344ba458475f0"
+    },
+    {
+      "path": "services/src/storage/registry.rs",
+      "sha256": "f2c3a2bf6419496424d9c00976b03e1930b0e33601d46d8a4bdd6b45a0cc9c42"
+    },
+    {
+      "path": "specs/abi/native-platform-v1.md",
+      "sha256": "e07b41785664725e96c058ee7ed2a556c0da2e9e686579f774aad278dfa0e2ed"
+    },
+    {
+      "path": "specs/abi/native-x64-v1.md",
+      "sha256": "2617fac7d7107d286002d3f1aee47e0a84c1e0925fee9ffa1b616aa9e1c27c42"
+    },
+    {
+      "path": "specs/abi/windows-base-p10.md",
+      "sha256": "d5ed5e8e18ba4ea436649ab29e9f5e92cd418aadbd087f5c8e15be8f8c0adec5"
+    },
+    {
+      "path": "specs/abi/windows-io-waits-p10.md",
+      "sha256": "049356c5de12576e9592089410ecf1f5e8e3186a4e04c74407f7552f79e2479d"
+    },
+    {
+      "path": "specs/abi/windows-x64-p09.md",
+      "sha256": "eedc81e95ef66193bcaa93338fbf842bc6a2feaf39a97cdb71279e19b1ebb4fd"
+    },
+    {
+      "path": "specs/contracts/boot-info-v1.md",
+      "sha256": "37e09fcfe4c6ecbb8e3d19b0629f6b73c7d08f5efbf00c09c1ae95838c540e33"
+    },
+    {
+      "path": "specs/contracts/build-image-v1.md",
+      "sha256": "bbe0d08f5029c2bbe6fd7e69e4b1fb36790dbbbc7b001deccf15c75b6c48ba65"
+    },
+    {
+      "path": "specs/contracts/emulator-harness-v1.md",
+      "sha256": "5f6e7788d3a1e19410c3af2cddf3f1dd0fd4b1c1401176456639616ee0b2028e"
+    },
+    {
+      "path": "specs/contracts/image-validation-v1.md",
+      "sha256": "ba8e76db9c6f9cb87012b4c1f67999906f5c0bb3f0cc1ec1c0951e9fb31e0b37"
+    },
+    {
+      "path": "specs/contracts/initfs-v1.md",
+      "sha256": "ca1725b70a35efe827c70aa37d49ee73b51b7a6b171d177ec05c2c0b0bb05024"
+    },
+    {
+      "path": "specs/contracts/kernel-entry-v1.md",
+      "sha256": "f6e3a5e6b11215d68184b94c1905056ac261ec7e583f5eff9431d5aebe3dd4b3"
+    },
+    {
+      "path": "specs/contracts/ordinary-session-v1.md",
+      "sha256": "ef78d4ef5bb141f41ef9ce2d1b939a0204128cfdb3de0cb700de82b870e5b133"
+    },
+    {
+      "path": "specs/contracts/persistent-namespace-v1.md",
+      "sha256": "d7915c1d696bf8afb27af9ab289aa8f0495631f86af92a02a9966b46e41695ba"
+    },
+    {
+      "path": "specs/contracts/platform-v1.md",
+      "sha256": "2b3d8ad7a938199c80fde51426707a102d966cb2261b9eb33418129f2094c24b"
+    },
+    {
+      "path": "specs/contracts/startup-v1.md",
+      "sha256": "312360c2292b2b26406d80fed3c7911b29a1c0b7dbd80ba38e74e378284ea748"
+    },
+    {
+      "path": "specs/contracts/storage-filesystems-v1.md",
+      "sha256": "764b8ce9e2969ea50d76013d4de89921180629429718dc2db746e109612813ea"
+    },
+    {
+      "path": "specs/contracts/storage-journal-v1.md",
+      "sha256": "c71d3ea60ac85ceea0ece5001da8f28460a835c2194abb0cb6331f43b47abe5f"
+    },
+    {
+      "path": "specs/contracts/storage-transport-v1.md",
+      "sha256": "ed34b7ab9d71e366e37110702d7a3fc1dd8ad64bad52cc6430d95eaaf4df20a4"
+    },
+    {
+      "path": "specs/sources/dependencies.json",
+      "sha256": "5a7c7d1555a647ef1720a69578c1fadc5a7f13cbb2bf383c9ca4e40273b8b3f3"
+    },
+    {
+      "path": "specs/sources/emulator-acquisition.json",
+      "sha256": "2eba8e56e3d003419bcd7e2a0126664cf45f8e1b029d5ec8d67e6e8409d7372e"
+    },
+    {
+      "path": "specs/sources/index.json",
+      "sha256": "920123d17fe8dea2cf460f58a98d26a10d369430996f8220daefa34522f78696"
+    },
+    {
+      "path": "tests/fixtures/native-workload/Cargo.toml",
+      "sha256": "1d2c3c5ef957e3f4d74c1c31c5d7a5b55d68bc39050e6e372c441d0a023db300"
+    },
+    {
+      "path": "tests/fixtures/native-workload/linker.ld",
+      "sha256": "b688b1e21427e9091a442f3a965c8b9007a99b80429f1006ad44838c186c1748"
+    },
+    {
+      "path": "tests/fixtures/native-workload/src/main.rs",
+      "sha256": "7c282c14200524b11149035f7b41bcf854f8568ee7e82abe410a3d9e1c9d2e5f"
+    },
+    {
+      "path": "tests/fixtures/native/Cargo.toml",
+      "sha256": "f83a736d55b5f757398e378d02d460056d968b970f8c380c98e50668a5287edd"
+    },
+    {
+      "path": "tests/fixtures/native/linker.ld",
+      "sha256": "b688b1e21427e9091a442f3a965c8b9007a99b80429f1006ad44838c186c1748"
+    },
+    {
+      "path": "tests/fixtures/native/src/probe.S",
+      "sha256": "10d6023aec2a5dbdeb7697fc210b43321ac69b5aa831929beec809defd561282"
+    },
+    {
+      "path": "tests/fixtures/native/src/probe.rs",
+      "sha256": "234052a65bd9ce27ca5efcbfb46b3c981a64131c346f65dff27c4b0ec15ebe01"
+    },
+    {
+      "path": "tests/fixtures/native/src/runtime.rs",
+      "sha256": "7e599250829d8aae7e33c193fead7c2322e5ec8ba659187ebb37b252900c8a7a"
+    },
+    {
+      "path": "tests/fixtures/windows-base/compiler-tls.c",
+      "sha256": "1bd789289de1457f8edbb3feebc43b8caf0906045fff8d898709eb1767c4c406"
+    },
+    {
+      "path": "tests/fixtures/windows-base/crt.c",
+      "sha256": "0d7ebd0312532fda32cad29d8327ff734c1ead376ce3be4f9bd73147697a4077"
+    },
+    {
+      "path": "tests/fixtures/windows-base/faults.asm",
+      "sha256": "491f4279a4ce0a2edc0a7c0c2078b7723eb1734d2ec6d8378494dfed2b598020"
+    },
+    {
+      "path": "tests/fixtures/windows-base/io_waits.c",
+      "sha256": "1ba66e8676b81c56bec22e8aef351bb877beb3d171dbef5fd9b0d0f2d2f303d4"
+    },
+    {
+      "path": "tests/fixtures/windows-base/lifecycle.c",
+      "sha256": "21785af59f9fd47ffec0f9ff0254fea3b73eec46416bbc40506809d7775a2859"
+    },
+    {
+      "path": "tests/fixtures/windows-base/main.c",
+      "sha256": "ccc064cc12bb0a8fa554acf8eddb097674b80ef86df57124a71c77b3994d7a52"
+    },
+    {
+      "path": "tests/fixtures/windows-x64/abi.asm",
+      "sha256": "7fd11cc223f2fa5ea7eb8532f8ec7753cd3af619f1f7b2c8a7ef809245c91c85"
+    },
+    {
+      "path": "tests/fixtures/windows-x64/main.c",
+      "sha256": "da28ed4bbab3dcb6cca09499eb58b9c38017418b9e9b3c9c7f8f32dfb9e2b5b8"
+    },
+    {
+      "path": "tests/support/images.rs",
+      "sha256": "e3d19e7e3a0b396fae2c3b968039379a35076ca11ccf7d138247708be4c1eade"
+    },
+    {
+      "path": "third_party/apps/tinybasic/LICENSE",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    },
+    {
+      "path": "third_party/apps/tinybasic/UPSTREAM.json",
+      "sha256": "8ee4fdce66db0d1662cf349c2664a925961b034f6eff28f7f0fb7ea625f7395d"
+    },
+    {
+      "path": "third_party/apps/tinybasic/int-stc.c",
+      "sha256": "3f716e8be620c5d81ad3ef018bc64629f86144ebb8db042cec3d96124cd49be7"
+    },
+    {
+      "path": "tools/xtask/Cargo.toml",
+      "sha256": "8b4712d59631b49de589b6aceff274f05ca8c8e9246c1f79bb0160ac7e96afed"
+    },
+    {
+      "path": "tools/xtask/src/artifact.rs",
+      "sha256": "c1a70dd0ce1e4728d9d7bf13caefeea8162a44d23ddccd27fedb24a76bd707e6"
+    },
+    {
+      "path": "tools/xtask/src/boot.rs",
+      "sha256": "4b9e4ddcb5b447783092b8e7c5ed5ecfce2f520af4b4c0031ff0b63297c50f7c"
+    },
+    {
+      "path": "tools/xtask/src/boot_gate.rs",
+      "sha256": "371f7b981181219858a5cf8f95c660fc95b497f487e893a3926dbbc851517cb9"
+    },
+    {
+      "path": "tools/xtask/src/build.rs",
+      "sha256": "0bf1d5b7c5ce7d5dffe0449e1a7b1af12c2f39206d41d644baad8fc0073d1244"
+    },
+    {
+      "path": "tools/xtask/src/build/native.rs",
+      "sha256": "446ac85bfd539b7baf340e68bc2eb179691913b9de3dddc1c0809e4faab2ff35"
+    },
+    {
+      "path": "tools/xtask/src/demo.rs",
+      "sha256": "85836fc0ae8a7d5ddc1a5843f5530425d844a257ee4b6bee9e77d54b1cdcb14b"
+    },
+    {
+      "path": "tools/xtask/src/doctor.rs",
+      "sha256": "e75ab2bb71efbd46f6bd9960382be75ebfafbbf8fdb484b29a2fe07394c38b9c"
+    },
+    {
+      "path": "tools/xtask/src/emulator.rs",
+      "sha256": "3e610e543fbeaec1c4516e7ac202e78e7f1f70fff6653f13dc607694e25e47d4"
+    },
+    {
+      "path": "tools/xtask/src/evidence.rs",
+      "sha256": "db2ae5b475fc366fa68acc8dc3f85209868c8e49b711e709618d433c16caabc5"
+    },
+    {
+      "path": "tools/xtask/src/image.rs",
+      "sha256": "7cbd7151224c17fdfaf64bcc195e486af8c00e9eb451982807942642983bc82c"
+    },
+    {
+      "path": "tools/xtask/src/initfs.rs",
+      "sha256": "ad25054c1e0b1c23ec75fdb47a53eb3c8f0ff0115521352a209ad7a40880057f"
+    },
+    {
+      "path": "tools/xtask/src/main.rs",
+      "sha256": "f1ca5cea6e3078744c93ae1b631a9b2529a914bd5c0daa6020c5ab27575dd425"
+    },
+    {
+      "path": "tools/xtask/src/paths.rs",
+      "sha256": "5e6fbbe9c42d016115e0140905c2880b6dcd826d84b6150dc0cc113507341256"
+    },
+    {
+      "path": "tools/xtask/src/persistence/catalog.rs",
+      "sha256": "5b6aeb5a41ebd94b845a8f58a53f79e896fc3da1b2f11d0a4965144beee2c146"
+    },
+    {
+      "path": "tools/xtask/src/persistence/format.rs",
+      "sha256": "27a05136d2fb236c568cb4d30d588a3000e56005985324ae0619f14f1f9440d6"
+    },
+    {
+      "path": "tools/xtask/src/persistence/journal.rs",
+      "sha256": "a253bbe5815bfca353c54f6968bbfe0666dd882b1f93434d12e8116ce5f31f61"
+    },
+    {
+      "path": "tools/xtask/src/persistence/mod.rs",
+      "sha256": "da4d53b56fb5adad14e827813f5c8a47b55acd4f18369c421cd53b9da82bcd93"
+    },
+    {
+      "path": "tools/xtask/src/persistence/scenarios.rs",
+      "sha256": "b84e0f264b0f9563ff60f8284201a806a3b90d421f6b8f7ef5b3ddc86d49ebac"
+    },
+    {
+      "path": "tools/xtask/src/persistence/session.rs",
+      "sha256": "cd0a266cb52ccdd5d046ab754a4edf50204a165ed09b0cf12d9d1b6cc4cf048d"
+    },
+    {
+      "path": "tools/xtask/src/persistence/tests.rs",
+      "sha256": "944651aadd3a50cb63c320513ddcf530bcf69b2da549c56074911a3b02c28d02"
+    },
+    {
+      "path": "tools/xtask/src/persistence/tree.rs",
+      "sha256": "53e1bf4671eba0068109fe458f2b6de65e19ba1c81ca5a4d66f61b1ba6430f3e"
+    },
+    {
+      "path": "tools/xtask/src/phase.rs",
+      "sha256": "90fb4d0daef67418582bdd75ae3f335064aa42a22349b23b705bc4d667bf3741"
+    },
+    {
+      "path": "tools/xtask/src/qmp.rs",
+      "sha256": "bf4f5869ad0286adca3690d74c15ab9321baef68fe43694c19a01f51e1cba1ce"
+    },
+    {
+      "path": "tools/xtask/src/scenarios.rs",
+      "sha256": "87a6097ba028208e742e6f60dd95db1912689663b122a6bd3db94fb44e20187e"
+    },
+    {
+      "path": "tools/xtask/src/services/audit.rs",
+      "sha256": "3a37f73a93d4faf843d69f0793fd4257a75c4d5c69e4d4fe9bc6177596c49cd4"
+    },
+    {
+      "path": "tools/xtask/src/services/demo.rs",
+      "sha256": "c93ff3e9d01c28e8ab09dfdf97e8cab6b26dba45b79a49735caffe95fce1fa34"
+    },
+    {
+      "path": "tools/xtask/src/services/mod.rs",
+      "sha256": "95c2d1e44b8416f74d6270e9c8065c4f1c6c24dfa5198cfce049aa7692fd9c72"
+    },
+    {
+      "path": "tools/xtask/src/services/scenarios.rs",
+      "sha256": "6878cb189ea61e39fa99f67c324162877a336647d673a7641c9cd86105921b1f"
+    },
+    {
+      "path": "tools/xtask/src/services/session.rs",
+      "sha256": "a43f6bd237c28720afaadf27e7eb14280ae4383df093a4651b3304b95d35b293"
+    },
+    {
+      "path": "tools/xtask/src/services/verify.rs",
+      "sha256": "0b6772863b0e262bd78ce2c9c7f4fae3712bc25a23f7f1fe88054bdc1688218e"
+    },
+    {
+      "path": "tools/xtask/src/session/applications.rs",
+      "sha256": "66a287699a7f926609525901fe9df5310d6e9dd92bbb0efcab5d00a37ceddf99"
+    },
+    {
+      "path": "tools/xtask/src/session/mod.rs",
+      "sha256": "0639227e5700eee08c701d3547fe4c163e199d136c145c06a56676814a82f11e"
+    },
+    {
+      "path": "tools/xtask/src/session/verify.rs",
+      "sha256": "051a53c24ce70e7ddf4d729b645ea0019e9a77cc32b862fe7bd1962e883b3c8b"
+    },
+    {
+      "path": "tools/xtask/src/spec.rs",
+      "sha256": "ce5dae338371eca51480e97befd5b0e159f4a5a3d9e1499e7926d06bf80493e6"
+    },
+    {
+      "path": "tools/xtask/src/storage/audit.rs",
+      "sha256": "3898a817fe99750b4c46ea4756d74cb5dbb6f463f6bf00f0b8d9938f033630c9"
+    },
+    {
+      "path": "tools/xtask/src/storage/format.rs",
+      "sha256": "4454421dd11ada8c86e7947a79b71f057fb3cc71c63af0232695db2eb275a7ca"
+    },
+    {
+      "path": "tools/xtask/src/storage/mod.rs",
+      "sha256": "bfc0fd14269ed77e8a957f13fce0ab703ae6ac2bb47aee31c72806934882c5a1"
+    },
+    {
+      "path": "tools/xtask/src/test_support.rs",
+      "sha256": "a71f285a43fcd390d1c2d49b9b4e5c9bc75ce083f7262014d396d9e4c8dc0917"
+    },
+    {
+      "path": "tools/xtask/src/windows/base.rs",
+      "sha256": "73b52e8e9d72189042ef9762d85e63061aff2d9866a07a8b94e227d6cc368c63"
+    },
+    {
+      "path": "tools/xtask/src/windows/base_verify.rs",
+      "sha256": "46b987cfa9d25b590154ab46743b85c0419b3608b0db3a5b97563655c36c8485"
+    },
+    {
+      "path": "tools/xtask/src/windows/build.rs",
+      "sha256": "fc10baafba76d55110c5c29e2c9784e590b226f7931065c07ccaa8abc9740891"
+    },
+    {
+      "path": "tools/xtask/src/windows/dlls.rs",
+      "sha256": "93f1b24e0438467cb10e360d4db2ec1517e6bd00092cbe87236697baf1b2f92c"
+    },
+    {
+      "path": "tools/xtask/src/windows/gate.rs",
+      "sha256": "4966370c8c917492670f76826f464d38d8f252262228c3f2a8d912bb347b956a"
+    },
+    {
+      "path": "tools/xtask/src/windows/mod.rs",
+      "sha256": "7ee0cfa12617dbb296427c7941731093c673e9c3bee3cc91334c775a1ecef26a"
+    },
+    {
+      "path": "tools/xtask/src/windows/pe.rs",
+      "sha256": "3d191f4c7454117435012cff1614face3b7cd1baf25e4fc2ba29f37d7152d4bb"
+    },
+    {
+      "path": "tools/xtask/src/windows/session.rs",
+      "sha256": "973f901e96e0c3f483be123a39e926bc4192df354f0f5f6a47601231fd59d6d4"
+    }
+  ],
+  "reviewed_at_utc": "2026-10-17T14:55:52.4171664Z",
+  "review_scope": "P10 reopened pre-GUI usability repair and cumulative P01-P10 integration on the declared QEMU profile",
+  "evidence_review": {
+    "host_tests": 363,
+    "required_command_failures": 0,
+    "checks": 116,
+    "diagnostic_scenarios": 42,
+    "interactive_legacy_checks": 2,
+    "ordinary_command_checks": 87,
+    "tinybasic_guest_checks": 18,
+    "ordinary_reboot_checks": 1,
+    "application_rebuild_pairs": 3,
+    "windows_tinybasic_reference_runs": 2,
+    "independently_rehashed_input_bindings": 321,
+    "independently_rehashed_command_guest_serial_disk_and_application_bindings": 373,
+    "binding_mismatches": 0
+  },
+  "resolved_findings": [
+    "Shell no longer drains foreground child stdin while checking cancellation. Console buffering preserves normal input, detects cancellation at saturation, and clears retained bytes on final session detach.",
+    "Binary cat redirection preserves raw bytes; invalid-text display converts bounded chunks rather than expanding an entire file beyond the shell heap.",
+    "Canonical terminal editing survives small ReadFile requests; actual Tiny Basic Backspace correction produces 123.",
+    "Ordinary storage checkpoints reserve journal capacity; bounded Win32 writes and large BASIC saves no longer exhaust one unbounded transaction.",
+    "Safe allocator NoSpace remains recoverable; backend-confirmed uncertain journal or device failures retain fail-closed behavior.",
+    "Multiple ordinary boots in one suite have separate staging directories, firmware variables, serial streams and QMP identities."
+  ],
+  "evidence_interpretation": [
+    "The exact cumulative report is successful, certified P10, inputs_unchanged=true and failure=null. All required commands and all 116 checks pass. Current hashes of the exact 321 filtered source/build/contract inputs match its sorted source snapshot.",
+    "Independently rehashed all retained command stdout/stderr bindings, all 42 diagnostic scenario report/guest/serial bindings, both ordinary serials, the final ordinary raw disk, and all six outputs of three application rebuild pairs: 373 matching bindings. Expected scenario outcomes and all declared diagnostic markers were checked against retained raw serials.",
+    "The original cumulative guest gate retains 42 scenarios and both completed interactive diagnostic checks. Host test output totals 363 passing tests; the report also records strict target checks, Windows references and deterministic rebuilds.",
+    "Ordinary boot argv contains no test-token fw_cfg selection or isa-debug-exit device. Fresh private boots use the same persistent disk with distinct UUIDs. Native file operations, more than 32 namespace objects, copied executable admission, argv/environment/cwd propagation, denied system writes, malformed-image rejection and repeated process retirement have real terminal evidence.",
+    "Tiny Basic is pinned unchanged upstream C with an original narrow C/Win32 platform port. Both rebuilt PE copies have SHA256 1e00735caeb2387d4f5b9debec6990f84f3c656b499c38115a33a2dba13c9de3. That same binary runs on Windows and Door, producing 55 and 1024; actual Door interaction also covers corrected input, loops, save/load, fresh-boot argv loading and cancellation.",
+    "The independent raw-disk audit records a 229893-byte, 3300-line BASIC save, preserved native binary copies and durable user text. A subsequent unrelated user write succeeds. Saved and reopened raw disk hashes match. First ordinary shutdown retires 27 processes/threads with leaked=0; fresh boot and actual reboot retire 7 then 5 with leaked=0. Each cleanup reclaims eight DMA pages; fresh reopen and reboot perform zero writes and flushes.",
+    "Source inspection covered kernel generic-execute capture/retirement, broker capability ownership and session shutdown, ordinary terminal input, storage mutation/capacity handling, namespace schema3, original C runtime and ordinary-session evidence validation. Review findings were corrected and the final frozen cumulative run includes those corrections."
+  ],
+  "scope_limits": [
+    "Finite source review and bounded host/guest qualification do not establish absence of every bug, all scheduler interleavings, or physical-hardware correctness.",
+    "This acceptance establishes the implemented useful text-mode pre-GUI profile on QEMU q35/TCG, one production vCPU and 2 GiB RAM, alongside inherited diagnostic/SMP regressions. It does not qualify GUI development or a complete desktop.",
+    "Tiny Basic is a third-party source port, not an independently distributed stock Windows executable. Its unchanged interpreter plus original platform glue does not establish broad EXE/DLL, UCRT, arbitrary external DLL loading, installer or general Windows application compatibility.",
+    "Production storage remains a constrained dense ext2/journal implementation: 32 MiB filesystem, fixed inode/catalog capacities and approximately 4 MiB per-file maximum. Paths, IPC messages, process resources and command arguments remain explicitly bounded.",
+    "The Tiny Basic port has ASCII filenames, four nonterminal file streams, a 384 KiB application heap, bounded formatting and unchanged upstream parsing limits. It is not hardened for hostile BASIC programs; application faults must remain isolated.",
+    "Development capability-based identity, credential/entropy limitations, absent network support and incomplete native standard-library coverage remain explicit boundaries.",
+    "Hashes establish identity within this trusted local workspace rather than external attestation. Phase ledger updates, documentation closure and launching the owner session are the coordinating agent responsibility."
+  ],
+  "cleanup": "This review wrote only reports/critics/p10-readiness-critic.json. No source, contract, documentation, phase ledger or historical critic was modified; no broad test suite was rerun and no retained evidence was deleted."
+}

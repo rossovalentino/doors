@@ -1,0 +1,32 @@
+{
+  "kind": "original_Door_OS_vector_artwork",
+  "date": "2026-10-26",
+  "authorship": "Original SVG code authored in this project; concepts supplied by the owner; no imported raster icon. 2026-10-26 revisions: Preview (2026-11-02 redesign) is a photo card with a 2.6/24 corner radius and a soft white inner edge, a sky gradient, a pale sun and two rounded ridges (deep blue near, pale far), over a second violet card tilted 9 degrees behind it; Monitor (Task Manager) a white pulse line with a soft chart glow on a blue tile (2026-10-31: scaled to a 22/24 tile with one unit of padding so it matches the other taskbar icons); neither traces or copies a Microsoft icon",
+  "exports": "Offline xtask resvg rasterization (cargo xtask assets branding build), ICO/PNG and 16..288px native BGRA frames",
+  "files": [
+    {
+      "path": "assets/branding/preview.svg",
+      "sha256": "2ee8bc59dff9c5872151b785397272ecdf859ebb0b25e3a759e659da398239ad"
+    },
+    {
+      "path": "assets/branding/preview.png",
+      "sha256": "4fc90400b77d48577967737545f96d52f4e1dfc13d5070d5b611884fd1de6151"
+    },
+    {
+      "path": "assets/branding/preview.ico",
+      "sha256": "4450025425883fe23090a5339ab8b06cdfd089bdd566e46a3af7d817290d0357"
+    },
+    {
+      "path": "assets/branding/monitor.svg",
+      "sha256": "f62afcf243ea1954d24df7496a2ad1ccb489679c3c6ce7ac37fe88514a08fd31"
+    },
+    {
+      "path": "assets/branding/monitor.png",
+      "sha256": "8bf55292266cad5ee7a7557095182fbfe3e5515db1b1530e966e6d49028db269"
+    },
+    {
+      "path": "assets/branding/monitor.ico",
+      "sha256": "dea4fce851cacc211008d11051984bab15da9391a1721a871d0e44cea191c3a1"
+    }
+  ]
+}

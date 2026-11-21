@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/rendering_critic",
+  "review_kind": "independent_read_only_critic",
+  "provenance": "Root-saved attributed summary of rendering_critic's independent final JSON review; reviewer did not edit workspace files.",
+  "scope": "P12 bounded shared document, Notes editing, native painting and real save/reopen",
+  "verdict": "accepted_bounded",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "findings": [],
+  "tested_source_sha256": "6854f83cd20752cb505918ec729afff29bafc56600955d8f4bc9e9dcd0851e0a",
+  "guest_build_source_sha256": "95e8fa2ae563c43cab4f7355483decc7ec377ba4f7133bf61626917836d633eb",
+  "combined_test_source_sha256": "ea931b33aa8df0c78a5235d5eceb11f580b1e0eae09aecb354bce20e46430ff7",
+  "host_only_build_to_final_delta": [
+    "tools/xtask/src/desktop/notes.rs"
+  ],
+  "current_executable_asset_profile_inputs_rehashed": 1009,
+  "resolved_findings": [
+    "Soft-wrap selection start no longer paints the previous row; hard endings remain selectable.",
+    "Selected glyph edges repaint once on a clean accent background with the same full-run positions and restored viewport.",
+    "Native shutdown waits complete device reclamation, then validates canonical process identities and ordered exact cleanup summaries.",
+    "Light/dark and reboot checks assert actual unselected body colors."
+  ],
+  "critic_correction": {
+    "withdrawn_advice": "DEVICE reclaimed was incorrectly conflated with process/thread count.",
+    "source": "kernel/src/platform_device.rs:122",
+    "correct_units": "Fixed eight device/DMA pages; seven processes/threads first boot, six second.",
+    "retained_failures": [
+      "host-1792537048108022400-5324",
+      "host-1792537048145380300-16328"
+    ]
+  },
+  "evidence": [
+    {
+      "kind": "build",
+      "report": "reports/runs/host-1792536807943522600-22876/report.json",
+      "sha256": "4f35d4ef5a344858a57ec4af9657aefe211df00563edb1ff9e85d16d2ba3f751"
+    },
+    {
+      "kind": "host",
+      "report": "reports/runs/host-1792537808178202700-2116/report.json",
+      "sha256": "2daa3c39c17704f0ecd49e157cc13a861433768335710228c4aff21d5a38b91a"
+    },
+    {
+      "kind": "notes1x",
+      "report": "reports/runs/host-1792537808120243300-14572/report.json",
+      "sha256": "1fa7d7d973bfbec888e11db0c8ebb5ea83ab1ad8d3aa611218e8f7682f7ea60f"
+    },
+    {
+      "kind": "notes3x",
+      "report": "reports/runs/host-1792537808134859900-16204/report.json",
+      "sha256": "38c6a1566eb21dc8f877992a70545b5ebb049d59913ff16ee551e58b2cc7b915"
+    },
+    {
+      "kind": "combined",
+      "report": "reports/runs/host-1792537048229967600-6840/report.json",
+      "sha256": "136943c300abefbef661f4493ac067abd72d24a0e6032607f8020875c68820aa"
+    },
+    {
+      "kind": "cumulative",
+      "report": "reports/runs/host-1792537941705211300-1544/report.json",
+      "sha256": "a6fb813fbfd02aece2ebf879ae3516e4009f704aabeab16aaa8ee72bff0a21a1"
+    }
+  ],
+  "build_audit": {
+    "artifact_pair_files_rehashed": 26,
+    "independent_app_pairs": 5,
+    "manifest": "reports/runs/host-1792536807943522600-22876/desktop-build.json",
+    "manifest_sha256": "b0d51657fb99a124b82240d580d84e23349eee73f855150809bb702851d858c3",
+    "initfs_sha256": "a273290737ef14c1f99a86a9951bcddd52f77dab36471366722242c301e628e3",
+    "only_artifact_changed_from_16216": "door-workspace",
+    "workspace_sha256": "6e2483c032982f990967dcd71c28624530a7a11ba30f9c14a8271b7fe573ab7e",
+    "workspace_file_bytes": 11381776,
+    "workspace_rounded_load_sum_and_span_bytes": 11325440,
+    "loader_limit_bytes": 16777216,
+    "foundation": "Inherited unchanged core evidence, no fresh run claimed."
+  },
+  "host_audit": {
+    "tests": 567,
+    "executables": 33,
+    "success": true,
+    "inputs_unchanged": true
+  },
+  "native_audit": {
+    "checks_per_run": 13,
+    "boots_per_run": 2,
+    "references_rehashed_per_run": 53,
+    "backends": [
+      "TCG/VGA1280x720/1x",
+      "WHPX/RAMFB3840x2160/3x"
+    ],
+    "distinct_uuids": true,
+    "argv_matches_commands": true,
+    "manifest_bytes_match_build": true,
+    "first_processes_threads": 7,
+    "second_processes_threads": 6,
+    "leaked_each_boot": 0,
+    "device_pages_each_boot": 8,
+    "body_colors": [
+      255,
+      43
+    ],
+    "exact_body_comparisons": [
+      "replacement differs",
+      "undo restores selection",
+      "redo restores replacement",
+      "dirty reopen preserves replacement",
+      "newline erase/undo/redo restores original"
+    ],
+    "independent_raw_snapshots": 6,
+    "object": 26,
+    "inode": 17,
+    "generation": 1,
+    "versions": [
+      3,
+      5,
+      7
+    ],
+    "catalog_revisions": [
+      827,
+      830,
+      832
+    ],
+    "journal_generations": [
+      42,
+      45,
+      47
+    ],
+    "all_crcs_valid_and_journals_clean": true,
+    "themes": [
+      0,
+      1,
+      1
+    ],
+    "stages": [
+      {
+        "bytes": "Original text\n",
+        "disk_sha256": "cf54593c44c2e709ad43212ef08bc91ba221e0b360131edc8e7ea4bd708302b5"
+      },
+      {
+        "bytes": "Final text\n",
+        "disk_sha256": "8c574196ec30d41119d481371b704a7a3076fbb19acbb36d9645a5326bf0296e"
+      },
+      {
+        "bytes": "Final text\nReopened\n",
+        "disk_sha256": "41c0e6383e6379ed470ba67d21273077901b2be7cd048ac6d94bde6030422c35"
+      }
+    ],
+    "owner_volume_present": false,
+    "remaining_qemu_processes": 0
+  },
+  "combined_audit": {
+    "checks": 243,
+    "sessions": 9,
+    "references_rehashed": 504,
+    "raw_disks_decoded": 7,
+    "leaked": 0,
+    "diagnostic_payload_bytes": [
+      13228,
+      3867
+    ],
+    "frame_samples": [
+      16,
+      10
+    ],
+    "first_frame_included": true,
+    "recovery_binding_sizes": [
+      24,
+      32,
+      40
+    ],
+    "binding_frames": [
+      3,
+      4,
+      5
+    ],
+    "login_full_material_flags": 1
+  },
+  "limitations": [
+    "4096-byte ASCII/tab/CR/LF editing, bounded history logical payload rather than total heap.",
+    "Unicode/shaping/IME/clipboard/mouse selection/visual vertical navigation and modern Notepad fidelity remain incomplete.",
+    "Separate write/truncate/flush/close; compound atomic replacement and concurrent-writer conflict prevention not established.",
+    "Dedicated Notes native workflows do not inject storage I/O failures or concurrent writers.",
+    "No Windows1:1, Microsoft ClearType/DirectWrite, FPS or latency-distribution qualification.",
+    "Finite review cannot guarantee absence of all defects; P12 partial and historical P00 archive missing."
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "recorded_by": "/root",
+  "recording": "Normalized independent read-only review; original execution reports unchanged",
+  "status": "accepted_bounded",
+  "scope": "Bounded returned paint aggregates, checked16KiB caption/icon spans, pending-damage yielding and strict evidence validation",
+  "phase_closed": false,
+  "unresolved_actionable_findings": [],
+  "tested_source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+  "host_tests": 684,
+  "host_executables": 34,
+  "bindings": {
+    "host": {
+      "report": "reports/runs/host-1792580358816014400-22272/report.json",
+      "success": true,
+      "source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+      "inputs_unchanged": true,
+      "checks": 0,
+      "sha256": "abd3c404f6514fac373b4d5307606c142465853609add830dc641e7b34236b05"
+    },
+    "desktop": {
+      "report": "reports/runs/host-1792579067070844800-12664/report.json",
+      "success": true,
+      "source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+      "inputs_unchanged": true,
+      "checks": 255,
+      "sha256": "76a262e7885dd4f2bac02659673ce5c5aa1f041454e87f508696d6c28da7b21e"
+    },
+    "motion": {
+      "report": "reports/runs/host-1792580220114666900-13752/report.json",
+      "success": true,
+      "source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+      "inputs_unchanged": true,
+      "checks": 19,
+      "sha256": "72c95bedbc2cb98bbd0adb03db8dcd143f90935906b97e9bb947d871090389b1"
+    },
+    "retained": {
+      "report": "reports/runs/host-1792580479064519200-19836/report.json",
+      "success": true,
+      "source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+      "inputs_unchanged": true,
+      "checks": 1,
+      "sha256": "55d0262993d5fbb262ffd4dbd329c30c6481cf34ec6468f18a5b055896c50e0a"
+    }
+  },
+  "aggregate": {
+    "cutoff": "completed paint scopes before first final power attempt",
+    "fps_claim": false,
+    "groups": [
+      {
+        "accepted_bytes": 2035235664,
+        "attempted_calls": 149725,
+        "compose_ticks": 178,
+        "dragging": false,
+        "failed": 0,
+        "frames": 112,
+        "histogram": [
+          42,
+          5,
+          17,
+          16,
+          32,
+          0,
+          0
+        ],
+        "maximum_work_ticks": 6,
+        "paths": [
+          88,
+          11,
+          7,
+          6
+        ],
+        "transfer_ticks": 52
+      },
+      {
+        "accepted_bytes": 2441014632,
+        "attempted_calls": 246534,
+        "compose_ticks": 303,
+        "dragging": true,
+        "failed": 0,
+        "frames": 136,
+        "histogram": [
+          0,
+          0,
+          71,
+          33,
+          32,
+          0,
+          0
+        ],
+        "maximum_work_ticks": 4,
+        "paths": [
+          136,
+          0,
+          0,
+          0
+        ],
+        "transfer_ticks": 66
+      }
+    ],
+    "line_numbers": [
+      87,
+      88
+    ],
+    "schema_version": 1,
+    "scope": "scene/caption/icons/bar; excludes cursor-only updates, idle and final cursor/logging; includes input serviced during transfer",
+    "summary_source_bytes": 226,
+    "tick_millis": 10,
+    "vblank_observed": false,
+    "window_diagnostic_source_bytes": 2855,
+    "window_pid": 5
+  },
+  "mean_drag_elapsed_ms": 27.13235294117647,
+  "mean_drag_compose_elapsed_ms": 22.279411764705884,
+  "mean_drag_transfer_elapsed_ms": 4.852941176470588,
+  "actual_artifact_comparison": {
+    "changed": [
+      "door-window"
+    ],
+    "files": 21,
+    "sha256": "42b6ad3dbfc324ee8d0d25f7f86b6b69f71b97cb869bdd6965828fd92a653094",
+    "equal": 20,
+    "repeat_pairs": 5,
+    "path": "reports/runs/host-1792579067070844800-12664/guest-artifact-motion-bridge.json"
+  },
+  "source_bridge": {
+    "old_count": 2077,
+    "changed_files": 13,
+    "new_count": 2079,
+    "sha256": "25e8460e0bb6cd797a73def5ca54c631deddbcd5c1c18d8dddda865931fd9733",
+    "path": "reports/runs/host-1792579067070844800-12664/motion-source-bridge.json"
+  },
+  "checkpoint": {
+    "sha256": "11e1416920a0ab209d7acca8df2e922af315491a6a8cfc339f5bc77eb7c508bd",
+    "path": "reports/runs/host-1792580479064519200-19836/desktop-revalidation.json"
+  },
+  "independent_audit": {
+    "combined_private_image_entries": 36,
+    "combined_hashed_refs": 755,
+    "dedicated_probes": 7,
+    "combined_sessions": 9,
+    "dedicated_hashed_refs": 32,
+    "catalog_journal_crcs": true,
+    "pid_uuid_argv_bound": true,
+    "dedicated_sessions": 1,
+    "window_load_bytes": 6782976,
+    "retirement": "all clean, leaked0 and DEVICE8",
+    "client_recaptures": 0,
+    "combined_probes": 176,
+    "combined_rgb_pairs": 178,
+    "combined_raw_audits": 8,
+    "dedicated_rgb_pairs": 10,
+    "dedicated_saved_utf8": "Native density note\n",
+    "dedicated_payload_bytes": 20
+  },
+  "resolved_findings": [
+    "Retained aggregate stripping must fail when native serial contains MOTION",
+    "Histogram maximum must be attained and cap every bin"
+  ],
+  "limits": [
+    "Elapsed monotonic paint scopes, not pure CPU time/cycles;10ms clock",
+    "No FPS,60Hz,input-latency distribution or before/after speedup proof",
+    "Cutoff before first final power attempt; later work after failed power request excluded",
+    "Four paint paths only; cursor-only/idle/final cursor and logging excluded; during-transfer input included",
+    "Saturated counters or failures rejected by strict measurement parser",
+    "No current kernel/ABI/graphics-core change; earlier foundation inherited by actual byte identity, not a fresh42-scenario suite",
+    "Prior intermittent host-tool fatal exit cause unresolved",
+    "Visible SDL host presentation/native display scaling, newer icons/Snap/UI/app work remain open"
+  ],
+  "critic_actions": {
+    "started_tests": false,
+    "host_ui": false,
+    "modified_files": false,
+    "owner_raw_read": false
+  }
+}

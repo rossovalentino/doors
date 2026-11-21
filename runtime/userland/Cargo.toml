@@ -1,0 +1,15 @@
+[package]
+name = "door-userland"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Native application command, path and console helpers"
+
+[dependencies]
+door-abi = { path = "../abi" }
+door-service-client = { path = "../../frameworks/service-client" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+
+[lints]
+workspace = true

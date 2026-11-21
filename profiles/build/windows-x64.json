@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "record_kind": "windows_fixture_toolchain",
+  "msvc_root": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207",
+  "sdk_root": "C:/Program Files (x86)/Windows Kits/10",
+  "sdk_version": "10.0.19041.0",
+  "files": [
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+      "version": "19.44.35230.0",
+      "sha256": "e87e78b3ef6580b75aebda843f8a22e874612d9f766344046551399f898eb226"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/link.exe",
+      "version": "14.44.35230.0",
+      "sha256": "49a5df25c3182a22684375b1d62a025016deffccea247894fe5ca2c85610c6a6"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/c1.dll",
+      "version": "19.44.35230.0",
+      "sha256": "3b82d58d21354fdb611efdd5ab82ec0484acfa5f3de37ca6bea42c630ff2c24a"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/c2.dll",
+      "version": "19.44.35230.0",
+      "sha256": "e2fdfd6505cd6e9b670922733a914fbf22cae5d226943290548f24eaf699267a"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/mspdb140.dll",
+      "version": "14.44.35230.0",
+      "sha256": "51c1a191ba6ec8fc3c364c356e0379dfc41787ff6f9b74972e93f89f5a297589"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/kernel32.lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "d9810feacbb1150584cdd484ea1ce60b4e6b3ddec3b8afa505c0ae47330027e2"
+    },
+    {
+      "path": "C:/Users/win/.rustup/toolchains/1.94.1-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/bin/rust-lld.exe",
+      "version": "LLD 21.1.8 (Rust 1.94.1)",
+      "sha256": "ad5d8f81aa82ce0a389bd17bc134f33daa3cc58e756aafc4d0a0bfa8bdda9a6f"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/ml64.exe",
+      "version": "14.44.35230.0",
+      "sha256": "63ca982bd559796275ff0e1cd409fee9985d22ae104629f99329cecaf4ce20ec"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/User32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "b44c0246135462a839e279fdfb73172bbf7dd4ff05d21212ac1867c029080f28"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/Gdi32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "29735b3889ede26bf81a48b512dccfa81a1a394ea78ab5653a725dd731a4d18a"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/ComDlg32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "6c06ad97245f69d5a0b6d8b75b825ba3528f4d9dcdd24b001f38afd6ac2f6dbe"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/ComCtl32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "05bc294244ab5759c0a65c26e061b608596f8d46f68293f107e5fc8b14f03910"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/WS2_32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "bba03147f31d31493d8c236a376801a779a75e97d7cc9cf03269572f71ffaec4"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/iphlpapi.lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "f2b42cf00c7e4cfe037267454b66a0dd1a8b7dd3f23c04f06d79e963d8a8827d"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/DnsAPI.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "b09e8dd1a2ecfd58831641fd2f53f0a9f64abcc07044d4391037ea6b88acf8d2"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/winhttp.lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "de39116027b2853f553f3d7915cad8b94382eb0d65979d2f32b65935a4eb1c24"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/WinInet.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "04814bdb46b7b5964c6e6b1ba838d3c28964bc315b3a98e71236bd00ec37e97f"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/WinMM.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "d3af6e9c497561a7e4244b3e521a1ecb46cfcc8dc1adacfa661a35fca3ac2a47"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/dsound.lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "0515b4efa56afaf315e919359d7fb709eef99641deafc931842d637fef2b7486"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/Ole32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "157cbe61e1a063c0e3a5050fd5bcf0dbff839e176b1cb1b2f4b491a41232f684"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/OleAut32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "2fb1b87285f53a85a35fe10dfa9db69a118dbea64c200f661fca04316654c813"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/shell32.lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "c26e7b3e8caa9365c1b25f42d3dfa2190e565325d843d56903e4106d3a4ac7ba"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/RpcRT4.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "27dae773be2b8941ebe1429da17a38acd895552405bca853e8dffc47a0a58586"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/AdvAPI32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "fd8f4d5daed4fca32d9d1f414b3011f1bcd72c2e390d24ff9b14998da5f41021"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/WinTrust.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "a1c77a852a5b587265baf51c67faf05397bce8db3a32e4a9bc44b97b5c8337c3"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/Msi.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "195950a8b280a0d2c668431bfbfdcd491d5a993d00a8964acc27af4ceeb6a278"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64/rc.exe",
+      "version": "10.0.19041.5609",
+      "sha256": "2cbcc6024fe41ae92fada6b3f74e6e2a1b2fe71c51b288167d6abab319da2628"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64/rcdll.dll",
+      "version": "10.0.19041.5609",
+      "sha256": "01f5c8ef374df8ee14056046606b7765e7101e3504b34aa74e1cf94c8075959b"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cvtres.exe",
+      "version": "14.44.35230.0",
+      "sha256": "6f79237d4a6c140d89c41864a3af0b7263738b1d66ee21c19746a4a3ca01117d"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/cl.exe",
+      "version": "19.44.35230.0",
+      "sha256": "64189b6c0a95f1a7933aafcde9a6a156691ee2bab36f3e02dd1bc7950af2816a"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/link.exe",
+      "version": "14.44.35230.0",
+      "sha256": "cac5c5e8f4154434a63a7c083ec9856dd65fa5870b539bf8cb3c37321959e457"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/c1.dll",
+      "version": "19.44.35230.0",
+      "sha256": "d44fea01fbff5c2e8e5abf160fb5e9a261f87d1643409709b2b5142cadea499b"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/c2.dll",
+      "version": "19.44.35230.0",
+      "sha256": "4e0f0d345c17345a47a0c0a249cbea9efc3f78239292b335f3196c9dc476ae6b"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x86/mspdb140.dll",
+      "version": "14.44.35230.0",
+      "sha256": "51c1a191ba6ec8fc3c364c356e0379dfc41787ff6f9b74972e93f89f5a297589"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x86/kernel32.lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "5aeb181e7ca4c72b8881c0fcb26f4dccc69089324e6bbc2e0fb3e1ef522a7b8a"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x86/User32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "592709800a0bf13688a5109afcf481eb62f36fafa690ff23f704f7c7a43ac660"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x86/Gdi32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "32326907c0768ad5c33b9b2bf5c0b0e20f10b4062b691919a30cc37c7ab87e22"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x86/AdvAPI32.Lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "dfee3b3abe2c88a21ba41822ddc143ae14ac21549b48b76809484419965e8a86"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x86/shell32.lib",
+      "version": "Windows SDK 10.0.19041.0",
+      "sha256": "c5b554b2e8bedea1d8abf26d1444bdb2c57c061749f821ec08c563d49cb861c4"
+    },
+    {
+      "path": "C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/ucrt/x64/ucrt.lib",
+      "version": "Windows SDK 10.0.19041.0 (the Universal CRT's api-ms-win-crt-* import library)",
+      "sha256": "7ef4eac926bf597d2f243f16cdfed7e0db22cb3ca34a1d7e088a84c994a03d66"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libvcruntime.lib",
+      "version": "14.44.35207 (static vcruntime: the hybrid CRT, as .NET links)",
+      "sha256": "e4f8daf356d63592ff6d6f7ad90c8c9da4c1230273ad113a9a2b56afd6bfcb04"
+    },
+    {
+      "path": "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/lib/x64/libcmt.lib",
+      "version": "14.44.35207 (static C startup: mainCRTStartup)",
+      "sha256": "8fe40dd342b90b35d62b8f5d55b4e92df7785c122976618365cfe3b014cc857a"
+    }
+  ],
+  "gui_import_libraries": ["User32.Lib", "Gdi32.Lib", "ComDlg32.Lib", "ComCtl32.Lib"],
+  "resource_compiler": "C:/Program Files (x86)/Windows Kits/10/bin/10.0.19041.0/x64/rc.exe",
+  "scope": "Installed local compiler, resource compiler and SDK import libraries; no Windows system DLL is copied or distributed",
+  "dll_linker": "C:/Users/win/.rustup/toolchains/1.94.1-x86_64-pc-windows-msvc/lib/rustlib/x86_64-pc-windows-msvc/bin/rust-lld.exe"
+}

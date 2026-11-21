@@ -1,0 +1,15 @@
+{
+  "file": "documents-current.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "ad4a4a6caf61187a390050124da1070ab7665d0548fbd15d3c0c25060dc981f4",
+  "sources": {
+    "group_id": 112,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\imageres.dll.mun",
+    "module_sha256": "d816fd64e8c1c26014778c9667234f7459814bd38aa04e35c46a25073d0876ee"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

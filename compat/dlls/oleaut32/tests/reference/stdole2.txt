@@ -1,0 +1,145 @@
+load 0x0
+lib guid=3004020000000000c000000000000046 lcid=0 sys=1 ver=2.0 flags=0x8 "stdole" "OLE Automation" ctx=0 file=(null) count=42
+t0 guid=00000000000000000000000000000000 kind=1 funcs=0 vars=4 impl=0 vft=0 size=16 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 doc 0x0 "GUID" (null) ctx=0 file=(null)
+t0 var 0 id=1073741824 kind=0 flags=0x0 type=19 offset=0 names 0x0 Data1
+t0 var 1 id=1073741825 kind=0 flags=0x0 type=18 offset=4 names 0x0 Data2
+t0 var 2 id=1073741826 kind=0 flags=0x0 type=18 offset=6 names 0x0 Data3
+t0 var 3 id=1073741827 kind=0 flags=0x0 type=28[] offset=8 names 0x0 Data4
+t1 guid=00000000000000000000000000000000 kind=1 funcs=0 vars=4 impl=0 vft=0 size=24 align=8 flags=0x200 ver=0.0 lcid=0 ctor=-1 doc 0x0 "DISPPARAMS" (null) ctx=0 file=(null)
+t1 var 0 id=1073741824 kind=0 flags=0x0 type=26(12) offset=0 names 0x0 rgvarg
+t1 var 1 id=1073741825 kind=0 flags=0x0 type=26(3) offset=8 names 0x0 rgdispidNamedArgs
+t1 var 2 id=1073741826 kind=0 flags=0x0 type=23 offset=16 names 0x0 cArgs
+t1 var 3 id=1073741827 kind=0 flags=0x0 type=23 offset=20 names 0x0 cNamedArgs
+t2 guid=00000000000000000000000000000000 kind=1 funcs=0 vars=9 impl=0 vft=0 size=64 align=8 flags=0x200 ver=0.0 lcid=0 ctor=-1 doc 0x0 "EXCEPINFO" (null) ctx=0 file=(null)
+t2 var 0 id=1073741824 kind=0 flags=0x0 type=18 offset=0 names 0x0 wCode
+t2 var 1 id=1073741825 kind=0 flags=0x0 type=18 offset=2 names 0x0 wReserved
+t2 var 2 id=1073741826 kind=0 flags=0x0 type=8 offset=8 names 0x0 bstrSource
+t2 var 3 id=1073741827 kind=0 flags=0x0 type=8 offset=16 names 0x0 bstrDescription
+t2 var 4 id=1073741828 kind=0 flags=0x0 type=8 offset=24 names 0x0 bstrHelpFile
+t2 var 5 id=1073741829 kind=0 flags=0x0 type=19 offset=32 names 0x0 dwHelpContext
+t2 var 6 id=1073741830 kind=0 flags=0x0 type=26(24) offset=40 names 0x0 pvReserved
+t2 var 7 id=1073741831 kind=0 flags=0x0 type=26(24) offset=48 names 0x0 pfnDeferredFillIn
+t2 var 8 id=1073741832 kind=0 flags=0x0 type=10 offset=56 names 0x0 scode
+t3 guid=0000000000000000c000000000000046 kind=3 funcs=3 vars=0 impl=0 vft=24 size=8 align=8 flags=0x10 ver=0.0 lcid=0 ctor=-1 doc 0x0 "IUnknown" (null) ctx=0 file=(null)
+t3 func 0 id=1610612736 kind=1 inv=1 cc=4 params=2 opt=0 vft=0 flags=0x1 ret=25 names 0x0 QueryInterface riid ppvObj [26(29(GUID)) f=0x1] [26(26(24)) f=0x2] doc 0x0 "QueryInterface" (null) ctx=0 file=(null)
+t3 func 1 id=1610612737 kind=1 inv=1 cc=4 params=0 opt=0 vft=8 flags=0x1 ret=19 names 0x0 AddRef doc 0x0 "AddRef" (null) ctx=0 file=(null)
+t3 func 2 id=1610612738 kind=1 inv=1 cc=4 params=0 opt=0 vft=16 flags=0x1 ret=19 names 0x0 Release doc 0x0 "Release" (null) ctx=0 file=(null)
+t4 guid=0004020000000000c000000000000046 kind=3 funcs=4 vars=0 impl=1 vft=56 size=8 align=8 flags=0x200 ver=0.0 lcid=0 ctor=-1 doc 0x0 "IDispatch" (null) ctx=0 file=(null)
+t4 impl 0 IUnknown flags=0
+t4 func 0 id=1610678272 kind=1 inv=1 cc=4 params=1 opt=0 vft=24 flags=0x1 ret=25 names 0x0 GetTypeInfoCount pctinfo [26(23) f=0x2] doc 0x0 "GetTypeInfoCount" (null) ctx=0 file=(null)
+t4 func 1 id=1610678273 kind=1 inv=1 cc=4 params=3 opt=0 vft=32 flags=0x1 ret=25 names 0x0 GetTypeInfo itinfo lcid pptinfo [23 f=0x1] [19 f=0x1] [26(26(24)) f=0x2] doc 0x0 "GetTypeInfo" (null) ctx=0 file=(null)
+t4 func 2 id=1610678274 kind=1 inv=1 cc=4 params=5 opt=0 vft=40 flags=0x1 ret=25 names 0x0 GetIDsOfNames riid rgszNames cNames lcid rgdispid [26(29(GUID)) f=0x1] [26(26(16)) f=0x1] [23 f=0x1] [19 f=0x1] [26(3) f=0x2] doc 0x0 "GetIDsOfNames" (null) ctx=0 file=(null)
+t4 func 3 id=1610678275 kind=1 inv=1 cc=4 params=8 opt=0 vft=48 flags=0x1 ret=25 names 0x0 Invoke dispidMember riid lcid wFlags pdispparams pvarResult pexcepinfo puArgErr [3 f=0x1] [26(29(GUID)) f=0x1] [19 f=0x1] [18 f=0x1] [26(29(DISPPARAMS)) f=0x1] [26(12) f=0x2] [26(29(EXCEPINFO)) f=0x2] [26(23) f=0x2] doc 0x0 "Invoke" (null) ctx=0 file=(null)
+t5 guid=0404020000000000c000000000000046 kind=3 funcs=4 vars=0 impl=1 vft=56 size=8 align=8 flags=0x10 ver=0.0 lcid=0 ctor=-1 doc 0x0 "IEnumVARIANT" (null) ctx=0 file=(null)
+t5 impl 0 IUnknown flags=0
+t5 func 0 id=1610678272 kind=1 inv=1 cc=4 params=3 opt=0 vft=24 flags=0x0 ret=25 names 0x0 Next celt rgvar pceltFetched [19 f=0x1] [26(12) f=0x1] [26(19) f=0x2] doc 0x0 "Next" (null) ctx=0 file=(null)
+t5 func 1 id=1610678273 kind=1 inv=1 cc=4 params=1 opt=0 vft=32 flags=0x0 ret=25 names 0x0 Skip celt [19 f=0x1] doc 0x0 "Skip" (null) ctx=0 file=(null)
+t5 func 2 id=1610678274 kind=1 inv=1 cc=4 params=0 opt=0 vft=40 flags=0x0 ret=25 names 0x0 Reset doc 0x0 "Reset" (null) ctx=0 file=(null)
+t5 func 3 id=1610678275 kind=1 inv=1 cc=4 params=1 opt=0 vft=48 flags=0x0 ret=25 names 0x0 Clone ppenum [26(26(29(IEnumVARIANT))) f=0x2] doc 0x0 "Clone" (null) ctx=0 file=(null)
+t6 guid=014350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x0 ver=0.0 lcid=0 ctor=-1 alias=19 doc 0x0 "OLE_COLOR" (null) ctx=0 file=(null)
+t7 guid=024350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_XPOS_PIXELS" (null) ctx=0 file=(null)
+t8 guid=034350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_YPOS_PIXELS" (null) ctx=0 file=(null)
+t9 guid=044350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_XSIZE_PIXELS" (null) ctx=0 file=(null)
+t10 guid=054350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_YSIZE_PIXELS" (null) ctx=0 file=(null)
+t11 guid=064350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_XPOS_HIMETRIC" (null) ctx=0 file=(null)
+t12 guid=074350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_YPOS_HIMETRIC" (null) ctx=0 file=(null)
+t13 guid=084350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_XSIZE_HIMETRIC" (null) ctx=0 file=(null)
+t14 guid=094350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=3 doc 0x0 "OLE_YSIZE_HIMETRIC" (null) ctx=0 file=(null)
+t15 guid=400603bf69901b10ae2d08002b2ec713 kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=4 doc 0x0 "OLE_XPOS_CONTAINER" (null) ctx=0 file=(null)
+t16 guid=410603bf69901b10ae2d08002b2ec713 kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=4 doc 0x0 "OLE_YPOS_CONTAINER" (null) ctx=0 file=(null)
+t17 guid=420603bf69901b10ae2d08002b2ec713 kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=4 doc 0x0 "OLE_XSIZE_CONTAINER" (null) ctx=0 file=(null)
+t18 guid=430603bf69901b10ae2d08002b2ec713 kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=4 doc 0x0 "OLE_YSIZE_CONTAINER" (null) ctx=0 file=(null)
+t19 guid=134350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=4 align=4 flags=0x0 ver=0.0 lcid=0 ctor=-1 alias=22 doc 0x0 "OLE_HANDLE" (null) ctx=0 file=(null)
+t20 guid=0b4350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=2 align=2 flags=0x0 ver=0.0 lcid=0 ctor=-1 alias=11 doc 0x0 "OLE_OPTEXCLUSIVE" (null) ctx=0 file=(null)
+t21 guid=440603bf69901b10ae2d08002b2ec713 kind=6 funcs=0 vars=0 impl=0 vft=0 size=2 align=2 flags=0x0 ver=0.0 lcid=0 ctor=-1 alias=11 doc 0x0 "OLE_CANCELBOOL" (null) ctx=0 file=(null)
+t22 guid=450603bf69901b10ae2d08002b2ec713 kind=6 funcs=0 vars=0 impl=0 vft=0 size=2 align=2 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=11 doc 0x0 "OLE_ENABLEDEFAULTBOOL" (null) ctx=0 file=(null)
+t23 guid=0a4350660fbe1a108bbb00aa00300cab kind=0 funcs=0 vars=3 impl=0 vft=0 size=4 align=4 flags=0x0 ver=0.0 lcid=0 ctor=-1 doc 0x0 "OLE_TRISTATE" (null) ctx=0 file=(null)
+t23 var 0 id=1073741824 kind=2 flags=0x0 type=22 value=vt=3 0 names 0x0 Unchecked
+t23 var 1 id=1073741825 kind=2 flags=0x0 type=22 value=vt=3 1 names 0x0 Checked
+t23 var 2 id=1073741826 kind=2 flags=0x0 type=22 value=vt=3 2 names 0x0 Gray
+t24 guid=0d4350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=8 align=8 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=8 doc 0x0 "FONTNAME" (null) ctx=0 file=(null)
+t25 guid=0e4350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=8 align=8 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=6 doc 0x0 "FONTSIZE" (null) ctx=0 file=(null)
+t26 guid=0f4350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=2 align=2 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=11 doc 0x0 "FONTBOLD" (null) ctx=0 file=(null)
+t27 guid=104350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=2 align=2 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=11 doc 0x0 "FONTITALIC" (null) ctx=0 file=(null)
+t28 guid=114350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=2 align=2 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=11 doc 0x0 "FONTUNDERSCORE" (null) ctx=0 file=(null)
+t29 guid=124350660fbe1a108bbb00aa00300cab kind=6 funcs=0 vars=0 impl=0 vft=0 size=2 align=2 flags=0x10 ver=0.0 lcid=0 ctor=-1 alias=11 doc 0x0 "FONTSTRIKETHROUGH" (null) ctx=0 file=(null)
+t30 guid=02e0f6be74a81a108bba00aa00300cab kind=3 funcs=22 vars=0 impl=1 vft=200 size=8 align=8 flags=0x10 ver=0.0 lcid=0 ctor=-1 doc 0x0 "IFont" "Font Object" ctx=0 file=(null)
+t30 impl 0 IUnknown flags=0
+t30 func 0 id=1610678272 kind=1 inv=2 cc=4 params=1 opt=0 vft=24 flags=0x0 ret=25 names 0x0 Name pname [26(8) f=0xa] doc 0x0 "Name" (null) ctx=0 file=(null)
+t30 func 1 id=1610678272 kind=1 inv=4 cc=4 params=1 opt=0 vft=32 flags=0x0 ret=25 names 0x0 Name pname [8 f=0x1] doc 0x0 "Name" (null) ctx=0 file=(null)
+t30 func 2 id=1610678274 kind=1 inv=2 cc=4 params=1 opt=0 vft=40 flags=0x0 ret=25 names 0x0 Size psize [26(6) f=0xa] doc 0x0 "Size" (null) ctx=0 file=(null)
+t30 func 3 id=1610678274 kind=1 inv=4 cc=4 params=1 opt=0 vft=48 flags=0x0 ret=25 names 0x0 Size psize [6 f=0x1] doc 0x0 "Size" (null) ctx=0 file=(null)
+t30 func 4 id=1610678276 kind=1 inv=2 cc=4 params=1 opt=0 vft=56 flags=0x0 ret=25 names 0x0 Bold pbold [26(11) f=0xa] doc 0x0 "Bold" (null) ctx=0 file=(null)
+t30 func 5 id=1610678276 kind=1 inv=4 cc=4 params=1 opt=0 vft=64 flags=0x0 ret=25 names 0x0 Bold pbold [11 f=0x1] doc 0x0 "Bold" (null) ctx=0 file=(null)
+t30 func 6 id=1610678278 kind=1 inv=2 cc=4 params=1 opt=0 vft=72 flags=0x0 ret=25 names 0x0 Italic pitalic [26(11) f=0xa] doc 0x0 "Italic" (null) ctx=0 file=(null)
+t30 func 7 id=1610678278 kind=1 inv=4 cc=4 params=1 opt=0 vft=80 flags=0x0 ret=25 names 0x0 Italic pitalic [11 f=0x1] doc 0x0 "Italic" (null) ctx=0 file=(null)
+t30 func 8 id=1610678280 kind=1 inv=2 cc=4 params=1 opt=0 vft=88 flags=0x0 ret=25 names 0x0 Underline punderline [26(11) f=0xa] doc 0x0 "Underline" (null) ctx=0 file=(null)
+t30 func 9 id=1610678280 kind=1 inv=4 cc=4 params=1 opt=0 vft=96 flags=0x0 ret=25 names 0x0 Underline punderline [11 f=0x1] doc 0x0 "Underline" (null) ctx=0 file=(null)
+t30 func 10 id=1610678282 kind=1 inv=2 cc=4 params=1 opt=0 vft=104 flags=0x0 ret=25 names 0x0 Strikethrough pstrikethrough [26(11) f=0xa] doc 0x0 "Strikethrough" (null) ctx=0 file=(null)
+t30 func 11 id=1610678282 kind=1 inv=4 cc=4 params=1 opt=0 vft=112 flags=0x0 ret=25 names 0x0 Strikethrough pstrikethrough [11 f=0x1] doc 0x0 "Strikethrough" (null) ctx=0 file=(null)
+t30 func 12 id=1610678284 kind=1 inv=2 cc=4 params=1 opt=0 vft=120 flags=0x0 ret=25 names 0x0 Weight pweight [26(2) f=0xa] doc 0x0 "Weight" (null) ctx=0 file=(null)
+t30 func 13 id=1610678284 kind=1 inv=4 cc=4 params=1 opt=0 vft=128 flags=0x0 ret=25 names 0x0 Weight pweight [2 f=0x1] doc 0x0 "Weight" (null) ctx=0 file=(null)
+t30 func 14 id=1610678286 kind=1 inv=2 cc=4 params=1 opt=0 vft=136 flags=0x0 ret=25 names 0x0 Charset pcharset [26(2) f=0xa] doc 0x0 "Charset" (null) ctx=0 file=(null)
+t30 func 15 id=1610678286 kind=1 inv=4 cc=4 params=1 opt=0 vft=144 flags=0x0 ret=25 names 0x0 Charset pcharset [2 f=0x1] doc 0x0 "Charset" (null) ctx=0 file=(null)
+t30 func 16 id=1610678288 kind=1 inv=2 cc=4 params=1 opt=0 vft=152 flags=0x0 ret=25 names 0x0 hFont phfont [26(29(OLE_HANDLE)) f=0xa] doc 0x0 "hFont" (null) ctx=0 file=(null)
+t30 func 17 id=1610678289 kind=1 inv=1 cc=4 params=1 opt=0 vft=160 flags=0x0 ret=25 names 0x0 Clone ppfont [26(26(29(IFont))) f=0x2] doc 0x0 "Clone" (null) ctx=0 file=(null)
+t30 func 18 id=1610678290 kind=1 inv=1 cc=4 params=1 opt=0 vft=168 flags=0x0 ret=25 names 0x0 IsEqual pfontOther [26(29(IFont)) f=0x1] doc 0x0 "IsEqual" (null) ctx=0 file=(null)
+t30 func 19 id=1610678291 kind=1 inv=1 cc=4 params=2 opt=0 vft=176 flags=0x0 ret=25 names 0x0 SetRatio cyLogical cyHimetric [3 f=0x1] [3 f=0x1] doc 0x0 "SetRatio" (null) ctx=0 file=(null)
+t30 func 20 id=1610678292 kind=1 inv=1 cc=4 params=1 opt=0 vft=184 flags=0x0 ret=25 names 0x0 AddRefHfont hFont [29(OLE_HANDLE) f=0x1] doc 0x0 "AddRefHfont" (null) ctx=0 file=(null)
+t30 func 21 id=1610678293 kind=1 inv=1 cc=4 params=1 opt=0 vft=192 flags=0x0 ret=25 names 0x0 ReleaseHfont hFont [29(OLE_HANDLE) f=0x1] doc 0x0 "ReleaseHfont" (null) ctx=0 file=(null)
+t31 guid=03e0f6be74a81a108bba00aa00300cab kind=4 funcs=0 vars=8 impl=1 vft=56 size=8 align=8 flags=0x1000 ver=0.0 lcid=0 ctor=-1 doc 0x0 "Font" (null) ctx=0 file=(null)
+t31 impl 0 IDispatch flags=0
+t31 var 0 id=0 kind=3 flags=0x0 type=8 offset=0 names 0x0 Name
+t31 var 1 id=2 kind=3 flags=0x0 type=6 offset=0 names 0x0 Size
+t31 var 2 id=3 kind=3 flags=0x0 type=11 offset=0 names 0x0 Bold
+t31 var 3 id=4 kind=3 flags=0x0 type=11 offset=0 names 0x0 Italic
+t31 var 4 id=5 kind=3 flags=0x0 type=11 offset=0 names 0x0 Underline
+t31 var 5 id=6 kind=3 flags=0x0 type=11 offset=0 names 0x0 Strikethrough
+t31 var 6 id=7 kind=3 flags=0x0 type=2 offset=0 names 0x0 Weight
+t31 var 7 id=8 kind=3 flags=0x0 type=2 offset=0 names 0x0 Charset
+t32 guid=00000000000000000000000000000000 kind=6 funcs=0 vars=0 impl=0 vft=0 size=8 align=8 flags=0x0 ver=0.0 lcid=0 ctor=-1 alias=29(Font) doc 0x0 "IFontDisp" (null) ctx=0 file=(null)
+t33 guid=0352e30b918fce119de300aa004bb851 kind=5 funcs=0 vars=0 impl=3 vft=0 size=8 align=8 flags=0x2 ver=0.0 lcid=0 ctor=-1 doc 0x0 "StdFont" (null) ctx=0 file=(null)
+t33 impl 0 Font flags=1
+t33 impl 1 FontEvents flags=3
+t33 impl 2 IFont flags=0
+t34 guid=8009f87b32bf1a108bbb00aa00300cab kind=3 funcs=15 vars=0 impl=1 vft=144 size=8 align=8 flags=0x10 ver=0.0 lcid=0 ctor=-1 doc 0x0 "IPicture" "Picture Object" ctx=0 file=(null)
+t34 impl 0 IUnknown flags=0
+t34 func 0 id=1610678272 kind=1 inv=2 cc=4 params=1 opt=0 vft=24 flags=0x0 ret=25 names 0x0 Handle phandle [26(29(OLE_HANDLE)) f=0xa] doc 0x0 "Handle" (null) ctx=0 file=(null)
+t34 func 1 id=1610678273 kind=1 inv=2 cc=4 params=1 opt=0 vft=32 flags=0x0 ret=25 names 0x0 hPal phpal [26(29(OLE_HANDLE)) f=0xa] doc 0x0 "hPal" (null) ctx=0 file=(null)
+t34 func 2 id=1610678274 kind=1 inv=2 cc=4 params=1 opt=0 vft=40 flags=0x0 ret=25 names 0x0 Type ptype [26(2) f=0xa] doc 0x0 "Type" (null) ctx=0 file=(null)
+t34 func 3 id=1610678275 kind=1 inv=2 cc=4 params=1 opt=0 vft=48 flags=0x0 ret=25 names 0x0 Width pwidth [26(29(OLE_XSIZE_HIMETRIC)) f=0xa] doc 0x0 "Width" (null) ctx=0 file=(null)
+t34 func 4 id=1610678276 kind=1 inv=2 cc=4 params=1 opt=0 vft=56 flags=0x0 ret=25 names 0x0 Height pheight [26(29(OLE_YSIZE_HIMETRIC)) f=0xa] doc 0x0 "Height" (null) ctx=0 file=(null)
+t34 func 5 id=1610678277 kind=1 inv=1 cc=4 params=10 opt=0 vft=64 flags=0x0 ret=25 names 0x0 Render hdc x y cx cy xSrc ySrc cxSrc cySrc prcWBounds [22 f=0x1] [3 f=0x1] [3 f=0x1] [3 f=0x1] [3 f=0x1] [29(OLE_XPOS_HIMETRIC) f=0x1] [29(OLE_YPOS_HIMETRIC) f=0x1] [29(OLE_XSIZE_HIMETRIC) f=0x1] [29(OLE_YSIZE_HIMETRIC) f=0x1] [26(24) f=0x1] doc 0x0 "Render" (null) ctx=0 file=(null)
+t34 func 6 id=1610678273 kind=1 inv=4 cc=4 params=1 opt=0 vft=72 flags=0x0 ret=25 names 0x0 hPal phpal [29(OLE_HANDLE) f=0x1] doc 0x0 "hPal" (null) ctx=0 file=(null)
+t34 func 7 id=1610678279 kind=1 inv=2 cc=4 params=1 opt=0 vft=80 flags=0x0 ret=25 names 0x0 CurDC phdcOut [26(22) f=0xa] doc 0x0 "CurDC" (null) ctx=0 file=(null)
+t34 func 8 id=1610678280 kind=1 inv=1 cc=4 params=3 opt=0 vft=88 flags=0x0 ret=25 names 0x0 SelectPicture hdcIn phdcOut phbmpOut [22 f=0x1] [26(22) f=0x2] [26(29(OLE_HANDLE)) f=0x2] doc 0x0 "SelectPicture" (null) ctx=0 file=(null)
+t34 func 9 id=1610678281 kind=1 inv=2 cc=4 params=1 opt=0 vft=96 flags=0x0 ret=25 names 0x0 KeepOriginalFormat pfkeep [26(11) f=0xa] doc 0x0 "KeepOriginalFormat" (null) ctx=0 file=(null)
+t34 func 10 id=1610678281 kind=1 inv=4 cc=4 params=1 opt=0 vft=104 flags=0x0 ret=25 names 0x0 KeepOriginalFormat pfkeep [11 f=0x1] doc 0x0 "KeepOriginalFormat" (null) ctx=0 file=(null)
+t34 func 11 id=1610678283 kind=1 inv=1 cc=4 params=0 opt=0 vft=112 flags=0x0 ret=25 names 0x0 PictureChanged doc 0x0 "PictureChanged" (null) ctx=0 file=(null)
+t34 func 12 id=1610678284 kind=1 inv=1 cc=4 params=3 opt=0 vft=120 flags=0x0 ret=25 names 0x0 SaveAsFile pstm fSaveMemCopy pcbSize [26(24) f=0x1] [11 f=0x1] [26(3) f=0x2] doc 0x0 "SaveAsFile" (null) ctx=0 file=(null)
+t34 func 13 id=1610678285 kind=1 inv=2 cc=4 params=1 opt=0 vft=128 flags=0x0 ret=25 names 0x0 Attributes pdwAttr [26(3) f=0xa] doc 0x0 "Attributes" (null) ctx=0 file=(null)
+t34 func 14 id=1610678286 kind=1 inv=1 cc=4 params=1 opt=0 vft=136 flags=0x0 ret=25 names 0x0 SetHdc hdc [29(OLE_HANDLE) f=0x1] doc 0x0 "SetHdc" (null) ctx=0 file=(null)
+t35 guid=8109f87b32bf1a108bbb00aa00300cab kind=4 funcs=1 vars=5 impl=1 vft=56 size=8 align=8 flags=0x1000 ver=0.0 lcid=0 ctor=-1 doc 0x0 "Picture" (null) ctx=0 file=(null)
+t35 impl 0 IDispatch flags=0
+t35 func 0 id=6 kind=4 inv=1 cc=4 params=10 opt=0 vft=0 flags=0x0 ret=24 names 0x0 Render hdc x y cx cy xSrc ySrc cxSrc cySrc prcWBounds [22 f=0x0] [3 f=0x0] [3 f=0x0] [3 f=0x0] [3 f=0x0] [29(OLE_XPOS_HIMETRIC) f=0x0] [29(OLE_YPOS_HIMETRIC) f=0x0] [29(OLE_XSIZE_HIMETRIC) f=0x0] [29(OLE_YSIZE_HIMETRIC) f=0x0] [26(24) f=0x0] doc 0x0 "Render" (null) ctx=0 file=(null)
+t35 var 0 id=0 kind=3 flags=0x1 type=29(OLE_HANDLE) offset=0 names 0x0 Handle
+t35 var 1 id=2 kind=3 flags=0x0 type=29(OLE_HANDLE) offset=0 names 0x0 hPal
+t35 var 2 id=3 kind=3 flags=0x1 type=2 offset=0 names 0x0 Type
+t35 var 3 id=4 kind=3 flags=0x1 type=29(OLE_XSIZE_HIMETRIC) offset=0 names 0x0 Width
+t35 var 4 id=5 kind=3 flags=0x1 type=29(OLE_YSIZE_HIMETRIC) offset=0 names 0x0 Height
+t36 guid=00000000000000000000000000000000 kind=6 funcs=0 vars=0 impl=0 vft=0 size=8 align=8 flags=0x0 ver=0.0 lcid=0 ctor=-1 alias=29(Picture) doc 0x0 "IPictureDisp" (null) ctx=0 file=(null)
+t37 guid=0452e30b918fce119de300aa004bb851 kind=5 funcs=0 vars=0 impl=2 vft=0 size=8 align=8 flags=0x2 ver=0.0 lcid=0 ctor=-1 doc 0x0 "StdPicture" (null) ctx=0 file=(null)
+t37 impl 0 Picture flags=1
+t37 impl 1 IPicture flags=0
+t38 guid=08fac8e69fbdd011985e00c04fc29993 kind=0 funcs=0 vars=4 impl=0 vft=0 size=4 align=4 flags=0x0 ver=0.0 lcid=0 ctor=-1 doc 0x0 "LoadPictureConstants" (null) ctx=0 file=(null)
+t38 var 0 id=1073741824 kind=2 flags=0x0 type=22 value=vt=3 0 names 0x0 Default
+t38 var 1 id=1073741825 kind=2 flags=0x0 type=22 value=vt=3 1 names 0x0 Monochrome
+t38 var 2 id=1073741826 kind=2 flags=0x0 type=22 value=vt=3 2 names 0x0 VgaColor
+t38 var 3 id=1073741827 kind=2 flags=0x0 type=22 value=vt=3 4 names 0x0 Color
+t39 guid=c09a2091f660cf119c5d00aa00c1489e kind=2 funcs=2 vars=0 impl=0 vft=0 size=2 align=1 flags=0x0 ver=0.0 lcid=0 ctor=-1 doc 0x0 "StdFunctions" "Functions for Standard OLE Objects" ctx=10101 file=(null)
+t39 func 0 id=1610612736 kind=3 inv=1 cc=4 params=5 opt=0 vft=0 flags=0x0 ret=25 names 0x0 LoadPicture filename widthDesired heightDesired flags retval [12 f=0x11] [22 f=0x31 def=vt=3 0] [22 f=0x31 def=vt=3 0] [29(LoadPictureConstants) f=0x31 def=vt=3 0] [26(26(29(IPictureDisp))) f=0xa] doc 0x0 "LoadPicture" "Loads a picture from a file" ctx=10101 file=(null) entry 0x0 "oleaut32.dll" "OleLoadPictureFileEx" 0
+t39 func 1 id=1610612737 kind=3 inv=1 cc=4 params=2 opt=0 vft=0 flags=0x0 ret=25 names 0x0 SavePicture Picture filename [26(29(IPictureDisp)) f=0x1] [8 f=0x1] doc 0x0 "SavePicture" "Saves a picture to a file" ctx=10101 file=(null) entry 0x0 "oleaut32.dll" "OleSavePictureFile" 0
+t40 guid=0a10f64e88afd011984600c04fc29993 kind=4 funcs=1 vars=0 impl=1 vft=56 size=8 align=8 flags=0x1010 ver=0.0 lcid=0 ctor=-1 doc 0x0 "FontEvents" "Event interface for the Font object" ctx=0 file=(null)
+t40 impl 0 IDispatch flags=0
+t40 func 0 id=9 kind=4 inv=1 cc=4 params=1 opt=0 vft=0 flags=0x0 ret=24 names 0x0 FontChanged PropertyName [8 f=0x1] doc 0x0 "FontChanged" (null) ctx=0 file=(null)
+t41 guid=00000000000000000000000000000000 kind=6 funcs=0 vars=0 impl=0 vft=0 size=8 align=8 flags=0x0 ver=0.0 lcid=0 ctor=-1 alias=29(FontEvents) doc 0x0 "IFontEventsDisp" (null) ctx=0 file=(null)

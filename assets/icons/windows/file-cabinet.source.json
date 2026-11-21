@@ -1,0 +1,15 @@
+{
+  "file": "file-cabinet.ico",
+  "frames": 10,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "3f929cda8ec36d03c0b312b460d49313bcc0c985a481851c2674bbefe915105c",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\cabview.dll",
+    "module_sha256": "0040d14b7ff291f097762e1f7056e65adc7cd6ec104cfa80925bbe921ef03fb9"
+  },
+  "supported_frames": 4,
+  "use": "Owner-provided installed Windows reference; local development"
+}

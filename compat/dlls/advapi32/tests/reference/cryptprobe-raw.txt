@@ -1,0 +1,247 @@
+== providers
+base 0x00006602/40/40/56/0x00000000/RC2/RSA Data Security's RC2
+base 0x00006801/40/40/56/0x00000000/RC4/RSA Data Security's RC4
+base 0x00006601/56/56/56/0x00000000/DES/Data Encryption Standard (DES)
+base 0x00008004/160/160/160/0x00000020/SHA-1/Secure Hash Algorithm (SHA-1)
+base 0x00008001/128/128/128/0x00000020/MD2/Message Digest 2 (MD2)
+base 0x00008002/128/128/128/0x00000020/MD4/Message Digest 4 (MD4)
+base 0x00008003/128/128/128/0x00000020/MD5/Message Digest 5 (MD5)
+base 0x00008008/288/288/288/0x00000000/SSL3 SHAMD5/SSL3 SHAMD5
+base 0x00008005/0/0/0/0x00000000/MAC/Message Authentication Code
+base 0x00002400/512/384/16384/0x00000030/RSA_SIGN/RSA Signature
+base 0x0000a400/512/384/1024/0x00000030/RSA_KEYX/RSA Key Exchange
+base 0x00008009/0/0/0/0x00000000/HMAC/Hugo's MAC (HMAC)
+base short 0x00006602/40/RC2 0x00006801/40/RC4 0x00006601/56/DES 0x00008004/160/SHA-1 0x00008001/128/MD2 0x00008002/128/MD4 0x00008003/128/MD5 0x00008008/288/SSL3 SHAMD5 0x00008005/0/MAC 0x00002400/512/RSA_SIGN 0x0000a400/512/RSA_KEYX 0x00008009/0/HMAC end=0x00000103
+enhanced 0x00006602/128/40/128/0x00000000/RC2/RSA Data Security's RC2
+enhanced 0x00006801/128/40/128/0x00000000/RC4/RSA Data Security's RC4
+enhanced 0x00006601/56/56/56/0x00000000/DES/Data Encryption Standard (DES)
+enhanced 0x00006609/112/112/112/0x00000000/3DES TWO KEY/Two Key Triple DES
+enhanced 0x00006603/168/168/168/0x00000000/3DES/Three Key Triple DES
+enhanced 0x00008004/160/160/160/0x00000020/SHA-1/Secure Hash Algorithm (SHA-1)
+enhanced 0x00008001/128/128/128/0x00000020/MD2/Message Digest 2 (MD2)
+enhanced 0x00008002/128/128/128/0x00000020/MD4/Message Digest 4 (MD4)
+enhanced 0x00008003/128/128/128/0x00000020/MD5/Message Digest 5 (MD5)
+enhanced 0x00008008/288/288/288/0x00000000/SSL3 SHAMD5/SSL3 SHAMD5
+enhanced 0x00008005/0/0/0/0x00000000/MAC/Message Authentication Code
+enhanced 0x00002400/1024/384/16384/0x00000030/RSA_SIGN/RSA Signature
+enhanced 0x0000a400/1024/384/16384/0x00000030/RSA_KEYX/RSA Key Exchange
+enhanced 0x00008009/0/0/0/0x00000000/HMAC/Hugo's MAC (HMAC)
+enhanced short 0x00006602/128/RC2 0x00006801/128/RC4 0x00006601/56/DES 0x00006609/112/3DES TWO KEY 0x00006603/168/3DES 0x00008004/160/SHA-1 0x00008001/128/MD2 0x00008002/128/MD4 0x00008003/128/MD5 0x00008008/288/SSL3 SHAMD5 0x00008005/0/MAC 0x00002400/1024/RSA_SIGN 0x0000a400/1024/RSA_KEYX 0x00008009/0/HMAC end=0x00000103
+strong 0x00006602/128/40/128/0x00000000/RC2/RSA Data Security's RC2
+strong 0x00006801/128/40/128/0x00000000/RC4/RSA Data Security's RC4
+strong 0x00006601/56/56/56/0x00000000/DES/Data Encryption Standard (DES)
+strong 0x00006609/112/112/112/0x00000000/3DES TWO KEY/Two Key Triple DES
+strong 0x00006603/168/168/168/0x00000000/3DES/Three Key Triple DES
+strong 0x00008004/160/160/160/0x00000020/SHA-1/Secure Hash Algorithm (SHA-1)
+strong 0x00008001/128/128/128/0x00000020/MD2/Message Digest 2 (MD2)
+strong 0x00008002/128/128/128/0x00000020/MD4/Message Digest 4 (MD4)
+strong 0x00008003/128/128/128/0x00000020/MD5/Message Digest 5 (MD5)
+strong 0x00008008/288/288/288/0x00000000/SSL3 SHAMD5/SSL3 SHAMD5
+strong 0x00008005/0/0/0/0x00000000/MAC/Message Authentication Code
+strong 0x00002400/1024/384/16384/0x00000030/RSA_SIGN/RSA Signature
+strong 0x0000a400/1024/384/16384/0x00000030/RSA_KEYX/RSA Key Exchange
+strong 0x00008009/0/0/0/0x00000000/HMAC/Hugo's MAC (HMAC)
+strong short 0x00006602/128/RC2 0x00006801/128/RC4 0x00006601/56/DES 0x00006609/112/3DES TWO KEY 0x00006603/168/3DES 0x00008004/160/SHA-1 0x00008001/128/MD2 0x00008002/128/MD4 0x00008003/128/MD5 0x00008008/288/SSL3 SHAMD5 0x00008005/0/MAC 0x00002400/1024/RSA_SIGN 0x0000a400/1024/RSA_KEYX 0x00008009/0/HMAC end=0x00000103
+aes 0x00006602/128/40/128/0x00000000/RC2/RSA Data Security's RC2
+aes 0x00006801/128/40/128/0x00000000/RC4/RSA Data Security's RC4
+aes 0x00006601/56/56/56/0x00000000/DES/Data Encryption Standard (DES)
+aes 0x00006609/112/112/112/0x00000000/3DES TWO KEY/Two Key Triple DES
+aes 0x00006603/168/168/168/0x00000000/3DES/Three Key Triple DES
+aes 0x00008004/160/160/160/0x00000020/SHA-1/Secure Hash Algorithm (SHA-1)
+aes 0x0000800c/256/256/256/0x00000020/SHA-256/Secure Hash Algorithm 256 (SHA-256)
+aes 0x0000800d/384/384/384/0x00000020/SHA-384/Secure Hash Algorithm 384 (SHA-384)
+aes 0x0000800e/512/512/512/0x00000020/SHA-512/Secure Hash Algorithm 512 (SHA-512)
+aes 0x00008001/128/128/128/0x00000020/MD2/Message Digest 2 (MD2)
+aes 0x00008002/128/128/128/0x00000020/MD4/Message Digest 4 (MD4)
+aes 0x00008003/128/128/128/0x00000020/MD5/Message Digest 5 (MD5)
+aes 0x00008008/288/288/288/0x00000000/SSL3 SHAMD5/SSL3 SHAMD5
+aes 0x00008005/0/0/0/0x00000000/MAC/Message Authentication Code
+aes 0x00002400/1024/384/16384/0x00000030/RSA_SIGN/RSA Signature
+aes 0x0000a400/1024/384/16384/0x00000030/RSA_KEYX/RSA Key Exchange
+aes 0x00008009/0/0/0/0x00000000/HMAC/Hugo's MAC (HMAC)
+aes 0x0000660e/128/128/128/0x00000000/AES 128/Advanced Encryption Standard 128-bit
+aes 0x0000660f/192/192/192/0x00000000/AES 192/Advanced Encryption Standard 192-bit
+aes 0x00006610/256/256/256/0x00000000/AES 256/Advanced Encryption Standard 256-bit
+aes short 0x00006602/128/RC2 0x00006801/128/RC4 0x00006601/56/DES 0x00006609/112/3DES TWO KEY 0x00006603/168/3DES 0x00008004/160/SHA-1 0x0000800c/256/SHA-256 0x0000800d/384/SHA-384 0x0000800e/512/SHA-512 0x00008001/128/MD2 0x00008002/128/MD4 0x00008003/128/MD5 0x00008008/288/SSL3 SHAMD5 0x00008005/0/MAC 0x00002400/1024/RSA_SIGN 0x0000a400/1024/RSA_KEYX 0x00008009/0/HMAC 0x0000660e/128/AES 128 0x0000660f/192/AES 192 0x00006610/256/AES 256 end=0x00000103
+== import
+base rc2-40 len=40 block=64 effective=40 mode=1 padding=1 iv=8:0000000000000000 salt=11:0000000000000000000000 permissions=59 enc=3902dd61a023e40c8e448e20ceef348dec9955c585004f0f dec=same
+base rc2-128 error=0x80090004
+base rc4-40 len=40 block=0 salt=11:0000000000000000000000 permissions=59 enc=96e571db04205c17ed5d4fc28b6cd43e61002d9e dec=same
+base rc4-128 error=0x80090004
+base des len=64 block=64 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=09e2e708a558887b6e657db65b350cfb5dec4eac70b672f0 dec=same
+base 3des-112 error=0x80090008
+base 3des error=0x80090008
+base aes-128 error=0x80090008
+base aes-192 error=0x80090008
+base aes-256 error=0x80090008
+enhanced rc2-40 len=40 block=64 effective=40 mode=1 padding=1 iv=8:0000000000000000 salt=11:0000000000000000000000 permissions=59 enc=3902dd61a023e40c8e448e20ceef348dec9955c585004f0f dec=same
+enhanced rc2-128 len=128 block=64 effective=128 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=cd44b77b240b815011a3d438ffe0204e6e8712bbcb0e7f75 dec=same
+enhanced rc4-40 len=40 block=0 salt=11:0000000000000000000000 permissions=59 enc=96e571db04205c17ed5d4fc28b6cd43e61002d9e dec=same
+enhanced rc4-128 len=128 block=0 salt=0: permissions=59 enc=e917f0e9a11df48d74ef228238bac50b8f49e622 dec=same
+enhanced des len=64 block=64 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=09e2e708a558887b6e657db65b350cfb5dec4eac70b672f0 dec=same
+enhanced 3des-112 len=128 block=64 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=c94610fb8328ebb2df8894be56f71b00a89be035f42faa7d dec=same
+enhanced 3des len=192 block=64 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=2e9ec168b9201237301b2c14c167c116973cf2e3fbd3f1e1 dec=same
+enhanced aes-128 error=0x80090008
+enhanced aes-192 error=0x80090008
+enhanced aes-256 error=0x80090008
+aes rc2-40 len=40 block=64 effective=40 mode=1 padding=1 iv=8:0000000000000000 salt=11:0000000000000000000000 permissions=59 enc=3902dd61a023e40c8e448e20ceef348dec9955c585004f0f dec=same
+aes rc2-128 len=128 block=64 effective=128 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=cd44b77b240b815011a3d438ffe0204e6e8712bbcb0e7f75 dec=same
+aes rc4-40 len=40 block=0 salt=11:0000000000000000000000 permissions=59 enc=96e571db04205c17ed5d4fc28b6cd43e61002d9e dec=same
+aes rc4-128 len=128 block=0 salt=0: permissions=59 enc=e917f0e9a11df48d74ef228238bac50b8f49e622 dec=same
+aes des len=64 block=64 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=09e2e708a558887b6e657db65b350cfb5dec4eac70b672f0 dec=same
+aes 3des-112 len=128 block=64 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=c94610fb8328ebb2df8894be56f71b00a89be035f42faa7d dec=same
+aes 3des len=192 block=64 mode=1 padding=1 iv=8:0000000000000000 salt=0: permissions=59 enc=2e9ec168b9201237301b2c14c167c116973cf2e3fbd3f1e1 dec=same
+aes aes-128 len=128 block=128 mode=1 padding=1 iv=16:00000000000000000000000000000000 salt=0: permissions=59 enc=2015ee5210973ef30adc68c407bcf8dea060df43c326ed5228bdd8567aa9c64f dec=same
+aes aes-192 len=192 block=128 mode=1 padding=1 iv=16:00000000000000000000000000000000 salt=0: permissions=59 enc=0db7e5fe81133ad23524e58c44bdfab74d99b170d9a480c8eebc8a65a83a52e9 dec=same
+aes aes-256 len=256 block=128 mode=1 padding=1 iv=16:00000000000000000000000000000000 salt=0: permissions=59 enc=1626448dbfb5250bd54fe58349e7c76ee692457090c40a99957d5f90c0d9c724 dec=same
+== modes
+3des ecb set ok iv ok enc=2e9ec168b9201237dd68209dd73d19f97862acbcf1c92ff4 dec=same
+3des cbc set ok iv ok enc=848d4c8e7a5004000288fb4bdadba9a9e3251a184e3f3db9 dec=same
+3des cfb set ok iv ok enc=28b37fcf791e7d41da435f6b1ab416296ebd29e41e4d86b1 dec=same
+3des ofb set error=0x0000054f
+3des cts set error=0x80090005
+aes-128 ecb set ok iv ok enc=2015ee5210973ef30adc68c407bcf8de842dd94f7b498243dd3c1699ddf337d1 dec=same
+aes-128 cbc set ok iv ok enc=2d0d8ce4d05386e9e2e9788ad90dec4de43cf2ddaf50072e1cf86e733067528a dec=same
+aes-128 cfb set ok iv ok enc=513f51ce6f1412a114a72574d8ebd70b75d89fa8372cb8e49d25845a1929f85b dec=same
+aes-128 ofb set error=0x0000054f
+aes-128 cts set error=0x80090005
+rc2-128 ecb set ok iv ok enc=cd44b77b240b81506ba24328bb76e7489f3be6051c3a6d86 dec=same
+rc2-128 cbc set ok iv ok enc=549f6a69fa97d60a770249c476b211f4e29b1afa90599fef dec=same
+rc2-128 cfb set ok iv ok enc=ac4bcf2ae9cb111357782613f9c1b37ead3558ab4b3278cf dec=same
+rc2-128 ofb set error=0x0000054f
+rc2-128 cts set error=0x80090005
+des ecb set ok iv ok enc=09e2e708a558887b9771290797983bebffd40a2d8ed51cf0 dec=same
+des cbc set ok iv ok enc=086842329602df1223eae7049d4ad896450c917894470270 dec=same
+des cfb set ok iv ok enc=739260d514200ad35a2f527c04d5dcca9b2968a720d14146 dec=same
+des ofb set error=0x0000054f
+des cts set error=0x80090005
+pieces first ok n=16 last ok n=16 out=2015ee5210973ef30adc68c407bcf8dea060df43c326ed5228bdd8567aa9c64f
+small error=0x000000ea needed=32 length-only ok n=32
+bad-padding error=0x80090005 bad-length error=0x80090005
+== derive
+base md5 rc4/0 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=f231a43e5d7b2d03e1b34a2386f09b7151c90faf dec=same
+base md5 rc4/40 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=f231a43e5d7b2d03e1b34a2386f09b7151c90faf dec=same
+base md5 rc4/56 len=56 salt=0: key=5f4dcc3b5aa765 enc=9fd7c2658c48c7bc9b300c83f967426e573b8caa dec=same
+base md5 rc4/128 error=0x80090009
+base md5 rc2/0 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=8cbaaea2e5b67fb9a335807e63c52dbdf9d182bbe002c52c dec=same
+base md5 rc2/40 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=8cbaaea2e5b67fb9a335807e63c52dbdf9d182bbe002c52c dec=same
+base md5 rc2/56 len=56 salt=0: key=5f4dcc3b5aa765 enc=651b4a91a592674600ce48d567a77db81fb18b8ac4f39f78 dec=same
+base md5 rc2/128 error=0x80090009
+base md5 des/0 len=64 salt=0: key=5e4ccd3b5ba764d6 enc=e1bce9c418e5c73ffe74bf2389f7c4e9b3e133a10810d14a dec=same
+base md5 3des-112/0 error=0x80090008
+base md5 3des/0 error=0x80090008
+base md5 aes-128/0 error=0x80090008
+base md5 aes-256/0 error=0x80090008
+base sha1 rc4/0 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=58831a9c3915951f66cee66131587391af40a849 dec=same
+base sha1 rc4/40 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=58831a9c3915951f66cee66131587391af40a849 dec=same
+base sha1 rc4/56 len=56 salt=0: key=5baa61e4c9b93f enc=08c6fd2806e0ded9e596e6ad92574a5ca163a188 dec=same
+base sha1 rc4/128 error=0x80090009
+base sha1 rc2/0 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=43df413a768dda4196406bc31ff1b3c51bfbe3a13a6c90e4 dec=same
+base sha1 rc2/40 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=43df413a768dda4196406bc31ff1b3c51bfbe3a13a6c90e4 dec=same
+base sha1 rc2/56 len=56 salt=0: key=5baa61e4c9b93f enc=784e8409a0f76b8cd5d5b9d2aea96fb7544ab4ccd936aa29 dec=same
+base sha1 rc2/128 error=0x80090009
+base sha1 des/0 len=64 salt=0: key=5bab61e5c8b93e3e enc=b82fad242f733f4cfb3072d4d169f5cc12d97f31f032d0f2 dec=same
+base sha1 3des-112/0 error=0x80090008
+base sha1 3des/0 error=0x80090008
+base sha1 aes-128/0 error=0x80090008
+base sha1 aes-256/0 error=0x80090008
+enhanced md5 rc4/0 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=ac97444f067b26930848d30ebed63171ab637321 dec=same
+enhanced md5 rc4/40 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=f231a43e5d7b2d03e1b34a2386f09b7151c90faf dec=same
+enhanced md5 rc4/56 len=56 salt=0: key=5f4dcc3b5aa765 enc=9fd7c2658c48c7bc9b300c83f967426e573b8caa dec=same
+enhanced md5 rc4/128 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=ac97444f067b26930848d30ebed63171ab637321 dec=same
+enhanced md5 rc2/0 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=96e0712852988e49de1a67884c9155003fb456450f2f7ea3 dec=same
+enhanced md5 rc2/40 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=8cbaaea2e5b67fb9a335807e63c52dbdf9d182bbe002c52c dec=same
+enhanced md5 rc2/56 len=56 salt=0: key=5f4dcc3b5aa765 enc=c975ff6f4cfd10840b13dfd3de5086fa8c618beef868ebf3 dec=same
+enhanced md5 rc2/128 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=96e0712852988e49de1a67884c9155003fb456450f2f7ea3 dec=same
+enhanced md5 des/0 len=64 salt=0: key=5e4ccd3b5ba764d6 enc=e1bce9c418e5c73ffe74bf2389f7c4e9b3e133a10810d14a dec=same
+enhanced md5 3des-112/0 len=128 salt=0: key=5e4ccd3b5ba764d61c8326dfb983ce98 enc=ebee4eb7499a440ad5c1554fc44f7887e661c251a9c19a2d dec=same
+enhanced md5 3des/0 len=192 salt=0: key=9180a42f85cb981a6e70323dd331ab3d0eeae61c54a40b73 enc=b4d505fd279552873eecbdeab3acafd3fd4a585166268e51 dec=same
+enhanced md5 aes-128/0 error=0x80090008
+enhanced md5 aes-256/0 error=0x80090008
+enhanced sha1 rc4/0 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=2563e4869869d28cf5eb483708d839d10a7d9af8 dec=same
+enhanced sha1 rc4/40 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=58831a9c3915951f66cee66131587391af40a849 dec=same
+enhanced sha1 rc4/56 len=56 salt=0: key=5baa61e4c9b93f enc=08c6fd2806e0ded9e596e6ad92574a5ca163a188 dec=same
+enhanced sha1 rc4/128 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=2563e4869869d28cf5eb483708d839d10a7d9af8 dec=same
+enhanced sha1 rc2/0 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=b0a494b95040f64328735d86a912b43a39a9e2d2dd4f3a58 dec=same
+enhanced sha1 rc2/40 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=43df413a768dda4196406bc31ff1b3c51bfbe3a13a6c90e4 dec=same
+enhanced sha1 rc2/56 len=56 salt=0: key=5baa61e4c9b93f enc=340c65ca0e0d01d7437fdbee625c1fe3660e5848d0d17520 dec=same
+enhanced sha1 rc2/128 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=b0a494b95040f64328735d86a912b43a39a9e2d2dd4f3a58 dec=same
+enhanced sha1 des/0 len=64 salt=0: key=5bab61e5c8b93e3e enc=b82fad242f733f4cfb3072d4d169f5cc12d97f31f032d0f2 dec=same
+enhanced sha1 3des-112/0 len=128 salt=0: key=5bab61e5c8b93e3e0783250b6df8321a enc=803f54d336450f6990181d117c0c124aa4ca761c51452736 dec=same
+enhanced sha1 3des/0 len=192 salt=0: key=a2bc518652264926ce2515610eaea22c236b7994c1523ecd enc=2d4a95a1a87b94952cda8887e6d5bccf8a918f13c2bf4e08 dec=same
+enhanced sha1 aes-128/0 error=0x80090008
+enhanced sha1 aes-256/0 error=0x80090008
+aes md5 rc4/0 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=ac97444f067b26930848d30ebed63171ab637321 dec=same
+aes md5 rc4/40 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=f231a43e5d7b2d03e1b34a2386f09b7151c90faf dec=same
+aes md5 rc4/56 len=56 salt=0: key=5f4dcc3b5aa765 enc=9fd7c2658c48c7bc9b300c83f967426e573b8caa dec=same
+aes md5 rc4/128 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=ac97444f067b26930848d30ebed63171ab637321 dec=same
+aes md5 rc2/0 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=96e0712852988e49de1a67884c9155003fb456450f2f7ea3 dec=same
+aes md5 rc2/40 len=40 salt=11:0000000000000000000000 key=5f4dcc3b5a enc=8cbaaea2e5b67fb9a335807e63c52dbdf9d182bbe002c52c dec=same
+aes md5 rc2/56 len=56 salt=0: key=5f4dcc3b5aa765 enc=c975ff6f4cfd10840b13dfd3de5086fa8c618beef868ebf3 dec=same
+aes md5 rc2/128 len=128 salt=0: key=5f4dcc3b5aa765d61d8327deb882cf99 enc=96e0712852988e49de1a67884c9155003fb456450f2f7ea3 dec=same
+aes md5 des/0 len=64 salt=0: key=5e4ccd3b5ba764d6 enc=e1bce9c418e5c73ffe74bf2389f7c4e9b3e133a10810d14a dec=same
+aes md5 3des-112/0 len=128 salt=0: key=5e4ccd3b5ba764d61c8326dfb983ce98 enc=ebee4eb7499a440ad5c1554fc44f7887e661c251a9c19a2d dec=same
+aes md5 3des/0 len=192 salt=0: key=9180a42f85cb981a6e70323dd331ab3d0eeae61c54a40b73 enc=b4d505fd279552873eecbdeab3acafd3fd4a585166268e51 dec=same
+aes md5 aes-128/0 len=128 salt=0: key=9181a42f85ca981b6e71333dd231aa3c enc=534f3c8f1b5ac4a72e15518b5fa117904ad2a57d4adaff325aae7b916a02a7f7 dec=same
+aes md5 aes-256/0 len=256 salt=0: key=9181a42f85ca981b6e71333dd231aa3c0febe61d54a40b733d5555856ff65b7c enc=c14a533695a22c54ee9afcaecc061bf028312f55d99eea91158e110d2634d2a7 dec=same
+aes sha1 rc4/0 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=2563e4869869d28cf5eb483708d839d10a7d9af8 dec=same
+aes sha1 rc4/40 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=58831a9c3915951f66cee66131587391af40a849 dec=same
+aes sha1 rc4/56 len=56 salt=0: key=5baa61e4c9b93f enc=08c6fd2806e0ded9e596e6ad92574a5ca163a188 dec=same
+aes sha1 rc4/128 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=2563e4869869d28cf5eb483708d839d10a7d9af8 dec=same
+aes sha1 rc2/0 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=b0a494b95040f64328735d86a912b43a39a9e2d2dd4f3a58 dec=same
+aes sha1 rc2/40 len=40 salt=11:0000000000000000000000 key=5baa61e4c9 enc=43df413a768dda4196406bc31ff1b3c51bfbe3a13a6c90e4 dec=same
+aes sha1 rc2/56 len=56 salt=0: key=5baa61e4c9b93f enc=340c65ca0e0d01d7437fdbee625c1fe3660e5848d0d17520 dec=same
+aes sha1 rc2/128 len=128 salt=0: key=5baa61e4c9b93f3f0682250b6cf8331b enc=b0a494b95040f64328735d86a912b43a39a9e2d2dd4f3a58 dec=same
+aes sha1 des/0 len=64 salt=0: key=5bab61e5c8b93e3e enc=b82fad242f733f4cfb3072d4d169f5cc12d97f31f032d0f2 dec=same
+aes sha1 3des-112/0 len=128 salt=0: key=5bab61e5c8b93e3e0783250b6df8321a enc=803f54d336450f6990181d117c0c124aa4ca761c51452736 dec=same
+aes sha1 3des/0 len=192 salt=0: key=a2bc518652264926ce2515610eaea22c236b7994c1523ecd enc=2d4a95a1a87b94952cda8887e6d5bccf8a918f13c2bf4e08 dec=same
+aes sha1 aes-128/0 len=128 salt=0: key=a3bc508753274827cf2515600eaea32c enc=4a513940a264d1e99ecfa6be4a28f041c5a63dce597903bbf7d279a59c7a2483 dec=same
+aes sha1 aes-256/0 len=256 salt=0: key=a3bc508753274827cf2515600eaea32c226a7895c0533fcc0a67de054e4822f0 enc=1c8e912a890bb49ac551c7d28e4b1f8e9891dcffaaa20d43115d332c21633f06 dec=same
+aes sha256 rc4/0 len=128 salt=0: key=5e884898da28047151d0e56f8dc62927 enc=bf36d728e5b21b7eb50790990bbfdcd0159f046d dec=same
+aes sha256 rc4/40 len=40 salt=11:0000000000000000000000 key=5e884898da enc=ed19b355bb6ab18ad602a9d2eaef7b95436e5ad7 dec=same
+aes sha256 rc4/56 len=56 salt=0: key=5e884898da2804 enc=89e0c460dfca0bd2d4cb5ff3f0b8b697f932cbd4 dec=same
+aes sha256 rc4/128 len=128 salt=0: key=5e884898da28047151d0e56f8dc62927 enc=bf36d728e5b21b7eb50790990bbfdcd0159f046d dec=same
+aes sha256 rc2/0 len=128 salt=0: key=5e884898da28047151d0e56f8dc62927 enc=30bcfa47d4bb9f3636e88bf3ed79278bea5164b165573777 dec=same
+aes sha256 rc2/40 len=40 salt=11:0000000000000000000000 key=5e884898da enc=5606ea2c609d0b468cfa4107a18e9de51a0e87326072aa33 dec=same
+aes sha256 rc2/56 len=56 salt=0: key=5e884898da2804 enc=54fb8223ea6456f379a4255d768e9165fd6814f6e57642e7 dec=same
+aes sha256 rc2/128 len=128 salt=0: key=5e884898da28047151d0e56f8dc62927 enc=30bcfa47d4bb9f3636e88bf3ed79278bea5164b165573777 dec=same
+aes sha256 des/0 len=64 salt=0: key=5e894998da290470 enc=2bcd84ac81a45b3746b5a7aa9ce2b081cbe444f66beb871b dec=same
+aes sha256 3des-112/0 len=128 salt=0: key=5e894998da29047051d0e56e8cc72926 enc=38373d479e809d871d78d7ffa5a26fb3a83fbf96f74040aa dec=same
+aes sha256 3des/0 len=192 salt=0: key=5e894998da29047051d0e56e8cc7292673613d0d6babbcd6 enc=37bfb4a00b6d5673c81946516e58e063c55fb4a97b70387b dec=same
+aes sha256 aes-128/0 len=128 salt=0: key=5e884898da28047151d0e56f8dc62927 enc=c4aa0b9b426c79d4e59702c1ab7a385bb317ddc9ede693799f47a7b477f4ad4e dec=same
+aes sha256 aes-256/0 len=256 salt=0: key=5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8 enc=8a92ddf21f46f56c50ecabc6b2d5b7b93eccab4b10eb0b872a2fb569daf52212 dec=same
+after-derive hash-data error=0x8009000c export error=0x8009000b
+== rsa
+import ok alg=41984 len=1024 block=1024 permissions=63
+public n=148 blob=0602000000a4000052534131000400000100010005c84e9af69691e7dc158ad93d924246abf6745b19d3158d5f6608d2d1e5a7cf243376c760c478b7c79673cd17b5220e76078a8fb4642147d1ee4df93366b0d8a496381f908866de6b1df936139a6e156d8146f39a9c01e3ba833c5ae8bc700c07ecad400413aafbe8e5d344cf2b263c21985d23cf417b98bc17a8c79f1295bc
+private n=596 same
+sign md5 sig=b8b9ac5f8c0352fb0e6d3abd509a28fe8fb7db9785a9c870864d01f56baa5824c5e34f9b46ef7b55afd088f9195666fa51615cd163d0882231fc0d3dc21ba31c6eee0225ffef84b342f1b0a5ef4c2d063f36a7ae8719faea5a8a5f60ad9e321845f4cfd5408480fe37ee8a2986009aeba94c5f173f437ccee00a44fafc42782d verify ok altered error=0x80090006
+sign sha1 sig=d0946d8f83d52971a3b7ffa481683bfe94f303202b65ab9efbc8448d83732bd6fb50654b0a22e13f2f502596b6f31c8143e80d81d6f3643120bfd135db766b1ba089469230f6e76638dd52b83e9e0e7647e1d70efd4668dc0d46abb9a6c8a72234a428ddee7439329d0cb89a804149c629c1c5d1539747ec1f3e7368e6f72b76 verify ok altered error=0x80090006 nooid=a1ba9157aa3fcd6ce0aef9c940691496d67dd48053df62dcfd3f5b840c9009fc93f58e48f9bd2f82a355258972a623fa28fbb35723b1cc158a4aeb98a8adb0218fac2a8bb607a929230229e96db68d6ea4b9000deb1c566c89c560907f6c4ac836c3379ab4f48604e26499739c9d19057daf262ed6a28eca6a846ed6d5390178
+sign sha256 sig=307af1d5042963423b57a43d56d06d9ef6b4e6ef4f964c94db18eefa75c4bbd308825c33dc40851013728c4e9d48e28393037f1f8639f34ccb7b51889ae644b6f41a86f4034a3da4c303291d5977db72c36bfddd03fb1227493b2a86e262f8d748ab1f8b16b91bccc9c25d0df1fc123859e37e80b5a8af6a71d33e2af9207f0d verify ok altered error=0x80090006
+sign sha512 sig=790851a6347a9b37c5531e558172a3c24ca91588d33813cf44b8a28cca7fa0619b1c72b3068af968d7ee2551b30a4c7c3eb9d72f5f4d480e47ccb5da121d12610d2643944259e03d1c7dbb54b73adcab94650d19ff9b13f3a8b6266d7cef8543cdf6fd2daacfc7bf30ad4a1a3eddf79dd1a2bd31654a6e3424f43557d88dea09 verify ok altered error=0x80090006
+decrypt n=16 text=446f6f72732043727970746f41504921 oaep=446f6f7273204f4145502074657874 altered error=0x0000001f
+encrypt ok n=128 back ok same too-long error=0x80090004
+simpleblob len=128 enc=8d1112aeb26d6d502d51f4e8afb95df0c97f1849 dec=same plain=112233445566778899aabbccddeeff00 export-simple ok n=140
+public-only ok sign-no-key error=0x80090016 export-private error=0x8009000b decrypt error=0x8009000d
+== hmac
+hmac md5 import ok info ok value=750c783e6ab0b503eaa86e310a5db738
+hmac sha1 import ok info ok value=effcdf6ae5eb2fa2d27416d5f184df9c259a7c79
+hmac sha256 import ok info ok value=5bdcc146bf60754e6a042426089575c75a003f089d2739839dec58b964ec3843
+hmac sha384 import ok info ok value=af45d2e376484031617f78d2b58a6b1b9c7ef464f5a01b47e42ec3736322445e8e2240ca5e69e2c78b3239ecfab21649
+hmac sha512 import ok info ok value=164b7a7bfcf819e2e395fbe73b56e0a387bd64222e831fd610270cd7ea2505549758bf75c05a994a6d034f65f8f0e6fdcaeab1a34d4a6b4b636e070a38bce737
+hmac short-key error=0x80090004 no-key error=0x80090003
+== extras
+session-hash ok value=40d826b026fc298a977468322aec923f9373a347 little-endian ok value=76bc87baeca7725c948fd1c53766454fda0867af
+salt set ok salt=0: enc=5f5a0c58722836ae54a9a3004b74b1a5140d8d89 dec=same rc4-128-salt ok
+effective set ok effective=64 enc=a17257d94613373d8de7ac7c0741274b4d36c6f27f133132 dec=same too-large error=0x80090005
+mac des value=5dec4eac70b672f0
+mac 3des value=973cf2e3fbd3f1e1
+mac aes-128 value=a060df43c326ed5228bdd8567aa9c64f
+mac rc4 error=0x80090003
+ssl3-shamd5 create ok size=36 data error=0x00000006 value error=0x8009000c
+duplicate ok iv-after-piece=16:00000000000000000000000000000000 original=a060df43c326ed5228bdd8567aa9c64f copy=a060df43c326ed5228bdd8567aa9c64f
+== genkey
+base rc2=40 rc4=40 des=64 3des=0x80090008 aes-256=0x80090008 rsa-keyx=512 rsa-sign=512
+enhanced rc2=128 rc4=128 des=64 3des=192 aes-256=0x80090008 rsa-keyx=1024 rsa-sign=1024
+aes rc2=128 rc4=128 des=64 3des=192 aes-256=256 rsa-keyx=1024 rsa-sign=1024
+errors rc4-256 error=0x80090009 rc4-32 error=0x80090009 aes-on-base error=0x80090008 rsa-512 ok user-key ok not-exportable error=0x8009000b destroyed error=0x00000057

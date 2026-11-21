@@ -1,0 +1,84 @@
+{
+  "file": "paint.ico",
+  "frames": 14,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "120efd8b2363edd98684c37fda5e9647722474467ad923ce8ecd9480117257c0",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-16_altform-unplated.png",
+        "sha256": "d3a28986dc49a62f7bc526f179f27a56fcc49ebd31bf6cfca72bc766d56c01fb",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-20_altform-unplated.png",
+        "sha256": "c9c083bb7bb9b5a51a4a35be2eb4eec255f1f0bedac2d0d24dd2a196eaff5890",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-24_altform-unplated.png",
+        "sha256": "1faaa144d45ce13c6c4816835ea354b07fe9bdbad6db6f97cd1e8852e6c8bb4f",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-30_altform-unplated.png",
+        "sha256": "3ec2c964f946d756a7abfdf51b195684e0bfbe53cf76b84fd3f65253d5853f6b",
+        "size": 30
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-32_altform-unplated.png",
+        "sha256": "593ddc46e42d672049dce4478f1609b97a3bd1114c3d9a6b9d6312ecc2f5ab22",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-36_altform-unplated.png",
+        "sha256": "5c1eb7a1b108f6ab7dda4583fdc9719ba20bfd892d7e998cdc4a08967a098e46",
+        "size": 36
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-40_altform-unplated.png",
+        "sha256": "a443443b2e0cded6a9f5987c0b63fc4351e4afe60f137a63a25c7458bdcbe712",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-48_altform-unplated.png",
+        "sha256": "b069c6780148be78d5a7705547113bdb65aa8aee53e57821e8855d6bb64acca9",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-60_altform-unplated.png",
+        "sha256": "db231ac6d2d2ddc60c91b2415bae519dc0cd02164198d16038cc431b9dc3ecde",
+        "size": 60
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-64_altform-unplated.png",
+        "sha256": "7b70321c28eefa1028c472783594121ce273aa474862a9718bc14711730fd2c2",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-72_altform-unplated.png",
+        "sha256": "9f220447696910860446ce887d76c7dba2b7bb4f384e67eaf75e69082553e8db",
+        "size": 72
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-80_altform-unplated.png",
+        "sha256": "2fbcd3763f1df3f551cff53bd259b66d77e7d9c18204c1b3120433bb3917e7b2",
+        "size": 80
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-96_altform-unplated.png",
+        "sha256": "88a11ad077d5d0be86b13e0f175e90c80c791acea84b8a3e907a55023a05a3aa",
+        "size": 96
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintAppList.targetsize-256_altform-unplated.png",
+        "sha256": "18e46f81f7baaf8c012fdc448c0712d46188b307c96199ca650ddd79148cf37d",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 14,
+  "use": "Owner-provided installed Windows reference; local development"
+}

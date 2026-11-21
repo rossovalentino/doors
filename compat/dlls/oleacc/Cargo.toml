@@ -1,0 +1,22 @@
+[package]
+name = "door-oleacc"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original oleacc.dll: Active Accessibility (no MSAA servers)"
+
+[lib]
+name = "oleacc"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-windows-abi/guest-runtime"]
+
+[dependencies]
+door-windows-abi = { path = "../../abi", features = ["guest-heap"] }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

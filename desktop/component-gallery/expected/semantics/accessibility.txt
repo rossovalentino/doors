@@ -1,0 +1,20 @@
+window "Doors UI Gallery"
+  navigation "Navigation" [FOCUSABLE] {FOCUS}
+    button "Close Navigation" {INVOKE}
+    list item "Basic input" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=1/9
+    list item "Control states" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/9
+    list item "Text and selection" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=3/9
+    list item "Collections" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=4/9
+    list item "Menus and toolbars" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=5/9
+    list item "Status and info" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=6/9
+    list item "Layout" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=7/9
+    list item "Dialogs" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=8/9
+    list item "Accessibility" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT} pos=9/9
+    scroll viewer "" [VERTICAL]
+      heading "Accessibility" level=1
+      group "Narrator captions"
+        heading "Narrator captions" level=2
+        text "What a screen reader says as focus moves (speech arrives with audio)."
+      group "Inspector"
+        heading "Inspector" level=2
+        text ""

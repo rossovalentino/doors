@@ -1,0 +1,51 @@
+#![no_std]
+//! Bounded desktop policy, shared by the native service and host regressions.
+extern crate alloc;
+pub mod accessibility;
+pub mod acrylic;
+pub mod apps;
+pub mod capture;
+pub mod clipboard;
+pub mod clipboard_history;
+pub mod clipboard_view;
+pub mod display_scale;
+pub mod dnd;
+pub mod document_open;
+pub mod elevation;
+pub mod firewall_alert;
+pub mod input_batch;
+pub mod login;
+pub mod magnify;
+pub mod material;
+pub mod menu;
+pub mod menus;
+pub mod motion;
+pub mod not_responding;
+pub mod notify_icons;
+pub mod overview;
+pub mod paint;
+pub mod policy;
+pub mod preferences;
+pub mod run;
+pub mod run_programs;
+pub mod scanout;
+pub mod search;
+pub mod search_glyph;
+pub mod shell_link;
+pub mod shell_semantics;
+pub mod shell_view;
+pub mod snap;
+pub mod snap_assist;
+pub mod snip;
+pub mod start;
+pub mod taskbar;
+pub mod telemetry;
+pub mod text_edit;
+pub mod text_input;
+pub mod tray;
+pub mod uac;
+pub mod wallpaper;
+pub mod win32;
+/// The window authority (engine, geometry, placement) for host tools that
+/// derive input points from the real model rather than copies of it.
+pub use door_graphics_core as graphics;

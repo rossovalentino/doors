@@ -1,0 +1,33 @@
+/* Generated from Windows 11 26H2's output of `x86gui.exe raw` on the owner's PC
+ * (one string per compared step). */
+    /* class */
+    "class size=48 registered=1 info=1 proc=1 extra=16 class-extra=8 name=1 canary=1\r\n"
+,
+    /* create */
+    "create window=1 sequence=0x00000024,0x00000081,0x00000083,0x00000001\r\n"
+    "createstruct params=1 instance=1 parent=1 name=1 class=2 create-params=1 create-name=1 style=1 ex=0x00000100 size=300x200 at=10,20\r\n"
+    "longs wndproc=1 class-wndproc=1 class-extra=16 extra0=1 extra4=1 extra12=1 extra13=0 error=1413 userdata=1\r\n"
+,
+    /* message */
+    "send result=-3 peek=1 hwnd=1 wparam=7 lparam=-5 canary=1 timeout=1 timeout-result=3 timeout-canary=1\r\n"
+,
+    /* thread */
+    "thread text=from a thread length=13 got=1 posing=1 pos=5,6 size=120x80 rect=136x80\r\n"
+,
+    /* paint */
+    "paint size=64 hdc=1 canary=1\r\n"
+,
+    /* gdi */
+    "gdi section=1 canary=1 pixel=0x00123456 bitmap=24 bits=1 width=4 bpp=32 bitmap-canary=1 brush=12 color=0x00563412 brush-canary=1\r\n"
+,
+    /* control */
+    "controls check=1 id=12 item=1 start=2 end=5 canary=1 length=8\r\n"
+,
+    /* callback */
+    "callbacks children=2 timer=1 id=9\r\n"
+,
+    /* menu */
+    "menu count=3 sub=1 id=102 text=Open set=1 get=1\r\n"
+,
+    /* dialog */
+    "dialog created=1 init=4660 user=22136 dlgproc=1 result=77\r\n"

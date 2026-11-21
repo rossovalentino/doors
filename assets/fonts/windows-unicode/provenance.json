@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "asset": "Owner-installed Windows fonts for the Door Text Unicode fallback chain",
+  "license": "owner-local Windows font, not redistributable, private build",
+  "decision": "Owner decision 2026-10-23 (docs/design/p12-p13-plan-20261023.md, item 2): use the installed Windows fonts for this private build; never publish them",
+  "acquired": "2026-10-23",
+  "acquisition": "Read-only byte copies from C:/Windows/Fonts on the owner's Windows 11 PC; host files were not modified; each copy compared byte-identical (cmp) after copying",
+  "use": "Loaded at run time from caller-supplied bytes by door-graphics-text FontSet::from_files or a FontProvider; never embedded with include_bytes!",
+  "files": [
+    {
+      "file": "seguiemj.ttf",
+      "source": "C:/Windows/Fonts/seguiemj.ttf",
+      "bytes": 12934920,
+      "sha256": "451df9bb5546055af625ff86aa72695df43e8e170b4c6c1316fe44e9c7a22f7c",
+      "role": "Emoji",
+      "faces": ["0 Segoe UI Emoji (COLR/CPAL v0 and v1 colour glyphs)"]
+    },
+    {
+      "file": "seguisym.ttf",
+      "source": "C:/Windows/Fonts/seguisym.ttf",
+      "bytes": 2514056,
+      "sha256": "a4a35dcc62cd30e1a6c97b695ecef83e59d2b149e3af834f6a49f11851d56b37",
+      "role": "Symbol",
+      "faces": ["0 Segoe UI Symbol"]
+    },
+    {
+      "file": "seguihis.ttf",
+      "source": "C:/Windows/Fonts/seguihis.ttf",
+      "bytes": 1622060,
+      "sha256": "a162ceeaf701b55d11c542daf1c39c52bfaf686496505bff2eb75ca24814c136",
+      "role": "Historic",
+      "faces": ["0 Segoe UI Historic"]
+    },
+    {
+      "file": "msyh.ttc",
+      "source": "C:/Windows/Fonts/msyh.ttc",
+      "bytes": 19704352,
+      "sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f",
+      "role": "ChineseSimplified",
+      "faces": ["0 Microsoft YaHei", "1 Microsoft YaHei UI (selected)"]
+    },
+    {
+      "file": "msjh.ttc",
+      "source": "C:/Windows/Fonts/msjh.ttc",
+      "bytes": 21404172,
+      "sha256": "1fd5fc7046e0eea753988ee06d1a5a731df68475614e2174fbba9b4800f392ac",
+      "role": "ChineseTraditional",
+      "faces": ["0 Microsoft JhengHei", "1 Microsoft JhengHei UI (selected)"]
+    },
+    {
+      "file": "YuGothM.ttc",
+      "source": "C:/Windows/Fonts/YuGothM.ttc",
+      "bytes": 13908392,
+      "sha256": "cb2021bbfe40b21ec564848b8d702125661594e1b4f1eb2e77fd8a98b485cf19",
+      "role": "Japanese",
+      "faces": ["0 Yu Gothic Medium", "1 Yu Gothic UI (selected; the Regular UI face ships in this collection, not YuGothR.ttc)"]
+    },
+    {
+      "file": "malgun.ttf",
+      "source": "C:/Windows/Fonts/malgun.ttf",
+      "bytes": 13459196,
+      "sha256": "7a183cf1c6c56b9609fcc16eda8b5229fbc11758a21e669ec00343239b02192f",
+      "role": "Korean",
+      "faces": ["0 Malgun Gothic"]
+    },
+    {
+      "file": "Nirmala.ttc",
+      "source": "C:/Windows/Fonts/Nirmala.ttc",
+      "bytes": 5304988,
+      "sha256": "ad02cdfc06e144ac45f318e8e5a64cbe04c7479d4beb91d25f5a319a466b1767",
+      "role": "Indic",
+      "faces": ["0 Nirmala UI (selected)", "1 Nirmala UI Bold (selected)", "2 Nirmala UI Semilight", "3-5 Nirmala Text"],
+      "note": "Added under 'others as needed' for the Hindi/Devanagari corpus; Segoe UI has no Indic coverage"
+    }
+  ],
+  "also_used": [
+    "assets/fonts/segoe-ui/SegUIVar.ttf (UiVariable)",
+    "assets/fonts/segoe-ui/segoeui.ttf and seguisb.ttf (Ui: Arabic, Hebrew, Armenian, Georgian)",
+    "assets/fonts/cascadia-mono/CascadiaMono.ttf (Monospace)"
+  ],
+  "not_copied": "Bold CJK collections (msyhbd.ttc, msjhbd.ttc, YuGothB.ttc, malgunbd.ttf; about 59 MB) are omitted; weights >= 600 use synthetic horizontal emboldening for static faces lighter than 550",
+  "scope": "Not Microsoft DirectWrite/ClearType; shaping, fallback and rasterization are original Door Text code over HarfRust/Skrifa. No distribution right is inferred."
+}

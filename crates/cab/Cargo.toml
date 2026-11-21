@@ -1,0 +1,12 @@
+[package]
+name = "door-cab"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Microsoft Cabinet (MS-CAB) reader and writer: stored, MSZIP and LZX folders, CFDATA checksums"
+
+[dependencies]
+
+[lints]
+workspace = true

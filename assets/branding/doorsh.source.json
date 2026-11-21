@@ -1,0 +1,20 @@
+{
+  "kind": "original_Door_OS_vector_artwork",
+  "date": "2026-11-02",
+  "authorship": "Original SVG code authored in this project at the owner's request (Terminal profiles): Doorsh, the Doors shell, is a night-blue console tile with a white prompt chevron and the Doors open-door mark (front leaf and lit doorway, after door.svg) in the cursor position. It does not trace or copy a Macrohard icon.",
+  "exports": "Offline xtask resvg rasterization (cargo xtask assets branding build), ICO/PNG and 16..288px native BGRA frames",
+  "files": [
+    {
+      "path": "assets/branding/doorsh.svg",
+      "sha256": "581ebc9613eae1c20fa201483ac2244ac3493e63ebe09b03a74e8e40c07a6eef"
+    },
+    {
+      "path": "assets/branding/doorsh.png",
+      "sha256": "6f55ada9e5834fbb51f69118ed766decae097070f883ed950c38e879982df827"
+    },
+    {
+      "path": "assets/branding/doorsh.ico",
+      "sha256": "dd42ef5f21c0d505939edb7615f7a54c5627ad914731db3379ec440be894a2cf"
+    }
+  ]
+}

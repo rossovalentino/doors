@@ -1,0 +1,13 @@
+[package]
+name = "door-keyboard-layouts"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Allocation-free keyboard layouts, dead keys, AltGr and input-method switching (§53)"
+
+[dependencies]
+door-abi = { path = "../../runtime/abi" }
+
+[lints]
+workspace = true

@@ -1,0 +1,48 @@
+[package]
+name = "door-window"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+[features]
+native = []
+[[bin]]
+name = "door-window"
+path = "src/main.rs"
+required-features = ["native"]
+test = false
+bench = false
+[dependencies]
+# The 1024x768 reference wallpaper is stored deflated (miniz_oxide,
+# MIT/Zlib/Apache-2.0, the version door-workspace pins) to keep this image
+# under the 16 MiB native loader limit.
+miniz_oxide = { version = "=0.8.9", default-features = false, features = ["with-alloc"] }
+door-abi = { path = "../../runtime/abi" }
+door-initfs = { path = "../../fs/initfs" }
+door-sys = { path = "../../runtime/sys" }
+door-rt = { path = "../../runtime/rt" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+door-service-client = { path = "../../frameworks/service-client" }
+door-system-services = { path = "../../services" }
+door-graphics-core = { path = "../compositor" }
+door-graphics-text = { path = "../../frameworks/text" }
+door-keyboard-layouts = { path = "../../frameworks/keyboard-layouts" }
+door-accessibility = { path = "../../frameworks/accessibility" }
+door-locale = { path = "../../frameworks/locale" }
+door-settings-map = { path = "../../frameworks/settings-map" }
+door-design-tokens = { path = "../../frameworks/design-tokens" }
+qoi = { version = "=0.4.1", default-features = false, features = ["alloc"] }
+# Built-in wallpapers ship as their original baseline JPEGs (C:WindowsWebWallpaper);
+# the same pinned decoder door-workspace uses for previews.
+zune-jpeg = { version = "=0.5.15", default-features = false }
+# Run as administrator: User Account Control shows the publisher the window
+# server verified itself (Authenticode) and binds approval to the image's
+# SHA-256.
+door-authenticode = { path = "../../crates/authenticode" }
+door-tls = { path = "../../crates/tls" }
+door-pe-icon = { path = "../../crates/pe-icon" }
+sha2 = { version = "=0.10.9", default-features = false }
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+[lints.clippy]
+all = "warn"

@@ -1,0 +1,53 @@
+{
+  "atlases": [
+    {
+      "bytes": 212449,
+      "coverage_bytes": 279981,
+      "factor": 1,
+      "file": "hinted-1x.dfa",
+      "percent": 100,
+      "sha256": "6fe738627c327ccdded8ed9aee1443cd180da26fd34ff5ea739d87f360d68ac8"
+    },
+    {
+      "bytes": 489831,
+      "coverage_bytes": 969558,
+      "factor": 2,
+      "file": "hinted-2x.dfa",
+      "percent": 200,
+      "sha256": "eba5c07ce133cec9841fa4b2a6bda61d6ceb60a214d64ce77ff1dbba2e1278bb"
+    },
+    {
+      "bytes": 757691,
+      "coverage_bytes": 2088321,
+      "factor": 3,
+      "file": "hinted-3x.dfa",
+      "percent": 300,
+      "sha256": "1a01c1f8d4bbd7986452338c6d07ec8247afcbda345f097f03ec9757f2723152"
+    },
+    {
+      "bytes": 289396,
+      "coverage_bytes": 423864,
+      "file": "hinted-125.dfa",
+      "percent": 125,
+      "sha256": "9aef045f17de5dee5ec1ffba2686c586acb8093d229db1a55f302ce980162d90"
+    },
+    {
+      "bytes": 352142,
+      "coverage_bytes": 575670,
+      "file": "hinted-150.dfa",
+      "percent": 150,
+      "sha256": "97b808facdca5b98948b83d8c560d0a4275cd97f09798cfc57ba66ce4c988aa5"
+    },
+    {
+      "bytes": 428546,
+      "coverage_bytes": 772689,
+      "file": "hinted-175.dfa",
+      "percent": 175,
+      "sha256": "4e4de748ca262aec5483ab7ed0bcac4b2a62b4c89576b37f5ef3b2f5ca9204d4"
+    }
+  ],
+  "font_sha256": "27ca1ab4bd5ad3b0404ee6a9a03b143408dbd7e5a4c9e4b2054639c03fc0f682",
+  "generator": "Original Door exporter / Skrifa0.48.0 embedded hint interpreter / ab_glyph area raster / existing RGB filter",
+  "schema_version": 1,
+  "scope": "Eight ASCII styles; original static/legacy kerning policy, not complete Unicode shaping or Microsoft ClearType"
+}

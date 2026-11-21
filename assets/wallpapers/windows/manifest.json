@@ -1,0 +1,10 @@
+{
+  "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Wallpapers/Windows%2011/Desktop/Windows/img0.jpg",
+  "source_sha256": "a37491a5e479e191cfe547b484426037455ce8aacff7ab15f91925330c24864f",
+  "png_sha256": "54903484c7d6204aa8968b6242428af8c42e68553f46d2e094c7cc79ffec05a3",
+  "conversion": "Lossless RGB JPEG decode to PNG using Pillow; pinned PNG is exporter input",
+  "export": "Lossless3840x2400 QOI RGBA original; one-time centered bilinear cover to native up-to3840x2160 BGRA; retained1024x768 BGR diagnostic has historical exact pixels. Source is never upscaled for4K scanout.",
+  "license": "not_declared",
+  "use": "owner-requested local reference",
+  "qoi_sha256": "3eb3864247a01f2e285cf81c0f5232c07fed44a5aa50b6b57df7c4498fecb6b1"
+}

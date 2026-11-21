@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "record_kind": "phase_critic_review",
+  "phase": "P04",
+  "agent": "/root/p04_critic",
+  "outcome": "passed",
+  "unresolved_findings": 0,
+  "evidence_report": "reports/runs/host-1791821405767786500-30956/report.json",
+  "evidence_report_sha256": "49dc003db8f7660400d361c567c3b7c6830da7b062220900d52013352689fa4a",
+  "reviewed_input_count": 98,
+  "reviewed_build_inputs": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "de3fed914d688165550deae7bb581490f89f64f2c07fd57145ddc3e5742d3abe"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "13a7c89b2a3e1f982c92daf647fee4675f8069d7b6ca63eaa287b17afed179f3"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "6ae370f9197c344d11be2b77dbde37745e323dcf5f0e238a72605c0f8b52f7f1"
+    },
+    {
+      "path": "DOOR_OS_MASTER_SPECIFICATION.md",
+      "sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37"
+    },
+    {
+      "path": "boot/config/boot.txt",
+      "sha256": "b4cff7b35f1367c925d20351e4aab8be84e2bec5f4c22fc95dae466ce01c17e3"
+    },
+    {
+      "path": "boot/uefi/Cargo.toml",
+      "sha256": "c85021f93028d0a6845dd2fd3ed037e90ad072459071ade997103bc70def5c4d"
+    },
+    {
+      "path": "boot/uefi/src/boot_info.rs",
+      "sha256": "45bef5e4f05d2b4b684a419d4d339718e5e81fb9ec77e3be2afa52bd7a742bc9"
+    },
+    {
+      "path": "boot/uefi/src/elf_loader.rs",
+      "sha256": "bdbed0a58447b1379ca02c664c16a6aa0d710961fd4dafbff7239381d8a6b31f"
+    },
+    {
+      "path": "boot/uefi/src/firmware.rs",
+      "sha256": "faa8e08f5947aa2290e61eb4d2a8c90d5b05a7a06b496c20076afc763eb6f123"
+    },
+    {
+      "path": "boot/uefi/src/handoff.rs",
+      "sha256": "49a24fee0c909764252bf0dacf0e619436b11d1379fbbf13cccb5ccc8f8712a8"
+    },
+    {
+      "path": "boot/uefi/src/main.rs",
+      "sha256": "879d656a5daa8d207093f328ee69fd8f500e767bd48d377cca71b31a5a248374"
+    },
+    {
+      "path": "boot/uefi/src/paging.rs",
+      "sha256": "b291483008ff7d1218837fe07b89f7021e8544ff73db065a75a58ba90635c0dd"
+    },
+    {
+      "path": "boot/uefi/src/platform.rs",
+      "sha256": "a7cc4239ebfe73f8d8e1122b374e838f3e14bad2b5a5eb8b6f35c4f4b1965019"
+    },
+    {
+      "path": "boot/debug/Cargo.toml",
+      "sha256": "5a5dd1fa0ee4402924bc8b0cc9294042441cebaaa3efd12b38a35ff9b518ef0e"
+    },
+    {
+      "path": "boot/debug/src/lib.rs",
+      "sha256": "1ef95270f548210f3568fcda58bf9015df9da726c14b5db08f1e14bf044f5fb2"
+    },
+    {
+      "path": "crates/boot-protocol/Cargo.toml",
+      "sha256": "0f576b285913461a7f9f993be82aaa4eaea7e11727ddd7a0d99bd1e1c7a5d453"
+    },
+    {
+      "path": "crates/boot-protocol/src/boot.rs",
+      "sha256": "6b8d0b38ed26bd0bd4a8562976d08a0f2ef3aa18b2c86e60f567f8291cacedfe"
+    },
+    {
+      "path": "crates/boot-protocol/src/lib.rs",
+      "sha256": "7828bcf1896d2ba1faf1e7ae0dfe6e5d1f01e7bc800a810bae4e0ac33f20f741"
+    },
+    {
+      "path": "crates/boot-protocol/src/memory.rs",
+      "sha256": "efb74a6922ac3b62b26bae3a881e879b75893b8ca6a05e246f89af051a83eefb"
+    },
+    {
+      "path": "crates/boot-protocol/src/platform.rs",
+      "sha256": "018aac82b38c1d5f2dfab4f7cd8263396a4676cca9689f487fffea209ef120eb"
+    },
+    {
+      "path": "crates/boot-protocol/src/startup.rs",
+      "sha256": "307f9e77bea0029d8d23e17273d7d0cd5054bd60150c2e12a633586b2c743f97"
+    },
+    {
+      "path": "crates/boot-protocol/src/wire.rs",
+      "sha256": "971ee5e06739162fcb3b811f93f3fa1739b01c638b05daf0e26daf1ac4292b11"
+    },
+    {
+      "path": "crates/boot-protocol/tests/boot_info.rs",
+      "sha256": "adfeb47265bb9d22b620a78d1a22f9f1fe87e5b67aed9c69523a854f314bf3e0"
+    },
+    {
+      "path": "crates/boot-protocol/tests/kernel_handoff.rs",
+      "sha256": "bef2674be4e65a6ae82b50664537b21b6804736c1aac38249abe53df43fbde25"
+    },
+    {
+      "path": "crates/boot-protocol/tests/platform.rs",
+      "sha256": "175bf6b1915d3cd30f20340b31b4a726afdb2dc71a23698ad7b18222088a3ecd"
+    },
+    {
+      "path": "crates/boot-protocol/tests/startup.rs",
+      "sha256": "2838940a6eb0117604af7ed1a467b467419baa1b4067771b4f41de80dac2e76f"
+    },
+    {
+      "path": "crates/image-format/Cargo.toml",
+      "sha256": "a1ef1bfd8e15776cab8bbdf134a6e116e7da3c060a2b475f3a7f6d255f94888d"
+    },
+    {
+      "path": "crates/image-format/src/elf.rs",
+      "sha256": "ffdc395132e7c70e72b8ba4bf34a6a4cf3bc409c6d98fb4f585a479a230c3de3"
+    },
+    {
+      "path": "crates/image-format/src/lib.rs",
+      "sha256": "bf2145e0553e49ba26b3123f73a6ac3b5473b5b6def5d1218f517bc34eae9e5d"
+    },
+    {
+      "path": "crates/image-format/src/pe.rs",
+      "sha256": "8b2da15ebac6e7f1f4405b64196135cbf3263ecb5f137ed562fe5d500d5093d7"
+    },
+    {
+      "path": "crates/image-format/tests/images.rs",
+      "sha256": "0855ef9176afafbdc35e243262ee58133058dc447565efef33f587b8f4e0c65a"
+    },
+    {
+      "path": "fs/initfs/Cargo.toml",
+      "sha256": "7f7db278ccdd88f19751b0e9790bd31b13d14bb339b3e58d323c23eff7c85c18"
+    },
+    {
+      "path": "fs/initfs/src/lib.rs",
+      "sha256": "10a0ce559f4226e3f9556e0110aba587c617525b3ade7de2f2122e7756a13ebe"
+    },
+    {
+      "path": "kernel/Cargo.toml",
+      "sha256": "6bae9acdb4c8a4adad5cfa6ebc2f208b65e55ffde7022bd73aac71a93f098475"
+    },
+    {
+      "path": "kernel/linker.ld",
+      "sha256": "e441631489dcbf6721b117305cb3778f382576cf4c4278ba0e087989699f0a0c"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/ap_start.S",
+      "sha256": "02c63f0bbed79d9273e2535768b312e5775c712bc949450d30c9a971ced99378"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/context.rs",
+      "sha256": "677b5f1949250afc2cbddf86aaa3280b72f14430f211f78bc675a4a71b4b8a2a"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/cpu.rs",
+      "sha256": "4f13e26ff84d7bc4c8bac5615e330785977fba9ebe40d3abba9d04cf8ae19ad2"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/entry.S",
+      "sha256": "a80329dfd4151934f315915959b08683b1d181b499bbd898acc3179e0417f3c2"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/interrupts.S",
+      "sha256": "d487b0ed7c5f195c6845c25f2579825f4f67521b7bc95645e7c2aa6de2a211be"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/layout.rs",
+      "sha256": "168418f397ad9b4e3258b82f38408ac43eaa7c36d0075f1c9a98adedef0b6d27"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/mod.rs",
+      "sha256": "e91fbff71e99d2f9034e7564f6b2e0ade1296e82124859cf11c6662c96ec5b89"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/smp.rs",
+      "sha256": "1b0f7f5ed1c2d0801ba0cf4956add9d40df69ed7f382019741198ca531044d99"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/state_probe.S",
+      "sha256": "c426bc7eff5992eca63b652c1d4cfb324aa1e5410efc5c9a098405f6d6c403c5"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/timer.rs",
+      "sha256": "77c1a02fb58093bc43afae7918e0c49bb771bfaca7a3b8e0c7101c589313d05c"
+    },
+    {
+      "path": "kernel/src/console/font.rs",
+      "sha256": "54893d2a71b2f74464ee7dfcb3e7b942d32cd89b7aed0c7f3802a97b969989d7"
+    },
+    {
+      "path": "kernel/src/console/mod.rs",
+      "sha256": "eb8a6b37126660ea628508c0408453dd1580891003983f60df83dcb891293626"
+    },
+    {
+      "path": "kernel/src/execution.rs",
+      "sha256": "fd7d9ba4271824753a0aa4f60b61d073d2f48183307a56319e6407a1addfe96b"
+    },
+    {
+      "path": "kernel/src/lib.rs",
+      "sha256": "723823aa434f5ba650fe1f0f5b8b6e2a45e0c139c2bffcb3d9541afa0a8ec82b"
+    },
+    {
+      "path": "kernel/src/main.rs",
+      "sha256": "8480b53f4e366f36b4189f7b34ca30ea3626eedf203b316c39155f2eb7d1261d"
+    },
+    {
+      "path": "kernel/src/mm/address.rs",
+      "sha256": "246c38804006cb567937eca70549e71c481a937b05e79c1183d01f9a85e0efbe"
+    },
+    {
+      "path": "kernel/src/mm/frame.rs",
+      "sha256": "716fd86c2b5ce6e7dc75f03e574d7253cebb0ebb926e91dcf1a6afab5ce93870"
+    },
+    {
+      "path": "kernel/src/mm/heap.rs",
+      "sha256": "9eee93166b9a9882f3b0977dd0a6c4f125c6809b849aade47ef7a843608bd449"
+    },
+    {
+      "path": "kernel/src/mm/mod.rs",
+      "sha256": "d6b2768e7b10a29aec6b1ed52a01337b382ed6a196bd5cedb49f118f4c31ca23"
+    },
+    {
+      "path": "kernel/src/mm/paging.rs",
+      "sha256": "b6941a17d84c046f45d76ef4b47aea4ee9f0da2500108a01f597679242e7a950"
+    },
+    {
+      "path": "kernel/src/startup.rs",
+      "sha256": "712434c16fe042f55e1624f17000669f21fc058eaf87c9393989f71160fec08f"
+    },
+    {
+      "path": "kernel/src/task/mod.rs",
+      "sha256": "69c426070ffac8500d2de1e1be04c336e8638a8438b205b64f9a94b55b4cadb4"
+    },
+    {
+      "path": "kernel/src/task/scheduler.rs",
+      "sha256": "5df63aa83e800f463f0a3631c4c1a004108a3498bf5179b5c15aa4a9d70015f9"
+    },
+    {
+      "path": "kernel/src/task/tests.rs",
+      "sha256": "27742eec8ae38f44c37cb37a9c2ad4234ab870f3d2dc648d141e1bbb0d532ee1"
+    },
+    {
+      "path": "kernel/src/task/wait.rs",
+      "sha256": "432840ba5b31cf832f9779b5031783716e08758fbb590a92cfd7b3d0370b2b5c"
+    },
+    {
+      "path": "kernel/src/task_diagnostics.rs",
+      "sha256": "99dc67a7acbb5932c251bacc1135c4e5bfcd6406c4f358f97fd9550618b751a6"
+    },
+    {
+      "path": "profiles/build/dev-qemu-x64.json",
+      "sha256": "fed0c1ead5254b9a136426db99677204bbbccc666e322d28f318edb35728e1db"
+    },
+    {
+      "path": "profiles/build/initfs.json",
+      "sha256": "9205304f402f0ee4ca244770df65436bb0f22489599c95f7c65c44293f0ed300"
+    },
+    {
+      "path": "profiles/build/p00.json",
+      "sha256": "1aaa4177972bc5b46a60d4166a7754f76d1c60c7509a5ded3a13b391874bded1"
+    },
+    {
+      "path": "profiles/hardware/qemu-diagnostic-x64.json",
+      "sha256": "39968cefd662ac79e01e98e46d69656c5d234383574d8a3be759831178d67662"
+    },
+    {
+      "path": "profiles/hardware/qemu-minimal-x64.json",
+      "sha256": "e998055765de7743d322bc3a98d3c1edac50c8a6db9c8fcf83ad256555b8f8a6"
+    },
+    {
+      "path": "profiles/hardware/qemu-smp2-x64.json",
+      "sha256": "d6bfdb3538634194ba48e004361a6be941f60a81136de1e79fd0ca9d21c8a4aa"
+    },
+    {
+      "path": "profiles/hardware/qemu-smp4-x64.json",
+      "sha256": "9d05853b77c5608937c929a12884f82c305d1b66148b44f7e4f71185164cf9f1"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "6f0d5f4e45f8802ad2b3a0fe2794b07548725039ebbcfdd2437a0168f113e924"
+    },
+    {
+      "path": "specs/contracts/boot-info-v1.md",
+      "sha256": "37e09fcfe4c6ecbb8e3d19b0629f6b73c7d08f5efbf00c09c1ae95838c540e33"
+    },
+    {
+      "path": "specs/contracts/build-image-v1.md",
+      "sha256": "23622b332e5871063dc33ddedbb84c56a700c3ff9bd8c321b7fa145640d31e98"
+    },
+    {
+      "path": "specs/contracts/emulator-harness-v1.md",
+      "sha256": "371ab9dbfa5e4b3631d8b1108a74f789bffcf5761912af49542a921973870015"
+    },
+    {
+      "path": "specs/contracts/image-validation-v1.md",
+      "sha256": "c15aacb3341faae2058169ae9c23743c3dc5d64e7372f72cdf690d93e39f53c1"
+    },
+    {
+      "path": "specs/contracts/initfs-v1.md",
+      "sha256": "88493b860c8c9024a410417a42ca0e81fcf4d72bd1206e7d8c5be052b4e7cf57"
+    },
+    {
+      "path": "specs/contracts/kernel-entry-v1.md",
+      "sha256": "f6e3a5e6b11215d68184b94c1905056ac261ec7e583f5eff9431d5aebe3dd4b3"
+    },
+    {
+      "path": "specs/contracts/platform-v1.md",
+      "sha256": "2b3d8ad7a938199c80fde51426707a102d966cb2261b9eb33418129f2094c24b"
+    },
+    {
+      "path": "specs/contracts/startup-v1.md",
+      "sha256": "312360c2292b2b26406d80fed3c7911b29a1c0b7dbd80ba38e74e378284ea748"
+    },
+    {
+      "path": "specs/sources/dependencies.json",
+      "sha256": "794efd158fdb7ef1a8b1f50cd40c9ffbe34751194c794be454a49e88cbbceaa2"
+    },
+    {
+      "path": "specs/sources/emulator-acquisition.json",
+      "sha256": "2eba8e56e3d003419bcd7e2a0126664cf45f8e1b029d5ec8d67e6e8409d7372e"
+    },
+    {
+      "path": "specs/sources/index.json",
+      "sha256": "2b27266cf5bc28927de75f37b9d7711a0289839d88118100746851559a357d7c"
+    },
+    {
+      "path": "tests/support/images.rs",
+      "sha256": "e3d19e7e3a0b396fae2c3b968039379a35076ca11ccf7d138247708be4c1eade"
+    },
+    {
+      "path": "tools/xtask/Cargo.toml",
+      "sha256": "0db349595acad0f09b1b247a4f42e4e518fa01499909b51814b67900332e8419"
+    },
+    {
+      "path": "tools/xtask/src/artifact.rs",
+      "sha256": "c452e9f5d6e6a9ccc1f6bb07294e8dd6321e336ebbd2a6e12df9090589090f67"
+    },
+    {
+      "path": "tools/xtask/src/boot.rs",
+      "sha256": "52fd685082bb8b76d3d240c5e4db6b4d04b071a0a09b0f4a65b6846a4f137c54"
+    },
+    {
+      "path": "tools/xtask/src/boot_gate.rs",
+      "sha256": "ea0ba8cdd4208be25dae0b03b102da437ade29add764a4edeb87f3878aeefc29"
+    },
+    {
+      "path": "tools/xtask/src/build.rs",
+      "sha256": "4a9f2c9950fd5f4179417bd35048511932c374cfc491323e35a8d32afd924551"
+    },
+    {
+      "path": "tools/xtask/src/demo.rs",
+      "sha256": "f6a89b3e4d10c0b3fd9d44de3e00ea81cff358da2615c802d8ec534f7bf6442c"
+    },
+    {
+      "path": "tools/xtask/src/doctor.rs",
+      "sha256": "e75ab2bb71efbd46f6bd9960382be75ebfafbbf8fdb484b29a2fe07394c38b9c"
+    },
+    {
+      "path": "tools/xtask/src/emulator.rs",
+      "sha256": "a4917159e01196b34f8bf374c0610a6e658a47f0368ea40b2133175d62903d2f"
+    },
+    {
+      "path": "tools/xtask/src/evidence.rs",
+      "sha256": "dfb22dc58ceb85ecfebf649acc1ddffe09ba13985f33ea79e3c92d277c60697a"
+    },
+    {
+      "path": "tools/xtask/src/image.rs",
+      "sha256": "7cbd7151224c17fdfaf64bcc195e486af8c00e9eb451982807942642983bc82c"
+    },
+    {
+      "path": "tools/xtask/src/initfs.rs",
+      "sha256": "68251700b4a3804255d12a1760030be0bed8b790c4c94b6b9f8a9455d86dc076"
+    },
+    {
+      "path": "tools/xtask/src/main.rs",
+      "sha256": "2611127f71dfda116fa773b0ac1c433064ac04717298013bc43ea58d960a0314"
+    },
+    {
+      "path": "tools/xtask/src/paths.rs",
+      "sha256": "5e6fbbe9c42d016115e0140905c2880b6dcd826d84b6150dc0cc113507341256"
+    },
+    {
+      "path": "tools/xtask/src/qmp.rs",
+      "sha256": "bf4f5869ad0286adca3690d74c15ab9321baef68fe43694c19a01f51e1cba1ce"
+    },
+    {
+      "path": "tools/xtask/src/scenarios.rs",
+      "sha256": "4f015e4b4619c190c0b15af17545edf09911dfe429ce23acb91d88aa579c6353"
+    },
+    {
+      "path": "tools/xtask/src/spec.rs",
+      "sha256": "2b275f1bd726948e8dcd79f8f96ecd00c4bdfbfda2a966d51abab16b7397d5ca"
+    },
+    {
+      "path": "tools/xtask/src/test_support.rs",
+      "sha256": "a71f285a43fcd390d1c2d49b9b4e5c9bc75ce083f7262014d396d9e4c8dc0917"
+    }
+  ],
+  "checked_raw_stream_hashes": 212,
+  "raw_validation": "reports/runs/critic-p04/raw-validation.json",
+  "findings": [],
+  "verification": [
+    "Read master P04, sections16/17/134, AGENTS, current status/requirements, native scheduler and context/startup ADRs and handoff contracts",
+    "Independently inspected actual scheduler and wait ownership, retirement handshake, runtime IRQ-safe lock, saved GPR/FS/FX context, AP real/protected/long-mode entry, per-CPU descriptors and timer/IPI paths",
+    "98 exact current code/build/assembly/contract/hardware inputs match the qualifying source snapshot; exact root report hash independently matched",
+    "17 reports,106 process records,212 stdout/stderr hashes and15 scenario serial hashes independently checked",
+    "Fresh stdin-compiled persistent phase validator accepts the final full current P04 report and private images/process/serial/demo evidence",
+    "115 host tests, strict host and both bare-metal target lint/checks, six portable checks and two matching guest builds retained in final gate",
+    "All15 actual scenarios classify correctly, preserving every P02/P03 case and adding2CPU,4CPU and observed missing-secondary qualification",
+    "Real12-thread fixture verifies timer-only GPR/XMM/MMX/x87/FS pattern preservation, affinity migration,64 event/semaphore exchanges,condition reacquisition,donation/abandonment,cancel/close/deadline outcomes and stable exit/reap",
+    "Final SMP evidence shows36 migrations with2CPUs and51 migrations with4CPUs; degraded run records2 discovered and1 online CPU",
+    "32 rounds per successful guest topology alternate distinct physical backing,protect/read from every CPU,unmap and acknowledge remote retirement before reuse; worker stacks freed only after context retirement, live AP stacks retained",
+    "1000000 independent randomized scheduling/wait/suspend/exit/close/retirement operations preserved exclusive queue/current/pending ownership",
+    "32768 independent condition race sequences verified a single terminal completion and mutex ownership before non-closure completion",
+    "Wrong phase certification,missing mandatory host test,missing SMP4,duplicate SMP2,weakened wait markers,minimum-profile substitution and missing degraded scenario all rejected after consistent top-level evidence rebinding",
+    "Normal,diagnostic and panic framebuffer captures independently viewed; correct P04 console,H/D/R/P interaction,reboot and three distinct screenshot hashes verified",
+    "Initial FPU image resets architectural state; fatal nested exception paths do not return through a pending switch commit; installed retirement callback never returns after remote acknowledgement failure"
+  ],
+  "negative_evidence": [
+    "reports/runs/critic-p04/gate-probe.log",
+    "reports/runs/critic-p04/model-probe.log",
+    "reports/runs/critic-p04/condition-probe.log"
+  ],
+  "scope_limits": [
+    "Independent review and tests do not guarantee absence of every bug",
+    "Qualification covers acquired QEMU TCG/OVMF on pinned1/2/4CPU xAPIC profiles,256MiB/2048MiB; physical hardware,acceleration,x2APIC,CPU hotplug and unsupported topology remain unqualified",
+    "All current tasks execute at ring0; protected user execution,user-copy containment and invalid user return state belong to P05",
+    "Enabled state is x87/MMX/SSE2 with FS TLS; OSXSAVE stays disabled and AVX/XSAVE profiles require separate implementation and qualification",
+    "Native16task/4CPU/32object/four-object wait-any bounds and one IRQ-safe metadata lock remain explicit; native executor and Windows wait/APC/driver semantics are later phases",
+    "Boot/table/heap backing and AP idle/emergency stacks intentionally retain ownership; parked APs remain online and receive retirement IPIs",
+    "Missing-AP startup is exercised; remote acknowledgement success is exercised and timeout nonreturning behavior was code-reviewed,not fault-injected in a separate guest scenario",
+    "Early diagnostic console only; no native userland,Windows compatibility,GUI,storage or network qualification",
+    "Local raw hashes establish evidence identity in the trusted workspace,not an external attestation"
+  ],
+  "cleanup": "Stdin-compiled transient probe executables/PDBs removed from individually verified out/critic-p04 paths. Small mutated evidence records and raw review logs retained. No throwaway source helpers or product source edits.",
+  "removed_temporary_binaries": [
+    "condition-probe.exe",
+    "condition-probe.pdb",
+    "gate-probe.exe",
+    "gate-probe.pdb",
+    "model-probe.exe",
+    "model-probe.pdb"
+  ]
+}

@@ -1,0 +1,29 @@
+[package]
+name = "door-native-workload"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Independent native SDK file, thread, allocator and service workload"
+
+[features]
+native = []
+
+[[bin]]
+name = "native-workload"
+path = "src/main.rs"
+required-features = ["native"]
+test = false
+bench = false
+
+[dependencies]
+door-abi = { path = "../../../runtime/abi" }
+door-rt = { path = "../../../runtime/rt" }
+door-sys = { path = "../../../runtime/sys" }
+door-service-client = { path = "../../../frameworks/service-client" }
+door-service-protocol = { path = "../../../crates/service-protocol" }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+[lints.clippy]
+all = "warn"

@@ -1,0 +1,45 @@
+window "Doors UI Gallery"
+  navigation "Navigation" [FOCUSABLE] {FOCUS}
+    button "Close Navigation" {INVOKE}
+    list item "Basic input" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT} pos=1/9
+    list item "Control states" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/9
+    list item "Text and selection" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=3/9
+    list item "Collections" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=4/9
+    list item "Menus and toolbars" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=5/9
+    list item "Status and info" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=6/9
+    list item "Layout" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=7/9
+    list item "Dialogs" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=8/9
+    list item "Accessibility" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=9/9
+    scroll viewer "" [VERTICAL]
+      heading "Basic input" level=1
+      group "Button"
+        heading "Button" level=2
+        button "Standard" [FOCUSABLE] {FOCUS INVOKE}
+        button "Accent" [FOCUSABLE DEFAULT] {FOCUS INVOKE}
+        button "Disabled" [DISABLED] {INVOKE}
+        button "Add item" [FOCUSABLE] {FOCUS INVOKE}
+        link "Hyperlink" [FOCUSABLE] {FOCUS INVOKE}
+      group "ToggleButton"
+        heading "ToggleButton" level=2
+        toggle button "Bold" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle button "Checked" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        toggle button "Disabled" [DISABLED CHECKABLE] {TOGGLE}
+      group "CheckBox"
+        heading "CheckBox" level=2
+        check box "Unchecked" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        check box "Checked" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        check box "Indeterminate" [FOCUSABLE MIXED CHECKABLE] {FOCUS TOGGLE}
+        check box "Disabled" [DISABLED CHECKED CHECKABLE] {TOGGLE}
+      group "RadioButtons and ToggleSwitch"
+        heading "RadioButtons and ToggleSwitch" level=2
+        group "Background" [FOCUSABLE] {FOCUS}
+          radio button "Picture" [FOCUSABLE SELECTED] {FOCUS SELECT} pos=1/3
+          radio button "Solid color" [FOCUSABLE] {FOCUS SELECT} pos=2/3
+          radio button "Slideshow" [FOCUSABLE] {FOCUS SELECT} pos=3/3
+        toggle switch "Wi-Fi" [FOCUSABLE CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "Bluetooth" [FOCUSABLE CHECKED CHECKABLE] {FOCUS TOGGLE}
+        toggle switch "Airplane mode" [DISABLED CHECKABLE] {TOGGLE}
+      group "Slider"
+        heading "Slider" level=2
+        slider "Volume" value="40" [FOCUSABLE HORIZONTAL HAS_RANGE] {FOCUS INCREMENT DECREMENT SET_RANGE} range=0..100000@40000
+        slider "Disabled" value="70" [DISABLED HORIZONTAL HAS_RANGE] {INCREMENT DECREMENT SET_RANGE} range=0..100000@70000

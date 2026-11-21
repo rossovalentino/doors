@@ -1,0 +1,15 @@
+{
+  "file": "file-installer.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "a3230f5eb911b209f7c98ce2b2909e49c460a7b3b36c0d67cdc68180c4999b8c",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\msiexec.exe",
+    "module_sha256": "6c63cfd4cb36998e9ff763117d4a74193ba72a5fc7f51ea7210f9065c2188452"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

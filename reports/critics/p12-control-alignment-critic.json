@@ -1,0 +1,196 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "recorded_by": "/root",
+  "recording": "Normalized independent read-only review; historical reports and failed evidence unchanged",
+  "status": "accepted_bounded",
+  "scope": "Shared Workspace label/icon rows, Notes caret/selection/footer, Files rename/selection, installed Home/txt artwork, safe bounded acquisition and six exact standalone consumer retained layouts",
+  "phase_closure": false,
+  "unresolved_blocking_findings": [],
+  "guest_source_sha256": "d40843fde9aff7f29b0c3a51ca254b3368e9f5c55b972b178cc07d1366a1e9fb",
+  "final_host_source_sha256": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+  "source_files": 2073,
+  "host_tests": 668,
+  "host_executables": 34,
+  "bindings": {
+    "host": {
+      "run": "host-1792575398772802800-24816",
+      "report": "reports/runs/host-1792575398772802800-24816/report.json",
+      "sha256": "327be3b8aaa2e5c2e536fa09dc6b8240c461b860c258984e8f5a7daf801685ba",
+      "source": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+      "checks": 0,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "desktop": {
+      "run": "host-1792571769273006100-24104",
+      "report": "reports/runs/host-1792571769273006100-24104/report.json",
+      "sha256": "b567664d60a283384d853e57487d55e50c35276482575112ee5ad49a7d0ee0d8",
+      "source": "d40843fde9aff7f29b0c3a51ca254b3368e9f5c55b972b178cc07d1366a1e9fb",
+      "checks": 255,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "notes_1x": {
+      "run": "host-1792572815571802500-21160",
+      "report": "reports/runs/host-1792572815571802500-21160/report.json",
+      "sha256": "a4a79c1490b403b8aeca42191fc7d8b1ccb2d7dd9e8b278ce23101ced5c32eeb",
+      "source": "d40843fde9aff7f29b0c3a51ca254b3368e9f5c55b972b178cc07d1366a1e9fb",
+      "checks": 41,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "notes_3x": {
+      "run": "host-1792572962584047200-25120",
+      "report": "reports/runs/host-1792572962584047200-25120/report.json",
+      "sha256": "dba7ba04b435a85189a9d859fed20060dfe47824d527a67c0f3ed422ce6d50e4",
+      "source": "d40843fde9aff7f29b0c3a51ca254b3368e9f5c55b972b178cc07d1366a1e9fb",
+      "checks": 41,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "files_1x": {
+      "run": "host-1792574404677893800-12176",
+      "report": "reports/runs/host-1792574404677893800-12176/report.json",
+      "sha256": "165a35dcdf37223c5d391707da4e5c605a5dc4ed718b8e93f6147219321f6855",
+      "source": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+      "checks": 21,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "files_3x": {
+      "run": "host-1792574509439569700-9676",
+      "report": "reports/runs/host-1792574509439569700-9676/report.json",
+      "sha256": "d6b06cf9f0182eb13d0cb96524ab7f9912164e74b69b4952e7be25815e4ed6aa",
+      "source": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+      "checks": 21,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "remove_1x": {
+      "run": "host-1792574679342281900-4804",
+      "report": "reports/runs/host-1792574679342281900-4804/report.json",
+      "sha256": "25f20578c1e30ee9ffac780f4a324a9c75d27e56789b75137096d0a1746896b1",
+      "source": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+      "checks": 17,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "remove_3x": {
+      "run": "host-1792574810294437100-10308",
+      "report": "reports/runs/host-1792574810294437100-10308/report.json",
+      "sha256": "0dfdca0339cd99fc3664218e3c8d9d13c947ea9c8ef7d1e74aaa6375339a5406",
+      "source": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+      "checks": 17,
+      "success": true,
+      "inputs_unchanged": true
+    },
+    "retained": {
+      "run": "host-1792575514788093600-10952",
+      "report": "reports/runs/host-1792575514788093600-10952/report.json",
+      "sha256": "a7ce8f30ba1d6d3350627794b6dd4ba3c825576cf78f1e87b1c8e7509c99428e",
+      "source": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+      "checks": 1,
+      "success": true,
+      "inputs_unchanged": true
+    }
+  },
+  "fixture_bridge": {
+    "path": "reports/runs/host-1792575398772802800-24816/fixture-only-source-bridge.json",
+    "sha256": "a59042c2f481a03fb619406dd110b1bcfe314fe030de0223781d7947a376c679",
+    "changed_files": 1,
+    "guest_assets_unchanged": true
+  },
+  "artifact_bridge": {
+    "path": "reports/runs/host-1792571769273006100-24104/guest-artifact-alignment-bridge.json",
+    "sha256": "f0b261ce73bad99b3f40d9fb6534adcc149bfb02f91f366fbf172d5dd1e2c282",
+    "old_new_actual_files": 21,
+    "identical": 19,
+    "only_changed": [
+      "door-window",
+      "door-workspace"
+    ],
+    "independent_pairs": 5,
+    "new_foundation_execution": false
+  },
+  "independent_audit": {
+    "combined": {
+      "checks": 255,
+      "sessions": 9,
+      "hashed_refs": 798,
+      "rgb_pairs": 178,
+      "pixel_probes": 176,
+      "raw_disks": 8,
+      "all_bindings_crcs_and_document_bytes_valid": true
+    },
+    "notes_each": {
+      "checks": 41,
+      "consumer_checks": 39,
+      "boots": 2,
+      "hashed_refs": 102,
+      "rgb_pairs": 33,
+      "probes": 27,
+      "raw_snapshots": 12,
+      "exact_final_bytes": "Final text\nReopened\n"
+    },
+    "files_each": {
+      "checks": 21,
+      "consumer_checks": 19,
+      "boots": 2,
+      "hashed_refs": 59,
+      "rgb_pairs": 16,
+      "probes": 5,
+      "raw_snapshots": 3,
+      "identity_payload_and_reboot_preserved": true
+    },
+    "remove_each": {
+      "checks": 17,
+      "consumer_checks": 15,
+      "boots": 2,
+      "hashed_refs": 53,
+      "rgb_pairs": 12,
+      "probes": 5,
+      "raw_snapshots": 11,
+      "cancel_rejection_unchanged_and_only_target_removed": true
+    },
+    "all_sessions_zero_leaks_device8": true,
+    "all_acquired_icon_payloads_match_installed_source": true,
+    "normal_taskbar_optics": "Only normal40DIPbuttons sampled with alpha>32 cutoff; compact remains open"
+  },
+  "resolved_findings": [
+    "Hinted cached glyph reference for stable control centers",
+    "Continuous blank caret, no placeholder overpaint",
+    "Full original glyph run on clean selected clip preserves kerning/coverage",
+    "Theme-mapped F2 border and native probe geometry",
+    "Acquisition actual parsed bytes hashed and total payload budget checked before loading",
+    "Manifest pin validated before asset writes"
+  ],
+  "preserved_failures": [
+    "host-1792573198096024500-10768",
+    "host-1792574010815797700-26648",
+    "host-1792574195980486000-20336",
+    "host-1792574296821247700-18004",
+    "host-1792573331077873400-6232",
+    "host-1792574983863765500-11100"
+  ],
+  "open_risks": [
+    "Two intermittent Windows host-tool fatal application exits remain unexplained; diagnostics and subsequent exact full run passed. Do not claim a repaired cause."
+  ],
+  "diagnostics": {
+    "path": "reports/runs/host-1792574983863765500-11100/host-crash-diagnostics.json",
+    "sha256": "9cbca99691a17cf9e6907d46ceb24f3c4426f2020f29c1cd10f54bf43bc42b51"
+  },
+  "limitations": [
+    "P12 partial; original missing P00 blocks cumulative verification; later historical dependencies not thereby validated",
+    "Only txt is newly specialized; other associations remain generic",
+    "No complete Windows/ClearType pixel identity or 60FPS/vblank claim",
+    "Shell captions/Settings/compact taskbar and modern Explorer ordering, tabs, rounded fields, Details and selection states need further work",
+    "Recycle Bin/search/widgets/power providers and core app inventory remain open",
+    "Artwork is local installed development reference; distribution rights not established",
+    "Owner disk absent and never used as a regression fixture"
+  ],
+  "critic_actions": {
+    "read_only": true,
+    "started_tests": false,
+    "host_ui": false
+  }
+}

@@ -1,0 +1,19 @@
+[package]
+name = "door-shells"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Command engines for Terminal: cmd.exe and Doorsh, over an abstract host"
+
+[dependencies]
+door-settings-map = { path = "../../frameworks/settings-map" }
+# WIREGUARD validates wg-quick files before saving them (P15 VPN).
+door-wireguard = { path = "../wireguard" }
+# NETSH ADVFIREWALL reads and writes Windows Defender Firewall rules (P15).
+door-firewall = { path = "../firewall" }
+door-service-protocol = { path = "../service-protocol" }
+# MSIEXEC installs and removes Windows Installer packages (P16 M8).
+
+[lints]
+workspace = true

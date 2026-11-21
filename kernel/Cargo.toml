@@ -1,0 +1,33 @@
+[package]
+name = "door-kernel"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[features]
+baremetal = []
+
+[[bin]]
+name = "door-kernel"
+path = "src/main.rs"
+required-features = ["baremetal"]
+test = false
+bench = false
+
+[dependencies]
+door-abi = { path = "../runtime/abi" }
+door-image-format = { path = "../crates/image-format" }
+door-boot-protocol = { path = "../crates/boot-protocol" }
+door-initfs = { path = "../fs/initfs" }
+door-storage-core = { path = "../fs/storage-core" }
+door-pe-loader = { path = "../compat/pe" }
+door-windows-abi = { path = "../compat/abi" }
+door-boot-debug = { path = "../boot/debug" }
+sha2 = { version = "=0.10.9", default-features = false, features = ["force-soft"] }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+all = "warn"

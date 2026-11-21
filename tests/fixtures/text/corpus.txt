@@ -1,0 +1,18 @@
+# Door Text multilingual corpus (spec §52, §109, TEXT-01).
+# One sample per line: id | locale | base direction (auto, ltr, rtl) | text
+# Escapes: \u{XXXX} for any scalar value (combining sequences stay explicit), \n.
+# Expected shaping and cluster results are asserted in
+# frameworks/text/tests/corpus.rs; golden renders live in golden/.
+latin|it-IT|auto|Perché è già così? Città, caffè, ÀÉÎÕÜ ñ ç ß — AVATAR To Wa
+greek|el|auto|Καλημέρα κόσμε· Ελληνικά ἀρχή
+cyrillic|ru|auto|Съешь же ещё этих мягких французских булок
+arabic|ar|auto|مرحبا بالعالم ١٢٣ نص عربي
+hebrew|he|auto|שלום עולם 123 ו-456 (בדיקה)
+hindi|hi|auto|नमस्ते दुनिया क्षत्रिय हिन्दी कि
+chinese|zh-Hans|auto|你好，世界！简体中文测试
+chinese-traditional|zh-TW|auto|繁體中文測試，臺灣
+japanese|ja|auto|こんにちは世界。カタカナと漢字
+korean|ko|auto|안녕하세요 세계, 한국어
+emoji|en-US|auto|Family \u{1F468}\u{200D}\u{1F469}\u{200D}\u{1F467}\u{200D}\u{1F466} thumbs \u{1F44D}\u{1F3FD} \u{1F44D}\u{1F3FF} keycap 1\u{FE0F}\u{20E3} heart \u{2764}\u{FE0F} \u{1F600}
+combining|en-US|auto|e\u{301} a\u{308}\u{323} Z\u{335} o\u{302}\u{303}
+mixed|en-US|ltr|Hello שלום مرحبا 你好 नमस्ते \u{1F600} end

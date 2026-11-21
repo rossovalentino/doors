@@ -1,0 +1,60 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "recorded_by": "/root",
+  "recording": "Normalized from the independent critic's final read-only review; original execution reports unchanged",
+  "status": "accepted_bounded",
+  "scope": "Storage client retirement, semantic reply validation and polled authenticated reconnect discovery",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "unresolved_actionable_findings": [],
+  "tested_source_sha256": "021b83a6619bac9b37703c910a8c09a04bfebb3eb8df62103e01225110aeb9c7",
+  "source_files_independently_verified": 2034,
+  "bindings": {
+    "host": {"run": "host-1792561439334369300-21252", "report_sha256": "6686bc29e876a29306c66a858e8574d8b8b00d6374daf49bd2544c8b44ccc794", "tests": 651, "executables": 33},
+    "sdk": {"run": "host-1792561159414076200-24192", "report_sha256": "fd192fcb92ac0be1f8253b44d2628debf7bf75f70441e7c74db3451cf1e6cbde", "suite_sha256": "950436c06b2b15500cfd1d1885f8e99989897565f8071b1baad5e3b2da05969d", "execution_source": "016325ab3cf2d7552e7d6adefbece320b1915ebf483537f7dd763844676fdb0f", "actual_boots": 2, "explicit_retirement_cycles": 64},
+    "desktop": {"run": "host-1792561538750199300-21160", "report_sha256": "b216cf2ff68f4b346ad03827691259f93ea2507f44d7f4a5cfef0f841692ab22", "suite_sha256": "c344c70425cd2e92982bcdef354d90b3bcead3629b9febbcce258eed865f6d5f", "build_manifest_sha256": "3175ddfce591cac9f477882c89d15214f25fe7c870b09fab9860063bc663d0d0", "desktop_checks": 253, "maintenance_checks": 2, "actual_sessions": 9},
+    "foundation": {"run": "host-1792562620715950700-17280", "report_sha256": "f5ce3fd612ddb6b040053900467e6f9eb8569141ec912fe4ff83e478bbb70e95", "suite_sha256": "3245e0ef907831ef9d871b20c6631e2e2d95f36d3e9764ecb5b2ca3a1ab8969e", "reproducibility_sha256": "de73915ed437dbce3612864b3d891725c6b71b3e875333e530477aaadee3d161", "expected_scenarios": 42, "additional_interactive_runs": 2},
+    "cumulative": {"run": "host-1792562596884006400-23072", "report_sha256": "221d4f0665b78fd91515408929d6e99d07600402f4284dea0de9e47d71d09015", "success": false, "inputs_unchanged": true, "first_failure": "Missing original P00 report host-1791804427914736400-32560", "later_historical_dependencies_validated": false}
+  },
+  "source_bridge": {
+    "sdk_to_final_changed_files": ["desktop/workspace/src/main.rs"],
+    "change": "Status-strip background color only",
+    "bridge_record_sha256": "e7c03ef8276cf49372db96649aa60d3584a2e9c2543fa5f1c04e223678dd600e",
+    "core_proof": "Both fresh foundation builds reproduce all 16 SDK-producing core artifacts exactly",
+    "development_build_26936": "Artifact provenance only; deliberately stopped desktop execution is not a passed suite"
+  },
+  "independent_audit": {
+    "reference_errors": 0,
+    "sdk_hashed_paths": 45,
+    "sdk_disk_sha256": "5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d",
+    "sdk_authenticated_marker_order_verified": true,
+    "desktop_hashed_paths": 825,
+    "desktop_exact_rgb_pairs": 178,
+    "desktop_pixel_probes": 176,
+    "desktop_raw_disks_decoded": 8,
+    "foundation_json_records": 97,
+    "foundation_hashed_host_paths": 1026,
+    "foundation_private_image_entries": 132,
+    "foundation_actual_process_receipts": 44,
+    "foundation_raw_disks_decoded": 27,
+    "foundation_ext2_files": 109,
+    "foundation_replay_witnesses": 3,
+    "catalog_and_journal_crcs_valid": true,
+    "zero_leaks_and_device8_cleanup": true,
+    "post_maintenance_core_artifacts": 32,
+    "post_maintenance_link_maps": 28,
+    "post_maintenance_import_libraries": 6,
+    "maintenance_receipt_sha256": "a1c1df7ef93ffa8dca5109ad0269fec6cb41fdc8e9f7e46ad1c694bcaa527be0",
+    "out_logical_bytes": 16758519063
+  },
+  "resolved_findings": ["Malformed zero tokens and impossible metadata", "Noncanonical error bodies or handles", "Status strip overlapping modal controls", "Dark status-strip contrast", "Bounded definite SharingViolation probe", "Unique authenticated SDK lifetime marker ordering"],
+  "limitations": [
+    "Native exercise uses explicit retirement; unexpected channel loss, malformed replies and timeout were not injected",
+    "GUI recovery input interleaving and uncertain mutation behavior have code/model review rather than new injected native GUI faults",
+    "Discovery is pollable; existing operations can wait synchronously up to 500 ticks",
+    "Session revocation can terminate consumers; document survival across that event is not promised",
+    "Limited 4K readability observation does not establish Windows pixel fidelity, Microsoft ClearType or FPS",
+    "Protected out exceeds the 12GB admission threshold; heavy qualification needs versioned output retention"
+  ],
+  "preservation": {"development_stops_retained": ["26936", "24428"], "owner_volume_present": false, "critic_modified_files": false, "critic_started_tests_or_guests": false, "critic_used_host_ui": false}
+}

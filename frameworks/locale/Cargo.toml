@@ -1,0 +1,13 @@
+[package]
+name = "door-locale"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Allocation-free time zones (IANA-derived rules), regional formats and logical collation (§109)"
+
+[dependencies]
+door-abi = { path = "../../runtime/abi" }
+
+[lints]
+workspace = true

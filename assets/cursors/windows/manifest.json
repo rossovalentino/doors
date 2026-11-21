@@ -1,0 +1,37 @@
+{
+  "commit": "21970f48b8f66b4d44742cb30388c1454512d681",
+  "license": "not_declared",
+  "use": "owner-requested local GUI reference",
+  "cursors": [
+    {
+      "file": "aero_arrow.cur",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Cursors/Windows%2011/aero_arrow.cur",
+      "sha256": "06678bbf954f0bece61062633dc63a52a34a6f3c27ac7108f28c0f0d26bb22a7"
+    },
+    {
+      "file": "beam_r.cur",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Cursors/Windows%2011/beam_r.cur",
+      "sha256": "da1a1cc826103a3ea48f398a2ab75e823c4b0da5e07670a1323e4f7572813180"
+    },
+    {
+      "file": "aero_ew.cur",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Cursors/Windows%2011/aero_ew.cur",
+      "sha256": "6c4c856d899f208a3c0a31462acf085e51f4ffc9c3d607289ccbb157268ffe56"
+    },
+    {
+      "file": "aero_ns.cur",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Cursors/Windows%2011/aero_ns.cur",
+      "sha256": "e698b70e15126295b7c573aaa72c000cf050487a491514e8797e5608ad6817f8"
+    },
+    {
+      "file": "aero_nwse.cur",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Cursors/Windows%2011/aero_nwse.cur",
+      "sha256": "bbe0e91536426b3a6490c99a2b5065a6eeaf89379f1e3b3dbad3565db82c3c57"
+    },
+    {
+      "file": "aero_nesw.cur",
+      "source": "https://raw.githubusercontent.com/bartekl1/windows-ui-assets/21970f48b8f66b4d44742cb30388c1454512d681/Cursors/Windows%2011/aero_nesw.cur",
+      "sha256": "18108c75eec4cde840614716c828c16912549bf18e0edc610f15b0236b0512ea"
+    }
+  ]
+}

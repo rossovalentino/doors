@@ -1,0 +1,812 @@
+{
+  "files": [
+    {
+      "key": "pencil",
+      "sha256": "35f926d6c2a7315436b2fdd3e0130f9866825dda1c5c4f3685a525f4b3b7ba5b",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\PencilTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "fill",
+      "sha256": "0e25fe76c8104773df485a8ad91251f3a19a2729ba0b305eb260f18142fc38c3",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\FillTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "text",
+      "sha256": "fecd6944be2a35996d5fef209bb1edfabc245174364535b554e3d3a59c7c2419",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\TextTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "eraser",
+      "sha256": "a4d7e44b197e8750ec715a38e9f079d10d8d4b3399bbcd883a64fd1b8daed579",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\EraserTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "picker",
+      "sha256": "a582d7229f32a9aca07ad8a084382fd068357bf8296a0aee2f06e825dc5b0c3c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\ColorPickerTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "magnifier",
+      "sha256": "514f45c20e877cd90c9a01028164b4aa7c4d8d78f2b0d3e7500cc58bed609030",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\MagnifierTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "brush",
+      "sha256": "7114af9a20d96ce8c1eace49babe7b0e84e4517ba19838a1173bd1926d52a3a6",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\BrushIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "calligraphy-brush",
+      "sha256": "026c8bfedbf38872e9c943bc4fa4d02f5873ff04689119b402cd4e791959f4d8",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\CalligraphyBrushIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "calligraphy-pen",
+      "sha256": "b996bdb7ecc4c2942c7edd99628b9f41faa1b26d2346d2f239d66b783495e670",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\CalligraphyPenIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "airbrush",
+      "sha256": "ea53617d1ea54a88bd6ade769492e5938f1060cad39aa947a7f022881e24e344",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\AirBrushIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "oil",
+      "sha256": "0faaa274fa290402bbd9cafdfb6534e396b3e28b1a73927ac5a19547c594f900",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\OilBrushIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "crayon",
+      "sha256": "df72217e7f2084de89955ef79335d62d9a68290e5670818bd09acff968b64691",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\CrayonIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "marker",
+      "sha256": "44279f7785c369afd7516e924caf72e980846aec510121d0aa9d7f4ef8f61892",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\MarkerIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "natural-pencil",
+      "sha256": "6f35e9d5111fe59f04ba09b7cc8226e70b5443ba1ac2d527b599db188ca4309e",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\NaturalPencilIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "watercolor",
+      "sha256": "523d46e3d409dc076f4af0cec9968cdac9095c7c28fbd2decc872e8b4e01b0ac",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\WaterColorIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "select",
+      "sha256": "398edf6d290a9959dbfc2891f360e2c17680208e2447571eefdb00904f79a01a",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\RectangularSelectionLarge.svg",
+      "theme": "light"
+    },
+    {
+      "key": "freeform",
+      "sha256": "0779e4a9008fd479dfb7eab2195506e51e24359f8508f175181da93f6bc3e666",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\FreeFormSelectionLarge.svg",
+      "theme": "light"
+    },
+    {
+      "key": "object-select",
+      "sha256": "eb30927ab68297c5214bd87b80e85a791bd9b00f9a1bda5edc2deb80d53df394",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\ObjectSelectTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "resize",
+      "sha256": "b28523a5c84378a2e40dd3d02310db416d6c1f3595c74a60f23d713b206023f7",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Resize.svg",
+      "theme": "light"
+    },
+    {
+      "key": "rotate",
+      "sha256": "6063ca74264820d85bf5f7124b28d82d1b8da3e97ca945bdf0196d55818fc99b",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\RotateRight.svg",
+      "theme": "light"
+    },
+    {
+      "key": "flip",
+      "sha256": "2ababa3008ef240159856e8895d39e131f54310d583204a6be567e5f6c324b91",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Flip.svg",
+      "theme": "light"
+    },
+    {
+      "key": "remove-background",
+      "sha256": "c9120af3c24a7bde118c171c0d9c188b7c143627065b85b3dcad5d14bd2aa0fa",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\BGRemoval.svg",
+      "theme": "light"
+    },
+    {
+      "key": "layers",
+      "sha256": "b753755afb53aed66431b9db372545510b22101f57f55842acd126fcc1244bfe",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Layers.svg",
+      "theme": "light"
+    },
+    {
+      "key": "eye-on",
+      "sha256": "d66bc219ad4c0f5d372de37cf023290a95ca38c9229e3ac9f3f7149e4b938e88",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\EyeOn.svg",
+      "theme": "light"
+    },
+    {
+      "key": "eye-off",
+      "sha256": "461685fcf3148b651d2b65ae8e5f6735fc5fdc3cd6fb9aa19c7b17728a5a6abf",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\EyeOff.svg",
+      "theme": "light"
+    },
+    {
+      "key": "save",
+      "sha256": "740e18e0c820319c1575aa0de6490dea0e71ddbd818e0fed92561743359af8d9",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Save.svg",
+      "theme": "light"
+    },
+    {
+      "key": "print",
+      "sha256": "e80039b4db6c5f59566d383a574c4cb2e185148d7411611e56601e289c3efc2c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Print.svg",
+      "theme": "light"
+    },
+    {
+      "key": "shapes",
+      "sha256": "96f1083d49be444ae968d9be6b23c9cd8eb54e74434bb737171a90a8753e53ec",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Shapes.svg",
+      "theme": "light"
+    },
+    {
+      "key": "stroke-size",
+      "sha256": "11ffaeb266a0b2fc89b9acb9c3931775275dbc8bbb8e03186ce22a2add561db8",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\ShapesStrokeSize.svg",
+      "theme": "light"
+    },
+    {
+      "key": "stroke-size-disabled",
+      "sha256": "85375beb367d4282ae443898db8b683db789ad9660d2b189f115c5b0b17a1e00",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\DisabledShapesStrokeSize.svg",
+      "theme": "light"
+    },
+    {
+      "key": "size",
+      "sha256": "931ae56f34fd88343b79c170155816f4e993e303fd62c1a369cd2fe54b1e1f7c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\SizeButtonIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "opacity",
+      "sha256": "791ec733a953cab4ecaaf4b0961c665e52b86bc10f4b91ddd3bf0aa844ac8a1a",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\OpacityIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "colors",
+      "sha256": "eb25d5aeb7c28fda2faf2a89bbd0df01634ad50c6c0867db75e624fafe51d612",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Colors.svg",
+      "theme": "light"
+    },
+    {
+      "key": "zoom-in",
+      "sha256": "1b4201d15af9ec071aa3899327c2b19b1fb62417e03c8f77231e822921e4d261",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\ZoomIn.svg",
+      "theme": "light"
+    },
+    {
+      "key": "zoom-out",
+      "sha256": "88fd8914f58b4d948250d064986a2885e1e12e4633a76828497aa83cb473dd57",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\ZoomOut.svg",
+      "theme": "light"
+    },
+    {
+      "key": "cursor",
+      "sha256": "bf8f13dd66a8d992c232e5851facc6d9e834448d06279f8bcfb27475ebae5c2a",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Cursor.svg",
+      "theme": "light"
+    },
+    {
+      "key": "canvas-size",
+      "sha256": "13d0bea28b757eb339497685980c037f2a2a93c84c0c31038716bfd1e7a8bdba",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\CanvasSize.svg",
+      "theme": "light"
+    },
+    {
+      "key": "object-size",
+      "sha256": "9de632c72a9d6dee2f8da3ba96fa09ddb5f365e52d4f06ec13d9c9028723209d",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\ObjectSize.svg",
+      "theme": "light"
+    },
+    {
+      "key": "chevron-down",
+      "sha256": "549f43a35d8d8308321f7b5c7f1ed7564cc8560b21eaca3379cda1a5403fac8f",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\DownArrow.svg",
+      "theme": "light"
+    },
+    {
+      "key": "chevron-up",
+      "sha256": "1be7741f93cef4953973e74c85df84a38e8502068a55af6babf5b6f7357a39de",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\UpArrow.svg",
+      "theme": "light"
+    },
+    {
+      "key": "close",
+      "sha256": "fba335bc372f984ae8e0841eee75c2ad7ba55dc9fe10a0846d886779607df555",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Close.svg",
+      "theme": "light"
+    },
+    {
+      "key": "tools",
+      "sha256": "4ab7e46ce965f13f9b027ab631ea6ca16baa43c93ae24dafef5e5fa1b04471de",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Tools.svg",
+      "theme": "light"
+    },
+    {
+      "key": "tolerance",
+      "sha256": "b22fb4566fcc4c8f4825c0284becfdf79a07058a8811e1cd51764bda8dce5c9e",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\ToleranceIcon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "stickers",
+      "sha256": "7d2e8b4ea848abe50ec81b9f8c5f8dc2d48c471f3292af258ecc320088245a25",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\Stickers2Icon.svg",
+      "theme": "light"
+    },
+    {
+      "key": "line",
+      "sha256": "5d3e71fcc901381c3bb174154425ee45bba3e02507b70b757a89af3b10f1012d",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\LineTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "curve",
+      "sha256": "4b78ae11ecb0f214e93e5a9be4068d8d048a946fae17d26f0545e37fb079a38a",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\CurveTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "oval",
+      "sha256": "e576074ec00f2106e2de7f9de12487e1200b829d18587723cf1383fbedea65cc",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\OvalTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "rectangle",
+      "sha256": "af78257d0d6874ba77db14c3134df32fdc42691bce2bce9eb3b31f88c184c27b",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\RectangleTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "rounded-rectangle",
+      "sha256": "9cc60c0b65c9fe0cb364e08b3a46b5c2efb39fbac5eab0dc7cdfc6bdd5af2c71",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\RoundedRectTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "polygon",
+      "sha256": "3bf871b431ed9139a10a47ad9b21d477246544b4bfe13cf00f40fbd9afd3e4de",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\PolygonTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "triangle",
+      "sha256": "eaf52dee26bb86eb7dcf2701b1434bf691fcdb4dcb8710af1806f378047b9095",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\TriangleTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "right-triangle",
+      "sha256": "5b36aa8fd7ae1c3e74f781d37edb3cd95d0147c9babae913e8f318e4dc8f66f9",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\RightTriangleTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "diamond",
+      "sha256": "ae933c476599a8cf9c407eb26af260db1aa3093b774ce42eb344ce7a37540e66",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\DiamondTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "pentagon",
+      "sha256": "9a9431a0b00bf3b2c62fa675465c3395ba55de600f857aa5599e133c0ca441c6",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\PentagonTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "hexagon",
+      "sha256": "431dd4605f0091e4dc8656f6f56c95c1e198c4860e17c549a6a525554fbd9e31",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\HexagonTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "right-arrow",
+      "sha256": "1c16ac304e13830d521a87afcbbaa86a66592eecbbd91d308893f9d74239dfd8",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\RightArrowTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "left-arrow",
+      "sha256": "f1b446c34b9989772a528cdc220b6f8b802fedf75ee303383fb837190bf97c24",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\LeftArrowTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "up-arrow",
+      "sha256": "6ce5c68feb4fb2759ba3eb4c72704c96185061308eed6c4386a6b6cb3f76af71",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\UpArrowTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "down-arrow",
+      "sha256": "91af7440cffccffdf494779f7b83aba0fe9d4dc38da26a5353f7b2cad0621783",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\DownArrowTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "star4",
+      "sha256": "6992471cf7385ab85cc9ba53208018d4f1b9db6ece83cb9c4ff25d17b44484a6",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\FourPointStarTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "star5",
+      "sha256": "e8346bf6334e7d9882cd78d26d28fdd6123ec0680b27d656f745b7ce911d86b7",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\FivePointStarTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "star6",
+      "sha256": "fef6e7ed68136ae1372f017c79de986e4e38b8da3a592f40c1c9bd89d6dea0ee",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\SixPointStarTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "rounded-callout",
+      "sha256": "230ae1df82a5015053bbc415c37acc8f6bf3b694651353a36917f5beb63070c5",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\RoundedRectCalloutTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "oval-callout",
+      "sha256": "b1246b6f22d72acd49141f58259c5325e6fc1fcc94f7c86a43902f4600ed77a7",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\OvalCalloutTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "cloud-callout",
+      "sha256": "d2f1794743866c32820f64e3792b095546cb142b43de967258bcc8e0ee6bd9c4",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\CloudCalloutTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "heart",
+      "sha256": "bc741ef8d1a2ef102bbddcb642d62c50164d313fa75886639d8029f47cb3c1e5",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\HeartTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "lightning",
+      "sha256": "937a2b2d0a9e7479c9f6e25f9849660ab9825cafb31fadbcf246f0061626b734",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-light\\LightningTool.svg",
+      "theme": "light"
+    },
+    {
+      "key": "pencil",
+      "sha256": "3b1e02fe7fec4e7b3c59cd6bc96ef7b72fe6895efd61511eeacbe3062dc96398",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\PencilTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "fill",
+      "sha256": "3b037bfdb6645fb049dd926f5da88746b798d7ae72b3f56e9d1f0ca5d6877b06",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\FillTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "text",
+      "sha256": "4b88e8defb45de9f95e1baf43216165ca80a98830185b0cb1356bc0008156fa8",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\TextTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "eraser",
+      "sha256": "68267f86a9479cd5a16adcf479575d31aace41f1de9ec7de625338fb9c2c4666",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\EraserTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "picker",
+      "sha256": "2de4a89ed2df4c1d4706a6a74ad815c0f8d511f846759abca95b6ebff3cd2c1a",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\ColorPickerTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "magnifier",
+      "sha256": "878aef621d2aff5a31fbf0f6d9128fd6715777dd46c07dfc1674d3a79f5b3513",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\MagnifierTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "brush",
+      "sha256": "99dd81ea7317dcf5dab3ae2a7534ef51968c507fcba11229279ae9e61189aa68",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\BrushIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "calligraphy-brush",
+      "sha256": "3ed12265f08c2722e23b023ae9da71c383cd18ce2a663d97fc7671314c94f89d",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\CalligraphyBrushIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "calligraphy-pen",
+      "sha256": "1b6a7ae1f1fbfa84013ce150ca44e67a9d28d1eb04b7e201dc330a547c74c70c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\CalligraphyPenIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "airbrush",
+      "sha256": "dd838900a96c2df6606945ac5ce908695789a34623725a1f96833e1b91e30801",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\AirBrushIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "oil",
+      "sha256": "7819f449bc0a9ba5c6782d4c7d92d511ebcc877d70b48f4e2bb5e2a3f0254557",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\OilBrushIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "crayon",
+      "sha256": "cbce873b548805c697dda5ef812e4e5ad68903c113b200ebbe811bb68f276280",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\CrayonIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "marker",
+      "sha256": "e032bde11512197c0bce0bb11982cf893c98e534034f9f31c6339241c2964eab",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\MarkerIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "natural-pencil",
+      "sha256": "55e14d7f5fd42892d9f6f63ed86d240a04e8104e4776dad2634e4f60aa1ce96b",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\NaturalPencilIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "watercolor",
+      "sha256": "677dd7f5808cb02f33201f98226570ef20b2c5d97fd4f7fe40846f02f80057ee",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\WaterColorIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "select",
+      "sha256": "6953af32d1c911672d095f8f76f51b2a6aba125d37ddbdc8b5dd8f305bf99d5e",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\RectangularSelectionLarge.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "freeform",
+      "sha256": "5f5ff3f77a52b9367656d51052c7f679fe9dad6e45ee398aac8524527392bb02",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\FreeFormSelectionLarge.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "object-select",
+      "sha256": "264df0c342d55005152a55a81d31bd2b2662e3a64d117132813b3a6ff4ec8059",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\ObjectSelectTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "resize",
+      "sha256": "33b05f9e1822963a31b475811ed48539b286877fa1b9609c0ad2647d91ed2b0e",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Resize.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "rotate",
+      "sha256": "b0ba889111f3406376568960f40553acae7f2cdeb43af048dd864dd0e707cc0b",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\RotateRight.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "flip",
+      "sha256": "26537fc9489a65be27972309fdc5ffa1e0a849bdb36abdd2da74925947d0fc18",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Flip.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "remove-background",
+      "sha256": "a2c18373f6e86cb8c07fa64f766ebc61058482a2d8b19d128ba4a694b58c9aac",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\BGRemoval.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "layers",
+      "sha256": "8d7a992ae33c56a6c651117726c80b24ad4936c349e7df95fa0ea598225e6674",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Layers.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "eye-on",
+      "sha256": "2109389324d38b1d3ea5e7ec1e345c4815c07b15f769e419094dde265aef7b2c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\EyeOn.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "eye-off",
+      "sha256": "98cda8ce6d1aac323b8ddb4b5a2461566fb5f0f7e63a72488f186c08dd5ecdce",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\EyeOff.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "save",
+      "sha256": "f16715ea0cce4a7df3bbe7434af0d59bc270df2137056a713344e93e37359857",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Save.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "print",
+      "sha256": "f0adf462375080bb1c7f9285e4244d2bd2c7912e57eed2c355e09c8137b0dd5a",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Print.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "shapes",
+      "sha256": "320c8440445f792d03e80e0bb5c3ec1727958a84ca388724550118a139aefa6e",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Shapes.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "stroke-size",
+      "sha256": "901a9b1d5222162e790efcccfc71169f5d4ac645ec3141ad1345df616bf20cc1",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\ShapesStrokeSize.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "stroke-size-disabled",
+      "sha256": "edca70310704d6e87218e4659818a24284a975726e2b463331cfd0c27f1f5d54",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\DisabledShapesStrokeSize.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "size",
+      "sha256": "64763556bac09bb897d3bc65e9b56cbb38f5bfa271024761221fc0067360be3c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\SizeButtonIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "opacity",
+      "sha256": "8928daa02b31d124742219cc39f7f8da816fd40663aba95af677f5aad054519e",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\OpacityIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "colors",
+      "sha256": "5813fe75899962cdd7ed0e1e0901f2be11384c69147fb9d19360b326378c8b9b",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Colors.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "zoom-in",
+      "sha256": "47316a22ded4f775fe5baf21573dad723f466d82adc52dc3d71ab9a8a678de07",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\ZoomIn.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "zoom-out",
+      "sha256": "afb73fc14e8d5cce5f75bbe128a35f8ea1d2e577906e1f77b3cbc650708063ea",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\ZoomOut.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "cursor",
+      "sha256": "b5ca328a1bb22aaea734e8068f44c65cdd0d841f24a303f030d76d1e37bc1024",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Cursor.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "canvas-size",
+      "sha256": "bdb417bafba0d233f0cb2c233b1ca234743f033bc5d5cb4857ea5db028a9b537",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\CanvasSize.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "object-size",
+      "sha256": "cb5f1f6dd63e183bf5a49c73e1b91cfe40c5724ca564b49c7f410ac6e71ec807",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\ObjectSize.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "chevron-down",
+      "sha256": "46916350272319f5fe954b6ef602d9c310928e31d0fb9eb51761d17f5fa7547d",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\DownArrow.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "chevron-up",
+      "sha256": "5a2408590dc3975f6133d20ee861451536e3a30556194f90c5629fdbfde88765",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\UpArrow.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "close",
+      "sha256": "6c6ef51f9772c9e9b0d7c7d9d9e3c4519bb31b568636ee917578633dd4ffd2d3",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Close.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "tools",
+      "sha256": "00851a1e3adb97a2344e34e6e63b8ad9f0bc24ed8ed387376ea7af3dd45af938",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Tools.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "tolerance",
+      "sha256": "497a1de58410e44c9b0c5448183c42ceda052d138cd298b64cc1529d16a51696",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\ToleranceIcon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "stickers",
+      "sha256": "feaf17502f0adf1fcc4ee44801d10f6fc424c31f0cb89360e0b54ed580074e4f",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\Stickers2Icon.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "line",
+      "sha256": "a67fd782cda3c5ee37f8a6df2293e8987bda27dfc98f150d8eb598ef939d2063",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\LineTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "curve",
+      "sha256": "f8f071f1ff35bb7064d3491f370ebe8c05448aa6279786c07902822ff6c65694",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\CurveTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "oval",
+      "sha256": "0420482d84c44d37ce1b338d6d01c3f520cfaa9c1955b2f8cadd216cfc2cdfc6",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\OvalTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "rectangle",
+      "sha256": "8c5dcd326ded42c65f10fe590df171b15fd7eb2e656afe75180d5bf42442a1a8",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\RectangleTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "rounded-rectangle",
+      "sha256": "c57c6a3aad61ec4d39326ec86e2fdf2df213d31775507bb571df74c100d0ffc4",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\RoundedRectTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "polygon",
+      "sha256": "a1672bb9ca6c3d6bfd06b354933b95297591f88b75280a562dcc9831f48d9fc3",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\PolygonTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "triangle",
+      "sha256": "7c376b9527ad51560bc27067d506c6b3bed06eef28c5bea92b15b1ef11b1439c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\TriangleTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "right-triangle",
+      "sha256": "c76b9008e38ceae6b86e4cd5df4fca7d80e3c6f8e8323cebd88299fa74897893",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\RightTriangleTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "diamond",
+      "sha256": "7c47f59d24ab0a3d97d2e6df1c4f9b1ff67f15e12d382ccba625d188389a270c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\DiamondTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "pentagon",
+      "sha256": "56a8ce3962c56f1a318b1b12be15c3b2ca98b3ee7843667ce25ad73ff60770e2",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\PentagonTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "hexagon",
+      "sha256": "4266973b363d68e56548174723c584816a8e762c4afecebe2ff6e9c03a66f5b2",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\HexagonTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "right-arrow",
+      "sha256": "fd676110d1e53e82999c477e879e34c5208986a8a23de07fdfc0eefee52575cc",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\RightArrowTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "left-arrow",
+      "sha256": "c2e170854dc52630306e140e39220a40519a03a1357df47c856c712092917e4e",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\LeftArrowTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "up-arrow",
+      "sha256": "46b026d435a78424f37757e94316f8690b81cf37cbf9ae2c037022ea6639acf5",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\UpArrowTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "down-arrow",
+      "sha256": "c41650d54b4c6cb9c00a9f3089cd64752ef7d160b85a68d86567f8996557fb64",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\DownArrowTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "star4",
+      "sha256": "482176b8aa71527b7b301500c499cade598fc3edd9749b1acf251c9427918ae2",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\FourPointStarTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "star5",
+      "sha256": "0afb36349249489d20b4854845c515f13bc690f98379ecfe3836dfcbcb086456",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\FivePointStarTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "star6",
+      "sha256": "508d6b5f5d747ff374c211130c3621d3259e6009d55b7ae1c6ebab2a54226d0c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\SixPointStarTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "rounded-callout",
+      "sha256": "b583eac2c717fb5c96c77759e73f55f82bf5f0020196224ace8673a98ad525c6",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\RoundedRectCalloutTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "oval-callout",
+      "sha256": "c67915d6cd3baa022ee5654879f66e62a257f9fc9d66b7d9c4b57f2d4efcc09c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\OvalCalloutTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "cloud-callout",
+      "sha256": "fd1a49ac6a3e7b6c206e9c0e7324a06a21319b3166f8f93d9f741920e289923f",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\CloudCalloutTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "heart",
+      "sha256": "832fc9716772f857fba43974bc3d8e43d8d6b94976f3784d80bf8ec60c9c0f3a",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\HeartTool.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "lightning",
+      "sha256": "1719046484571ac6a87bc1d0117e5acfd447a0a1cd88bfd70f51fa04b003ef6c",
+      "source": "C:/Program Files/WindowsApps/Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe/Assets\\theme-dark\\LightningTool.svg",
+      "theme": "dark"
+    }
+  ],
+  "kind": "installed_windows_icon_reference",
+  "method": "byte copy of the 26H2 Paint package toolbar SVGs; rasterized offline",
+  "schema_version": 1,
+  "use": "Owner-provided installed Windows reference; local development"
+}

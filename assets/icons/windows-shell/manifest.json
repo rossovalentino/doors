@@ -1,0 +1,5057 @@
+{
+  "source": "../../fonts/segoe-fluent-icons/SegoeFluentIcons.ttf",
+  "reference": "https://learn.microsoft.com/en-us/windows/apps/design/iconography/segoe-fluent-icons-font",
+  "format": "one-byte coverage, native-size, theme-tinted at draw time",
+  "glyphs": [
+    {
+      "name": "clock-focus",
+      "font": "clock",
+      "codepoint": "e5c4",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-timer",
+      "font": "clock",
+      "codepoint": "ea03",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-alarm",
+      "font": "clock",
+      "codepoint": "ea8f",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-stopwatch",
+      "font": "clock",
+      "codepoint": "e916",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-world",
+      "font": "clock",
+      "codepoint": "e909",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-settings",
+      "font": "clock",
+      "codepoint": "e713",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-play",
+      "font": "clock",
+      "codepoint": "f5b0",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-pause",
+      "font": "clock",
+      "codepoint": "e62e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-reset",
+      "font": "clock",
+      "codepoint": "e423",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-flag",
+      "font": "clock",
+      "codepoint": "eb4b",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-up",
+      "font": "clock",
+      "codepoint": "e70e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-down",
+      "font": "clock",
+      "codepoint": "e70d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-check",
+      "font": "clock",
+      "codepoint": "f75b",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-add",
+      "font": "clock",
+      "codepoint": "e710",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "clock-delete",
+      "font": "clock",
+      "codepoint": "e74d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-percent",
+      "codepoint": "e94c",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-backspace",
+      "codepoint": "e94f",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-divide",
+      "codepoint": "e94a",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-multiply",
+      "codepoint": "e947",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-subtract",
+      "codepoint": "e949",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-add",
+      "codepoint": "e948",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-equals",
+      "codepoint": "e94e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-root",
+      "codepoint": "e94b",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-nav",
+      "codepoint": "e700",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-history",
+      "codepoint": "e81c",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-delete",
+      "codepoint": "e74d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "calc-standard",
+      "codepoint": "e8ef",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-star-outline",
+      "codepoint": "e734",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-download",
+      "codepoint": "e896",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-star",
+      "codepoint": "e735",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-sort",
+      "codepoint": "e8cb",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-view",
+      "codepoint": "e8fd",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-details",
+      "codepoint": "e8fd",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-icons",
+      "codepoint": "e8b9",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-cut",
+      "codepoint": "e8c6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-copy",
+      "codepoint": "e8c8",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-paste",
+      "codepoint": "e77f",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-rename",
+      "codepoint": "e8ac",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-share",
+      "codepoint": "e72d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-delete",
+      "codepoint": "e74d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-pin",
+      "codepoint": "e718",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-pinned",
+      "codepoint": "e840",
+      "layers": [
+        "e840",
+        "e841"
+      ],
+      "sizes": [
+        11,
+        22,
+        33
+      ]
+    },
+    {
+      "name": "explorer-chevron",
+      "codepoint": "e70d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-chevron-right",
+      "codepoint": "e76c",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-document",
+      "codepoint": "e8a5",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-folder",
+      "codepoint": "e8b7",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-music",
+      "codepoint": "e8d6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-video",
+      "codepoint": "e714",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-zip",
+      "codepoint": "f012",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-link",
+      "codepoint": "e71b",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-properties",
+      "codepoint": "e90f",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-window",
+      "codepoint": "e78b",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-mail",
+      "codepoint": "e715",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-convert",
+      "codepoint": "e8ab",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-check",
+      "codepoint": "e73e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-back",
+      "codepoint": "e72b",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-forward",
+      "codepoint": "e72a",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-up",
+      "codepoint": "e74a",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-more",
+      "codepoint": "e712",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-refresh",
+      "codepoint": "e72c",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-search",
+      "codepoint": "e721",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "chevron-up",
+      "codepoint": "e70e",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "network-disconnected",
+      "codepoint": "eb55",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "mute",
+      "codepoint": "e74f",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "previous",
+      "codepoint": "e76b",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "next",
+      "codepoint": "e76c",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "contact",
+      "codepoint": "ea8c",
+      "sizes": [
+        24,
+        48,
+        72,
+        96,
+        144,
+        192,
+        288
+      ]
+    },
+    {
+      "name": "calendar",
+      "codepoint": "e787",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "settings",
+      "codepoint": "e713",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "refresh",
+      "codepoint": "e72c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "new",
+      "codepoint": "e710",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "personalize",
+      "codepoint": "e771",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "system",
+      "codepoint": "e770",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "sort",
+      "codepoint": "e8cb",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "view",
+      "codepoint": "e8a9",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "power",
+      "codepoint": "e7e8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "chrome-minimize",
+      "codepoint": "e921",
+      "sizes": [
+        12,
+        24,
+        36,
+        72
+      ]
+    },
+    {
+      "name": "chrome-maximize",
+      "codepoint": "e922",
+      "sizes": [
+        12,
+        24,
+        36,
+        72
+      ]
+    },
+    {
+      "name": "chrome-restore",
+      "codepoint": "e923",
+      "sizes": [
+        12,
+        24,
+        36,
+        72
+      ]
+    },
+    {
+      "name": "chrome-close",
+      "codepoint": "e8bb",
+      "sizes": [
+        12,
+        24,
+        36,
+        72
+      ]
+    },
+    {
+      "name": "search",
+      "codepoint": "e721",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "task-view",
+      "codepoint": "e7c4",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "notification",
+      "codepoint": "ea8f",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "setting-display",
+      "codepoint": "e7f4",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-volume",
+      "codepoint": "e767",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-ringer",
+      "codepoint": "ea8f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-quiet",
+      "codepoint": "e708",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-power",
+      "codepoint": "e7e8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-storage",
+      "codepoint": "eda2",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-share",
+      "codepoint": "e72d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-multitask",
+      "codepoint": "e7c4",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-key",
+      "codepoint": "e8d7",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-repair",
+      "codepoint": "e90f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-restore",
+      "codepoint": "e777",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-remote",
+      "codepoint": "e8af",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-clipboard",
+      "codepoint": "e77f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-info",
+      "codepoint": "e946",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-devices",
+      "codepoint": "e975",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-print",
+      "codepoint": "e749",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-phone",
+      "codepoint": "e717",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-camera",
+      "codepoint": "e722",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-mouse",
+      "codepoint": "e962",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-touch",
+      "codepoint": "e815",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-pen",
+      "codepoint": "e76d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-play",
+      "codepoint": "e768",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-usb",
+      "codepoint": "e88e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-wifi",
+      "codepoint": "e701",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-ethernet",
+      "codepoint": "e839",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-vpn",
+      "codepoint": "e705",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-airplane",
+      "codepoint": "e709",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-globe",
+      "codepoint": "e774",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-network",
+      "codepoint": "e968",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-apps",
+      "codepoint": "e71d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-location",
+      "codepoint": "e81d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-link",
+      "codepoint": "e71b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-video",
+      "codepoint": "e714",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-mail",
+      "codepoint": "e715",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-people",
+      "codepoint": "e716",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-cloud",
+      "codepoint": "e753",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-work",
+      "codepoint": "e821",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-calendar",
+      "codepoint": "e787",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-world",
+      "codepoint": "e909",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-keyboard",
+      "codepoint": "e765",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-speech",
+      "codepoint": "efa9",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-game",
+      "codepoint": "e7fc",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-record",
+      "codepoint": "e7c8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-font",
+      "codepoint": "e8d2",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-effects",
+      "codepoint": "e794",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-search",
+      "codepoint": "e721",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-color",
+      "codepoint": "e790",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-contrast",
+      "codepoint": "e7a1",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-narrator",
+      "codepoint": "ed4d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-captions",
+      "codepoint": "e7f0",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-eye",
+      "codepoint": "ead6",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-shield",
+      "codepoint": "ea18",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-code",
+      "codepoint": "e943",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-settings",
+      "codepoint": "e713",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-diagnostic",
+      "codepoint": "e9d9",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-history",
+      "codepoint": "e81c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-microphone",
+      "codepoint": "e720",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-contact",
+      "codepoint": "e77b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-text-cursor",
+      "codepoint": "f1bb",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-pointer",
+      "codepoint": "e7c9",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "explorer-add",
+      "codepoint": "e710",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-open",
+      "codepoint": "e838",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-new-tab",
+      "codepoint": "e8a7",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-tag",
+      "codepoint": "e8ec",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-close",
+      "codepoint": "e8bb",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-preview",
+      "codepoint": "e8ff",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-info",
+      "codepoint": "e946",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-pane",
+      "codepoint": "e8a0",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-new-folder",
+      "codepoint": "e8f4",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-terminal",
+      "codepoint": "e756",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "terminal-home",
+      "codepoint": "e80f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "terminal-book",
+      "codepoint": "e736",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "terminal-split",
+      "codepoint": "e890",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "terminal-end",
+      "codepoint": "e8ee",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "explorer-pc",
+      "codepoint": "e7f4",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "explorer-add-circle",
+      "codepoint": "ecc8",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60,
+        72
+      ]
+    },
+    {
+      "name": "app-cpu",
+      "codepoint": "eea1",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-performance",
+      "codepoint": "e9d9",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-apps",
+      "codepoint": "f0e2",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-settings",
+      "codepoint": "e713",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-power",
+      "codepoint": "e7e8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-network",
+      "codepoint": "e774",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-drive",
+      "codepoint": "eda2",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-folder",
+      "codepoint": "e8b7",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-document",
+      "codepoint": "e8a5",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-home",
+      "codepoint": "e80f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-history",
+      "codepoint": "e81c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-people",
+      "codepoint": "e716",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-image",
+      "codepoint": "e91b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-video",
+      "codepoint": "e714",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-audio",
+      "codepoint": "e90b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-archive",
+      "codepoint": "e7b8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-edit",
+      "codepoint": "e70f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-convert",
+      "codepoint": "e8ab",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-batch",
+      "codepoint": "e8f1",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-camera",
+      "codepoint": "e722",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-record",
+      "codepoint": "e7c8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-scan",
+      "codepoint": "e8fe",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-crop",
+      "codepoint": "e7a8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-rotate",
+      "codepoint": "e7ad",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-adjust",
+      "codepoint": "e790",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-erase",
+      "codepoint": "e75c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-hand",
+      "codepoint": "e7c2",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-fit",
+      "codepoint": "e9a6",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-zoomin",
+      "codepoint": "e8a3",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-zoomout",
+      "codepoint": "e71f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-more",
+      "codepoint": "e712",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-down",
+      "codepoint": "e70d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-info",
+      "codepoint": "e946",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-save",
+      "codepoint": "e74e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-back",
+      "codepoint": "e72b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-forward",
+      "codepoint": "e72a",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-add",
+      "codepoint": "e710",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-close",
+      "codepoint": "e711",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-search",
+      "codepoint": "e721",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-filter",
+      "codepoint": "e71c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-refresh",
+      "codepoint": "e72c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-processes",
+      "codepoint": "e8fd",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-check",
+      "codepoint": "e73e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-shield",
+      "codepoint": "ea18",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-memory",
+      "codepoint": "eea0",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-wifi",
+      "codepoint": "e701",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-bold",
+      "codepoint": "e8dd",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-italic",
+      "codepoint": "e8db",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "app-strike",
+      "codepoint": "ede0",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "shell-wifi",
+      "codepoint": "e701",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-bluetooth",
+      "codepoint": "e702",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-airplane",
+      "codepoint": "e709",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-accessibility",
+      "codepoint": "e776",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-vpn",
+      "codepoint": "e705",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-energy",
+      "codepoint": "f432",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-brightness",
+      "codepoint": "e706",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-volume",
+      "codepoint": "e767",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-volume-zero",
+      "codepoint": "e992",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-volume-low",
+      "codepoint": "e993",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-volume-mid",
+      "codepoint": "e994",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-volume-high",
+      "codepoint": "e995",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-microphone",
+      "codepoint": "e720",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-speakers",
+      "codepoint": "e7f5",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-back",
+      "codepoint": "e72b",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-sound-output",
+      "codepoint": "f4c3",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-live-captions",
+      "codepoint": "ed1e",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-night-light",
+      "codepoint": "f08c",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-hotspot",
+      "codepoint": "e704",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-nearby",
+      "codepoint": "e72d",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-cast",
+      "codepoint": "ec15",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-project",
+      "codepoint": "ebc6",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-laptop",
+      "codepoint": "e7f8",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-narrator",
+      "codepoint": "ed4d",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-magnifier",
+      "codepoint": "e8a3",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-color-filters",
+      "codepoint": "e790",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-battery-outline",
+      "codepoint": "eba0",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-chevron-down",
+      "codepoint": "e70d",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-settings",
+      "codepoint": "e713",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-pin",
+      "codepoint": "e718",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-unpin",
+      "codepoint": "e77a",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-close",
+      "codepoint": "e8bb",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-lock",
+      "codepoint": "e72e",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-sleep",
+      "codepoint": "e708",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-restart",
+      "codepoint": "e777",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-power",
+      "codepoint": "e7e8",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-search",
+      "codepoint": "e721",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-view",
+      "codepoint": "e8a9",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-sort",
+      "codepoint": "e8cb",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-refresh",
+      "codepoint": "e72c",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-new",
+      "codepoint": "e710",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-display",
+      "codepoint": "e7f4",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-personalize",
+      "codepoint": "e771",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-more-options",
+      "codepoint": "e8a7",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-check",
+      "codepoint": "e73e",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-apps",
+      "codepoint": "e71d",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-people",
+      "codepoint": "e77b",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-terminal",
+      "codepoint": "e756",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-folder",
+      "codepoint": "e8b7",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-chevron-up-small",
+      "codepoint": "e70e",
+      "sizes": [
+        12,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "shell-chevron-down-small",
+      "codepoint": "e70d",
+      "sizes": [
+        12,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "shell-chevron-right-small",
+      "codepoint": "e76c",
+      "sizes": [
+        12,
+        24,
+        36
+      ]
+    },
+    {
+      "name": "shell-person",
+      "codepoint": "e77b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "shell-taskbar-search",
+      "codepoint": "e721",
+      "sizes": [
+        24,
+        48,
+        72
+      ]
+    },
+    {
+      "name": "shell-taskview",
+      "codepoint": "e7c4",
+      "sizes": [
+        24,
+        48,
+        72
+      ]
+    },
+    {
+      "name": "shell-taskview-small",
+      "codepoint": "e7c4",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-history",
+      "codepoint": "e81c",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-enter",
+      "codepoint": "e751",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-pictures",
+      "codepoint": "e91b",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-network",
+      "codepoint": "e968",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-ethernet",
+      "codepoint": "e839",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "shell-personal",
+      "codepoint": "e77b",
+      "sizes": [
+        16,
+        32,
+        48
+      ]
+    },
+    {
+      "name": "paint-share",
+      "font": "paint",
+      "codepoint": "e72d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-undo",
+      "font": "paint",
+      "codepoint": "e7a7",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-redo",
+      "font": "paint",
+      "codepoint": "e7a6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-save",
+      "font": "paint",
+      "codepoint": "e74e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-settings",
+      "font": "paint",
+      "codepoint": "e713",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-feedback",
+      "font": "paint",
+      "codepoint": "e789",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-chevron-down",
+      "font": "paint",
+      "codepoint": "e70d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-chevron-up",
+      "font": "paint",
+      "codepoint": "e70e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-fit",
+      "font": "paint",
+      "codepoint": "e9a6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-zoom-in",
+      "font": "paint",
+      "codepoint": "e8a3",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-zoom-out",
+      "font": "paint",
+      "codepoint": "e71f",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-outline",
+      "font": "paint",
+      "codepoint": "e666",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-fill",
+      "font": "paint",
+      "codepoint": "f42b",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-selection",
+      "font": "paint",
+      "codepoint": "e65c",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-cursor",
+      "font": "paint",
+      "codepoint": "e8b3",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-canvas",
+      "font": "paint",
+      "codepoint": "e9a6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-add",
+      "font": "paint",
+      "codepoint": "e710",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-delete",
+      "font": "paint",
+      "codepoint": "e74d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-more",
+      "font": "paint",
+      "codepoint": "e712",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-check",
+      "codepoint": "e73e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-chevron-right",
+      "codepoint": "e76c",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "paint-crop",
+      "font": "paint",
+      "codepoint": "e7a8",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "snip-rectangle",
+      "font": "snip",
+      "codepoint": "f407",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-window",
+      "font": "snip",
+      "codepoint": "f775",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-full-screen",
+      "font": "snip",
+      "codepoint": "e350",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-free-form",
+      "font": "snip",
+      "codepoint": "f408",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-close",
+      "font": "snip",
+      "codepoint": "e711",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-camera",
+      "font": "snip",
+      "codepoint": "e722",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-video",
+      "font": "snip",
+      "codepoint": "e714",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-chevron",
+      "font": "snip",
+      "codepoint": "e70d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-new",
+      "font": "snip",
+      "codepoint": "e710",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-delay",
+      "font": "snip",
+      "codepoint": "f086",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-delay-three",
+      "font": "snip",
+      "codepoint": "e64a",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-delay-five",
+      "font": "snip",
+      "codepoint": "f087",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-delay-ten",
+      "font": "snip",
+      "codepoint": "f088",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-save",
+      "font": "snip",
+      "codepoint": "e74e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-copy",
+      "font": "snip",
+      "codepoint": "e8c8",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-share",
+      "font": "snip",
+      "codepoint": "e72d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-more",
+      "font": "snip",
+      "codepoint": "e712",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-pen",
+      "font": "snip",
+      "codepoint": "e76d",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-highlighter",
+      "font": "snip",
+      "codepoint": "e7e6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-eraser",
+      "font": "snip",
+      "codepoint": "ed60",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-ruler",
+      "font": "snip",
+      "codepoint": "ecc6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-crop",
+      "font": "snip",
+      "codepoint": "e7a8",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-undo",
+      "font": "snip",
+      "codepoint": "e7a7",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-redo",
+      "font": "snip",
+      "codepoint": "e7a6",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-zoom",
+      "font": "snip",
+      "codepoint": "e8a3",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-text",
+      "font": "snip",
+      "codepoint": "ea9c",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-folder",
+      "font": "snip",
+      "codepoint": "e838",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-settings",
+      "font": "snip",
+      "codepoint": "e713",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-check",
+      "font": "snip",
+      "codepoint": "e73e",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-pointer",
+      "font": "snip",
+      "codepoint": "e8b0",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "snip-windows",
+      "font": "snip",
+      "codepoint": "f23f",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "weather-menu",
+      "codepoint": "e700",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-home",
+      "codepoint": "e80f",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-maps",
+      "codepoint": "eb44",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-history",
+      "codepoint": "e901",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msnx"
+    },
+    {
+      "name": "weather-calendar",
+      "codepoint": "e902",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msnx"
+    },
+    {
+      "name": "weather-health",
+      "codepoint": "e903",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msnx"
+    },
+    {
+      "name": "weather-air",
+      "codepoint": "e900",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msnx"
+    },
+    {
+      "name": "weather-trends",
+      "codepoint": "eb43",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-favorites",
+      "codepoint": "e728",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-feedback",
+      "codepoint": "e76e",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-account",
+      "codepoint": "e77b",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-settings",
+      "codepoint": "e713",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-refresh",
+      "codepoint": "e72c",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-star",
+      "codepoint": "e734",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-pin",
+      "codepoint": "e718",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-units",
+      "codepoint": "e9bd",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-search",
+      "codepoint": "e721",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-cloud",
+      "codepoint": "e9bf",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-sunny",
+      "codepoint": "e9bd",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-cloudy",
+      "codepoint": "e9be",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-partly-day",
+      "codepoint": "e9c0",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-partly-night",
+      "codepoint": "e9c1",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-clear-night",
+      "codepoint": "e9c2",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-showers-day",
+      "codepoint": "e9c3",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-rain",
+      "codepoint": "e9c4",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-thunder",
+      "codepoint": "e9c6",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-snow",
+      "codepoint": "e9c8",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-fog",
+      "codepoint": "e9cb",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-wind",
+      "codepoint": "e9cc",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-drop",
+      "codepoint": "e9cf",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-thermometer",
+      "codepoint": "e9ca",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-drizzle",
+      "codepoint": "e9e0",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-snow-showers",
+      "codepoint": "e9fd",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "weather-showers-night",
+      "codepoint": "ea0f",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        96
+      ],
+      "font": "msn"
+    },
+    {
+      "name": "access-zoom-out",
+      "codepoint": "e71f",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-zoom-in",
+      "codepoint": "e8a3",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-play",
+      "codepoint": "e768",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-quick",
+      "codepoint": "e945",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-guide",
+      "codepoint": "e736",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-new",
+      "codepoint": "e82f",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-feedback",
+      "codepoint": "ed15",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-warning",
+      "codepoint": "e7ba",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-mic-off",
+      "codepoint": "ec54",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "access-help",
+      "codepoint": "e897",
+      "sizes": [
+        16,
+        20,
+        24,
+        32,
+        40,
+        48
+      ]
+    },
+    {
+      "name": "terminal-full-screen",
+      "codepoint": "e740",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "terminal-back-to-window",
+      "codepoint": "e73f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "shell-shield",
+      "codepoint": "ea18",
+      "sizes": [
+        12,
+        16,
+        20,
+        24,
+        32,
+        36,
+        40,
+        48,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e107",
+      "codepoint": "e107",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e119",
+      "codepoint": "e119",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e125",
+      "codepoint": "e125",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e12e",
+      "codepoint": "e12e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e147",
+      "codepoint": "e147",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e148",
+      "codepoint": "e148",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e15d",
+      "codepoint": "e15d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e15f",
+      "codepoint": "e15f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e181",
+      "codepoint": "e181",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e192",
+      "codepoint": "e192",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e1d6",
+      "codepoint": "e1d6",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e1e3",
+      "codepoint": "e1e3",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e1f6",
+      "codepoint": "e1f6",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e292",
+      "codepoint": "e292",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e37a",
+      "codepoint": "e37a",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e3ba",
+      "codepoint": "e3ba",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e3bb",
+      "codepoint": "e3bb",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e742",
+      "codepoint": "e742",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e771",
+      "codepoint": "e771",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e789",
+      "codepoint": "e789",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e7e8",
+      "codepoint": "e7e8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e7f8",
+      "codepoint": "e7f8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e815",
+      "codepoint": "e815",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e81c",
+      "codepoint": "e81c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e839",
+      "codepoint": "e839",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e962",
+      "codepoint": "e962",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e9ce",
+      "codepoint": "e9ce",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ea1a",
+      "codepoint": "ea1a",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ea6c",
+      "codepoint": "ea6c",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ea8f",
+      "codepoint": "ea8f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-eb95",
+      "codepoint": "eb95",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ebb2",
+      "codepoint": "ebb2",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ec05",
+      "codepoint": "ec05",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ecc8",
+      "codepoint": "ecc8",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-eccc",
+      "codepoint": "eccc",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ed4d",
+      "codepoint": "ed4d",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ee56",
+      "codepoint": "ee56",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ee7e",
+      "codepoint": "ee7e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f12e",
+      "codepoint": "f12e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f211",
+      "codepoint": "f211",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f2b7",
+      "codepoint": "f2b7",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f4c3",
+      "codepoint": "f4c3",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f73f",
+      "codepoint": "f73f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f7ec",
+      "codepoint": "f7ec",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e81e",
+      "codepoint": "e81e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e75a",
+      "codepoint": "e75a",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e722",
+      "codepoint": "e722",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ea18",
+      "codepoint": "ea18",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f67b",
+      "codepoint": "f67b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e779",
+      "codepoint": "e779",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e787",
+      "codepoint": "e787",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e91b",
+      "codepoint": "e91b",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e717",
+      "codepoint": "e717",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-efa9",
+      "codepoint": "efa9",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e8b7",
+      "codepoint": "e8b7",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e118",
+      "codepoint": "e118",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e130",
+      "codepoint": "e130",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e8d6",
+      "codepoint": "e8d6",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e714",
+      "codepoint": "e714",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e9d9",
+      "codepoint": "e9d9",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e772",
+      "codepoint": "e772",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e753",
+      "codepoint": "e753",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f741",
+      "codepoint": "f741",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e2b1",
+      "codepoint": "e2b1",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ee3f",
+      "codepoint": "ee3f",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e1e4",
+      "codepoint": "e1e4",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e185",
+      "codepoint": "e185",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e73e",
+      "codepoint": "e73e",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e734",
+      "codepoint": "e734",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ec92",
+      "codepoint": "ec92",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e8be",
+      "codepoint": "e8be",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-ec48",
+      "codepoint": "ec48",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-f432",
+      "codepoint": "f432",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    },
+    {
+      "name": "setting-g-e179",
+      "codepoint": "e179",
+      "sizes": [
+        20,
+        40,
+        60
+      ]
+    }
+  ],
+  "caption_reference": "https://learn.microsoft.com/en-us/windows/apps/design/basics/titlebar-design"
+}

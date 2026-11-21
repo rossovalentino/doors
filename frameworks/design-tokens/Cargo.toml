@@ -1,0 +1,12 @@
+[package]
+name = "door-design-tokens"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Allocation-free semantic design-token registry with reference provenance (spec sections 111 and 140.3)"
+
+[dependencies]
+
+[lints]
+workspace = true

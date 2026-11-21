@@ -1,0 +1,488 @@
+{
+  "files": [
+    {
+      "key": "cut",
+      "sha256": "d3b52dd5301d981d89bfa1c370cf844d97db115ca01fed50915fefd6888cb59c",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.cut.svg",
+      "theme": "light"
+    },
+    {
+      "key": "copy",
+      "sha256": "92d0157241ead09791faf8930ed763304ceac8928aa57c0b3ab4d1750c0dbd79",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.copy.svg",
+      "theme": "light"
+    },
+    {
+      "key": "paste",
+      "sha256": "5aa7b503918e130d41104f9dff43b4f8bcc59478e8f0b8086c114fc56d9c0b5c",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.paste.svg",
+      "theme": "light"
+    },
+    {
+      "key": "rename",
+      "sha256": "b12ef50ca140fc75e618e1fcbeca5ff532a4a38cb1f450e5a117ae893a9047a0",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.rename.svg",
+      "theme": "light"
+    },
+    {
+      "key": "share",
+      "sha256": "3fbba03078f0293e7686e48407bbcf623db011541c1a0f07be4c649e5390e40b",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\Windows.ModernShare.svg",
+      "theme": "light"
+    },
+    {
+      "key": "delete",
+      "sha256": "2c4c533daa2e079d5c15561d45d4c822c8027292763bdbece64938a3e94a7fc9",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.recycle.svg",
+      "theme": "light"
+    },
+    {
+      "key": "open-folder",
+      "sha256": "d416997b4b8346fc6a30ddec0ebdebe0e6696e8355bd6e9aa56ac94fef5667a4",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.openfolder.svg",
+      "theme": "light"
+    },
+    {
+      "key": "open-new-tab",
+      "sha256": "1d655db17bb242dbee069ef1ade47017fdf7630dca43b5a6a18f5019e73296bd",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.opennewtab.svg",
+      "theme": "light"
+    },
+    {
+      "key": "open-new-window",
+      "sha256": "99eea7995ff4bb16542d5a5c55d15c0b6fea57642292bd775d2d1f23bf2f458e",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.opennewwindow.svg",
+      "theme": "light"
+    },
+    {
+      "key": "open-with",
+      "sha256": "e71c56e66c4646d028421f5aab6ac8d3c3be7b5911d3fb0b1f1cbd2c2d7798a3",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.openwith.svg",
+      "theme": "light"
+    },
+    {
+      "key": "open-location",
+      "sha256": "d416997b4b8346fc6a30ddec0ebdebe0e6696e8355bd6e9aa56ac94fef5667a4",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.shortcut.opencontaining.svg",
+      "theme": "light"
+    },
+    {
+      "key": "pin",
+      "sha256": "1be766dc7d682b8aeb4dc817af861950a0a72d3b448bfffbfb4d98f367b58044",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.pintohome.svg",
+      "theme": "light"
+    },
+    {
+      "key": "unpin",
+      "sha256": "acd4ab6c30f2d01540b73ffb02ccef6553c30c75d72d093e2d84d3bdc509b451",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.unpinfromhome.svg",
+      "theme": "light"
+    },
+    {
+      "key": "favorite",
+      "sha256": "c468a4fb748ac9d687ba7569b047f9abc93c036e1e8852f5043518fbd6406413",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.pintohomefile.svg",
+      "theme": "light"
+    },
+    {
+      "key": "copy-path",
+      "sha256": "af377dc08ae0fde4de94131444aba307685ae54924724b95bb573440b44f5dcb",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.copyaspath.svg",
+      "theme": "light"
+    },
+    {
+      "key": "zip",
+      "sha256": "e43e5c112587ffc6db1e301fccde288ff5e3aa7473f98b53eb207b33bc0858ff",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\Windows.Zip.Action.svg",
+      "theme": "light"
+    },
+    {
+      "key": "extract",
+      "sha256": "cb24f3100e6b15d365d9b3abcd589725a35925012b002244cc055b2cf6bd8294",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.compressedfile.extract.svg",
+      "theme": "light"
+    },
+    {
+      "key": "properties",
+      "sha256": "1635b39d4c3ce353f0c575ce234a057cce3d3bdfb68345d20e593ea10fadfb44",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.properties.svg",
+      "theme": "light"
+    },
+    {
+      "key": "show-more",
+      "sha256": "2f6b9953e323f0416481e4f3c5ad56010c5850c706031e1d4a976465c570b64c",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\expandtoclassic.svg",
+      "theme": "light"
+    },
+    {
+      "key": "refresh",
+      "sha256": "ab389145844664987ce28fdfd82fb2934003f31ed13ec63e6475f645d4bc14b9",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.refresh.svg",
+      "theme": "light"
+    },
+    {
+      "key": "new",
+      "sha256": "475aad3d8d162fad230fecdf8ece18f0b9bb969d3cc16787599cf52f127f260b",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.newitem.svg",
+      "theme": "light"
+    },
+    {
+      "key": "new-folder",
+      "sha256": "0a3186fd42921b3bf5bac3547a17b7079f3ab651d906003c34a6643a1292205e",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\newfolder.svg",
+      "theme": "light"
+    },
+    {
+      "key": "view",
+      "sha256": "4a1136f47a1d063d4a0ae923c1dc3299a8bf84891d5144bb2cedca60b5f8bb74",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\View.svg",
+      "theme": "light"
+    },
+    {
+      "key": "sort",
+      "sha256": "bdbda1150bff015a34c0107a03170304a258f6dd3ea73d9a068c2b72e397251c",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\SortBy.svg",
+      "theme": "light"
+    },
+    {
+      "key": "customize",
+      "sha256": "b6494964dedbfd3a2b65c49004233e7f1f425a78f33bbf36779e8ff0c84dda72",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.customizemenu.svg",
+      "theme": "light"
+    },
+    {
+      "key": "send-to",
+      "sha256": "4891cf4cfc5cdc32bb761eab9346a3e4873112241386376cb2beb31edabb1b17",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.sendto.svg",
+      "theme": "light"
+    },
+    {
+      "key": "wallpaper",
+      "sha256": "023266c531695f46a5d66d8e593b95dcb9ca052ca0928d65858f9f04ea4ade57",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.setdesktopwallpaper.svg",
+      "theme": "light"
+    },
+    {
+      "key": "empty-bin",
+      "sha256": "2c4c533daa2e079d5c15561d45d4c822c8027292763bdbece64938a3e94a7fc9",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.recyclebin.empty.svg",
+      "theme": "light"
+    },
+    {
+      "key": "restore-all",
+      "sha256": "b6c1d4a1ee1ad9c73be950ea6d9d7ee26501cea4829cf8224e832f00ae9959fd",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.recyclebin.restoreall.svg",
+      "theme": "light"
+    },
+    {
+      "key": "restore",
+      "sha256": "9f1674e11dc86b181946c753c955a63e6347b72b8035926ca65777f5bb348c53",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.recyclebin.restoreitems.svg",
+      "theme": "light"
+    },
+    {
+      "key": "select-all",
+      "sha256": "1540e57f52f02223a8a99a574f08087d017c9dd5c9b1c2236eed779246cd7ad1",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.selectall.svg",
+      "theme": "light"
+    },
+    {
+      "key": "select-none",
+      "sha256": "66f77800dd822757e58196d9dc821f3da485920529ef686135ae18c65a87e202",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.selectnone.svg",
+      "theme": "light"
+    },
+    {
+      "key": "invert-selection",
+      "sha256": "b011c0f855ceb8cf963ee3acd9bff4efed835c69a9c03daf823ea8a61112c216",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.invertselection.svg",
+      "theme": "light"
+    },
+    {
+      "key": "more-actions",
+      "sha256": "725219622e61e29d3f4d07500757639b8765a64fa968c6ac4ab292d8c5cb6b1b",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.otheractionsflyout.svg",
+      "theme": "light"
+    },
+    {
+      "key": "extensions",
+      "sha256": "be7b890c2d02254cee08ba5ecdd74b5acf443fe90796ac7bf0a276150243c216",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.extensionsflyout.svg",
+      "theme": "light"
+    },
+    {
+      "key": "remove",
+      "sha256": "0a37cf8d0e444e93b3f9fd3aea75c15b5c963e6bf391081428f0fe05da8b84ef",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.close.svg",
+      "theme": "light"
+    },
+    {
+      "key": "personalize",
+      "sha256": "9c78b2ed05565b24dc0988c651c5e0b481eb3832e1ea2d2823cf9785b6d7bb68",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\Personalize.svg",
+      "theme": "light"
+    },
+    {
+      "key": "display",
+      "sha256": "17f45d05c71ebcca1d7c1ee052099412e852cdc328586a31c947d03191deb24e",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\DisplaySettings.svg",
+      "theme": "light"
+    },
+    {
+      "key": "undo",
+      "sha256": "3eb27adf7b70090f16a51e43bbe945aa058f9ed94e04466f3e2a80d41eba17d8",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.undo.svg",
+      "theme": "light"
+    },
+    {
+      "key": "redo",
+      "sha256": "4b231f78e5e62603182f995ab23f99e823cd230ba067caf2dbca7df29a15954c",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-light\\windows.redo.svg",
+      "theme": "light"
+    },
+    {
+      "key": "cut",
+      "sha256": "9bbff25e803679d1f590a4305f20a3144623cf47c96e1499ecbd423120739611",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.cut.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "copy",
+      "sha256": "76e780981bd7bea1bc11490f46da09e86dc2e38257b52a956848315c3bc819ea",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.copy.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "paste",
+      "sha256": "bb04da042b31168d5db0eb21395415d418979c3e82087af0047fb052c42c6093",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.paste.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "rename",
+      "sha256": "4bef51f828a4d9d193dd57a3bde8a51627f7dfad5a5a736ad21a324b47be9e97",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.rename.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "share",
+      "sha256": "cd22261220190870a8c784e733277f349fcb26b57174987e2e01ae18e5495720",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\Windows.ModernShare.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "delete",
+      "sha256": "41356b0485b48673c5cec69e3eef4e2e5ed9f47693005e1072f2e27cebdae19b",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.recycle.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "open-folder",
+      "sha256": "36b8e329bd878d43cd1006292a75f7f785aeffedf99525cb06d04e1a2cd14212",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.openfolder.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "open-new-tab",
+      "sha256": "f9ae0af5e24423ebe9c986409ebcbfebbbe6e55a66f1e26f127681b0c65a2668",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.opennewtab.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "open-new-window",
+      "sha256": "d99c208f56ef2ad5d33686073a86e8950dabd8d8bee0106eb95e793d4020b424",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.opennewwindow.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "open-with",
+      "sha256": "e6231f7e23855774b76d32e46e9275e7c2779f73da87bdfe3ca036e0941f68ea",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.openwith.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "open-location",
+      "sha256": "36b8e329bd878d43cd1006292a75f7f785aeffedf99525cb06d04e1a2cd14212",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.shortcut.opencontaining.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "pin",
+      "sha256": "f2be8429e1ef7e2727b18485cf74c2fb1f2e837318415bf37cab46c8485fb540",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.pintohome.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "unpin",
+      "sha256": "e5c7fb505ed0238354cde552b6bd78bfdd1110b28b2dff4bd9ab387e73f4a580",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.unpinfromhome.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "favorite",
+      "sha256": "869b701a26cf3bf2ba8e3a014cd42507641d180fa56a3d0c7ddf78b0f8e9bb0f",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.pintohomefile.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "copy-path",
+      "sha256": "e801e12c5bd973103bc5836351fe07ae4191e4d36793c19e4acb741158416df9",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.copyaspath.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "zip",
+      "sha256": "0b729015ba869fb4d0eb00be856b5475f12a7d54e7d1a89949bf1600eb4dc558",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\Windows.Zip.Action.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "extract",
+      "sha256": "fbcd4552ac4de809bdb917343c257b2403476a40bf1597181025a991c1865c4b",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.compressedfile.extract.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "properties",
+      "sha256": "351efbf0873a0d4ae3e8cc3ea2a676cfe3c3457a741257e2bcc3ce68e1e27686",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.properties.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "show-more",
+      "sha256": "748e7e8cf8ddb53f637e630f5ec617ac504b120a7d51c60621275137f4fd623b",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\expandtoclassic.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "refresh",
+      "sha256": "a6101f369f4a150977602d6fc996d937aded6f6ad48d1e78479bf5ef9d6f6395",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.refresh.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "new",
+      "sha256": "fb58bad5b3fc2b7dc2af560266089b997da12e7dc820accf0eee2e0ae0c48d17",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.newitem.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "new-folder",
+      "sha256": "f55d980c5d451fdefda3863cfa2b2a5d6b137c6225045f15868d1412beff9190",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\newfolder.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "view",
+      "sha256": "6d150acba557d05177c9817bcd434bc7672a69dda46f754bd220876060f0b051",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\View.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "sort",
+      "sha256": "277760d79d5f51172d84f8f72b566de0ff475e0b5fcc1c9a55320f9c57991944",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\SortBy.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "customize",
+      "sha256": "619429e22ee84c801b2e4f73e1cd6e0895a12be8261091b376db4638c080274d",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.customizemenu.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "send-to",
+      "sha256": "ae19c232de9cb78206006bd5b3ed5237dc9f13f4998524c633f91a3947ea5c19",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.sendto.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "wallpaper",
+      "sha256": "b6f18e3abc95885cafd9da4708d9e1ef11651ca5e3ca55bc54ae2f06145a5b0c",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.setdesktopwallpaper.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "empty-bin",
+      "sha256": "41356b0485b48673c5cec69e3eef4e2e5ed9f47693005e1072f2e27cebdae19b",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.recyclebin.empty.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "restore-all",
+      "sha256": "979b709fa4cca2c53d39110d573f3a5cb0ba9411d465428dfbf7ee932db2a729",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.recyclebin.restoreall.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "restore",
+      "sha256": "cad35f038b3723b0b145f14f29e1ab1a5a010763b0651841191c43b6e3d7b1ef",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.recyclebin.restoreitems.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "select-all",
+      "sha256": "449bf89163e4e7c2de6203d58f4fbe3ca2bc7e8e36f9fa71f3ae9ca4d1c3597a",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.selectall.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "select-none",
+      "sha256": "9d51433e104f28575add190d1a7541d71147ea177aec5bc643531ba1bcaaf6b9",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.selectnone.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "invert-selection",
+      "sha256": "ef101a9e4fdea1cabb9d13b72c3bc9f9b395732ccc1f00b16872c32fadbb8717",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.invertselection.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "more-actions",
+      "sha256": "f19b04d6caf6a3feb1451edffab0f716025f744c6510aba8fa40f62e673c2189",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.otheractionsflyout.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "extensions",
+      "sha256": "713eabe0c94a89bf5a56ee3d1ddd21b83e0aa376b8d625eeec3e8a5a29f11e45",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.extensionsflyout.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "remove",
+      "sha256": "5a12867bd74ec19d9c55ad699c69c982ae8d442745b359e8ef34c303a1f2b90a",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.close.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "personalize",
+      "sha256": "9a6caa93935d478f8ae93ca892ecebbf3d6aa060f42e01a3ef38346cfcbd4b91",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\Personalize.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "display",
+      "sha256": "26c1af7892ebf9ca8e4ac25841825bbdfb67437f22a04d499d791c0aaf8d081f",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\DisplaySettings.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "undo",
+      "sha256": "3f595dddb5d51f428128bcacd79b32da1f96231c63a808e173a97f2a0115a7fc",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.undo.svg",
+      "theme": "dark"
+    },
+    {
+      "key": "redo",
+      "sha256": "159680f35d9f91c55b8eb20fcd98a685df4003e431aa0276da5793b6c2a68037",
+      "source": "C:\\Windows\\SystemApps\\MicrosoftWindows.Client.FileExp_cw5n1h2txyewy\\FileExplorerExtensions\\Assets\\images\\contrast-standard\\theme-dark\\windows.redo.svg",
+      "theme": "dark"
+    }
+  ],
+  "kind": "installed_windows_icon_reference",
+  "method": "byte copy of the 26H2 FileExplorerExtensions command SVGs; rasterized offline",
+  "schema_version": 1,
+  "use": "Owner-provided installed Windows reference; local development"
+}

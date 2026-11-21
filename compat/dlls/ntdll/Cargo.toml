@@ -1,0 +1,29 @@
+[package]
+name = "door-ntdll"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original Door Windows x64 bootstrap and native operation adapter"
+
+[lib]
+name = "ntdll"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-sys/door-personality"]
+
+[dependencies]
+door-abi = { path = "../../../runtime/abi" }
+door-sys = { path = "../../../runtime/sys" }
+door-service-client = { path = "../../../frameworks/service-client" }
+door-service-protocol = { path = "../../../crates/service-protocol" }
+door-vt = { path = "../../../crates/vt" }
+door-windows-abi = { path = "../../abi" }
+door-pe-loader = { path = "../../pe" }
+door-image-format = { path = "../../../crates/image-format" }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

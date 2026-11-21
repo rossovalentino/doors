@@ -1,0 +1,64 @@
+[package]
+name = "door-xtask"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Door OS host checks and evidence tooling"
+
+[dependencies]
+door-abi = { path = "../../runtime/abi" }
+door-graphics-text = { path = "../../frameworks/text" }
+door-window = { path = "../../graphics/window-server" }
+door-image-format = { path = "../../crates/image-format" }
+door-initfs = { path = "../../fs/initfs" }
+door-pe-loader = { path = "../../compat/pe" }
+# The original uxtheme.dll's ordinal-only exports (the DLL build pins them).
+uxtheme = { package = "door-uxtheme", path = "../../compat/dlls/uxtheme" }
+door-settings-map = { path = "../../frameworks/settings-map" }
+door-workspace = { path = "../../desktop/workspace" }
+# INSTALL-A packages (door-msi writes them).
+door-msi = { path = "../../crates/msi" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+# CONNECT-A's web server checks Digest and NTLM answers (`door_http::auth`).
+door-http = { path = "../../crates/http" }
+# VPN-A (P15): door-wireguard for the test keys and files, boringtun as the
+# independent host peer, smoltcp as the IP stack behind it (host only).
+door-wireguard = { path = "../../crates/wireguard" }
+# `cargo xtask fuzz`: the parsers of what other hosts and downloads send.
+door-authenticode = { path = "../../crates/authenticode" }
+door-cab = { path = "../../crates/cab" }
+door-firewall = { path = "../../crates/firewall" }
+door-pac = { path = "../../crates/pac" }
+# P18 large disks: files staged through the storage service's own journal,
+# ext2 and catalog code (the audits keep their independent decoders).
+door-storage-core = { path = "../../fs/storage-core", features = ["offline-provisioning"] }
+door-pe-icon = { path = "../../crates/pe-icon" }
+door-tls = { path = "../../crates/tls" }
+# CONNECT-A's HTTPS endpoints (`p15_tls`): the TLS 1.3 server side, with the
+# primitives door-tls already pins.
+x25519-dalek = { version = "=2.0.1", default-features = false, features = ["static_secrets"] }
+aes-gcm = { version = "=0.10.3", default-features = false, features = ["aes", "alloc"] }
+hkdf = { version = "=0.12.4", default-features = false }
+hmac = { version = "=0.12.1", default-features = false }
+p256 = { version = "=0.13.2", default-features = false, features = ["ecdsa"] }
+door-windows-inet = { path = "../../compat/inet" }
+boringtun = { version = "=0.7.1", default-features = false }
+smoltcp = { version = "=0.12.0", default-features = false, features = ["std", "medium-ip", "proto-ipv4", "proto-ipv6", "socket-tcp", "socket-udp", "socket-icmp"] }
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+resvg = { version = "=0.45.1", default-features = false }
+qoi = { version = "=0.4.1", default-features = false, features = ["alloc"] }
+# `host-assets`: wallpaper JPEGs to the PNG the exporters read.
+zune-jpeg = { version = "=0.5.15", default-features = false }
+# The deflated 1024x768 wallpaper the window server embeds.
+miniz_oxide = { version = "=0.8.9", default-features = false, features = ["with-alloc"] }
+ab_glyph = "=0.2.32"
+skrifa = { version = "=0.48.0", default-features = false, features = ["std"] }
+
+[dev-dependencies]
+door-boot-debug = { path = "../../boot/debug" }
+
+[lints]
+workspace = true
+

@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/rendering_critic",
+  "review_kind": "independent_read_only_critic",
+  "provenance": "Saved by root from rendering_critic's independent final read-only review; attributed structured record, not a critic-written workspace file.",
+  "scope": "Bounded P12 constant-source CPU composition and session-admission refresh",
+  "verdict": "accepted_for_bounded_composition_change",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "findings": [],
+  "resolved_findings": [
+    "All authenticated24/32/40-byte bindings invalidate the full scene.",
+    "Binding proof uses canonical kernel compositor identity/lifetime and distinct completed frames.",
+    "New binding markers require exactly one recomputed summary; deletion cannot invoke historical compatibility.",
+    "Diagnostics accurately name all samples and include the first frame within the existing budget."
+  ],
+  "source_binding": {
+    "guest_build_source": "8edde3a0b80ac681cbb3bbeafe2827cdc23293fb529b00da86b8f40d0146775e",
+    "final_tested_source": "c324501dd1f9270647711689c5b7767378ab95c80aac86fff492610186072fdf",
+    "host_only_bridge": [
+      "tools/xtask/src/desktop/recovery.rs",
+      "tools/xtask/src/desktop/validate.rs",
+      "tools/xtask/src/services/scenarios.rs"
+    ],
+    "guest_source_cargo_and_assets_unchanged": true,
+    "later_changes": "Documentation only; outside executable qualification."
+  },
+  "evidence": [
+    {
+      "report": "reports/runs/host-1792531983078819500-17480/report.json",
+      "sha256": "034c334ce0d421b31e4f2058d5403c1a3563d4fc019475b165cd4500e75dc1d6",
+      "result": "Complete repaired guest build; source8edde3a0b80ac681cbb3bbeafe2827cdc23293fb529b00da86b8f40d0146775e"
+    },
+    {
+      "report": "reports/runs/host-1792532358794698200-23156/report.json",
+      "sha256": "e782f4b065c64f26e9d313ee44c22788950999dad0ff9b44d001a2fd498d5723",
+      "result": "547 host tests /33 executables"
+    },
+    {
+      "report": "reports/runs/host-1792532087483269300-19556/report.json",
+      "sha256": "ac1afc103558d88d53e152ed595157ea2926541e0f371a87bbfdc675eabf0300",
+      "result": "Asset recomputation"
+    },
+    {
+      "report": "reports/runs/host-1792532213874388800-9424/report.json",
+      "sha256": "77f4bad84539badcd23fa261bfa266b1180baa3488c2e9979672334a28a25a29",
+      "result": "15 isolated native4K checks"
+    },
+    {
+      "report": "reports/runs/host-1792532407913367100-19324/report.json",
+      "sha256": "81851e0f67297048ffa8ea4a3c9e51bd507ed27d9bcfac8fbfaa689fb463545b",
+      "result": "19 Files1x checks /two boots"
+    },
+    {
+      "report": "reports/runs/host-1792532407929300200-24844/report.json",
+      "sha256": "b36197eb6ce6c65c0475c1c391939cc4847d78a0cfdb304ad9b4a99022043b12",
+      "result": "19 Files3x checks /two boots"
+    },
+    {
+      "report": "reports/runs/host-1792532358831665600-19508/report.json",
+      "sha256": "29d5da4e772cc5450414bf42a7afb6e877ef23a8dcc3178e024f77c8f2c8b160",
+      "result": "243 desktop checks /nine sessions"
+    },
+    {
+      "report": "reports/runs/host-1792532358771979300-25484/report.json",
+      "sha256": "17855ed3c57f3e1e13bb9352b6002e81d9689dc4e90cfea993a0ede0d0cdf588",
+      "result": "42 expected foundation outcomes"
+    }
+  ],
+  "build": {
+    "manifest_sha256": "4d05c91d9ca8cbc696c75f7bd66c9dfd43f3dfc5cdfc97818a2be5d9c25b5438",
+    "initfs_sha256": "dc94c67d854083ae7b006e318e208048469f7464cfe2fbdccc5bce603014cc64",
+    "foundation_suite_sha256": "c4c936a6d7ff5a25e801e560abc4423d661307f999224fd8db96e088dc7d1b38"
+  },
+  "independent_audit": {
+    "desktop_build": "26 distinct artifact/pair files, five independent app pairs.",
+    "foundation_build": "16 independent core pairs, every core artifact byte-identical to17480.",
+    "isolated_native_references": 39,
+    "combined_references": 504,
+    "files_references": 93,
+    "foundation_references": 845,
+    "foundation_outcomes": {
+      "Passed": 27,
+      "KernelPanic": 6,
+      "Interrupted": 5,
+      "StartupFailure": 2,
+      "GuestFailure": 1,
+      "Timeout": 1
+    },
+    "cleanup": "Nine combined sessions with zero leaks; no QEMU remains.",
+    "files": "Original/final raw disks match decoded snapshots; object26/inode17/generation1/payload preserved; shutdown/reboot disks identical.",
+    "legacy_disk_sha256": "5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d",
+    "console": "Kernel-attributed pid11/manifest5/uid1001 executed actual commands and exited71; independent disk comparison confirms only declared catalog/settings/journal bytes changed, file version23 and4096payload bytes unchanged."
+  },
+  "binding_proof": {
+    "pid": 5,
+    "instance": 5,
+    "manifest": 11,
+    "uid": 3,
+    "session": 0,
+    "epoch": 0,
+    "injected_exit": -311,
+    "frames": [
+      {
+        "bind_bytes": 24,
+        "frame": 3
+      },
+      {
+        "bind_bytes": 32,
+        "frame": 4
+      },
+      {
+        "bind_bytes": 40,
+        "frame": 5
+      }
+    ],
+    "all_login_presented_full_and_fresh_material": true
+  },
+  "diagnostic_budget": {
+    "budget_bytes": 16384,
+    "reserved_bytes": 512,
+    "first_boot": {
+      "payload_bytes": 13230,
+      "frame_samples": 16,
+      "first_frame_included": true
+    },
+    "reboot": {
+      "payload_bytes": 3829,
+      "frame_samples": 10,
+      "first_frame_included": true
+    }
+  },
+  "measured_result": {
+    "profile": "3840x2160,3x,WHPX/RAMFB",
+    "baseline_report": "reports/runs/host-1792530064717529100-26524/report.json",
+    "baseline_first_frame_ticks": {
+      "compose": 8,
+      "transfer": 1
+    },
+    "candidate_first_frame_ticks": {
+      "compose": 5,
+      "transfer": 1
+    },
+    "tick_millis": 10,
+    "transfer_bytes": 33177600,
+    "transfer_calls": 2025,
+    "interpretation": "One coarse isolated observation per version; not FPS, statistical, whole-app or whole-sign-in evidence."
+  },
+  "pixel_equivalence": {
+    "baseline": "out/qemu/host-1792530064717529100-26524-session-1792530064830455700/signin.png",
+    "candidate": "out/qemu/host-1792532213874388800-9424-session-1792532214027541000/signin.png",
+    "both_png_sha256": "627ddad4158db13081b25772645859cdff0834099fff0aa865614e49f658f3a4",
+    "decoded_rgb_size": [
+      3840,
+      2160
+    ],
+    "all_rgb_pixels_identical": true,
+    "scope": "Only these exact retained signed-out captures."
+  },
+  "retained_prequalification_candidates": [
+    "reports/runs/host-1792531535742157200-24132/report.json",
+    "reports/runs/host-1792531535713028600-22860/report.json"
+  ],
+  "remaining_limits": [
+    "No GPU/vblank/tear-free/general smoothness claim.",
+    "Sparse avatar coverage remains a separate unimplemented candidate.",
+    "No full Windows application/fidelity claim.",
+    "P12 open; original missing P00 report blocks cumulative qualification."
+  ]
+}

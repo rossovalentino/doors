@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "record_kind": "development_critic",
+  "reviewer": "/root/p12_critic",
+  "status": "accepted_with_declared_limits",
+  "phase": "P12",
+  "phase_closed": false,
+  "review_mode": "independent read-only source, actual guest pixel and evidence hash review; primary agent records the receipt",
+  "final_gui": {
+    "report": "reports/runs/host-1792442174995919700-18536/report.json",
+    "sha256": "853ef7654bc125863d6cb5a73d1a0eee8a2f1ae6190abafdb3dc80ab5339afec",
+    "passed_checks": 160,
+    "inputs_unchanged": true,
+    "evidence_hashes_verified": 278,
+    "source_entries_reviewed": 1002,
+    "source_snapshot_sha256": "7b9f7952de79da7357fd67b6bc96d0ca7967ce90a260710df4e8ecaf2389e043"
+  },
+  "independent_build": {
+    "report": "reports/runs/host-1792442071398900300-21260/desktop-build.json",
+    "sha256": "6ec158ce905be4a5c8e66231b2011b2ca51401008a032b8a9b57e3bb26ff1de0",
+    "matching_binary_hashes_verified": 10
+  },
+  "earlier_integrated": {
+    "report": "reports/runs/host-1792436289607278800-7072/report.json",
+    "sha256": "0a1e244f1e30c73dfab379a415f0304a279f5fe2182e3c2a5711487e9a9e1c60",
+    "passed_checks": 273,
+    "scope": "Before final owner/capture/theme repairs; protected kernel/boot/ABI/graphics-core/services unchanged. Final GUI covers final changes."
+  },
+  "resolved_findings": [
+    "Dual Alt aggregate release before MRU activation",
+    "Unauthorized foreign close must not cancel native drag/caption gesture",
+    "4K AltTab capture waits for completed CPU transfer plus actual selection/body pixels",
+    "PNG is an exact encoding of asserted PPM rather than a separate screendump",
+    "Literal target-theme swatches bypass live control palette",
+    "Personalization Colors/gallery heading spacing and shared paint/hit/scroll geometry",
+    "Stale dark-content risk wording"
+  ],
+  "retracted_findings": [
+    "Closing snap resurrection: existing owned() rejects Closing",
+    "Launch intent workspace loss: existing launch workspace bookkeeping applies before CREATE"
+  ],
+  "visual_review": [
+    "Actual4K AltTab has three real app previews",
+    "Dark Settings Light/Dark mode and gallery swatches are distinct",
+    "Colors/gallery heading separated",
+    "Caption/negative gesture endpoint pixels are checked, not complete settled-frame qualification"
+  ],
+  "post_run_documentation_changes": [
+    "docs/audits/p11-desktop-progress.md",
+    "docs/testing/native-desktop.md",
+    "project/HANDOFF.json",
+    "project/STATUS.md",
+    "project/requirements.json"
+  ],
+  "bounded_tcg_cursor_ms": {
+    "launches": [
+      141,
+      254,
+      139
+    ],
+    "caption": 132,
+    "taskbar": 139,
+    "measurement": "includes QMP screendump overhead; declared1000ms sample bound; no FPS or worst-case latency guarantee"
+  },
+  "owner_disk_sha256_at_inspection": "ca3c032cda7e5a064434a0a17e6a8ce6f47310bd787a02d9857e7418e41f1d7f",
+  "master_sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37",
+  "remaining_limits": [
+    "P12 text/IME/clipboard/accessibility/component-gallery gates remain incomplete",
+    "P13 GUI compatibility and P14 fidelity are unqualified",
+    "No1:1 Windows capture baseline or material/motion fidelity guarantee",
+    "Generic sparse-pixel captures may retain partial scanout; actual overview readiness is specifically checked",
+    "CPU transfer does not observe vblank or qualify FPS/worst-case smoothness",
+    "Taskbar positions/alignment, contextual shell menus, marquee/drop, full Settings service/layout coverage and dynamic/fractional DPI remain open",
+    "Session workspaces are bounded, non-durable and share wallpaper; bundled apps remain global singletons"
+  ],
+  "additional_confirmed_findings": []
+}

@@ -1,0 +1,19 @@
+{
+  "commit": "fe4c942711c63cc932574b2f37a9ee628b001e31",
+  "schema_version": 1,
+  "license": "Unlicense (public domain)",
+  "repository": "https://github.com/eddavis2/Tiny-Basic",
+  "project": "Ed Davis Tiny Basic",
+  "files": [
+    {
+      "path": "third_party/apps/tinybasic/int-stc.c",
+      "sha256": "3f716e8be620c5d81ad3ef018bc64629f86144ebb8db042cec3d96124cd49be7"
+    },
+    {
+      "path": "third_party/apps/tinybasic/LICENSE",
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+    }
+  ],
+  "modifications": "none to upstream interpreter; original platform in tests/windows-fixtures/tinybasic",
+  "upstream_path": "C/int-stc.c"
+}

@@ -1,0 +1,13 @@
+[package]
+name = "door-webdav"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Sans-IO WebDAV (RFC 4918) for NoneDrive: requests, multistatus parsing, href encoding, the sync index and the three-way sync planner"
+
+[dependencies]
+door-http = { path = "../http" }
+
+[lints]
+workspace = true

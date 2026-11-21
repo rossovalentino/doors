@@ -1,0 +1,15 @@
+{
+  "file": "registry-current.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "b2d8632893ad7a8dd1010bb4c8538d8dc4e79548f0e2e0fc06ba351d2e6f1acc",
+  "sources": {
+    "group_id": 100,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\regedit.exe",
+    "module_sha256": "5ca160b5748ba33feab6fcf4ca5a85c44e344e694d83f901d0212cbe610b1138"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

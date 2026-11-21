@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-22",
+  "reviewer": "independent read-only explorer_critic",
+  "scope": "Current native Explorer controller/layout/painter/decoders/tags/provenance and observed diagnostic evidence",
+  "decision": "bounded code acceptance after final minimum-width fix; final current guest evidence pending",
+  "fixed_findings": [
+    "breadcrumbfont/target mismatch",
+    "ThisPCscroll/drivekeyboardreach",
+    "returned tab offset after shrink",
+    "refresh stable selected object",
+    "all-eighttagrail scroll",
+    "malformed tagcatalog does not abort browsing",
+    "truncated foldercounts/versionchecks",
+    "mixedformat QOI cache churn",
+    "negative railpageup",
+    "obsoletefilter aftercatalogreset",
+    "rail clippedhitbounds",
+    "phantom address refresh hotspot",
+    "shared pinnedfolder order",
+    "search rebinds/clears inspector",
+    "taboverflow excludes trusted caption buttons",
+    "empty-pane hidden close hotspot",
+    "208DIPheroes use240px assets",
+    "160DIP admitted minimum suppressesunusable caption controls"
+  ],
+  "host_tests": {
+    "full": 757,
+    "executables": 36,
+    "log": "target/explorer-all-host.log",
+    "last_minimum_bounds": "target/explorer-last-bounds.log;19passed"
+  },
+  "observed_native_diagnostic": {
+    "old_report": "reports/runs/host-1792606069303592400-11016/report.json",
+    "available": false,
+    "reason": "Owner-confirmed cleanup after review",
+    "facts": "two boots, object26 same across rename/restart, exact independent disk/tag audit, leaked0 each; aggregate source stability failed only other-app changes"
+  },
+  "source_files": [
+    "desktop/workspace/src/files.rs",
+    "desktop/workspace/src/files/modern.rs",
+    "desktop/workspace/src/files/modern/paint.rs",
+    "desktop/workspace/src/files/tags.rs",
+    "desktop/workspace/src/explorer_layout.rs",
+    "desktop/workspace/src/explorer_preview.rs",
+    "desktop/workspace/src/explorer_tags.rs",
+    "desktop/workspace/src/icons.rs",
+    "desktop/workspace/src/ui.rs"
+  ],
+  "source_sha256": {
+    "desktop/workspace/src/files.rs": "354b531e8f77817162b41a0ad42bc261635550f5e0f27347b48aa75fd51a3709",
+    "desktop/workspace/src/files/modern.rs": "6e6e87170f6eea75c27d590aba925d51c620b52cf095cb6d94c555a99546caa3",
+    "desktop/workspace/src/files/modern/paint.rs": "deca976380f820d0552617c674c87212eb1c51969627dca4b1bd02b39e44c860",
+    "desktop/workspace/src/files/tags.rs": "9712d3f32a40f3e49d2e2b695741ce655f6f939c12438bc01d488f6ef1eb73be",
+    "desktop/workspace/src/explorer_layout.rs": "3d70e9d96dc11e7dbdf35554b221ec8e807cf40e808702e1e9ff755d8eeb5e33",
+    "desktop/workspace/src/explorer_preview.rs": "7b1a218c0aba5fc226a4f7921c040172f4fb0f289502222768bb57641d2fb7fa",
+    "desktop/workspace/src/explorer_tags.rs": "5b850c90a49e2d2785497415d83674de83932c153796a8251f2181dd1ea6d00c",
+    "desktop/workspace/src/icons.rs": "17bdb7e903e8a9066fa541a3a9173f00fb2f2fb316af3165d4f16d6f83184648",
+    "desktop/workspace/src/ui.rs": "99282bf2ef77bfadd6ac009c9d526cddcc99fef2d9f2194e7e4a261b2d99ff3d"
+  },
+  "full_windows_backend_parity": false,
+  "pixel_identical_qualified": false,
+  "phase_closed": false,
+  "new_unsafe": false,
+  "limitations": "Real providers absent for clipboard/transfers/sharing/trash/Office/PDF/media/3D/recursive totals/timestamps; full Unicode/fractional scale/LCD raster parity open"
+}

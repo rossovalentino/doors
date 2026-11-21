@@ -1,0 +1,226 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "recorded_by": "/root",
+  "recording": "Normalized independent read-only review; original execution reports unchanged",
+  "status": "accepted_bounded",
+  "phase_closed": false,
+  "tested_source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+  "source_files": 2101,
+  "scope": [
+    "Cached finite Gaussian shadows with safe fallback",
+    "Opaque snapshot rows and guarded opaque client interior move reuse",
+    "One overlay callback after completed piece composition",
+    "Installed Documents known-folder role artwork",
+    "Strict retained motion/reuse validation"
+  ],
+  "unresolved_actionable_findings": [],
+  "bindings": {
+    "host": {
+      "report": "reports/runs/host-1792584182484269500-18476/report.json",
+      "sha256": "22db5ebfaef5bb4f24c9ff588bf08040f4b5eb0cb97da2daac838789a3f40a8a",
+      "source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 0
+    },
+    "desktop": {
+      "report": "reports/runs/host-1792584328840936600-16756/report.json",
+      "sha256": "d97501cd0d1359fd07df35fe6f9a12a41370d8fe6c70e5e62833da0defac1e02",
+      "source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 255
+    },
+    "motion": {
+      "report": "reports/runs/host-1792585335870637000-5768/report.json",
+      "sha256": "c2dd7a620ff07ae76c56d2b9d03ab0d5695febdf4c27a1e28f58a02c424b49ed",
+      "source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 19
+    },
+    "retained": {
+      "report": "reports/runs/host-1792585469473964700-23656/report.json",
+      "sha256": "8c8feceb097ff4ed0d23e589fcc750778291d6a9568071f07cd03fa94ce9504a",
+      "source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 1
+    },
+    "verify": {
+      "report": "reports/runs/host-1792585649994388200-17916/report.json",
+      "sha256": "4f2035b9c375bfdfa3949ef3582cb340043101151c32103414d255b3add03643",
+      "source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+      "success": false,
+      "inputs_unchanged": true,
+      "checks": 1
+    },
+    "spec": {
+      "report": "reports/runs/host-1792585655561235700-13804/report.json",
+      "sha256": "63a795d3866b963ba49eefe110a01220701bc7ba2e77a5014243ee836a6a37a4",
+      "source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+      "success": false,
+      "inputs_unchanged": true,
+      "checks": 0
+    }
+  },
+  "host_tests": 693,
+  "host_executables": 34,
+  "desktop_checks": 255,
+  "desktop_sessions": 9,
+  "motion_checks": 19,
+  "motion": {
+    "cutoff": "completed paint scopes before first final power attempt",
+    "fps_claim": false,
+    "groups": [
+      {
+        "accepted_bytes": 1999846224,
+        "attempted_calls": 147565,
+        "compose_ticks": 130,
+        "dragging": false,
+        "failed": 0,
+        "frames": 110,
+        "histogram": [
+          41,
+          16,
+          11,
+          32,
+          10,
+          0,
+          0
+        ],
+        "maximum_work_ticks": 6,
+        "paths": [
+          87,
+          11,
+          7,
+          5
+        ],
+        "transfer_ticks": 47
+      },
+      {
+        "accepted_bytes": 2443226472,
+        "attempted_calls": 246669,
+        "compose_ticks": 133,
+        "dragging": true,
+        "failed": 0,
+        "frames": 137,
+        "histogram": [
+          1,
+          72,
+          56,
+          8,
+          0,
+          0,
+          0
+        ],
+        "maximum_work_ticks": 3,
+        "paths": [
+          136,
+          0,
+          0,
+          1
+        ],
+        "transfer_ticks": 75
+      }
+    ],
+    "line_numbers": [
+      88,
+      89
+    ],
+    "move_reuse": {
+      "accepted_bytes": 18307188,
+      "attempted_calls": 1848,
+      "line_number": 52,
+      "pixels": 3201660,
+      "serial": 40
+    },
+    "schema_version": 1,
+    "scope": "scene/caption/icons/bar; excludes cursor-only updates, idle and final cursor/logging; includes input serviced during transfer",
+    "summary_source_bytes": 223,
+    "tick_millis": 10,
+    "vblank_observed": false,
+    "window_diagnostic_source_bytes": 2923,
+    "window_pid": 5
+  },
+  "mean_drag_elapsed_ms": 15.182481751824817,
+  "artifact_bridge": {
+    "path": "reports/runs/host-1792584328840936600-16756/guest-artifact-cached-move-bridge.json",
+    "sha256": "88ee4a3b70dd95e013f4df717b83f758cd7142deb5b399c71c5a7afedb457bd7",
+    "actual": 21,
+    "equal": 19,
+    "changed": [
+      "door-window",
+      "door-workspace"
+    ],
+    "repeat_pairs": 5,
+    "window_rounded_load_span_bytes": 6807552,
+    "workspace_rounded_load_span_bytes": 11485184,
+    "bridge_span_units": "Raw ELF header span is unrounded; rounded loader spans recorded here"
+  },
+  "source_bridge": {
+    "path": "reports/runs/host-1792584182484269500-18476/cached-move-source-bridge.json",
+    "sha256": "747fefc0cc52d49a8970e0ca30ce16bd2deaf02cc6de2b107647dee42162e27f",
+    "old_count": 2081,
+    "new_count": 2101,
+    "changed_files": 32
+  },
+  "checkpoint": {
+    "path": "reports/runs/host-1792585469473964700-23656/desktop-revalidation.json",
+    "sha256": "191725806039e5b38e7cbb55fa9e9234689a07b5d3e51edad090162a40860c7c"
+  },
+  "independent_audit": {
+    "current_source_hash_mismatches": 0,
+    "combined_hashed_refs": 755,
+    "combined_rgb_pairs": 178,
+    "combined_pixel_probes": 176,
+    "combined_image_entries": 36,
+    "combined_private_raw_snapshots": 8,
+    "dedicated_hashed_refs": 32,
+    "dedicated_rgb_pairs": 10,
+    "dedicated_pixel_probes": 7,
+    "dedicated_image_entries": 3,
+    "catalog_journal_crcs": true,
+    "pid_uuid_argv_bound": true,
+    "all_retirement_leaked": 0,
+    "device_reclaimed": 8,
+    "wide_window_diagnostic_bytes": 13509,
+    "seven_authored_small_documents_frames_byte_verified": true
+  },
+  "assets": {
+    "shadow_bytes": 14723,
+    "shadow_sha256": "d0d601a7a1d542c2099438297cdfb8245d43959ed0bb47c61f1c8d2d87d34dfc",
+    "documents_ico_sha256": "ad4a4a6caf61187a390050124da1070ab7665d0548fbd15d3c0c25060dc981f4",
+    "documents_source": "assets/icons/windows/documents-current.source.json"
+  },
+  "resolved_findings": [
+    "Orphan MOVE_REUSE cannot bypass null historical summary validation",
+    "Reuse requires canonical Window readiness and precedes first MOTION cutoff",
+    "Reuse accepted transfer bytes require four-byte alignment",
+    "Overlay observes finished scene once with original damage clip",
+    "Focused command doc corrected; minimum cached shadow geometry reference covered"
+  ],
+  "limits": [
+    "Final137 drag scopes include136scene+1bar; not identical baseline136scene aggregate; extra2211840B/135calls",
+    "10ms monotonic elapsed intervals include scheduling and serviced input; not pure CPU time, FPS, vblank or input latency",
+    "Maximum returned drag scope30ms; no60FPS or Windows-level latency qualification",
+    "Shadow is original cached Gaussian treatment, not pixel-identical DWM",
+    "No complete Windows fidelity, Microsoft ClearType identity, app inventory or P12 closure",
+    "Earlier10708 predates single-overlay change; exploratory only",
+    "Foundation inherited only by verified actual unchanged artifact bytes, not new foundation execution",
+    "Visible SDL/native display/scale, Explorer layout/columns/menus, Snap, Search personalization, hover transitions, durable trash and app providers remain open",
+    "Prior host-tool fatal-exit cause unresolved"
+  ],
+  "cumulative_status": {
+    "closed": false,
+    "verify": "Failed before tests: legacy8GB reserve, out16892989473B exceeds12000000000B admission ceiling but remains below20GB cap",
+    "spec": "Original missing P00 report host-1791804427914736400-32560; historical dependencies unvalidated"
+  },
+  "critic_actions": {
+    "started_tests": false,
+    "host_ui": false,
+    "modified_files": false,
+    "owner_raw_read": false
+  },
+  "owner_data": "No owner raw inspection, initialization, regression use or modification; external D not configured; Computer Use remained stopped"
+}

@@ -1,0 +1,4 @@
+Door OS independent boot configuration v1
+Profile: qemu-diagnostic-x64
+Phase: P04
+Purpose: read-only boot diagnostics; no application or persistence support.

@@ -1,0 +1,223 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "mode": "independent_read_only",
+  "recorded_by": "/root from reviewer's final structured response",
+  "status": "accepted_bounded",
+  "scope": "P12 checked compound document replacement and Notes integration",
+  "phase_closure": false,
+  "unresolved_actionable_findings": [],
+  "source_binding": {
+    "build_and_focused_gui": "585bb6c57a70d46b5054c7f0c7119f988a4ec26e7ccf65749a30bf67759d4708",
+    "final": "8e8a7f95b04b145bbc60831b0765f665b7b5f5502199bc8372a49e10927fef12",
+    "only_delta": [
+      "tools/xtask/src/services/checked_replace.rs"
+    ],
+    "delta_reason": "Existing threads command added to both SDK boots and excluded from raw snapshots",
+    "current_snapshot_files_rehashed": 2012,
+    "mismatches": 0
+  },
+  "resolved_findings": [
+    "Acknowledged commit immediately advances durable Document bytes; ClosePending separately guards subsequent actions.",
+    "Uncertain outcome attention survives Undo and Changed rejection.",
+    "Foreign candidate tests issue authenticated raw IPC instead of stopping at SDK checks.",
+    "SDK fixture satisfies unchanged seven-thread retirement oracle."
+  ],
+  "evidence": {
+    "build": {
+      "id": "host-1792541350568704600-22924",
+      "sha": "ee27b13801f16250fd25f37316cdefc369afac97ed7c983610797564e55d291e",
+      "manifest_sha": "9d44c8e559df74d8089504743f0b91dd2bd0516ad39be5719cf0128ad523e9bc",
+      "workspace_load": 11341824,
+      "workspace_file": 11403296,
+      "window_load": 6778880,
+      "storage_load": 573440,
+      "sdk_load": 110592,
+      "workspace_sha": "10ac5ad2414db783b2b3f01d4d4c71dfd052920178047cd19d2efa8fff522283",
+      "initfs_sha": "73e4b28b1a149d06255e560d50e8cd3b0caef0ba6c3cbe013c0a4856443a6666",
+      "report": "reports/runs/host-1792541350568704600-22924/report.json"
+    },
+    "host_final": {
+      "id": "host-1792542217145977800-25236",
+      "sha": "5867ecc809bff5ddf11b9f52dd4aa2d590475b9df30cd87acb0dea4a1733424d",
+      "tests": 595,
+      "executables": 33,
+      "report": "reports/runs/host-1792542217145977800-25236/report.json"
+    },
+    "notes1x": {
+      "id": "host-1792541461932981300-9276",
+      "sha": "4fab22c7385420d9e4b45180beef6c7cd222d261d4e0e9d68157d2d01e24e161",
+      "checks": 26,
+      "report": "reports/runs/host-1792541461932981300-9276/report.json"
+    },
+    "notes3x": {
+      "id": "host-1792541461963270400-24428",
+      "sha": "8283a4b072739e529f742e99ae0b2fafbc70927e49124067a67f7c5304f21bfd",
+      "checks": 26,
+      "report": "reports/runs/host-1792541461963270400-24428/report.json"
+    },
+    "files1x": {
+      "id": "host-1792541730462262600-26124",
+      "sha": "88a59c62b4eb7f195ea39cd517e6d39118d121b3e2f99db57269c666b1643ba0",
+      "checks": 19,
+      "report": "reports/runs/host-1792541730462262600-26124/report.json"
+    },
+    "files3x": {
+      "id": "host-1792541730466082500-584",
+      "sha": "00fdb519ae025fc34f1effd2dd7feba247b53e0aabf0cf253c931fac336b9f4b",
+      "checks": 19,
+      "report": "reports/runs/host-1792541730466082500-584/report.json"
+    },
+    "sdk": {
+      "id": "host-1792542217178513100-12460",
+      "sha": "ca9e6438b2a143833d419043d7fc450c4ae576bffde9d5f93e025b4a9128b129",
+      "checks": 1,
+      "boots": 2,
+      "final_raw_sha": "3fea4d5d1c060dbdb42bc63db8474c0cf31509d3753ce018d7a03fe4a5e3e3ce",
+      "final_version": 28,
+      "final_catalog_revision": 62,
+      "suite_sha": "36e72cc204889262f4f78ae744a9250a49ebfb57fb60bbadcc603840540e51ff",
+      "independent_audit": {
+        "refs": 12,
+        "raw_snapshots": 5,
+        "processes_each": 5,
+        "threads_each": 7,
+        "leaks_each": 0,
+        "device_pages_each": 8,
+        "identity": {
+          "object": 19,
+          "inode": 13,
+          "generation": 1
+        },
+        "baseline": {
+          "version": 23,
+          "catalog": 57,
+          "journal": 3
+        },
+        "short": {
+          "bytes": 26,
+          "version": 27,
+          "catalog": 61,
+          "journal": 7
+        },
+        "restored": {
+          "bytes": 4096,
+          "version": 28,
+          "catalog": 62,
+          "journal": 8
+        },
+        "same_restored_raw_images": 4,
+        "crcs": true,
+        "outside_bytes_unchanged": true
+      },
+      "report": "reports/runs/host-1792542217178513100-12460/report.json"
+    },
+    "foundation": {
+      "id": "host-1792542217211656500-26940",
+      "sha": "1e9f99f889c1f2e5d6aef656b1eadd3a952bfd7bd6a89adb10be275cee9ae384",
+      "scenarios": 42,
+      "suite_sha": "75ce99ddf63000c418c077bf93436a5a7d898a237351aa3a5f42814a4244825f",
+      "outcomes": {
+        "Passed": 27,
+        "KernelPanic": 6,
+        "Interrupted": 5,
+        "StartupFailure": 2,
+        "GuestFailure": 1,
+        "Timeout": 1
+      },
+      "report": "reports/runs/host-1792542217211656500-26940/report.json"
+    },
+    "combined": {
+      "id": "host-1792542217146676900-22836",
+      "sha": "24f346ea0d815a10dd7ec4fb6773fa7bdfc9d86a2545ead078e9e4837d777bf5",
+      "checks": 243,
+      "report": "reports/runs/host-1792542217146676900-22836/report.json"
+    },
+    "cumulative": {
+      "id": "host-1792542970032920000-21496",
+      "sha": "4f95eeefd6a2a437f2e2d48cab3652034cea4983f6cc67501242547eb159698f",
+      "success": false,
+      "inputs_unchanged": true,
+      "reason": "OriginalP00reportmissing",
+      "report": "reports/runs/host-1792542970032920000-21496/report.json"
+    }
+  },
+  "independent_audits": {
+    "build": "21 artifacts and five independent application pairs;26 distinct files, native image loads below16MiB",
+    "host": "595 independently counted tests/33 executables",
+    "sdk": {
+      "refs": 12,
+      "raw_snapshots": 5,
+      "processes_each": 5,
+      "threads_each": 7,
+      "leaks_each": 0,
+      "device_pages_each": 8,
+      "identity": {
+        "object": 19,
+        "inode": 13,
+        "generation": 1
+      },
+      "baseline": {
+        "version": 23,
+        "catalog": 57,
+        "journal": 3
+      },
+      "short": {
+        "bytes": 26,
+        "version": 27,
+        "catalog": 61,
+        "journal": 7
+      },
+      "restored": {
+        "bytes": 4096,
+        "version": 28,
+        "catalog": 62,
+        "journal": 8
+      },
+      "same_restored_raw_images": 4,
+      "crcs": true,
+      "outside_bytes_unchanged": true
+    },
+    "notes": "75 hashed references,7 decoded raw snapshots,11 pixel equalities each density; matching exact bytes, identity, versions, carets, light/dark bodies and separate-boot persistence",
+    "files": "59 hashed references and6 decoded raw snapshots each density; exact rename identity/payload/reboot",
+    "foundation": "845 references;42 expected outcomes,42 argv bindings and126 private image entries; both16-artifact core passes byte-identical to22924",
+    "combined": "504 report/image references;243 checks/9 sessions;diagnostic payload13227/3292 bytes,16/4 frames include first frame and preserve reserve; clean retirement/device8;kernel-attributed legacybind24/32/40"
+  },
+  "legacy_invariants": {
+    "save_reopen_restart_sha256": "5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d",
+    "corrupt_input_output_sha256": "c73b9147f12f3158226a300b54531ffb7902ba90ca8314a79a0447c0efef0237",
+    "single_corrupt_byte_offset": 68198440,
+    "standard_console_after_sha256": "eb5bb2a3c5d38e396d6ca4b893851a4253e3636e0efc4096395144783635bebc",
+    "standard_console": "Original six commands; no checked-save markers; unchanged source file bytes/version; only7 nonjournal permitted catalog/settings bytes changed",
+    "owner_user_raw_absent": true,
+    "qemu_remaining": 0
+  },
+  "retained_failures": [
+    {
+      "id": "host-1792541403464775200-9260",
+      "sha": "9bf4753c4253c36e9461db4690a0e04e7f23741d89327447a1986da7dc68f11d",
+      "reason": "os2 missing guest-run.json; lastservices-savechildexit33/6process8threads/leaked0 but evidence absent, consistent with ENOSPC"
+    },
+    {
+      "id": "host-1792541497221046200-3108",
+      "sha": "762697b1c940c2b7fe29bc54446bf4295358c1806b319f5858ec4888196b56fd",
+      "reason": "ExplicitENOSPC at191 checks"
+    }
+  ],
+  "compression": {
+    "files": 499,
+    "logical_bytes": 66840428544,
+    "free_before": 0,
+    "free_after": 67196723200,
+    "method": "NTFS compact /C /I /Q",
+    "owner_excluded": true,
+    "files_deleted": 0
+  },
+  "limitations": [
+    "New compound-save interruption/crash/I/O-failure coverage is hosted core testing, not newly injected native crashes.",
+    "Close-failure/uncertain editor guards have model coverage, no injected GUI close/I/O failures.",
+    "Native short bytes inspected paused first boot; max restoration and read-only separate reboot.",
+    "4096-byte old/new streams; CreateNew namespace operation separate and failed first save may leave empty file.",
+    "Save As, conflict/discard/recovery dialogs, physical-device power-loss, full Windows fidelity and ClearType engine/FPS parity remain outside scope.",
+    "P12 remains partial; original missing P00 archive blocks cumulative qualification."
+  ]
+}

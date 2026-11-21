@@ -1,0 +1,7 @@
+// X86-A's private DLL's one resource: x86probe reads it through a
+// LOAD_LIBRARY_AS_DATAFILE handle (FindResource, SizeofResource,
+// LoadResource, LockResource).
+1 RCDATA
+BEGIN
+    "Doors data"
+END

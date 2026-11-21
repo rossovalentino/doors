@@ -1,0 +1,15 @@
+{
+  "file": "taskmgr.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "d54063648654d01927348ec7a36fbfea653073d304e3889c036b59afaeb62e5d",
+  "sources": {
+    "group_id": 30651,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\Taskmgr.exe.mun",
+    "module_sha256": "6071665db7df1e9876a3f4b2971868cbe986656673b1294e623b10d043bc10fe"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

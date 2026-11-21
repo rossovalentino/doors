@@ -1,0 +1,19 @@
+[package]
+name = "door-version"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original version.dll: the file version API, forwarded to kernel32's api-ms-win-core-version implementation as Windows' version.dll forwards to kernelbase"
+
+[lib]
+name = "version"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = []
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

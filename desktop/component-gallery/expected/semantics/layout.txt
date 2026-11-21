@@ -1,0 +1,40 @@
+window "Doors UI Gallery"
+  navigation "Navigation" [FOCUSABLE] {FOCUS}
+    button "Close Navigation" {INVOKE}
+    list item "Basic input" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=1/9
+    list item "Control states" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/9
+    list item "Text and selection" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=3/9
+    list item "Collections" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=4/9
+    list item "Menus and toolbars" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=5/9
+    list item "Status and info" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=6/9
+    list item "Layout" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT} pos=7/9
+    list item "Dialogs" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=8/9
+    list item "Accessibility" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=9/9
+    scroll viewer "" [VERTICAL]
+      heading "Layout" level=1
+      expander "Expander" [FOCUSABLE EXPANDABLE] {FOCUS EXPAND}
+      expander "Expanded expander" [FOCUSABLE EXPANDABLE EXPANDED] {FOCUS COLLAPSE}
+        text "This content is visible."
+      group "ScrollViewer"
+        heading "ScrollViewer" level=2
+        scroll viewer "" [VERTICAL]
+          text "Scrollable line 1"
+          text "Scrollable line 2"
+          text "Scrollable line 3"
+          text "Scrollable line 4"
+          text "Scrollable line 5"
+          text "Scrollable line 6"
+          text "Scrollable line 7"
+          text "Scrollable line 8" [OFFSCREEN]
+          text "Scrollable line 9" [OFFSCREEN]
+          text "Scrollable line 10" [OFFSCREEN]
+          text "Scrollable line 11" [OFFSCREEN]
+          text "Scrollable line 12" [OFFSCREEN]
+          text "Scrollable line 13" [OFFSCREEN]
+          text "Scrollable line 14" [OFFSCREEN]
+          text "Scrollable line 15" [OFFSCREEN]
+          text "Scrollable line 16" [OFFSCREEN]
+          text "Scrollable line 17" [OFFSCREEN]
+          text "Scrollable line 18" [OFFSCREEN]
+          text "Scrollable line 19" [OFFSCREEN]
+          text "Scrollable line 20" [OFFSCREEN]

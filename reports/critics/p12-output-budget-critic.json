@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/rendering_critic",
+  "mode": "independent_read_only",
+  "recorded_by": "/root from the critic's final review; critic did not edit the workspace",
+  "status": "accepted_bounded",
+  "scope": "Host tooling for the owner-requested out-only 20 GB managed storage budget and conservative Cargo-cache retention",
+  "phase_closed": false,
+  "final_source_sha256": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+  "source_files_rehashed": 2029,
+  "remaining_blocking_findings": [],
+  "resolved_findings": [
+    "Live accounting tolerates disappearing Cargo entries; destructive inventory remains strict.",
+    "Session stop/send and read-only operations avoid growth admission.",
+    "Windows reference paths normalize separators and ASCII case.",
+    "Cleanup requires canonical generated ownership and a sealed matching host_run envelope.",
+    "Uncertain process cleanup and unknown handoffs cannot authorize pruning.",
+    "QEMU handoff requires the exact hash-verified pinned executable, canonical receipt and repeated actual QEMU/rustc quiescence.",
+    "Completed commands independently reject running outcomes, including stripped or contradictory lifecycle fields.",
+    "Budget diagnostics distinguish high-water exhaustion from an already-exceeded limit."
+  ],
+  "evidence": {
+    "host": {
+      "id": "host-1792558594254806500-23988",
+      "sha256": "9c6d23da0202bc2055d249487ce3992515e2e49564778f07d0145b119905baa1",
+      "source": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+      "tests": 642,
+      "executables": 33
+    },
+    "desktop": {
+      "id": "host-1792556942691906000-13440",
+      "sha256": "b2b5b29ad90014fc5e63f9b7ee7a73913290563bdf7365ed63be2f2da1a4a767",
+      "source": "d00548506785a45f3426c472becdc55117da0d60cb0121d73536282dae6fe152",
+      "checks": 255,
+      "desktop_checks": 253,
+      "maintenance_checks": 2,
+      "sessions": 9,
+      "out_bytes": 893956833
+    },
+    "before_actual_after_cleanup": {
+      "source": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+      "before": {
+        "id": "host-1792558273167052000-22792",
+        "sha256": "d4b7a0c3ab1ca4e1680859b424a5a8a6dd7bf2e78448f415a8b81265e60eff36"
+      },
+      "maintenance": {
+        "id": "host-1792558388445482000-7984",
+        "sha256": "d5568847a6b986815b0ea987763c4f1f4760e554d47e5674682c591b7d91d35e",
+        "receipt_sha256": "3f7b22efbf0ed065bab0d6ebb64a52ab8922903009e125d3455f65ed3f5f0867",
+        "before_bytes": 893956833,
+        "after_bytes": 688262141,
+        "freed_bytes": 205694692,
+        "removed_dirs": 40,
+        "removed_files": 891
+      },
+      "after": {
+        "id": "host-1792558466004416300-26920",
+        "sha256": "7f7017c3a48f1bdea85e1de4e6d9fd6a2276f9f287a48c73c88915a08c07ba8b",
+        "binding_sha256": "3562743432f1af3b1f89ee68ec4d6fd586390e7cd5f1a41e70c0521f5bfbe7ac"
+      }
+    },
+    "foundation": {
+      "id": "host-1792558705044300700-24104",
+      "sha256": "792cb3a68677e2b92e880a333d220c01ed26f0ac0a4475983448b6341248d195",
+      "suite_sha256": "4b1519aa06e93002ff11cd11896ae3264ea4b5c7eb421b326812893b48c2055a",
+      "source": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+      "cases": 42,
+      "expected_matches": 42,
+      "build_passes": 2,
+      "artifacts_per_pass": 16,
+      "maintenance": {
+        "before_bytes": 8303518619,
+        "after_bytes": 8100456059,
+        "removed_dirs": 40,
+        "reclaimed_logical_bytes": 203062560,
+        "receipt_sha256": "720388c4ff2fb9f44dd9ec3662bba721c74ba409ec8d12a7d4439421fa39ebd8"
+      }
+    },
+    "cumulative": {
+      "id": "host-1792559577791439900-20784",
+      "sha256": "34a6c4bc3b938f5c4e5965c196967aa330d44e91869eaa774c95eec73668d4dd",
+      "source": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+      "success": false,
+      "failure": "Original historical P00 reports/runs/host-1791804427914736400-32560/report.json remains missing; prerequisites restored; unchanged source."
+    }
+  },
+  "independent_audit": {
+    "source_bridge": "Desktop d00548506785a45f3426c472becdc55117da0d60cb0121d73536282dae6fe152 to final e4 differs exactly in docs/build/output-storage.md, tools/xtask/src/cache.rs and tools/xtask/src/main.rs; no guest source or product artifact changed.",
+    "retained_desktop": "792 bound references rehash cleanly, 21 final artifacts/maps/importlibs and five independent app pairs survive. Six source image entries, nine actual launch receipts, 27 private image entries, 178 RGB capture pairs and176 probes pass.",
+    "raw_desktop": "Eight raw snapshots independently validate catalog/journal CRCs and expected saved content. Seven match the prior qualified raw states byte-for-byte. Recovery retains the same notes path/payload/inode/generation with different known-folder allocation order.",
+    "revalidation": "Before and after cleanup checkpoints are identical and bind the unchanged desktop report, execution source and validation source.",
+    "foundation": "32 core artifacts,28 maps,six import libraries survive automatic cleanup and match desktop product hashes.42 scenario launch/source bindings,two interactive receipts and132 private image entries pass.1,024 host evidence bindings rehash; three guest logical paths are covered by persistent-byte evidence.",
+    "fresh_baseline": {
+      "path": "out/qemu/host-1792559220540822000-24104/data-after.raw",
+      "sha256": "5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d",
+      "statement": "Genuine fresh saved boot data; no old execution path was reconstructed."
+    },
+    "owner_volume": "out/session/user.raw remains absent; maintenance did not create or delete an owner volume."
+  },
+  "historical_availability": {
+    "path": "reports/artifacts/p12-output-availability.json",
+    "sha256": "5f2bc59a10c46f08c528fb23406980ec50d81a9c0a5e0203da87cccf4ae0b96a",
+    "statement": "Owner confirmed deleting previous out after the deletion review. Historical report bytes remain; deleted dependencies are unavailable. Fresh evidence uses new IDs."
+  },
+  "limits": [
+    "20,000,000,000 logical bytes covers out only; target and reports are excluded.",
+    "Admission headroom and periodic polling are managed safeguards, not a filesystem quota. External writers or bursts can exceed a threshold between observations.",
+    "Actual18GB exhaustion was not stress-tested in these qualifying executions.",
+    "Pinned evidence and owner data are protected; growth can cause explicit admission refusal.",
+    "Handoff exception proves present cache coldness, not historical guest success.",
+    "No full P12, Windows fidelity, ClearType or FPS claim.",
+    "Independent review does not establish absence of every possible defect."
+  ]
+}

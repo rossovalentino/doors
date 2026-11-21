@@ -1,0 +1,8 @@
+{
+  "source": "https://download.microsoft.com/download/e67899fc-9e91-433c-91c6-876b3b98d787/Segoe-Fluent-Icons.zip",
+  "reference": "https://learn.microsoft.com/en-us/windows/apps/design/iconography/segoe-fluent-icons-font",
+  "retrieved": "2026-10-19",
+  "archive_sha256": "333edb37cd496f877d5997183fa9900043d39e6f1097dd010b24cb9cb23ec89f",
+  "font_sha256": "031ada497ddcc9bf3f2536efba2f4bd53f12a0dead44460a4a934b06a952dd2b",
+  "use": "Owner-requested local development; category, shell, caption, sign-in and per-setting glyphs enumerated in assets/icons/windows-shell/manifest.json; offline native-density rasterization"
+}

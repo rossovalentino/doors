@@ -1,0 +1,55 @@
+/* Generated from Windows 11 26H2's output of `memprobe.exe raw` on the owner's PC
+ * (one string per compared step). */
+    /* sections */
+    "create ok\r\n"
+    "map-rx ok\r\n"
+    "reserved state=0x2000 protect=0x0 type=0x40000 allocation-protect=0x40\r\n"
+    "commit ok\r\n"
+    "committed state=0x1000 protect=0x20 type=0x40000 allocation-protect=0x40\r\n"
+    "beyond state=0x2000 protect=0x0 type=0x40000 allocation-protect=0x40\r\n"
+    "map-rw ok\r\n"
+    "writable state=0x1000 protect=0x4 type=0x40000 allocation-protect=0x4\r\n"
+    "writable-uncommitted state=0x2000 protect=0x0 type=0x40000 allocation-protect=0x4\r\n"
+    "run=42\r\n"
+    "same-bytes=1\r\n"
+    "unmap-rw ok\r\n"
+    "after-unmap state=0x10000 protect=0x1 type=0x0 allocation-protect=0x0\r\n"
+    "unmap-rx-inside ok\r\n"
+    "close ok\r\n"
+    ,
+    /* placeholders */
+    "api-set ok\r\n"
+    "placeholder ok\r\n"
+    "placeholder state=0x2000 protect=0x0 type=0x20000 allocation-protect=0x1\r\n"
+    "commit-placeholder-refused ok\r\n"
+    "split ok\r\n"
+    "replace-view ok\r\n"
+    "view state=0x1000 protect=0x4 type=0x40000 allocation-protect=0x4\r\n"
+    "replace-allocation ok\r\n"
+    "allocation state=0x1000 protect=0x4 type=0x20000 allocation-protect=0x4\r\n"
+    "unmap-preserve ok\r\n"
+    "preserved state=0x2000 protect=0x0 type=0x20000 allocation-protect=0x1\r\n"
+    "free-preserve ok\r\n"
+    "coalesce ok\r\n"
+    "coalesced state=0x2000 protect=0x0 type=0x20000 allocation-protect=0x1\r\n"
+    "release ok\r\n"
+    "released state=0x10000 protect=0x1 type=0x0 allocation-protect=0x0\r\n"
+    ,
+    /* copy */
+    "views ok\r\n"
+    "copy-before state=0x1000 protect=0x8 type=0x40000 allocation-protect=0x8\r\n"
+    "copy-sees=1\r\n"
+    "copy-after state=0x1000 protect=0x4 type=0x40000 allocation-protect=0x8\r\n"
+    "copy-untouched state=0x1000 protect=0x8 type=0x40000 allocation-protect=0x8\r\n"
+    "shared-kept=1\r\n"
+    "copy-kept=1 copy-shared-page=1\r\n"
+    ,
+    /* image */
+    "open ok\r\n"
+    "image-section ok\r\n"
+    "image-view ok\r\n"
+    "mz=1 pe=1\r\n"
+    "headers state=0x1000 protect=0x2 type=0x1000000 allocation-protect=0x80\r\n"
+    "code state=0x1000 protect=0x20 type=0x1000000 allocation-protect=0x80\r\n"
+    "unmap ok\r\n"
+    ,

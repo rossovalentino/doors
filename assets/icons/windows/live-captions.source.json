@@ -1,0 +1,15 @@
+{
+  "file": "live-captions.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "647b34770c60a7c2e12dcb0415ee32dda0d26cdd57ae5437aff34849f9f542ac",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\LiveCaptions.exe",
+    "module_sha256": "870345373990e8b0bf51fe163625cd050ad2bc2503c63b72b6c6449935c6efff"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

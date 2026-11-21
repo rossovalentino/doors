@@ -1,0 +1,28 @@
+[package]
+name = "door-tools"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Native text, checksum and process utilities"
+
+[features]
+native = []
+[[bin]]
+name = "door-tools"
+path = "src/main.rs"
+required-features = ["native"]
+test = false
+bench = false
+
+[dependencies]
+door-abi = { path = "../../runtime/abi" }
+door-sys = { path = "../../runtime/sys" }
+door-rt = { path = "../../runtime/rt" }
+door-service-client = { path = "../../frameworks/service-client" }
+door-userland = { path = "../../runtime/userland" }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+[lints.clippy]
+all = "warn"

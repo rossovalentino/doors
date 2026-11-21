@@ -1,0 +1,188 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "recorded_by": "/root",
+  "recording": "Normalized independent read-only code and evidence review; original execution records unchanged",
+  "status": "accepted_bounded",
+  "phase_closed": false,
+  "tested_source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+  "source_files": 2176,
+  "scope": [
+    "Automatic supported adapter-mode selection and explicit fallback",
+    "Child-local SDL DPI request and exact current receipt validation",
+    "Thresholded title dragging with guarded maximized/snapped pull-down restoration",
+    "Installed known-folder artwork",
+    "Ten-session desktop and retained validation"
+  ],
+  "unresolved_actionable_findings": [],
+  "resolved_findings": [
+    "Half-snap boundary/exposed-background probes",
+    "Exact current viewer environment and visibility binding",
+    "Canonical typed query process receipts and both stream hashes",
+    "Impossible spawn/exit combinations rejected",
+    "Correct trusted caption RGB probes",
+    "Generic catalog audit instead of unrelated capacity-fixture policy",
+    "Downloads navigation arrow exception documented"
+  ],
+  "bindings": {
+    "host": {
+      "report": "reports/runs/host-1792591251813159200-20208/report.json",
+      "sha256": "710a891098730d2c841c973227568c0eb804b7bbdc304c295daf47c3910e3e6e",
+      "source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 0
+    },
+    "desktop": {
+      "report": "reports/runs/host-1792591397538206500-4716/report.json",
+      "sha256": "7c20cd18491be8546c3da905f31286bfd99efb0260d96167a2e0b14b8b3be780",
+      "source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 265
+    },
+    "motion": {
+      "report": "reports/runs/host-1792592768657718900-23532/report.json",
+      "sha256": "3df161580fa9e4944de117ddea96b5c2d810e7822db229621693b0fedec244da",
+      "source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 19
+    },
+    "retained": {
+      "report": "reports/runs/host-1792592950790636300-22216/report.json",
+      "sha256": "908229660336c7c064fe2a5ce2362030f9bc081d2fdc721fa8732d26749fee75",
+      "source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+      "success": true,
+      "inputs_unchanged": true,
+      "checks": 1
+    },
+    "verify": {
+      "report": "reports/runs/host-1792593087523854900-9696/report.json",
+      "sha256": "2035e718f04c161ead26191a992ef3426acc88c55c4421331a5ab07b2c95add5",
+      "source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+      "success": false,
+      "inputs_unchanged": true,
+      "checks": 1
+    },
+    "spec": {
+      "report": "reports/runs/host-1792593092923162600-1380/report.json",
+      "sha256": "5e4b7a5fee87697853f4dc6cb1b9ffae0e396dd01b736bbf680e2981564b6937",
+      "source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+      "success": false,
+      "inputs_unchanged": true,
+      "checks": 0
+    }
+  },
+  "audit": {
+    "host_tests": 701,
+    "host_executables": 34,
+    "source_hashes": 2176,
+    "source_delta_files": 99,
+    "actual_artifacts": 21,
+    "unchanged_artifacts": 19,
+    "changed_artifacts": [
+      "door-window",
+      "door-workspace"
+    ],
+    "actual_repeat_pairs": 5,
+    "rounded_load_spans": {
+      "Window": 6823936,
+      "Workspace": 11124736
+    },
+    "desktop_sessions": 10,
+    "desktop_refs": 781,
+    "desktop_rgb_pairs": 184,
+    "desktop_probes": 187,
+    "private_raw_snapshots": 9,
+    "image_entries": 39,
+    "all_leaked": 0,
+    "all_device_reclaimed": 8,
+    "motion_refs": 32,
+    "motion_rgb_pairs": 10,
+    "motion_probes": 7,
+    "known_folder_resource_payloads": 40,
+    "known_folder_small_exports": 35,
+    "known_folder_mismatches": 0
+  },
+  "motion": {
+    "drag_frames": 136,
+    "paths": [
+      136,
+      0,
+      0,
+      0
+    ],
+    "compose_ticks": 141,
+    "transfer_ticks": 65,
+    "tick_ms": 10,
+    "mean_elapsed_paint_scope_ms": 15.147058823529411,
+    "max_ms": 30,
+    "failed": 0,
+    "histogram": [
+      0,
+      72,
+      58,
+      6,
+      0,
+      0,
+      0
+    ],
+    "accepted_bytes": 2441014632,
+    "calls": 246534,
+    "reuse_line": 52,
+    "reuse_serial": 40,
+    "reused_pixels": 3201660,
+    "summary_bytes": 222,
+    "window_diagnostic_bytes": 2922,
+    "fps_qualified": false
+  },
+  "native_default": {
+    "output": [
+      2560,
+      1600
+    ],
+    "logical": [
+      1280,
+      800
+    ],
+    "scale": 2,
+    "backend": "WHPX/RAMFB",
+    "visible": false,
+    "viewer_environment": [],
+    "captures": 6,
+    "processes": 6,
+    "threads": 6,
+    "leaked": 0,
+    "device_reclaimed": 8,
+    "raw_sha256": "0d57dc98d6b5be5c32dc3bd0759bdf5267e5dd0cbc897406e24175f169624581",
+    "catalog_revision": 852,
+    "seven_user_directories_verified": true
+  },
+  "bridges": {
+    "source": {
+      "path": "reports/runs/host-1792591251813159200-20208/native-viewer-source-bridge.json",
+      "sha256": "c4da76e34388319064684698cbc2bce72e25c80c40c802b275a86354d7a829cb"
+    },
+    "artifacts": {
+      "path": "reports/runs/host-1792591397538206500-4716/native-viewer-artifact-bridge.json",
+      "sha256": "f9f83c7f02c334f3384281d93fe253bdf9e38fa040d0d4ebba0034af7d7d0406"
+    },
+    "retained_checkpoint": {
+      "path": "reports/runs/host-1792592950790636300-22216/desktop-revalidation.json",
+      "sha256": "17161bdefe2e4a2d4ec40dce4d78f00e4805b8ea329fa0154d9be8ed2b60fa0b"
+    }
+  },
+  "limitations": [
+    "One distinct supported adapter mode, not primary-monitor identification",
+    "Dedicated title-gesture native proof is 2560x1600/2x; other densities have model and broader regression coverage",
+    "Child SDL hints do not prove visible native-pixel quality; visible host presentation remains unqualified",
+    "Integer guest density only; fractional/live scale remains open",
+    "No Microsoft ClearType identity, full Windows fidelity, 60FPS, vblank, pure CPU or input latency claim",
+    "Motion26628 is exploratory due possible audit overlap;23532 is the clean qualifying sample",
+    "Failed20972/9464 are retained unqualified",
+    "No fresh foundation execution; only19 unchanged actual artifacts inherited",
+    "Owner disk untouched; externalD not configured",
+    "P12 partial; Snap chooser, Search controls, modern Explorer, unified apps and providers remain open"
+  ],
+  "cumulative": "Legacy8GB reservation refuses out16893274320B above12GB admission ceiling; below20GB user cap. Original missingP00report32560 still blocks check-spec."
+}

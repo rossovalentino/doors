@@ -1,0 +1,40 @@
+window "Doors UI Gallery"
+  navigation "Navigation" [FOCUSABLE] {FOCUS}
+    button "Close Navigation" {INVOKE}
+    list item "Basic input" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=1/9
+    list item "Control states" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/9
+    list item "Text and selection" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=3/9
+    list item "Collections" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT} pos=4/9
+    list item "Menus and toolbars" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=5/9
+    list item "Status and info" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=6/9
+    list item "Layout" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=7/9
+    list item "Dialogs" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=8/9
+    list item "Accessibility" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=9/9
+    scroll viewer "" [VERTICAL]
+      heading "Collections" level=1
+      group "ListView"
+        heading "ListView" level=2
+        list "Files" [FOCUSABLE VERTICAL] {FOCUS}
+          list item "Document 01.txt" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=1/60
+          list item "Document 02.txt" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=2/60
+          list item "Document 03.txt" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=3/60
+          list item "Document 04.txt" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=4/60
+          list item "Document 05.txt" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=5/60
+          list item "Document 06.txt" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=6/60
+          list item "Document 07.txt" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=7/60
+          list item "Document 08.txt" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=8/60
+        list "Fruits" [FOCUSABLE MULTISELECTABLE VERTICAL] {FOCUS}
+          list item "Apple" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=1/5
+          list item "Banana" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=2/5
+          list item "Cherry" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=3/5
+          list item "Date" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=4/5
+          list item "Elderberry" [FOCUSABLE SELECTABLE] {FOCUS SELECT SCROLL_INTO_VIEW} pos=5/5
+      group "TreeView"
+        heading "TreeView" level=2
+        tree "Folders" [FOCUSABLE] {FOCUS}
+          tree item "This PC" [FOCUSABLE EXPANDABLE EXPANDED SELECTABLE] {FOCUS COLLAPSE SELECT} pos=1/2 level=1
+            tree item "Documents" [FOCUSABLE EXPANDABLE EXPANDED SELECTABLE] {FOCUS COLLAPSE SELECT} pos=1/2 level=2
+              tree item "Reports" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=1/2 level=3
+              tree item "Letters" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/2 level=3
+            tree item "Pictures" [FOCUSABLE EXPANDABLE SELECTABLE] {FOCUS EXPAND SELECT} pos=2/2 level=2
+          tree item "Network" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/2 level=1

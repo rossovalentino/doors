@@ -1,0 +1,30 @@
+window "Doors UI Gallery"
+  navigation "Navigation" [FOCUSABLE] {FOCUS}
+    button "Close Navigation" {INVOKE}
+    list item "Basic input" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=1/9
+    list item "Control states" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=2/9
+    list item "Text and selection" [FOCUSABLE SELECTED SELECTABLE] {FOCUS SELECT} pos=3/9
+    list item "Collections" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=4/9
+    list item "Menus and toolbars" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=5/9
+    list item "Status and info" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=6/9
+    list item "Layout" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=7/9
+    list item "Dialogs" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=8/9
+    list item "Accessibility" [FOCUSABLE SELECTABLE] {FOCUS SELECT} pos=9/9
+    scroll viewer "" [VERTICAL]
+      heading "Text and selection" level=1
+      group "TextBox"
+        heading "TextBox" level=2
+        edit "Name" [FOCUSABLE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE SET_SELECTION} sel=0..0
+        edit "Filled" value="Caffè latte" [FOCUSABLE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE SET_SELECTION} sel=12..12
+        edit "Read only" value="Fixed value" [FOCUSABLE READ_ONLY HAS_SELECTION] {FOCUS SET_SELECTION} sel=11..11
+        edit "Disabled" value="Unavailable" [DISABLED HAS_SELECTION EDITABLE] {SET_VALUE SET_SELECTION} sel=11..11
+        edit "Notes" value="First line\nSecond line with more words to wrap across the box\nThird line" [FOCUSABLE MULTILINE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE SET_SELECTION} sel=72..72
+      group "PasswordBox and NumberBox"
+        heading "PasswordBox and NumberBox" level=2
+        edit "Password" [FOCUSABLE PROTECTED EDITABLE] {FOCUS SET_VALUE}
+        spinner "Copies" value="2" [FOCUSABLE HAS_RANGE HAS_SELECTION EDITABLE] {FOCUS SET_VALUE INCREMENT DECREMENT SET_RANGE SET_SELECTION} range=1000..99000@2000 sel=1..1
+      group "ComboBox"
+        heading "ComboBox" level=2
+        combo box "Theme" value="Use system setting" [FOCUSABLE EXPANDABLE HAS_POPUP] {FOCUS EXPAND}
+        combo box "Font" [FOCUSABLE EXPANDABLE HAS_POPUP] {FOCUS EXPAND}
+        combo box "Disabled" value="One" [DISABLED EXPANDABLE HAS_POPUP] {EXPAND}

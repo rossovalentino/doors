@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "record_kind": "initfs_inputs",
+  "entries": [
+    { "artifact": "native-probe", "destination": "bin/native-probe.elf" },
+    { "artifact": "native-runtime", "destination": "bin/native-runtime.elf" },
+    { "source": "boot/config/boot.txt", "destination": "system/boot.txt" }
+  ]
+}

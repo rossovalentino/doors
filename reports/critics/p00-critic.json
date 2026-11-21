@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "record_kind": "phase_critic_review",
+  "phase": "P00",
+  "agent": "/root/p00_critic",
+  "outcome": "passed",
+  "unresolved_findings": 0,
+  "evidence_report": "reports/runs/host-1791804427914736400-32560/report.json",
+  "reviewed_build_inputs": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "de3fed914d688165550deae7bb581490f89f64f2c07fd57145ddc3e5742d3abe"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "cae7c80e914562c282ffa2772effa777650b2db14b9c523c48530123f20e19f3"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "1437e9ccb915520929d811bf5220e02ce84607fc49f1523ec4253924462a90c8"
+    },
+    {
+      "path": "DOOR_OS_MASTER_SPECIFICATION.md",
+      "sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37"
+    },
+    {
+      "path": "crates/boot-protocol/Cargo.toml",
+      "sha256": "0f576b285913461a7f9f993be82aaa4eaea7e11727ddd7a0d99bd1e1c7a5d453"
+    },
+    {
+      "path": "crates/boot-protocol/src/lib.rs",
+      "sha256": "ca7df2b05c85aa96565d3d239c4e615516207dee3d5bc38f48c65a8de28e697d"
+    },
+    {
+      "path": "crates/boot-protocol/src/memory.rs",
+      "sha256": "efb74a6922ac3b62b26bae3a881e879b75893b8ca6a05e246f89af051a83eefb"
+    },
+    {
+      "path": "crates/boot-protocol/src/wire.rs",
+      "sha256": "971ee5e06739162fcb3b811f93f3fa1739b01c638b05daf0e26daf1ac4292b11"
+    },
+    {
+      "path": "crates/boot-protocol/tests/boot_info.rs",
+      "sha256": "adfeb47265bb9d22b620a78d1a22f9f1fe87e5b67aed9c69523a854f314bf3e0"
+    },
+    {
+      "path": "profiles/build/p00.json",
+      "sha256": "1aaa4177972bc5b46a60d4166a7754f76d1c60c7509a5ded3a13b391874bded1"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "6f0d5f4e45f8802ad2b3a0fe2794b07548725039ebbcfdd2437a0168f113e924"
+    },
+    {
+      "path": "specs/contracts/boot-info-v1.md",
+      "sha256": "9ab975f962397b35ec347995a6613fc95e1073cd6c9ff82e4d58cf55b8aa8202"
+    },
+    {
+      "path": "specs/sources/dependencies.json",
+      "sha256": "c8a5972277a8b59920c5f327d7414f0d0e7a8e403ee497d0845314505b0e903a"
+    },
+    {
+      "path": "specs/sources/index.json",
+      "sha256": "1cf59274c9406bd5a942481a4aba627757e0025aea99b90cb61efbc4ad422f0f"
+    },
+    {
+      "path": "tools/xtask/Cargo.toml",
+      "sha256": "1e16329a543de91d27d1a0c3b756a10f392a0598873367f3aa2fe8da4f674385"
+    },
+    {
+      "path": "tools/xtask/src/doctor.rs",
+      "sha256": "dfb7324b1608e58a051a0337ac85b60c420113b3903ceca51ca90a393932eb9e"
+    },
+    {
+      "path": "tools/xtask/src/evidence.rs",
+      "sha256": "fb8d5b83523c4ac9325d93e11f6b45908e5fc761208c0cdadd5f92087dbcf615"
+    },
+    {
+      "path": "tools/xtask/src/main.rs",
+      "sha256": "b75820e89d37d87fb45f7f4f064e60ff0487bfd8a79499584592b6739e5ff77e"
+    },
+    {
+      "path": "tools/xtask/src/spec.rs",
+      "sha256": "85dd3fcdc5da96318e7793adb32a4748faa49862bbc527e2f2455c545545b65c"
+    }
+  ],
+  "initial_findings": [
+    {
+      "id": "P00-CRITIC-001",
+      "priority": "P1",
+      "problem": "Post-check source mutation could qualify unchecked source",
+      "resolution": "Run-start/end snapshots; nonzero exit and failed evidence on change",
+      "regression_test": "changing_source_after_checks_produces_failed_evidence"
+    },
+    {
+      "id": "P00-CRITIC-002",
+      "priority": "P2",
+      "problem": "Unknown and simultaneous active phases were accepted",
+      "resolution": "Declared active phase, one active phase and completed predecessor checks",
+      "regression_test": "phase_selection_rejects_unknown_parallel_and_skipped_phases"
+    },
+    {
+      "id": "P00-CRITIC-003",
+      "priority": "P2",
+      "problem": "Critic pass lacked reviewed source/run binding",
+      "resolution": "Require qualifying report path and exact build-input manifest",
+      "regression_test": "critic_acceptance_requires_the_reviewed_run_and_inputs"
+    },
+    {
+      "id": "P00-CRITIC-004",
+      "priority": "P2",
+      "problem": "Code-only OVMF discovery concealed missing variable template",
+      "resolution": "Independent code and vars acquisition blockers",
+      "regression_test": "either_missing_firmware_input_is_a_separate_blocker"
+    }
+  ],
+  "initial_probe_evidence": "reports/runs/critic-p00-initial/outcomes.txt",
+  "followup_evidence": "reports/runs/critic-p00-followup/outcomes.txt",
+  "tests_passed": 27,
+  "limitations": [
+    "No concrete parser defect found, not proof of perfect correctness",
+    "Host-only foundation; no guest or Windows execution",
+    "Local evidence consistency, not independent authentication"
+  ],
+  "reviewed_source_snapshot_sha256": "8d49e5d9e096aac146e6f10de520f243a7a6f254913e56ef2bd0f5731b1bd224"
+}
+

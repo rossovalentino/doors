@@ -1,0 +1,10 @@
+[package]
+name = "door-image-format"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Allocation-free ELF64 and PE32+ artifact validation"
+
+[lints]
+workspace = true

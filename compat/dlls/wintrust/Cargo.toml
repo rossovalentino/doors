@@ -1,0 +1,26 @@
+[package]
+name = "door-wintrust"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original wintrust.dll: WinVerifyTrust for embedded signatures and catalogs, CRL revocation, and the CryptCATAdmin catalog store"
+
+[lib]
+name = "wintrust"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-windows-abi/guest-runtime"]
+
+[dependencies]
+door-authenticode = { path = "../../../crates/authenticode" }
+door-tls = { path = "../../../crates/tls" }
+door-windows-abi = { path = "../../abi", features = ["guest-heap"] }
+# Pinned RustCrypto digest (MIT OR Apache-2.0), shared with door-tls.
+sha1 = { version = "=0.10.6", default-features = false }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

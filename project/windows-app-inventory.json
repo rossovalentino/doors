@@ -1,0 +1,3064 @@
+{
+  "reference_apps_20261022": {
+    "status": "bounded_native_checkpoint_P12_partial",
+    "design": "docs/design/reference-apps-20261022.md",
+    "scope": "Monitor ten destinations plus CPU/Memory drilldowns; Preview reference tabs/toolbar/canvas/rail/filmstrip/information layout; native glyphs, measured text, matched paint/hit bounds, real bounded existing providers",
+    "owner_reference_index": "reports/runs/reference-apps-owner-20261022/index.json",
+    "development_image": "out/images/host-1792646238237329400-21896-desktop-dev/image.json",
+    "runtime_source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+    "evidence": {
+      "build": {
+        "report": "reports/runs/host-1792646238237329400-21896/report.json",
+        "sha256": "77b0e4021ce10d772b88bc524632ee3f04211bbb28ac482290b4fab53ea092c6",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 3
+      },
+      "full_host": {
+        "report": "reports/runs/host-1792645717405923900-29208/report.json",
+        "sha256": "f0269d86fe9ce952b0f3cb12d8b9d4e5499f97122df8527ed3bb5b92c12a7d9c",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      },
+      "captures": {
+        "report": "reports/runs/host-1792646345819545300-29844/report.json",
+        "sha256": "8443e16d9cbc71e0356f90279f0c72d1e481a53abdf4fa3e458556c9ff11f096",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 58
+      },
+      "monitor": {
+        "report": "reports/runs/host-1792645257563497100-10380/report.json",
+        "sha256": "c6dd34ce1a9ae794ef30f926c4e2256d9bc9e6af5bec78ebaf2d313cef4f2f2a",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 21
+      },
+      "preview": {
+        "report": "reports/runs/host-1792646365322138800-33104/report.json",
+        "sha256": "0e1bbebb0b2234c8798d6605c5848578dd178df009718bf74ecec8db99381e43",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 34
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792645459154832100-30028/report.json",
+        "sha256": "b0a42a1850c8aa1ee708b2b1387725247b3eab42aea65564fc65d8d7ff7596c0",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 9
+      },
+      "assets": {
+        "report": "reports/runs/host-1792646037420132000-17112/report.json",
+        "sha256": "87053efbc8485b95a89da6927a4c3d303cf0e5b51122d0c2519aba3e93f19b7b",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      }
+    },
+    "host_tests": {
+      "passed": 812,
+      "summaries": 40,
+      "nonzero": 34,
+      "zero": 6
+    },
+    "affected_host": {
+      "command": "cargo test --locked -p door-preview --all-targets",
+      "exit_code": 0,
+      "log": "target/reference-wrap-host.log",
+      "sha256": "1f7cd61c00ba9840e790af5dd852ca9d2f519222a39fd9490bde2068a5c98db2",
+      "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "passed": 16,
+      "summaries": [
+        15,
+        1
+      ],
+      "scope": "After the final two Preview paint-only fixes; overlaps the full812 suite and is not added to it"
+    },
+    "host_captures_report": "reports/runs/host-1792646345819545300-29844/report.json",
+    "native_selection": {
+      "boots": 6,
+      "monitor": 1,
+      "preview": 3,
+      "explorer": 2,
+      "scope": "Selected current suites; Monitor/Explorer run on the earlier image with identical executable/core payloads. Additional earlier reruns are not summed."
+    },
+    "source_bridge": {
+      "changed_paths": [
+        "desktop/preview/src/presentation.rs"
+      ],
+      "prior_monitor_explorer_source": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+      "full_host_assets_source": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+      "final_runtime_source": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "changed_executable": "door-preview",
+      "changed_initfs_payload": "bin/door-preview.elf",
+      "scope": "Only Preview presentation changes: text format disabled state, empty-pane wrapping, stacked Convert instruction overlap. Full host812 plus16 affected tests; current native Preview. Independent exact source/artifact review.",
+      "unchanged_artifacts": 22,
+      "total_artifacts": 23,
+      "unchanged_initfs_file_payloads": 19,
+      "total_initfs_file_payloads": 20
+    },
+    "review_receipt": "reports/runs/reference-apps-review-20261022/review.json",
+    "out_budget": {
+      "bytes": 9187571074,
+      "limit_bytes": 20000000000,
+      "within_budget": true,
+      "scope": "out only; target/reports excluded"
+    },
+    "owner_storage": "out/session/user.raw absent; not initialized",
+    "historical_gate_blocker": "Missing original reports/runs/host-1791804427914736400-32560/report.json; do not recreate historical evidence",
+    "limits": [
+      "Exact pixel equality and sustained60FPS/input latency are not established",
+      "Startup/network/GPU/control providers unavailable; logs are bounded session observations",
+      "Preview PDF/Office/media playback/OCR/recording/crop/markup/batch providers unavailable",
+      "Opaque themed client material, integer DPI and ASCII atlas remain; Unicode filenames use visible fallback",
+      "Terminal/Settings native workflows were not repeated in this revision; preserve their prior evidence",
+      "P12 partial; owner storage absent and historical P00 evidence missing"
+    ]
+  },
+  "preview_monitor_expansion_20261022": {
+    "status": "bounded_native_checkpoint_P12_partial",
+    "design": "docs/design/preview-monitor-expansion-20261022.md",
+    "scope": "Separate Preview/Monitor executables; shared native UI; six-app catalog; PNG/QOI/text new-file export and bounded format inspection; sanitized telemetry; Terminal opacity; Explorer alignment/tags/fitted initial bounds; service idle backoff and cached-move eligibility",
+    "bundle": [
+      "Explorer",
+      "Preview",
+      "Terminal",
+      "Settings",
+      "Monitor",
+      "Notes"
+    ],
+    "current_evidence": "Seven focused workflows passed across eleven private guest boots; development relink, not full phase qualification",
+    "evidence": {
+      "preview": {
+        "report": "reports/runs/host-1792623443701456900-33232/report.json",
+        "sha256": "a5ffe8b8e8723180b4388c9257af3f4dc25ef7004a7db0a9d2843ff05e860799",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 16
+      },
+      "monitor": {
+        "report": "reports/runs/host-1792624034785284200-31336/report.json",
+        "sha256": "545efb7ada22dbcf61879924e81fcebf61e826603300205cc5ce74ece88095a4",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 8
+      },
+      "motion": {
+        "report": "reports/runs/host-1792623343001520100-30932/report.json",
+        "sha256": "7bf46ce0c00669ce34c0fcdeac22f73898b58459f0c124f56d3b0f25272a9e54",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 19
+      },
+      "recovery": {
+        "report": "reports/runs/host-1792623604134590600-8972/report.json",
+        "sha256": "0c9b7675813caf960eb7b865de9cc6c0ba5f54274f508fed1570faf98121533a",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 7
+      },
+      "terminal": {
+        "report": "reports/runs/host-1792623707293393400-27460/report.json",
+        "sha256": "08a25c459ea5be1f86d73271ebb943b6c4143ffd1e4b579e1f212203f0b2e7c0",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 19
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792623866730823500-13324/report.json",
+        "sha256": "336783e242e03df63c729ea69aeb6e0f3aea9bbff58aae9a0c4a7ecd74a32393",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 9
+      },
+      "settings": {
+        "report": "reports/runs/host-1792623943934333500-24036/report.json",
+        "sha256": "7d67b942f4bcdbe2bdae22c3e6a6962d03608a0ea1be5368f858fe8b35131138",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 15
+      }
+    },
+    "host_checks": [
+      {
+        "scope": "full_before_final_deltas",
+        "passed": 797,
+        "executables": 40,
+        "log": "target/preview-monitor-host-current.log",
+        "sha256": "0a8b07cb98e33462d5a4e371a8eb64c4ff179c2c7a979bf422da3f5e1ff5b3b1"
+      },
+      {
+        "scope": "window_service_delta",
+        "passed": 47,
+        "executables": 2,
+        "log": "target/window-idle-host.log",
+        "sha256": "5445ca6891aeafa44a1b5f6f1fa4f3d07c48dc527e28771b584448bfa48c822a"
+      },
+      {
+        "scope": "workspace_window_harness_delta",
+        "passed": 327,
+        "executables": 7,
+        "log": "target/explorer-fit-host2.log",
+        "sha256": "bd39a5c3f0fbddf3b7a58f55697d49ff9516c0d1783c0d6de6830c43a8acf3af",
+        "doc_test_phases": 2
+      },
+      {
+        "scope": "geometry_delta",
+        "passed": 2,
+        "executables": null,
+        "log": "target/explorer-fit-geometry.log",
+        "sha256": "c7d4bfbcd1b468d6fa2aeb1ae008fb0789fa0d6b73411b0e6961ad9506e56743"
+      },
+      {
+        "scope": "harness_delta",
+        "passed": 29,
+        "executables": 1,
+        "log": "target/final-harness-host.log",
+        "sha256": "3aa2d14312f575e898b73469a1e607ee412aef6851885e875bd8018ac3872b6e"
+      }
+    ],
+    "host_count_note": "Delta counts overlap the earlier full suite; do not sum them as unique tests.",
+    "build": {
+      "report": "reports/runs/host-1792623233102212300-12916/report.json",
+      "sha256": "4a3d9845c52144f064bbe4cac93b25a1470e94f4893b623b88005bcefe6bed18",
+      "source_sha256": "54ecd9d2b214bb5492de9f4d554a5026e03566eefdda8394ab9c2e1f9c19dc92",
+      "image": "out/images/host-1792623233102212300-12916-desktop-dev/image.json",
+      "test_image": "out/images/host-1792623233102212300-12916-desktop-test/image.json",
+      "development_relink": true,
+      "phase_qualification": false,
+      "independent_base": "reports/runs/host-1792619937184232000-24708/report.json",
+      "base_scope": "Independent build graph passed; its combined workflow failed Monitor activation before later repairs. Keep the failed report."
+    },
+    "source_bridge": {
+      "native_source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+      "after_build": [
+        "desktop/workspace/src/explorer_layout.rs: cfg(test) endpoint contract only",
+        "tools/xtask/src/desktop/resolution.rs: contained gestures and explicit canonical pixel-reuse requirement only"
+      ],
+      "final_documentation": "Coordinated documentation-only changes after native runs; critic receipt binds final snapshot."
+    },
+    "motion": {
+      "report": "reports/runs/host-1792623343001520100-30932/report.json",
+      "native_output": [
+        3840,
+        2160
+      ],
+      "backend": "WHPX/RAMFB CPU copy",
+      "drag_frames": 88,
+      "mean_paint_work_ms": 20.113636363636363,
+      "maximum_paint_work_ms": 30,
+      "translated_pixels": 4888512,
+      "client_recaptures": 0,
+      "tick_millis": 10,
+      "fps_claim": false,
+      "matched_speedup_claim": false,
+      "scope": "Paced QMP, coarse elapsed paint scopes; no visible SDL/input latency/vblank or sustained60FPS proof"
+    },
+    "idle": {
+      "report": "reports/runs/host-1792624034785284200-31336/report.json",
+      "busy_observations": 1,
+      "total_observations": 401,
+      "scope": "Coarse timer observations, not CPU-time or performance speedup"
+    },
+    "dependencies": "Three local packages door-app-ui, door-preview, door-monitor; no new external versions",
+    "remaining": [
+      "Exact reference fidelity and all requested functionality",
+      "Preview source editing/merge/undo and broader PDF/Office/media/3D/OCR/archive providers",
+      "Creation/modification timestamps and authors with clock/schema/migration",
+      "Full Terminal settings and actual CMD/PowerShell/WSL engines",
+      "Native large-image heap/reconnect and reply-loss/configure-during-export fault injection",
+      "Recycle Bin and robust restore; multi-instance/multiwindow and launch handoff",
+      "Full Unicode/IME, fractional DPI, visible SDL quality, measured input latency and sustained60FPS",
+      "Monitor GPU/network/startup/logs and authorized process/service controls"
+    ],
+    "process_limit": 8,
+    "maximum_concurrent_ordinary_gui_apps": 3,
+    "installed_apps": 6,
+    "private_guest_boots": 11,
+    "owner_disk_used": false,
+    "owner_volume_present": false,
+    "out_limit_bytes": 20000000000,
+    "out_accounting": {
+      "bytes": 6038176889,
+      "report": "reports/runs/host-1792624034785284200-31336/report.json",
+      "scope": "out only; target and reports excluded"
+    },
+    "cumulative_gate": "Original P00 report reports/runs/host-1791804427914736400-32560/report.json absent after owner cleanup; do not reconstruct history or close P12.",
+    "critic": "reports/runs/preview-expansion-review-20261022/review.json",
+    "gate_attempts": {
+      "check_spec": {
+        "report": "reports/runs/host-1792624233390723900-14720/report.json",
+        "sha256": "120029e0eeb399f82ba4a869b66c39a605a30b44ecac636c4a3ee2ccd8717bf2",
+        "success": false,
+        "inputs_unchanged": true,
+        "failure": "reports/runs/host-1791804427914736400-32560/report.json: The system cannot find the path specified. (os error 3)"
+      },
+      "assets": {
+        "report": "reports/runs/host-1792624264319260600-30368/report.json",
+        "sha256": "a3cc3edfa77cabcdf3a13dd1860b3ab016c31f8243a0f38c16e0dff6ffd5b588",
+        "success": true,
+        "inputs_unchanged": true,
+        "failure": null
+      },
+      "verify": {
+        "report": "reports/runs/host-1792624386895948500-16972/report.json",
+        "sha256": "0ea9fece5ce9b0a7e51d89d67a90a87b046a9a4ad2b51db70c23c03df1eda61d",
+        "success": false,
+        "inputs_unchanged": true,
+        "failure": "reports/runs/host-1791804427914736400-32560/report.json: The system cannot find the path specified. (os error 3)"
+      }
+    },
+    "preview_limits": {
+      "encoded_input_bytes": 6291456,
+      "text_input_bytes": 16384,
+      "image_pixels": 1048576,
+      "decoded_image_admission_bytes": 16777216,
+      "heap_bytes": 100663296,
+      "native_large_image_pressure_qualified": false
+    }
+  },
+  "current_app_fidelity_audit_20261022": {
+    "status": "bounded_fixes_validated_P12_partial",
+    "design": "docs/design/current-app-fidelity-audit-20261022.md",
+    "scope": "Terminal application theme, measured label alignment, hover/cursor routing, checked command completion and installed Windows icon; Settings four-app integration; existing Explorer regression and stricter retirement validation",
+    "host_suite": {
+      "passed": 762,
+      "executables": 36,
+      "log": "target/current-app-audit-host-final.log",
+      "sha256": "053105732fee36f562c2740bb1af41ba119fba102d240b3fc085bd494b455ce4",
+      "later_harness_only_change": "Explorer now requires canonical per-boot retirement; 5 existing shutdown validator tests passed separately"
+    },
+    "evidence": {
+      "settings": {
+        "report": "reports/runs/host-1792610572224355700-12140/report.json",
+        "sha256": "fbb7e3cd6abb13d642c5ff033ae2558acb6d89b463b61b76730316c3806264a2",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 16
+      },
+      "terminal": {
+        "report": "reports/runs/host-1792610679121708300-22728/report.json",
+        "sha256": "3a103f04295f58ab4a3a94c5100173bc183facc3ba0f00f623ce0b4d41cab12b",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 19
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792611027387645200-32312/report.json",
+        "sha256": "fd3bf1fda77edb557a5851d8dc8f0aedcb59036a4726a6c1cc5aaf898f6a1193",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "d20c229e3f824d51088b288e4a3b6308331ad535b16510c05f4d6a1fc5a51058",
+        "checks": 9
+      },
+      "assets": {
+        "report": "reports/runs/host-1792610846718714300-20748/report.json",
+        "sha256": "1d6add503109ce003b6c445e5dff1a42d2dab324e23cc022995c625fffb9aeb7",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 0
+      },
+      "cumulative_verify": {
+        "report": "reports/runs/host-1792610948804522400-32680/report.json",
+        "sha256": "a2a9f49bc4ae994484b0acb62652e361e3f4907fe59b34840a21fc69925050e6",
+        "success": false,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 2
+      }
+    },
+    "common_guest_image": "out/images/host-1792610572224355700-12140-desktop-dev/image.json",
+    "native_scope": "Five private guest boots, 29 actual scanout captures, theme probes, registry/file/preferences/tags disk audits; checked development relink, qualification=false",
+    "source_bridge": "Settings/Terminal/assets share 5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8; Explorer d20c229e3f824d51088b288e4a3b6308331ad535b16510c05f4d6a1fc5a51058 differs only in the stricter host fixture, not guest sources or assets",
+    "critic": "reports/runs/current-app-fidelity-review-20261022/review.json",
+    "live_reference": "Installed dark Explorer observed through Computer Use; Settings launch exposed no targetable window; Terminal reference uses official Microsoft documentation because skill excludes terminal app automation",
+    "installed_terminal_icon": {
+      "path": "assets/icons/windows/terminal-current.ico",
+      "sha256": "af7211c63e587adc88053873aa42937c73ed5601bc347aa0b8d57977654dd59d",
+      "source": "Eight original authored frames from installed Windows Terminal 1.24.12741.0; no master-only override"
+    },
+    "settings_installed_apps": "Shared inventory of four actual bundled apps; Terminal target313 explicitly launches catalog command9",
+    "redirect_completion": "Checked redirect is part of completion; failure emits ok=0 and never retries an uncertain write",
+    "workspace_load_headroom_bytes": 159744,
+    "out_bytes": 2126879360,
+    "out_limit_bytes": 20000000000,
+    "cumulative_blocker": "Original P00 report reports/runs/host-1791804427914736400-32560/report.json is absent after owner cleanup; history not reconstructed",
+    "additional_dependencies": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "full_windows_backend_parity": false,
+    "phase_closed": false
+  },
+  "schema_version": 1,
+  "reference": {
+    "observed_on": "2026-10-21",
+    "os": "Windows 11 Pro",
+    "version": "25H2",
+    "build": "26200.9711",
+    "display": [
+      2560,
+      1600
+    ],
+    "scale_percent": 150,
+    "theme": "dark",
+    "method": "Recorded native Windows UI inspection and read-only package/version queries",
+    "privacy": "No account, device or network identifiers retained",
+    "clean_install_manifest": false,
+    "theme_comparison": "Colors temporarily switched Dark to Light and restored Dark; no files edited",
+    "desktop_control": "Stopped on owner Escape after recorded Settings/Explorer/Calculator/Notepad/Paint inspection; no further computer input this turn."
+  },
+  "design": "docs/design/windows-core-apps.md",
+  "families": [
+    {
+      "id": "shell",
+      "name": "Desktop, Start, Search, Taskbar, Task View, notifications, Quick Settings",
+      "door_state": "partial",
+      "backend_required": "Window authority, application catalog, notifications and device state",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ]
+    },
+    {
+      "id": "files",
+      "name": "File Explorer",
+      "door_state": "partial",
+      "backend_required": "Authenticated VFS, clipboard, associations and durable mutations",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ],
+      "checked_rename": {
+        "state": "bounded_native_tested_and_critic_reviewed",
+        "entrypoints": [
+          "F2",
+          "command bar",
+          "inline context",
+          "classic Rename"
+        ],
+        "backend": "Authenticated current ancestry/ACL/sharing/version checks and durable commit",
+        "evidence": "reports/critics/p12-files-rename-critic.json",
+        "limits": "Same-parent only;48UTF16 units;ASCII UI rendering;known-folder relocation and copy/move/trash/restore remain open"
+      },
+      "permanent_removal": {
+        "state": "accepted_bounded",
+        "design": "docs/design/files-deletion.md",
+        "critic": {
+          "path": "reports/critics/p12-files-deletion-critic.json",
+          "sha256": "d085856ad7ea987b2bb4ebb2f6f959a50fc5f0142e38e1c282d635940a365133"
+        },
+        "qualifying_source_sha256": "68f613962734bb11949bab2a9fc47502ca38c11999d1b7216e0d300055dc1099",
+        "entrypoint": "Shift+Delete",
+        "scope": "One file/empty folder; default Cancel;32 printable ASCII GUI name limit; no trash/restore",
+        "phase_closed": false
+      }
+    },
+    {
+      "id": "trash",
+      "name": "Recycle Bin",
+      "door_state": "missing",
+      "backend_required": "Durable atomic trash metadata, deletion and restore",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ]
+    },
+    {
+      "id": "settings",
+      "name": "Settings and advanced configuration",
+      "door_state": "partial",
+      "backend_required": "Typed capability-aware settings providers and read-back",
+      "phase_dependencies": [
+        "P12",
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal host",
+      "door_state": "missing",
+      "backend_required": "Protected PTY, child process, profiles, scrollback and text rendering",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ]
+    },
+    {
+      "id": "cmd",
+      "name": "Command Prompt language",
+      "door_state": "missing",
+      "backend_required": "Batch parser, environment, redirection and console integration",
+      "phase_dependencies": [
+        "P10",
+        "P13",
+        "P14"
+      ]
+    },
+    {
+      "id": "powershell",
+      "name": "PowerShell language",
+      "door_state": "missing",
+      "backend_required": "Runtime, object pipeline, providers and command compatibility",
+      "phase_dependencies": [
+        "P13",
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "id": "notepad",
+      "name": "Notepad",
+      "door_state": "partial",
+      "backend_required": "Unicode, tabs, encoding, search, clipboard and durable save",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ],
+      "notes_editing_checkpoint": {
+        "design": "docs/design/notes-editing.md",
+        "state": "bounded accepted; app remains partial",
+        "implemented": "4096-byte ASCII/tab/CR/LF model, keyboard selection/undo/redo, dirty reopen guard and real save/reopen",
+        "native": "13 checks/two boots at1x and3x, light/dark",
+        "remaining": "Unicode/IME/clipboard, mouse/vertical navigation, atomic replacement/conflicts, tabs/dialogs/modern Notepad layout"
+      },
+      "text_navigation_checkpoint": {
+        "design": "docs/design/text-navigation.md",
+        "state": "bounded accepted; app partial",
+        "implemented": "Measured pointer placement/visible-row drag, wrapped-caret affinity, visual navigation and cache",
+        "native": "26checks/two boots each1x/3x, light/dark",
+        "remaining": "Shift-click/edge autoscroll/horizontal scrolling, Unicode/IME/clipboard/accessibility, modern tabs/dialogs and atomic save/conflicts"
+      },
+      "document_save_checkpoint": {
+        "design": "docs/design/checked-document-save.md",
+        "state": "bounded accepted; app partial",
+        "implemented": "Private4096 staging, authenticated checked object/version durable stream replacement and independent save attention",
+        "native": "Notes26 checks/two boots each1x/3x; Files19 each1x/3x; SDKtwo boots/5 independently decoded raw snapshots; foundation42 expected scenarios; combined243/9sessions",
+        "critic": "reports/critics/p12-document-save-critic.json",
+        "remaining": "Atomic namespace creation/Save As, conflict/discard/recovery UI, large files, Unicode/IME/clipboard and modern Notepad fidelity"
+      },
+      "document_dialog_checkpoint": {
+        "state": "bounded accepted; app partial",
+        "design": "docs/design/document-dialogs.md",
+        "implemented": "Shared per-window modal and real Notes Save/Don't save/Cancel close/reload; canceled-close attachment/configure repair",
+        "native": "Notes39checks/two boots each1x/3x light/dark; exact retained/discarded bytes; repeated Close and minimum modal",
+        "critic": "reports/critics/p12-document-dialogs-critic.json",
+        "remaining": "Save As/conflict resolution/tabs/Unicode/IME/clipboard/accessibility and full Notepad fidelity"
+      }
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "door_state": "missing",
+      "backend_required": "Numerical engine, modes, history and clipboard",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ]
+    },
+    {
+      "id": "clock",
+      "name": "Clock",
+      "door_state": "missing",
+      "backend_required": "RTC, time zones, monotonic timers, alarms and power state",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ]
+    },
+    {
+      "id": "taskmanager",
+      "name": "Task Manager",
+      "door_state": "missing",
+      "backend_required": "Process snapshots, counters and authorized process lifecycle",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ]
+    },
+    {
+      "id": "services",
+      "name": "Services and Event Viewer",
+      "door_state": "service_only",
+      "backend_required": "Supervision, structured logs and authorized service control",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "devices",
+      "name": "Device Manager",
+      "door_state": "missing",
+      "backend_required": "Driver enumeration, resource ownership and configuration",
+      "phase_dependencies": [
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "id": "disks",
+      "name": "Disk Management",
+      "door_state": "foundation",
+      "backend_required": "Block/VFS queries and privileged disk transactions",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "systeminfo",
+      "name": "System Information and resource monitoring",
+      "door_state": "foundation",
+      "backend_required": "Checked kernel inventory and performance counters",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "registry",
+      "name": "Registry administration",
+      "door_state": "foundation",
+      "backend_required": "Typed namespaces, authorization, audit and backup",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "scheduler",
+      "name": "Task Scheduler",
+      "door_state": "missing",
+      "backend_required": "Durable triggers, jobs, execution identity and history",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "paint",
+      "name": "Paint",
+      "door_state": "missing",
+      "backend_required": "Raster model, tools, undo, codecs and storage",
+      "phase_dependencies": [
+        "P12",
+        "P14"
+      ]
+    },
+    {
+      "id": "snipping",
+      "name": "Snipping Tool",
+      "door_state": "missing",
+      "backend_required": "Authorized screen capture, selection, annotation and save",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "photos",
+      "name": "Photos",
+      "door_state": "missing",
+      "backend_required": "Bounded codecs, metadata, transforms and library",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "media",
+      "name": "Media Player and video playback",
+      "door_state": "missing",
+      "backend_required": "Decoders, library and audio/video output",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "recorder",
+      "name": "Sound Recorder",
+      "door_state": "missing",
+      "backend_required": "Audio capture ownership, encoding and storage",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "door_state": "missing",
+      "backend_required": "Camera driver, capture ownership and storage",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "browser",
+      "name": "Browser",
+      "door_state": "missing",
+      "backend_required": "Networking, TLS, web engine isolation and downloads",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "mailcalendar",
+      "name": "Mail and Calendar",
+      "door_state": "missing",
+      "backend_required": "Accounts, network protocols and offline store",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "printing",
+      "name": "Print and scan",
+      "door_state": "missing",
+      "backend_required": "Spooler, rendering, device drivers and scan capture",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "archives",
+      "name": "Archive handling",
+      "door_state": "missing",
+      "backend_required": "Bounded codecs, traversal protection and VFS integration",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "installer",
+      "name": "Package installer and app management",
+      "door_state": "missing",
+      "backend_required": "Package identity, trust, atomic installation and catalog",
+      "phase_dependencies": [
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "id": "store",
+      "name": "Store",
+      "door_state": "missing",
+      "backend_required": "Package catalog, acquisition and update providers",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "backup",
+      "name": "Backup, recovery and restore",
+      "door_state": "foundation",
+      "backend_required": "Snapshots, restore transactions and boot recovery",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "remote",
+      "name": "Remote Desktop and assistance",
+      "door_state": "missing",
+      "backend_required": "Network authentication and remote display/input",
+      "phase_dependencies": [
+        "P15"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security and identity",
+      "door_state": "foundation",
+      "backend_required": "Credential/entropy providers, policy and privilege boundaries",
+      "phase_dependencies": [
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "name": "Accessibility tools and input",
+      "door_state": "missing",
+      "backend_required": "Semantics, assistive input, magnification, speech and IME",
+      "phase_dependencies": [
+        "P12",
+        "P14",
+        "P15"
+      ]
+    },
+    {
+      "id": "help",
+      "name": "Help and diagnostics",
+      "door_state": "partial",
+      "backend_required": "Capability documentation and bounded diagnostic collection",
+      "phase_dependencies": [
+        "P14"
+      ]
+    },
+    {
+      "id": "companions",
+      "name": "Sticky Notes, To Do, Phone Link, news/weather, feedback, gaming and AI companions",
+      "door_state": "missing",
+      "backend_required": "App-specific storage, accounts and network providers",
+      "phase_dependencies": [
+        "P14",
+        "P15"
+      ]
+    }
+  ],
+  "installed_packages": [
+    {
+      "Name": "Microsoft.BingNews",
+      "Version": "1.0.2.0"
+    },
+    {
+      "Name": "Microsoft.BingWeather",
+      "Version": "4.54.63045.0"
+    },
+    {
+      "Name": "Microsoft.DesktopAppInstaller",
+      "Version": "1.29.380.0"
+    },
+    {
+      "Name": "Microsoft.GetHelp",
+      "Version": "10.2409.41132.0"
+    },
+    {
+      "Name": "Microsoft.MicrosoftEdge.Stable",
+      "Version": "152.0.4191.53"
+    },
+    {
+      "Name": "Microsoft.MicrosoftStickyNotes",
+      "Version": "6.1.4.0"
+    },
+    {
+      "Name": "Microsoft.OutlookForWindows",
+      "Version": "1.2026.1001.200"
+    },
+    {
+      "Name": "Microsoft.Paint",
+      "Version": "11.2605.81.0"
+    },
+    {
+      "Name": "Microsoft.ScreenSketch",
+      "Version": "11.2608.41.0"
+    },
+    {
+      "Name": "Microsoft.Todos",
+      "Version": "0.120.7961.0"
+    },
+    {
+      "Name": "Microsoft.Windows.Photos",
+      "Version": "2026.11090.22001.0"
+    },
+    {
+      "Name": "Microsoft.WindowsAlarms",
+      "Version": "11.2607.6.0"
+    },
+    {
+      "Name": "Microsoft.WindowsCalculator",
+      "Version": "11.2607.0.0"
+    },
+    {
+      "Name": "Microsoft.WindowsCamera",
+      "Version": "2026.2608.1.0"
+    },
+    {
+      "Name": "Microsoft.WindowsFeedbackHub",
+      "Version": "1.2608.17301.0"
+    },
+    {
+      "Name": "Microsoft.WindowsNotepad",
+      "Version": "11.2607.14.0"
+    },
+    {
+      "Name": "Microsoft.WindowsSoundRecorder",
+      "Version": "10.2103.28.0"
+    },
+    {
+      "Name": "Microsoft.WindowsStore",
+      "Version": "22609.1401.5.0"
+    },
+    {
+      "Name": "Microsoft.WindowsTerminal",
+      "Version": "1.18.10301.0"
+    },
+    {
+      "Name": "Microsoft.YourPhone",
+      "Version": "1.25072.81.0"
+    },
+    {
+      "Name": "Microsoft.ZuneMusic",
+      "Version": "11.2607.16.0"
+    },
+    {
+      "Name": "Microsoft.ZuneVideo",
+      "Version": "10.26061.10051.0"
+    }
+  ],
+  "native_shell_commands": [
+    "help",
+    "pwd",
+    "cd",
+    "ls",
+    "stat",
+    "cat",
+    "write",
+    "append",
+    "echo",
+    "touch",
+    "mkdir",
+    "cp",
+    "mv",
+    "rm",
+    "clear",
+    "run",
+    "tools",
+    "theme",
+    "status",
+    "shutdown",
+    "reboot",
+    "exit"
+  ],
+  "cmd_help_index": [
+    {
+      "name": "ASSOC",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "ATTRIB",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "BREAK",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "BCDEDIT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CACLS",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CALL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CD",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CHCP",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CHDIR",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CHKDSK",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CHKNTFS",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CLS",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CMD",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "COLOR",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "COMP",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "COMPACT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "CONVERT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "COPY",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "DATE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "DEL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "DIR",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "DISKPART",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "DOSKEY",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "DRIVERQUERY",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "ECHO",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "ENDLOCAL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "ERASE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "EXIT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "FC",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "FIND",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "FINDSTR",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "FOR",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "FORMAT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "FSUTIL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "FTYPE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "GOTO",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "GPRESULT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "HELP",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "ICACLS",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "IF",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "LABEL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "MD",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "MKDIR",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "MKLINK",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "MODE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "MORE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "MOVE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "OPENFILES",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "PATH",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "PAUSE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "POPD",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "PRINT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "PROMPT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "PUSHD",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "RD",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "RECOVER",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "REM",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "REN",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "RENAME",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "REPLACE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "RMDIR",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "ROBOCOPY",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SET",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SETLOCAL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SC",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SCHTASKS",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SHIFT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SHUTDOWN",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SORT",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "START",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SUBST",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "SYSTEMINFO",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "TASKLIST",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "TASKKILL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "TIME",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "TITLE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "TREE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "TYPE",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "VER",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "VERIFY",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "VOL",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "XCOPY",
+      "door_compatibility": "not_qualified"
+    },
+    {
+      "name": "WMIC",
+      "door_compatibility": "not_qualified"
+    }
+  ],
+  "coverage_claim": "Inventory and requirements only; missing families are not implemented; no full CMD/PowerShell or 1:1 claim",
+  "windows_powershell_reference": {
+    "engine": "5.1.26100.9711",
+    "commands": [
+      {
+        "Name": "Add-Computer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Add-Content",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Add-History",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Add-Member",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Add-PSSnapin",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Add-Type",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "CFS",
+        "Type": "Alias",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Checkpoint-Computer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Clear-Content",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Clear-EventLog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Clear-History",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Clear-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Clear-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Clear-Recyclebin",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Clear-Variable",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Compare-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Complete-Transaction",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Connect-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Connect-WSMan",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "ConvertFrom-Csv",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertFrom-Json",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertFrom-SddlString",
+        "Type": "Function",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertFrom-SecureString",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "ConvertFrom-String",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertFrom-StringData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Convert-Path",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Convert-String",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertTo-Csv",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertTo-Html",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertTo-Json",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ConvertTo-SecureString",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "ConvertTo-Xml",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Copy-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Copy-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Debug-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Debug-Process",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Debug-Runspace",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Disable-ComputerRestore",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Disable-PSBreakpoint",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Disable-PSRemoting",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Disable-PSSessionConfiguration",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Disable-RunspaceDebug",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Disable-WSManCredSSP",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Disconnect-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Disconnect-WSMan",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Enable-ComputerRestore",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Enable-PSBreakpoint",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Enable-PSRemoting",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Enable-PSSessionConfiguration",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Enable-RunspaceDebug",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Enable-WSManCredSSP",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Enter-PSHostProcess",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Enter-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Exit-PSHostProcess",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Exit-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Export-Alias",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Export-Clixml",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Export-Console",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Export-Counter",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Diagnostics",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Export-Csv",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Export-FormatData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Export-ModuleMember",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Export-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "fhx",
+        "Type": "Alias",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "ForEach-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Format-Custom",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Format-Hex",
+        "Type": "Function",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Format-List",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Format-Table",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Format-Wide",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "gcb",
+        "Type": "Alias",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Acl",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Alias",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-AuthenticodeSignature",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-ChildItem",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Clipboard",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-CmsMessage",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Command",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-ComputerInfo",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-ComputerRestorePoint",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Content",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-ControlPanelItem",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Counter",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Diagnostics",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Credential",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Culture",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Date",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Event",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-EventLog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-EventSubscriber",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-ExecutionPolicy",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-FileHash",
+        "Type": "Function",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-FormatData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Help",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-History",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Host",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-HotFix",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-ItemPropertyValue",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Location",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Member",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Module",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-PfxCertificate",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Process",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-PSBreakpoint",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-PSCallStack",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-PSDrive",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-PSHostProcessInfo",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-PSProvider",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-PSSessionCapability",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-PSSessionConfiguration",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-PSSnapin",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-Random",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Runspace",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-RunspaceDebug",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-TimeZone",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-TraceSource",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Transaction",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-TypeData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-UICulture",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Unique",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-Variable",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-WinEvent",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Diagnostics",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-WmiObject",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Get-WSManCredSSP",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Get-WSManInstance",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "gin",
+        "Type": "Alias",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Group-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "gtz",
+        "Type": "Alias",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Import-Alias",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Import-Clixml",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Import-Counter",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Diagnostics",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Import-Csv",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Import-LocalizedData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Import-Module",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Import-PowerShellDataFile",
+        "Type": "Function",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Import-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Invoke-Command",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Invoke-Expression",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Invoke-History",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Invoke-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Invoke-RestMethod",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Invoke-WebRequest",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Invoke-WmiMethod",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Invoke-WSManAction",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Join-Path",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Limit-EventLog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Measure-Command",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Measure-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Move-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Move-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-Alias",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-Event",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-EventLog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-FileCatalog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-Guid",
+        "Type": "Function",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-Module",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-ModuleManifest",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-PSDrive",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-PSRoleCapabilityFile",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-PSSessionConfigurationFile",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-PSSessionOption",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-PSTransportOption",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-TemporaryFile",
+        "Type": "Function",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-TimeSpan",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-Variable",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-WebServiceProxy",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "New-WinEvent",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Diagnostics",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-WSManInstance",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "New-WSManSessionOption",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Out-Default",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Out-File",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Out-GridView",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Out-Host",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Out-Null",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Out-Printer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Out-String",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Pop-Location",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Protect-CmsMessage",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Push-Location",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Read-Host",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Receive-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Receive-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Register-ArgumentCompleter",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Register-EngineEvent",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Register-ObjectEvent",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Register-PSSessionConfiguration",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Register-WmiEvent",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-Computer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-Event",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-EventLog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Remove-Module",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Remove-PSBreakpoint",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-PSDrive",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-PSSession",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Remove-PSSnapin",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Remove-TypeData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-Variable",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-WmiObject",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Remove-WSManInstance",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Rename-Computer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Rename-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Rename-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Reset-ComputerMachinePassword",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Resolve-Path",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Restart-Computer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Restart-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Restore-Computer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Resume-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Resume-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Save-Help",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "scb",
+        "Type": "Alias",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Select-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Select-String",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Select-Xml",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Send-MailMessage",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-Acl",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Set-Alias",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-AuthenticodeSignature",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Set-Clipboard",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-Content",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-Date",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-ExecutionPolicy",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Set-Item",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-ItemProperty",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-Location",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-PSBreakpoint",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-PSDebug",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Set-PSSessionConfiguration",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Set-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-StrictMode",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Set-TimeZone",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-TraceSource",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-Variable",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-WmiInstance",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Set-WSManInstance",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Set-WSManQuickConfig",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Show-Command",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Show-ControlPanelItem",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Show-EventLog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Sort-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Split-Path",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Start-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Start-Process",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Start-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Start-Sleep",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Start-Transaction",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Stop-Computer",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Stop-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Stop-Process",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Stop-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "stz",
+        "Type": "Alias",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Suspend-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Suspend-Service",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Tee-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Test-ComputerSecureChannel",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Test-Connection",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Test-FileCatalog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Test-ModuleManifest",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Test-Path",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Test-PSSessionConfigurationFile",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Test-WSMan",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.WSMan.Management",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Trace-Command",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Unblock-File",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Undo-Transaction",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Unprotect-CmsMessage",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Security",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Unregister-Event",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Unregister-PSSessionConfiguration",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Update-FormatData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Update-Help",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Update-List",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Update-TypeData",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Use-Transaction",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Wait-Debugger",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Wait-Event",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Wait-Job",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Wait-Process",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Where-Object",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Core",
+        "Version": "3.0.0.0"
+      },
+      {
+        "Name": "Write-Debug",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-Error",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-EventLog",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Management",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-Host",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-Information",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-Output",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-Progress",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-Verbose",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      },
+      {
+        "Name": "Write-Warning",
+        "Type": "Cmdlet",
+        "Source": "Microsoft.PowerShell.Utility",
+        "Version": "3.1.0.0"
+      }
+    ]
+  }
+}

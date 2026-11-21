@@ -1,0 +1,13 @@
+[package]
+name = "door-pe-loader"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Bounded immutable Windows x64 PE dependency and mapping plans"
+
+[dependencies]
+door-image-format = { path = "../../crates/image-format" }
+
+[lints]
+workspace = true

@@ -1,0 +1,8 @@
+{
+    "source":  "C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\ClockIcons.ttf",
+    "kind":  "installed_windows_font_reference",
+    "retrieved":  "2026-11-01",
+    "package":  "Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe",
+    "font_sha256":  "a7b55a205e97cbb649fbf86948a28431360475405f578b2b76a53c25c84aaa6a",
+    "use":  "Owner-provided installed Windows reference; local development. Clock\u0027s navigation and control glyphs (assets/icons/windows-shell/manifest.json entries with font clock), rasterized offline; never redistributed."
+}

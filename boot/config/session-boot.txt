@@ -1,0 +1,3 @@
+Door OS native text session
+Default entry: protected init and interactive shell
+User data: persistent VirtIO volume

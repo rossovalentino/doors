@@ -1,0 +1,3 @@
+// taskschd.dll's type library (taskschd.idl, compiled with MIDL /env x64;
+// the MIDL output is reproducible).
+1 TYPELIB "taskschd.tlb"

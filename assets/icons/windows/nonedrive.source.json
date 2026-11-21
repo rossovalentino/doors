@@ -1,0 +1,15 @@
+{
+  "file": "nonedrive.ico",
+  "frames": 10,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "ea788d7a70ed851d010514412a0e8772fffbee66145fce722896857903f51e76",
+  "sources": {
+    "group_id": 1404,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\imageres.dll.mun",
+    "module_sha256": "d816fd64e8c1c26014778c9667234f7459814bd38aa04e35c46a25073d0876ee"
+  },
+  "supported_frames": 10,
+  "use": "Owner-provided installed Windows reference; local development"
+}

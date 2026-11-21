@@ -1,0 +1,15 @@
+{
+  "file": "linux.ico",
+  "frames": 5,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "a5e8517aa23b7d217b002ae57c663b2808e7593a2e082a406a950f847eabdcf8",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\wsl.exe",
+    "module_sha256": "51d92e6e565162f4a84f2c9b34cc320ae24f3d5a2c6141fac4b8d122b05146fc"
+  },
+  "supported_frames": 5,
+  "use": "Owner-provided installed Windows reference; local development"
+}

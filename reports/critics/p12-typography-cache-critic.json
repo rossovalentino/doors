@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "review_kind": "independent_read_only_critic",
+  "scope": "Bounded P12 hinted typography cache",
+  "provenance": "Saved by root from rendering_critic's independent final read-only review; this is an attributed structured record, not a critic-written workspace file.",
+  "verdict": "accepted_for_bounded_cache_selection",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "tested_source_sha256": "1d64490e3e0a73b38eecb64fc6eee765369f8253dea6f31e48cefd37a5b883bc",
+  "findings": [],
+  "resolved_findings": [
+    "Optional constructor diagnostics use bounded stack formatting and a best-effort write; logging/clock/format failures cannot gate startup or reconnect.",
+    "Temporary test workspaces use checked atomic uniqueness and bounded create-new retries."
+  ],
+  "code_review": {
+    "decoder": "Bounded factor/style/metrics/dimensions, contiguous extents, sorted checked pairs, exact RGB QOI consumption and nonempty glyph coverage.",
+    "selection": "Matching immutable1x/2x/3x caches; static-outline and Selawik helpers retained.",
+    "dependencies": "Skrifa remains host-only; explicit guest graph excludes its runtime.",
+    "current_inputs": "397 executable/Cargo/font/cache/profile inputs match tested snapshot; later documentation separate."
+  },
+  "evidence": [
+    {
+      "report": "reports/runs/host-1792529441653657000-24892/report.json",
+      "sha256": "088f710e54943520be0c7b7b5ba44c7de665c89c12e52db4cdef4a439ca16133",
+      "result": "Static complete build; manifest2adac20be19407718f370d9f87d21cc33c3377038727b549b37a4e682395caa4"
+    },
+    {
+      "report": "reports/runs/host-1792529632331881200-1440/report.json",
+      "sha256": "ffc57218880eb1f4bc7be89e9942f147a71e25d8e4b224df61da45747742f94a",
+      "result": "Static isolated4K15 checks"
+    },
+    {
+      "report": "reports/runs/host-1792529966980920800-21808/report.json",
+      "sha256": "d02d8e603c4a82e1e618a3af4d118d92122c1dcd8ff929ca6d0e54083acf43d3",
+      "result": "Candidate complete build; manifestd9d0ef3c01dc6e0726eb34a1756217b7c502a510317e272ed338b2af8e74fe09; initfs8684d3822fc524659f7c3db04e6fdbbfbce60b974c7b279ebd5d0924ef573ce9"
+    },
+    {
+      "report": "reports/runs/host-1792530064717529100-26524/report.json",
+      "sha256": "628f18fed4be59f1f38659f87e0b0fc964b6aa77fd267a4468245c9ccee74960",
+      "result": "Candidate isolated4K15 checks"
+    },
+    {
+      "report": "reports/runs/host-1792529966980855400-19452/report.json",
+      "sha256": "0f1dea202b5a76613d11b1e6fb89228d86ee843754d78e787788e708c8e2a707",
+      "result": "542 host tests /33 executables"
+    },
+    {
+      "report": "reports/runs/host-1792530070310517100-24648/report.json",
+      "sha256": "c7825c9d87b6295da9ba29d060b998edcae33a8c082ee0c350c340de40db9a63",
+      "result": "Assets"
+    },
+    {
+      "report": "reports/runs/host-1792530193367747200-19064/report.json",
+      "sha256": "2fc83492ecd9b730abee0625493da187b6575f767a8c101afcce21dc9784f6b3",
+      "result": "Files1x19checks/two boots"
+    },
+    {
+      "report": "reports/runs/host-1792530193282351300-24464/report.json",
+      "sha256": "2ee4011218bce5332079c29d13fbf0753fbe96511435890f6a46d230b35c15e3",
+      "result": "Files3x19checks/two boots"
+    },
+    {
+      "report": "reports/runs/host-1792530193327656700-19868/report.json",
+      "sha256": "75eef050b1d01a3bbdf9f06f5d098baa9ab40a77fdaaa1451747f7d354807f32",
+      "result": "242 combined checks /nine sessions"
+    },
+    {
+      "report": "reports/runs/host-1792530193406807400-24756/report.json",
+      "sha256": "fcde27bb3858a1871fc6b7722cb139d0276e0d7fe4bb137efc692fcc95cafabc",
+      "result": "42 expected foundation outcomes; suite473c7c778a7ae493c632fd05039c3347010194bbce714667839ac2d37b23737d"
+    }
+  ],
+  "independent_audit": {
+    "qualifying_reports": "Success and unchanged candidate inputs at tested source.",
+    "complete_builds": "26 artifact/pair files per build, five independent application pairs; firmware/kernel byte-identical.",
+    "isolated_native_refs_per_run": 39,
+    "combined_refs": 504,
+    "combined_sessions": 9,
+    "files_refs": 93,
+    "foundation_refs": 814,
+    "foundation_outcomes": {
+      "Passed": 27,
+      "KernelPanic": 6,
+      "Interrupted": 5,
+      "StartupFailure": 2,
+      "GuestFailure": 1,
+      "Timeout": 1
+    },
+    "files": "Independent raw parsing: object26,parent25,inode17,generation1,v3 to4; payload preserved; shutdown/reboot identical final1450af4660f67d50358c7e1494d9d748f7795fee7307b0a0fcaff99dc404ef92.",
+    "legacy_persistence": "Complete save/reopen/restart equality5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d; corruption fixture unchanged with declared sole CRC bit.",
+    "standard_console": "Authenticated pid11/manifest5/uid1001: help/status/file/theme/threads/exit, exit71; checkpoint3 to4/catalog57 to58/theme1 to2; exact whole-disk mutation whitelist.",
+    "diagnostic_credit": {
+      "first_boot": {
+        "bytes": 13230,
+        "slow_samples": 16,
+        "scene_records": 130
+      },
+      "reboot": {
+        "bytes": 4014,
+        "slow_samples": 13,
+        "scene_records": 20
+      },
+      "budget_bytes": 16384,
+      "reserved_bytes": 512
+    },
+    "retirement": "All sessions report zero process-frame leaks; no QEMU remains at final inspection."
+  },
+  "measured_result": {
+    "profile": "Isolated3840x2160/3x WHPX/RAMFB",
+    "static_elapsed_ticks": [
+      5,
+      4,
+      4,
+      4
+    ],
+    "packed_elapsed_ticks": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "tick_millis": 10,
+    "interpretation": "No elapsed10ms ticks is not zero runtime or whole-app startup.",
+    "coverage": {
+      "static_length": 1689057,
+      "static_capacity": 4423680,
+      "packed_length": 1673001,
+      "packed_capacity": 1673001
+    },
+    "memory_scope": "Coverage allocation only; excludes metadata, kerning, mapped assets and other process memory.",
+    "appearance": "Native light Settings/dark Files show readable populated unclipped rows; resized previews, no independent DirectWrite pixel match."
+  },
+  "retained_failures": [
+    "Blank preview25720 excluded despite command success; fixed adapter bounds.",
+    "Host9344 temp-directory collision retained; corrected542-test run supersedes."
+  ],
+  "remaining_limits": [
+    "Six ASCII styles; Unicode shaping/IME/fullGPOS open.",
+    "Original RGB renderer, not Microsoft ClearType/DirectWrite pixel equivalence.",
+    "No FPS/vblank/whole-app/sign-in/fullWindows fidelity qualification.",
+    "Owner-local font distribution unreviewed.",
+    "P12 remains partial; original historicalP00 still missing."
+  ],
+  "cumulative_verification": {
+    "report": "reports/runs/host-1792531162128827000-17756/report.json",
+    "sha256": "e37cbe52127dc6e2a78c8201e8912bf02e638bcb1e30ec54a94fe5f495bc409c",
+    "success": false,
+    "inputs_unchanged": true,
+    "reason": "Missing reports/runs/host-1791804427914736400-32560/report.json"
+  }
+}

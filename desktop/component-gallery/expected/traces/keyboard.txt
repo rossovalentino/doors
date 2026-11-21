@@ -1,0 +1,101 @@
+> Tab into the window
+  say Basic input, list item, selected, 1 of 9
+> Tab
+  say Standard, button
+> Tab
+  say Accent, button
+> Tab
+  say Add item, button
+> Tab
+  say Hyperlink, link
+> Tab
+  say Bold, toggle button, not pressed
+> Tab
+  say Checked, toggle button, pressed
+> Tab
+  say Unchecked, check box, not checked
+> Tab
+  say Checked, check box, checked
+> Tab
+  say Indeterminate, check box, partially checked
+> Tab
+  say Picture, radio button, selected, 1 of 3
+> Tab
+  say Wi-Fi, toggle switch, Off
+> Tab
+  say Bluetooth, toggle switch, On
+> Tab
+  say Volume, slider, 40
+> Tab
+  say Basic input, list item, selected, 1 of 9
+> Space on Standard
+  notify Button Invoked
+  say Standard, button
+> Space on Wi-Fi
+  notify ToggleSwitch Toggled(true)
+  say Wi-Fi, toggle switch, On
+> Right, End on Volume
+  notify Slider ValueChanged(45000)
+  notify Slider ValueChanged(100000)
+  say Volume, slider, 45
+  say 100
+> Down on Background
+  notify RadioButtons SelectionChanged(Some(1))
+  say Solid color, radio button, selected, 2 of 3
+> Focus navigation
+> Down, Enter -> states
+  notify NavigationView Navigated(9)
+  say Control states, list item, non-selected, 2 of 9
+  say selected
+> Down, Enter -> text
+  notify NavigationView Navigated(2)
+  say Text and selection, list item, non-selected, 3 of 9
+  say selected
+> Down, Enter -> collections
+  notify NavigationView Navigated(3)
+  say Collections, list item, non-selected, 4 of 9
+  say selected
+> Down, Enter -> menus
+  notify NavigationView Navigated(4)
+  say Menus and toolbars, list item, non-selected, 5 of 9
+  say selected
+> Down, Enter -> status
+  notify NavigationView Navigated(5)
+  say Status and info, list item, non-selected, 6 of 9
+  say selected
+  say Update available, Restart to install the latest version.
+  say Saved, Your changes were saved.
+  say Low storage, Free up space to keep working.
+  say Connection lost, Check the network cable and try again.
+> Down, Enter -> layout
+  notify NavigationView Navigated(6)
+  say Layout, list item, non-selected, 7 of 9
+  say selected
+> Down, Enter -> dialogs
+  notify NavigationView Navigated(7)
+  say Dialogs, list item, non-selected, 8 of 9
+  say selected
+> Enter on Show dialog
+  notify Button Invoked
+  say Save your work?, dialog, File name, edit, Untitled.txt
+> Tab x4 inside the dialog
+  say Save, button
+  say Don't save, button
+  say Cancel, button
+  say File name, edit, Untitled.txt
+> Escape
+  notify ContentDialog Closed(0)
+  say Show dialog, button
+> Alt+E, Down, Escape, Escape
+  say menu bar, Edit, menu, Cut, menu item, 1 of 4, Ctrl+X
+  say Copy, menu item, 2 of 4, Ctrl+C
+  say Edit, menu item, collapsed, has pop-up, 2 of 4, Alt+E
+  say Show menu (or right-click anywhere), button
+> Menu key, Down, Enter
+  notify Button ContextRequested
+  notify MenuFlyout Command(21)
+  say Context, menu, Cut, menu item, 1 of 4, Ctrl+X
+  say Copy, menu item, 2 of 4, Ctrl+C
+  say Show menu (or right-click anywhere), button
+> Shift+Tab
+  say New, button

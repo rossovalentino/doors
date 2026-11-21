@@ -1,0 +1,13 @@
+[package]
+name = "door-windows-gui"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Portable, host-tested Win32 GUI semantics shared by the original user32/gdi32/comdlg32/comctl32"
+
+[dependencies]
+door-graphics-text = { path = "../../frameworks/text" }
+
+[lints]
+workspace = true

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="136" viewBox="0 0 200 136"><defs>
+<linearGradient id="metal" x2="0" y2="1"><stop stop-color="#e9eef4"/><stop offset=".48" stop-color="#adb7c4"/><stop offset=".52" stop-color="#7c8797"/><stop offset="1" stop-color="#dce3ec"/></linearGradient>
+<linearGradient id="edge" x2="0" y2="1"><stop stop-color="#465265"/><stop offset="1" stop-color="#131b29"/></linearGradient>
+
+
+
+
+<g id="wall"><image width="160" height="100" preserveAspectRatio="xMidYMid slice" href="../../wallpapers/windows/bloom-dark.png"/></g>
+</defs><ellipse cx="100" cy="122" rx="94" ry="5" fill="#58708b" opacity=".12"/><rect x="22" y="12" width="156" height="103" rx="6" fill="url(#edge)" stroke="#7d8a9c"/><svg x="27" y="17" width="146" height="91" viewBox="0 0 160 100"><use href="#wall"/></svg><circle cx="100" cy="14.5" r="1" fill="#b2bdcb"/><path d="M22 115H178L197 121V124Q192 128 181 128H19Q8 128 3 124V121Z" fill="url(#metal)" stroke="#8591a2" stroke-width=".7"/><path d="M79 116H121L118 120H82Z" fill="#99a5b5"/><path d="M5 122H195" stroke="white" stroke-opacity=".65"/></svg>

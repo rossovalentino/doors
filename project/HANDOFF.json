@@ -1,0 +1,2582 @@
+{
+  "p18_start_20261114": {
+    "date": "2026-11-14",
+    "workstream": "P17 gate deferred by the owner; one repository; P18 M0b/M0c/M0h started (sole session)",
+    "phase_status": "P15-P17 implemented and guest-tested, not gate-passed (attempt 19: disk full; attempt 20: host stage and 44 boot cases passed, stopped by the owner in the guest pool). P18 changes host-tested and linted on every target, not yet run in a guest",
+    "owner_decisions": [
+      "2026-11-14: stop the P17 gate and work on P18",
+      "2026-11-14: one repository at the Doors OS folder itself; the dv, p18 and door-os copies deleted; keep the folder light",
+      "2026-11-14: 4 guest workers and keep-going for gate runs"
+    ],
+    "repository": "C:\\Users\\win\\Desktop\\Doors OS (no frozen copy; build output in target/ and out/)",
+    "then": [
+      "P18: first guest run of the memory, SEH and loader paths on the P10-P17 Windows scenarios, then file mapping, UCRT, thread-pool timers, SMP scheduler, stack growth (docs/design/p18-plan-20261111.md, Progress)",
+      "the P17 gate when the owner asks again (keep 40 GB free)"
+    ]
+  },
+  "p17_pregate_20261113": {
+    "date": "2026-11-13",
+    "workstream": "Settings parity, P14-REGISTRY guest integration, kernel process table 32, pre-gate guest batch (sole session)",
+    "phase_status": "P15-P17 implemented, critic-reviewed and guest-tested; every scenario and suite of the P17 gate passed on the final pre-gate images; the gate is next",
+    "owner_decisions": [
+      "2026-11-13: kernel MAX_PROCESSES 13 -> 32 (other capacities still need approval)",
+      "2026-11-13: build the typed settings registry's guest integration before the gate (desktop-a-apps)"
+    ],
+    "gate_procedure": "as p15_p17_close_20261111.gate_procedure",
+    "then": [
+      "NoneDrive and the own-AI page (docs/design/settings-parity-26h2.md)",
+      "P18 (docs/design/p18-plan-20261111.md), M0 first"
+    ]
+  },
+  "p15_p17_close_20261111": {
+    "date": "2026-11-11",
+    "workstream": "P15-P17 close-out (sole session)",
+    "phase_status": "P12-P14 passed on the owner's attestation (ADR 0027); P15 selected, P16 and P17 in parallel; all three implemented, critic-reviewed and guest-tested; one cumulative verify --phase P17 closes them when the owner says",
+    "guest_regression": "images 10-12 in the frozen copy C:\\Users\\win\\Desktop\\Doors OS\\dv: every P15-P17 scenario, win32-gui-f1/f2/f3, desktop-files, terminal and explorer pass on the current fixes",
+    "gate_procedure": [
+      "clean dv/out (images, builds) and unreferenced dv/reports/runs; sync dv from door-os (scratchpad syncdv.ps1); edit nothing during the run",
+      "in dv: cargo xtask verify --phase P17",
+      "on success: write the bound check record (reports/critics/p17-critic.json: report SHA-256 and reviewed_build_inputs from its source snapshot), set P15, P16 and P17 passed with that report and record, active_phase P17, run cargo xtask check-spec in dv (P17 current, so the staleness check runs), then copy the run, the record and the ledger to door-os",
+      "then P18 (docs/design/p18-plan-20261111.md, M0 first)"
+    ],
+    "records": [
+      "reports/critics/p15-p17-critic-findings-20261111.md",
+      "docs/adr/0027-p12-p14-owner-attested-pass.md",
+      "docs/design/p18-plan-20261111.md"
+    ],
+    "open_evidence": "capture revoked while recording, firewall denial and device loss in the guest; INSTALL-A reboot while installed and inventory; guest negative elevation cases for the hand-off key and COM relay; a refused TLS handshake sends no alert (project/NEXT_STEPS.md)"
+  },  "p15_p17_20261111": {
+    "date": "2026-11-11",
+    "workstream": "P15, P16 and P17 (sole session)",
+    "phase_status": "P15, P16 and P17 in progress, implemented and not verified (parallel authorization with P12, 2 November 2026); formal gates wait for P12-P14",
+    "done_guest": [
+      "P15: p15-connect, p15-sound, p15-capture, p15-dsound, p15-midi, p15-wasapi, p15-vpn",
+      "P16: p16-cmd, p16-shell, p16-com, p16-comoop, p16-oleaut, p16-tsched, p16-scm (SCM-R under TCG), p16-install, p16-security, p16-accounts, p16-crypt, p16-trust, p16-paths",
+      "P17: p17-x86 (X86-A, X86-B), p17-wow64 (X86-C)"
+    ],
+    "records": {
+      "plans": [
+        "docs/design/p15-plan-20261101.md",
+        "docs/design/p16-plan-20261102.md",
+        "docs/design/p17-plan-20261109.md"
+      ],
+      "adrs": [
+        "docs/adr/0021-network-audio-and-media-foundation.md",
+        "docs/adr/0022-windows-installer-and-private-dlls.md",
+        "docs/adr/0023-wow64-32-bit-applications.md",
+        "docs/adr/0024-security-tokens-and-elevation.md",
+        "docs/adr/0025-com-transport-through-init.md",
+        "docs/adr/0026-service-control-manager-in-init.md"
+      ]
+    },
+    "pending": [
+      "owner decision: compatibility settings page (AppCompatFlags\\Layers value names are full paths; registry value names hold 48 units)",
+      "p15-desktop: Preview Ctrl+O path box (pre-existing failure)",
+      "one read-only critic per phase, then cargo xtask verify --phase P15/P16/P17 once P12-P14 pass",
+      "kernel capacity pass with the owner (processes, ports, handles, services)"
+    ],
+    "commands": {
+      "build": "cargo xtask build --profile desktop-qemu-x64",
+      "x86": "cargo xtask test p17-x86 --image <image.json>",
+      "wow64": "cargo xtask test p17-wow64 --image <image.json>",
+      "gate": "cargo xtask verify --phase P17"
+    },
+    "practice": "Build and run guests from a frozen copy of the tree; never edit sources the running build or guest uses."
+  },
+  "p15_20261103": {
+    "date": "2026-11-03",
+    "workstream": "P15",
+    "phase_status": "P15 in progress, not verified (parallel authorization with P12)",
+    "done_guest": [
+      "CONNECT-A 42/42 (p15-connect): ws2_32, iphlpapi, dnsapi, winhttp, wininet",
+      "SOUND-A 15/15 (p15-sound): winmm waveOut, PlaySound, MessageBeep, timers, mixed devices, underrun; tones verified in the wav capture"
+    ],
+    "done_host_side": [
+      "Phase P15/P16 schema, P15 commands and desktop scenarios; door-network protocol host tests",
+      "ADR 0021, requirements P15-*, plan segment 4"
+    ],
+    "pending": [
+      "capture: virtio-sound input, door.audio capture authority, Privacy > Microphone, waveIn",
+      "dsound; WASAPI after P16 COM",
+      "device loss and default-device change",
+      "VPN protocols: paused pending the owner"
+    ],
+    "commands": {
+      "build": "cargo xtask build --profile desktop-qemu-x64",
+      "sound": "cargo xtask test p15-sound --image <image.json>",
+      "connect": "cargo xtask test p15-connect --image <image.json>"
+    }
+  },
+  "p14_wsc_20261026": {
+    "date": "2026-10-26",
+    "workstream": "P14 WS-C",
+    "phase_status": "P14 in progress, not verified (parallel authorization with P12)",
+    "done_host_side": [
+      "P14 schema, six desktop suites, phase commands, records, ADR 0020, contract draft, plan",
+      "reference profile, design tokens, door mask, five-dimension harness, vis-01 runner",
+      "kernel entropy, Argon2id credential store, credential protocol/client, window-server gate, sec-02-trusted runner, gate driver in session launch"
+    ],
+    "pending": [
+      "register desktop-a-files and desktop-a-apps",
+      "storage provisioning of /state/credentials (WS-B)",
+      "remove bypassed lock handlers in desktop.rs (WS-A)",
+      "first guest runs of every suite",
+      "VIS-01 calibration and Start motion reference",
+      "record P13 passed on confirmed report id",
+      "re-pin lockfile_sha256 after the last Cargo.lock change"
+    ],
+    "records": {
+      "adr": "docs/adr/0020-complete-desktop-and-visual-fidelity.md",
+      "contract": "specs/contracts/desktop-shell-v1.md",
+      "plan": "docs/design/p14-plan-20261026.md"
+    }
+  },
+  "p13c_20261026": {
+    "date": "2026-10-26",
+    "workstream": "P13-C Win32 GUI fixtures, Windows reference, guest runners, gate and records",
+    "p12": "All P12 suites and scenarios passed individually; the last cumulative cargo xtask verify passed 435 checks with no failures before the session was interrupted; one final cargo xtask verify --phase P13 re-executes everything. Still in progress, not verified (no qualifying report).",
+    "p13": "in progress, not verified",
+    "changed": [
+      "tests/fixtures/windows-gui/selftest.c (F1): results file per mode, OFN_DONTADDTORECENT, full-path dialog hooks",
+      "tests/fixtures/windows-gui/editor.c (F2, new), editor.h/editor.rc (View > Custom chrome, Ctrl+K), hang.c (F3, new)",
+      "tests/fixtures/windows-gui/imports.json (import inventory) and reference.json (Windows reference results and metrics), both generated by cargo xtask build --profile windows-gui-reference",
+      "profiles/build/windows-x64.json: User32/Gdi32/ComDlg32/ComCtl32.Lib, rc.exe, rcdll.dll, cvtres.exe pinned with SHA-256",
+      "tools/xtask/src/windows/gui.rs (new): reproducible double build, import checks, inventory, read-only reference run",
+      "tools/xtask/src/windows/dlls.rs: GUI DLL names, bases, allowed imports, build_gui",
+      "tools/xtask/src/initfs.rs: with_files (add/replace entries in a packed initfs)",
+      "tools/xtask/src/session/mod.rs: stage_desktop_variant is pub(crate)",
+      "tools/xtask/src/evidence.rs: children start in the drive-letter form of the working directory (the Windows shell mishandles verbatim paths)",
+      "tools/xtask/src/desktop/win32.rs (new) and desktop.rs: the five P13 suites; scenarios.rs RUNNERS registers them",
+      "tools/xtask/src/main.rs: P13 phase commands and the windows-gui-reference command",
+      "specs/contracts/windows-gui-v1.md, docs/adr/0019-windows-gui-fixtures-and-guest-qualification.md",
+      "project/requirements.json, phases.json, STATUS.md, NEXT_STEPS.md, HANDOFF.json"
+    ],
+    "reference_run": {
+      "run": "host-1792952263026238500-16188",
+      "identity": "Microsoft Windows 11 Pro 10.0.26300 64-bit",
+      "outcome": "all nine fixture launches passed; self-tests repeated identically; binaries unchanged; run report flagged only because other workstreams changed sources during it",
+      "registry": "RecentDocs unchanged; ComDlg32 MRU lists changed despite OFN_DONTADDTORECENT (recorded, not restored)"
+    },
+    "inventory_counts": {
+      "kernel32.dll": 24,
+      "user32.dll": 80,
+      "gdi32.dll": 21,
+      "comdlg32.dll": 3,
+      "comctl32.dll": 1
+    },
+    "suites_registered": [
+      "win32-gui-f1",
+      "win32-gui-f2",
+      "win32-gui-f3",
+      "scenario-141-5",
+      "scenario-141-6"
+    ],
+    "gate_added": [
+      "cargo test --locked --package door-windows-gui",
+      "cargo test --locked --package door-pe-loader --test p13_application",
+      "cargo clippy --locked --package door-{user32,gdi32,comdlg32,comctl32} --features guest-pe --target x86_64-pc-windows-msvc -- -D warnings"
+    ],
+    "tests": {
+      "passed": "cargo clippy -p door-xtask --all-targets -D warnings and cargo test -p door-xtask (all passed) with a temporarily updated lock; cargo fmt -p door-xtask --check clean; cargo xtask verify --list --phase P13 lists all ten suites as registered",
+      "blocked": "--locked fails workspace-wide because P13-B added door-windows-gui-guest without updating Cargo.lock; cargo fmt --all --check fails only in compat/dlls/gdi32 (P13-B, in progress)",
+      "not_run": "QEMU guest suites (coordinator runs them after P13-A/P13-B land)"
+    },
+    "dependencies_for_guest_pass": [
+      "P13-A: application loader, GUI DLL loading from initfs windows/<name>.dll, kernel32 additions, p13_application test, Init termination of EXECUTE GUI children",
+      "P13-B: user32/gdi32/comdlg32/comctl32 as guest-pe cdylibs exporting the inventory",
+      "stage 2 WIN-LAUNCH: Terminal program execution with DOOR_CONSOLE-mirrored console, Explorer address-bar .exe launch through Init EXECUTE"
+    ]
+  },
+  "p12_gate_20261024": {
+    "date": "2026-10-24",
+    "workstream": "G gate and records",
+    "p12": "in progress, not verified",
+    "p13": "authorized in parallel, not pursued (owner: do P12 first); never selected by plain cargo xtask verify",
+    "changed": [
+      "tools/xtask/src/main.rs: P12 commands (guest clippy for door-ui, door-ui-native, door-accessibility, door-keyboard-layouts, door-locale, door-gallery, door-ime; host tests for door-ui, door-ui-native, door-accessibility, door-gallery, door-graphics-text, door-keyboard-layouts, door-ime incl. --test corpus, door-locale; door-window --lib text_input/clipboard/dnd); verify runs the P12 desktop scenarios before the acceptance suites; cargo xtask verify --list dry listing",
+      "tools/xtask/src/scenarios.rs: DESKTOP_SCENARIOS (18 existing desktop scenarios run in child runs, check p12-desktop-scenario), validate_desktop_scenarios, coverage test over desktop::*_test, acceptance requirements cross-checked against project/requirements.json; TEXT-01 adds P12-LAYOUTS, A11Y-01 adds P12-TEXT-SIZE, component-gallery adds P12-CONTROLS",
+      "tools/xtask/src/spec.rs: current P12/P13 reports must carry the desktop scenario evidence; P12 command test extended",
+      "project/requirements.json: p12_status_20261024; new P12-CONTROLS, P12-LAYOUTS, P12-TEXT-SIZE, P12-ASSETS; all 15 P12 records carry status implemented-unverified or missing",
+      "project/phases.json: P12 gate composition, P13 not pursued, p12_tasks states",
+      "project/STATUS.md, ROADMAP.md, RISKS.md, NEXT_STEPS.md: 24 October sections"
+    ],
+    "gate": {
+      "listing": "cargo xtask verify --list",
+      "desktop_scenarios": 18,
+      "acceptance_runner_registered": [
+        "component-gallery"
+      ],
+      "acceptance_runner_missing": [
+        "text-01",
+        "a11y-01 (being added)",
+        "display-01",
+        "motion-01"
+      ],
+      "first_failure_today": "check-spec: dependency lock changed (Cargo.lock vs specs/sources/dependencies.json, stream T); then the acceptance preflight"
+    },
+    "historical_evidence": "P00-P11 carry evidence_disposition unavailable_owner_confirmed (ADR 0017); spec tests cover acceptance for history and rejection for the selected phase and for P12 onward",
+    "requirements": {
+      "implemented_unverified": [
+        "P12-TOOLKIT",
+        "P12-CONTROLS",
+        "P12-GALLERY",
+        "P12-TEXT",
+        "P12-EDITOR",
+        "P12-LAYOUTS",
+        "P12-INPUT-IME",
+        "P12-DPI",
+        "P12-THEMES",
+        "P12-A11Y",
+        "P12-CLIPBOARD-DND",
+        "P12-ASSETS"
+      ],
+      "missing": [
+        "P12-TEXT-SIZE",
+        "P12-LOCALE",
+        "P12-TIMESTAMPS"
+      ]
+    },
+    "risks_added": [
+      "Notes saves over 4 KiB not atomic",
+      "MAX_PROCESSES 13 at its limit",
+      "japanese.dict 94% of the 32 MiB per-file limit",
+      "MAX_ARCHIVE 256 MiB is the UEFI allocation limit"
+    ],
+    "tests": {
+      "passed": "cargo test -p door-xtask --locked: 191 passed, 0 failed (2026-10-24)",
+      "not_run": "QEMU, cargo xtask build and cargo xtask verify (coordinator runs them)",
+      "observed_outside_g": "cargo clippy -p door-xtask --no-deps -D warnings fails in desktop/*.rs and session/native_display.rs; cargo clippy on door-abi fails (runtime/abi/src/graphics.rs manual_is_multiple_of); cargo fmt --check fails in other streams' xtask files. The owned gate files are clippy- and rustfmt-clean.",
+      "stray_run": "reports/runs/host-1792822727425854600-22204: an accidental \"verify --list\\\" invocation rejected as an unknown command (failed, kept as evidence; qualifies nothing)"
+    }
+  },
+  "p12_p13_gate_20261023": {
+    "date": "2026-10-23",
+    "workstream": "G gate and records",
+    "plan": "docs/design/p12-p13-plan-20261023.md",
+    "adr": "docs/adr/0017-historical-evidence-disposition.md",
+    "phases": {
+      "selected": "P12",
+      "parallel_authorized": [
+        "P13"
+      ],
+      "p12": "in_progress (partial, not_run)",
+      "p13": "in_progress (partial, not_run) under owner decision 6; cannot pass before P12"
+    },
+    "changed": [
+      "tools/xtask/src/phase.rs: Phase::P12 and Phase::P13",
+      "tools/xtask/src/spec.rs: testable validate_passed_phase, owner-confirmed evidence_disposition for P00-P11 only, parallel_authorization, active_phases/verification_phase, P12+ acceptance gate",
+      "tools/xtask/src/scenarios.rs: P12/P13 inherit all 42 guest scenarios; check IDs; ten declared acceptance suites with an empty runner registry that fails closed",
+      "tools/xtask/src/main.rs: verify --phase, acceptance preflight and execution, test ui|compat --suite, P12 phase_commands (door-app-ui, door-preview, door-monitor guest clippy)",
+      "tools/xtask/src/demo.rs: P12/P13 diagnostic demo titles (required by boot::verify and boot_gate)",
+      "tools/xtask/src/{persistence/tests.rs,storage/mod.rs}: negative phase assertion moved from P12 to P14",
+      "project/phases.json, project/requirements.json, project/baseline.json, project/{STATUS,NEXT_STEPS,ROADMAP,RISKS}.md, project/HANDOFF.json",
+      "docs/adr/0017-historical-evidence-disposition.md",
+      "AGENTS.md: dated owner-approved amendments (historical evidence; parallel P13)"
+    ],
+    "built": "Isolated gate harness only (target/gate-g-harness, ignored output); the integrated door-xtask crate does not compile while door-window is mid-migration to the W8 Scale type",
+    "executed": [
+      "gate harness: cargo test --offline (32 passed, 0 failed)",
+      "gate harness: cargo clippy --offline --all-targets -- -A dead_code (no warnings)",
+      "gate harness read-only probe on the real repository (no report, lease, build or guest run)",
+      "rustfmt --check on the edited gate files"
+    ],
+    "not_run": [
+      "cargo test -p door-xtask --locked and cargo build -p door-xtask --locked (blocked by door-window compile errors outside G ownership)",
+      "cargo xtask check-spec, verify, build and test (not run by instruction; owner QEMU session)"
+    ],
+    "verify_behavior_today": {
+      "cargo xtask verify": "selects P12; after doctor, check-spec currently stops at \"dependency lock changed\"; once the lock is re-pinned it stops before any build with \"P12 acceptance suite not implemented (5 of 5 declared)\" naming text-01, a11y-01, display-01, motion-01, component-gallery",
+      "cargo xtask verify --phase P13": "selects P13 (authorized parallel phase); same check-spec stop, then \"P13 acceptance suite not implemented (10 of 10 declared)\" adding win32-gui-f1/f2/f3, scenario-141-5, scenario-141-6",
+      "cargo xtask verify --phase P14": "after check-spec: refused as neither the selected nor an authorized parallel phase",
+      "cargo xtask test ui|compat --suite <name>": "fails before building with \"acceptance suite not implemented: ...\" for declared suites; unknown names list the declared suites",
+      "gate": "a current P12/P13 report without a bound passing check for every cumulative suite fails validate_phase_gate"
+    },
+    "historical_evidence": "P00-P11 reports absent (owner-deleted); evidence_disposition unavailable_owner_confirmed; original run IDs and critic files are identity only; nothing recreated",
+    "blockers": [
+      "Cargo.lock differs from specs/sources/dependencies.json (stream T dependency review)",
+      "door-window does not compile (W8 Scale migration in progress)",
+      "No acceptance suite runner registered yet"
+    ],
+    "phase_complete": false,
+    "baseline": "project/baseline.json required_paths: added ADR 0017; desktop/workspace/src/main.rs (removed by the W9 split) rebound to desktop/workspace/src/{files,notes,settings,terminal,search}_main.rs"
+  },
+  "multiwindow_apps_20261022": {
+    "status": "implementation_pending_native_validation_P12_partial",
+    "design": "docs/design/multiwindow-apps-20261022.md",
+    "master_audit": "docs/design/p11-p12-master-audit-20261022.md",
+    "scope": "Shared native per-window models; Explorer/Preview owned tab transfer after destination admission; independent app windows; Explorer-style document captions; tabbed Notes with undo/save guards and Markdown source toolbar; wallpaper-tinted native chrome; Preview crop and one-level image undo; twelve-process capacity and versioned telemetry",
+    "limits": {
+      "app_windows": 4,
+      "document_tabs": 8,
+      "processes": 12,
+      "sections": 32,
+      "window_owners": 8,
+      "window_total": 24,
+      "registered_and_captured_bytes": 201326592,
+      "preview_image_and_undo_bytes_per_window": 16777216
+    },
+    "native_image": null,
+    "evidence": {},
+    "phase_complete": false,
+    "user_goal_complete": false,
+    "historical_prerequisites_missing": [
+      "reports/runs/host-1791804427914736400-32560/report.json",
+      "reports/runs/host-1792303566097472600-17116/report.json"
+    ],
+    "owner_volume_used": false,
+    "limitations": [
+      "No exact1:1 qualification",
+      "Full Unicode/IME/accessibility/clipboard and dynamic/fractional DPI remain P12 gaps",
+      "Preview PDF/Office/playback/OCR and full editing providers unavailable",
+      "Monitor GPU/network/control providers unavailable",
+      "CMD/PowerShell/WSL engines unavailable",
+      "No sustained frame cadence/input-to-photon claim",
+      "Native admission/recovery/resource pressure and concurrent edit conflict qualification pending"
+    ]
+  },
+  "reference_apps_20261022": {
+    "status": "bounded_native_checkpoint_P12_partial",
+    "design": "docs/design/reference-apps-20261022.md",
+    "scope": "Monitor ten destinations plus CPU/Memory drilldowns; Preview reference tabs/toolbar/canvas/rail/filmstrip/information layout; native glyphs, measured text, matched paint/hit bounds, real bounded existing providers",
+    "owner_reference_index": "reports/runs/reference-apps-owner-20261022/index.json",
+    "development_image": "out/images/host-1792646238237329400-21896-desktop-dev/image.json",
+    "runtime_source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+    "evidence": {
+      "build": {
+        "report": "reports/runs/host-1792646238237329400-21896/report.json",
+        "sha256": "77b0e4021ce10d772b88bc524632ee3f04211bbb28ac482290b4fab53ea092c6",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 3
+      },
+      "full_host": {
+        "report": "reports/runs/host-1792645717405923900-29208/report.json",
+        "sha256": "f0269d86fe9ce952b0f3cb12d8b9d4e5499f97122df8527ed3bb5b92c12a7d9c",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      },
+      "captures": {
+        "report": "reports/runs/host-1792646345819545300-29844/report.json",
+        "sha256": "8443e16d9cbc71e0356f90279f0c72d1e481a53abdf4fa3e458556c9ff11f096",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 58
+      },
+      "monitor": {
+        "report": "reports/runs/host-1792645257563497100-10380/report.json",
+        "sha256": "c6dd34ce1a9ae794ef30f926c4e2256d9bc9e6af5bec78ebaf2d313cef4f2f2a",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 21
+      },
+      "preview": {
+        "report": "reports/runs/host-1792646365322138800-33104/report.json",
+        "sha256": "0e1bbebb0b2234c8798d6605c5848578dd178df009718bf74ecec8db99381e43",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 34
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792645459154832100-30028/report.json",
+        "sha256": "b0a42a1850c8aa1ee708b2b1387725247b3eab42aea65564fc65d8d7ff7596c0",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 9
+      },
+      "assets": {
+        "report": "reports/runs/host-1792646037420132000-17112/report.json",
+        "sha256": "87053efbc8485b95a89da6927a4c3d303cf0e5b51122d0c2519aba3e93f19b7b",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      }
+    },
+    "host_tests": {
+      "passed": 812,
+      "summaries": 40,
+      "nonzero": 34,
+      "zero": 6
+    },
+    "affected_host": {
+      "command": "cargo test --locked -p door-preview --all-targets",
+      "exit_code": 0,
+      "log": "target/reference-wrap-host.log",
+      "sha256": "1f7cd61c00ba9840e790af5dd852ca9d2f519222a39fd9490bde2068a5c98db2",
+      "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "passed": 16,
+      "summaries": [
+        15,
+        1
+      ],
+      "scope": "After the final two Preview paint-only fixes; overlaps the full812 suite and is not added to it"
+    },
+    "host_captures_report": "reports/runs/host-1792646345819545300-29844/report.json",
+    "native_selection": {
+      "boots": 6,
+      "monitor": 1,
+      "preview": 3,
+      "explorer": 2,
+      "scope": "Selected current suites; Monitor/Explorer run on the earlier image with identical executable/core payloads. Additional earlier reruns are not summed."
+    },
+    "source_bridge": {
+      "changed_paths": [
+        "desktop/preview/src/presentation.rs"
+      ],
+      "prior_monitor_explorer_source": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+      "full_host_assets_source": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+      "final_runtime_source": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "changed_executable": "door-preview",
+      "changed_initfs_payload": "bin/door-preview.elf",
+      "scope": "Only Preview presentation changes: text format disabled state, empty-pane wrapping, stacked Convert instruction overlap. Full host812 plus16 affected tests; current native Preview. Independent exact source/artifact review.",
+      "unchanged_artifacts": 22,
+      "total_artifacts": 23,
+      "unchanged_initfs_file_payloads": 19,
+      "total_initfs_file_payloads": 20
+    },
+    "review_receipt": "reports/runs/reference-apps-review-20261022/review.json",
+    "out_budget": {
+      "bytes": 9187571074,
+      "limit_bytes": 20000000000,
+      "within_budget": true,
+      "scope": "out only; target/reports excluded"
+    },
+    "owner_storage": "out/session/user.raw absent; not initialized",
+    "historical_gate_blocker": "Missing original reports/runs/host-1791804427914736400-32560/report.json; do not recreate historical evidence",
+    "limits": [
+      "Exact pixel equality and sustained60FPS/input latency are not established",
+      "Startup/network/GPU/control providers unavailable; logs are bounded session observations",
+      "Preview PDF/Office/media playback/OCR/recording/crop/markup/batch providers unavailable",
+      "Opaque themed client material, integer DPI and ASCII atlas remain; Unicode filenames use visible fallback",
+      "Terminal/Settings native workflows were not repeated in this revision; preserve their prior evidence",
+      "P12 partial; owner storage absent and historical P00 evidence missing"
+    ]
+  },
+  "preview_monitor_expansion_20261022": {
+    "status": "bounded_native_checkpoint_P12_partial",
+    "design": "docs/design/preview-monitor-expansion-20261022.md",
+    "scope": "Separate Preview/Monitor executables; shared native UI; six-app catalog; PNG/QOI/text new-file export and bounded format inspection; sanitized telemetry; Terminal opacity; Explorer alignment/tags/fitted initial bounds; service idle backoff and cached-move eligibility",
+    "bundle": [
+      "Explorer",
+      "Preview",
+      "Terminal",
+      "Settings",
+      "Monitor",
+      "Notes"
+    ],
+    "current_evidence": "Seven focused workflows passed across eleven private guest boots; development relink, not full phase qualification",
+    "evidence": {
+      "preview": {
+        "report": "reports/runs/host-1792623443701456900-33232/report.json",
+        "sha256": "a5ffe8b8e8723180b4388c9257af3f4dc25ef7004a7db0a9d2843ff05e860799",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 16
+      },
+      "monitor": {
+        "report": "reports/runs/host-1792624034785284200-31336/report.json",
+        "sha256": "545efb7ada22dbcf61879924e81fcebf61e826603300205cc5ce74ece88095a4",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 8
+      },
+      "motion": {
+        "report": "reports/runs/host-1792623343001520100-30932/report.json",
+        "sha256": "7bf46ce0c00669ce34c0fcdeac22f73898b58459f0c124f56d3b0f25272a9e54",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 19
+      },
+      "recovery": {
+        "report": "reports/runs/host-1792623604134590600-8972/report.json",
+        "sha256": "0c9b7675813caf960eb7b865de9cc6c0ba5f54274f508fed1570faf98121533a",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 7
+      },
+      "terminal": {
+        "report": "reports/runs/host-1792623707293393400-27460/report.json",
+        "sha256": "08a25c459ea5be1f86d73271ebb943b6c4143ffd1e4b579e1f212203f0b2e7c0",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 19
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792623866730823500-13324/report.json",
+        "sha256": "336783e242e03df63c729ea69aeb6e0f3aea9bbff58aae9a0c4a7ecd74a32393",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 9
+      },
+      "settings": {
+        "report": "reports/runs/host-1792623943934333500-24036/report.json",
+        "sha256": "7d67b942f4bcdbe2bdae22c3e6a6962d03608a0ea1be5368f858fe8b35131138",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 15
+      }
+    },
+    "host_checks": [
+      {
+        "scope": "full_before_final_deltas",
+        "passed": 797,
+        "executables": 40,
+        "log": "target/preview-monitor-host-current.log",
+        "sha256": "0a8b07cb98e33462d5a4e371a8eb64c4ff179c2c7a979bf422da3f5e1ff5b3b1"
+      },
+      {
+        "scope": "window_service_delta",
+        "passed": 47,
+        "executables": 2,
+        "log": "target/window-idle-host.log",
+        "sha256": "5445ca6891aeafa44a1b5f6f1fa4f3d07c48dc527e28771b584448bfa48c822a"
+      },
+      {
+        "scope": "workspace_window_harness_delta",
+        "passed": 327,
+        "executables": 7,
+        "log": "target/explorer-fit-host2.log",
+        "sha256": "bd39a5c3f0fbddf3b7a58f55697d49ff9516c0d1783c0d6de6830c43a8acf3af",
+        "doc_test_phases": 2
+      },
+      {
+        "scope": "geometry_delta",
+        "passed": 2,
+        "executables": null,
+        "log": "target/explorer-fit-geometry.log",
+        "sha256": "c7d4bfbcd1b468d6fa2aeb1ae008fb0789fa0d6b73411b0e6961ad9506e56743"
+      },
+      {
+        "scope": "harness_delta",
+        "passed": 29,
+        "executables": 1,
+        "log": "target/final-harness-host.log",
+        "sha256": "3aa2d14312f575e898b73469a1e607ee412aef6851885e875bd8018ac3872b6e"
+      }
+    ],
+    "host_count_note": "Delta counts overlap the earlier full suite; do not sum them as unique tests.",
+    "build": {
+      "report": "reports/runs/host-1792623233102212300-12916/report.json",
+      "sha256": "4a3d9845c52144f064bbe4cac93b25a1470e94f4893b623b88005bcefe6bed18",
+      "source_sha256": "54ecd9d2b214bb5492de9f4d554a5026e03566eefdda8394ab9c2e1f9c19dc92",
+      "image": "out/images/host-1792623233102212300-12916-desktop-dev/image.json",
+      "test_image": "out/images/host-1792623233102212300-12916-desktop-test/image.json",
+      "development_relink": true,
+      "phase_qualification": false,
+      "independent_base": "reports/runs/host-1792619937184232000-24708/report.json",
+      "base_scope": "Independent build graph passed; its combined workflow failed Monitor activation before later repairs. Keep the failed report."
+    },
+    "source_bridge": {
+      "native_source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+      "after_build": [
+        "desktop/workspace/src/explorer_layout.rs: cfg(test) endpoint contract only",
+        "tools/xtask/src/desktop/resolution.rs: contained gestures and explicit canonical pixel-reuse requirement only"
+      ],
+      "final_documentation": "Coordinated documentation-only changes after native runs; critic receipt binds final snapshot."
+    },
+    "motion": {
+      "report": "reports/runs/host-1792623343001520100-30932/report.json",
+      "native_output": [
+        3840,
+        2160
+      ],
+      "backend": "WHPX/RAMFB CPU copy",
+      "drag_frames": 88,
+      "mean_paint_work_ms": 20.113636363636363,
+      "maximum_paint_work_ms": 30,
+      "translated_pixels": 4888512,
+      "client_recaptures": 0,
+      "tick_millis": 10,
+      "fps_claim": false,
+      "matched_speedup_claim": false,
+      "scope": "Paced QMP, coarse elapsed paint scopes; no visible SDL/input latency/vblank or sustained60FPS proof"
+    },
+    "idle": {
+      "report": "reports/runs/host-1792624034785284200-31336/report.json",
+      "busy_observations": 1,
+      "total_observations": 401,
+      "scope": "Coarse timer observations, not CPU-time or performance speedup"
+    },
+    "dependencies": "Three local packages door-app-ui, door-preview, door-monitor; no new external versions",
+    "remaining": [
+      "Exact reference fidelity and all requested functionality",
+      "Preview source editing/merge/undo and broader PDF/Office/media/3D/OCR/archive providers",
+      "Creation/modification timestamps and authors with clock/schema/migration",
+      "Full Terminal settings and actual CMD/PowerShell/WSL engines",
+      "Native large-image heap/reconnect and reply-loss/configure-during-export fault injection",
+      "Recycle Bin and robust restore; multi-instance/multiwindow and launch handoff",
+      "Full Unicode/IME, fractional DPI, visible SDL quality, measured input latency and sustained60FPS",
+      "Monitor GPU/network/startup/logs and authorized process/service controls"
+    ],
+    "process_limit": 8,
+    "maximum_concurrent_ordinary_gui_apps": 3,
+    "installed_apps": 6,
+    "private_guest_boots": 11,
+    "owner_disk_used": false,
+    "owner_volume_present": false,
+    "out_limit_bytes": 20000000000,
+    "out_accounting": {
+      "bytes": 6038176889,
+      "report": "reports/runs/host-1792624034785284200-31336/report.json",
+      "scope": "out only; target and reports excluded"
+    },
+    "cumulative_gate": "Original P00 report reports/runs/host-1791804427914736400-32560/report.json absent after owner cleanup; do not reconstruct history or close P12.",
+    "critic": "reports/runs/preview-expansion-review-20261022/review.json",
+    "gate_attempts": {
+      "check_spec": {
+        "report": "reports/runs/host-1792624233390723900-14720/report.json",
+        "sha256": "120029e0eeb399f82ba4a869b66c39a605a30b44ecac636c4a3ee2ccd8717bf2",
+        "success": false,
+        "inputs_unchanged": true,
+        "failure": "reports/runs/host-1791804427914736400-32560/report.json: The system cannot find the path specified. (os error 3)"
+      },
+      "assets": {
+        "report": "reports/runs/host-1792624264319260600-30368/report.json",
+        "sha256": "a3cc3edfa77cabcdf3a13dd1860b3ab016c31f8243a0f38c16e0dff6ffd5b588",
+        "success": true,
+        "inputs_unchanged": true,
+        "failure": null
+      },
+      "verify": {
+        "report": "reports/runs/host-1792624386895948500-16972/report.json",
+        "sha256": "0ea9fece5ce9b0a7e51d89d67a90a87b046a9a4ad2b51db70c23c03df1eda61d",
+        "success": false,
+        "inputs_unchanged": true,
+        "failure": "reports/runs/host-1791804427914736400-32560/report.json: The system cannot find the path specified. (os error 3)"
+      }
+    },
+    "preview_limits": {
+      "encoded_input_bytes": 6291456,
+      "text_input_bytes": 16384,
+      "image_pixels": 1048576,
+      "decoded_image_admission_bytes": 16777216,
+      "heap_bytes": 100663296,
+      "native_large_image_pressure_qualified": false
+    }
+  },
+  "current_app_fidelity_audit_20261022": {
+    "status": "bounded_fixes_validated_P12_partial",
+    "design": "docs/design/current-app-fidelity-audit-20261022.md",
+    "scope": "Terminal application theme, measured label alignment, hover/cursor routing, checked command completion and installed Windows icon; Settings four-app integration; existing Explorer regression and stricter retirement validation",
+    "host_suite": {
+      "passed": 762,
+      "executables": 36,
+      "log": "target/current-app-audit-host-final.log",
+      "sha256": "053105732fee36f562c2740bb1af41ba119fba102d240b3fc085bd494b455ce4",
+      "later_harness_only_change": "Explorer now requires canonical per-boot retirement; 5 existing shutdown validator tests passed separately"
+    },
+    "evidence": {
+      "settings": {
+        "report": "reports/runs/host-1792610572224355700-12140/report.json",
+        "sha256": "fbb7e3cd6abb13d642c5ff033ae2558acb6d89b463b61b76730316c3806264a2",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 16
+      },
+      "terminal": {
+        "report": "reports/runs/host-1792610679121708300-22728/report.json",
+        "sha256": "3a103f04295f58ab4a3a94c5100173bc183facc3ba0f00f623ce0b4d41cab12b",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 19
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792611027387645200-32312/report.json",
+        "sha256": "fd3bf1fda77edb557a5851d8dc8f0aedcb59036a4726a6c1cc5aaf898f6a1193",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "d20c229e3f824d51088b288e4a3b6308331ad535b16510c05f4d6a1fc5a51058",
+        "checks": 9
+      },
+      "assets": {
+        "report": "reports/runs/host-1792610846718714300-20748/report.json",
+        "sha256": "1d6add503109ce003b6c445e5dff1a42d2dab324e23cc022995c625fffb9aeb7",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 0
+      },
+      "cumulative_verify": {
+        "report": "reports/runs/host-1792610948804522400-32680/report.json",
+        "sha256": "a2a9f49bc4ae994484b0acb62652e361e3f4907fe59b34840a21fc69925050e6",
+        "success": false,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 2
+      }
+    },
+    "common_guest_image": "out/images/host-1792610572224355700-12140-desktop-dev/image.json",
+    "native_scope": "Five private guest boots, 29 actual scanout captures, theme probes, registry/file/preferences/tags disk audits; checked development relink, qualification=false",
+    "source_bridge": "Settings/Terminal/assets share 5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8; Explorer d20c229e3f824d51088b288e4a3b6308331ad535b16510c05f4d6a1fc5a51058 differs only in the stricter host fixture, not guest sources or assets",
+    "critic": "reports/runs/current-app-fidelity-review-20261022/review.json",
+    "live_reference": "Installed dark Explorer observed through Computer Use; Settings launch exposed no targetable window; Terminal reference uses official Microsoft documentation because skill excludes terminal app automation",
+    "installed_terminal_icon": {
+      "path": "assets/icons/windows/terminal-current.ico",
+      "sha256": "af7211c63e587adc88053873aa42937c73ed5601bc347aa0b8d57977654dd59d",
+      "source": "Eight original authored frames from installed Windows Terminal 1.24.12741.0; no master-only override"
+    },
+    "settings_installed_apps": "Shared inventory of four actual bundled apps; Terminal target313 explicitly launches catalog command9",
+    "redirect_completion": "Checked redirect is part of completion; failure emits ok=0 and never retries an uncertain write",
+    "workspace_load_headroom_bytes": 159744,
+    "out_bytes": 2126879360,
+    "out_limit_bytes": 20000000000,
+    "cumulative_blocker": "Original P00 report reports/runs/host-1791804427914736400-32560/report.json is absent after owner cleanup; history not reconstructed",
+    "additional_dependencies": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "full_windows_backend_parity": false,
+    "phase_closed": false
+  },
+  "evidence_availability_20261022": {
+    "date": "2026-10-22",
+    "status": "owner_deleted_reports_runs_during_cleanup",
+    "owner_confirmed": true,
+    "recovery_requested": false,
+    "historical_report_links": "missing; preserved historical claims/identities are not reconstructed or requalified",
+    "new_evidence_policy": "compact current tests/captures only; existing owner volumes untouched"
+  },
+  "explorer_revision_20261022": {
+    "status": "implemented_bounded_native_diagnostic_passed_final_shared_run_pending",
+    "design": "docs/design/explorer-modern.md",
+    "references": "docs/references/explorer-20261022/sources.json",
+    "actual_icons": "HaydenReeve/WindowsIcons commit9442e3ef014520d4337409a24be10b970a36d66b; installedEdgePDF; pinnedSegoeFluent glyphs",
+    "layout": "40DIPintegratedtabs,roundednavigation,fullcommandbar,190DIPrail,centered208DIPheroes,sixcolumnsat2048",
+    "behavior": "relevantformatpreview,object-checkedmetadata/rename/deletion,usercreateddurabletags,tabstates,scrolledrail/pane,actualfoldercontentsicons",
+    "native_diagnostic": "reports/runs/host-1792606069303592400-11016/report.json",
+    "native_diagnostic_report_sha256": "91d91b76ba6f479461ae7c0c023951ac67f6312c6c6fb1c1423ac06a1da28d81",
+    "native_behavior_check": "explorer-modern-native passed; two boots, object26 preserved, exact rawdisk tag/payload audit, leaked0 each",
+    "aggregate_report_status": "failed source stability from concurrent other app source/docs; Explorer guest sources unchanged",
+    "private_volume_used": true,
+    "owner_volume_used": false,
+    "full_windows_backend_parity": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "phase_closed": false,
+    "remaining": "final stable common image/test;critic; clipboard/checked cross-directory transfer/share/trash/recursive-size/timestamps/PDF/Office/media/3D providers; fractional scaling, fullUnicode and exact LCD subpixel raster parity",
+    "native_diagnostic_evidence_available": false,
+    "evidence_loss": "Owner confirmed deletion duringcleanup; earlier diagnostic facts observed but artifacts absent. Compact final rerun pending.",
+    "host_tests": 757,
+    "host_executables": 36,
+    "host_log": "target/explorer-all-host.log; exit0",
+    "critic": "reports/critics/p12-explorer-modern-critic.json; final narrow bounds fix verified in focused host tests"
+  },
+  "terminal_native_preview_20261022": {
+    "status": "native_preview_diagnostic_passed_final_shared_validation_pending",
+    "design": "docs/design/terminal-native-preview.md",
+    "native_engine": "bounded native file commands",
+    "frame": "existing trusted Window server integrated56DIP caption",
+    "material": "cached trusted selected-wallpaper blur",
+    "fonts": "pinned Segoe UI and Cascadia Mono",
+    "icons": "pinned WindowsIcons, Segoe Fluent and owner-approved official profile artwork",
+    "cmd": "runtime_required",
+    "powershell": "runtime_required",
+    "wsl": "work_in_progress",
+    "full_command_compatibility": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "host_tests": 756,
+    "native_report": "removed_by_owner_cleanup_current_regeneration_pending",
+    "native_checks": 12,
+    "native_boots": 2,
+    "source_stable": false,
+    "owner_volume_used": false,
+    "verify": "reports/runs/host-1792606052917956000-23184/report.json;dependency review lock mismatch",
+    "phase_closed": false
+  },
+  "settings_reference_20261022": {
+    "status": "visual_refinement_native_validation_pending",
+    "pages": 6,
+    "design": "docs/design/advanced-settings.md",
+    "references": "docs/references/advanced-settings-20261022/sources.json",
+    "original_device_frames": true,
+    "device_screen_art": "Pinned Windows classic Bloom, light and dark,18 lossless density/form/theme variants",
+    "theme_selection": "Actual View palette dark value; no manual per-device wallpaper toggle",
+    "device_selection": "Validated OEM ACPI profile2 laptop,8 tablet, otherwise neutral monitor",
+    "typography": "Pinned hinted Segoe UI,8 cached styles including regular16/semibold16",
+    "shadows": "Existing finite Gaussian cached coverage, no per-frame blur",
+    "disk_inventory": "Authenticated read-only GPT extents and device capabilities",
+    "host_preview": "reports/runs/host-1792605680207877200-4824/report.json",
+    "diagnostic_native": "reports/runs/host-1792603189607660900-11340/report.json",
+    "diagnostic_checks": 18,
+    "native_source_stability": false,
+    "verify": "reports/runs/host-1792604089881300400-6712/report.json; failed dependency review lock mismatch",
+    "full_windows_functionality": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "phase_closed": false
+  },
+  "advanced_settings_20261021": {
+    "status": "implemented_partial_validation_pending",
+    "design": "docs/design/advanced-settings.md",
+    "pages": 16,
+    "total_surfaces": 33,
+    "native_mutation": "version-checked typed registry edits and explicit path creation",
+    "other_available": "endpoint discovery, launch environment and identity snapshots, local object metadata, explicit diagnostics, existing durable desktop preferences",
+    "full_windows_functionality": false,
+    "missing_providers": "devices/drivers, disks/partitions, networking, service control, environment management, boot policy, group policy, event logs, scheduling, accounts/groups, ACL/sharing, metrics, power, backup",
+    "review_findings_fixed": 4,
+    "phase_closed": false
+  },
+  "native_viewer_title_gestures": {
+    "status": "accepted_bounded",
+    "design": "docs/design/native-viewer-title-gestures.md",
+    "critic": "reports/critics/p12-native-viewer-title-critic.json",
+    "critic_sha256": "e94b89a5844a58eff7dce2959930fceeadeeef521142f5407f6fb531a9be539d",
+    "tested_source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+    "source_files": 2176,
+    "host_tests": 701,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792591251813159200-20208/report.json",
+    "desktop_report": "reports/runs/host-1792591397538206500-4716/report.json",
+    "desktop_checks": 265,
+    "desktop_sessions": 10,
+    "motion_report": "reports/runs/host-1792592768657718900-23532/report.json",
+    "motion_checks": 19,
+    "retained_report": "reports/runs/host-1792592950790636300-22216/report.json",
+    "drag_frames": 136,
+    "drag_paths": [
+      136,
+      0,
+      0,
+      0
+    ],
+    "compose_ticks": 141,
+    "transfer_ticks": 65,
+    "tick_ms": 10,
+    "mean_elapsed_paint_scope_ms": 15.147058823529411,
+    "maximum_ms": 30,
+    "fps_qualified": false,
+    "visible_sdl_quality": "unqualified",
+    "fractional_scale": "open",
+    "automatic_mode": [
+      2560,
+      1600
+    ],
+    "actual_integer_scale": 2,
+    "owner_volume_used": false,
+    "new_packages_or_unsafe": false,
+    "actual_artifacts": 21,
+    "unchanged_artifacts": 19,
+    "phase_closed": false,
+    "cumulative_verify": "Legacy8GB reservation stops beforetests atout16893274320B,under20GBcap;originalmissingP00report32560",
+    "owner_concepts": "docs/design/unified-apps-owner-concepts.md",
+    "next": "Settings Advanced with real administration providers, then Explorer/Preview/Terminal/Monitor; existing Snap/Search/trash/performance work remains open"
+  },
+  "cached_move_composition": {
+    "status": "accepted_bounded",
+    "design": "docs/design/cached-window-shadows.md",
+    "critic": "reports/critics/p12-cached-move-critic.json",
+    "critic_sha256": "c585591abeb1937de6930ba08ce81fd859f4b4d0f4edd6d7af3f9942afc24f76",
+    "tested_source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+    "host_tests": 693,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792584182484269500-18476/report.json",
+    "desktop_report": "reports/runs/host-1792584328840936600-16756/report.json",
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "motion_report": "reports/runs/host-1792585335870637000-5768/report.json",
+    "motion_checks": 19,
+    "retained_report": "reports/runs/host-1792585469473964700-23656/report.json",
+    "drag_paint_scopes": 137,
+    "drag_paths": [
+      136,
+      0,
+      0,
+      1
+    ],
+    "compose_ticks": 133,
+    "transfer_ticks": 75,
+    "tick_millis": 10,
+    "mean_elapsed_drag_scope_ms": 15.182481751824817,
+    "maximum_drag_scope_ms": 30,
+    "measurement": "Monotonic elapsed including scheduling/input; one extra taskbar paint compared with136scene baseline; not pure CPU, FPS or input latency",
+    "actual_artifacts": 21,
+    "unchanged_artifacts": 19,
+    "changed_artifacts": [
+      "Window",
+      "Workspace"
+    ],
+    "new_packages_or_unsafe": false,
+    "documents_source": "assets/icons/windows/documents-current.source.json",
+    "fps_qualified": false,
+    "phase_closed": false,
+    "cumulative_verify": "Legacy8GB admission reserve fails before tests atout16892989473B; below20GB retention cap. Original missing P00 report32560 still blocks check-spec.",
+    "next": "Native host display/DPI and truthful scale controls, modern Explorer tabs/header/columns and selection, drag-to-restore/Snap, Search presentation and shared hover; then durable trash and real app providers. P12 remains partial."
+  },
+  "motion_measurement": {
+    "status": "accepted_bounded",
+    "design": "docs/design/motion-measurement.md",
+    "critic": "reports/critics/p12-motion-measurement-critic.json",
+    "critic_sha256": "682d0fed3345b9ac842dff582c7978047b27de40e7df0fd19db67ffb042d1b32",
+    "tested_source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+    "host_tests": 684,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792580358816014400-22272/report.json",
+    "desktop_report": "reports/runs/host-1792579067070844800-12664/report.json",
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "motion_report": "reports/runs/host-1792580220114666900-13752/report.json",
+    "motion_checks": 19,
+    "motion_drag_paints": 136,
+    "motion_drag_compose_ticks": 303,
+    "motion_drag_transfer_ticks": 66,
+    "clock_resolution_ms": 10,
+    "mean_drag_elapsed_ms": 27.13235294117647,
+    "measurement": "Monotonic elapsed returned paint scopes; not pure CPU time or input latency",
+    "retained_report": "reports/runs/host-1792580479064519200-19836/report.json",
+    "guest_changed": [
+      "Window only;20/21 actual artifacts unchanged"
+    ],
+    "unsafe_or_new_dependencies": false,
+    "fps_qualified": false,
+    "phase_closed": false,
+    "cumulative_verify": "Blocked before execution by legacy8GB reserve at16,892,906,266B out; original missing P00 also unresolved",
+    "new_owner_reference": "reports/runs/user-reference-20261021-display-snap/index.json",
+    "followup": "docs/design/display-and-snap-followup.md",
+    "next": "Composition profiling/optimization, native host display and scale, Documents artwork, drag-to-restore/Snap and remaining Explorer/trash/providers"
+  },
+  "desktop_first_run": {
+    "status": "accepted_bounded",
+    "design": "docs/build/desktop-first-run.md",
+    "critic": "reports/critics/p12-first-run-critic.json",
+    "critic_sha256": "e09d829f7ee50e20a09c188e56186bb2928b4ca6309fca554e637b3645ffd458",
+    "tested_source": "e48c2d806f9dfb721fcdcd06ba28d06f28697d50f59bdc63115dd6e3c59f7187",
+    "host_tests": 674,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792576596573475700-10848/report.json",
+    "default_report": "reports/runs/host-1792576447590346000-7548/report.json",
+    "software_report": "reports/runs/host-1792576528479420000-15136/report.json",
+    "retained_report": "reports/runs/host-1792576720130797300-26392/report.json",
+    "initializer_report": "reports/runs/host-1792576816945398800-12436/report.json",
+    "owner_volume": "out/session/user.raw; created NEW explicitly; mutable owner data, never a test fixture",
+    "owner_initial_bytes": 134217728,
+    "initialization_reserve_bytes": 335544320,
+    "interactive_layout": "retained v2 after valid DesktopOptions parsing",
+    "guest_changed": false,
+    "phase_closed": false,
+    "next": "All-frame motion timing and scanout overhead, remaining modern Explorer and real trash/providers"
+  },
+  "control_row_alignment": {
+    "status": "accepted_bounded",
+    "design": "docs/design/control-row-alignment.md",
+    "critic": "reports/critics/p12-control-alignment-critic.json",
+    "critic_sha256": "4d6ad6ba2c28502fd1f945c846213e6e42c0e6cb2b8f713f82be4932fc91d8c8",
+    "guest_source_sha256": "d40843fde9aff7f29b0c3a51ca254b3368e9f5c55b972b178cc07d1366a1e9fb",
+    "final_host_source_sha256": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+    "host_report": "reports/runs/host-1792575398772802800-24816/report.json",
+    "desktop_report": "reports/runs/host-1792571769273006100-24104/report.json",
+    "retained_report": "reports/runs/host-1792575514788093600-10952/report.json",
+    "host_tests": 668,
+    "host_executables": 34,
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "standalone_consumer_checks_each": {
+      "notes": 39,
+      "files": 19,
+      "remove": 15
+    },
+    "standalone_boots": 12,
+    "new_packages_or_unsafe": false,
+    "new_icons": [
+      "Explorer Home",
+      "txt Notepad file association"
+    ],
+    "other_filetypes": "open",
+    "host_abort_cause": "unresolved; preserve two failed reports and passed diagnostics",
+    "phase_closed": false,
+    "next": "Safe first-run owner-volume initialization, measured motion, modern Explorer and durable trash/providers"
+  },
+  "owner_detail_followup": {
+    "status": "open",
+    "design": "docs/design/windows-detail-followup.md",
+    "user_reference_index": "reports/runs/user-reference-20261021-alignment/index.json",
+    "external_drive_offer": "D: USB NTFS Backup; identified read-only, no files relocated",
+    "computer_use": "Stopped again by physical Escape; no more host UI this turn",
+    "phase_closed": false
+  },
+  "desktop_output_layout_migration": {
+    "status": "accepted_bounded",
+    "design": "docs/build/output-layout-v2.md",
+    "critic": "reports/critics/p12-output-layout-v2-critic.json",
+    "critic_sha256": "f76b17c65fbb9656f2e66faf0ba5e0d7a4c49143ff238b1efdd92e9d6c2d68ed",
+    "tested_source_sha256": "aa1e6789d41cedb70e6cc7bf5c38d3f49c7ac6fb287c3ce0bf5c8a9336042b6e",
+    "desktop_report": "reports/runs/host-1792565964145546900-15756/report.json",
+    "scope": "exact test desktop-current; short new builds/images/qemu retained with their run",
+    "out_limit_bytes": 20000000000,
+    "legacy_admission_reserve_bytes": 8000000000,
+    "v2_metadata_reserve_bytes": 134217728,
+    "historical_receipts_unchanged": true,
+    "phase_closed": false
+  },
+  "storage_transport_recovery": {
+    "status": "accepted_bounded",
+    "design": "docs/design/storage-connection-recovery.md",
+    "critic": "reports/critics/p12-storage-connect-critic.json",
+    "critic_sha256": "e65a6ff56f9cc105e16d3647e1b1859d92104116ccf8aab999a53f29f4b3357b",
+    "tested_source_sha256": "021b83a6619bac9b37703c910a8c09a04bfebb3eb8df62103e01225110aeb9c7",
+    "host_report": "reports/runs/host-1792561439334369300-21252/report.json",
+    "desktop_report": "reports/runs/host-1792561538750199300-21160/report.json",
+    "foundation_report": "reports/runs/host-1792562620715950700-17280/report.json",
+    "sdk_report": "reports/runs/host-1792561159414076200-24192/report.json",
+    "native_gui_fault_injection_qualified": false,
+    "phase_closed": false,
+    "next": "Versioned output retention, then measured 4K motion and P12 toolkit/providers"
+  },
+  "generated_output_policy": {
+    "scope": "out only",
+    "limit_bytes": 20000000000,
+    "target_and_reports_excluded": true,
+    "status": "accepted_bounded",
+    "critic": "reports/critics/p12-output-budget-critic.json",
+    "critic_sha256": "e66ed0f6a36dcdd310e804336b037bf2ab84957a3962479bb7407d6d57874e31",
+    "qualification_source": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+    "phase_closed": false,
+    "design": "docs/build/output-storage.md",
+    "availability": "reports/artifacts/p12-output-availability.json"
+  },
+  "schema_version": 1,
+  "project": "door-os",
+  "specification": "DOOR_OS_MASTER_SPECIFICATION.md",
+  "specification_sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37",
+  "repository_revision": null,
+  "active_phase": "P12",
+  "active_phases": [
+    "P12",
+    "P13"
+  ],
+  "phase_status": "in_progress",
+  "last_closed_phase": {
+    "id": "P11",
+    "evidence_report": "reports/runs/host-1792303566097472600-17116/report.json",
+    "sha256": "b3550258872aae95b17dd2437a9bdc34c961cadd436d8abd0f4fb9f48ade8c01",
+    "critic": "reports/critics/p11-critic.json",
+    "critic_sha256": "39760278143a188704a16cfae18adc0a9e791966d93b2d13dda69f8eff34754a"
+  },
+  "historical_bounded_checkpoint": {
+    "id": "P10",
+    "evidence_report": "reports/runs/host-1792214999674635300-12500/report.json",
+    "sha256": "e8d8ce9cc07e83c3d5bde11385d5f8be3bc970ef35e52741cfe42b127d1eaa3d",
+    "critic": "reports/critics/p10-critic.json",
+    "critic_sha256": "9f49c413d6284d8966f8e7dc465d6331c6a691f0b18405d16bc24774e273b100",
+    "closure_report": "reports/runs/host-1792215673318322000-24424/report.json"
+  },
+  "integration_checkpoint": {
+    "coverage": "P00-P11 plus ordinary text and native desktop workflows",
+    "status": "passed",
+    "evidence_report": "reports/runs/host-1792303566097472600-17116/report.json"
+  },
+  "authorized_through": "P17",
+  "contract_paths": [
+    "specs/contracts/ordinary-session-v1.md",
+    "specs/abi/windows-base-p10.md",
+    "specs/abi/windows-io-waits-p10.md",
+    "specs/abi/windows-x64-p09.md",
+    "specs/abi/native-platform-v1.md",
+    "specs/contracts/storage-filesystems-v1.md",
+    "specs/contracts/native-window-v1.md",
+    "docs/adr/0017-historical-evidence-disposition.md",
+    "docs/design/p12-p13-plan-20261023.md"
+  ],
+  "commands_executed": [
+    "cargo test/clippy for affected host/native targets",
+    "target/p11-host/release/door-xtask.exe verify (passed, unchanged inputs)"
+  ],
+  "tests_passed": [
+    "408 workspace host tests; strict target checks",
+    "42 diagnostic guest scenarios; both interactive regressions",
+    "87 ordinary shell and18BASIC checks, actual reboot and raw disk audits",
+    "Two matching16-artifact core builds; five desktop application rebuild pairs",
+    "Three native desktop boots, hostile buffers/owners/lifecycle, cursor pixels and history paths",
+    "Server restart preserves unsaved text; hung-client broker termination",
+    "394 current input and375 evidence hashes independently accepted; zero unresolved findings"
+  ],
+  "tests_failed": [
+    "Earlier development runs exposing input routing, binary text expansion, canonical input, journal capacity, safe NoSpace handling and runner boot-directory collision are preserved; fixes pass final cumulative run",
+    "Earlier runs invalidated by input changes remain retained and are not qualification evidence"
+  ],
+  "tests_blocked": [
+    "cargo xtask check-spec stops at the dependency lock until stream T re-pins specs/sources/dependencies.json",
+    "Integrated door-xtask tests wait for door-window to compile (W8 Scale migration)",
+    "P12/P13 verify stops with \"acceptance suite not implemented\" until every declared suite has a registered runner",
+    "P00-P11 reports are owner-confirmed unavailable (ADR 0017); never recreate them under their original IDs"
+  ],
+  "tests_not_run": [
+    "P12 cumulative verify (fails before any build while four acceptance runners are missing; coordinator schedules guest runs); P13 verify not pursued",
+    "P14-P15 gates",
+    "Windows 11 pixel/motion/accessibility fidelity",
+    "Broad Windows GUI EXE corpus and physical hardware"
+  ],
+  "evidence_paths": [
+    "reports/runs/host-1792303566097472600-17116/report.json",
+    "reports/critics/p11-critic.json"
+  ],
+  "previous_phase_evidence": "phases.json preserves the P00-P11 original run IDs and critic files with the owner-confirmed evidence_disposition of ADR 0017; the reports are unavailable and are not recreated; current claims rest on the cumulative P12/P13 verify",
+  "supported_limits": "Experimental text OS: one production vCPU, capability-provisioned UID, 32MiB development filesystem/128 inodes/256 catalog nodes/about4MiB per file, bounded process/IPC/startup data; inherited scoped Windows runtime; Tiny Basic ASCII/four files/384KiB heap",
+  "next_action": "P12 first: stream T re-pins the dependency lock; register the a11y-01, text-01, display-01 and motion-01 runners and stage the gallery binaries; implement text size, localization and timestamps; then a frozen-tree cargo xtask verify (P12) and critic. P13 is authorized but not pursued. See cargo xtask verify --list.",
+  "visible_demo": {
+    "state": "previous demo stopped externally; no new visible demo launched yet",
+    "pid": 12220,
+    "report": "reports/runs/host-1792462123274959000-19036/report.json",
+    "session": "out/native-desktop.json",
+    "image": "out/images/host-1792459665384889400-18720-desktop/image.json",
+    "scope": "Windowed1280x720 native development desktop; Enter admits passwordless user session; no app autostart",
+    "stop_command": "Guest Start > Shut down after sign-in; QEMU Ctrl+Alt+G releases capture.",
+    "screenshot": "out/qemu/host-1792462123274959000-19036-session-1792462123293108000/shell.png"
+  },
+  "product_readiness": {
+    "classification": "qualified_experimental_text_profile",
+    "usable_text_profile": true,
+    "general_purpose_usable": false,
+    "third_party_source_ports_qualified": 1,
+    "stock_windows_applications_qualified": 0,
+    "audit": "docs/audits/p01-p10-readiness.md",
+    "application_trials": "docs/testing/application-trials.md",
+    "observation": "Real ordinary persistent session, file management, generic unprivileged native/PE launch and Tiny Basic source port have integrated guest evidence.",
+    "phase_pass_interpretation": "Measured experimental profile; no broad Windows/desktop/physical-hardware or zero-defect claim"
+  },
+  "output_cleanup": {
+    "receipt": "out/cleanup-summary.json",
+    "raw_images_compressed": 522,
+    "raw_image_bytes_recovered": 69195264000,
+    "cache_deletion": "blocked by automatic approval review; no files deleted",
+    "owner_disk": "excluded from cleanup",
+    "build_cache": "NTFS compression completed successfully; output directories inherit compression",
+    "additional_cache_bytes_recovered": 4657643520,
+    "total_bytes_recovered": 73852907520,
+    "latest_deletion_attempt": {
+      "operation": "requested output deletion",
+      "outcome": "blocked",
+      "reason": "automatic approval review rejected native PowerShell deletion as blocked by policy",
+      "files_deleted": 0,
+      "candidate_files": 54365,
+      "candidate_logical_bytes": 64775849126,
+      "protected_output_units": 410,
+      "reference_json_files": 839,
+      "plan": "out/cleanup-plan.json",
+      "owner_disk_untouched": true
+    }
+  },
+  "visual_reference": {
+    "document": "docs/design/windows11-reference.md",
+    "status": "primary sources researched; Windows shell capture baseline not acquired",
+    "figma": "https://www.figma.com/community/file/1440832812269040007/windows-ui-kit",
+    "gallery_commit": "71b5f04d3f7e3d02f91dc0d86d4d92d6d31c719b",
+    "winui_commit": "ba3a8d59e6de4e2b86ca4f61c78bc26ccf129afd",
+    "gallery_sdk": "2.5.4-experimental; not a Windows shell fidelity baseline",
+    "implementation_phase": "P11 qualified for declared native profile; Windows fidelity unqualified",
+    "current_public_target": "Windows 11 26H2 build26300.9711, KB5127648, 2026-10-13; checked2026-10-18; no captured VM baseline"
+  },
+  "development_checkpoint": {
+    "scope": "Owner-requested GUI foundations; P12 remains partial",
+    "focused_report": "reports/runs/host-1792460182885722800-13360/report.json",
+    "sha256": "13913fe88db67bc1e849fa8f15f8721156349e2c52882d1fb7ee4d9368ec5fd6",
+    "backgrounds": 4,
+    "themes": 6,
+    "pages": 15,
+    "cumulative_status": "Current13360 passed178 unchanged GUI checks after category/history/narrow/focus repairs; earlier integrated7072 passed273 before these UI refinements; P12 partial, historical P11 unchanged.",
+    "owner_disk": "out/session/user.raw",
+    "owner_disk_preserved": true,
+    "focused_checks": 178,
+    "default_launch": "windowed1280x720, no automatic fullscreen",
+    "selection": "single click selects, bounded double-click opens; no forced 4K/monitor mode",
+    "responsiveness": "input during capture and scanout; partial caption and48/96-row bar; bounded QMP cursor samples, no FPS/worst-case guarantee",
+    "dpi": "implemented4K200%native rendering; other modes96DPI; dynamic changes unavailable",
+    "pending_owner_work": [
+      "taskbar positions/alignment",
+      "desktop/taskbar contextual menus, marquee/drop",
+      "complete per-page Settings reference/behavior coverage",
+      "motion/performance and dynamic/fractional DPI qualification"
+    ],
+    "current_batch": [
+      "owner Door SVG/BGRA/PNG/ICO",
+      "centered labels",
+      "RTC UTC/tray/calendar",
+      "live app palettes",
+      "capture pool/recycling",
+      "native4K200% and64px CUR",
+      "trusted passwordless sign-in",
+      "searchable Start grid/list",
+      "caption hover/press/release cancellation",
+      "bounded overlay transfer and opaque fill",
+      "Doors frontend names and actual caption glyphs",
+      "reference Search/taskbar/bell shared geometry",
+      "generation-checked session desktops",
+      "work-area keyboard/edge Snap",
+      "revision-cached previews and held MRU Alt+Tab",
+      "foreign close denial before native gesture mutation",
+      "dual-Alt aggregate release regression",
+      "complete Overview CPU scanout readiness and exact PPM/PNG evidence",
+      "literal target-theme swatches independent of active palette",
+      "shared Personalization gallery paint/hit/scroll bounds without Colors overlap",
+      "reference-derived15-surface Settings catalog and native row symbols",
+      "readable Display values and detail search",
+      "filled sign-in/local-account avatar",
+      "Explorer history positions and collapsed group/navigation targets",
+      "Win+A/N and exact owner/session/workspace return focus",
+      "outside right-click delivery and disabled flyout KeepOpen",
+      "13 physical focus gestures and26 independent note-byte audits"
+    ],
+    "focused_resolution_report": "reports/runs/host-1792440070123858000-19104/report.json",
+    "focused_wide_report": "reports/runs/host-1792427768349700200-9020/report.json",
+    "pre_batch_integrated_report": "reports/runs/host-1792429783856367900-17884/report.json",
+    "audit": "docs/audits/p11-desktop-progress.md",
+    "integrated_report": "reports/runs/host-1792436289607278800-7072/report.json",
+    "integrated_sha256": "0a1e244f1e30c73dfab379a415f0304a279f5fe2182e3c2a5711487e9a9e1c60",
+    "focused_resolution_sha256": "e877d6344ef776c2fdefb8a1d776427f405f2a89f93b810566e37ef160c2c450",
+    "independent_build": "reports/runs/host-1792459665384889400-18720/desktop-build.json",
+    "critic": "reports/critics/p12-category-refinement-critic.json",
+    "owner_disk_sha256_before_demo": "ca3c032cda7e5a064434a0a17e6a8ce6f47310bd787a02d9857e7418e41f1d7f",
+    "affected_host_tests": 169,
+    "retained_evidence_limit": "7644 passed sparse checks but its4K AltTab capture was incomplete; superseded by19104 and3092; retained unchanged.",
+    "previous_gui_report": "reports/runs/host-1792442174995919700-18536/report.json",
+    "native_theme_resolution_report": "reports/runs/host-1792441624194881400-20900/report.json",
+    "critic_sha256": "eba39b5b95cc9507622845dbf745c74d1cde04fbea2c71d093b61a2dba98b7d3",
+    "critic_status": "accepted bounded development; no unresolved actionable findings",
+    "spec_check": "reports/runs/host-1792461171629836700-21420/report.json",
+    "independent_build_sha256": "9fc842edba734d7e8c4eddf15ce1f4de854a3b0887f2ea78870e270f7ca5a950",
+    "build_snapshot_delta": [
+      "tools/xtask/src/desktop/scene.rs: host fixture desktop-click corrected from clock boundary720 to desktop710"
+    ],
+    "focus_gestures": 13,
+    "focus_disk_byte_audits": 26
+  },
+  "category_refinement": {
+    "state": "guest_tested_critic_accepted_bounded_development",
+    "prior_full_gui_report": "reports/runs/host-1792456429619837100-21112/report.json",
+    "prior_checks": 167,
+    "host_tests": 169,
+    "pages": 15,
+    "reference_inventory": "docs/references/settings-pages/sources.json",
+    "critic_findings_repaired": [
+      "History dropdown preserves forward visits",
+      "Narrow Display keeps actual values visible"
+    ],
+    "scope": "P12 remains partial; historical P11 acceptance preserved; P14 fidelity unqualified",
+    "final_report": "reports/runs/host-1792460182885722800-13360/report.json",
+    "final_sha256": "13913fe88db67bc1e849fa8f15f8721156349e2c52882d1fb7ee4d9368ec5fd6",
+    "final_checks": 178,
+    "focus_gestures": 13,
+    "note_byte_audits": 26,
+    "critic": "reports/critics/p12-category-refinement-critic.json",
+    "critic_sha256": "eba39b5b95cc9507622845dbf745c74d1cde04fbea2c71d093b61a2dba98b7d3"
+  },
+  "responsiveness_refinement": {
+    "state": "covered_by_current_bounded_rendering_guest_and_critic",
+    "affected_host_tests": 179,
+    "scope": "P12 partial; no new phase qualification",
+    "changes": [
+      "exact trusted snapshot difference damage",
+      "regional scene composition with pre-overlay cache",
+      "contiguous bounded scanout and32KiB input servicing",
+      "cursor presentation before compose",
+      "QHD/4K native200%",
+      "Explorer Windows aliases and bounded editable addresses"
+    ],
+    "paths_document": "docs/design/windows-paths.md",
+    "owner_disk": "out/session/user.raw",
+    "owner_disk_excluded_from_tests": true,
+    "current_report": "reports/runs/host-1792521201711588300-25240/report.json"
+  },
+  "desktop_controls": {
+    "state": "covered_by_current_bounded_rendering_guest_and_critic",
+    "design": "docs/design/desktop-controls.md",
+    "reference_inventory": "docs/references/desktop-shell/sources.json",
+    "settings_pages": 17,
+    "default_bits": 48,
+    "persistence": "per-user HKCU64 DesktopControls DWORD; existing journal format",
+    "supported": [
+      "four edges",
+      "start/center alignment",
+      "compact size",
+      "inline context actions preference",
+      "Properties ordering",
+      "read-only object Properties",
+      "Customize menu Settings routing"
+    ],
+    "unsupported": [
+      "auto-hide",
+      "per-monitor taskbars",
+      "never-combine labels",
+      "full Windows context providers"
+    ],
+    "owner_disk_excluded_from_tests": true,
+    "current_report": "reports/runs/host-1792521201711588300-25240/report.json"
+  },
+  "current_rendering_batch": {
+    "state": "guest_tested_critic_reviewed_bounded_development",
+    "design": "docs/design/rendering-responsiveness.md",
+    "density": "96/192/288DPI;QHD200%;4K300%",
+    "owner_expansion": "Installed Windows11 build26200.9711 inspected;35-family inventory and command indexes acquired. Core apps remain partial. Desktop control stopped on owner Escape.",
+    "qualification": "Bounded P12 development; no phase closure,1:1 or FPS claim",
+    "inventory": "project/windows-app-inventory.json",
+    "product_build": "reports/runs/host-1792518976867677100-15932/desktop-build.json",
+    "combined_report": "reports/runs/host-1792521201711588300-25240/report.json",
+    "combined_sha256": "5450fc6ef3fdb4fec82fd1df004f9be75a117e2015c0a7c6dc7f33c0a1a61172",
+    "combined_checks": 242,
+    "host_report": "reports/runs/host-1792521218487727200-15540/report.json",
+    "host_tests": 519,
+    "resolution_report": "reports/runs/host-1792520856571892400-23560/report.json",
+    "resolution_checks": 52,
+    "accelerated_development_report": "reports/runs/host-1792519129016593900-24108/report.json",
+    "accelerated_checks": 14,
+    "native_smp_report": "reports/runs/host-1792517930372207700-26016/report.json",
+    "native_smp_cases": 15,
+    "asset_report": "reports/runs/host-1792518256488161100-25664/report.json",
+    "cumulative_gate": "failed_missing_historical_P00_report",
+    "cumulative_report": "reports/runs/host-1792517986061230500-22956/report.json",
+    "source_binding": "15932 guest inputs/artifacts unchanged; final test snapshot1065b9a has five explicit host-only deltas. Later documentation is not an identical-whole-source claim.",
+    "owner_disk_excluded_from_tests": true,
+    "remaining": [
+      "Real checked Files mutations and shared toolkit",
+      "Core app and command implementations",
+      "Full P12/P13/P14/P15 prerequisites and gates"
+    ],
+    "critic": "reports/critics/p12-rendering-responsiveness-critic.json",
+    "critic_sha256": "1345bf33648c3205f123f018d0d3c9e4b6cd73d12fd144dd1ab1ff4b293ab20b"
+  },
+  "current_file_mutation_batch": {
+    "state": "guest_tested_critic_reviewed_bounded_development",
+    "design": "docs/design/files-mutations.md",
+    "operation": "same-parent checked rename",
+    "wire_opcode": "0x200f",
+    "wire_bytes": 128,
+    "affected_host_tests": 104,
+    "full_host_tests": 531,
+    "native_foundation_scenarios": 42,
+    "native_tests": [
+      "desktop-files",
+      "desktop-files-accelerated",
+      "files-sdk",
+      "test boot --through P11",
+      "desktop-recovery",
+      "combined desktop"
+    ],
+    "evidence": [
+      {
+        "report": "reports/runs/host-1792524945754259600-13324/report.json",
+        "sha256": "63fa62d055ab31998f210111fce4427cb1a160847dc2f23e4ead67820d5d5fa2",
+        "result": "Passed unchanged;7 checks;31 product refs independently rehashed."
+      },
+      {
+        "report": "reports/runs/host-1792524945754259600-13324/desktop-build.json",
+        "sha256": "8d057981118dc91332cafb2b7ac13faa0fcc815d9cb55aa73f61e617abc38d34",
+        "result": "Five independent application pairs."
+      },
+      {
+        "report": "reports/runs/host-1792524945731516700-4824/report.json",
+        "sha256": "c8f7768244de1a9f82e6dba0800b34a421f12a907732c73e8dfcc3810883bc09",
+        "result": "Passed unchanged;531 tests/33 executables independently counted;logs match."
+      },
+      {
+        "report": "reports/runs/host-1792523990852207500-21108/report.json",
+        "sha256": "f9525d5a14eeee01d27839f68502f80291d94289d15b06bbcdef1276e0714e9d",
+        "result": "Passed unchanged;19 checks;1xTCG;2boots."
+      },
+      {
+        "report": "reports/runs/host-1792523990903138900-16640/report.json",
+        "sha256": "47e0b300d44e57bcaf090e6cb3ad086f41a8cca2658e45fbc358bb387f49e4cc",
+        "result": "Passed unchanged;19 checks;4K3xWHPX/RAMFB;2boots."
+      },
+      {
+        "report": "reports/runs/host-1792524027514902100-19056/report.json",
+        "sha256": "e64af664db721834e946d001ec7dadef8c9120f01674d205ffad59962ea9c2aa",
+        "result": "Passed unchanged;242checks;472refs rehashed;9clean native sessions."
+      },
+      {
+        "report": "reports/runs/host-1792525116311615100-23568/report.json",
+        "sha256": "97c8e5e18ab55c6a55f19fb7606e33c7709c60e68384a2b2889c6dd62a47cd04",
+        "result": "Passed unchanged;4current-test-image recovery checks;zero leaks."
+      },
+      {
+        "report": "reports/runs/host-1792525250421265300-17776/report.json",
+        "sha256": "3a71d1f8ed6475a08f8a331d025a630590080fd96a919cb373943a47fd72479d",
+        "result": "Explicit SDK exercise passed unchanged."
+      },
+      {
+        "report": "reports/runs/host-1792525253967430700-17776/report.json",
+        "sha256": "cf86ed994f0c469f956effaab4a80f0d4207759aaa6666d597fa11cf5ba3a668",
+        "result": "SDK child passed unchanged;28refs rehashed;retired manifest5/uid1001/pid11/exit71;debugexit33;zero leaks."
+      },
+      {
+        "report": "reports/runs/host-1792524945730431400-8952/report.json",
+        "sha256": "7fe05fc6ddfdd24dd7b0ce51ffe7a24aa7c85c8b732423226dd532a2c2cf2678",
+        "result": "Fresh foundation passed unchanged."
+      },
+      {
+        "report": "reports/runs/host-1792524945730431400-8952/boot-suite.json",
+        "sha256": "d272691926479125e1eb54e3d7b4b065981efa86c0977fe1d9a753365878b811",
+        "result": "42expected outcomes matched;665refs rehashed;both original demos passed."
+      }
+    ],
+    "source_binding": {
+      "current_executable_snapshot": "6a2186673ea0e2da07dd843b054b9d19c2edc09f6a77fc86c935092b672ad6dc",
+      "gui_snapshot": "2f75f8a8b1b59d4366437edd0ec59aedb33c9058093374c4a20306e3c0803f9e",
+      "changed_files": [
+        "tests/fixtures/native-workload/src/main.rs",
+        "tools/xtask/src/main.rs",
+        "tools/xtask/src/services/audit.rs",
+        "tools/xtask/src/services/demo.rs",
+        "tools/xtask/src/services/scenarios.rs"
+      ],
+      "bridge": "All five application pairs and production firmware/kernel/initfs byte-identical between full builds16368 and13324; fresh changed-test-image recovery passed.",
+      "production_initfs_sha256": "7117756ad6b3a543ec1aadc64a421899336e6ca820c398da2e1a09faebd49522",
+      "post_test_changes": "Coordinated documentation/source-ledger overlays only."
+    },
+    "critic": "reports/critics/p12-files-rename-critic.json",
+    "critic_sha256": "fc30a9c03017a7ce89c61efad10591235b1f38786b590a3330b6584561a6d09c",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "remaining": [
+      "Copy/move/trash/restore and known-folder relocation",
+      "Shared P12 text, focus, controls, clipboard and accessibility",
+      "Core applications and complete shell command engines",
+      "P13/P14/P15 prerequisites and full gates"
+    ],
+    "owner_disk_excluded_from_tests": true
+  },
+  "current_rpc_latency_batch": {
+    "state": "guest_tested_critic_reviewed_bounded_development",
+    "design": "docs/design/rpc-responsiveness.md",
+    "calls": 128,
+    "tick_millis": 10,
+    "before_ticks": 128,
+    "after_ticks": 32,
+    "cooperative_turns": 8,
+    "baseline": "out/qemu/host-1792525481462118000-8952/data-after.raw",
+    "baseline_sha256": "5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d",
+    "evidence": [
+      {
+        "report": "reports/runs/host-1792526544009417500-10340/report.json",
+        "sha256": "bace1b12b34042def07662590e20cba355e327998f9e59d198199c28c5ccf94f",
+        "result": "Baseline core build"
+      },
+      {
+        "report": "reports/runs/host-1792526591845892300-13872/report.json",
+        "sha256": "c3f8113954481827b36c8f5e4bd8ae0f807b5447b399554a73f578509092b7c5",
+        "result": "Baseline 128 ticks"
+      },
+      {
+        "report": "reports/runs/host-1792526595350418800-13872/report.json",
+        "sha256": "d772ba477aeab2b4c13078ebb5e39eef3abb848271ed22edb235afeefa725b30",
+        "result": "Authenticated baseline child"
+      },
+      {
+        "report": "reports/runs/host-1792526718288789500-1944/report.json",
+        "sha256": "6c00748626115c4d7d2744dbc45fe7e3a4294909e2dd6da44e048bdac295f8e1",
+        "result": "Candidate core build"
+      },
+      {
+        "report": "reports/runs/host-1792526765174846600-11240/report.json",
+        "sha256": "77045af1b011394424b77e62d5c4f2d81002fd3af0056ce8038ef4ad45aa123e",
+        "result": "Initial candidate 32 ticks"
+      },
+      {
+        "report": "reports/runs/host-1792526768686136500-11240/report.json",
+        "sha256": "2d024ede536a7026ad5ab5df0218b041105f023ef9bf5b4ba0cfd87838fd8083",
+        "result": "Authenticated candidate child"
+      },
+      {
+        "report": "reports/runs/host-1792527438356981800-14616/report.json",
+        "sha256": "802d3685b09d90af2ab19d972caf15f16cab81bd6671f8114dee352438c228cf",
+        "result": "Final canonical SDK validation 32 ticks"
+      },
+      {
+        "report": "reports/runs/host-1792527442032093400-14616/report.json",
+        "sha256": "49c9cd6aea43122e671e966eb914836b181c54f02ad68cb53a38a66f3058ee64",
+        "result": "Final authenticated SDK child"
+      },
+      {
+        "report": "reports/runs/host-1792526934388014000-20232/report.json",
+        "sha256": "d1107ef4246cdfbac18011a41cf1256c06e70a48cbf5cb845fb4a46a377a92a4",
+        "result": "537 host tests / 33 executables"
+      },
+      {
+        "report": "reports/runs/host-1792526934366402500-25776/report.json",
+        "sha256": "cd7fa0d3abc12cb2d1869d0abdedd95e2543c9f0d633c6d5161bb2c2c1089513",
+        "result": "Complete desktop build / 5 independent pairs"
+      },
+      {
+        "report": "reports/runs/host-1792526934366402500-25776/desktop-build.json",
+        "sha256": "6af7872bec81c3ac9eb8d3077e2a4543cc5be7140fde6b45c5b7eaaf1ce770ea",
+        "result": "Production initfs 4b51bc20dd9e902d50d6322142542e893298b3e52a1f0bd5f51e03e9ad9395c9"
+      },
+      {
+        "report": "reports/runs/host-1792527296439482100-25876/report.json",
+        "sha256": "d6cf31eef36c3c043429a1bec8f309b8f22d2c3a45bd7369e918b8533e08d7f7",
+        "result": "15 checks 4K WHPX/RAMFB"
+      },
+      {
+        "report": "reports/runs/host-1792526934366269000-25320/report.json",
+        "sha256": "25671aa4252064675a70764198b8e99ef498be9fbd2a3b9b9e3ae00d7f665ef8",
+        "result": "Full foundation"
+      },
+      {
+        "report": "reports/runs/host-1792526934366269000-25320/boot-suite.json",
+        "sha256": "c82bde7c8656bbd2979fd1e9f51aeb563d5df1360b8987e33cb93f4650749a51",
+        "result": "42 expected native outcomes"
+      },
+      {
+        "report": "reports/runs/host-1792527296462985500-5396/report.json",
+        "sha256": "6230a2d65c78c1560d2967df0f893bfa32347a55eb8dcf7a0f9ec7f0a6889d8d",
+        "result": "242 combined desktop checks / 9 clean sessions"
+      },
+      {
+        "report": "reports/runs/host-1792527989649022200-23484/report.json",
+        "sha256": "89a9105d3542219ca0d536628d5c79cdb32c3c0be3aa0b5eab0b273a56e9c863",
+        "result": "19 Files checks 1x / two boots"
+      },
+      {
+        "report": "reports/runs/host-1792527989649650100-18228/report.json",
+        "sha256": "156047dc000ebaa028e798f3149f7d8201d3a71d73d8bcf33644c5d5421e64c6",
+        "result": "19 Files checks 3x / two boots"
+      }
+    ],
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "owner_disk_used": false,
+    "critic": "reports/critics/p12-rpc-latency-critic.json",
+    "critic_sha256": "c7725ddba7dd1b5ca626cd67d2c30e858c4438c215dfe1ce80938d28903bdf3d",
+    "source_binding": {
+      "baseline": "e3bb378aaaed480c0888b50bf6b6a15e74df3150573d1a16264d063d05acf841",
+      "initial_candidate": "9541016a5d197465f96f263c9e0f363f29ce353219010ce9a819f14b6fd6c526",
+      "final_tested": "207417f574ec4cff520638986045c05a3e24916c5affff8bbc008253df36081a",
+      "assessment": "Only guest-code delta baseline to candidate is frameworks/service-client/src/rpc.rs; subsequent host validation/docs/metadata preserve measured guest code."
+    },
+    "regression": {
+      "host_tests": 537,
+      "host_executables": 33,
+      "foundation_outcomes": {
+        "Passed": 27,
+        "KernelPanic": 6,
+        "Interrupted": 5,
+        "StartupFailure": 2,
+        "GuestFailure": 1,
+        "Timeout": 1
+      },
+      "foundation_refs_rehashed": 676,
+      "negative_outcomes_retained": true,
+      "smp": "Actual 2/4CPU and degraded mode with32TLB rounds each.",
+      "legacy_persistence": "Complete independent byte comparisons confirm saved/reopen/restart/final equality, corrupt refusal equality and only declared CRC bit difference.",
+      "standard_console": "Original six commands; checkpoint4/theme1 to2/catalog57 to58/sourceversion23; exact-byte whitelist.",
+      "combined_refs": 472,
+      "combined_native_sessions": 9,
+      "diagnostic_budget": {
+        "bytes": 16384,
+        "reserve": 512,
+        "first_boot_bytes": 13016,
+        "first_slow_samples": 16,
+        "reboot_bytes": 3710,
+        "reboot_slow_samples": 10
+      },
+      "files": "Both 19-check/two-boot GUI runs preserve object26/inode17/generation1 and content;68 unique references each rehashed clean.",
+      "files_final_disk_sha256": "1450af4660f67d50358c7e1494d9d748f7795fee7307b0a0fcaff99dc404ef92"
+    }
+  },
+  "latest_cumulative_attempt": {
+    "inputs_unchanged": true,
+    "report": "reports/runs/host-1792531162128827000-17756/report.json",
+    "reason": "Original P00 report remains missing; gate unchanged",
+    "success": false
+  },
+  "current_typography_batch": {
+    "state": "bounded_cache_selection_accepted",
+    "design": "docs/design/typography-cache.md",
+    "production_font": "Pinned hinted Segoe UI Variable caches selected at1x/2x/3x",
+    "host_graphics_text_tests": 17,
+    "densities": [
+      1,
+      2,
+      3
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "preview": "reports/runs/host-1792529118202742200-12152/report.json",
+    "lockfile_sha256": "be08f0d974fc662c0f5b6183b7de9d895eae913ab703958ccc2267c03e0c1271",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "owner_desktop_control": "Stopped on owner Escape; no further host UI control",
+    "owner_disk_used": false,
+    "static_native_baseline": {
+      "build": "reports/runs/host-1792529441653657000-24892/report.json",
+      "native": "reports/runs/host-1792529632331881200-1440/report.json",
+      "scale": 3,
+      "compositor_ticks": 5,
+      "app_ticks": [
+        4,
+        4,
+        4
+      ],
+      "tick_millis": 10,
+      "coverage_bytes": 1689057,
+      "coverage_capacity_bytes": 4423680,
+      "memory_scope": "Coverage only; excludes metadata/kerning/mapped input/other heap",
+      "source": "485f2c79d99d03edf56eefd865d160ed4fffd744a2249a414286b03f1974e519"
+    },
+    "tested_source": "1d64490e3e0a73b38eecb64fc6eee765369f8253dea6f31e48cefd37a5b883bc",
+    "candidate_native": {
+      "coverage_capacity_bytes": 1673001,
+      "scope": "Four isolated constructor samples; no elapsed ticks is not zero runtime, whole-app latency or FPS; coverage vector only",
+      "elapsed_ticks": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "tick_millis": 10,
+      "scale": 3,
+      "coverage_bytes": 1673001,
+      "native": "reports/runs/host-1792530064717529100-26524/report.json",
+      "build": "reports/runs/host-1792529966980920800-21808/report.json"
+    },
+    "reports": [
+      {
+        "result": "Complete independent desktop build",
+        "sha256": "d02d8e603c4a82e1e618a3af4d118d92122c1dcd8ff929ca6d0e54083acf43d3",
+        "report": "reports/runs/host-1792529966980920800-21808/report.json"
+      },
+      {
+        "result": "542 host tests /33 executables",
+        "sha256": "0f1dea202b5a76613d11b1e6fb89228d86ee843754d78e787788e708c8e2a707",
+        "report": "reports/runs/host-1792529966980855400-19452/report.json"
+      },
+      {
+        "result": "15 native4K WHPX/RAMFB checks",
+        "sha256": "628f18fed4be59f1f38659f87e0b0fc964b6aa77fd267a4468245c9ccee74960",
+        "report": "reports/runs/host-1792530064717529100-26524/report.json"
+      },
+      {
+        "result": "Asset recomputation",
+        "sha256": "c7825c9d87b6295da9ba29d060b998edcae33a8c082ee0c350c340de40db9a63",
+        "report": "reports/runs/host-1792530070310517100-24648/report.json"
+      },
+      {
+        "result": "242 desktop checks /nine native sessions",
+        "sha256": "75eef050b1d01a3bbdf9f06f5d098baa9ab40a77fdaaa1451747f7d354807f32",
+        "report": "reports/runs/host-1792530193327656700-19868/report.json"
+      },
+      {
+        "result": "19 Files1x checks /two boots",
+        "sha256": "2fc83492ecd9b730abee0625493da187b6575f767a8c101afcce21dc9784f6b3",
+        "report": "reports/runs/host-1792530193367747200-19064/report.json"
+      },
+      {
+        "result": "19 Files3x checks /two boots",
+        "sha256": "2ee4011218bce5332079c29d13fbf0753fbe96511435890f6a46d230b35c15e3",
+        "report": "reports/runs/host-1792530193282351300-24464/report.json"
+      },
+      {
+        "result": "42 expected foundation outcomes",
+        "sha256": "fcde27bb3858a1871fc6b7722cb139d0276e0d7fe4bb137efc692fcc95cafabc",
+        "report": "reports/runs/host-1792530193406807400-24756/report.json"
+      }
+    ],
+    "critic": "reports/critics/p12-typography-cache-critic.json",
+    "critic_sha256": "836cbdff53a15ecaabae354a238fb522f6975c97be0ef66a5a5a6a936f0ac0cd",
+    "review_scope": "Finite independent code/evidence review; no phase closure or full Windows/ClearType equivalence"
+  },
+  "current_composition_batch": {
+    "phase_closure": false,
+    "design": "docs/design/cpu-composition.md",
+    "state": "bounded_composition_change_accepted",
+    "unsafe_added": false,
+    "owner_disk_used": false,
+    "dependencies_changed": false,
+    "cumulative_qualification": false,
+    "tested_source_sha256": "c324501dd1f9270647711689c5b7767378ab95c80aac86fff492610186072fdf",
+    "guest_build_source_sha256": "8edde3a0b80ac681cbb3bbeafe2827cdc23293fb529b00da86b8f40d0146775e",
+    "host_only_build_bridge": [
+      "tools/xtask/src/desktop/recovery.rs",
+      "tools/xtask/src/desktop/validate.rs",
+      "tools/xtask/src/services/scenarios.rs"
+    ],
+    "changes": [
+      "Exact clipped constant-alpha row blend using original integer source-over.",
+      "Skip unused signed-out taskbar material; all supported authenticated bindings invalidate full scene.",
+      "First actual frame measured inside unchanged diagnostic budget.",
+      "Kernel-attributed independent completed frames for24/32/40-byte bindings."
+    ],
+    "evidence": [
+      {
+        "report": "reports/runs/host-1792531983078819500-17480/report.json",
+        "sha256": "034c334ce0d421b31e4f2058d5403c1a3563d4fc019475b165cd4500e75dc1d6",
+        "result": "Complete repaired guest build; source8edde3a0b80ac681cbb3bbeafe2827cdc23293fb529b00da86b8f40d0146775e"
+      },
+      {
+        "report": "reports/runs/host-1792532358794698200-23156/report.json",
+        "sha256": "e782f4b065c64f26e9d313ee44c22788950999dad0ff9b44d001a2fd498d5723",
+        "result": "547 host tests /33 executables"
+      },
+      {
+        "report": "reports/runs/host-1792532087483269300-19556/report.json",
+        "sha256": "ac1afc103558d88d53e152ed595157ea2926541e0f371a87bbfdc675eabf0300",
+        "result": "Asset recomputation"
+      },
+      {
+        "report": "reports/runs/host-1792532213874388800-9424/report.json",
+        "sha256": "77f4bad84539badcd23fa261bfa266b1180baa3488c2e9979672334a28a25a29",
+        "result": "15 isolated native4K checks"
+      },
+      {
+        "report": "reports/runs/host-1792532407913367100-19324/report.json",
+        "sha256": "81851e0f67297048ffa8ea4a3c9e51bd507ed27d9bcfac8fbfaa689fb463545b",
+        "result": "19 Files1x checks /two boots"
+      },
+      {
+        "report": "reports/runs/host-1792532407929300200-24844/report.json",
+        "sha256": "b36197eb6ce6c65c0475c1c391939cc4847d78a0cfdb304ad9b4a99022043b12",
+        "result": "19 Files3x checks /two boots"
+      },
+      {
+        "report": "reports/runs/host-1792532358831665600-19508/report.json",
+        "sha256": "29d5da4e772cc5450414bf42a7afb6e877ef23a8dcc3178e024f77c8f2c8b160",
+        "result": "243 desktop checks /nine sessions"
+      },
+      {
+        "report": "reports/runs/host-1792532358771979300-25484/report.json",
+        "sha256": "17855ed3c57f3e1e13bb9352b6002e81d9689dc4e90cfea993a0ede0d0cdf588",
+        "result": "42 expected foundation outcomes"
+      }
+    ],
+    "measurement": {
+      "profile": "3840x2160,3x,WHPX/RAMFB",
+      "baseline_report": "reports/runs/host-1792530064717529100-26524/report.json",
+      "baseline_first_frame_ticks": {
+        "compose": 8,
+        "transfer": 1
+      },
+      "candidate_first_frame_ticks": {
+        "compose": 5,
+        "transfer": 1
+      },
+      "tick_millis": 10,
+      "transfer_bytes": 33177600,
+      "transfer_calls": 2025,
+      "interpretation": "One coarse isolated observation per version; not FPS, statistical, whole-app or whole-sign-in evidence."
+    },
+    "pixel_equivalence": {
+      "baseline": "out/qemu/host-1792530064717529100-26524-session-1792530064830455700/signin.png",
+      "candidate": "out/qemu/host-1792532213874388800-9424-session-1792532214027541000/signin.png",
+      "both_png_sha256": "627ddad4158db13081b25772645859cdff0834099fff0aa865614e49f658f3a4",
+      "decoded_rgb_size": [
+        3840,
+        2160
+      ],
+      "all_rgb_pixels_identical": true,
+      "scope": "Only these exact retained signed-out captures."
+    },
+    "critic": "reports/critics/p12-cpu-composition-critic.json",
+    "critic_sha256": "a06e1d75765bf8f5ab3843dce5300d20812ab8a43a2ba7e07b52fcb35c07e07f",
+    "retained_pre_fix": [
+      "reports/runs/host-1792531535742157200-24132/report.json",
+      "reports/runs/host-1792531535713028600-22860/report.json"
+    ],
+    "next": "Separate sparse avatar coverage candidate and shared P12 application functionality; no phase closure.",
+    "cumulative_attempt": {
+      "report": "reports/runs/host-1792533600358609500-23564/report.json",
+      "sha256": "7141f7b0fa3bcaedc2bba2c4f0fe72881180e5bb5fc0524201e582d0fac8fe2c",
+      "failure": "Original missing P00 report",
+      "inputs_unchanged": true
+    }
+  },
+  "current_avatar_batch": {
+    "state": "bounded_avatar_cache_change_accepted",
+    "design": "docs/design/avatar-coverage.md",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "dependencies_changed": false,
+    "unsafe_added": false,
+    "owner_disk_used": false,
+    "radii": [
+      96,
+      192,
+      288
+    ],
+    "cache_bytes": 129024,
+    "offsets": [
+      0,
+      9216,
+      46080
+    ],
+    "fallback": "Original sixteen-sample coverage for all other effective radii; existing1..60 cache unchanged",
+    "host_tests": "550 host tests /33 executables",
+    "baseline": "reports/runs/host-1792532213874388800-9424/report.json",
+    "tested_source_sha256": "a24345fd28ff978456545a5864ae5870a1c49a54d48197240cce674c4c5380b4",
+    "arithmetic_repair": "Saturating radius scaling; exact i128 squared products preserve all valid geometry; known empty/full tiny-viewport oracles.",
+    "asset_sha256": "a6da12051d239c3f7b57d51b1c905bb025ab7f9d3737cf696c23849955479f90",
+    "evidence": [
+      {
+        "report": "reports/runs/host-1792533909144315600-16216/report.json",
+        "sha256": "d1a662737810dec37b57c599be5eb18f927c55d88f3663541b0209728c38917c",
+        "result": "Complete independent repaired build"
+      },
+      {
+        "report": "reports/runs/host-1792533909199882100-25580/report.json",
+        "sha256": "91f030874f7347daf78790fad46fe62cb63dd7caa0e9fdb53baf75d469092966",
+        "result": "550 host tests /33 executables"
+      },
+      {
+        "report": "reports/runs/host-1792533909144218900-20052/report.json",
+        "sha256": "63fe24fd5a4f351ca6a1a5c6292419364e66e08d1c14f3aa35e6496c62e92a7b",
+        "result": "Asset recomputation"
+      },
+      {
+        "report": "reports/runs/host-1792534033344868700-14272/report.json",
+        "sha256": "e9de7f1c7cc3c7038cd394e565322d7547636540aeb2ad9b82d15ba047ef5394",
+        "result": "15 isolated native4K checks"
+      },
+      {
+        "report": "reports/runs/host-1792534116206629200-11080/report.json",
+        "sha256": "c42eda869aba4d31ba3b1c2c731db43d962ee3ceb0e89b28b8c8163756a037e5",
+        "result": "52 checks /four native resolutions"
+      },
+      {
+        "report": "reports/runs/host-1792534116229587400-23852/report.json",
+        "sha256": "3dc6ce79658324d9c74a727bf5254e3e9e96c71117d1fa24c31f490672f4101a",
+        "result": "243 combined desktop checks /nine sessions"
+      }
+    ],
+    "build_manifest_sha256": "0018ccda45933f2cdfe5ed31d52d41aba5dae173e5ad9a251d185e216caa9fca",
+    "initfs_sha256": "26a050da750baa3f154ca863f898874340bd64ec707909abbc6412cb32bb915d",
+    "native_image_memory": {
+      "window": {
+        "file_bytes": 6855000,
+        "rounded_load_sum": 6778880,
+        "virtual_span": 6778880
+      },
+      "workspace": {
+        "file_bytes": 11367080,
+        "rounded_load_sum": 11313152,
+        "virtual_span": 11313152
+      },
+      "loader_limit": 16777216
+    },
+    "inherited_foundation": {
+      "report": "reports/runs/host-1792532358771979300-25484/report.json",
+      "rationale": "Every core artifact including FW/kernel/INIT/services is byte-identical to accepted17480; only window/workspace differ."
+    },
+    "measurement": {
+      "baseline_report": "reports/runs/host-1792532213874388800-9424/report.json",
+      "candidate_report": "reports/runs/host-1792534033344868700-14272/report.json",
+      "baseline_compose_ticks": 5,
+      "candidate_compose_ticks": 3,
+      "transfer_ticks": 1,
+      "tick_millis": 10,
+      "scope": "One coarse isolated first-frame observation per version; not FPS or latency distribution"
+    },
+    "pixel_equivalence": {
+      "isolated4k_png_sha256": "627ddad4158db13081b25772645859cdff0834099fff0aa865614e49f658f3a4",
+      "scope": "Exact retained sign-in RGB equality at four tested physical modes, independently compared with accepted19508"
+    },
+    "retained_pre_fix": [
+      "reports/runs/host-1792533738634765700-24120/report.json",
+      "reports/runs/host-1792533738554369000-4504/report.json"
+    ],
+    "critic": "reports/critics/p12-avatar-coverage-critic.json",
+    "critic_sha256": "c6d92c8b9da0270cbd9640fddebba26aa4734b0cafae53d6c61f604d8bfc9f3a",
+    "cumulative_attempt": {
+      "report": "reports/runs/host-1792535097318248000-23160/report.json",
+      "sha256": "b135e2df9e3afe3276bedd564a39d029c8762d6040a903c1a251fd1042521dff",
+      "failure": "Same original missing P00",
+      "inputs_unchanged": true
+    }
+  },
+  "current_desktop_launch_batch": {
+    "state": "bounded_interactive_launch_change_accepted",
+    "design": "docs/design/desktop-launch.md",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "default_accelerator": "whpx",
+    "default_display": "ramfb",
+    "default_mode": "1280x720",
+    "software_override": "--accelerator tcg",
+    "automatic_fallback": false,
+    "host_feature_change": false,
+    "owner_volume_created": false,
+    "dependencies_changed": false,
+    "guest_image": "out/images/host-1792533909144315600-16216-desktop/image.json",
+    "guest_build_report": "reports/runs/host-1792533909144315600-16216/report.json",
+    "scope": "Interactive CLI only; historical regression helper defaults remain TCG",
+    "tests": "555 host tests /33 executables;16 default4K +16 explicitsoftware1x native checks",
+    "tested_source_sha256": "1c784b9b43a1f5e7b0bc0414c09aa5db42fe438da1e2fbcdf07cd7237ff0cb16",
+    "evidence": [
+      {
+        "report": "reports/runs/host-1792535599726462300-23328/report.json",
+        "sha256": "e7451514abc52c038e6492ce8f644d0aa953684e693046de81ad6d24094849b7",
+        "result": "555 host tests /33 executables"
+      },
+      {
+        "report": "reports/runs/host-1792535599667436000-25916/report.json",
+        "sha256": "0af29b2c9645c4aa68a348c4267c80466d6eb5dcd530950c28750d775a5e0c2e",
+        "result": "16 shared default4K native checks /WHPX RAMFB"
+      },
+      {
+        "report": "reports/runs/host-1792535599679952900-19812/report.json",
+        "sha256": "650b82e17cfef25cf440dc99167a178cbedb9ec828c8cbffb1297fe20a78a051",
+        "result": "16 shared explicit software1x native checks /TCG VGA"
+      }
+    ],
+    "pre_spawn_selection_validation": true,
+    "critic": "reports/critics/p12-desktop-launch-critic.json",
+    "critic_sha256": "9ede1210c78c6d2690cd93dbba7d7a1d4a0c6957ffc8658640c729157d7eedbe",
+    "guest_build_bridge": {
+      "report": "reports/runs/host-1792533909144315600-16216/report.json",
+      "sha256": "d1a662737810dec37b57c599be5eb18f927c55d88f3663541b0209728c38917c",
+      "manifest_sha256": "0018ccda45933f2cdfe5ed31d52d41aba5dae173e5ad9a251d185e216caa9fca",
+      "initfs_sha256": "26a050da750baa3f154ca863f898874340bd64ec707909abbc6412cb32bb915d",
+      "artifacts_rehashed": 26,
+      "independent_app_pairs": 5,
+      "guest_cargo_assets_profiles_unchanged": true,
+      "host_only_delta": [
+        "tools/xtask/src/desktop.rs",
+        "tools/xtask/src/desktop/resolution.rs",
+        "tools/xtask/src/main.rs",
+        "tools/xtask/src/session/desktop_options.rs",
+        "tools/xtask/src/session/mod.rs"
+      ],
+      "current_executable_asset_profile_inputs_rehashed": 1006,
+      "foundation": "Inherited unchanged core evidence, no fresh run claimed"
+    },
+    "retained_pre_fix": [
+      {
+        "report": "reports/runs/host-1792535231023770600-19220/report.json",
+        "sha256": "66dd18180c05a62b8dd8b22f66205badeb14a072bced317eb9964613c4c113d9",
+        "result": "Superseded pre-assertion host pass"
+      },
+      {
+        "report": "reports/runs/host-1792535231056043200-24152/report.json",
+        "sha256": "151af6ca921866aebf3728f6e407f809a532d04a14f959c90c03aa74062ac47d",
+        "result": "Superseded pre-assertion native pass"
+      },
+      {
+        "report": "reports/runs/host-1792535231106028400-13584/report.json",
+        "sha256": "563b2cf98a2727bcf7e0f5cb04af8ee2c7063ee4cf89ea14a43e310542d2999c",
+        "result": "Retained failed scrollbar probe"
+      }
+    ],
+    "limits": [
+      "Native runs are headless; visibleSDL selection is host-tested, visibleSDL presentation unexercised.",
+      "WHPX actual operation established on acquired host only.",
+      "No new FPS/latency-distribution/performance measurement.",
+      "Finite review is not all-defect guarantee.",
+      "P12 remains partial; missing historical P00 blocks cumulative qualification."
+    ],
+    "latest_cumulative_attempt": {
+      "report": "reports/runs/host-1792535916429072700-26332/report.json",
+      "sha256": "70df76b203eeb46c3e9cf12b08635dd12f62e3013087f16cf7e50c8e2b1e5231",
+      "result": "Failed: original historical P00 report missing; unchanged inputs"
+    }
+  },
+  "current_notes_batch": {
+    "state": "bounded_document_notes_change_accepted",
+    "design": "docs/design/notes-editing.md",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "scope": "Bounded shared ASCII document selection/undo/redo, guarded reopen and real Notes persistence",
+    "dependencies_changed": false,
+    "owner_volume_used": false,
+    "tests": "567 host tests/33 executables;13 Notes checks/two boots each at1x/3x;243 combined checks/nine sessions",
+    "tested_source_sha256": "6854f83cd20752cb505918ec729afff29bafc56600955d8f4bc9e9dcd0851e0a",
+    "critic": "reports/critics/p12-notes-editing-critic.json",
+    "critic_sha256": "585bee910480b5c21d4ba76b16cdd685a240b2dd78f30353c41af9a3ad5a5dfd",
+    "evidence": [
+      {
+        "kind": "build",
+        "report": "reports/runs/host-1792536807943522600-22876/report.json",
+        "sha256": "4f35d4ef5a344858a57ec4af9657aefe211df00563edb1ff9e85d16d2ba3f751"
+      },
+      {
+        "kind": "host",
+        "report": "reports/runs/host-1792537808178202700-2116/report.json",
+        "sha256": "2daa3c39c17704f0ecd49e157cc13a861433768335710228c4aff21d5a38b91a"
+      },
+      {
+        "kind": "notes1x",
+        "report": "reports/runs/host-1792537808120243300-14572/report.json",
+        "sha256": "1fa7d7d973bfbec888e11db0c8ebb5ea83ab1ad8d3aa611218e8f7682f7ea60f"
+      },
+      {
+        "kind": "notes3x",
+        "report": "reports/runs/host-1792537808134859900-16204/report.json",
+        "sha256": "38c6a1566eb21dc8f877992a70545b5ebb049d59913ff16ee551e58b2cc7b915"
+      },
+      {
+        "kind": "combined",
+        "report": "reports/runs/host-1792537048229967600-6840/report.json",
+        "sha256": "136943c300abefbef661f4493ac067abd72d24a0e6032607f8020875c68820aa"
+      },
+      {
+        "kind": "cumulative",
+        "report": "reports/runs/host-1792537941705211300-1544/report.json",
+        "sha256": "a6fb813fbfd02aece2ebf879ae3516e4009f704aabeab16aaa8ee72bff0a21a1"
+      }
+    ],
+    "guest_build_bridge": {
+      "build_source": "95e8fa2ae563c43cab4f7355483decc7ec377ba4f7133bf61626917836d633eb",
+      "combined_source": "ea931b33aa8df0c78a5235d5eceb11f580b1e0eae09aecb354bce20e46430ff7",
+      "final_source": "6854f83cd20752cb505918ec729afff29bafc56600955d8f4bc9e9dcd0851e0a",
+      "host_only_delta": [
+        "tools/xtask/src/desktop/notes.rs"
+      ],
+      "guest_cargo_assets_profiles_unchanged": true,
+      "manifest_sha256": "b0d51657fb99a124b82240d580d84e23349eee73f855150809bb702851d858c3",
+      "initfs_sha256": "a273290737ef14c1f99a86a9951bcddd52f77dab36471366722242c301e628e3",
+      "artifact_pair_files_rehashed": 26,
+      "workspace_rounded_load_span": 11325440,
+      "loader_limit": 16777216,
+      "foundation": "Inherited unchanged core evidence; no fresh foundation run claimed"
+    },
+    "independent_audit": {
+      "native_refs_each": 53,
+      "combined_refs": 504,
+      "notes_raw_snapshots": 6,
+      "combined_raw_disks": 7,
+      "note_object": 26,
+      "inode": 17,
+      "generation": 1,
+      "versions": [
+        3,
+        5,
+        7
+      ],
+      "raw_bytes": [
+        14,
+        11,
+        20
+      ],
+      "journals_clean": true,
+      "all_crcs_valid": true,
+      "process_thread_counts": [
+        7,
+        6
+      ],
+      "device_pages_each": 8,
+      "leaked_each_boot": 0
+    },
+    "retained_pre_fix": [
+      {
+        "report": "reports/runs/host-1792537048108022400-5324/report.json",
+        "sha256": "0af376f4554c3ba7683fe7822412673d8ea7297c9c40528619e456ab9515e6ef",
+        "reason": "Critic-induced device-page/process-count oracle confusion; actual first boot cleaned up."
+      },
+      {
+        "report": "reports/runs/host-1792537048145380300-16328/report.json",
+        "sha256": "ca47706d5e01fbf23e8dc68d1d1847999a8a0cc0cc257495f016683a9c7f0b08",
+        "reason": "Same corrected test oracle."
+      },
+      {
+        "report": "reports/runs/host-1792536807906355600-12772/report.json",
+        "sha256": "dc99cba0ba682d3f47b355b6d83e25a64182f4de8d975b88e38e301260866f6a",
+        "reason": "Superseded565-test host pass."
+      },
+      {
+        "report": "reports/runs/host-1792537048107727400-14796/report.json",
+        "sha256": "98ff3495dcace4a603ab1d06b1c18e8c0b5a42c0c80c5a2b87a4d0495fd7cd6c",
+        "reason": "Superseded567-test host pass before final device-page fixture correction."
+      }
+    ],
+    "limits": [
+      "4096-byte ASCII/tab/CR/LF editing, bounded history logical payload rather than total heap.",
+      "Unicode/shaping/IME/clipboard/mouse selection/visual vertical navigation and modern Notepad fidelity remain incomplete.",
+      "Separate write/truncate/flush/close; compound atomic replacement and concurrent-writer conflict prevention not established.",
+      "Dedicated Notes native workflows do not inject storage I/O failures or concurrent writers.",
+      "No Windows1:1, Microsoft ClearType/DirectWrite, FPS or latency-distribution qualification.",
+      "Finite review cannot guarantee absence of all defects; P12 partial and historical P00 archive missing."
+    ],
+    "post_documentation_spec_check": {
+      "report": "reports/runs/host-1792538178770092700-16668/report.json",
+      "result": "Failed on unchanged original missing P00 evidence; native strict Clippy passed"
+    }
+  },
+  "current_text_navigation_batch": {
+    "state": "accepted_bounded",
+    "design": "docs/design/text-navigation.md",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "scope": "Shared measured viewport, cached wraps, visible-row pointer selection and visual keyboard navigation",
+    "dependencies_changed": false,
+    "owner_volume_used": false,
+    "host": "579 tests/33 executables",
+    "native": "Notes26 checks/two boots each1x/3x; Files19 each1x/3x; default4K16",
+    "build": "reports/runs/host-1792539359689866800-23084/report.json",
+    "build_source": "3d8138320a2908a42f652ca483afebd55ca1ac4eb73c37e6217697956483733f",
+    "final_source": "f6da8bef4412d43a7d21e63f67f6fdb50a1e4407835b28cecc8cf87136bb6c7a",
+    "bridge": "Only host tools/xtask/src/desktop/notes.rs geometry-oracle delta; guest bytes unchanged",
+    "critic": "reports/critics/p12-text-navigation-critic.json",
+    "critic_sha256": "a4610d6350791d12dab8d1dfd5f7dbc5fb3304e44e5496d66b7499a92481515a",
+    "inherited": "Combined6840/foundation25484 only for unchanged subsystem inputs/artifacts; not fresh full runs",
+    "limits": [
+      "Visible-row drag only; Shift-click/double/triple-click/edge autoscroll/horizontal scrolling missing",
+      "ASCII/tab/CR/LF; Unicode/IME/clipboard/accessibility and modern Notepad fidelity incomplete",
+      "Atomic replacement and concurrent-writer conflict prevention remain separate work",
+      "No FPS/Windows1:1/Microsoft ClearType equivalence claim; P12 partial; original missing P00 blocks cumulative qualification"
+    ]
+  },
+  "current_document_save_batch": {
+    "state": "accepted_bounded",
+    "design": "docs/design/checked-document-save.md",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "scope": "P12 checked compound document replacement and Notes integration",
+    "owner_disk_used": false,
+    "dependencies": "No package/version/feature change; bounded staging extends existing guarded SCRATCH UnsafeCell; no new unsafe impl",
+    "build_source": "585bb6c57a70d46b5054c7f0c7119f988a4ec26e7ccf65749a30bf67759d4708",
+    "final_source": "8e8a7f95b04b145bbc60831b0765f665b7b5f5502199bc8372a49e10927fef12",
+    "source_bridge": {
+      "build_and_focused_gui": "585bb6c57a70d46b5054c7f0c7119f988a4ec26e7ccf65749a30bf67759d4708",
+      "final": "8e8a7f95b04b145bbc60831b0765f665b7b5f5502199bc8372a49e10927fef12",
+      "only_delta": [
+        "tools/xtask/src/services/checked_replace.rs"
+      ],
+      "delta_reason": "Existing threads command added to both SDK boots and excluded from raw snapshots",
+      "current_snapshot_files_rehashed": 2012,
+      "mismatches": 0
+    },
+    "host": "595 tests/33 executables",
+    "native": "Notes26 checks/two boots each1x/3x; Files19 each1x/3x; SDKtwo boots/5 independently decoded raw snapshots; foundation42 expected scenarios; combined243/9sessions",
+    "evidence": {
+      "build": {
+        "id": "host-1792541350568704600-22924",
+        "sha": "ee27b13801f16250fd25f37316cdefc369afac97ed7c983610797564e55d291e",
+        "manifest_sha": "9d44c8e559df74d8089504743f0b91dd2bd0516ad39be5719cf0128ad523e9bc",
+        "workspace_load": 11341824,
+        "workspace_file": 11403296,
+        "window_load": 6778880,
+        "storage_load": 573440,
+        "sdk_load": 110592,
+        "workspace_sha": "10ac5ad2414db783b2b3f01d4d4c71dfd052920178047cd19d2efa8fff522283",
+        "initfs_sha": "73e4b28b1a149d06255e560d50e8cd3b0caef0ba6c3cbe013c0a4856443a6666",
+        "report": "reports/runs/host-1792541350568704600-22924/report.json"
+      },
+      "host_final": {
+        "id": "host-1792542217145977800-25236",
+        "sha": "5867ecc809bff5ddf11b9f52dd4aa2d590475b9df30cd87acb0dea4a1733424d",
+        "tests": 595,
+        "executables": 33,
+        "report": "reports/runs/host-1792542217145977800-25236/report.json"
+      },
+      "notes1x": {
+        "id": "host-1792541461932981300-9276",
+        "sha": "4fab22c7385420d9e4b45180beef6c7cd222d261d4e0e9d68157d2d01e24e161",
+        "checks": 26,
+        "report": "reports/runs/host-1792541461932981300-9276/report.json"
+      },
+      "notes3x": {
+        "id": "host-1792541461963270400-24428",
+        "sha": "8283a4b072739e529f742e99ae0b2fafbc70927e49124067a67f7c5304f21bfd",
+        "checks": 26,
+        "report": "reports/runs/host-1792541461963270400-24428/report.json"
+      },
+      "files1x": {
+        "id": "host-1792541730462262600-26124",
+        "sha": "88a59c62b4eb7f195ea39cd517e6d39118d121b3e2f99db57269c666b1643ba0",
+        "checks": 19,
+        "report": "reports/runs/host-1792541730462262600-26124/report.json"
+      },
+      "files3x": {
+        "id": "host-1792541730466082500-584",
+        "sha": "00fdb519ae025fc34f1effd2dd7feba247b53e0aabf0cf253c931fac336b9f4b",
+        "checks": 19,
+        "report": "reports/runs/host-1792541730466082500-584/report.json"
+      },
+      "sdk": {
+        "id": "host-1792542217178513100-12460",
+        "sha": "ca9e6438b2a143833d419043d7fc450c4ae576bffde9d5f93e025b4a9128b129",
+        "checks": 1,
+        "boots": 2,
+        "final_raw_sha": "3fea4d5d1c060dbdb42bc63db8474c0cf31509d3753ce018d7a03fe4a5e3e3ce",
+        "final_version": 28,
+        "final_catalog_revision": 62,
+        "suite_sha": "36e72cc204889262f4f78ae744a9250a49ebfb57fb60bbadcc603840540e51ff",
+        "independent_audit": {
+          "refs": 12,
+          "raw_snapshots": 5,
+          "processes_each": 5,
+          "threads_each": 7,
+          "leaks_each": 0,
+          "device_pages_each": 8,
+          "identity": {
+            "object": 19,
+            "inode": 13,
+            "generation": 1
+          },
+          "baseline": {
+            "version": 23,
+            "catalog": 57,
+            "journal": 3
+          },
+          "short": {
+            "bytes": 26,
+            "version": 27,
+            "catalog": 61,
+            "journal": 7
+          },
+          "restored": {
+            "bytes": 4096,
+            "version": 28,
+            "catalog": 62,
+            "journal": 8
+          },
+          "same_restored_raw_images": 4,
+          "crcs": true,
+          "outside_bytes_unchanged": true
+        },
+        "report": "reports/runs/host-1792542217178513100-12460/report.json"
+      },
+      "foundation": {
+        "id": "host-1792542217211656500-26940",
+        "sha": "1e9f99f889c1f2e5d6aef656b1eadd3a952bfd7bd6a89adb10be275cee9ae384",
+        "scenarios": 42,
+        "suite_sha": "75ce99ddf63000c418c077bf93436a5a7d898a237351aa3a5f42814a4244825f",
+        "outcomes": {
+          "Passed": 27,
+          "KernelPanic": 6,
+          "Interrupted": 5,
+          "StartupFailure": 2,
+          "GuestFailure": 1,
+          "Timeout": 1
+        },
+        "report": "reports/runs/host-1792542217211656500-26940/report.json"
+      },
+      "combined": {
+        "id": "host-1792542217146676900-22836",
+        "sha": "24f346ea0d815a10dd7ec4fb6773fa7bdfc9d86a2545ead078e9e4837d777bf5",
+        "checks": 243,
+        "report": "reports/runs/host-1792542217146676900-22836/report.json"
+      },
+      "cumulative": {
+        "id": "host-1792542970032920000-21496",
+        "sha": "4f95eeefd6a2a437f2e2d48cab3652034cea4983f6cc67501242547eb159698f",
+        "success": false,
+        "inputs_unchanged": true,
+        "reason": "OriginalP00reportmissing",
+        "report": "reports/runs/host-1792542970032920000-21496/report.json"
+      }
+    },
+    "critic": "reports/critics/p12-document-save-critic.json",
+    "critic_sha256": "7135f4ef2ae93662a1fed477a3f48fcd238cf670dbed09eb08e664892acbd60b",
+    "resolved_findings": [
+      "Acknowledged commit immediately advances durable Document bytes; ClosePending separately guards subsequent actions.",
+      "Uncertain outcome attention survives Undo and Changed rejection.",
+      "Foreign candidate tests issue authenticated raw IPC instead of stopping at SDK checks.",
+      "SDK fixture satisfies unchanged seven-thread retirement oracle."
+    ],
+    "retained_failures": [
+      {
+        "id": "host-1792541403464775200-9260",
+        "sha": "9bf4753c4253c36e9461db4690a0e04e7f23741d89327447a1986da7dc68f11d",
+        "reason": "os2 missing guest-run.json; lastservices-savechildexit33/6process8threads/leaked0 but evidence absent, consistent with ENOSPC"
+      },
+      {
+        "id": "host-1792541497221046200-3108",
+        "sha": "762697b1c940c2b7fe29bc54446bf4295358c1806b319f5858ec4888196b56fd",
+        "reason": "ExplicitENOSPC at191 checks"
+      }
+    ],
+    "infrastructure_recovery": {
+      "files": 499,
+      "logical_bytes": 66840428544,
+      "free_before": 0,
+      "free_after": 67196723200,
+      "method": "NTFS compact /C /I /Q",
+      "owner_excluded": true,
+      "files_deleted": 0
+    },
+    "limits": [
+      "New compound-save interruption/crash/I/O-failure coverage is hosted core testing, not newly injected native crashes.",
+      "Close-failure/uncertain editor guards have model coverage, no injected GUI close/I/O failures.",
+      "Native short bytes inspected paused first boot; max restoration and read-only separate reboot.",
+      "4096-byte old/new streams; CreateNew namespace operation separate and failed first save may leave empty file.",
+      "Save As, conflict/discard/recovery dialogs, physical-device power-loss, full Windows fidelity and ClearType engine/FPS parity remain outside scope.",
+      "P12 remains partial; original missing P00 archive blocks cumulative qualification."
+    ]
+  },
+  "current_document_dialog_batch": {
+    "state": "accepted_bounded",
+    "phase_closure": false,
+    "cumulative_qualification": false,
+    "design": "docs/design/document-dialogs.md",
+    "scope": "Shared per-window modal and real Notes Save/Don't save/Cancel close/reload; canceled-close attachment/configure repair",
+    "source": "5a26471576fe6d1453b4b6140d3cacb773c4643a3f98078a6d2071cc2ecf78cb",
+    "focused_guest_source": "2ec1255bb2f4be367e88a4a72566503cb4138d51be007dd1cbe74c6b690b9d90",
+    "guest_bridge": "All21 final624 guest artifacts equal27548;5 independent app pairs and26 distinct files rehashed. Only documentation and six host-tool files differ.",
+    "critic": {
+      "path": "reports/critics/p12-document-dialogs-critic.json",
+      "sha256": "57bd280f5265c24d09d6287b00f60a795fec89962561746419d95dfa2b7ffe85"
+    },
+    "reports": [
+      {
+        "id": "host-1792549001362687000-624",
+        "report": "reports/runs/host-1792549001362687000-624/report.json",
+        "sha256": "f97d5a41d15d6d8d4b533bd3628b4e7c2b87cb0225c68bf13acd315a2180af3d",
+        "scope": "Reproducible build and253 complete desktop checks /9 actual sessions",
+        "source": "5a26471576fe6d1453b4b6140d3cacb773c4643a3f98078a6d2071cc2ecf78cb"
+      },
+      {
+        "id": "host-1792549001382234400-13184",
+        "report": "reports/runs/host-1792549001382234400-13184/report.json",
+        "sha256": "03d719ebf017ca6a1089d66e86279fb49470410e10d5d24877c7bd32da85c35e",
+        "scope": "613 host tests /33 executables",
+        "source": "5a26471576fe6d1453b4b6140d3cacb773c4643a3f98078a6d2071cc2ecf78cb"
+      },
+      {
+        "id": "host-1792549985477805800-3528",
+        "report": "reports/runs/host-1792549985477805800-3528/report.json",
+        "sha256": "822ffdbad27bb79906f4565bab29fafce2c7dc2f9a7d1b90acd7980b3ba534e1",
+        "scope": "Immutable retained-evidence revalidation; no new guest execution",
+        "source": "5a26471576fe6d1453b4b6140d3cacb773c4643a3f98078a6d2071cc2ecf78cb"
+      },
+      {
+        "id": "host-1792545881713124100-26836",
+        "report": "reports/runs/host-1792545881713124100-26836/report.json",
+        "sha256": "066f114f270a4b822290ca4403cff3573adeb4e82bcfa40a278ae7218fb2752a",
+        "scope": "Notes1x39 checks/two boots",
+        "source": "2ec1255bb2f4be367e88a4a72566503cb4138d51be007dd1cbe74c6b690b9d90"
+      },
+      {
+        "id": "host-1792545881673347000-11840",
+        "report": "reports/runs/host-1792545881673347000-11840/report.json",
+        "sha256": "09aa3b8b7f9cc2ce3a6fa8d5ad518a1614296455a041f6b75e40342ae6c42567",
+        "scope": "Notes3x39 checks/two boots",
+        "source": "2ec1255bb2f4be367e88a4a72566503cb4138d51be007dd1cbe74c6b690b9d90"
+      },
+      {
+        "id": "host-1792545881719104500-20356",
+        "report": "reports/runs/host-1792545881719104500-20356/report.json",
+        "sha256": "b17e8844d02ea57d3889dd75a1fe2b2185cc295e97c1fec9263d6c839e13702d",
+        "scope": "Files1x19 checks/two boots",
+        "source": "2ec1255bb2f4be367e88a4a72566503cb4138d51be007dd1cbe74c6b690b9d90"
+      },
+      {
+        "id": "host-1792545881783842800-20960",
+        "report": "reports/runs/host-1792545881783842800-20960/report.json",
+        "sha256": "1f561e01baadfffe8436b1f78c252a6d6d1fc70fc5fef21ba5c308a5d9deca46",
+        "scope": "Files3x19 checks/two boots",
+        "source": "2ec1255bb2f4be367e88a4a72566503cb4138d51be007dd1cbe74c6b690b9d90"
+      },
+      {
+        "id": "host-1792548771301253500-24944",
+        "report": "reports/runs/host-1792548771301253500-24944/report.json",
+        "sha256": "9b233be63d179e355ea8c103ac907fd4d96d1e2a0095f7c7a3cf93b9393724c6",
+        "scope": "Focused2x complete-frame readiness /11checks",
+        "source": "3e3268551821b29fb76cb937f6ca291ffcf57b2af31bd1418a8a622aab2da9de"
+      }
+    ],
+    "inherited_foundation": {
+      "report": "reports/runs/host-1792542217211656500-26940/report.json",
+      "sha256": "1e9f99f889c1f2e5d6aef656b1eadd3a952bfd7bd6a89adb10be275cee9ae384",
+      "scope": "42 expected scenarios; only unchanged runtime core/service/Window binaries; no new foundation execution claimed"
+    },
+    "retained_checkpoint_sha256": "235c0fbeffa4f0f7dc0ab97eac0ce7f9e63b30256387e51be78585826eee3976",
+    "reference": "https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/dialogs-and-flyouts/dialogs",
+    "owner_disk_used": false,
+    "dependencies_changed": false,
+    "post_qualification_changes": "Coordinated documentation and attributed critic record only",
+    "limits": [
+      "Fixed4096-byte ASCII document; full Notepad/Save As/tabs/Unicode/IME/clipboard/accessibility remain open",
+      "New model/host failure cases do not establish injected native GUI I/O, close or reload failure handling",
+      "Opaque RGB LCD renderer is original; no Microsoft ClearType/DirectWrite or Windows1:1/FPS parity claim",
+      "Shutdown choice cancels the original power sequence; request shutdown again after resolving the document",
+      "Storage-service reconnection and remaining Files/app providers remain open",
+      "P12 partial; original missing P00 archive still blocks cumulative qualification"
+    ],
+    "cumulative_after_documentation": {
+      "report": "reports/runs/host-1792550616205521500-25056/report.json",
+      "sha256": "470f91953f58ebc4e55c8a05148b4c0b09af357ce46f9a9a7d4e98c6a8577f95",
+      "success": false,
+      "inputs_unchanged": true,
+      "failure": "Original P00 report absent: reports/runs/host-1791804427914736400-32560/report.json"
+    }
+  },
+  "current_file_deletion_batch": {
+    "state": "accepted_bounded",
+    "design": "docs/design/files-deletion.md",
+    "phase_closure": false,
+    "scope": "Explicit permanent Shift+Delete for one file/empty folder; checked durable observed binding and default Cancel",
+    "qualifying_source_sha256": "68f613962734bb11949bab2a9fc47502ca38c11999d1b7216e0d300055dc1099",
+    "prior_dialog_checkpoint": "reports/critics/p12-document-dialogs-critic.json",
+    "critic": {
+      "path": "reports/critics/p12-files-deletion-critic.json",
+      "sha256": "d085856ad7ea987b2bb4ebb2f6f959a50fc5f0142e38e1c282d635940a365133"
+    },
+    "guest_qualified": true,
+    "ui_enabled": true,
+    "dependencies_changed": false,
+    "host_tests": 631,
+    "evidence": {
+      "host": {
+        "path": "reports/runs/host-1792553435297672200-22156/report.json",
+        "sha256": "a85a7dff622bc933bf2d10545248b6bf69e708ea9ab164d9e9d80961b0d5be5e",
+        "tests": 631,
+        "executables": 33,
+        "success": true,
+        "inputs_unchanged": true
+      },
+      "foundation": {
+        "path": "reports/runs/host-1792553453965410200-17560/report.json",
+        "sha256": "81e08e36f0f7a3423c224273192925e3f80362ffe51a0ce6044b3f15e74519d5",
+        "suite": {
+          "path": "reports/runs/host-1792553453965410200-17560/boot-suite.json",
+          "sha256": "697cc30c29d3c6c8b295b36420b2a4925627b1fcbc4cb27c3c1b6d227ed52a91"
+        },
+        "scenarios": 42,
+        "expected_outcomes": {
+          "Passed": 27,
+          "KernelPanic": 6,
+          "Interrupted": 5,
+          "StartupFailure": 2,
+          "GuestFailure": 1,
+          "Timeout": 1
+        },
+        "all_expected_outcomes_match": true,
+        "actual_receipts": 42,
+        "private_image_entries": 126,
+        "independent_core_files": 32
+      },
+      "combined": {
+        "path": "reports/runs/host-1792553435241221300-12020/report.json",
+        "sha256": "0de94c7369c551eff3289863a66292c64c730d0033f5dd3b64db6d1749ac35b9",
+        "suite": {
+          "path": "reports/runs/host-1792553435241221300-12020/desktop-suite.json",
+          "sha256": "c7d4c1021a14aa6bc28bdda3de2b6884e217e8f15218b0695d5fe4c8334ce03a"
+        },
+        "checks": 253,
+        "actual_sessions": 9,
+        "references_rehashed": 788,
+        "private_image_entries": 27,
+        "source_image_entries": 6,
+        "exact_rgb_capture_pairs": 178,
+        "pixel_checks": 176,
+        "raw_snapshots": 8,
+        "success": true,
+        "inputs_unchanged": true
+      },
+      "build": {
+        "path": "reports/runs/host-1792553435241221300-12020/desktop-build.json",
+        "sha256": "a49e2f07e17c418095515850177931d93cef6952a1ed6141bd2e02327a30b895",
+        "initfs_sha256": "e1d92788b7dc6a74546f5b22b66cb7e597650c7dcc919f97d74fb4d168e4a27d",
+        "artifacts": 21,
+        "independent_application_pairs": 5,
+        "all21_byte_identical_to_build5808": true,
+        "workspace_rounded_load_bytes": 11362304,
+        "window_rounded_load_bytes": 6778880,
+        "storage_rounded_load_bytes": 577536,
+        "sdk_rounded_load_bytes": 122880,
+        "loader_limit_bytes": 16777216
+      },
+      "sdk": {
+        "path": "reports/runs/host-1792553040234287300-18096/report.json",
+        "sha256": "2f6a1a3b7daf5072695c353604eedd20c8a684e67918950701ae91bd2a2c20b5",
+        "suite_sha256": "916f27bb1c0203d4d1f56bb89bff99a624b5ade8bbbf487afeebc35035c4f486",
+        "source_sha256": "8c435b6207ea20fa40d92e66c9b8103e72a1b242ad5e46c27e21baeb3c982be1",
+        "boots": 3,
+        "retirement_each": {
+          "processes": 5,
+          "threads": 7,
+          "leaked": 0,
+          "device_pages": 8
+        },
+        "pending": {
+          "object": 21,
+          "inode": 15,
+          "generation": 1,
+          "version": 4,
+          "bytes": 17
+        },
+        "live_read_only_raw_sha256": "8d557ef66d190d25c1eb7953a7af4885fae18de7186714137439b68d0f2155f5",
+        "reclaimed_raw_sha256": "47a3cde84d7dee527ffaac9314b6306a2f13d54a9b34e1ab3570972cfb65f6a3"
+      },
+      "deletion_gui": [
+        {
+          "path": "reports/runs/host-1792553040201685300-26476/report.json",
+          "sha256": "31b949b16b100f61d07478eed14989f83b643fa95c06ce785d730bb7b8db694b",
+          "checks": 15,
+          "boots": 2
+        },
+        {
+          "path": "reports/runs/host-1792553040201647700-24584/report.json",
+          "sha256": "318902aa505d501583023d3adae853015fa12824c98ff1465ed6c63e5e905dd6",
+          "checks": 15,
+          "boots": 2
+        }
+      ],
+      "notes": [
+        {
+          "path": "reports/runs/host-1792553675090894500-11764/report.json",
+          "sha256": "5087271460530d6ee780fd65494bfa205ed3e58cd90582a158802508a116ffb6",
+          "checks": 39,
+          "boots": 2
+        },
+        {
+          "path": "reports/runs/host-1792553675106269500-10852/report.json",
+          "sha256": "6c8f3421b2b40ca395bac8bbbcac8d5b85d02273297d15d1a6b8cb0d386d8c4f",
+          "checks": 39,
+          "boots": 2
+        }
+      ],
+      "rename": [
+        {
+          "path": "reports/runs/host-1792553848265104000-11100/report.json",
+          "sha256": "18371a5d442ca7d113aa7baccf7cb30f0379aafddb2a946c9e24ebf123fef05c",
+          "checks": 19,
+          "boots": 2
+        },
+        {
+          "path": "reports/runs/host-1792553981575661300-9252/report.json",
+          "sha256": "77c597845ed95ed95ddd98772713a7f3c8cd14a036172062ce5980e7983a6a6f",
+          "checks": 19,
+          "boots": 2
+        }
+      ],
+      "retained_revalidation": {
+        "path": "reports/runs/host-1792554451739835500-13940/report.json",
+        "sha256": "d7ee39db0d2bccbceca19e6f23941b6df13f8c52babc12ac0357becaa0fb7b97",
+        "checkpoint_sha256": "cc9b9a5e6e0628f6cb5a53c28d2d1f03703ee438dcb0c19933b8156eb5c79a9b",
+        "new_guest_execution": false,
+        "original_hash_and_source_match": true
+      }
+    },
+    "cumulative_gate": {
+      "path": "reports/runs/host-1792554561349782200-24044/report.json",
+      "sha256": "85798f304583c606bb8d65c728a3e7a910b05e4ade3dd11724bbfb2add3b5330",
+      "success": false,
+      "inputs_unchanged": true,
+      "blocker": "Original missing P00 reports/runs/host-1791804427914736400-32560/report.json",
+      "new_guest_failure": false
+    },
+    "limits": [
+      "Explicit Shift+Delete only; one file or empty folder.",
+      "No recursive removal, trash/restore, undo or secure erasure.",
+      "GUI exact confirmation is limited to32 printable ASCII characters.",
+      "Injected I/O/journal/counter failures are host tests, not native GUI injected-fault qualification.",
+      "Surrogate SDK case is a rename roundtrip, not deletion while that spelling exists.",
+      "Client retirement/discovery has bounded acceptance; injected native GUI faults, asynchronous operations and poisoned-volume recovery remain open.",
+      "No complete Explorer/Windows, Microsoft ClearType, FPS or full P12 claim.",
+      "Review does not prove absence of every defect."
+    ],
+    "source_bridge": "SDK/GUI8c to final68f only14docs/metadata+shutdown lifetime validator; all21 guest files independently reproduced. Post-review coordination changes documentation/metadata/critic record only.",
+    "next": [
+      "Preserve accepted client retirement/discovery without mutation replay; implement versioned generated output layout before heavy qualification.",
+      "Separate poisoned-volume remount/security session revocation ownership; qualify actual private native failure cases.",
+      "Legacy generic replacement-rename reclaim guard follow-up; remaining P12 toolkit, app catalog and terminal providers.",
+      "Real trash/restore/copy/move and later P13/P14/P15 app functionality remain open."
+    ]
+  }
+}

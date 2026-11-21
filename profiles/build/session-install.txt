@@ -1,0 +1,3 @@
+# Destination path and authenticated initfs payload. Existing user files are separate.
+/system/bin/tools seed/door-tools.elf
+/system/bin/tinybasic.exe seed/tinybasic.exe

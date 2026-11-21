@@ -1,0 +1,11 @@
+[package]
+name = "door-crt"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Allocation-free C runtime logic (printf/scanf engines, conversions, ctype, time, sorting) for Doors' Universal CRT"
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

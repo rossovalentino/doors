@@ -1,0 +1,31 @@
+[package]
+name = "door-desktop-shell"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Restartable desktop shell: registration database, taskbar groups, notifications and Start file search (P14)"
+
+[features]
+native = ["dep:door-workspace"]
+
+[[bin]]
+name = "door-desktop-shell"
+path = "src/main.rs"
+required-features = ["native"]
+test = false
+bench = false
+
+[dependencies]
+door-abi = { path = "../../runtime/abi" }
+door-sys = { path = "../../runtime/sys" }
+door-rt = { path = "../../runtime/rt" }
+door-service-client = { path = "../../frameworks/service-client" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+# Start file search (the former search host); only the native binary.
+door-workspace = { path = "../workspace", optional = true }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+[lints.clippy]
+all = "warn"

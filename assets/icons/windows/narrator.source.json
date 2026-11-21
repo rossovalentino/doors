@@ -1,0 +1,15 @@
+{
+  "file": "narrator.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "cc118b61e529fa68c9aaff88829b7065a0b2ca77cad8e535e3f76eb8da65aed1",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\Narrator.exe",
+    "module_sha256": "a8dcf8e1fadc1d89538f74355b5dac272100a0204e09e275749a9b82dbb2f24b"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

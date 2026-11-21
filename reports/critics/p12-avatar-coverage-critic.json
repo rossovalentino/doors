@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/rendering_critic",
+  "review_kind": "independent_read_only_critic",
+  "provenance": "Saved by root from rendering_critic's independent final read-only review; attributed structured record, not a critic-written workspace file.",
+  "scope": "Bounded P12 sparse avatar coverage and large-radius arithmetic",
+  "verdict": "accepted_for_bounded_avatar_cache_change",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "tested_source_sha256": "a24345fd28ff978456545a5864ae5870a1c49a54d48197240cce674c4c5380b4",
+  "findings": [],
+  "resolved_findings": [
+    "Saturating radius scaling before geometric clamping.",
+    "Exact i128 products prevent squared-distance overflow for enormous valid rectangles, including checked release builds.",
+    "Independent known-empty/covered tiny-viewport tests cover public fill and hit testing."
+  ],
+  "asset_review": {
+    "radii": [
+      96,
+      192,
+      288
+    ],
+    "offsets": [
+      0,
+      9216,
+      46080
+    ],
+    "bytes": 129024,
+    "sha256": "a6da12051d239c3f7b57d51b1c905bb025ab7f9d3737cf696c23849955479f90",
+    "original_bytes": 73810,
+    "original_sha256": "b61c18bd1c70f81ad3a2b4a0b526d626690c947c6fbce975c8ab7cc5866acf3a",
+    "independent_regeneration": "Python integer evaluation reproduced every byte of both assets.",
+    "bounds": "Effective-radius clamping precedes selection; maximum indices73809/129023; other radii retain original sampling with widened products.",
+    "new_runtime_allocation_dependency_unsafe": false
+  },
+  "evidence": [
+    {
+      "report": "reports/runs/host-1792533909144315600-16216/report.json",
+      "sha256": "d1a662737810dec37b57c599be5eb18f927c55d88f3663541b0209728c38917c",
+      "result": "Complete independent repaired build"
+    },
+    {
+      "report": "reports/runs/host-1792533909199882100-25580/report.json",
+      "sha256": "91f030874f7347daf78790fad46fe62cb63dd7caa0e9fdb53baf75d469092966",
+      "result": "550 host tests /33 executables"
+    },
+    {
+      "report": "reports/runs/host-1792533909144218900-20052/report.json",
+      "sha256": "63fe24fd5a4f351ca6a1a5c6292419364e66e08d1c14f3aa35e6496c62e92a7b",
+      "result": "Asset recomputation"
+    },
+    {
+      "report": "reports/runs/host-1792534033344868700-14272/report.json",
+      "sha256": "e9de7f1c7cc3c7038cd394e565322d7547636540aeb2ad9b82d15ba047ef5394",
+      "result": "15 isolated native4K checks"
+    },
+    {
+      "report": "reports/runs/host-1792534116206629200-11080/report.json",
+      "sha256": "c42eda869aba4d31ba3b1c2c731db43d962ee3ceb0e89b28b8c8163756a037e5",
+      "result": "52 checks /four native resolutions"
+    },
+    {
+      "report": "reports/runs/host-1792534116229587400-23852/report.json",
+      "sha256": "3dc6ce79658324d9c74a727bf5254e3e9e96c71117d1fa24c31f490672f4101a",
+      "result": "243 combined desktop checks /nine sessions"
+    }
+  ],
+  "build_manifest_sha256": "0018ccda45933f2cdfe5ed31d52d41aba5dae173e5ad9a251d185e216caa9fca",
+  "product_initfs_sha256": "26a050da750baa3f154ca863f898874340bd64ec707909abbc6412cb32bb915d",
+  "independent_audit": {
+    "inputs": "Qualifying reports success/unchangeda243;662 executable/asset/profile inputs match tested snapshot.",
+    "build": "26 distinct artifacts/pairs rehashed; five independent app pairs; only window/workspace differ from17480.",
+    "host": "550 tests /33 executables independently counted, output hashes verified.",
+    "isolated_references": 39,
+    "resolution_references": 139,
+    "combined_references": 504,
+    "cleanup": "All nine combined and four resolution sessions zero leaks; no QEMU remains.",
+    "admission": "Kernel-attributed pid5/instance5/manifest11 completes24/32/40-byte binds on full fresh-material frames3/4/5 before injected exit-311."
+  },
+  "elf_memory": {
+    "window": {
+      "file_bytes": 6855000,
+      "rounded_load_sum": 6778880,
+      "virtual_span": 6778880
+    },
+    "workspace": {
+      "file_bytes": 11367080,
+      "rounded_load_sum": 11313152,
+      "virtual_span": 11313152
+    },
+    "loader_limit": 16777216
+  },
+  "diagnostic_budget": {
+    "limit_bytes": 16384,
+    "reserved_bytes": 512,
+    "first_boot": {
+      "payload_bytes": 13227,
+      "frame_samples": 16,
+      "first_frame_included": true
+    },
+    "reboot": {
+      "payload_bytes": 3741,
+      "frame_samples": 9,
+      "first_frame_included": true
+    }
+  },
+  "measurement": {
+    "baseline_report": "reports/runs/host-1792532213874388800-9424/report.json",
+    "candidate_report": "reports/runs/host-1792534033344868700-14272/report.json",
+    "baseline_compose_ticks": 5,
+    "candidate_compose_ticks": 3,
+    "transfer_ticks": 1,
+    "tick_millis": 10,
+    "scope": "One coarse isolated first-frame observation per version; not FPS or latency distribution"
+  },
+  "isolated_pixel_equivalence": {
+    "baseline": "out/qemu/host-1792532213874388800-9424-session-1792532214027541000/signin.png",
+    "candidate": "out/qemu/host-1792534033344868700-14272-session-1792534033515427900/signin.png",
+    "both_png_sha256": "627ddad4158db13081b25772645859cdff0834099fff0aa865614e49f658f3a4",
+    "decoded_rgb_size": [
+      3840,
+      2160
+    ],
+    "all_rgb_pixels_identical": true
+  },
+  "multidensity_pixel_equivalence": {
+    "reference_report": "reports/runs/host-1792532358831665600-19508/report.json",
+    "candidate_report": "reports/runs/host-1792534116206629200-11080/report.json",
+    "scope": "Exact retained sign-in PNG and decoded RGB equality, selected by dimensions; not Windows equivalence.",
+    "comparisons": [
+      {
+        "size": [
+          1920,
+          1080
+        ],
+        "baseline": "out/qemu/host-1792532358831665600-19508-session-1792532835625960100/signin.png",
+        "candidate": "out/qemu/host-1792534116206629200-11080-session-1792534116490381800/signin.png",
+        "both_sha256": "9e269c4558a3eae98cda54d9c6175be22b5beac975659728c0e5799f9bdac2a7"
+      },
+      {
+        "size": [
+          2560,
+          1600
+        ],
+        "baseline": "out/qemu/host-1792532358831665600-19508-session-1792532902038419800/signin.png",
+        "candidate": "out/qemu/host-1792534116206629200-11080-session-1792534182409714100/signin.png",
+        "both_sha256": "d206f41ab26f038b49ab40c0d94de2fbe09d68e3fd0ac85932903d7ac314b569"
+      },
+      {
+        "size": [
+          3840,
+          2160
+        ],
+        "baseline": "out/qemu/host-1792532358831665600-19508-session-1792532983476393000/signin.png",
+        "candidate": "out/qemu/host-1792534116206629200-11080-session-1792534264168468400/signin.png",
+        "both_sha256": "627ddad4158db13081b25772645859cdff0834099fff0aa865614e49f658f3a4"
+      },
+      {
+        "size": [
+          2560,
+          1440
+        ],
+        "baseline": "out/qemu/host-1792532358831665600-19508-session-1792533062109067500/signin.png",
+        "candidate": "out/qemu/host-1792534116206629200-11080-session-1792534342251670000/signin.png",
+        "both_sha256": "8ef958e50312f6ee10b2a5119d9aac8869f50f27c1ecf61cc4016bf3557d76f2"
+      }
+    ]
+  },
+  "inherited_foundation": {
+    "report": "reports/runs/host-1792532358771979300-25484/report.json",
+    "sha256": "17855ed3c57f3e1e13bb9352b6002e81d9689dc4e90cfea993a0ede0d0cdf588",
+    "fresh_run_claimed": false,
+    "basis": "All16 core artifacts byte-identical;42-case diagnostic/core images do not contain changed compositor/workspace."
+  },
+  "retained_pre_fix": [
+    "reports/runs/host-1792533738634765700-24120/report.json",
+    "reports/runs/host-1792533738554369000-4504/report.json"
+  ],
+  "remaining_limits": [
+    "Door capture equality is not independent Windows fidelity.",
+    "No GPU/vblank/general FPS/smoothness qualification.",
+    "Launcher change is a separate unqualified batch.",
+    "P12 partial; original missingP00 evidence blocks cumulative qualification."
+  ]
+}

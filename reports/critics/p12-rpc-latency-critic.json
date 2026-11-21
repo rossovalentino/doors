@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "review_kind": "independent_read_only_bounded_rpc_latency_critic",
+  "provenance": {
+    "reviewer": "/root/rendering_critic",
+    "saved_by": "/root",
+    "method": "Saved by the coordinating agent from the independent critic's final response and its exact report bindings; the critic did not edit this file."
+  },
+  "verdict": "accepted_for_the_bounded_synchronous_reply_wait_change",
+  "findings": [],
+  "phase": "P12",
+  "phase_closure": false,
+  "cumulative_qualification": false,
+  "scope": "Shared synchronous reply wait, authenticated native measurement and completed regressions; earlier rendering and rename reviews remain separate.",
+  "source_binding": {
+    "baseline": "e3bb378aaaed480c0888b50bf6b6a15e74df3150573d1a16264d063d05acf841",
+    "initial_candidate": "9541016a5d197465f96f263c9e0f363f29ce353219010ce9a819f14b6fd6c526",
+    "final_tested": "207417f574ec4cff520638986045c05a3e24916c5affff8bbc008253df36081a",
+    "assessment": "Only guest-code delta baseline to candidate is frameworks/service-client/src/rpc.rs; subsequent host validation/docs/metadata preserve measured guest code."
+  },
+  "code_review": {
+    "new_wait_policy": "At most eight cooperative yields after empty receives, then one-tick sleep backoff with original 500-tick absolute deadline.",
+    "preserved": [
+      "Single outstanding request",
+      "Opcode/request/instance/handle authentication",
+      "Transport/malformed poisoning",
+      "Async begin/poll",
+      "Overflow-safe now+1"
+    ],
+    "resolved_finding": "Every included latency block is reconstructed exactly from sealed authenticated serial. Missing/changed/null/misattributed fields fail; standard console cannot carry a block; historical rename without measurement remains accepted."
+  },
+  "measurement": {
+    "calls": 128,
+    "tick_millis": 10,
+    "baseline_ticks": 128,
+    "candidate_ticks": [
+      32,
+      32
+    ],
+    "baseline_coarse_millis": 1280,
+    "candidate_coarse_millis": 320,
+    "scope": "Sequential cached metadata in pinned single-CPU TCG fixture; replies compared with actual metadata; no timed-loop logging.",
+    "immutable_baseline": {
+      "path": "out/qemu/host-1792525481462118000-8952/data-after.raw",
+      "sha256": "5736ae96df86cdfc5ffd8194bb7b5d670268416ba7b8207b8d4c5762ddba6c4d",
+      "unchanged": true
+    },
+    "private_final_disk_sha256": "6860f8874d80d79dae52a7c53888df888e88fd83ba296f947a8825fb91bfd33c",
+    "owner_disk_used": false
+  },
+  "evidence": [
+    {
+      "report": "reports/runs/host-1792526544009417500-10340/report.json",
+      "sha256": "bace1b12b34042def07662590e20cba355e327998f9e59d198199c28c5ccf94f",
+      "result": "Baseline core build"
+    },
+    {
+      "report": "reports/runs/host-1792526591845892300-13872/report.json",
+      "sha256": "c3f8113954481827b36c8f5e4bd8ae0f807b5447b399554a73f578509092b7c5",
+      "result": "Baseline 128 ticks"
+    },
+    {
+      "report": "reports/runs/host-1792526595350418800-13872/report.json",
+      "sha256": "d772ba477aeab2b4c13078ebb5e39eef3abb848271ed22edb235afeefa725b30",
+      "result": "Authenticated baseline child"
+    },
+    {
+      "report": "reports/runs/host-1792526718288789500-1944/report.json",
+      "sha256": "6c00748626115c4d7d2744dbc45fe7e3a4294909e2dd6da44e048bdac295f8e1",
+      "result": "Candidate core build"
+    },
+    {
+      "report": "reports/runs/host-1792526765174846600-11240/report.json",
+      "sha256": "77045af1b011394424b77e62d5c4f2d81002fd3af0056ce8038ef4ad45aa123e",
+      "result": "Initial candidate 32 ticks"
+    },
+    {
+      "report": "reports/runs/host-1792526768686136500-11240/report.json",
+      "sha256": "2d024ede536a7026ad5ab5df0218b041105f023ef9bf5b4ba0cfd87838fd8083",
+      "result": "Authenticated candidate child"
+    },
+    {
+      "report": "reports/runs/host-1792527438356981800-14616/report.json",
+      "sha256": "802d3685b09d90af2ab19d972caf15f16cab81bd6671f8114dee352438c228cf",
+      "result": "Final canonical SDK validation 32 ticks"
+    },
+    {
+      "report": "reports/runs/host-1792527442032093400-14616/report.json",
+      "sha256": "49c9cd6aea43122e671e966eb914836b181c54f02ad68cb53a38a66f3058ee64",
+      "result": "Final authenticated SDK child"
+    },
+    {
+      "report": "reports/runs/host-1792526934388014000-20232/report.json",
+      "sha256": "d1107ef4246cdfbac18011a41cf1256c06e70a48cbf5cb845fb4a46a377a92a4",
+      "result": "537 host tests / 33 executables"
+    },
+    {
+      "report": "reports/runs/host-1792526934366402500-25776/report.json",
+      "sha256": "cd7fa0d3abc12cb2d1869d0abdedd95e2543c9f0d633c6d5161bb2c2c1089513",
+      "result": "Complete desktop build / 5 independent pairs"
+    },
+    {
+      "report": "reports/runs/host-1792526934366402500-25776/desktop-build.json",
+      "sha256": "6af7872bec81c3ac9eb8d3077e2a4543cc5be7140fde6b45c5b7eaaf1ce770ea",
+      "result": "Production initfs 4b51bc20dd9e902d50d6322142542e893298b3e52a1f0bd5f51e03e9ad9395c9"
+    },
+    {
+      "report": "reports/runs/host-1792527296439482100-25876/report.json",
+      "sha256": "d6cf31eef36c3c043429a1bec8f309b8f22d2c3a45bd7369e918b8533e08d7f7",
+      "result": "15 checks 4K WHPX/RAMFB"
+    },
+    {
+      "report": "reports/runs/host-1792526934366269000-25320/report.json",
+      "sha256": "25671aa4252064675a70764198b8e99ef498be9fbd2a3b9b9e3ae00d7f665ef8",
+      "result": "Full foundation"
+    },
+    {
+      "report": "reports/runs/host-1792526934366269000-25320/boot-suite.json",
+      "sha256": "c82bde7c8656bbd2979fd1e9f51aeb563d5df1360b8987e33cb93f4650749a51",
+      "result": "42 expected native outcomes"
+    },
+    {
+      "report": "reports/runs/host-1792527296462985500-5396/report.json",
+      "sha256": "6230a2d65c78c1560d2967df0f893bfa32347a55eb8dcf7a0f9ec7f0a6889d8d",
+      "result": "242 combined desktop checks / 9 clean sessions"
+    },
+    {
+      "report": "reports/runs/host-1792527989649022200-23484/report.json",
+      "sha256": "89a9105d3542219ca0d536628d5c79cdb32c3c0be3aa0b5eab0b273a56e9c863",
+      "result": "19 Files checks 1x / two boots"
+    },
+    {
+      "report": "reports/runs/host-1792527989649650100-18228/report.json",
+      "sha256": "156047dc000ebaa028e798f3149f7d8201d3a71d73d8bcf33644c5d5421e64c6",
+      "result": "19 Files checks 3x / two boots"
+    }
+  ],
+  "regression_invariants": {
+    "host_tests": 537,
+    "host_executables": 33,
+    "foundation_outcomes": {
+      "Passed": 27,
+      "KernelPanic": 6,
+      "Interrupted": 5,
+      "StartupFailure": 2,
+      "GuestFailure": 1,
+      "Timeout": 1
+    },
+    "foundation_refs_rehashed": 676,
+    "negative_outcomes_retained": true,
+    "smp": "Actual 2/4CPU and degraded mode with32TLB rounds each.",
+    "legacy_persistence": "Complete independent byte comparisons confirm saved/reopen/restart/final equality, corrupt refusal equality and only declared CRC bit difference.",
+    "standard_console": "Original six commands; checkpoint4/theme1 to2/catalog57 to58/sourceversion23; exact-byte whitelist.",
+    "combined_refs": 472,
+    "combined_native_sessions": 9,
+    "diagnostic_budget": {
+      "bytes": 16384,
+      "reserve": 512,
+      "first_boot_bytes": 13016,
+      "first_slow_samples": 16,
+      "reboot_bytes": 3710,
+      "reboot_slow_samples": 10
+    },
+    "files": "Both 19-check/two-boot GUI runs preserve object26/inode17/generation1 and content;68 unique references each rehashed clean.",
+    "files_final_disk_sha256": "1450af4660f67d50358c7e1494d9d748f7795fee7307b0a0fcaff99dc404ef92"
+  },
+  "limits": [
+    "One baseline and two optimized coarse samples, not a latency distribution.",
+    "No sub-tick, full-app/sign-in, input-to-display, FPS or universal hardware performance claim.",
+    "Yields provide opportunities without guaranteeing a particular next server; eight is bounded, not universally optimal.",
+    "Original deadline is not a hard real-time guarantee.",
+    "Review does not guarantee absence of all bugs.",
+    "P12 remains partial; missing historical P00 cumulative evidence remains blocked."
+  ]
+}

@@ -1,0 +1,10 @@
+[package]
+name = "door-firewall"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Windows Defender Firewall as data: rules in the registry form Windows keeps them, profiles, and the allow/block decision for a connection"
+
+[lints]
+workspace = true

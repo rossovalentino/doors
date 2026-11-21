@@ -1,0 +1,15 @@
+[package]
+name = "door-com-wire"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Out-of-process COM wire formats: OBJREF, ORPC messages over Doors channels, automation value encoding"
+
+[lib]
+name = "door_com_wire"
+
+[dependencies]
+
+[lints.clippy]
+all = "warn"

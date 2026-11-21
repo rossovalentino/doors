@@ -1,0 +1,458 @@
+{
+  "commit": "9442e3ef014520d4337409a24be10b970a36d66b",
+  "icons": [
+    {
+      "file": "folder.ico",
+      "sha256": "f0b281bb708302dc2c65e83aeca8d2133a0cae7413333a44ad43c33f792d5b3f",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/folder.ico"
+    },
+    {
+      "file": "explorer.ico",
+      "sha256": "22b5065fcc484b22bd5822b308f26575ca25db0d2c8fe29ee0b61a3b6414ed4a",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/explorer.ico"
+    },
+    {
+      "file": "notepad.ico",
+      "sha256": "998776a81e1fe20ff37623d2a6d2e9404fa085571afa35f212f11b2f40e70ca7",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/applications/notepad.ico"
+    },
+    {
+      "file": "desktop.ico",
+      "sha256": "37b6dafc78c4a3722823b095a154e99d16610171a053fd87a7284b399d1ad23b",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/desktop.ico"
+    },
+    {
+      "file": "documents.ico",
+      "sha256": "33b6b315e69cff78eab7f82f23d96b235eb460398e67173d490174ae09097d05",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/documents.ico"
+    },
+    {
+      "file": "downloads.ico",
+      "sha256": "1d0c0057b4fd4570cb3cc4b4fe43f0f2d00c12aa356ab237f502e6305e45ce18",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/downloads.ico"
+    },
+    {
+      "file": "music.ico",
+      "sha256": "f8ec89dd7d07157d0d7f948eafb12a35e87b762c79a4acbedd7de68dc8fdea93",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/music.ico"
+    },
+    {
+      "file": "pictures.ico",
+      "sha256": "727659961d7889267b30c9126a7161acb0998408ce6e0c68543d886080228201",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/pictures.ico"
+    },
+    {
+      "file": "videos.ico",
+      "sha256": "8202d241301c43d19f2bd6f87e59df7e283eb1c28805d9789891102186fce83a",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/videos.ico"
+    },
+    {
+      "file": "computer.ico",
+      "sha256": "5ae34ce8e88fc88742c512bb3f7be2171d7872253c5ee51e90d2f9c36e1d6844",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/devices/monitors/monitor.ico"
+    },
+    {
+      "file": "drive.ico",
+      "sha256": "77857efc8cdb1dbe617f71aee375e862ffb55b495e1a91a9655ca1b821628190",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/devices/drives/drive.ico"
+    },
+    {
+      "file": "settings.ico",
+      "sha256": "96d84bf435fa925b4066e42e0dd8012248f52e5f46908f43f37a6bfabb1d1aea",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/applications/settings.ico"
+    },
+    {
+      "file": "sidebar-documents.ico",
+      "sha256": "b13670cc64f71f3ecda36429b9b7605dbb68feba62778ce20cb1997af20ff71f",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/objects/libraries/documents.ico"
+    },
+    {
+      "file": "sidebar-music.ico",
+      "sha256": "a0babd724481c6a4197f5561d466ab8ed466bdfde6c75f7cefdfccc163e2bc99",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/objects/libraries/music.ico"
+    },
+    {
+      "file": "sidebar-pictures.ico",
+      "sha256": "3f9b8c0228ed166f2c07862c533034923a2448192f93153df8fa82ec83fc58ca",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/objects/libraries/pictures.ico"
+    },
+    {
+      "file": "sidebar-videos.ico",
+      "sha256": "33704611cc1295aed516e1d90d3bc6853ce5cbc567af11278f1aec4c2327fbe5",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/objects/libraries/videos.ico"
+    },
+    {
+      "file": "network.ico",
+      "sha256": "a9e01e8697a6ceadfcabb95e7d8e01402bd3badfb2639024f1ef2df27c613de8",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/devices/monitors/network3.ico"
+    },
+    {
+      "file": "explorer-home.ico",
+      "provenance": "explorer-home.source.json",
+      "sha256": "202b17d444dfca5555639969c40ec550b4ebeda955a1d86095781c9b19303bc4",
+      "source": "installed Windows reference; explorer-home.source.json"
+    },
+    {
+      "file": "text-file.ico",
+      "provenance": "text-file.source.json",
+      "sha256": "c3bdd6f182c39d2363316edcc5230f806edcdfccd5e1e9785a858ec11f28f20c",
+      "source": "installed Windows reference; text-file.source.json"
+    },
+    {
+      "file": "documents-current.ico",
+      "provenance": "documents-current.source.json",
+      "sha256": "ad4a4a6caf61187a390050124da1070ab7665d0548fbd15d3c0c25060dc981f4",
+      "source": "installed Windows reference; documents-current.source.json"
+    },
+    {
+      "file": "desktop-current.ico",
+      "provenance": "desktop-current.source.json",
+      "sha256": "e10f705a5d8fbaefa3199cdef88d91feb6c60776477cf830c464d62d6f85d6fb",
+      "source": "installed Windows reference; desktop-current.source.json"
+    },
+    {
+      "file": "downloads-current.ico",
+      "provenance": "downloads-current.source.json",
+      "sha256": "fafdf81d1d5c874bc6fc385f0cafe1fc23ded7208781fe59ee525b887e063989",
+      "source": "installed Windows reference; downloads-current.source.json"
+    },
+    {
+      "file": "music-current.ico",
+      "provenance": "music-current.source.json",
+      "sha256": "aebd87be2179c45d1a5c621ebac5be2fe53330a8655eefaf1ff6cf6f2133f824",
+      "source": "installed Windows reference; music-current.source.json"
+    },
+    {
+      "file": "pictures-current.ico",
+      "provenance": "pictures-current.source.json",
+      "sha256": "1ee524fb40a9b8890c70c93d2fa06750c4acee1046e8e46a486a7260500da64a",
+      "source": "installed Windows reference; pictures-current.source.json"
+    },
+    {
+      "file": "videos-current.ico",
+      "provenance": "videos-current.source.json",
+      "sha256": "1ec35612134ae7479e5468f23801294bcc1745efb754151755c3c39ebcf0d282",
+      "source": "installed Windows reference; videos-current.source.json"
+    },
+    {
+      "file": "registry-current.ico",
+      "provenance": "registry-current.source.json",
+      "sha256": "b2d8632893ad7a8dd1010bb4c8538d8dc4e79548f0e2e0fc06ba351d2e6f1acc",
+      "source": "installed Windows reference; registry-current.source.json"
+    },
+    {
+      "file": "file-image.ico",
+      "sha256": "54968823954887335b23a2b845b1c884559fcbe7bfdff90856dda43ffb37fae7",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/image.ico"
+    },
+    {
+      "file": "file-word.ico",
+      "sha256": "697170f61b3b8d676a3d99e337b138389402ef9216c8e6ed15b929685ab4f043",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/office/worddocument.ico"
+    },
+    {
+      "file": "file-excel.ico",
+      "sha256": "e486b4b57f792a8c23bc068a69d5d12a4f9aec7c89a32e53b4b4e2760cd5ea8a",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/office/excelsheet.ico"
+    },
+    {
+      "file": "file-presentation.ico",
+      "sha256": "feb86292197d4ac23a8b2a5dbb073b18c3e819a1a2a8077b521f5f181d6c7ed0",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/office/powerpointpresent.ico"
+    },
+    {
+      "file": "file-code.ico",
+      "sha256": "1710aa6dd45a5df5f9367832d4f6e5a45551fe4f262ad8bfc2410f6052a93d07",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/configuration.ico"
+    },
+    {
+      "file": "file-video.ico",
+      "sha256": "11b495766605798891d10701877afd8e2c1f6d20574e45b4b428e1142995cb58",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/video.ico"
+    },
+    {
+      "file": "file-audio.ico",
+      "sha256": "57939c552d366943e4955b50e52b31cf98c8a01f9d3cb97db5717950f035e5bd",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/audio.ico"
+    },
+    {
+      "file": "file-archive.ico",
+      "sha256": "2c523c9a07ac78bee9096bee88015683a3116fb196926b298366bf504126cd8f",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/zip.ico"
+    },
+    {
+      "file": "file-model.ico",
+      "sha256": "3a2b447794a9df93441765aa789a6f2bef3f0edca420d12ccc191599b87a37f8",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/applications/3dviewer.ico"
+    },
+    {
+      "file": "file-generic.ico",
+      "sha256": "0f0414d433c8a2c584f39d0585659763d46021d4071d0ba07e164958b3053cec",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/files/generic.ico"
+    },
+    {
+      "file": "file-pdf.ico",
+      "provenance": "file-pdf.source.json",
+      "sha256": "43f5169902d6c18e01cb02c04abde88d18bdaebe991b0a48cb4c46f93385ea43",
+      "source": "installed Windows reference; file-pdf.source.json"
+    },
+    {
+      "file": "terminal.ico",
+      "sha256": "d190f4d0b239e548bfa6b9bbaf13a8ae2bee2641dd49b2ba7b87666597b25de6",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/applications/terminal.ico"
+    },
+    {
+      "file": "terminal-settings.ico",
+      "sha256": "96d84bf435fa925b4066e42e0dd8012248f52e5f46908f43f37a6bfabb1d1aea",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/applications/settings.ico"
+    },
+    {
+      "file": "terminal-info.ico",
+      "sha256": "1b6100f39b42220d183b7cc93c5236a233217de2213edf023c7e4e1c31d74525",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/emblems/info.ico"
+    },
+    {
+      "file": "folder-liveback.ico",
+      "sha256": "381063a107077ee4e9a84749e3aa2594ce13cc3b281dc0bee7d3dc310ade18b8",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/liveback.ico"
+    },
+    {
+      "file": "folder-livefront.ico",
+      "sha256": "28ab570eb3ba34ce25feeb22d447d21d9eb8bf578a12bbdf099cf3d555754e01",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/livefront.ico"
+    },
+    {
+      "file": "folder-filled.ico",
+      "sha256": "718d71bfe563eacde9e687ddbec1a7ccc2d2af3e5f3ed370d6fb2fe29a6ce998",
+      "source": "https://raw.githubusercontent.com/HaydenReeve/WindowsIcons/9442e3ef014520d4337409a24be10b970a36d66b/Icons/folders/filled.ico"
+    },
+    {
+      "file": "terminal-powershell.ico",
+      "method": "Official blue PowerShell256px PNG wrapped losslessly in ICO",
+      "sha256": "0196eeb732992385a9fa678b6d75466a739ddf854377dbd932b24fa05d3f834a",
+      "source": "https://raw.githubusercontent.com/PowerShell/PowerShell/2150ca16efba746bc0b0793039986bedaeddefec/assets/Powershell_256.png"
+    },
+    {
+      "file": "terminal-ubuntu.ico",
+      "sha256": "6152e808d8a242a4636a3009357be24ee9cedd785402b8d27b1e6d6c26356c30",
+      "source": "https://raw.githubusercontent.com/ubuntu/WSL/3b7a6b2a43af18aa541eeee1669ac27656630097/meta/Ubuntu/generated/DistroLauncher/images/icon.ico"
+    },
+    {
+      "file": "terminal-cmd.ico",
+      "method": "Lossless PNG frame wrapped in ICO directory; official Terminal 64px artwork",
+      "sha256": "1b1e7652d91783ba039e04cea86860882ee47e1490f8d61820fd44e1218d1789",
+      "source": "https://raw.githubusercontent.com/microsoft/terminal/1046205b04e5cc92dbaf9f93982aff6b80c565cc/src/cascadia/CascadiaPackage/ProfileIcons/%7B0caa0dad-35be-5f56-a8ff-afceeeaa6101%7D.scale-200.png"
+    },
+    {
+      "file": "terminal-app.ico",
+      "sha256": "8486f9942964bfb6931519af2d3358a49364a56a8484530597908576561c581f",
+      "source": "https://raw.githubusercontent.com/microsoft/terminal/1046205b04e5cc92dbaf9f93982aff6b80c565cc/res/terminal.ico"
+    },
+    {
+      "file": "terminal-current.ico",
+      "provenance": "terminal-current.source.json",
+      "sha256": "af7211c63e587adc88053873aa42937c73ed5601bc347aa0b8d57977654dd59d",
+      "source": "installed Windows reference; terminal-current.source.json"
+    },
+    {
+      "file": "recycle-bin-empty.ico",
+      "provenance": "recycle-bin-empty.source.json",
+      "sha256": "e387062989bdfc24aa2678708f353d87a2092cbe460f494768d3ee3d6411b032",
+      "source": "installed Windows reference; recycle-bin-empty.source.json"
+    },
+    {
+      "file": "recycle-bin-full.ico",
+      "provenance": "recycle-bin-full.source.json",
+      "sha256": "9bdae48578324973696ab7c2f4b4f8c66b991eee96e3a6ae3b5eb6855e171299",
+      "source": "installed Windows reference; recycle-bin-full.source.json"
+    },
+    {
+      "file": "taskmgr.ico",
+      "provenance": "taskmgr.source.json",
+      "sha256": "d54063648654d01927348ec7a36fbfea653073d304e3889c036b59afaeb62e5d",
+      "source": "installed Windows reference; taskmgr.source.json"
+    },
+    {
+      "file": "calculator.ico",
+      "provenance": "calculator.source.json",
+      "sha256": "f7c16958184e7d63178836826c405114d32b68cf4ccec4c611e4501e3c9707a0",
+      "source": "installed Windows reference; calculator.source.json"
+    },
+    {
+      "file": "clock.ico",
+      "provenance": "clock.source.json",
+      "sha256": "34b5f9f48ef68daad4dae4b264020ebe4308f17aa770a7ed3a203f23c2817093",
+      "source": "installed Windows reference; clock.source.json"
+    },
+    {
+      "file": "paint.ico",
+      "provenance": "paint.source.json",
+      "sha256": "120efd8b2363edd98684c37fda5e9647722474467ad923ce8ecd9480117257c0",
+      "source": "installed Windows reference; paint.source.json"
+    },
+    {
+      "file": "snipping-tool.ico",
+      "provenance": "snipping-tool.source.json",
+      "sha256": "29840a36beb11381a7e03f6454b364f6fc1d37cad42fda759f0ad3548e170be6",
+      "source": "installed Windows reference; snipping-tool.source.json"
+    },
+    {
+      "file": "weather.ico",
+      "provenance": "weather.source.json",
+      "sha256": "676c1fbda170031d7aac13c61690fa72698332e94d2c41ffcae28d195c854a5f",
+      "source": "installed Windows reference; weather.source.json"
+    },
+    {
+      "file": "magnifier.ico",
+      "provenance": "magnifier.source.json",
+      "sha256": "275fe09e01822d93fc7f4f98ed48678f35fae58091b42f75fc1fc496014178ce",
+      "source": "installed Windows reference; magnifier.source.json"
+    },
+    {
+      "file": "narrator.ico",
+      "provenance": "narrator.source.json",
+      "sha256": "cc118b61e529fa68c9aaff88829b7065a0b2ca77cad8e535e3f76eb8da65aed1",
+      "source": "installed Windows reference; narrator.source.json"
+    },
+    {
+      "file": "on-screen-keyboard.ico",
+      "provenance": "on-screen-keyboard.source.json",
+      "sha256": "a2d614d61a195b55e894af0ab15fc17f56a98d83c6ef4c430e2b1344f3fb6fd9",
+      "source": "installed Windows reference; on-screen-keyboard.source.json"
+    },
+    {
+      "file": "voice-access.ico",
+      "provenance": "voice-access.source.json",
+      "sha256": "27bfefa634b99dc4f76f1733bb7ba585be89bc02afeeae23ff86d19dca5a85d7",
+      "source": "installed Windows reference; voice-access.source.json"
+    },
+    {
+      "file": "live-captions.ico",
+      "provenance": "live-captions.source.json",
+      "sha256": "647b34770c60a7c2e12dcb0415ee32dda0d26cdd57ae5437aff34849f9f542ac",
+      "source": "installed Windows reference; live-captions.source.json"
+    },
+    {
+      "file": "run.ico",
+      "provenance": "run.source.json",
+      "sha256": "140326ca88fbea64e7e101430821129303bc522929cdb1ae89f75eb95e20cfeb",
+      "source": "installed Windows reference; run.source.json"
+    },
+    {
+      "file": "nonedrive.ico",
+      "provenance": "nonedrive.source.json",
+      "sha256": "ea788d7a70ed851d010514412a0e8772fffbee66145fce722896857903f51e76",
+      "source": "installed Windows reference; nonedrive.source.json"
+    },
+    {
+      "file": "linux.ico",
+      "provenance": "linux.source.json",
+      "sha256": "a5e8517aa23b7d217b002ae57c663b2808e7593a2e082a406a950f847eabdcf8",
+      "source": "installed Windows reference; linux.source.json"
+    },
+    {
+      "file": "terminal-wsl.ico",
+      "provenance": "terminal-wsl.source.json",
+      "sha256": "e241b25f2ede007749465ec75fe682a46fcc9a1f3a73658d468f57f37625017b",
+      "source": "installed Windows reference; terminal-wsl.source.json"
+    },
+    {
+      "file": "file-settings.ico",
+      "provenance": "file-settings.source.json",
+      "sha256": "410ed98310032e5aecc1e76c00c67c15171cdad97e6ead18822c3860d6003a0e",
+      "source": "installed Windows reference; file-settings.source.json"
+    },
+    {
+      "file": "file-powershell.ico",
+      "provenance": "file-powershell.source.json",
+      "sha256": "2359fc3772d2586aa9d0487fd686d913455333085fce5942f6c75f5dc8c94bc4",
+      "source": "installed Windows reference; file-powershell.source.json"
+    },
+    {
+      "file": "file-photo.ico",
+      "provenance": "file-photo.source.json",
+      "sha256": "00b70d056bd96ce9e7d37b013f0b5453096a84b749dee85ef66774ff24474281",
+      "source": "installed Windows reference; file-photo.source.json"
+    },
+    {
+      "file": "file-media.ico",
+      "provenance": "file-media.source.json",
+      "sha256": "0de298078416bbc17a0f6646d0dc51169519f43add147e447ea6c47c0de91e75",
+      "source": "installed Windows reference; file-media.source.json"
+    },
+    {
+      "file": "file-application.ico",
+      "provenance": "file-application.source.json",
+      "sha256": "8d9ea3b6dee47c19084f49a00691584a4f84a4f1c509c300d54f23215557c860",
+      "source": "installed Windows reference; file-application.source.json"
+    },
+    {
+      "file": "file-batch.ico",
+      "provenance": "file-batch.source.json",
+      "sha256": "38ce29f2c975ec32e027000ff8faa3d2ecee03a617ecd9d10ed8ef8a99b23ec1",
+      "source": "installed Windows reference; file-batch.source.json"
+    },
+    {
+      "file": "file-system.ico",
+      "provenance": "file-system.source.json",
+      "sha256": "7a2d9fc323d757e50b45addd7ee841470a91f4a626a6be8e00f5e0b6dceb8b38",
+      "source": "installed Windows reference; file-system.source.json"
+    },
+    {
+      "file": "file-disc-image.ico",
+      "provenance": "file-disc-image.source.json",
+      "sha256": "df721296dfcca9da1198b033c7261d4c663fd6957cfd1486da2d204ab5fca8e8",
+      "source": "installed Windows reference; file-disc-image.source.json"
+    },
+    {
+      "file": "file-virtual-disk.ico",
+      "provenance": "file-virtual-disk.source.json",
+      "sha256": "4de01efad60e41c42d1a795a48d8faad4019b4f45def19238fc64576a1bd3cec",
+      "source": "installed Windows reference; file-virtual-disk.source.json"
+    },
+    {
+      "file": "file-installer.ico",
+      "provenance": "file-installer.source.json",
+      "sha256": "a3230f5eb911b209f7c98ce2b2909e49c460a7b3b36c0d67cdc68180c4999b8c",
+      "source": "installed Windows reference; file-installer.source.json"
+    },
+    {
+      "file": "file-font.ico",
+      "provenance": "file-font.source.json",
+      "sha256": "0a5f933b62602a1782d76ffd1475291539f2e2ca018f103e17f94631fc481a89",
+      "source": "installed Windows reference; file-font.source.json"
+    },
+    {
+      "file": "file-registry.ico",
+      "provenance": "file-registry.source.json",
+      "sha256": "453d56dbca4cd46c91c67425f7f3cec1be498174436fca574d1db3272e789212",
+      "source": "installed Windows reference; file-registry.source.json"
+    },
+    {
+      "file": "file-internet-shortcut.ico",
+      "provenance": "file-internet-shortcut.source.json",
+      "sha256": "03e5a120e9df71485c2e5862d3bb3e07feee6c742dae8ba0a444d7bb83f8aee5",
+      "source": "installed Windows reference; file-internet-shortcut.source.json"
+    },
+    {
+      "file": "file-cabinet.ico",
+      "provenance": "file-cabinet.source.json",
+      "sha256": "3f929cda8ec36d03c0b312b460d49313bcc0c985a481851c2674bbefe915105c",
+      "source": "installed Windows reference; file-cabinet.source.json"
+    },
+    {
+      "file": "file-zip.ico",
+      "provenance": "file-zip.source.json",
+      "sha256": "a0c739ab5792c3c48cd6939d365d328799cc6f665d717ffa76e0c3fc8eb9c459",
+      "source": "installed Windows reference; file-zip.source.json"
+    },
+    {
+      "file": "file-certificate.ico",
+      "provenance": "file-certificate.source.json",
+      "sha256": "08b70afc9dd60ba8768e2726667248d1b2e45b50a7e1e0e3cd443743ee9596a6",
+      "source": "installed Windows reference; file-certificate.source.json"
+    }
+  ],
+  "license": "not_declared_by_repository",
+  "use": "owner-requested local development assets; distribution rights unreviewed"
+}

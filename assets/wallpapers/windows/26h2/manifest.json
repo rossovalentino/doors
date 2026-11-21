@@ -1,0 +1,225 @@
+{
+  "version": 2,
+  "captured": "2026-11-12",
+  "source": "The owner's Windows 11 Pro 26H2 (build 10.0.26300): C:\\Windows\\Web\\Wallpaper; img0 and img19 are byte-identical to the WINDOWS-BLOOM-LOCAL and WINDOWS-WALLPAPERS-LOCAL pins",
+  "license": "Windows supplied; local reference assets, distribution unreviewed",
+  "themes": "C:\\Windows\\Resources\\Themes\\{aero,dark,themeA,themeB,themeC,themeD}.theme",
+  "pictures": [
+    {
+      "id": 0,
+      "file": "img0.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg",
+      "bytes": 1602752,
+      "sha256": "a37491a5e479e191cfe547b484426037455ce8aacff7ab15f91925330c24864f",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 1,
+      "file": "img19.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\Windows\\img19.jpg",
+      "bytes": 1383556,
+      "sha256": "d54262032574b15ccf541e40fa13475ffb39d8682c19383e917f3ed5e8bbca71",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 2,
+      "file": "img20.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeA\\img20.jpg",
+      "bytes": 826734,
+      "sha256": "6610e4c12b5ccaa2906e7584339786378d921cbaf7c4b3bc5bd585e3f955b685",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 3,
+      "file": "img28.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeC\\img28.jpg",
+      "bytes": 1111289,
+      "sha256": "27786bd11e2313373246a42c7173bb953d3982665267744766e6a6649b20f3e0",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 4,
+      "file": "img21.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeA\\img21.jpg",
+      "bytes": 833851,
+      "sha256": "25f520fc92151159441a816e29e2e225362cc0b25538ef7d5d52b13166d86a58",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 5,
+      "file": "img22.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeA\\img22.jpg",
+      "bytes": 760748,
+      "sha256": "433d253458c754ddd0d85c0b648569ae8bf8e42d9a47cae178b8125fa85ca734",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 6,
+      "file": "img23.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeA\\img23.jpg",
+      "bytes": 907112,
+      "sha256": "38795e3adab04932e79a87bdd33ec5724a16106cbcb6e8b0aafba7916f4396bb",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 7,
+      "file": "img24.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeB\\img24.jpg",
+      "bytes": 1150704,
+      "sha256": "fdaaa298801726cab1e9a0a36c9dd2eb758a99ad66ddd54b8aafcdbbb1eab517",
+      "dimensions": [
+        3840,
+        2401
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 8,
+      "file": "img25.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeB\\img25.jpg",
+      "bytes": 1019877,
+      "sha256": "9f56f69ee6d80fcd612e8ff43f23ed9744114868575a873f840191ddbdd48289",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 9,
+      "file": "img26.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeB\\img26.jpg",
+      "bytes": 985873,
+      "sha256": "885793edb838c1a313fb171b5e954635ef52b5249ff463a8903f870937d4552d",
+      "dimensions": [
+        3841,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 10,
+      "file": "img27.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeB\\img27.jpg",
+      "bytes": 1060216,
+      "sha256": "923836595dfbc7b2cf48663ea0016ec051ff2d0763b1417027e9e9d125b6550f",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 11,
+      "file": "img29.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeC\\img29.jpg",
+      "bytes": 1221892,
+      "sha256": "7d82931777aff713a5cbaf76988ee9eaa1fcc7d2f6c528bd1da8e685f3d2d209",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 12,
+      "file": "img30.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeC\\img30.jpg",
+      "bytes": 1068913,
+      "sha256": "6f4748bf44f714286bdb1ac749623015137e5c82146e6d62e38fcc343c8b0eb5",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 13,
+      "file": "img31.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeC\\img31.jpg",
+      "bytes": 1156806,
+      "sha256": "0b3a106ef42c13190b061e21af6602fa30980c7aee6f91e4cea529c830dbb803",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 14,
+      "file": "img32.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeD\\img32.jpg",
+      "bytes": 1077710,
+      "sha256": "2b8a86eea1db88b953e20a10b9209344c42771a3a9e6436c0da96a7838a124d9",
+      "dimensions": [
+        3841,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 15,
+      "file": "img33.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeD\\img33.jpg",
+      "bytes": 1076822,
+      "sha256": "538deaec8ceba75f7947abe8108a963e2bf9141b63c4dc41a9cae598a51e0f6d",
+      "dimensions": [
+        3841,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 16,
+      "file": "img34.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeD\\img34.jpg",
+      "bytes": 989305,
+      "sha256": "9d97034b71b2ee7b3639b4b590f4fef978f2041d0627f7f0c5fe1187bce735ef",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    },
+    {
+      "id": 17,
+      "file": "img35.jpg",
+      "source": "C:\\Windows\\Web\\Wallpaper\\ThemeD\\img35.jpg",
+      "bytes": 1087653,
+      "sha256": "d73d1b767321c258138626b345d51f36751d2a3fc14d313bf811c6983d19c11b",
+      "dimensions": [
+        3840,
+        2400
+      ],
+      "encoding": "baseline JPEG, 4:4:4"
+    }
+  ]
+}

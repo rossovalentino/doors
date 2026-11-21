@@ -1,0 +1,84 @@
+{
+  "file": "snipping-tool.ico",
+  "frames": 14,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "29840a36beb11381a7e03f6454b364f6fc1d37cad42fda759f0ad3548e170be6",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-16_altform-unplated.png",
+        "sha256": "0ca61574d619fb9ef7797beb0ca40b28bdf880ab3241ee391773e16614e3d28d",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-20_altform-unplated.png",
+        "sha256": "6432fa57d2eb3feb150c602039494290085b1ed4de4eb4eb1b3e6b0e16bf8fc0",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-24_altform-unplated.png",
+        "sha256": "26cf645e11dc49edebbe38c79e7978e4f0c8c485307429975745e2d3bff27d06",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-30_altform-unplated.png",
+        "sha256": "428eb81009fe0e68101a4a90026e5064a9e51cbfe8a13e179ae5324a51fa8305",
+        "size": 30
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-32_altform-unplated.png",
+        "sha256": "94c0d1bc7922a894e70e1b96d682df4cd0865f9517245904ec38275343ca1438",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-36_altform-unplated.png",
+        "sha256": "79441d5d579e611385f327f020240ab97d14b3357ca464b25f6e56bdf356c8c6",
+        "size": 36
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-40_altform-unplated.png",
+        "sha256": "b480d41559da9fb4762624177f029ce5e131d54a262cf930f30a371b484fd10b",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-48_altform-unplated.png",
+        "sha256": "86a27100e8d207f53d809e5dde5dc28a1b1c2e015eb7b8e7a73f4fedd5e910ae",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-60_altform-unplated.png",
+        "sha256": "381a34c1a1bdd931aa2ae1a1af76e73c0b88597993b2c07252c0c0f0ea2ed31c",
+        "size": 60
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-64_altform-unplated.png",
+        "sha256": "e231f1e632cd826bcc953a9077308cf15379cb585a760660ac4ae1e230cea8bc",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-72_altform-unplated.png",
+        "sha256": "13a5c4397a0ceb680a9c80f96ea79b5e84da5102e52f181b224ac23be4b68da2",
+        "size": 72
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-80_altform-unplated.png",
+        "sha256": "665b400fc2b3976dc2ccb181d34bb60b8f2eb9fa29fa9b799ac9fd758feaa9ec",
+        "size": 80
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-96_altform-unplated.png",
+        "sha256": "98f0c31f6589b475df1ea53f2bbb00175eb693c5a06ea0f484b6df546a8cfb0d",
+        "size": 96
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe\\Assets\\SnippingToolAppList.targetsize-256_altform-unplated.png",
+        "sha256": "124c2b21fb173552d224d4b55c3f54702fdbe64206986f1c0b224810b4d4fec3",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 14,
+  "use": "Owner-provided installed Windows reference; local development"
+}

@@ -1,0 +1,91 @@
+// Resources for the F2 resource variant (wingui-editor-rc.exe). The code
+// variant builds the same menu, accelerators and strings at run time.
+#pragma code_page(65001)
+#include <windows.h>
+#include "editor.h"
+
+IDR_MENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N", ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O", ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S", ID_FILE_SAVE
+        MENUITEM "Save &As...\tCtrl+Shift+S", ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit", ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z", ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X", ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C", ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V", ID_EDIT_PASTE
+        MENUITEM "De&lete\tDel", ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A", ID_EDIT_SELECTALL
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Custom &chrome window\tCtrl+K", ID_VIEW_CHROME
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Doors Editor", ID_HELP_ABOUT
+    END
+END
+
+IDR_ACCEL ACCELERATORS
+BEGIN
+    "N", ID_FILE_NEW, VIRTKEY, CONTROL
+    "O", ID_FILE_OPEN, VIRTKEY, CONTROL
+    "S", ID_FILE_SAVE, VIRTKEY, CONTROL
+    "S", ID_FILE_SAVEAS, VIRTKEY, CONTROL, SHIFT
+    "A", ID_EDIT_SELECTALL, VIRTKEY, CONTROL
+    "K", ID_VIEW_CHROME, VIRTKEY, CONTROL
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 220, 72
+STYLE DS_MODALFRAME | DS_SHELLFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Doors Editor"
+FONT 9, "Segoe UI", 400, 0, 0x1
+BEGIN
+    LTEXT "Doors Editor (resource variant)", IDC_ABOUT_TEXT, 10, 10, 200, 10
+    LTEXT "Independent Win32 fixture: λ 門 é", -1, 10, 24, 200, 10
+    DEFPUSHBUTTON "OK", IDOK, 160, 50, 50, 14
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE "Doors Editor"
+    IDS_UNTITLED "Untitled"
+    IDS_SAVE_PROMPT "Save changes to "
+END
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1, 0, 0, 0
+PRODUCTVERSION 1, 0, 0, 0
+FILEFLAGSMASK 0x3f
+FILEFLAGS 0
+FILEOS VOS_NT_WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE 0
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Doors OS P13 editor fixture (resource variant)"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "wingui-editor-rc"
+            VALUE "OriginalFilename", "wingui-editor-rc.exe"
+            VALUE "ProductName", "Doors OS test fixtures"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

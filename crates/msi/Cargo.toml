@@ -1,0 +1,13 @@
+[package]
+name = "door-msi"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Windows Installer databases: compound files, string pool, tables, summary information, and installation planning"
+
+[dependencies]
+door-cab = { path = "../cab" }
+
+[lints]
+workspace = true

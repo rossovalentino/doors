@@ -1,0 +1,15 @@
+{
+  "file": "file-font.ico",
+  "frames": 10,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "0a5f933b62602a1782d76ffd1475291539f2e2ca018f103e17f94631fc481a89",
+  "sources": {
+    "group_id": 419,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\fontext.dll",
+    "module_sha256": "0b1a7533511e0fa61b4986cd1f7366d838cde44651f377d21fff7a103aa303ea"
+  },
+  "supported_frames": 4,
+  "use": "Owner-provided installed Windows reference; local development"
+}

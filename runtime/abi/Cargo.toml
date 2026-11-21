@@ -1,0 +1,10 @@
+[package]
+name = "door-abi"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Door Native ABI 1 operation, status and checked wire schema"
+
+[lints]
+workspace = true

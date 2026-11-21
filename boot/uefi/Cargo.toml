@@ -1,0 +1,30 @@
+[package]
+name = "door-uefi"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[features]
+firmware = []
+
+[[bin]]
+name = "door-uefi"
+path = "src/main.rs"
+required-features = ["firmware"]
+test = false
+bench = false
+
+[dependencies]
+door-boot-protocol = { path = "../../crates/boot-protocol" }
+door-image-format = { path = "../../crates/image-format" }
+door-initfs = { path = "../../fs/initfs" }
+door-boot-debug = { path = "../debug" }
+uefi = { version = "=0.41.0", default-features = false }
+sha2 = { version = "=0.10.9", default-features = false, features = ["force-soft"] }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+all = "warn"

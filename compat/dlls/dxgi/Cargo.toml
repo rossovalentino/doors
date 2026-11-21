@@ -1,0 +1,22 @@
+[package]
+name = "door-dxgi"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original dxgi.dll for P18: no DXGI adapters until Doors' GPU stack (P19); factory creation reports DXGI_ERROR_UNSUPPORTED"
+
+[lib]
+name = "dxgi"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-windows-abi/guest-runtime"]
+
+[dependencies]
+door-windows-abi = { path = "../../abi", features = ["guest-heap"] }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

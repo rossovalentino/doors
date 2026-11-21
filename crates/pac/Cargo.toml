@@ -1,0 +1,10 @@
+[package]
+name = "door-pac"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Proxy auto-config: the JavaScript subset PAC scripts use, FindProxyForURL and the Netscape/Microsoft helpers, bounded for hostile scripts"
+
+[lints]
+workspace = true

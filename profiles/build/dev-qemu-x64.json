@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "record_kind": "build_profile",
+  "id": "dev-qemu-x64",
+  "rust_release": "1.94.1",
+  "llvm_version": "21.1.8",
+  "firmware": {
+    "package": "door-uefi",
+    "feature": "firmware",
+    "target": "x86_64-unknown-uefi",
+    "link_flags": [
+      "/Brepro",
+      "/debug:none"
+    ]
+  },
+  "kernel": {
+    "package": "door-kernel",
+    "feature": "baremetal",
+    "target": "x86_64-unknown-none",
+    "linker_script": "kernel/linker.ld",
+    "code_model": "kernel",
+    "relocation_model": "static",
+    "red_zone": false,
+    "floating_point_simd": "none-target soft-float compiler ABI; owned x87/MMX/SSE2 state initialized and preserved with FXSAVE64/FXRSTOR64; OSXSAVE disabled; no AVX",
+    "symbols": "unstripped ELF symbol table plus per-build kernel.map"
+  },
+  "initfs_manifest": "profiles/build/initfs.json",
+  "hardware_profile": "profiles/hardware/qemu-diagnostic-x64.json",
+  "page_bytes": 4096,
+  "page_table_pool_pages": 64,
+  "stack_bytes": 131072,
+  "kernel_virtual_base": "0xffffffff80000000",
+  "stack_virtual_base": "0xffffffff90001000",
+  "kernel_segment_limit": 8,
+  "rebuild_scope": "complete firmware/kernel/initfs file hashes on pinned workstation; no disk sector or cross-host claim"
+}

@@ -1,0 +1,15 @@
+{
+  "file": "file-zip.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "a0c739ab5792c3c48cd6939d365d328799cc6f665d717ffa76e0c3fc8eb9c459",
+  "sources": {
+    "group_id": 101,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\zipfldr.dll.mun",
+    "module_sha256": "ca88bc9f6d2dde44481911968e19a67458734d7a341c14d0a9274f3cb6b59ad2"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

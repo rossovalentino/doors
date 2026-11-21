@@ -1,0 +1,35 @@
+// The COMOOP-A type library: the dual interface comserver.exe's
+// LocalServer32 object implements (MIDL builds doorsserver.tlb; the
+// automation marshaler builds proxies and stubs from it).
+import "oaidl.idl";
+import "ocidl.idl";
+
+[uuid(D0025B10-C0A1-4E5B-8F00-436F6D50726F), version(1.0), helpstring("Doors Server Type Library")]
+library DoorsServerLib
+{
+    importlib("stdole2.tlb");
+
+    [object, uuid(D0025B11-C0A1-4E5B-8F00-436F6D50726F), dual, oleautomation, nonextensible,
+     helpstring("The local server's dual interface")]
+    interface IDoorsServer : IDispatch
+    {
+        [id(1), propget] HRESULT Pid([out, retval] long *pid);
+        [id(2), propget] HRESULT Thread([out, retval] long *thread);
+        [id(3)] HRESULT Add([in] long a, [in] long b, [out, retval] long *sum);
+        [id(4), propget] HRESULT Name([out, retval] BSTR *value);
+        [id(4), propput] HRESULT Name([in] BSTR value);
+        [id(5)] HRESULT Echo([in] VARIANT value, [out, retval] VARIANT *copy);
+        [id(6)] HRESULT Join([in] SAFEARRAY(BSTR) parts, [out, retval] BSTR *joined);
+        [id(7)] HRESULT Swap([in, out] BSTR *text, [in, out] long *number);
+        [id(8)] HRESULT Fail(void);
+        [id(9)] HRESULT Callback([in] IDispatch *sink, [in] long value, [out, retval] long *result);
+        [id(10)] HRESULT Crash(void);
+        [id(11)] HRESULT Scale([in] double x, [in] float factor, [out, retval] double *result);
+    };
+
+    [uuid(D0025B12-C0A1-4E5B-8F00-436F6D50726F), helpstring("Doors Server Object")]
+    coclass DoorsServer
+    {
+        [default] interface IDoorsServer;
+    };
+};

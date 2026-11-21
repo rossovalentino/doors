@@ -1,0 +1,32 @@
+== environment
+PROCESSOR_ARCHITECTURE=x86
+PROCESSOR_ARCHITEW6432=AMD64
+ProgramFiles=C:\Program Files (x86)
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+== folders
+ProgramFiles=c:\program files (x86)
+ProgramFilesX86=c:\program files (x86)
+ProgramFilesX64=0x80070002
+ProgramFilesCommon=c:\program files (x86)\common files
+ProgramFilesCommonX64=0x80070002
+System=c:\windows\system32
+SystemX86=c:\windows\syswow64
+Windows=c:\windows
+== registry
+default ProgramFilesDir=C:\Program Files (x86)
+64 ProgramFilesDir=C:\Program Files
+32 ProgramFilesDir=C:\Program Files (x86)
+default CommonFilesDir=C:\Program Files (x86)\Common Files
+64 CommonFilesDir=C:\Program Files\Common Files
+default ProgramW6432Dir=C:\Program Files
+node-64=0
+app-paths=0
+app-paths-64=0
+== redirection
+redirection disable=1 old=1 revert=1 sysnative=1 syswow64=1
+== child
+child exit=31 wow64=0 machine=0x00000000 native=0x00008664 self=1

@@ -1,0 +1,15 @@
+{
+  "file": "file-application.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "8d9ea3b6dee47c19084f49a00691584a4f84a4f1c509c300d54f23215557c860",
+  "sources": {
+    "group_id": 15,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\imageres.dll.mun",
+    "module_sha256": "d816fd64e8c1c26014778c9667234f7459814bd38aa04e35c46a25073d0876ee"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

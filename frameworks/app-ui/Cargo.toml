@@ -1,0 +1,16 @@
+[package]
+name = "door-app-ui"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+[dependencies]
+door-workspace = { path = "../../desktop/workspace" }
+door-abi = { path = "../../runtime/abi" }
+door-sys = { path = "../../runtime/sys" }
+door-rt = { path = "../../runtime/rt" }
+door-service-client = { path = "../service-client" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+door-graphics-text = { path = "../text" }
+door-graphics-core = { path = "../../graphics/compositor" }
+qoi = { version = "=0.4.1", default-features = false, features = ["alloc"] }

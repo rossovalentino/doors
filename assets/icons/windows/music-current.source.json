@@ -1,0 +1,15 @@
+{
+  "file": "music-current.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "aebd87be2179c45d1a5c621ebac5be2fe53330a8655eefaf1ff6cf6f2133f824",
+  "sources": {
+    "group_id": 108,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\imageres.dll.mun",
+    "module_sha256": "d816fd64e8c1c26014778c9667234f7459814bd38aa04e35c46a25073d0876ee"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

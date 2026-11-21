@@ -1,0 +1,8 @@
+{
+    "source": "C:Program FilesWindowsAppsMicrosoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbweAssetsSnSkFluent.ttf",
+    "kind": "installed_windows_font_reference",
+    "retrieved": "2026-11-01",
+    "package": "Microsoft.ScreenSketch_11.2608.41.0_x64__8wekyb3d8bbwe",
+    "font_sha256": "1b934c8dd59e7f1bdec913fcb3deaa6ae3db0d9ffb626277130d148fe63adccf",
+    "use": "Owner-provided installed Windows reference; local development. Snipping Tool's toolbar, markup and capture-bar glyphs (assets/icons/windows-shell/manifest.json entries with font snip), rasterized offline; never redistributed."
+}

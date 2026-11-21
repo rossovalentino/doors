@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="136" viewBox="0 0 200 136"><defs>
+<linearGradient id="metal" x2="0" y2="1"><stop stop-color="#e9eef4"/><stop offset=".48" stop-color="#adb7c4"/><stop offset=".52" stop-color="#7c8797"/><stop offset="1" stop-color="#dce3ec"/></linearGradient>
+<linearGradient id="edge" x2="0" y2="1"><stop stop-color="#465265"/><stop offset="1" stop-color="#131b29"/></linearGradient>
+
+
+
+
+<g id="wall"><image width="160" height="100" preserveAspectRatio="xMidYMid slice" href="../../wallpapers/windows/bloom-dark.png"/></g>
+</defs><ellipse cx="100" cy="127" rx="83" ry="4" fill="#58708b" opacity=".12"/><rect x="15" y="9" width="170" height="116" rx="10" fill="url(#edge)" stroke="#8797ac" stroke-width="1.2"/><svg x="23" y="15" width="154" height="104" viewBox="0 0 160 100" preserveAspectRatio="none"><use href="#wall"/></svg><circle cx="19" cy="67" r="1.2" fill="#a6b7cd"/><path d="M84 116H116" stroke="white" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/><path d="M17 16Q17 10 24 10H175" fill="none" stroke="white" stroke-opacity=".35"/></svg>

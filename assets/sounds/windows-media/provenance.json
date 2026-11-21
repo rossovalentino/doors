@@ -1,0 +1,19 @@
+{
+  "use": "Owner-requested local development (2 November 2026): the Windows 11 26H2 default sound scheme, read from the owner's PC (HKCU/AppEvents/Schemes, read-only) and copied from C:/Windows/Media. Private build only; Microsoft-owned, never redistributed.",
+  "retrieved": "2026-11-02",
+  "files": [
+    {"file": "background.wav", "source": "C:/Windows/Media/Windows Background.wav", "sha256": "d385cdbbeac24293ccbbeb3c3d11e6168f5d40f9248863c02441f6050d933104"},
+    {"file": "foreground.wav", "source": "C:/Windows/Media/Windows Foreground.wav", "sha256": "6cf2e977fbecaba72e482409383f6425b951f5e2125c1ccadf9e7ce8067c98a6"},
+    {"file": "notify-system-generic.wav", "source": "C:/Windows/Media/Windows Notify System Generic.wav", "sha256": "2fe09e9aaa34ff473dc40fe7b62f277e395a787da0e76e0d6f94d3bd31fc6540"},
+    {"file": "notify-calendar.wav", "source": "C:/Windows/Media/Windows Notify Calendar.wav", "sha256": "220bd8b589df6fb4e192bb66e5a2ae25789019910775e3fea544fca2451959b2"},
+    {"file": "notify-email.wav", "source": "C:/Windows/Media/Windows Notify Email.wav", "sha256": "13f659206c964082b7870608892d45ca6767eea1d68baf579df9eda0c9a20e24"},
+    {"file": "notify-messaging.wav", "source": "C:/Windows/Media/Windows Notify Messaging.wav", "sha256": "f52e5144d395de8d4ed8a922575241c2448c1e3d8910f945a5254a667c9c766b"},
+    {"file": "unlock.wav", "source": "C:/Windows/Media/Windows Unlock.wav", "sha256": "a3a2d0364163caf3a0be214423afefac4be9d01e2b467f2eadc6660e31b338b3"},
+    {"file": "user-account-control.wav", "source": "C:/Windows/Media/Windows User Account Control.wav", "sha256": "a29cf7cd85d52551d0d1e25948735e8e8bebae37a33ca2a75d9c60f772508e10"},
+    {"file": "hardware-insert.wav", "source": "C:/Windows/Media/Windows Hardware Insert.wav", "sha256": "39dd14af42b9a269c57e8d7ce28f32f8a9dbc1b62747975f6ca3c83bc1a19eb8"},
+    {"file": "hardware-remove.wav", "source": "C:/Windows/Media/Windows Hardware Remove.wav", "sha256": "f88afeb43a625256cc7e41c2d114b398f13de5470c4419948d7328ca580ee608"},
+    {"file": "hardware-fail.wav", "source": "C:/Windows/Media/Windows Hardware Fail.wav", "sha256": "f690a8a57f9852cf596e155c91f2f9b461cd97925afa1d5f0958b3f74f0de39a"},
+    {"file": "alarm01.wav", "source": "C:/Windows/Media/Alarm01.wav", "sha256": "46c758f03534be1a2247413e7e5d92bcfdae1986f8f7f9fcaeabd3a72d131a2b"},
+    {"file": "message-nudge.wav", "source": "C:/Windows/Media/Windows Message Nudge.wav", "sha256": "26976ee1fdc658d09ca1caf5bf08e374270c9fe9c7e5e1781cb077bf14e10c38"}
+  ]
+}

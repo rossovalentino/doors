@@ -1,0 +1,24 @@
+[package]
+name = "door-storage-core"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+door-initfs = { path = "../initfs" }
+door-keyboard-layouts = { path = "../../frameworks/keyboard-layouts" }
+door-locale = { path = "../../frameworks/locale" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+door-file-ops = { path = "../file-ops" }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+all = "warn"
+
+[features]
+# `cargo xtask` only: the system identity for provisioning a volume image
+# offline on the host (never enabled by a guest service).
+offline-provisioning = []

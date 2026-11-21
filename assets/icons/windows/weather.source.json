@@ -1,0 +1,84 @@
+{
+  "file": "weather.ico",
+  "frames": 14,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "676c1fbda170031d7aac13c61690fa72698332e94d2c41ffcae28d195c854a5f",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-16_altform-unplated.png",
+        "sha256": "ee0ee4bf06a8603a5e2fdc411b8b809aebb0de586295c5143e43898e0601894d",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-20_altform-unplated.png",
+        "sha256": "3068e70b12b8755f23875739990f3519cb38cb3afea0fec1951bd14634786aeb",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-24_altform-unplated.png",
+        "sha256": "70a244c17304bb1d7d24c62da7e77b802682ac8738aef673550d77d2f93f173a",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-30_altform-unplated.png",
+        "sha256": "d442355ec82746dd6e9d0058d8e4fc1cb0bcab76c866c97e536a2840f55f609e",
+        "size": 30
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-32_altform-unplated.png",
+        "sha256": "7a610a95574d631ebf628f376a42c9f569460c346d418506473eb875c969ceae",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-36_altform-unplated.png",
+        "sha256": "5f5818dbe6bbcd1de2f0946cecbda2e4bec4edc3a88b2bbb7596930ee541d31c",
+        "size": 36
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-40_altform-unplated.png",
+        "sha256": "b1bd675ebef60b86ff27381e77cbff53567c1ea064f66404911f701d66e6369a",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-48_altform-unplated.png",
+        "sha256": "637c4e97b52cb314ece8037b9285900603e002d539f429928c9ad602244e6174",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-60_altform-unplated.png",
+        "sha256": "606785f2a1e5476f5155cacd9f331bfd18217c933d573ac33eb96666f8c1ccee",
+        "size": 60
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-64_altform-unplated.png",
+        "sha256": "37a8101a88714e911d803075b62ebaf5f05d734dd55951669ac33f5ff19e0ed1",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-72_altform-unplated.png",
+        "sha256": "994d220dd979b5926b70d8a6c5c67384d8724ef263eed34213c13832724eb203",
+        "size": 72
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-80_altform-unplated.png",
+        "sha256": "2cd37bbe318837750af1efda6c07ab5fd8dac9b908241d68dd4976017ac5cf56",
+        "size": 80
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-96_altform-unplated.png",
+        "sha256": "3a34153c4f53b265d1607f3303842e781650ae9c62f0caf638d6483b1572c9cf",
+        "size": 96
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Assets\\AppTiles\\WeatherAppList.targetsize-256_altform-unplated.png",
+        "sha256": "1b68de70db789065abe89da29216393e3ac7fd058232a6413a86bc1b37292e39",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 14,
+  "use": "Owner-provided installed Windows reference; local development"
+}

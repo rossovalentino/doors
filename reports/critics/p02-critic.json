@@ -1,0 +1,340 @@
+{
+  "scope_limits": [
+    "Independent review and these tests do not guarantee absence of all bugs",
+    "One acquired single-CPU TCG QEMU/OVMF development profile; physical hardware and acceleration unqualified",
+    "Diagnostic console only; no native userland, desktop or Windows compatibility claim",
+    "Own descriptors/exceptions/IRQ/SMP/allocator/ACPI roots/reclamation remain P03 or later work",
+    "Hashes provide identity rather than signature or Secure Boot authentication",
+    "Raw evidence and preserved boot media are local trusted filesystem records, not an external attestation"
+  ],
+  "evidence_report_sha256": "98b5ecf6be25221cdffd1bac555ea0184658c58ba2410be823f3aa5e2046ff1d",
+  "schema_version": 1,
+  "verification": [
+    "qualifying baseline persistent validator passes",
+    "all six current guest outcomes reclassified from retained serial/process bytes",
+    "two actual complete firmware/kernel/initfs hashes match with distinct build targets and kernel maps",
+    "61 host tests and strict host/guest lint plus six library target checks preserved",
+    "all H/D/R/P interactions and actual reboot readiness preserved",
+    "actual framebuffer normal and panic screens visually inspected",
+    "66 exact current build inputs verified against qualifying snapshot",
+    "P00/P01 remain historically reviewed and P03-P29 not_started"
+  ],
+  "phase": "P02",
+  "checked_raw_stream_hashes": 122,
+  "outcome": "passed",
+  "reviewed_input_count": 66,
+  "initial_review": "reports/runs/critic-p02/findings-initial.json",
+  "unresolved_findings": 0,
+  "cleanup": "Transient stdin-compiled probe executables and PDBs removed; small fixtures, mutated record copies and raw results retained as evidence; no retained throwaway source helpers",
+  "replayed_findings": [
+    {
+      "status": "resolved",
+      "id": "P02-C01",
+      "result": "Host rejects directory configuration and actual new firmware exits35 with missing boot configuration before kernel transfer; all consumers use shared regular-file lookup",
+      "evidence": [
+        "reports/runs/critic-p02/directory-config-stage-followup.log",
+        "reports/runs/critic-p02/firmware-directory-followup.log",
+        "reports/runs/host-1791816183800381400-34632/report.json"
+      ]
+    },
+    {
+      "status": "resolved",
+      "id": "P02-C02",
+      "result": "Missing medium and altered scenario arguments are rejected; private staged bytes, variables, run identity and exact derived invocation revalidated",
+      "evidence": [
+        "reports/runs/critic-p02/missing-medium-followup-probe.log",
+        "reports/runs/critic-p02/invalid-argv-followup-probe.log"
+      ]
+    },
+    {
+      "status": "resolved",
+      "id": "P02-C03",
+      "result": "All four independent demo mutations rejected; actual command05, PID26784, completed exit0, bounded controller/std streams and distinct normal/diagnostic/panic screens preserved",
+      "evidence": [
+        "reports/runs/critic-p02/demo-profile-followup-probe.log",
+        "reports/runs/critic-p02/demo-argv-followup-probe.log",
+        "reports/runs/critic-p02/demo-command-followup-probe.log",
+        "reports/runs/critic-p02/demo-screens-followup-probe.log",
+        "reports/runs/host-1791815862612990400-20820/report.json"
+      ]
+    },
+    {
+      "status": "resolved",
+      "id": "P02-C04",
+      "result": "100-byte directory wire name returns Err(Path) with output unchanged",
+      "evidence": [
+        "reports/runs/critic-p02/archive-boundary-followup.log"
+      ]
+    }
+  ],
+  "raw_validation": "reports/runs/critic-p02/raw-validation-followup.json",
+  "record_kind": "phase_critic_review",
+  "evidence_report": "reports/runs/host-1791815795893891400-20820/report.json",
+  "reviewed_build_inputs": [
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "de3fed914d688165550deae7bb581490f89f64f2c07fd57145ddc3e5742d3abe"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "13a7c89b2a3e1f982c92daf647fee4675f8069d7b6ca63eaa287b17afed179f3"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "6ae370f9197c344d11be2b77dbde37745e323dcf5f0e238a72605c0f8b52f7f1"
+    },
+    {
+      "path": "DOOR_OS_MASTER_SPECIFICATION.md",
+      "sha256": "8a46811401c56d8fc9a455978b9292e8d030aee95ae7db48cece13aa615acf37"
+    },
+    {
+      "path": "boot/config/boot.txt",
+      "sha256": "e534a05ede0f5838be5e78c7b4abb73fd40affbd3a5973eae9636913632da273"
+    },
+    {
+      "path": "boot/uefi/Cargo.toml",
+      "sha256": "c85021f93028d0a6845dd2fd3ed037e90ad072459071ade997103bc70def5c4d"
+    },
+    {
+      "path": "boot/uefi/src/boot_info.rs",
+      "sha256": "64cf795e7bd7f2b4f09fb0b368c0e33d2f5b039d65170aa14a176b3a986bc378"
+    },
+    {
+      "path": "boot/uefi/src/elf_loader.rs",
+      "sha256": "bdbed0a58447b1379ca02c664c16a6aa0d710961fd4dafbff7239381d8a6b31f"
+    },
+    {
+      "path": "boot/uefi/src/firmware.rs",
+      "sha256": "1bab7fdac780c82e9cec148f5356fd4be0b1995e3722301809d27145dfc0cb16"
+    },
+    {
+      "path": "boot/uefi/src/handoff.rs",
+      "sha256": "49a24fee0c909764252bf0dacf0e619436b11d1379fbbf13cccb5ccc8f8712a8"
+    },
+    {
+      "path": "boot/uefi/src/main.rs",
+      "sha256": "a29b0997d1202940e643b27e5fede1408935d0bdebf6009bfaed8931ead57961"
+    },
+    {
+      "path": "boot/uefi/src/paging.rs",
+      "sha256": "b291483008ff7d1218837fe07b89f7021e8544ff73db065a75a58ba90635c0dd"
+    },
+    {
+      "path": "boot/debug/Cargo.toml",
+      "sha256": "5a5dd1fa0ee4402924bc8b0cc9294042441cebaaa3efd12b38a35ff9b518ef0e"
+    },
+    {
+      "path": "boot/debug/src/lib.rs",
+      "sha256": "1ef95270f548210f3568fcda58bf9015df9da726c14b5db08f1e14bf044f5fb2"
+    },
+    {
+      "path": "crates/boot-protocol/Cargo.toml",
+      "sha256": "0f576b285913461a7f9f993be82aaa4eaea7e11727ddd7a0d99bd1e1c7a5d453"
+    },
+    {
+      "path": "crates/boot-protocol/src/boot.rs",
+      "sha256": "79f45d4d8de9540fc9b3b2e7ec0145467d74207838549fb6f2dc72de5c057a59"
+    },
+    {
+      "path": "crates/boot-protocol/src/lib.rs",
+      "sha256": "056c2fdf78c4d578ae327d34e1f950936792a0b25bd9dab0f14baf1ef02abc61"
+    },
+    {
+      "path": "crates/boot-protocol/src/memory.rs",
+      "sha256": "efb74a6922ac3b62b26bae3a881e879b75893b8ca6a05e246f89af051a83eefb"
+    },
+    {
+      "path": "crates/boot-protocol/src/wire.rs",
+      "sha256": "971ee5e06739162fcb3b811f93f3fa1739b01c638b05daf0e26daf1ac4292b11"
+    },
+    {
+      "path": "crates/boot-protocol/tests/boot_info.rs",
+      "sha256": "adfeb47265bb9d22b620a78d1a22f9f1fe87e5b67aed9c69523a854f314bf3e0"
+    },
+    {
+      "path": "crates/boot-protocol/tests/kernel_handoff.rs",
+      "sha256": "bef2674be4e65a6ae82b50664537b21b6804736c1aac38249abe53df43fbde25"
+    },
+    {
+      "path": "crates/image-format/Cargo.toml",
+      "sha256": "a1ef1bfd8e15776cab8bbdf134a6e116e7da3c060a2b475f3a7f6d255f94888d"
+    },
+    {
+      "path": "crates/image-format/src/elf.rs",
+      "sha256": "ffdc395132e7c70e72b8ba4bf34a6a4cf3bc409c6d98fb4f585a479a230c3de3"
+    },
+    {
+      "path": "crates/image-format/src/lib.rs",
+      "sha256": "bf2145e0553e49ba26b3123f73a6ac3b5473b5b6def5d1218f517bc34eae9e5d"
+    },
+    {
+      "path": "crates/image-format/src/pe.rs",
+      "sha256": "8b2da15ebac6e7f1f4405b64196135cbf3263ecb5f137ed562fe5d500d5093d7"
+    },
+    {
+      "path": "crates/image-format/tests/images.rs",
+      "sha256": "0855ef9176afafbdc35e243262ee58133058dc447565efef33f587b8f4e0c65a"
+    },
+    {
+      "path": "fs/initfs/Cargo.toml",
+      "sha256": "7f7db278ccdd88f19751b0e9790bd31b13d14bb339b3e58d323c23eff7c85c18"
+    },
+    {
+      "path": "fs/initfs/src/lib.rs",
+      "sha256": "10a0ce559f4226e3f9556e0110aba587c617525b3ade7de2f2122e7756a13ebe"
+    },
+    {
+      "path": "kernel/Cargo.toml",
+      "sha256": "6bae9acdb4c8a4adad5cfa6ebc2f208b65e55ffde7022bd73aac71a93f098475"
+    },
+    {
+      "path": "kernel/linker.ld",
+      "sha256": "e441631489dcbf6721b117305cb3778f382576cf4c4278ba0e087989699f0a0c"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/entry.S",
+      "sha256": "a80329dfd4151934f315915959b08683b1d181b499bbd898acc3179e0417f3c2"
+    },
+    {
+      "path": "kernel/src/arch/x86_64/mod.rs",
+      "sha256": "9f3e2dfa656999a46dbf490b4c79aa574a64efa1450f53e6d7a5981f8044aedc"
+    },
+    {
+      "path": "kernel/src/console/font.rs",
+      "sha256": "54893d2a71b2f74464ee7dfcb3e7b942d32cd89b7aed0c7f3802a97b969989d7"
+    },
+    {
+      "path": "kernel/src/console/mod.rs",
+      "sha256": "5e384f06b2d3f6485e8ad8d56e46ccc9e1475a92955aedad2e8923c664d8a3db"
+    },
+    {
+      "path": "kernel/src/main.rs",
+      "sha256": "7bb9a3ed31fb1189c04b8dec47c3b121fb3f3bb4f4aaecafcdceb7006a3f3851"
+    },
+    {
+      "path": "profiles/build/dev-qemu-x64.json",
+      "sha256": "e1baf69a01af71ac831da5fc141255074ac9cd4b9f2dd4bdb6b9a9c95177eaee"
+    },
+    {
+      "path": "profiles/build/initfs.json",
+      "sha256": "9205304f402f0ee4ca244770df65436bb0f22489599c95f7c65c44293f0ed300"
+    },
+    {
+      "path": "profiles/build/p00.json",
+      "sha256": "1aaa4177972bc5b46a60d4166a7754f76d1c60c7509a5ded3a13b391874bded1"
+    },
+    {
+      "path": "profiles/hardware/qemu-diagnostic-x64.json",
+      "sha256": "39968cefd662ac79e01e98e46d69656c5d234383574d8a3be759831178d67662"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "6f0d5f4e45f8802ad2b3a0fe2794b07548725039ebbcfdd2437a0168f113e924"
+    },
+    {
+      "path": "specs/contracts/boot-info-v1.md",
+      "sha256": "218aeb4e08551427d495b38b042e4ff53fff3bf5d504fbfdb53beec713d06644"
+    },
+    {
+      "path": "specs/contracts/build-image-v1.md",
+      "sha256": "23622b332e5871063dc33ddedbb84c56a700c3ff9bd8c321b7fa145640d31e98"
+    },
+    {
+      "path": "specs/contracts/emulator-harness-v1.md",
+      "sha256": "4f3516506bbf634dc367cd92fc02a0ed27b1d7793171f7d00f0035bfbddefd42"
+    },
+    {
+      "path": "specs/contracts/image-validation-v1.md",
+      "sha256": "c15aacb3341faae2058169ae9c23743c3dc5d64e7372f72cdf690d93e39f53c1"
+    },
+    {
+      "path": "specs/contracts/initfs-v1.md",
+      "sha256": "88493b860c8c9024a410417a42ca0e81fcf4d72bd1206e7d8c5be052b4e7cf57"
+    },
+    {
+      "path": "specs/contracts/kernel-entry-v1.md",
+      "sha256": "d5ee365141b73963d40d968fe281a20302d371457035639897ff822f72469c34"
+    },
+    {
+      "path": "specs/sources/dependencies.json",
+      "sha256": "daae46db9832c4685da8c4a0e6aa16b6356ca5d63a75f7b410b7c9f2ae4cf240"
+    },
+    {
+      "path": "specs/sources/emulator-acquisition.json",
+      "sha256": "2eba8e56e3d003419bcd7e2a0126664cf45f8e1b029d5ec8d67e6e8409d7372e"
+    },
+    {
+      "path": "specs/sources/index.json",
+      "sha256": "82ca6e5138a55c144b4f1bf7f798e00cdf08983ee09ed2e127991491c4eb1fe2"
+    },
+    {
+      "path": "tests/support/images.rs",
+      "sha256": "e3d19e7e3a0b396fae2c3b968039379a35076ca11ccf7d138247708be4c1eade"
+    },
+    {
+      "path": "tools/xtask/Cargo.toml",
+      "sha256": "0db349595acad0f09b1b247a4f42e4e518fa01499909b51814b67900332e8419"
+    },
+    {
+      "path": "tools/xtask/src/artifact.rs",
+      "sha256": "c452e9f5d6e6a9ccc1f6bb07294e8dd6321e336ebbd2a6e12df9090589090f67"
+    },
+    {
+      "path": "tools/xtask/src/boot.rs",
+      "sha256": "770b32d986b276dcdf6fad2e8c67f55083a9c929539246b4f45bdb08d2123bea"
+    },
+    {
+      "path": "tools/xtask/src/boot_gate.rs",
+      "sha256": "bd5544db0f23845be28991afc863bcd822d6f20aeed698a629220c702c0bc44b"
+    },
+    {
+      "path": "tools/xtask/src/build.rs",
+      "sha256": "4a9f2c9950fd5f4179417bd35048511932c374cfc491323e35a8d32afd924551"
+    },
+    {
+      "path": "tools/xtask/src/demo.rs",
+      "sha256": "4a6492bd0a87eef28a3a943502feb545f546c2f2e393a22eecba8109d2e78dc5"
+    },
+    {
+      "path": "tools/xtask/src/doctor.rs",
+      "sha256": "e75ab2bb71efbd46f6bd9960382be75ebfafbbf8fdb484b29a2fe07394c38b9c"
+    },
+    {
+      "path": "tools/xtask/src/emulator.rs",
+      "sha256": "a22d37570fd19494f1df595a521b3a743ef99e1c23e69b90f98bf0ac211b923d"
+    },
+    {
+      "path": "tools/xtask/src/evidence.rs",
+      "sha256": "dfb22dc58ceb85ecfebf649acc1ddffe09ba13985f33ea79e3c92d277c60697a"
+    },
+    {
+      "path": "tools/xtask/src/image.rs",
+      "sha256": "7cbd7151224c17fdfaf64bcc195e486af8c00e9eb451982807942642983bc82c"
+    },
+    {
+      "path": "tools/xtask/src/initfs.rs",
+      "sha256": "68251700b4a3804255d12a1760030be0bed8b790c4c94b6b9f8a9455d86dc076"
+    },
+    {
+      "path": "tools/xtask/src/main.rs",
+      "sha256": "35fb4199713effa6d63449db33d59e568fd0d7a262c79bbc8781ccf41a4680ae"
+    },
+    {
+      "path": "tools/xtask/src/paths.rs",
+      "sha256": "5e6fbbe9c42d016115e0140905c2880b6dcd826d84b6150dc0cc113507341256"
+    },
+    {
+      "path": "tools/xtask/src/qmp.rs",
+      "sha256": "bf4f5869ad0286adca3690d74c15ab9321baef68fe43694c19a01f51e1cba1ce"
+    },
+    {
+      "path": "tools/xtask/src/spec.rs",
+      "sha256": "7d451bd6fc0394ac88c1dd4b53e103ff01492f8081b7d15b2eb2e25bb3b605c4"
+    },
+    {
+      "path": "tools/xtask/src/test_support.rs",
+      "sha256": "a71f285a43fcd390d1c2d49b9b4e5c9bc75ce083f7262014d396d9e4c8dc0917"
+    }
+  ],
+  "agent": "/root/p02_critic"
+}

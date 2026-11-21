@@ -1,0 +1,54 @@
+{
+  "file": "terminal-current.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "af7211c63e587adc88053873aa42937c73ed5601bc347aa0b8d57977654dd59d",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-16.png",
+        "sha256": "fee990daf0ae8801f6938023fd81d42a585d5caccbdb488590e71c5032174742",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-20.png",
+        "sha256": "756cfb32feb9ddfb46aa09885b44b8f3c8b973f8a259e11a5aee2d326329c87e",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-24.png",
+        "sha256": "998759726c8bb3cfde103956d1dceb0dea4c8dc08a237e196ea5373c63e2b413",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-32.png",
+        "sha256": "fe0594fb68e2bb5d6bcd40e1e5f6548fc148b6a9de140de2db158fec649c868e",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-40.png",
+        "sha256": "83f2d6ccef2d780184ced143210b0f3d80d9bb09a155e1ce7423319cd70fc49a",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-48.png",
+        "sha256": "f9a2cac1098a1686222f127d28d023ca12817da9bdca16235afc1b8930b01439",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-64.png",
+        "sha256": "f60a0625c378574cd32cc9ccb5723164b57d698d7bce2bb1c3be58013105cf95",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.24.12741.0_x64__8wekyb3d8bbwe\\Images\\Square44x44Logo.targetsize-256.png",
+        "sha256": "c4b38aa70967f629c51d9b567dd8ca4417bf44887ad3b51d877966fba2d21d97",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

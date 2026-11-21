@@ -1,0 +1,2568 @@
+{
+  "p12_p13_plan_20261023": {
+    "date": "2026-10-23",
+    "plan": "docs/design/p12-p13-plan-20261023.md",
+    "adr": "docs/adr/0017-historical-evidence-disposition.md",
+    "owner_decisions": [
+      "1 historical evidence: P00-P11 reports deleted by the owner; evidence_disposition unavailable_owner_confirmed; re-run only where strictly necessary",
+      "2 fonts: owner-installed Windows fonts, owner-local, not redistributable, loaded at runtime",
+      "3 input: keyboard layouts plus Pinyin/Japanese/Korean IMEs with openly licensed dictionaries",
+      "4 P13 reference runs allowed on the owner PC without input injection or setting changes",
+      "5 fractional scaling approved (2560x1600 at 150%)",
+      "6 P12 and P13 proceed together"
+    ],
+    "evidence_disposition": {
+      "phases": "P00-P11",
+      "state": "unavailable_owner_confirmed",
+      "report_reopened": false,
+      "report_recreated": false
+    },
+    "parallel": {
+      "selected": "P12",
+      "authorized": [
+        "P13",
+        "P14"
+      ],
+      "p13_includes_p12": true,
+      "p14_includes_p13": true
+    },
+    "verify": {
+      "P12": "cargo xtask verify",
+      "P13": "cargo xtask verify --phase P13",
+      "current_behavior": "cargo xtask verify (P12) first stops at check-spec while Cargo.lock differs from specs/sources/dependencies.json (stream T re-pins it); after that it fails before any build with \"acceptance suite not implemented\" for text-01, a11y-01, display-01 and motion-01. component-gallery has a registered runner. No phase can pass. P13 (verify --phase P13) additionally lacks all five Windows GUI runners.",
+      "executed": false,
+      "check_spec_today": "Checked 2026-10-24 by hash: Cargo.lock still differs from the recorded lockfile_sha256, so check-spec stops at \"dependency lock changed\" until stream T re-pins specs/sources/dependencies.json; P00-P11 then pass as owner-confirmed unavailable",
+      "p12_gate_composition": {
+        "date": "2026-10-24",
+        "listing": "cargo xtask verify --list (dry; builds and runs nothing)",
+        "order": [
+          "doctor and check-spec (P00-P11 accepted only as owner-confirmed unavailable history; never for the selected phase)",
+          "acceptance preflight: fails before any build when a declared suite has no registered runner",
+          "every inherited mandatory command (phase_commands P00-P11) plus the P12 commands",
+          "42 inherited diagnostic guest scenarios and the demo (p12-inherited-foundation-regressions)",
+          "ordinary text session",
+          "P11 desktop gate: desktop workflows, recovery, wide lifecycle, resolutions, native default (desktop::verify_all, desktop::validate)",
+          "18 further desktop scenarios, each in its own child run bound by digest (check p12-desktop-scenario)",
+          "acceptance suites text-01, a11y-01, display-01, motion-01, component-gallery"
+        ],
+        "p12_commands": [
+          "cargo clippy (x86_64-unknown-none, -D warnings): door-app-ui, door-preview, door-monitor, door-ui, door-ui-native (accessibility), door-accessibility, door-keyboard-layouts, door-locale, door-gallery (native,accessibility), door-ime (native)",
+          "cargo test --all-targets: door-ui, door-ui-native, door-accessibility, door-gallery, door-graphics-text, door-keyboard-layouts, door-ime, door-locale",
+          "cargo test --package door-ime --test corpus",
+          "cargo test --package door-window --lib text_input | clipboard | dnd"
+        ],
+        "desktop_scenarios": [
+          "desktop-notes",
+          "desktop-notes-accelerated",
+          "desktop-files",
+          "desktop-files-accelerated",
+          "desktop-remove",
+          "desktop-remove-accelerated",
+          "desktop-shell",
+          "desktop-accelerated",
+          "desktop-default",
+          "desktop-software",
+          "desktop-motion",
+          "explorer",
+          "multiwindow",
+          "multiwindow-pressure",
+          "monitor",
+          "preview",
+          "terminal",
+          "settings-reference"
+        ],
+        "acceptance_runners_registered": [
+          "component-gallery"
+        ],
+        "acceptance_runners_missing": [
+          "text-01 (Notes TEXT-01 with IME and clipboard)",
+          "a11y-01 (being added)",
+          "display-01 (display scale)",
+          "motion-01"
+        ],
+        "ime_scenario": "No separate IME/text-input guest scenario exists; IME composition is part of TEXT-01.",
+        "validation": "A current P12 report also needs one passed p12-desktop-scenario check per scenario, bound to a successful child report (scenarios::validate_desktop_scenarios), and one passed check per acceptance suite (scenarios::validate_acceptance)."
+      },
+      "P14": "cargo xtask verify --phase P14"
+    },
+    "phase_complete": false,
+    "baseline": "required_paths gained ADR 0017; desktop/workspace/src/main.rs rebound to the five W9 per-app entry points",
+    "owner_direction_20261024": "Do P12 first: P13 keeps its owner-confirmed parallel authorization and schema but is not pursued now; cargo xtask verify selects P12 and P13 is never the active phase."
+  },
+  "multiwindow_apps_20261022": {
+    "status": "implementation_pending_native_validation_P12_partial",
+    "design": "docs/design/multiwindow-apps-20261022.md",
+    "master_audit": "docs/design/p11-p12-master-audit-20261022.md",
+    "scope": "Shared native per-window models; Explorer/Preview owned tab transfer after destination admission; independent app windows; Explorer-style document captions; tabbed Notes with undo/save guards and Markdown source toolbar; wallpaper-tinted native chrome; Preview crop and one-level image undo; twelve-process capacity and versioned telemetry",
+    "limits": {
+      "app_windows": 4,
+      "document_tabs": 8,
+      "processes": 12,
+      "sections": 32,
+      "window_owners": 8,
+      "window_total": 24,
+      "registered_and_captured_bytes": 201326592,
+      "preview_image_and_undo_bytes_per_window": 16777216
+    },
+    "native_image": null,
+    "evidence": {},
+    "phase_complete": false,
+    "user_goal_complete": false,
+    "historical_prerequisites_missing": [
+      "reports/runs/host-1791804427914736400-32560/report.json",
+      "reports/runs/host-1792303566097472600-17116/report.json"
+    ],
+    "owner_volume_used": false,
+    "limitations": [
+      "No exact1:1 qualification",
+      "Full Unicode/IME/accessibility/clipboard and dynamic/fractional DPI remain P12 gaps",
+      "Preview PDF/Office/playback/OCR and full editing providers unavailable",
+      "Monitor GPU/network/control providers unavailable",
+      "CMD/PowerShell/WSL engines unavailable",
+      "No sustained frame cadence/input-to-photon claim",
+      "Native admission/recovery/resource pressure and concurrent edit conflict qualification pending"
+    ]
+  },
+  "reference_apps_20261022": {
+    "status": "bounded_native_checkpoint_P12_partial",
+    "design": "docs/design/reference-apps-20261022.md",
+    "scope": "Monitor ten destinations plus CPU/Memory drilldowns; Preview reference tabs/toolbar/canvas/rail/filmstrip/information layout; native glyphs, measured text, matched paint/hit bounds, real bounded existing providers",
+    "owner_reference_index": "reports/runs/reference-apps-owner-20261022/index.json",
+    "development_image": "out/images/host-1792646238237329400-21896-desktop-dev/image.json",
+    "runtime_source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+    "evidence": {
+      "build": {
+        "report": "reports/runs/host-1792646238237329400-21896/report.json",
+        "sha256": "77b0e4021ce10d772b88bc524632ee3f04211bbb28ac482290b4fab53ea092c6",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 3
+      },
+      "full_host": {
+        "report": "reports/runs/host-1792645717405923900-29208/report.json",
+        "sha256": "f0269d86fe9ce952b0f3cb12d8b9d4e5499f97122df8527ed3bb5b92c12a7d9c",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      },
+      "captures": {
+        "report": "reports/runs/host-1792646345819545300-29844/report.json",
+        "sha256": "8443e16d9cbc71e0356f90279f0c72d1e481a53abdf4fa3e458556c9ff11f096",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 58
+      },
+      "monitor": {
+        "report": "reports/runs/host-1792645257563497100-10380/report.json",
+        "sha256": "c6dd34ce1a9ae794ef30f926c4e2256d9bc9e6af5bec78ebaf2d313cef4f2f2a",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 21
+      },
+      "preview": {
+        "report": "reports/runs/host-1792646365322138800-33104/report.json",
+        "sha256": "0e1bbebb0b2234c8798d6605c5848578dd178df009718bf74ecec8db99381e43",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+        "checks": 34
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792645459154832100-30028/report.json",
+        "sha256": "b0a42a1850c8aa1ee708b2b1387725247b3eab42aea65564fc65d8d7ff7596c0",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+        "checks": 9
+      },
+      "assets": {
+        "report": "reports/runs/host-1792646037420132000-17112/report.json",
+        "sha256": "87053efbc8485b95a89da6927a4c3d303cf0e5b51122d0c2519aba3e93f19b7b",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+        "checks": 0
+      }
+    },
+    "host_tests": {
+      "passed": 812,
+      "summaries": 40,
+      "nonzero": 34,
+      "zero": 6
+    },
+    "affected_host": {
+      "command": "cargo test --locked -p door-preview --all-targets",
+      "exit_code": 0,
+      "log": "target/reference-wrap-host.log",
+      "sha256": "1f7cd61c00ba9840e790af5dd852ca9d2f519222a39fd9490bde2068a5c98db2",
+      "source_sha256": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "passed": 16,
+      "summaries": [
+        15,
+        1
+      ],
+      "scope": "After the final two Preview paint-only fixes; overlaps the full812 suite and is not added to it"
+    },
+    "host_captures_report": "reports/runs/host-1792646345819545300-29844/report.json",
+    "native_selection": {
+      "boots": 6,
+      "monitor": 1,
+      "preview": 3,
+      "explorer": 2,
+      "scope": "Selected current suites; Monitor/Explorer run on the earlier image with identical executable/core payloads. Additional earlier reruns are not summed."
+    },
+    "source_bridge": {
+      "changed_paths": [
+        "desktop/preview/src/presentation.rs"
+      ],
+      "prior_monitor_explorer_source": "31cd65392198291ddf9d19f06d470d5f296fc89458e2d9aea8a384270fb0791d",
+      "full_host_assets_source": "c5520c4503bc8682dd2e011b713aef595dbc2bdc60fde3e5855093513ab08a43",
+      "final_runtime_source": "ee8eab4e4161ecd5133f9ea4eaabb83fbad7817b241a0bb51002d20995183d88",
+      "changed_executable": "door-preview",
+      "changed_initfs_payload": "bin/door-preview.elf",
+      "scope": "Only Preview presentation changes: text format disabled state, empty-pane wrapping, stacked Convert instruction overlap. Full host812 plus16 affected tests; current native Preview. Independent exact source/artifact review.",
+      "unchanged_artifacts": 22,
+      "total_artifacts": 23,
+      "unchanged_initfs_file_payloads": 19,
+      "total_initfs_file_payloads": 20
+    },
+    "review_receipt": "reports/runs/reference-apps-review-20261022/review.json",
+    "out_budget": {
+      "bytes": 9187571074,
+      "limit_bytes": 20000000000,
+      "within_budget": true,
+      "scope": "out only; target/reports excluded"
+    },
+    "owner_storage": "out/session/user.raw absent; not initialized",
+    "historical_gate_blocker": "Missing original reports/runs/host-1791804427914736400-32560/report.json; do not recreate historical evidence",
+    "limits": [
+      "Exact pixel equality and sustained60FPS/input latency are not established",
+      "Startup/network/GPU/control providers unavailable; logs are bounded session observations",
+      "Preview PDF/Office/media playback/OCR/recording/crop/markup/batch providers unavailable",
+      "Opaque themed client material, integer DPI and ASCII atlas remain; Unicode filenames use visible fallback",
+      "Terminal/Settings native workflows were not repeated in this revision; preserve their prior evidence",
+      "P12 partial; owner storage absent and historical P00 evidence missing"
+    ]
+  },
+  "preview_monitor_expansion_20261022": {
+    "status": "bounded_native_checkpoint_P12_partial",
+    "design": "docs/design/preview-monitor-expansion-20261022.md",
+    "scope": "Separate Preview/Monitor executables; shared native UI; six-app catalog; PNG/QOI/text new-file export and bounded format inspection; sanitized telemetry; Terminal opacity; Explorer alignment/tags/fitted initial bounds; service idle backoff and cached-move eligibility",
+    "bundle": [
+      "Explorer",
+      "Preview",
+      "Terminal",
+      "Settings",
+      "Monitor",
+      "Notes"
+    ],
+    "current_evidence": "Seven focused workflows passed across eleven private guest boots; development relink, not full phase qualification",
+    "evidence": {
+      "preview": {
+        "report": "reports/runs/host-1792623443701456900-33232/report.json",
+        "sha256": "a5ffe8b8e8723180b4388c9257af3f4dc25ef7004a7db0a9d2843ff05e860799",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 16
+      },
+      "monitor": {
+        "report": "reports/runs/host-1792624034785284200-31336/report.json",
+        "sha256": "545efb7ada22dbcf61879924e81fcebf61e826603300205cc5ce74ece88095a4",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 8
+      },
+      "motion": {
+        "report": "reports/runs/host-1792623343001520100-30932/report.json",
+        "sha256": "7bf46ce0c00669ce34c0fcdeac22f73898b58459f0c124f56d3b0f25272a9e54",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 19
+      },
+      "recovery": {
+        "report": "reports/runs/host-1792623604134590600-8972/report.json",
+        "sha256": "0c9b7675813caf960eb7b865de9cc6c0ba5f54274f508fed1570faf98121533a",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 7
+      },
+      "terminal": {
+        "report": "reports/runs/host-1792623707293393400-27460/report.json",
+        "sha256": "08a25c459ea5be1f86d73271ebb943b6c4143ffd1e4b579e1f212203f0b2e7c0",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 19
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792623866730823500-13324/report.json",
+        "sha256": "336783e242e03df63c729ea69aeb6e0f3aea9bbff58aae9a0c4a7ecd74a32393",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 9
+      },
+      "settings": {
+        "report": "reports/runs/host-1792623943934333500-24036/report.json",
+        "sha256": "7d67b942f4bcdbe2bdae22c3e6a6962d03608a0ea1be5368f858fe8b35131138",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+        "checks": 15
+      }
+    },
+    "host_checks": [
+      {
+        "scope": "full_before_final_deltas",
+        "passed": 797,
+        "executables": 40,
+        "log": "target/preview-monitor-host-current.log",
+        "sha256": "0a8b07cb98e33462d5a4e371a8eb64c4ff179c2c7a979bf422da3f5e1ff5b3b1"
+      },
+      {
+        "scope": "window_service_delta",
+        "passed": 47,
+        "executables": 2,
+        "log": "target/window-idle-host.log",
+        "sha256": "5445ca6891aeafa44a1b5f6f1fa4f3d07c48dc527e28771b584448bfa48c822a"
+      },
+      {
+        "scope": "workspace_window_harness_delta",
+        "passed": 327,
+        "executables": 7,
+        "log": "target/explorer-fit-host2.log",
+        "sha256": "bd39a5c3f0fbddf3b7a58f55697d49ff9516c0d1783c0d6de6830c43a8acf3af",
+        "doc_test_phases": 2
+      },
+      {
+        "scope": "geometry_delta",
+        "passed": 2,
+        "executables": null,
+        "log": "target/explorer-fit-geometry.log",
+        "sha256": "c7d4bfbcd1b468d6fa2aeb1ae008fb0789fa0d6b73411b0e6961ad9506e56743"
+      },
+      {
+        "scope": "harness_delta",
+        "passed": 29,
+        "executables": 1,
+        "log": "target/final-harness-host.log",
+        "sha256": "3aa2d14312f575e898b73469a1e607ee412aef6851885e875bd8018ac3872b6e"
+      }
+    ],
+    "host_count_note": "Delta counts overlap the earlier full suite; do not sum them as unique tests.",
+    "build": {
+      "report": "reports/runs/host-1792623233102212300-12916/report.json",
+      "sha256": "4a3d9845c52144f064bbe4cac93b25a1470e94f4893b623b88005bcefe6bed18",
+      "source_sha256": "54ecd9d2b214bb5492de9f4d554a5026e03566eefdda8394ab9c2e1f9c19dc92",
+      "image": "out/images/host-1792623233102212300-12916-desktop-dev/image.json",
+      "test_image": "out/images/host-1792623233102212300-12916-desktop-test/image.json",
+      "development_relink": true,
+      "phase_qualification": false,
+      "independent_base": "reports/runs/host-1792619937184232000-24708/report.json",
+      "base_scope": "Independent build graph passed; its combined workflow failed Monitor activation before later repairs. Keep the failed report."
+    },
+    "source_bridge": {
+      "native_source_sha256": "a4394932a64fa93a9456bc7e550ac53a9ae0e0694a1138d79a5fb369ee140e48",
+      "after_build": [
+        "desktop/workspace/src/explorer_layout.rs: cfg(test) endpoint contract only",
+        "tools/xtask/src/desktop/resolution.rs: contained gestures and explicit canonical pixel-reuse requirement only"
+      ],
+      "final_documentation": "Coordinated documentation-only changes after native runs; critic receipt binds final snapshot."
+    },
+    "motion": {
+      "report": "reports/runs/host-1792623343001520100-30932/report.json",
+      "native_output": [
+        3840,
+        2160
+      ],
+      "backend": "WHPX/RAMFB CPU copy",
+      "drag_frames": 88,
+      "mean_paint_work_ms": 20.113636363636363,
+      "maximum_paint_work_ms": 30,
+      "translated_pixels": 4888512,
+      "client_recaptures": 0,
+      "tick_millis": 10,
+      "fps_claim": false,
+      "matched_speedup_claim": false,
+      "scope": "Paced QMP, coarse elapsed paint scopes; no visible SDL/input latency/vblank or sustained60FPS proof"
+    },
+    "idle": {
+      "report": "reports/runs/host-1792624034785284200-31336/report.json",
+      "busy_observations": 1,
+      "total_observations": 401,
+      "scope": "Coarse timer observations, not CPU-time or performance speedup"
+    },
+    "dependencies": "Three local packages door-app-ui, door-preview, door-monitor; no new external versions",
+    "remaining": [
+      "Exact reference fidelity and all requested functionality",
+      "Preview source editing/merge/undo and broader PDF/Office/media/3D/OCR/archive providers",
+      "Creation/modification timestamps and authors with clock/schema/migration",
+      "Full Terminal settings and actual CMD/PowerShell/WSL engines",
+      "Native large-image heap/reconnect and reply-loss/configure-during-export fault injection",
+      "Recycle Bin and robust restore; multi-instance/multiwindow and launch handoff",
+      "Full Unicode/IME, fractional DPI, visible SDL quality, measured input latency and sustained60FPS",
+      "Monitor GPU/network/startup/logs and authorized process/service controls"
+    ],
+    "process_limit": 8,
+    "maximum_concurrent_ordinary_gui_apps": 3,
+    "installed_apps": 6,
+    "private_guest_boots": 11,
+    "owner_disk_used": false,
+    "owner_volume_present": false,
+    "out_limit_bytes": 20000000000,
+    "out_accounting": {
+      "bytes": 6038176889,
+      "report": "reports/runs/host-1792624034785284200-31336/report.json",
+      "scope": "out only; target and reports excluded"
+    },
+    "cumulative_gate": "Original P00 report reports/runs/host-1791804427914736400-32560/report.json absent after owner cleanup; do not reconstruct history or close P12.",
+    "critic": "reports/runs/preview-expansion-review-20261022/review.json",
+    "gate_attempts": {
+      "check_spec": {
+        "report": "reports/runs/host-1792624233390723900-14720/report.json",
+        "sha256": "120029e0eeb399f82ba4a869b66c39a605a30b44ecac636c4a3ee2ccd8717bf2",
+        "success": false,
+        "inputs_unchanged": true,
+        "failure": "reports/runs/host-1791804427914736400-32560/report.json: The system cannot find the path specified. (os error 3)"
+      },
+      "assets": {
+        "report": "reports/runs/host-1792624264319260600-30368/report.json",
+        "sha256": "a3cc3edfa77cabcdf3a13dd1860b3ab016c31f8243a0f38c16e0dff6ffd5b588",
+        "success": true,
+        "inputs_unchanged": true,
+        "failure": null
+      },
+      "verify": {
+        "report": "reports/runs/host-1792624386895948500-16972/report.json",
+        "sha256": "0ea9fece5ce9b0a7e51d89d67a90a87b046a9a4ad2b51db70c23c03df1eda61d",
+        "success": false,
+        "inputs_unchanged": true,
+        "failure": "reports/runs/host-1791804427914736400-32560/report.json: The system cannot find the path specified. (os error 3)"
+      }
+    },
+    "preview_limits": {
+      "encoded_input_bytes": 6291456,
+      "text_input_bytes": 16384,
+      "image_pixels": 1048576,
+      "decoded_image_admission_bytes": 16777216,
+      "heap_bytes": 100663296,
+      "native_large_image_pressure_qualified": false
+    }
+  },
+  "current_app_fidelity_audit_20261022": {
+    "status": "bounded_fixes_validated_P12_partial",
+    "design": "docs/design/current-app-fidelity-audit-20261022.md",
+    "scope": "Terminal application theme, measured label alignment, hover/cursor routing, checked command completion and installed Windows icon; Settings four-app integration; existing Explorer regression and stricter retirement validation",
+    "host_suite": {
+      "passed": 762,
+      "executables": 36,
+      "log": "target/current-app-audit-host-final.log",
+      "sha256": "053105732fee36f562c2740bb1af41ba119fba102d240b3fc085bd494b455ce4",
+      "later_harness_only_change": "Explorer now requires canonical per-boot retirement; 5 existing shutdown validator tests passed separately"
+    },
+    "evidence": {
+      "settings": {
+        "report": "reports/runs/host-1792610572224355700-12140/report.json",
+        "sha256": "fbb7e3cd6abb13d642c5ff033ae2558acb6d89b463b61b76730316c3806264a2",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 16
+      },
+      "terminal": {
+        "report": "reports/runs/host-1792610679121708300-22728/report.json",
+        "sha256": "3a103f04295f58ab4a3a94c5100173bc183facc3ba0f00f623ce0b4d41cab12b",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 19
+      },
+      "explorer": {
+        "report": "reports/runs/host-1792611027387645200-32312/report.json",
+        "sha256": "fd3bf1fda77edb557a5851d8dc8f0aedcb59036a4726a6c1cc5aaf898f6a1193",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "d20c229e3f824d51088b288e4a3b6308331ad535b16510c05f4d6a1fc5a51058",
+        "checks": 9
+      },
+      "assets": {
+        "report": "reports/runs/host-1792610846718714300-20748/report.json",
+        "sha256": "1d6add503109ce003b6c445e5dff1a42d2dab324e23cc022995c625fffb9aeb7",
+        "success": true,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 0
+      },
+      "cumulative_verify": {
+        "report": "reports/runs/host-1792610948804522400-32680/report.json",
+        "sha256": "a2a9f49bc4ae994484b0acb62652e361e3f4907fe59b34840a21fc69925050e6",
+        "success": false,
+        "inputs_unchanged": true,
+        "source_sha256": "5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8",
+        "checks": 2
+      }
+    },
+    "common_guest_image": "out/images/host-1792610572224355700-12140-desktop-dev/image.json",
+    "native_scope": "Five private guest boots, 29 actual scanout captures, theme probes, registry/file/preferences/tags disk audits; checked development relink, qualification=false",
+    "source_bridge": "Settings/Terminal/assets share 5e28483991e1c032dc7471b12d45045314346933b44f0b7d17fde0c9c04e38f8; Explorer d20c229e3f824d51088b288e4a3b6308331ad535b16510c05f4d6a1fc5a51058 differs only in the stricter host fixture, not guest sources or assets",
+    "critic": "reports/runs/current-app-fidelity-review-20261022/review.json",
+    "live_reference": "Installed dark Explorer observed through Computer Use; Settings launch exposed no targetable window; Terminal reference uses official Microsoft documentation because skill excludes terminal app automation",
+    "installed_terminal_icon": {
+      "path": "assets/icons/windows/terminal-current.ico",
+      "sha256": "af7211c63e587adc88053873aa42937c73ed5601bc347aa0b8d57977654dd59d",
+      "source": "Eight original authored frames from installed Windows Terminal 1.24.12741.0; no master-only override"
+    },
+    "settings_installed_apps": "Shared inventory of four actual bundled apps; Terminal target313 explicitly launches catalog command9",
+    "redirect_completion": "Checked redirect is part of completion; failure emits ok=0 and never retries an uncertain write",
+    "workspace_load_headroom_bytes": 159744,
+    "out_bytes": 2126879360,
+    "out_limit_bytes": 20000000000,
+    "cumulative_blocker": "Original P00 report reports/runs/host-1791804427914736400-32560/report.json is absent after owner cleanup; history not reconstructed",
+    "additional_dependencies": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "full_windows_backend_parity": false,
+    "phase_closed": false
+  },
+  "evidence_availability_20261022": {
+    "date": "2026-10-22",
+    "status": "owner_deleted_reports_runs_during_cleanup",
+    "owner_confirmed": true,
+    "recovery_requested": false,
+    "historical_report_links": "missing; preserved historical claims/identities are not reconstructed or requalified",
+    "new_evidence_policy": "compact current tests/captures only; existing owner volumes untouched"
+  },
+  "explorer_revision_20261022": {
+    "status": "implemented_bounded_native_diagnostic_passed_final_shared_run_pending",
+    "design": "docs/design/explorer-modern.md",
+    "references": "docs/references/explorer-20261022/sources.json",
+    "actual_icons": "HaydenReeve/WindowsIcons commit9442e3ef014520d4337409a24be10b970a36d66b; installedEdgePDF; pinnedSegoeFluent glyphs",
+    "layout": "40DIPintegratedtabs,roundednavigation,fullcommandbar,190DIPrail,centered208DIPheroes,sixcolumnsat2048",
+    "behavior": "relevantformatpreview,object-checkedmetadata/rename/deletion,usercreateddurabletags,tabstates,scrolledrail/pane,actualfoldercontentsicons",
+    "native_diagnostic": "reports/runs/host-1792606069303592400-11016/report.json",
+    "native_diagnostic_report_sha256": "91d91b76ba6f479461ae7c0c023951ac67f6312c6c6fb1c1423ac06a1da28d81",
+    "native_behavior_check": "explorer-modern-native passed; two boots, object26 preserved, exact rawdisk tag/payload audit, leaked0 each",
+    "aggregate_report_status": "failed source stability from concurrent other app source/docs; Explorer guest sources unchanged",
+    "private_volume_used": true,
+    "owner_volume_used": false,
+    "full_windows_backend_parity": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "phase_closed": false,
+    "remaining": "final stable common image/test;critic; clipboard/checked cross-directory transfer/share/trash/recursive-size/timestamps/PDF/Office/media/3D providers; fractional scaling, fullUnicode and exact LCD subpixel raster parity",
+    "native_diagnostic_evidence_available": false,
+    "evidence_loss": "Owner confirmed deletion duringcleanup; earlier diagnostic facts observed but artifacts absent. Compact final rerun pending.",
+    "host_tests": 757,
+    "host_executables": 36,
+    "host_log": "target/explorer-all-host.log; exit0",
+    "critic": "reports/critics/p12-explorer-modern-critic.json; final narrow bounds fix verified in focused host tests"
+  },
+  "terminal_native_preview_20261022": {
+    "status": "native_preview_diagnostic_passed_final_shared_validation_pending",
+    "design": "docs/design/terminal-native-preview.md",
+    "native_engine": "bounded native file commands",
+    "frame": "existing trusted Window server integrated56DIP caption",
+    "material": "cached trusted selected-wallpaper blur",
+    "fonts": "pinned Segoe UI and Cascadia Mono",
+    "icons": "pinned WindowsIcons, Segoe Fluent and owner-approved official profile artwork",
+    "cmd": "runtime_required",
+    "powershell": "runtime_required",
+    "wsl": "work_in_progress",
+    "full_command_compatibility": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "host_tests": 756,
+    "native_report": "removed_by_owner_cleanup_current_regeneration_pending",
+    "native_checks": 12,
+    "native_boots": 2,
+    "source_stable": false,
+    "owner_volume_used": false,
+    "verify": "reports/runs/host-1792606052917956000-23184/report.json;dependency review lock mismatch",
+    "phase_closed": false
+  },
+  "settings_reference_20261022": {
+    "status": "visual_refinement_native_validation_pending",
+    "pages": 6,
+    "design": "docs/design/advanced-settings.md",
+    "references": "docs/references/advanced-settings-20261022/sources.json",
+    "original_device_frames": true,
+    "device_screen_art": "Pinned Windows classic Bloom, light and dark,18 lossless density/form/theme variants",
+    "theme_selection": "Actual View palette dark value; no manual per-device wallpaper toggle",
+    "device_selection": "Validated OEM ACPI profile2 laptop,8 tablet, otherwise neutral monitor",
+    "typography": "Pinned hinted Segoe UI,8 cached styles including regular16/semibold16",
+    "shadows": "Existing finite Gaussian cached coverage, no per-frame blur",
+    "disk_inventory": "Authenticated read-only GPT extents and device capabilities",
+    "host_preview": "reports/runs/host-1792605680207877200-4824/report.json",
+    "diagnostic_native": "reports/runs/host-1792603189607660900-11340/report.json",
+    "diagnostic_checks": 18,
+    "native_source_stability": false,
+    "verify": "reports/runs/host-1792604089881300400-6712/report.json; failed dependency review lock mismatch",
+    "full_windows_functionality": false,
+    "pixel_exact_qualified": false,
+    "frame_cadence_qualified": false,
+    "phase_closed": false
+  },
+  "advanced_settings_20261021": {
+    "status": "implemented_partial_validation_pending",
+    "design": "docs/design/advanced-settings.md",
+    "pages": 16,
+    "total_surfaces": 33,
+    "native_mutation": "version-checked typed registry edits and explicit path creation",
+    "other_available": "endpoint discovery, launch environment and identity snapshots, local object metadata, explicit diagnostics, existing durable desktop preferences",
+    "full_windows_functionality": false,
+    "missing_providers": "devices/drivers, disks/partitions, networking, service control, environment management, boot policy, group policy, event logs, scheduling, accounts/groups, ACL/sharing, metrics, power, backup",
+    "review_findings_fixed": 4,
+    "phase_closed": false
+  },
+  "native_viewer_title_gestures": {
+    "status": "accepted_bounded",
+    "design": "docs/design/native-viewer-title-gestures.md",
+    "critic": "reports/critics/p12-native-viewer-title-critic.json",
+    "critic_sha256": "e94b89a5844a58eff7dce2959930fceeadeeef521142f5407f6fb531a9be539d",
+    "tested_source": "8dacdc0ee5cc6f05626cfd68b94ea23954410167f4ed20dfcc14858339828b3e",
+    "source_files": 2176,
+    "host_tests": 701,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792591251813159200-20208/report.json",
+    "desktop_report": "reports/runs/host-1792591397538206500-4716/report.json",
+    "desktop_checks": 265,
+    "desktop_sessions": 10,
+    "motion_report": "reports/runs/host-1792592768657718900-23532/report.json",
+    "motion_checks": 19,
+    "retained_report": "reports/runs/host-1792592950790636300-22216/report.json",
+    "drag_frames": 136,
+    "drag_paths": [
+      136,
+      0,
+      0,
+      0
+    ],
+    "compose_ticks": 141,
+    "transfer_ticks": 65,
+    "tick_ms": 10,
+    "mean_elapsed_paint_scope_ms": 15.147058823529411,
+    "maximum_ms": 30,
+    "fps_qualified": false,
+    "visible_sdl_quality": "unqualified",
+    "fractional_scale": "open",
+    "automatic_mode": [
+      2560,
+      1600
+    ],
+    "actual_integer_scale": 2,
+    "owner_volume_used": false,
+    "new_packages_or_unsafe": false,
+    "actual_artifacts": 21,
+    "unchanged_artifacts": 19,
+    "phase_closed": false,
+    "cumulative_verify": "Legacy8GB reservation stops beforetests atout16893274320B,under20GBcap;originalmissingP00report32560",
+    "owner_concepts": "docs/design/unified-apps-owner-concepts.md",
+    "next": "Settings Advanced with real administration providers, then Explorer/Preview/Terminal/Monitor; existing Snap/Search/trash/performance work remains open"
+  },
+  "cached_move_composition": {
+    "status": "accepted_bounded",
+    "design": "docs/design/cached-window-shadows.md",
+    "critic": "reports/critics/p12-cached-move-critic.json",
+    "critic_sha256": "c585591abeb1937de6930ba08ce81fd859f4b4d0f4edd6d7af3f9942afc24f76",
+    "tested_source": "aa7821ae43f50f20bcb2f8251f6547ca9b429b1babfd69975aab4d0d61c7477b",
+    "host_tests": 693,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792584182484269500-18476/report.json",
+    "desktop_report": "reports/runs/host-1792584328840936600-16756/report.json",
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "motion_report": "reports/runs/host-1792585335870637000-5768/report.json",
+    "motion_checks": 19,
+    "retained_report": "reports/runs/host-1792585469473964700-23656/report.json",
+    "drag_paint_scopes": 137,
+    "drag_paths": [
+      136,
+      0,
+      0,
+      1
+    ],
+    "compose_ticks": 133,
+    "transfer_ticks": 75,
+    "tick_millis": 10,
+    "mean_elapsed_drag_scope_ms": 15.182481751824817,
+    "maximum_drag_scope_ms": 30,
+    "measurement": "Monotonic elapsed including scheduling/input; one extra taskbar paint compared with136scene baseline; not pure CPU, FPS or input latency",
+    "actual_artifacts": 21,
+    "unchanged_artifacts": 19,
+    "changed_artifacts": [
+      "Window",
+      "Workspace"
+    ],
+    "new_packages_or_unsafe": false,
+    "documents_source": "assets/icons/windows/documents-current.source.json",
+    "fps_qualified": false,
+    "phase_closed": false,
+    "cumulative_verify": "Legacy8GB admission reserve fails before tests atout16892989473B; below20GB retention cap. Original missing P00 report32560 still blocks check-spec.",
+    "next": "Native host display/DPI and truthful scale controls, modern Explorer tabs/header/columns and selection, drag-to-restore/Snap, Search presentation and shared hover; then durable trash and real app providers. P12 remains partial."
+  },
+  "motion_measurement": {
+    "status": "accepted_bounded",
+    "design": "docs/design/motion-measurement.md",
+    "critic": "reports/critics/p12-motion-measurement-critic.json",
+    "critic_sha256": "682d0fed3345b9ac842dff582c7978047b27de40e7df0fd19db67ffb042d1b32",
+    "tested_source": "8c33d952fb3130129ce38681eb8bb513cffe6ecddffa1a456affe2685683efb9",
+    "host_tests": 684,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792580358816014400-22272/report.json",
+    "desktop_report": "reports/runs/host-1792579067070844800-12664/report.json",
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "motion_report": "reports/runs/host-1792580220114666900-13752/report.json",
+    "motion_checks": 19,
+    "motion_drag_paints": 136,
+    "motion_drag_compose_ticks": 303,
+    "motion_drag_transfer_ticks": 66,
+    "clock_resolution_ms": 10,
+    "mean_drag_elapsed_ms": 27.13235294117647,
+    "measurement": "Monotonic elapsed returned paint scopes; not pure CPU time or input latency",
+    "retained_report": "reports/runs/host-1792580479064519200-19836/report.json",
+    "guest_changed": [
+      "Window only;20/21 actual artifacts unchanged"
+    ],
+    "unsafe_or_new_dependencies": false,
+    "fps_qualified": false,
+    "phase_closed": false,
+    "cumulative_verify": "Blocked before execution by legacy8GB reserve at16,892,906,266B out; original missing P00 also unresolved",
+    "new_owner_reference": "reports/runs/user-reference-20261021-display-snap/index.json",
+    "followup": "docs/design/display-and-snap-followup.md",
+    "next": "Composition profiling/optimization, native host display and scale, Documents artwork, drag-to-restore/Snap and remaining Explorer/trash/providers"
+  },
+  "desktop_first_run": {
+    "status": "accepted_bounded",
+    "design": "docs/build/desktop-first-run.md",
+    "critic": "reports/critics/p12-first-run-critic.json",
+    "critic_sha256": "e09d829f7ee50e20a09c188e56186bb2928b4ca6309fca554e637b3645ffd458",
+    "tested_source": "e48c2d806f9dfb721fcdcd06ba28d06f28697d50f59bdc63115dd6e3c59f7187",
+    "host_tests": 674,
+    "host_executables": 34,
+    "host_report": "reports/runs/host-1792576596573475700-10848/report.json",
+    "default_report": "reports/runs/host-1792576447590346000-7548/report.json",
+    "software_report": "reports/runs/host-1792576528479420000-15136/report.json",
+    "retained_report": "reports/runs/host-1792576720130797300-26392/report.json",
+    "initializer_report": "reports/runs/host-1792576816945398800-12436/report.json",
+    "owner_volume": "out/session/user.raw; created NEW explicitly; mutable owner data, never a test fixture",
+    "owner_initial_bytes": 134217728,
+    "initialization_reserve_bytes": 335544320,
+    "interactive_layout": "retained v2 after valid DesktopOptions parsing",
+    "guest_changed": false,
+    "phase_closed": false,
+    "next": "All-frame motion timing and scanout overhead, remaining modern Explorer and real trash/providers"
+  },
+  "control_row_alignment": {
+    "status": "accepted_bounded",
+    "design": "docs/design/control-row-alignment.md",
+    "critic": "reports/critics/p12-control-alignment-critic.json",
+    "critic_sha256": "4d6ad6ba2c28502fd1f945c846213e6e42c0e6cb2b8f713f82be4932fc91d8c8",
+    "guest_source_sha256": "d40843fde9aff7f29b0c3a51ca254b3368e9f5c55b972b178cc07d1366a1e9fb",
+    "final_host_source_sha256": "c646ba25e6119e45b2ec42579439b675414269505a75f9c69959863ae533c31d",
+    "host_report": "reports/runs/host-1792575398772802800-24816/report.json",
+    "desktop_report": "reports/runs/host-1792571769273006100-24104/report.json",
+    "retained_report": "reports/runs/host-1792575514788093600-10952/report.json",
+    "host_tests": 668,
+    "host_executables": 34,
+    "desktop_checks": 255,
+    "desktop_sessions": 9,
+    "standalone_consumer_checks_each": {
+      "notes": 39,
+      "files": 19,
+      "remove": 15
+    },
+    "standalone_boots": 12,
+    "new_packages_or_unsafe": false,
+    "new_icons": [
+      "Explorer Home",
+      "txt Notepad file association"
+    ],
+    "other_filetypes": "open",
+    "host_abort_cause": "unresolved; preserve two failed reports and passed diagnostics",
+    "phase_closed": false,
+    "next": "Safe first-run owner-volume initialization, measured motion, modern Explorer and durable trash/providers"
+  },
+  "owner_detail_followup": {
+    "status": "open",
+    "design": "docs/design/windows-detail-followup.md",
+    "user_reference_index": "reports/runs/user-reference-20261021-alignment/index.json",
+    "external_drive_offer": "D: USB NTFS Backup; identified read-only, no files relocated",
+    "computer_use": "Stopped again by physical Escape; no more host UI this turn",
+    "phase_closed": false
+  },
+  "desktop_output_layout_migration": {
+    "status": "accepted_bounded",
+    "design": "docs/build/output-layout-v2.md",
+    "critic": "reports/critics/p12-output-layout-v2-critic.json",
+    "critic_sha256": "f76b17c65fbb9656f2e66faf0ba5e0d7a4c49143ff238b1efdd92e9d6c2d68ed",
+    "tested_source_sha256": "aa1e6789d41cedb70e6cc7bf5c38d3f49c7ac6fb287c3ce0bf5c8a9336042b6e",
+    "desktop_report": "reports/runs/host-1792565964145546900-15756/report.json",
+    "scope": "exact test desktop-current; short new builds/images/qemu retained with their run",
+    "out_limit_bytes": 20000000000,
+    "legacy_admission_reserve_bytes": 8000000000,
+    "v2_metadata_reserve_bytes": 134217728,
+    "historical_receipts_unchanged": true,
+    "phase_closed": false
+  },
+  "storage_transport_recovery": {
+    "status": "accepted_bounded",
+    "design": "docs/design/storage-connection-recovery.md",
+    "critic": "reports/critics/p12-storage-connect-critic.json",
+    "critic_sha256": "e65a6ff56f9cc105e16d3647e1b1859d92104116ccf8aab999a53f29f4b3357b",
+    "tested_source_sha256": "021b83a6619bac9b37703c910a8c09a04bfebb3eb8df62103e01225110aeb9c7",
+    "host_report": "reports/runs/host-1792561439334369300-21252/report.json",
+    "desktop_report": "reports/runs/host-1792561538750199300-21160/report.json",
+    "foundation_report": "reports/runs/host-1792562620715950700-17280/report.json",
+    "sdk_report": "reports/runs/host-1792561159414076200-24192/report.json",
+    "native_gui_fault_injection_qualified": false,
+    "phase_closed": false,
+    "next": "Versioned output retention, then measured 4K motion and P12 toolkit/providers"
+  },
+  "generated_output_policy": {
+    "scope": "out only",
+    "limit_bytes": 20000000000,
+    "target_and_reports_excluded": true,
+    "status": "accepted_bounded",
+    "critic": "reports/critics/p12-output-budget-critic.json",
+    "critic_sha256": "e66ed0f6a36dcdd310e804336b037bf2ab84957a3962479bb7407d6d57874e31",
+    "qualification_source": "e4aec8720473ef1887dc109ed301c38e7db781ef9308761323810870adf1b197",
+    "phase_closed": false,
+    "design": "docs/build/output-storage.md",
+    "availability": "reports/artifacts/p12-output-availability.json"
+  },
+  "schema_version": 1,
+  "record_kind": "phase_ledger",
+  "active_phase": "P15",
+  "policy": "one phase at a time, except owner-authorized parallel phases recorded in parallel_authorization (P13 with P12, 23 October 2026; P14 with P12, 26 October 2026); critic review before closure",
+  "phases": [
+    {
+      "id": "P00",
+      "objective": "Project foundation",
+      "prerequisite_description": "Empty authorized workspace",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "host_tested",
+      "evidence_report": "reports/runs/host-1791804427914736400-32560/report.json",
+      "critic_review": "reports/critics/p00-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791804427914736400-32560",
+        "original_report_sha256": null,
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P01",
+      "objective": "Build and image infrastructure",
+      "prerequisite_description": "P00",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "host_tested",
+      "evidence_report": "reports/runs/host-1791810487804417300-34200/report.json",
+      "critic_review": "reports/critics/p01-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791810487804417300-34200",
+        "original_report_sha256": "917980448b40468d9487ff153d41ce461bf580a153331439c076793d359de08d",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P02",
+      "objective": "Independent boot",
+      "prerequisite_description": "P01",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1791815795893891400-20820/report.json",
+      "critic_review": "reports/critics/p02-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791815795893891400-20820",
+        "original_report_sha256": "98b5ecf6be25221cdffd1bac555ea0184658c58ba2410be823f3aa5e2046ff1d",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P03",
+      "objective": "Memory and CPU fundamentals",
+      "prerequisite_description": "P02",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1791819087216060600-33544/report.json",
+      "critic_review": "reports/critics/p03-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791819087216060600-33544",
+        "original_report_sha256": "bb274e5b07cae3eac483fdc41d7bdf70735c6fb208ef129308c28a0e93ba59dd",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P04",
+      "objective": "Scheduler, SMP, and synchronization",
+      "prerequisite_description": "P03",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1791821405767786500-30956/report.json",
+      "critic_review": "reports/critics/p04-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791821405767786500-30956",
+        "original_report_sha256": "49dc003db8f7660400d361c567c3b7c6830da7b062220900d52013352689fa4a",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P05",
+      "objective": "Protected native execution",
+      "prerequisite_description": "P04",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1791824568839707600-11968/report.json",
+      "critic_review": "reports/critics/p05-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791824568839707600-11968",
+        "original_report_sha256": "bf216d9a984caea4a49beb64d7e58d035c64f31c5865f170bd529571968cc3d1",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P06",
+      "objective": "Block devices and filesystem base",
+      "prerequisite_description": "P05",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1791827135134883500-12352/report.json",
+      "critic_review": "reports/critics/p06-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791827135134883500-12352",
+        "original_report_sha256": "7e4137b420e530d01129e222e57895cbbf5cb6516a429a80851a70ca1793c5bb",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P07",
+      "objective": "Persistence, registry, and security metadata",
+      "prerequisite_description": "P06",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1791830810540264100-10572/report.json",
+      "critic_review": "reports/critics/p07-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1791830810540264100-10572",
+        "original_report_sha256": "22e9620d1b2c11971793921500035b91f88568ca9f046277a5d8b04355fbd00f",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P08",
+      "objective": "Native user platform and services",
+      "prerequisite_description": "P05, P07",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1792060739947826700-17608/report.json",
+      "critic_review": "reports/critics/p08-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1792060739947826700-17608",
+        "original_report_sha256": "3e8f1d80fa25b33021bc1d55a926199b6277abe20b7003798870b31170b8231a",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P09",
+      "objective": "First Windows x64 program",
+      "prerequisite_description": "P05, P06, native runtime subset",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1792150739645891100-11748/report.json",
+      "critic_review": "reports/critics/p09-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1792150739645891100-11748",
+        "original_report_sha256": "48fa8a34f832a2b5de8762d7de4deeb307de72b2e1c1a85ec40960c943bac1ad",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      },
+      "exploratory_evidence": "reports/runs/host-1792065024570271200-13884/report.json"
+    },
+    {
+      "id": "P10",
+      "objective": "Windows base semantics",
+      "prerequisite_description": "P07, P08, P09",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1792235592894575300-22840/report.json",
+      "critic_review": "reports/critics/p10-readiness-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1792235592894575300-22840",
+        "original_report_sha256": "64261b5ced696019b1fa79c6502bbc7d9cbaba46c190d32b81c7fd2c38cf6361",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      },
+      "historical_qualifications": [
+        {
+          "evidence_report": "reports/runs/host-1792214999674635300-12500/report.json",
+          "critic_review": "reports/critics/p10-critic.json",
+          "scope": "Bounded Windows base engineering subset; does not establish pre-GUI product usability"
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "objective": "Native window and composition platform",
+      "prerequisite_description": "P05, P08, display/input drivers",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "guest_tested",
+      "evidence_report": "reports/runs/host-1792303566097472600-17116/report.json",
+      "critic_review": "reports/critics/p11-critic.json",
+      "evidence_disposition": {
+        "state": "unavailable_owner_confirmed",
+        "date": "2026-10-23",
+        "owner_confirmed": true,
+        "owner_statement": "Owner statement, 23 October 2026: P00-P11 were completed and their qualifying reports were deleted by the owner for disk space; re-run only where strictly necessary.",
+        "original_run_id": "host-1792303566097472600-17116",
+        "original_report_sha256": "b3550258872aae95b17dd2437a9bdc34c961cadd436d8abd0f4fb9f48ade8c01",
+        "decision_record": "docs/adr/0017-historical-evidence-disposition.md",
+        "requalification": "Not reopened or recreated. The cumulative current-source verify of the selected phase (P12, or P13 in parallel) re-executes this phase's mandatory commands and inherited guest scenarios."
+      }
+    },
+    {
+      "id": "P12",
+      "objective": "Native UI, text, and accessibility",
+      "prerequisite_description": "P08, P11",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "owner_attested",
+      "evidence_report": null,
+      "critic_review": null,
+      "evidence_disposition": {
+        "state": "passed_owner_attested",
+        "owner_confirmed": true,
+        "date": "2026-11-11",
+        "owner_statement": "p12-14 passed but i deleted evidence before you saw it cuz there was no space on pc",
+        "decision_record": "docs/adr/0027-p12-p14-owner-attested-pass.md",
+        "note": "No report or critic was recorded; P15's cumulative verify re-executes this phase's commands and scenarios on current source."
+      },
+      "plan": "docs/design/p12-p13-plan-20261023.md",
+      "verify_command": "cargo xtask verify",
+      "acceptance_suites": [
+        "text-01",
+        "a11y-01",
+        "display-01",
+        "motion-01",
+        "component-gallery"
+      ],
+      "parallel_phases": [
+        "P13"
+      ],
+      "control_alignment_checkpoint": "Accepted bounded; docs/design/control-row-alignment.md and reports/critics/p12-control-alignment-critic.json; host668/34,desktop253+2/9,Notes39/Files19/remove15 each1x/3x; P12 remains partial",
+      "document_save_checkpoint": "Accepted bounded; docs/design/checked-document-save.md and reports/critics/p12-document-save-critic.json; phase remains partial",
+      "document_dialog_checkpoint": "Accepted bounded; docs/design/document-dialogs.md and reports/critics/p12-document-dialogs-critic.json; P12 remains partial",
+      "file_deletion_checkpoint": "Accepted bounded; docs/design/files-deletion.md and reports/critics/p12-files-deletion-critic.json;631 host,42 foundation,253/9 desktop, SDK3boots, deletion15/Notes39/rename19 each1x/3x; P12 remains partial",
+      "status_note": "passed on the owner's attestation of 11 November 2026 (evidence deleted for disk space before it was recorded; ADR 0027); its checks are re-executed by the cumulative P15 verify",
+      "status_date": "2026-11-11",
+      "gate_composition": "p12_p13_plan_20261023.verify.p12_gate_composition",
+      "requirements_status": "project/requirements.json p12_status_20261024",
+      "cumulative_status_20261026": "All P12 acceptance suites and desktop scenarios passed individually; the last cumulative cargo xtask verify passed 435 checks with no failures before the session was interrupted (no qualifying report). One final cargo xtask verify --phase P13 re-executes everything."
+    },
+    {
+      "id": "P13",
+      "objective": "Windows GUI integration",
+      "prerequisite_description": "P10, P11, required P12 primitives",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "owner_attested",
+      "evidence_report": null,
+      "critic_review": null,
+      "evidence_disposition": {
+        "state": "passed_owner_attested",
+        "owner_confirmed": true,
+        "date": "2026-11-11",
+        "owner_statement": "p12-14 passed but i deleted evidence before you saw it cuz there was no space on pc",
+        "decision_record": "docs/adr/0027-p12-p14-owner-attested-pass.md",
+        "note": "No report or critic was recorded; P15's cumulative verify re-executes this phase's commands and scenarios on current source."
+      },
+      "status_note": "passed on the owner's attestation of 11 November 2026 (evidence deleted for disk space before it was recorded; ADR 0027); its checks are re-executed by the cumulative P15 verify",
+      "status_date": "2026-11-11",
+      "parallel_authorization": {
+        "with": "P12",
+        "owner_confirmed": true,
+        "date": "2026-10-23",
+        "owner_decision": "Owner decision 6 (23 October 2026): P12 and P13 proceed together.",
+        "decision_record": "docs/design/p12-p13-plan-20261023.md",
+        "adr": "docs/adr/0017-historical-evidence-disposition.md",
+        "constraints": "P13 cannot pass before P12. cargo xtask verify --phase P13 includes every P12 command, guest scenario, desktop workflow and acceptance suite."
+      },
+      "plan": "docs/design/p12-p13-plan-20261023.md",
+      "verify_command": "cargo xtask verify --phase P13",
+      "acceptance_suites": [
+        "text-01",
+        "a11y-01",
+        "display-01",
+        "motion-01",
+        "component-gallery",
+        "win32-gui-f1",
+        "win32-gui-f2",
+        "win32-gui-f3",
+        "scenario-141-5",
+        "scenario-141-6"
+      ],
+      "work_started": "2026-10-23: portable GUI core, GUI DLL and loader workstreams begun. 2026-10-26: P13-C fixtures F1/F2/F3, Windows reference (tests/fixtures/windows-gui/reference.json), import inventory, the five suites registered and the P13 phase commands; contract specs/contracts/windows-gui-v1.md, ADR 0019",
+      "pursued": false,
+      "owner_direction": "Do P12 first (relayed 2026-10-24): authorized in parallel, not pursued now, never selected by plain cargo xtask verify.",
+      "critic_20261026": {
+        "pre_critic_passing_runs": {
+          "win32-gui-f1": "reports/runs/host-1792978557742642400-19916/report.json",
+          "win32-gui-f2": "reports/runs/host-1792978759096854700-9180/report.json",
+          "win32-gui-f3": "reports/runs/host-1792974192286403000-3732/report.json",
+          "scenario-141-6": "reports/runs/host-1792974407573999400-18584/report.json",
+          "scenario-141-5": "reports/runs/host-1792974609428174400-14028/report.json"
+        },
+        "note": "These runs predate the critic fixes and do not qualify the phase; the final cargo xtask verify --phase P13 replaces them. Findings and limitations: project/RISKS.md (P13 critic limitations).",
+        "limitations": [
+          "hung containment was a fixed close deadline without a ghost; being replaced by the Windows hung semantics (DOOR_P13 WIN32 NOT_RESPONDING, NOT_RESPONDING_PROMPT, WAIT, END_TASK); per-owner release needs the requested DOOR_P13 OWNER_RELEASED record",
+          "IsHungAppWindow and SMTO_ABORTIFHUNG fitted to the reference",
+          "ASCII-only typing, no IME for Win32; same-process SendMessage only",
+          "limits: 4 windows per process, 64 user32 thread lifetimes, 8 threads, 64 MiB heap (the 64-large-block limit is removed)",
+          "comctl32 status bar only",
+          "GDI: nearest-neighbour StretchBlt, no monochrome bitmaps, no italic or escapement, substituted faces, no DIBSECTION from GetObject",
+          "kernel32: no GMEM_MOVEABLE, ACP UTF-8, __CxxFrameHandler3 exits the process",
+          "100 % DPI only; no Win32 accessibility",
+          "serial evidence was not retained (fixed: copied into reports/runs/<id>/retained/)",
+          "MRU restore unproven (the runner now restores value by value; the 16 entries of the first reference run were removed with owner approval on 2026-10-26)"
+        ]
+      }
+    },
+    {
+      "id": "P14",
+      "objective": "Complete desktop and visual fidelity",
+      "prerequisite_description": "P07, P08, P11, P12, P13",
+      "phase_status": "passed",
+      "implementation_state": "implemented",
+      "verification_state": "owner_attested",
+      "evidence_report": null,
+      "critic_review": null,
+      "evidence_disposition": {
+        "state": "passed_owner_attested",
+        "owner_confirmed": true,
+        "date": "2026-11-11",
+        "owner_statement": "p12-14 passed but i deleted evidence before you saw it cuz there was no space on pc",
+        "decision_record": "docs/adr/0027-p12-p14-owner-attested-pass.md",
+        "note": "No report or critic was recorded; P15's cumulative verify re-executes this phase's commands and scenarios on current source."
+      },
+      "parallel_authorization": {
+        "with": "P12",
+        "owner_confirmed": true,
+        "date": "2026-10-26",
+        "owner_decision": "Owner decision (26 October 2026): do all of P14. Sign-in is a real password or PIN hashed with Argon2id from a pinned open-source crate, seeded from a kernel entropy source (RDSEED/RDRAND plus TSC-jitter conditioning) behind ENTROPY_STATUS; Win+L requires it. Reference capture on the owner PC may open apps and flyouts and send navigation hotkeys, with no setting changes.",
+        "decision_record": "docs/adr/0020-complete-desktop-and-visual-fidelity.md",
+        "constraints": "P14 cannot pass before P12 and P13. cargo xtask verify --phase P14 includes every P13 (and so P12) command, guest scenario, desktop workflow and acceptance suite. When P12 passes and P13 becomes the selected phase, this record moves to with=P13."
+      },
+      "plan": "docs/design/p14-plan-20261026.md",
+      "verify_command": "cargo xtask verify --phase P14",
+      "acceptance_suites": [
+        "text-01",
+        "a11y-01",
+        "display-01",
+        "motion-01",
+        "component-gallery",
+        "win32-gui-f1",
+        "win32-gui-f2",
+        "win32-gui-f3",
+        "scenario-141-5",
+        "scenario-141-6",
+        "desktop-a-shell",
+        "recover-01",
+        "desktop-a-files",
+        "desktop-a-apps",
+        "sec-02-trusted",
+        "vis-01"
+      ],
+      "workstreams": {
+        "WS-A": "Shell extraction (desktop/shell), registration, taskbar of real windows, notifications, shell protocol, recovery: desktop-a-shell, recover-01",
+        "WS-B": "File operations, recycle, change notification, typed settings registry, terminal: desktop-a-files, desktop-a-apps",
+        "WS-C": "Gate/schema/records, reference profile, design tokens, door mark, fidelity harness, kernel entropy, credential store and trusted sign-in: sec-02-trusted, vis-01"
+      },
+      "work_started": "2026-10-26: P14 schema, suites and records; reference profile, design tokens, door mask and fidelity harness; kernel entropy, Argon2id credential store, trusted sign-in gate and the sec-02-trusted runner (host-tested only).",
+      "status_note": "passed on the owner's attestation of 11 November 2026 (evidence deleted for disk space before it was recorded; ADR 0027); its checks are re-executed by the cumulative P15 verify",
+      "status_date": "2026-11-11"
+    },
+    {
+      "id": "P15",
+      "objective": "Network, audio, and media foundation",
+      "prerequisite_description": "P06, P08, P10",
+      "phase_status": "in_progress",
+      "implementation_state": "implemented",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null,
+      "parallel_authorization": {
+        "with": "P12",
+        "owner_confirmed": true,
+        "date": "2026-11-02",
+        "owner_decision": "Owner decisions (1 and 2 November 2026): do all of P15 with working network and media settings and GUI; implement P15, P16 and P17 now and formally close each once P12-P14 pass; every VPN type is its real protocol; one read-only critic per phase close; Rust i686 targets and boringtun (host-only test peer) may be downloaded.",
+        "decision_record": "docs/adr/0021-network-audio-and-media-foundation.md",
+        "constraints": "P15 cannot pass before P12, P13 and P14. cargo xtask verify --phase P15 includes every P14 command, guest scenario, desktop workflow and acceptance suite, then the P15 commands and the p15-desktop, p15-connect (CONNECT-A) and p15-sound (SOUND-A) scenarios."
+      },
+      "plan": "docs/design/p15-plan-20261101.md",
+      "verify_command": "cargo xtask verify --phase P17 (cumulative; P15 cites its report, ADR 0027)",
+      "work_started": "2026-11-01: door-network and door-audio services, Settings and shell surfaces; 2026-11-03: ws2_32, iphlpapi, dnsapi, winhttp, wininet (CONNECT-A 42/42 in the guest) and winmm (SOUND-A 15/15 in the guest), with Windows reference runs on the owner's PC; 2026-11-08: M1 complete (overlapped Winsock and IOCP, TLS 1.2, HTTP authentication, loopback, multicast, raw sockets, PAC/WPAD, URL cache, FTP, firewall, fuzzing), M2 WireGuard VPN, M4 MIDI, mixer and MCI; 2026-11-09: M4 WASAPI (MMDevApi.dll), microphone level and MCI recording.",
+      "implementation_state_note": "M1, M2 and M4 implemented and guest-verified (p15-connect with HTTPS steps 16-19 against a TLS 1.3 test server, p15-sound, p15-capture, p15-dsound, p15-midi, p15-wasapi, p15-vpn, p15-desktop); M3 (IKEv2/SSTP/L2TP/PPTP and WSL) skipped by owner decision of 8 November 2026. Critic findings and fixes: reports/critics/p15-p17-critic-findings-20261111.md. Recorded deviations: exclusive-mode WASAPI and loopback capture; no guest evidence for device loss (QEMU cannot remove the sound device), capture revoked while recording or firewall denial.",
+      "critic_findings": "reports/critics/p15-p17-critic-findings-20261111.md",
+      "status_note": "implemented, critic-reviewed and guest-tested (images 10-12, frozen copy); closed by one cumulative cargo xtask verify --phase P17 (owner decision, ADR 0027), run when the owner says",
+      "status_date": "2026-11-11"
+    },
+    {
+      "id": "P16",
+      "objective": "COM, services, and installers",
+      "prerequisite_description": "P07, P08, P10, P13 as required",
+      "phase_status": "in_progress",
+      "implementation_state": "implemented",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null,
+      "parallel_authorization": {
+        "with": "P15",
+        "owner_confirmed": true,
+        "date": "2026-11-11",
+        "owner_decision": "Owner decisions (2 and 3 November 2026): implement P15, P16 and P17 now with Windows' behaviour and GUI, then formally close each once P12-P14 pass; the owner re-requested ole32, oleaut32, shell32 and the rest of M5-M8 in the sole remaining session (3 and 9 November 2026); one read-only critic per phase close. On 11 November 2026 the owner attested P12-P14 as passed (ADR 0027) and asked for the P15-P17 gates to be closed in order, so this phase continues in parallel with P15, the selected phase.",
+        "decision_record": "docs/adr/0022-windows-installer-and-private-dlls.md",
+        "constraints": "P16 cannot pass before P12-P15. cargo xtask verify --phase P16 includes every P15 command, guest scenario, desktop workflow and acceptance suite, then the P16 commands and the p16-* scenarios."
+      },
+      "plan": "docs/design/p16-plan-20261102.md",
+      "verify_command": "cargo xtask verify --phase P17 (cumulative; P16 cites its report, ADR 0027)",
+      "decision_records": [
+        "docs/adr/0022-windows-installer-and-private-dlls.md",
+        "docs/adr/0024-security-tokens-and-elevation.md",
+        "docs/adr/0025-com-transport-through-init.md",
+        "docs/adr/0026-service-control-manager-in-init.md"
+      ],
+      "work_started": "2026-11-02: cmd.exe, Doorsh, Terminal profiles, User Account Control, Authenticode; 2026-11-04: ole32 (in-process COM), CreateProcess, shell32, runtime DLL loads, cabinets, Windows Installer; 2026-11-08: service recovery, hung controls, denial, Services page, installer extras; 2026-11-09: tokens and security functions, CryptoAPI, MAX_PATH paths, catalogs and revocation (wintrust.dll), oleaut32 and type libraries, out-of-process COM, Task Scheduler COM, Event Log messages to 2,048 bytes, every failure action.",
+      "implementation_state_note": "M5-M8 implemented and guest-verified (p16-cmd, p16-shell, p16-com, p16-comoop, p16-oleaut, p16-tsched, p16-scm, p16-install, p16-security, p16-accounts, p16-crypt, p16-trust, p16-paths). Since the critic: services run as LocalSystem in the service account's session (owner decision, ADR 0026), MSI registration tables and the bitness hand-off, runas outcomes, StartService arguments. Critic findings and fixes: reports/critics/p15-p17-critic-findings-20261111.md. Deviations recorded in the plan (no rpcrt4 or NDR stubs, four ACL entries per file, 16 services, services on the user's desktop).",
+      "critic_findings": "reports/critics/p15-p17-critic-findings-20261111.md",
+      "status_note": "implemented, critic-reviewed and guest-tested (images 10-12, frozen copy); closed by one cumulative cargo xtask verify --phase P17 (owner decision, ADR 0027), run when the owner says",
+      "status_date": "2026-11-11"
+    },
+    {
+      "id": "P17",
+      "objective": "32-bit Windows applications",
+      "prerequisite_description": "P10, P13; selected P16 services",
+      "phase_status": "in_progress",
+      "implementation_state": "implemented",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null,
+      "parallel_authorization": {
+        "with": "P15",
+        "owner_confirmed": true,
+        "date": "2026-11-11",
+        "owner_decision": "Owner decisions (1 and 2 November 2026): implement P17 now with P15 and P16 and formally close it once P12-P16 pass; Rust i686 targets may be downloaded; one read-only critic per phase close. On 11 November 2026 the owner attested P12-P14 as passed (ADR 0027) and asked for the P15-P17 gates to be closed in order, so this phase continues in parallel with P15, the selected phase.",
+        "decision_record": "docs/adr/0023-wow64-32-bit-applications.md",
+        "constraints": "P17 cannot pass before P12-P16. cargo xtask verify --phase P17 includes every P16 command, guest scenario, desktop workflow and acceptance suite, then the i686 lints of the 21 DLLs and the p17-x86 (X86-A, X86-B) and p17-wow64 (X86-C) scenarios."
+      },
+      "plan": "docs/design/p17-plan-20261109.md",
+      "verify_command": "cargo xtask verify --phase P17",
+      "work_started": "2026-11-09: PE32 loading, the 32-bit code selector and the far-call system call gate, TEB32/PEB32, SEH through fs:[0]; 2026-11-11: all 21 compatibility DLLs build for i686, structures by layout description, WOW64 file, registry, environment and known-folder views, 32-bit-safe handle values, X86-A/X86-B/X86-C fixtures and the P17 gate.",
+      "implementation_state_note": "M9 implemented and guest-verified (p17-x86 X86-A/X86-B, p17-wow64 X86-C); since the critic: selector reloads, 32-bit msvcrt.dll and msiexec.exe, TEB32/PEB32 layouts, LoadLibrary's safe search order and data-file loads with resources. Critic findings and fixes: reports/critics/p15-p17-critic-findings-20261111.md. Open: the compatibility settings page waits for the registry hive v2 (P18 M0a); oleaut32's universal marshaler is x64-only.",
+      "critic_findings": "reports/critics/p15-p17-critic-findings-20261111.md",
+      "status_note": "implemented, critic-reviewed and guest-tested (images 10-12, frozen copy); closed by one cumulative cargo xtask verify --phase P17 (owner decision, ADR 0027), run when the owner says",
+      "status_date": "2026-11-11"
+    },
+    {
+      "id": "P18",
+      "objective": "Managed and modern application frameworks",
+      "prerequisite_description": "P10, P13, P15, P16; app-specific prerequisites",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P19",
+      "objective": "Native GPU acceleration",
+      "prerequisite_description": "P06, P11, P12; real virtual/physical GPU backend",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P20",
+      "objective": "Windows graphics and games",
+      "prerequisite_description": "P10, P13, P15, P19; runtime dependencies",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P21",
+      "objective": "WDM binary-driver compatibility",
+      "prerequisite_description": "P04–P10, native device/I/O foundations",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P22",
+      "objective": "WDF and specialist driver frameworks",
+      "prerequisite_description": "P21; device-class prerequisites",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P23",
+      "objective": "WDDM and vendor driver stacks",
+      "prerequisite_description": "P19, P21, P22; selected published DDI",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P24",
+      "objective": "Physical hardware and installer",
+      "prerequisite_description": "P07, P08, device/power stack, recovery subset",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P25",
+      "objective": "Security, servicing, and recovery qualification",
+      "prerequisite_description": "All components in selected release scope",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P26",
+      "objective": "Performance and expanded compatibility qualification",
+      "prerequisite_description": "Functional selected profile; P25 security baseline",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P27",
+      "objective": "Qualified release and maintenance",
+      "prerequisite_description": "Selected application/hardware scope plus P25 and P26",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P28",
+      "objective": "Optional Linux environment",
+      "prerequisite_description": "P05, P06, P08, P15; virtualization prerequisites",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    },
+    {
+      "id": "P29",
+      "objective": "Additional ISAs and legacy environments",
+      "prerequisite_description": "Stable loader/ABI/security foundations",
+      "phase_status": "not_started",
+      "implementation_state": "not_started",
+      "verification_state": "not_run",
+      "evidence_report": null,
+      "critic_review": null
+    }
+  ],
+  "p00_tasks": [
+    {
+      "id": "P00-001",
+      "behavior": "Authorized local workspace, specification preservation, source policy and pinned tooling",
+      "prerequisites": [],
+      "owner": "project engineering",
+      "contract_paths": [
+        "project/baseline.json",
+        "docs/adr/0001-project-baseline.md"
+      ],
+      "acceptance": "check-spec and actual doctor outputs",
+      "status": "passed"
+    },
+    {
+      "id": "P00-002",
+      "behavior": "Allocation-free BootInfo envelope and memory ownership",
+      "prerequisites": [
+        "P00-001"
+      ],
+      "owner": "door-boot-protocol",
+      "contract_paths": [
+        "specs/contracts/boot-info-v1.md"
+      ],
+      "negative_tests": [
+        "truncation",
+        "overflow",
+        "overlap",
+        "reserved ownership",
+        "version and flags"
+      ],
+      "acceptance": "host tests and both target compilation checks",
+      "status": "passed"
+    },
+    {
+      "id": "P00-003",
+      "behavior": "Repeatable checked host commands and source/log evidence",
+      "prerequisites": [
+        "P00-001",
+        "P00-002"
+      ],
+      "owner": "door-xtask",
+      "contract_paths": [
+        "docs/testing/README.md"
+      ],
+      "negative_tests": [
+        "missing tool",
+        "nonzero exit",
+        "timeout",
+        "traversal",
+        "fake phase pass"
+      ],
+      "acceptance": "cargo xtask verify with real raw evidence",
+      "status": "passed"
+    },
+    {
+      "id": "P00-004",
+      "behavior": "Integrated documentation and independent critic review",
+      "prerequisites": [
+        "P00-003"
+      ],
+      "owner": "project engineering and critic",
+      "contract_paths": [
+        "AGENTS.md"
+      ],
+      "acceptance": "actionable findings resolved and affected checks rerun",
+      "status": "passed"
+    }
+  ],
+  "p01_tasks": [
+    {
+      "id": "P01-001",
+      "behavior": "Portable bounded ELF/PE inspection and explicit artifact personalities",
+      "prerequisites": [
+        "P00"
+      ],
+      "owner": "door-image-format and door-xtask",
+      "contract_paths": [
+        "specs/contracts/image-validation-v1.md"
+      ],
+      "acceptance": "malformed and valid format tests plus target compilation",
+      "status": "passed"
+    },
+    {
+      "id": "P01-002",
+      "behavior": "Deterministic build graph, actual inspected release artifacts and controlled rebuild comparison",
+      "prerequisites": [
+        "P01-001"
+      ],
+      "owner": "door-xtask",
+      "contract_paths": [
+        "specs/contracts/build-image-v1.md"
+      ],
+      "acceptance": "two independent host executable hashes match with real smoke tests",
+      "status": "passed"
+    },
+    {
+      "id": "P01-003",
+      "behavior": "Confined deterministic image staging and bounded emulator harness",
+      "prerequisites": [
+        "P01-001"
+      ],
+      "owner": "door-xtask",
+      "contract_paths": [
+        "specs/contracts/build-image-v1.md",
+        "specs/contracts/emulator-harness-v1.md"
+      ],
+      "acceptance": "positive and negative host fixtures distinguish tool/startup/panic/failure/timeout/completion",
+      "status": "passed"
+    },
+    {
+      "id": "P01-004",
+      "behavior": "Integrated records, docs and independent critic acceptance",
+      "prerequisites": [
+        "P01-001",
+        "P01-002",
+        "P01-003"
+      ],
+      "owner": "project engineering and critic",
+      "acceptance": "current full phase gate and resolved critic findings",
+      "status": "passed"
+    }
+  ],
+  "p02_tasks": [
+    {
+      "id": "P02-001",
+      "behavior": "checked ELF/initfs, module/mapping/framebuffer handoff",
+      "owner": "boot/uefi and portable libraries",
+      "status": "passed"
+    },
+    {
+      "id": "P02-002",
+      "behavior": "final memory map, ExitBootServices and independent entry/stack/paging",
+      "owner": "door-uefi and kernel",
+      "status": "passed"
+    },
+    {
+      "id": "P02-003",
+      "behavior": "serial/framebuffer diagnostics and actual normal/failure/interaction suite",
+      "owner": "kernel and door-xtask",
+      "status": "passed"
+    },
+    {
+      "id": "P02-004",
+      "behavior": "integrated docs, full gate and independent critic acceptance",
+      "owner": "project engineering",
+      "status": "passed"
+    }
+  ],
+  "authorized_through": "P17",
+  "integration_checkpoint": {
+    "after_phase": "P10",
+    "coverage": "P00-P10 together",
+    "status": "requires_requalification",
+    "evidence_report": "reports/runs/host-1792214999674635300-12500/report.json",
+    "evidence_report_sha256": "e8d8ce9cc07e83c3d5bde11385d5f8be3bc970ef35e52741cfe42b127d1eaa3d",
+    "critic_review": "reports/critics/p10-critic.json"
+  },
+  "p03_tasks": [
+    {
+      "id": "P03-001",
+      "behavior": "Checked conventional-frame ownership and bounded early heap",
+      "owner": "kernel/mm",
+      "prerequisites": [
+        "P02"
+      ],
+      "acceptance": "Host allocation/fragmentation/exhaustion/invalid release cases and actual guest mapped memory",
+      "status": "passed"
+    },
+    {
+      "id": "P03-002",
+      "behavior": "Validated ACPI summary and owned GDT/TSS/IDT/emergency stacks",
+      "owner": "boot/uefi, boot-protocol and kernel/arch",
+      "prerequisites": [
+        "P02"
+      ],
+      "acceptance": "Malformed table tests and actual breakpoint/fatal fault context",
+      "status": "passed"
+    },
+    {
+      "id": "P03-003",
+      "behavior": "Protected mappings and APIC timer foundations",
+      "owner": "kernel/mm and kernel/arch",
+      "prerequisites": [
+        "P03-001",
+        "P03-002"
+      ],
+      "acceptance": "Actual readonly/NX/guard faults, mapping rollback/TLB retirement and interrupt ticks",
+      "status": "passed"
+    },
+    {
+      "id": "P03-004",
+      "behavior": "Cumulative gate, source provenance, docs and independent critic",
+      "owner": "project engineering",
+      "prerequisites": [
+        "P03-001",
+        "P03-002",
+        "P03-003"
+      ],
+      "acceptance": "Full P03 gate and zero unresolved actionable critic findings",
+      "status": "passed"
+    }
+  ],
+  "p04_tasks": [
+    {
+      "status": "passed",
+      "id": "P04-001",
+      "behavior": "Owned thread state, per-CPU run queues and atomic wait/signal/timeout/cancel protocols",
+      "owner": "kernel/task"
+    },
+    {
+      "status": "passed",
+      "id": "P04-002",
+      "behavior": "Real contexts, enabled SIMD/TLS preservation, per-CPU descriptors and secondary startup",
+      "owner": "kernel/arch and boot"
+    },
+    {
+      "status": "passed",
+      "id": "P04-003",
+      "behavior": "Preempted SMP integration, migration, acknowledged TLB retirement and stress",
+      "owner": "kernel integration"
+    },
+    {
+      "status": "passed",
+      "id": "P04-004",
+      "behavior": "Current full gate, independent critic, fixes and coordinated records",
+      "owner": "project engineering"
+    }
+  ],
+  "p05_tasks": [
+    {
+      "behavior": "Separate user address spaces, ring3 transitions and fault-safe captured user memory",
+      "status": "passed",
+      "owner": "kernel architecture and memory",
+      "id": "P05-001"
+    },
+    {
+      "behavior": "Versioned Door ABI, startup, rights-checked handles, authenticated channels and shared sections",
+      "status": "passed",
+      "owner": "native ABI/runtime and kernel executive",
+      "id": "P05-002"
+    },
+    {
+      "behavior": "Independent ELF user tasks, fault containment, concurrent IPC and process exit/wait",
+      "status": "passed",
+      "owner": "native fixtures and integration",
+      "id": "P05-003"
+    },
+    {
+      "behavior": "Full cumulative gate, independent critic, fixes and coordinated documentation",
+      "status": "passed",
+      "owner": "project engineering",
+      "id": "P05-004"
+    }
+  ],
+  "p06_tasks": [
+    {
+      "id": "P06-001",
+      "behavior": "PCI resources, modern VirtIO split queues, block transfers, reset and DMA retirement",
+      "owner": "kernel/drivers and mm",
+      "status": "passed"
+    },
+    {
+      "id": "P06-002",
+      "behavior": "Validated partitions, FAT32/initfs and constrained ext2 VFS with coherent identity",
+      "owner": "kernel/storage",
+      "status": "passed"
+    },
+    {
+      "id": "P06-003",
+      "behavior": "Real raw-disk write/reopen, independent byte audit, negative I/O and all prior regressions",
+      "owner": "kernel integration and xtask",
+      "status": "passed"
+    },
+    {
+      "id": "P06-004",
+      "behavior": "Current cumulative gate, independent critic, fixes and coordinated documentation",
+      "owner": "project engineering",
+      "status": "passed"
+    }
+  ],
+  "p07_tasks": [
+    {
+      "status": "passed",
+      "behavior": "Ordered transaction journal and bounded interrupted-commit recovery",
+      "id": "P07-001",
+      "owner": "kernel storage"
+    },
+    {
+      "status": "passed",
+      "behavior": "Lossless Windows paths, stable metadata, ACL enforcement and sharing/delete semantics",
+      "id": "P07-002",
+      "owner": "persistent namespace"
+    },
+    {
+      "status": "passed",
+      "behavior": "Durable typed native configuration and initial registry views",
+      "id": "P07-003",
+      "owner": "configuration"
+    },
+    {
+      "status": "passed",
+      "behavior": "Actual recovery/reboot/capacity gate, independent critic and coordinated documentation",
+      "id": "P07-004",
+      "owner": "integration and tooling"
+    }
+  ],
+  "p08_tasks": [
+    {
+      "status": "passed",
+      "behavior": "Supervisor, service manifests, registry, readiness, bounded restart and dependency-ordered shutdown",
+      "id": "P08-001",
+      "owner": "protected native services"
+    },
+    {
+      "status": "passed",
+      "behavior": "Local identity, authentication, sessions, logoff revocation and service identities",
+      "id": "P08-002",
+      "owner": "identity/session"
+    },
+    {
+      "status": "passed",
+      "behavior": "Native runtime N1 heap and N2 threads/time/files/args/env with an independently built app",
+      "id": "P08-003",
+      "owner": "native runtime"
+    },
+    {
+      "status": "passed",
+      "behavior": "Interactive console shell, actual guest gate, independent critic and documentation",
+      "id": "P08-004",
+      "owner": "integration and tooling"
+    }
+  ],
+  "p09_tasks": [
+    {
+      "id": "P09-001",
+      "behavior": "Bounded PE32+ dependency plan, relocation/import binding and rollback",
+      "owner": "compatibility loader",
+      "status": "passed"
+    },
+    {
+      "id": "P09-002",
+      "behavior": "Trusted Windows process personality, original PE DLLs and service-backed output/exit",
+      "owner": "kernel runtime and compatibility ABI",
+      "status": "passed"
+    },
+    {
+      "id": "P09-003",
+      "behavior": "Independent ordinary Windows fixture and same-binary reference/guest evidence",
+      "owner": "fixture and tooling",
+      "status": "passed"
+    },
+    {
+      "id": "P09-004",
+      "behavior": "Cumulative guest qualification, independent critic and coordinated documentation",
+      "owner": "integration",
+      "status": "passed"
+    }
+  ],
+  "p10_tasks": [
+    {
+      "id": "P10-001",
+      "behavior": "Module identity, lifetime, callbacks, TLS and failure rollback",
+      "status": "passed"
+    },
+    {
+      "id": "P10-002",
+      "behavior": "Windows threads, memory, handles, waits and supported exception/unwind dispatch",
+      "status": "passed"
+    },
+    {
+      "id": "P10-003",
+      "behavior": "Service-backed UTF-16 files, consoles, async lifetime and scoped CRT",
+      "status": "passed"
+    },
+    {
+      "id": "P10-004",
+      "behavior": "Independent lifecycle/data fixtures, cumulative P00-P10 suite, critic and docs",
+      "status": "passed"
+    }
+  ],
+  "p12_tasks": [
+    {
+      "id": "P12-G01",
+      "behavior": "P12/P13 phase schema, owner-confirmed historical evidence disposition, parallel authorization, fail-closed acceptance suites, requirement records and task DAGs",
+      "owner": "G gate and records",
+      "prerequisites": [],
+      "interfaces": [
+        "project/*",
+        "AGENTS.md",
+        "docs/adr/0017-historical-evidence-disposition.md",
+        "tools/xtask/src/{phase,spec,scenarios,boot}.rs",
+        "tools/xtask/src/main.rs verify and phase_commands wiring"
+      ],
+      "risks": [
+        "A gate change that silently weakens historical or current checks",
+        "Records drifting from executed evidence"
+      ],
+      "acceptance": "cargo test -p door-xtask; check-spec accepts only the reviewed disposition; verify fails \"acceptance suite not implemented\" until every runner exists",
+      "requirement_refs": [],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "Gate composed (cargo xtask verify --list): inherited commands and scenarios, P12 host/clippy commands, 18 further desktop scenarios in child runs, five acceptance suites; host-tested only"
+    },
+    {
+      "id": "P12-W9",
+      "behavior": "Per-application binary split, runtime-loaded assets and shared runtime adapter",
+      "owner": "W9 binary split and runtime assets",
+      "prerequisites": [],
+      "interfaces": [
+        "desktop/workspace/src/{runtime,ui,fluent,main,surface}.rs",
+        "kernel process manifests",
+        "xtask session staging",
+        "graphics/window-server/src/apps.rs"
+      ],
+      "risks": [
+        "16 MiB loader limit per binary",
+        "Asset loading regressions in existing desktop workflows"
+      ],
+      "acceptance": "Every binary under the loader limit; fonts and icons load at runtime; P11 desktop workflows still pass",
+      "requirement_refs": [
+        "P12-TOOLKIT",
+        "P12-TEXT",
+        "P12-ASSETS"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence)"
+    },
+    {
+      "id": "P12-T01",
+      "behavior": "Door Text: Unicode segmentation, bidi, line breaking, shaping and fallback over owner-local Windows fonts loaded at runtime",
+      "owner": "T Door Text",
+      "prerequisites": [
+        "P12-W9"
+      ],
+      "interfaces": [
+        "frameworks/text/**",
+        "assets/fonts/**",
+        "Cargo.lock",
+        "specs/sources/dependencies.json",
+        "PROVENANCE.md",
+        "THIRD_PARTY_NOTICES.md",
+        "tests/fixtures/text/**"
+      ],
+      "risks": [
+        "Owner fonts are private and not redistributable",
+        "New Unicode crates need dependency review",
+        "Glyph cache memory bounds"
+      ],
+      "acceptance": "Host shaping/bidi/line-break corpus tests; TEXT-01 visible and semantic editing",
+      "requirement_refs": [
+        "P12-TEXT"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence)"
+    },
+    {
+      "id": "P12-U01",
+      "behavior": "Retained Door UI toolkit: generational WidgetId, layout, display list, inspector and control catalog with state machines and semantics",
+      "owner": "U Door UI toolkit and accessibility",
+      "prerequisites": [
+        "P12-T01"
+      ],
+      "interfaces": [
+        "frameworks/ui/**"
+      ],
+      "risks": [
+        "Migrating immediate-mode apps without regressions",
+        "Binary size"
+      ],
+      "acceptance": "component-gallery and A11Y-01 suites",
+      "requirement_refs": [
+        "P12-TOOLKIT",
+        "P12-CONTROLS"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence)"
+    },
+    {
+      "id": "P12-U02",
+      "behavior": "Semantic tree, caption/inspector assistive client, keyboard-only operation and focus restoration",
+      "owner": "U Door UI toolkit and accessibility",
+      "prerequisites": [
+        "P12-U01"
+      ],
+      "interfaces": [
+        "frameworks/accessibility/**",
+        "protocol/server accessibility.rs"
+      ],
+      "risks": [
+        "Semantic tree drifting from painted state"
+      ],
+      "acceptance": "A11Y-01 without screenshot recognition",
+      "requirement_refs": [
+        "P12-A11Y"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence); A11Y-01 runner being added"
+    },
+    {
+      "id": "P12-U03",
+      "behavior": "Component gallery application and the `cargo xtask test ui --suite component-gallery` runner",
+      "owner": "U Door UI toolkit and accessibility",
+      "prerequisites": [
+        "P12-U01",
+        "P12-U02",
+        "P12-T01",
+        "P12-W7",
+        "P12-W8"
+      ],
+      "interfaces": [
+        "desktop/component-gallery/**",
+        "gallery xtask suite (runner registered in tools/xtask/src/scenarios.rs through G)"
+      ],
+      "risks": [
+        "Nondeterministic captures across scale, theme and font settings"
+      ],
+      "acceptance": "component-gallery suite: every control and state, interaction traces and semantic trees",
+      "requirement_refs": [
+        "P12-GALLERY",
+        "P12-CONTROLS"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence); component-gallery runner registered; gallery binaries not yet in the session staging table when recorded"
+    },
+    {
+      "id": "P12-I01",
+      "behavior": "Keyboard layouts: physical/logical keys, AltGr, dead keys and compose",
+      "owner": "I input and IME",
+      "prerequisites": [],
+      "interfaces": [
+        "kernel/src/keyboard.rs",
+        "runtime/abi/src/graphics.rs",
+        "new keyboard-layout crate"
+      ],
+      "risks": [
+        "ABI change to the input event record"
+      ],
+      "acceptance": "Host layout tests; TEXT-01 typed input",
+      "requirement_refs": [
+        "P12-INPUT-IME",
+        "P12-LAYOUTS"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence)"
+    },
+    {
+      "id": "P12-I02",
+      "behavior": "IME protocol and Chinese Pinyin, Japanese and Korean engines with openly licensed dictionaries",
+      "owner": "I input and IME",
+      "prerequisites": [
+        "P12-I01",
+        "P12-T01"
+      ],
+      "interfaces": [
+        "protocol/server/client text_input.rs",
+        "IME engine process"
+      ],
+      "risks": [
+        "Dictionary licences and size",
+        "Composition state across focus changes"
+      ],
+      "acceptance": "TEXT-01 composition and commit",
+      "requirement_refs": [
+        "P12-INPUT-IME"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence); dictionaries in initfs as optional resources 8 and 9"
+    },
+    {
+      "id": "P12-W5",
+      "behavior": "Clipboard and drag-and-drop protocol, server and client",
+      "owner": "W5 clipboard and drag-and-drop",
+      "prerequisites": [],
+      "interfaces": [
+        "crates/service-protocol/src/{clipboard,dnd}.rs",
+        "graphics/window-server/src/{clipboard,dnd}.rs",
+        "specs/contracts/native-ui-v1.md"
+      ],
+      "risks": [
+        "Cross-session data exposure",
+        "Unbounded payloads"
+      ],
+      "acceptance": "TEXT-01 clipboard; denied cross-session access",
+      "requirement_refs": [
+        "P12-CLIPBOARD-DND"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence)"
+    },
+    {
+      "id": "P12-W7",
+      "behavior": "Themes, high contrast, text size, reduced motion/transparency and scale UI",
+      "owner": "W7 themes and scale UI",
+      "prerequisites": [],
+      "interfaces": [
+        "crates/service-protocol/src/desktop.rs",
+        "workspace palettes/tokens/settings",
+        "window-server painters"
+      ],
+      "risks": [
+        "Contrast regressions in existing apps"
+      ],
+      "acceptance": "MOTION-01; gallery high-contrast and text-size states",
+      "requirement_refs": [
+        "P12-THEMES",
+        "P12-TEXT-SIZE"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "Themes, high contrast and reduced motion implemented-unverified (host-tested; no guest evidence); text size application missing"
+    },
+    {
+      "id": "P12-W8",
+      "behavior": "Fractional and dynamic DPI core (owner laptop 2560x1600 at 150%)",
+      "owner": "W8 fractional DPI core",
+      "prerequisites": [],
+      "interfaces": [
+        "graphics/compositor/**",
+        "crates/service-protocol/src/window.rs",
+        "graphics/window-server/src/{policy,present,material}.rs",
+        "storage ScalePercent",
+        "display_scale.rs scenario"
+      ],
+      "risks": [
+        "Rounding seams at 125/150/175%",
+        "Buffer reallocation on scale change"
+      ],
+      "acceptance": "DISPLAY-01",
+      "requirement_refs": [
+        "P12-DPI"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "implemented-unverified (host-tested; no guest evidence); 125/150/175% only"
+    },
+    {
+      "id": "P12-S2-APPS",
+      "behavior": "Migrate the bundled applications to the toolkit",
+      "owner": "stage 2 (coordinator assigns)",
+      "prerequisites": [
+        "P12-W9",
+        "P12-U01"
+      ],
+      "interfaces": [
+        "apps/**"
+      ],
+      "risks": [
+        "Behaviour regressions in accepted desktop workflows"
+      ],
+      "acceptance": "P11 desktop workflows and P12 suites still pass",
+      "requirement_refs": [
+        "P12-TOOLKIT"
+      ],
+      "evidence": null,
+      "status": "not_started"
+    },
+    {
+      "id": "P12-S2-EDITOR",
+      "behavior": "Notes as the TEXT-01 editor: Unicode document model with composition range, documents over 4 KiB, saved encoding",
+      "owner": "stage 2 (coordinator assigns)",
+      "prerequisites": [
+        "P12-T01",
+        "P12-I02",
+        "P12-W5",
+        "P12-U01"
+      ],
+      "interfaces": [
+        "desktop/workspace document model"
+      ],
+      "risks": [
+        "Lossy encoding round trips"
+      ],
+      "acceptance": "TEXT-01",
+      "requirement_refs": [
+        "P12-EDITOR"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "Notes TEXT-01 document model (4 MiB) implemented-unverified (host-tested; no guest evidence); saves over 4 KiB not atomic; TEXT-01 runner missing"
+    },
+    {
+      "id": "P12-S2-CLIPBOARD",
+      "behavior": "Clipboard and drag-and-drop consumers in Explorer, Notes and Terminal",
+      "owner": "stage 2 (coordinator assigns)",
+      "prerequisites": [
+        "P12-W5",
+        "P12-W9"
+      ],
+      "interfaces": [
+        "apps/**"
+      ],
+      "risks": [
+        "Partial transfers on failure"
+      ],
+      "acceptance": "TEXT-01 clipboard path",
+      "requirement_refs": [
+        "P12-CLIPBOARD-DND"
+      ],
+      "evidence": null,
+      "status": "not_started"
+    },
+    {
+      "id": "P12-S2-TIMESTAMPS",
+      "behavior": "Filesystem timestamps recorded by the volume and shown in Explorer",
+      "owner": "stage 2 (coordinator assigns)",
+      "prerequisites": [],
+      "interfaces": [
+        "fs/storage-core/**",
+        "Explorer views"
+      ],
+      "risks": [
+        "On-disk format change for existing owner volumes"
+      ],
+      "acceptance": "Raw-disk audit of recorded times; Explorer shows real dates",
+      "requirement_refs": [
+        "P12-TIMESTAMPS"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "missing (in progress)"
+    },
+    {
+      "id": "P12-S2-LOCALE",
+      "behavior": "Localization: number/date formats, collation, time zones and locale corpus",
+      "owner": "unassigned (coordinator assigns)",
+      "prerequisites": [
+        "P12-T01"
+      ],
+      "interfaces": [
+        "locale data and time service"
+      ],
+      "risks": [
+        "Locale data licensing and size"
+      ],
+      "acceptance": "Locale corpus tests; local time instead of UTC",
+      "requirement_refs": [
+        "P12-LOCALE"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "missing (in progress; door-locale host tests are a P12 command)"
+    },
+    {
+      "id": "P12-S2-SCENARIOS",
+      "behavior": "Register TEXT-01, A11Y-01, DISPLAY-01 and MOTION-01 runners in tools/xtask/src/scenarios.rs",
+      "owner": "owning streams through G",
+      "prerequisites": [
+        "P12-S2-EDITOR",
+        "P12-U02",
+        "P12-W8",
+        "P12-W7"
+      ],
+      "interfaces": [
+        "tools/xtask/src/scenarios.rs RUNNERS",
+        "stream-owned runner modules"
+      ],
+      "risks": [
+        "A runner that records success without real guest effects"
+      ],
+      "acceptance": "Each suite passes on a current desktop image",
+      "requirement_refs": [
+        "P12-TEXT",
+        "P12-A11Y",
+        "P12-DPI",
+        "P12-THEMES"
+      ],
+      "evidence": null,
+      "status": "in_progress",
+      "state_20261024": "TEXT-01, DISPLAY-01 and MOTION-01 runners missing; A11Y-01 being added; verify fails before any build until all are registered"
+    },
+    {
+      "id": "P12-S3-CLOSE",
+      "behavior": "Frozen-tree cumulative `cargo xtask verify`, coordinated records and independent critic",
+      "owner": "G with coordinator",
+      "prerequisites": [
+        "P12-G01",
+        "P12-U03",
+        "P12-S2-APPS",
+        "P12-S2-EDITOR",
+        "P12-S2-CLIPBOARD",
+        "P12-S2-TIMESTAMPS",
+        "P12-S2-LOCALE",
+        "P12-S2-SCENARIOS"
+      ],
+      "interfaces": [
+        "reports/runs/<verify>/report.json",
+        "reports/p12-critic.json"
+      ],
+      "risks": [
+        "QEMU time for the cumulative run",
+        "Source changes during the run invalidate it"
+      ],
+      "acceptance": "Successful unchanged-input P12 verify report and critic with zero unresolved findings",
+      "requirement_refs": [],
+      "evidence": null,
+      "status": "not_started"
+    }
+  ],
+  "p13_tasks": [
+    {
+      "id": "P13-G01",
+      "behavior": "P13 schema, owner-authorized parallel phase, Windows GUI acceptance suites and records",
+      "owner": "G gate and records",
+      "prerequisites": [],
+      "interfaces": [
+        "project/*",
+        "tools/xtask/src/{phase,spec,scenarios}.rs",
+        "tools/xtask/src/main.rs"
+      ],
+      "risks": [
+        "Parallel phase passing before P12"
+      ],
+      "acceptance": "verify --phase P13 includes P12; P13 cannot pass first",
+      "requirement_refs": [],
+      "evidence": "2026-10-26 P13-C: phase_commands P13 adds cargo test -p door-windows-gui, cargo test -p door-pe-loader --test p13_application and guest-pe clippy for door-user32/gdi32/comdlg32/comctl32; the five Windows GUI suites are registered (cargo xtask verify --list --phase P13)",
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-A01",
+      "behavior": "Lift loader/personality limits: subsystem 2, resource/load-config/delay-import directories, module and run limits, bootstrap DLL records, GUI manifest and heap, bulk checked copy",
+      "owner": "P13-A loader, personality and kernel32",
+      "prerequisites": [],
+      "interfaces": [
+        "compat/pe/**",
+        "compat/abi/**",
+        "kernel Windows process files"
+      ],
+      "risks": [
+        "Weakened image validation",
+        "Larger trusted copy paths"
+      ],
+      "acceptance": "F1 loads with the GUI subsystem; malformed directories rejected",
+      "requirement_refs": [
+        "WIN-LOADER"
+      ],
+      "evidence": null,
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-A02",
+      "behavior": "kernel32 additions: Heap/Global/Local, Find*File, attributes, file pointer, current directory, module file name, startup info, MulDiv, lstr*W, MultiByte/WideChar, resources",
+      "owner": "P13-A loader, personality and kernel32",
+      "prerequisites": [
+        "P13-A01"
+      ],
+      "interfaces": [
+        "compat/dlls/{ntdll,kernel32}/**"
+      ],
+      "risks": [
+        "Success stubs instead of real semantics"
+      ],
+      "acceptance": "F2 Open/Save over real directory APIs",
+      "requirement_refs": [
+        "WIN-KERNEL32"
+      ],
+      "evidence": null,
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-B01",
+      "behavior": "Host-testable portable GUI core: regions, DLGTEMPLATE/MENUTEMPLATE parsers, message ordering, ROP evaluator",
+      "owner": "P13-B portable core and GUI DLLs",
+      "prerequisites": [],
+      "interfaces": [
+        "compat/gui/**"
+      ],
+      "risks": [
+        "Parser bounds on hostile templates"
+      ],
+      "acceptance": "Host unit tests",
+      "requirement_refs": [
+        "WIN-USER32",
+        "WIN-GDI32"
+      ],
+      "evidence": null,
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-PROTO",
+      "behavior": "Window-protocol additions: owned/modal role, client move/resize bound to a press serial, geometry change event, size constraints, Unicode titles",
+      "owner": "coordinator (window.rs is W8-owned during stage 1)",
+      "prerequisites": [
+        "P12-W8"
+      ],
+      "interfaces": [
+        "crates/service-protocol/src/window.rs",
+        "graphics/window-server"
+      ],
+      "risks": [
+        "Protocol change racing the W8 DPI work"
+      ],
+      "acceptance": "141.5 move/resize/minimize; owned dialogs",
+      "requirement_refs": [
+        "WIN-PROTOCOL"
+      ],
+      "evidence": null,
+      "status": "not_started"
+    },
+    {
+      "id": "P13-B02",
+      "behavior": "user32: generational HWNDs, per-thread queues, bounded nested and cross-thread SendMessage, SendMessageTimeoutW, IsHungAppWindow, controls, menus, dialogs, MessageBox, accelerators",
+      "owner": "P13-B portable core and GUI DLLs",
+      "prerequisites": [
+        "P13-B01",
+        "P13-A01",
+        "P13-PROTO"
+      ],
+      "interfaces": [
+        "compat/dlls/user32/**"
+      ],
+      "risks": [
+        "Deadlock across callbacks",
+        "Unbounded reentrancy"
+      ],
+      "acceptance": "F1, F3, 141.5 and 141.6",
+      "requirement_refs": [
+        "WIN-USER32"
+      ],
+      "evidence": null,
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-B03",
+      "behavior": "gdi32: handles, DCs, ROP2/ROP3, DIBs, text through door-graphics-text, BeginPaint/EndPaint on a private back buffer, opaque band commit",
+      "owner": "P13-B portable core and GUI DLLs",
+      "prerequisites": [
+        "P13-B01",
+        "P12-T01"
+      ],
+      "interfaces": [
+        "compat/dlls/gdi32/**"
+      ],
+      "risks": [
+        "Pixel differences against the Windows reference"
+      ],
+      "acceptance": "F1 and F2 paint",
+      "requirement_refs": [
+        "WIN-GDI32"
+      ],
+      "evidence": null,
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-B04",
+      "behavior": "comdlg32 Open/Save over kernel32 directory APIs and a comctl32 subset",
+      "owner": "P13-B portable core and GUI DLLs",
+      "prerequisites": [
+        "P13-B02",
+        "P13-A02"
+      ],
+      "interfaces": [
+        "compat/dlls/{comdlg32,comctl32}/**"
+      ],
+      "risks": [
+        "Dialog contract divergence"
+      ],
+      "acceptance": "F2 open/save/reopen",
+      "requirement_refs": [
+        "WIN-COMDLG32",
+        "WIN-COMCTL32"
+      ],
+      "evidence": null,
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-C01",
+      "behavior": "Fixtures without CRT, /SUBSYSTEM:WINDOWS: F1 self-test, F2 Notepad-like editor (+RC variant), F3 hang",
+      "owner": "P13-C fixtures, reference and guest integration",
+      "prerequisites": [],
+      "interfaces": [
+        "tests/fixtures/windows-gui/**",
+        "profiles/build/windows-x64.json",
+        "tools/xtask/src/windows/**"
+      ],
+      "risks": [
+        "Toolchain availability for reproducible fixture bytes"
+      ],
+      "acceptance": "Reproducible fixture hashes",
+      "requirement_refs": [
+        "WIN-FIXTURES"
+      ],
+      "evidence": "2026-10-26: F1 selftest.c, F2 editor.c (+editor.rc), F3 hang.c; identical double build (tools/xtask/src/windows/gui.rs); import inventory tests/fixtures/windows-gui/imports.json; toolchain pins in profiles/build/windows-x64.json",
+      "status": "implemented"
+    },
+    {
+      "id": "P13-C02",
+      "behavior": "Windows reference run of F1 on the owner's PC with identical binary hashes (no input injection, no setting changes)",
+      "owner": "P13-C fixtures, reference and guest integration",
+      "prerequisites": [
+        "P13-C01"
+      ],
+      "interfaces": [
+        "tools/xtask/src/windows/**"
+      ],
+      "risks": [
+        "Briefly opening windows on the owner desktop"
+      ],
+      "acceptance": "Same-binary reference record",
+      "requirement_refs": [
+        "WIN-REFERENCE"
+      ],
+      "evidence": "2026-10-26: tests/fixtures/windows-gui/reference.json from run host-1792952263026238500-16188 (Windows 11 Pro 10.0.26300): F1 (+--reopen, --probe metrics), F2, F2-RC and F3 passed and repeated identically; ComDlg32 MRU side effect recorded",
+      "status": "implemented"
+    },
+    {
+      "id": "P13-S2-LAUNCH",
+      "behavior": "Launch .exe files from Explorer through Init EXECUTE",
+      "owner": "stage 2 (coordinator assigns)",
+      "prerequisites": [
+        "P13-A01",
+        "P12-W9"
+      ],
+      "interfaces": [
+        "Explorer",
+        "Init EXECUTE path"
+      ],
+      "risks": [
+        "Launching binaries with the wrong identity"
+      ],
+      "acceptance": "141.5 launch path",
+      "requirement_refs": [
+        "WIN-LAUNCH"
+      ],
+      "evidence": null,
+      "status": "not_started"
+    },
+    {
+      "id": "P13-C03",
+      "behavior": "Door guest runs with real QMP input, raw-disk audits and native coexistence; register the win32-gui-f1/f2/f3 and scenario-141-5/141-6 runners",
+      "owner": "P13-C fixtures, reference and guest integration",
+      "prerequisites": [
+        "P13-B02",
+        "P13-B03",
+        "P13-B04",
+        "P13-C01",
+        "P13-S2-LAUNCH"
+      ],
+      "interfaces": [
+        "tools/xtask/src/desktop/win32.rs",
+        "tools/xtask/src/scenarios.rs RUNNERS (through G)"
+      ],
+      "risks": [
+        "QEMU time",
+        "Input timing flakiness"
+      ],
+      "acceptance": "All five P13 suites pass on a current image",
+      "requirement_refs": [
+        "WIN-FIXTURES",
+        "WIN-USER32"
+      ],
+      "evidence": "2026-10-26: runners in tools/xtask/src/desktop/win32.rs registered in scenarios::RUNNERS (desktop-win32 image variant, real QMP input, kernel module/process records, screendumps, raw-disk audits); not run: they need P13-A, P13-B and P13-S2-LAUNCH",
+      "status": "in_progress"
+    },
+    {
+      "id": "P13-S3-CLOSE",
+      "behavior": "After P12 passes: frozen-tree `cargo xtask verify --phase P13` (then as the selected phase), records and independent critic",
+      "owner": "G with coordinator",
+      "prerequisites": [
+        "P12-S3-CLOSE",
+        "P13-C03",
+        "P13-C02"
+      ],
+      "interfaces": [
+        "reports/runs/<verify>/report.json",
+        "reports/p13-critic.json"
+      ],
+      "risks": [
+        "QEMU time"
+      ],
+      "acceptance": "Successful unchanged-input P13 verify report and critic",
+      "requirement_refs": [],
+      "evidence": null,
+      "status": "not_started"
+    }
+  ],
+  "readiness_tasks": [
+    {
+      "id": "P10-R01",
+      "behavior": "Ordinary boot and reusable persistent user session",
+      "status": "passed"
+    },
+    {
+      "id": "P10-R02",
+      "behavior": "General authenticated file/directory APIs and useful native shell",
+      "status": "passed"
+    },
+    {
+      "id": "P10-R03",
+      "behavior": "File-supplied native/Windows program admission with real startup data",
+      "status": "passed"
+    },
+    {
+      "id": "P10-R04",
+      "behavior": "Independent application trials and user-directed reboot workflows",
+      "status": "passed"
+    },
+    {
+      "id": "P10-R05",
+      "behavior": "Full regression gate, independent critic and coordinated documentation",
+      "status": "passed"
+    }
+  ]
+}

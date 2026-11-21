@@ -1,0 +1,794 @@
+{
+  "schema_version": 1,
+  "record_kind": "initfs_inputs",
+  "entries": [
+    {
+      "artifact": "door-assist",
+      "destination": "bin/door-assist.elf"
+    },
+    {
+      "artifact": "door-audio",
+      "destination": "bin/door-audio.elf"
+    },
+    {
+      "artifact": "door-console",
+      "destination": "bin/door-console.elf"
+    },
+    {
+      "artifact": "door-desktop-shell",
+      "destination": "bin/door-desktop-shell.elf"
+    },
+    {
+      "artifact": "door-files",
+      "destination": "bin/door-files.elf"
+    },
+    {
+      "artifact": "door-gallery",
+      "destination": "bin/door-gallery.elf"
+    },
+    {
+      "artifact": "door-ime",
+      "destination": "bin/door-ime.elf"
+    },
+    {
+      "artifact": "door-inbox",
+      "destination": "bin/door-inbox.elf"
+    },
+    {
+      "artifact": "door-init",
+      "destination": "bin/door-init.elf"
+    },
+    {
+      "artifact": "door-monitor",
+      "destination": "bin/door-monitor.elf"
+    },
+    {
+      "artifact": "door-network",
+      "destination": "bin/door-network.elf"
+    },
+    {
+      "artifact": "door-notes",
+      "destination": "bin/door-notes.elf"
+    },
+    {
+      "artifact": "door-preview",
+      "destination": "bin/door-preview.elf"
+    },
+    {
+      "artifact": "door-search",
+      "destination": "bin/door-search.elf"
+    },
+    {
+      "artifact": "door-session",
+      "destination": "bin/door-session.elf"
+    },
+    {
+      "artifact": "door-settings",
+      "destination": "bin/door-settings.elf"
+    },
+    {
+      "artifact": "door-shell",
+      "destination": "bin/door-shell.elf"
+    },
+    {
+      "artifact": "door-storage",
+      "destination": "bin/door-storage.elf"
+    },
+    {
+      "artifact": "door-terminal",
+      "destination": "bin/door-terminal.elf"
+    },
+    {
+      "artifact": "door-window",
+      "destination": "bin/door-window.elf"
+    },
+    {
+      "artifact": "native-workload",
+      "destination": "bin/native-workload.elf"
+    },
+    {
+      "source": "assets/fonts/windows-unicode/Nirmala.ttc",
+      "destination": "fonts/Nirmala.ttc"
+    },
+    {
+      "source": "assets/fonts/windows-unicode/YuGothM.ttc",
+      "destination": "fonts/YuGothM.ttc"
+    },
+    {
+      "source": "assets/fonts/windows-unicode/malgun.ttf",
+      "destination": "fonts/malgun.ttf"
+    },
+    {
+      "source": "assets/fonts/windows-unicode/msjh.ttc",
+      "destination": "fonts/msjh.ttc"
+    },
+    {
+      "source": "assets/fonts/windows-unicode/msyh.ttc",
+      "destination": "fonts/msyh.ttc"
+    },
+    {
+      "source": "assets/fonts/windows-unicode/seguiemj.ttf",
+      "destination": "fonts/seguiemj.ttf"
+    },
+    {
+      "source": "assets/fonts/windows-unicode/seguihis.ttf",
+      "destination": "fonts/seguihis.ttf"
+    },
+    {
+      "source": "assets/licenses/desktop-notices.txt",
+      "destination": "seed/desktop-notices.txt"
+    },
+    {
+      "artifact": "door-tools",
+      "destination": "seed/door-tools.elf"
+    },
+    {
+      "source": "assets/sounds/samples/doors-chime.flac",
+      "destination": "seed/doors-chime.flac"
+    },
+    {
+      "artifact": "imagehost",
+      "class": "windows-fixture",
+      "destination": "seed/imagehost.exe"
+    },
+    {
+      "artifact": "imagehost-x86",
+      "class": "windows-fixture",
+      "destination": "seed/imagehost32.exe"
+    },
+    {
+      "artifact": "msiexec",
+      "class": "windows-fixture",
+      "destination": "seed/msiexec.exe"
+    },
+    {
+      "artifact": "msiexec-x86",
+      "class": "windows-fixture",
+      "destination": "seed/msiexec32.exe"
+    },
+    {
+      "source": "assets/fonts/selawik/LICENSE.txt",
+      "destination": "seed/selawik-license.txt"
+    },
+    {
+      "artifact": "tinybasic",
+      "class": "windows-fixture",
+      "destination": "seed/tinybasic.exe"
+    },
+    {
+      "artifact": "app-assets",
+      "class": "resource-pack",
+      "destination": "system/app-assets.pack"
+    },
+    {
+      "source": "boot/config/session-boot.txt",
+      "destination": "system/boot.txt"
+    },
+    {
+      "source": "assets/wallpapers/windows/desktop-assets.blob",
+      "destination": "system/desktop-assets.blob"
+    },
+    {
+      "source": "boot/config/session.conf",
+      "destination": "system/desktop.conf"
+    },
+    {
+      "source": "profiles/build/desktop-install.txt",
+      "destination": "system/install.manifest"
+    },
+    {
+      "source": "boot/config/window-tests.conf",
+      "destination": "system/window-tests.conf"
+    },
+    {
+      "artifact": "advapi32",
+      "class": "windows-dll",
+      "destination": "windows/advapi32.dll"
+    },
+    {
+      "artifact": "amsi",
+      "class": "windows-dll",
+      "destination": "windows/amsi.dll"
+    },
+    {
+      "artifact": "bcrypt",
+      "class": "windows-dll",
+      "destination": "windows/bcrypt.dll"
+    },
+    {
+      "artifact": "bcryptprimitives",
+      "class": "windows-dll",
+      "destination": "windows/bcryptprimitives.dll"
+    },
+    {
+      "artifact": "bthprops",
+      "class": "windows-dll",
+      "destination": "windows/bthprops.cpl"
+    },
+    {
+      "artifact": "cfgmgr32",
+      "class": "windows-dll",
+      "destination": "windows/cfgmgr32.dll"
+    },
+    {
+      "artifact": "comctl32",
+      "class": "windows-dll",
+      "destination": "windows/comctl32.dll"
+    },
+    {
+      "artifact": "comdlg32",
+      "class": "windows-dll",
+      "destination": "windows/comdlg32.dll"
+    },
+    {
+      "artifact": "crypt32",
+      "class": "windows-dll",
+      "destination": "windows/crypt32.dll"
+    },
+    {
+      "artifact": "cryptui",
+      "class": "windows-dll",
+      "destination": "windows/cryptui.dll"
+    },
+    {
+      "artifact": "d3d11",
+      "class": "windows-dll",
+      "destination": "windows/d3d11.dll"
+    },
+    {
+      "artifact": "d3d12",
+      "class": "windows-dll",
+      "destination": "windows/d3d12.dll"
+    },
+    {
+      "artifact": "dbghelp",
+      "class": "windows-dll",
+      "destination": "windows/dbghelp.dll"
+    },
+    {
+      "artifact": "dcomp",
+      "class": "windows-dll",
+      "destination": "windows/dcomp.dll"
+    },
+    {
+      "artifact": "dhcpcsvc",
+      "class": "windows-dll",
+      "destination": "windows/dhcpcsvc.dll"
+    },
+    {
+      "artifact": "dnsapi",
+      "class": "windows-dll",
+      "destination": "windows/dnsapi.dll"
+    },
+    {
+      "artifact": "dsound",
+      "class": "windows-dll",
+      "destination": "windows/dsound.dll"
+    },
+    {
+      "artifact": "dwmapi",
+      "class": "windows-dll",
+      "destination": "windows/dwmapi.dll"
+    },
+    {
+      "artifact": "dwrite",
+      "class": "windows-dll",
+      "destination": "windows/dwrite.dll"
+    },
+    {
+      "artifact": "dxgi",
+      "class": "windows-dll",
+      "destination": "windows/dxgi.dll"
+    },
+    {
+      "artifact": "gdi32",
+      "class": "windows-dll",
+      "destination": "windows/gdi32.dll"
+    },
+    {
+      "artifact": "hid",
+      "class": "windows-dll",
+      "destination": "windows/hid.dll"
+    },
+    {
+      "artifact": "iphlpapi",
+      "class": "windows-dll",
+      "destination": "windows/iphlpapi.dll"
+    },
+    {
+      "artifact": "kernel32",
+      "class": "windows-dll",
+      "destination": "windows/kernel32.dll"
+    },
+    {
+      "artifact": "mf",
+      "class": "windows-dll",
+      "destination": "windows/mf.dll"
+    },
+    {
+      "artifact": "mfplat",
+      "class": "windows-dll",
+      "destination": "windows/mfplat.dll"
+    },
+    {
+      "artifact": "mfreadwrite",
+      "class": "windows-dll",
+      "destination": "windows/mfreadwrite.dll"
+    },
+    {
+      "artifact": "mmdevapi",
+      "class": "windows-dll",
+      "destination": "windows/mmdevapi.dll"
+    },
+    {
+      "artifact": "msi",
+      "class": "windows-dll",
+      "destination": "windows/msi.dll"
+    },
+    {
+      "artifact": "msvcrt",
+      "class": "windows-dll",
+      "destination": "windows/msvcrt.dll"
+    },
+    {
+      "artifact": "ncrypt",
+      "class": "windows-dll",
+      "destination": "windows/ncrypt.dll"
+    },
+    {
+      "artifact": "ntdll",
+      "class": "windows-dll",
+      "destination": "windows/ntdll.dll"
+    },
+    {
+      "artifact": "ole32",
+      "class": "windows-dll",
+      "destination": "windows/ole32.dll"
+    },
+    {
+      "artifact": "oleacc",
+      "class": "windows-dll",
+      "destination": "windows/oleacc.dll"
+    },
+    {
+      "artifact": "oleaut32",
+      "class": "windows-dll",
+      "destination": "windows/oleaut32.dll"
+    },
+    {
+      "artifact": "pdh",
+      "class": "windows-dll",
+      "destination": "windows/pdh.dll"
+    },
+    {
+      "artifact": "propsys",
+      "class": "windows-dll",
+      "destination": "windows/propsys.dll"
+    },
+    {
+      "artifact": "rpcrt4",
+      "class": "windows-dll",
+      "destination": "windows/rpcrt4.dll"
+    },
+    {
+      "artifact": "secur32",
+      "class": "windows-dll",
+      "destination": "windows/secur32.dll"
+    },
+    {
+      "artifact": "setupapi",
+      "class": "windows-dll",
+      "destination": "windows/setupapi.dll"
+    },
+    {
+      "artifact": "shell32",
+      "class": "windows-dll",
+      "destination": "windows/shell32.dll"
+    },
+    {
+      "artifact": "shlwapi",
+      "class": "windows-dll",
+      "destination": "windows/shlwapi.dll"
+    },
+    {
+      "artifact": "taskschd",
+      "class": "windows-dll",
+      "destination": "windows/taskschd.dll"
+    },
+    {
+      "artifact": "tbs",
+      "class": "windows-dll",
+      "destination": "windows/tbs.dll"
+    },
+    {
+      "artifact": "ucrtbase",
+      "class": "windows-dll",
+      "destination": "windows/ucrtbase.dll"
+    },
+    {
+      "artifact": "uiautomationcore",
+      "class": "windows-dll",
+      "destination": "windows/uiautomationcore.dll"
+    },
+    {
+      "artifact": "urlmon",
+      "class": "windows-dll",
+      "destination": "windows/urlmon.dll"
+    },
+    {
+      "artifact": "user32",
+      "class": "windows-dll",
+      "destination": "windows/user32.dll"
+    },
+    {
+      "artifact": "userenv",
+      "class": "windows-dll",
+      "destination": "windows/userenv.dll"
+    },
+    {
+      "artifact": "uxtheme",
+      "class": "windows-dll",
+      "destination": "windows/uxtheme.dll"
+    },
+    {
+      "artifact": "version",
+      "class": "windows-dll",
+      "destination": "windows/version.dll"
+    },
+    {
+      "artifact": "wevtapi",
+      "class": "windows-dll",
+      "destination": "windows/wevtapi.dll"
+    },
+    {
+      "artifact": "winhttp",
+      "class": "windows-dll",
+      "destination": "windows/winhttp.dll"
+    },
+    {
+      "artifact": "wininet",
+      "class": "windows-dll",
+      "destination": "windows/wininet.dll"
+    },
+    {
+      "artifact": "winmm",
+      "class": "windows-dll",
+      "destination": "windows/winmm.dll"
+    },
+    {
+      "artifact": "winspool",
+      "class": "windows-dll",
+      "destination": "windows/winspool.drv"
+    },
+    {
+      "artifact": "wintrust",
+      "class": "windows-dll",
+      "destination": "windows/wintrust.dll"
+    },
+    {
+      "artifact": "winusb",
+      "class": "windows-dll",
+      "destination": "windows/winusb.dll"
+    },
+    {
+      "artifact": "wldp",
+      "class": "windows-dll",
+      "destination": "windows/wldp.dll"
+    },
+    {
+      "artifact": "ws2_32",
+      "class": "windows-dll",
+      "destination": "windows/ws2_32.dll"
+    },
+    {
+      "artifact": "wtsapi32",
+      "class": "windows-dll",
+      "destination": "windows/wtsapi32.dll"
+    },
+    {
+      "artifact": "advapi32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/advapi32.dll"
+    },
+    {
+      "artifact": "amsi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/amsi.dll"
+    },
+    {
+      "artifact": "bcrypt-x86",
+      "class": "windows-dll",
+      "destination": "windows32/bcrypt.dll"
+    },
+    {
+      "artifact": "bcryptprimitives-x86",
+      "class": "windows-dll",
+      "destination": "windows32/bcryptprimitives.dll"
+    },
+    {
+      "artifact": "bthprops-x86",
+      "class": "windows-dll",
+      "destination": "windows32/bthprops.cpl"
+    },
+    {
+      "artifact": "cfgmgr32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/cfgmgr32.dll"
+    },
+    {
+      "artifact": "comctl32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/comctl32.dll"
+    },
+    {
+      "artifact": "comdlg32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/comdlg32.dll"
+    },
+    {
+      "artifact": "crypt32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/crypt32.dll"
+    },
+    {
+      "artifact": "cryptui-x86",
+      "class": "windows-dll",
+      "destination": "windows32/cryptui.dll"
+    },
+    {
+      "artifact": "d3d11-x86",
+      "class": "windows-dll",
+      "destination": "windows32/d3d11.dll"
+    },
+    {
+      "artifact": "d3d12-x86",
+      "class": "windows-dll",
+      "destination": "windows32/d3d12.dll"
+    },
+    {
+      "artifact": "dbghelp-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dbghelp.dll"
+    },
+    {
+      "artifact": "dcomp-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dcomp.dll"
+    },
+    {
+      "artifact": "dhcpcsvc-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dhcpcsvc.dll"
+    },
+    {
+      "artifact": "dnsapi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dnsapi.dll"
+    },
+    {
+      "artifact": "dsound-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dsound.dll"
+    },
+    {
+      "artifact": "dwmapi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dwmapi.dll"
+    },
+    {
+      "artifact": "dwrite-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dwrite.dll"
+    },
+    {
+      "artifact": "dxgi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/dxgi.dll"
+    },
+    {
+      "artifact": "gdi32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/gdi32.dll"
+    },
+    {
+      "artifact": "hid-x86",
+      "class": "windows-dll",
+      "destination": "windows32/hid.dll"
+    },
+    {
+      "artifact": "iphlpapi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/iphlpapi.dll"
+    },
+    {
+      "artifact": "kernel32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/kernel32.dll"
+    },
+    {
+      "artifact": "mf-x86",
+      "class": "windows-dll",
+      "destination": "windows32/mf.dll"
+    },
+    {
+      "artifact": "mfplat-x86",
+      "class": "windows-dll",
+      "destination": "windows32/mfplat.dll"
+    },
+    {
+      "artifact": "mfreadwrite-x86",
+      "class": "windows-dll",
+      "destination": "windows32/mfreadwrite.dll"
+    },
+    {
+      "artifact": "mmdevapi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/mmdevapi.dll"
+    },
+    {
+      "artifact": "msi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/msi.dll"
+    },
+    {
+      "artifact": "msvcrt-x86",
+      "class": "windows-dll",
+      "destination": "windows32/msvcrt.dll"
+    },
+    {
+      "artifact": "ncrypt-x86",
+      "class": "windows-dll",
+      "destination": "windows32/ncrypt.dll"
+    },
+    {
+      "artifact": "ntdll-x86",
+      "class": "windows-dll",
+      "destination": "windows32/ntdll.dll"
+    },
+    {
+      "artifact": "ole32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/ole32.dll"
+    },
+    {
+      "artifact": "oleacc-x86",
+      "class": "windows-dll",
+      "destination": "windows32/oleacc.dll"
+    },
+    {
+      "artifact": "oleaut32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/oleaut32.dll"
+    },
+    {
+      "artifact": "pdh-x86",
+      "class": "windows-dll",
+      "destination": "windows32/pdh.dll"
+    },
+    {
+      "artifact": "propsys-x86",
+      "class": "windows-dll",
+      "destination": "windows32/propsys.dll"
+    },
+    {
+      "artifact": "rpcrt4-x86",
+      "class": "windows-dll",
+      "destination": "windows32/rpcrt4.dll"
+    },
+    {
+      "artifact": "secur32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/secur32.dll"
+    },
+    {
+      "artifact": "setupapi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/setupapi.dll"
+    },
+    {
+      "artifact": "shell32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/shell32.dll"
+    },
+    {
+      "artifact": "shlwapi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/shlwapi.dll"
+    },
+    {
+      "artifact": "taskschd-x86",
+      "class": "windows-dll",
+      "destination": "windows32/taskschd.dll"
+    },
+    {
+      "artifact": "tbs-x86",
+      "class": "windows-dll",
+      "destination": "windows32/tbs.dll"
+    },
+    {
+      "artifact": "ucrtbase-x86",
+      "class": "windows-dll",
+      "destination": "windows32/ucrtbase.dll"
+    },
+    {
+      "artifact": "uiautomationcore-x86",
+      "class": "windows-dll",
+      "destination": "windows32/uiautomationcore.dll"
+    },
+    {
+      "artifact": "urlmon-x86",
+      "class": "windows-dll",
+      "destination": "windows32/urlmon.dll"
+    },
+    {
+      "artifact": "user32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/user32.dll"
+    },
+    {
+      "artifact": "userenv-x86",
+      "class": "windows-dll",
+      "destination": "windows32/userenv.dll"
+    },
+    {
+      "artifact": "uxtheme-x86",
+      "class": "windows-dll",
+      "destination": "windows32/uxtheme.dll"
+    },
+    {
+      "artifact": "version-x86",
+      "class": "windows-dll",
+      "destination": "windows32/version.dll"
+    },
+    {
+      "artifact": "wevtapi-x86",
+      "class": "windows-dll",
+      "destination": "windows32/wevtapi.dll"
+    },
+    {
+      "artifact": "winhttp-x86",
+      "class": "windows-dll",
+      "destination": "windows32/winhttp.dll"
+    },
+    {
+      "artifact": "wininet-x86",
+      "class": "windows-dll",
+      "destination": "windows32/wininet.dll"
+    },
+    {
+      "artifact": "winmm-x86",
+      "class": "windows-dll",
+      "destination": "windows32/winmm.dll"
+    },
+    {
+      "artifact": "winspool-x86",
+      "class": "windows-dll",
+      "destination": "windows32/winspool.drv"
+    },
+    {
+      "artifact": "wintrust-x86",
+      "class": "windows-dll",
+      "destination": "windows32/wintrust.dll"
+    },
+    {
+      "artifact": "winusb-x86",
+      "class": "windows-dll",
+      "destination": "windows32/winusb.dll"
+    },
+    {
+      "artifact": "wldp-x86",
+      "class": "windows-dll",
+      "destination": "windows32/wldp.dll"
+    },
+    {
+      "artifact": "ws2_32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/ws2_32.dll"
+    },
+    {
+      "artifact": "wtsapi32-x86",
+      "class": "windows-dll",
+      "destination": "windows32/wtsapi32.dll"
+    }
+  ]
+}

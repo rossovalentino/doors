@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "record_kind": "build_profile",
+  "id": "p00-windows-x64",
+  "rust_release": "1.94.1",
+  "rust_commit": "e408947bfd200af42db322daf0fadfe7e26d3bd1",
+  "llvm_version": "21.1.8",
+  "host_target": "x86_64-pc-windows-msvc",
+  "host_linker_version": "14.44.35230.0",
+  "guest_linker": "rust-lld from the pinned Rust sysroot",
+  "shared_library_targets": [
+    "x86_64-unknown-none",
+    "x86_64-unknown-uefi"
+  ],
+  "guest_artifacts": "not_implemented",
+  "dependency_lock": "Cargo.lock",
+  "verification_command": [
+    "cargo",
+    "xtask",
+    "verify"
+  ],
+  "verification_state": "host_tested"
+}

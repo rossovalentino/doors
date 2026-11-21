@@ -1,0 +1,54 @@
+{
+  "file": "file-photo.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "00b70d056bd96ce9e7d37b013f0b5453096a84b749dee85ef66774ff24474281",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-16.png",
+        "sha256": "a17468f950804f519080fc8d1198f206af2b856b56b88d3b8163b3aec81a5ffa",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-20.png",
+        "sha256": "59a54efce81f04214a18fa7b76b93229f6b3a370f5544d84a1a10337f6bc804c",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-24.png",
+        "sha256": "03ae17e968465a24470db1b580175768584e271ad256a2e7cca2a365ccc2acf4",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-32.png",
+        "sha256": "0b3c507eedd49599e18ea64e5d71f50593184858dfc53870cf31f0a791b4db3c",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-40.png",
+        "sha256": "a23fbed45b371c2f7bd49db38998bcbed327281f3902fe78641570f4ee83cb41",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-48.png",
+        "sha256": "16bf0e7726bbff2df5421e71fa2cd297c0f6ad36666f60f402c7e514835efef4",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-64.png",
+        "sha256": "afbafa7b6b646a677c9ec3a48aed8b9fc34087f63427ab12baabd41a1d7659e1",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.Windows.Photos_2026.11090.22001.0_x64__8wekyb3d8bbwe\\Assets\\Retail\\PhotosLogoExtensions.targetsize-256.png",
+        "sha256": "0d07dfd57969b00740a79a43bc53da7d065a6060c4877b0ff1a8922acb6a32f6",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

@@ -1,0 +1,2248 @@
+{
+  "schema_version": 1,
+  "record_kind": "windows_reference",
+  "id": "reference-26h2-x64",
+  "acquisition_status": "acquired_partial",
+  "template": "DOOR_OS_MASTER_SPECIFICATION.md:4880 section 137.6; fields of section 111 (YAML in the template; JSON, a YAML 1.2 subset, here so the harness reads it with serde_json)",
+  "edition": "Windows 11 Pro",
+  "display_version": "26H2",
+  "build": "26300",
+  "update_revision": "9711",
+  "os_build": "26300.9711",
+  "os_version": "10.0.26300.9711",
+  "build_identity": {
+    "read_on": "2026-10-26",
+    "method": "read only: [Environment]::OSVersion and Get-ItemProperty HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion on the owner PC",
+    "environment_osversion": "10.0.26300.0 (Microsoft Windows NT 10.0.26300.0; carries no update revision)",
+    "registry": {
+      "ProductName": "Windows 10 Pro (legacy string Windows 11 still reports)",
+      "EditionID": "Professional",
+      "DisplayVersion": "26H2",
+      "CurrentBuild": "26300",
+      "UBR": 9711,
+      "ReleaseId": "2009",
+      "BuildLabEx": "26100.1.amd64fre.ge_release.240331-1435",
+      "InstallationType": "Client"
+    },
+    "corrects": [
+      "docs/design/windows11-reference.md recorded 25H2 / 26200.9711 (wrong)",
+      "project/requirements.json current_rendering_batch recorded build 26200.9711 (wrong)",
+      "docs/design/windows11-surface-inventory.md recorded 26H2 26300.9711 (correct)"
+    ]
+  },
+  "architecture": "amd64",
+  "locale": "en-US",
+  "keyboard_layouts": [
+    "en-US (US)"
+  ],
+  "ime_versions": [],
+  "optional_features": [],
+  "runtime_versions": [],
+  "displays": [
+    {
+      "id": "\\\\.\\DISPLAY1",
+      "primary": true,
+      "pixels": [
+        2560,
+        1600
+      ],
+      "work_area": [
+        0,
+        0,
+        2560,
+        1528
+      ],
+      "dpi": 144,
+      "scale_percent": 150,
+      "logical": [
+        1706.67,
+        1066.67
+      ],
+      "refresh_hz": null,
+      "orientation": "landscape",
+      "color_profile": null,
+      "monitor": null
+    }
+  ],
+  "theme": {
+    "mode": "dark",
+    "apps_use_light_theme": false,
+    "system_uses_light_theme": false,
+    "accent": "#680081",
+    "colorization_argb": "0xC4680081",
+    "accent_palette": [
+      "#F0C0F4",
+      "#DB9EE5",
+      "#B763CB",
+      "#A94DC1",
+      "#8E3AA7",
+      "#692782",
+      "#400E59",
+      "#881798"
+    ],
+    "transparency": true,
+    "animations": null,
+    "text_scale": null,
+    "taskbar_alignment": "center",
+    "taskbar": {
+      "TaskbarAl": 1,
+      "TaskbarDa": 0,
+      "ShowTaskViewButton": 0,
+      "SearchboxTaskbarMode": 1
+    },
+    "wallpaper": "owner wallpaper (private, uncontrolled): Mica and acrylic regions are tinted by it"
+  },
+  "fonts": [
+    {
+      "family": "Segoe UI Variable",
+      "role": "UI text and display",
+      "version": null,
+      "sha256": null,
+      "usage": "reference only; Microsoft font, not redistributable",
+      "door": "owner-installed Windows fonts loaded at runtime (owner decision 2, 2026-10-23); otherwise the licensed substitute — any metric difference is reported per typography probe"
+    },
+    {
+      "family": "Cascadia Mono",
+      "role": "Terminal",
+      "version": null,
+      "sha256": null,
+      "usage": "reference only"
+    }
+  ],
+  "asset_rights_review": "pending",
+  "capture": {
+    "tool": "PowerShell PrintWindow + UI Automation per-window capture (reference agent, 2026-10-26)",
+    "method": "Per-window PrintWindow at 144 DPI plus element bounds from UI Automation (.uia.tsv); full-screen grabs for shell flyouts; shadows over a white backdrop window (pad 120 px)",
+    "clock_domain": "host wall clock (capture-log.txt)",
+    "permissions": "owner decision 2026-10-26: may open apps and flyouts and send navigation hotkeys; no setting changes",
+    "evidence_root": "reports/artifacts/reference-26h2",
+    "log": "reports/artifacts/reference-26h2/capture-log.txt",
+    "log_sha256": "59ea7c274698ba2408264c7b0e260673da7deec2e7eeff214a3bff142cff92f1",
+    "environment": "reports/artifacts/reference-26h2/environment.txt",
+    "environment_sha256": "f907e51d1015b8b9a4259e11ff7c5597de339e6a87f3217ab97520b0b8160aff",
+    "privacy": "Captures contain the owner name, e-mail, installed apps, notifications and window contents. They stay in the local evidence root; this profile records geometry, colours and hashes only, never personal strings."
+  },
+  "lean_configuration_changes": [],
+  "approved_deviations": [
+    {
+      "id": "door-mark",
+      "source": "DOOR_OS_MASTER_SPECIFICATION.md sections 111 (Logo and asset boundary) and 140.4",
+      "scope": "Start button and other product-owned brand positions",
+      "note": "shape differs by design; size, position and weight are still compared"
+    },
+    {
+      "id": "font-substitution",
+      "source": "DOOR_OS_MASTER_SPECIFICATION.md section 111 (fonts) and owner decision 2",
+      "scope": "typography where Segoe UI Variable is unavailable to the guest",
+      "note": "reported per probe; never assumed identical"
+    }
+  ],
+  "uncontrolled_inputs": [
+    {
+      "id": "wallpaper-tinted-materials",
+      "applies_to": [
+        "taskbar.background",
+        "settings window background",
+        "Mica title areas",
+        "start.background",
+        "start.width",
+        "explorer.caption"
+      ],
+      "note": "reference values depend on the owner wallpaper behind acrylic/Mica"
+    },
+    {
+      "id": "owner-accent",
+      "applies_to": [
+        "color.accent.*"
+      ],
+      "note": "reference accent #680081 (purple) is an owner preference; the guest has no accent control yet, so accent-coloured pixels are excluded from probes"
+    }
+  ],
+  "thresholds": {
+    "frozen": "2026-10-26",
+    "geometry_logical": 2,
+    "colour_delta_e2000": 5,
+    "typography_logical": 1.5,
+    "iconography_logical": 1.5,
+    "motion_ms": 50,
+    "ink_delta_e76": 20,
+    "band_delta_e76": 10,
+    "run_delta_e76": 6
+  },
+  "surfaces": [
+    {
+      "id": "desktop",
+      "family": "Desktop",
+      "spec": "section 112 Desktop",
+      "claimed": false,
+      "exclusion": "No wallpaper-only desktop capture: the owner wallpaper and desktop items are private and uncontrolled. Geometry of the work area is recorded under displays.",
+      "captures": [],
+      "states_missing": [
+        "wallpaper",
+        "selection rectangle",
+        "context menu",
+        "icons",
+        "drag/drop",
+        "keyboard focus"
+      ]
+    },
+    {
+      "id": "taskbar",
+      "family": "Taskbar",
+      "spec": "section 112 Taskbar",
+      "claimed": true,
+      "captures": [
+        {
+          "state": "default (centred, search icon, no widgets/task view)",
+          "path": "reports/artifacts/reference-26h2/taskbar-strip.png",
+          "sha256": "ab37ffafaf3ad883f65a087c10198f7cbf34ec4e1f37394aece03360c6b94cae",
+          "pixels": [
+            2560,
+            72
+          ],
+          "frame_physical": [
+            0,
+            1528,
+            2560,
+            72
+          ],
+          "frame_logical": [
+            0,
+            1018.67,
+            1706.67,
+            48
+          ],
+          "uia": "reports/artifacts/reference-26h2/taskbar.uia.tsv",
+          "uia_sha256": "586d2e6d5516c1ce4df0c4796a1a4ea0aab44b116eccbe4805c85dc1abea5e98"
+        }
+      ],
+      "geometry": [
+        {
+          "element": "Shell_TrayWnd",
+          "physical": [
+            0,
+            1528,
+            2560,
+            72
+          ],
+          "logical": [
+            0,
+            1018.67,
+            1706.67,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "StartButton",
+          "physical": [
+            1048,
+            1528,
+            68,
+            72
+          ],
+          "logical": [
+            698.67,
+            1018.67,
+            45.33,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "SearchButton",
+          "physical": [
+            1116,
+            1528,
+            66,
+            72
+          ],
+          "logical": [
+            744,
+            1018.67,
+            44,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "SearchButton glyph (AnimatedVisualPlayer)",
+          "physical": [
+            1131,
+            1546,
+            36,
+            36
+          ],
+          "logical": [
+            754,
+            1030.67,
+            24,
+            24
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "TaskListButton (pitch 66)",
+          "physical": [
+            1182,
+            1528,
+            66,
+            72
+          ],
+          "logical": [
+            788,
+            1018.67,
+            44,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        }
+      ],
+      "colours": {
+        "background_dark": {
+          "rgb": "#1C2423",
+          "sample": "taskbar-strip.png (300,36) 7x7 mean",
+          "status": "uncontrolled: acrylic over the owner wallpaper"
+        },
+        "top_edge": {
+          "rgb": "#32394A",
+          "sample": "taskbar-strip.png row 0"
+        }
+      },
+      "states_missing": [
+        "hover",
+        "pressed",
+        "focused",
+        "running vs pinned close-up",
+        "grouping",
+        "hover preview",
+        "context menu",
+        "progress",
+        "attention",
+        "overflow"
+      ]
+    },
+    {
+      "id": "start",
+      "family": "Start/launcher",
+      "spec": "section 112 Start/launcher",
+      "claimed": true,
+      "captures": [
+        {
+          "state": "open, category view, Show less",
+          "path": "reports/artifacts/reference-26h2/shell-start-screen.png",
+          "sha256": "d3809acbb73a12f85ff12d331ce23fc912798c56200a9a9beb9738c0a7d202c4",
+          "pixels": [
+            2560,
+            1600
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1600
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1066.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/shell-start.uia.tsv",
+          "uia_sha256": "fac3cf4be7c2b4ced60d85bce027c1196f5ad1681e810aa8ef25e9a65ae8058e"
+        },
+        {
+          "state": "opening (motion sequence, two runs)",
+          "path": "reports/artifacts/reference-26h2/motion/start-open/sequence.json",
+          "sha256": "cebe602d07d5aa4924bfbe224ddc1ddb222e36916b3bdf2c254f3bbb3ad5747e",
+          "pixels": [
+            600,
+            600
+          ]
+        }
+      ],
+      "geometry": [
+        {
+          "element": "Start CoreWindow (includes shadow margin)",
+          "physical": [
+            636,
+            193,
+            1287,
+            1335
+          ],
+          "logical": [
+            424,
+            128.67,
+            858,
+            890
+          ],
+          "source": "reports/artifacts/reference-26h2/shell-start.uia.tsv"
+        },
+        {
+          "element": "SearchTextBox",
+          "physical": [
+            704,
+            237,
+            1152,
+            48
+          ],
+          "logical": [
+            469.33,
+            158,
+            768,
+            32
+          ],
+          "source": "reports/artifacts/reference-26h2/shell-start.uia.tsv"
+        }
+      ],
+      "colours": {
+        "body_dark": {
+          "rgb": "#2A2A2A",
+          "sample": "shell-start-screen.png (1408,717)"
+        },
+        "search_field_dark": {
+          "rgb": "#1F1F1F",
+          "sample": "shell-start-screen.png (1664,261)"
+        },
+        "footer_dark": {
+          "rgb": "#212221",
+          "sample": "shell-start-screen.png (1280,1459)"
+        }
+      },
+      "states_missing": [
+        "empty",
+        "search results in Start",
+        "keyboard navigation trace",
+        "user/power menu",
+        "Show more (all pins)"
+      ]
+    },
+    {
+      "id": "search",
+      "family": "Search",
+      "spec": "section 112 Search",
+      "claimed": false,
+      "exclusion": "Captured once (shell-search-screen.png) with web results in a WebView2; the lean profile disables web search, so the populated state is not the target. No query/no-results/error states yet.",
+      "captures": [
+        {
+          "state": "open, empty query",
+          "path": "reports/artifacts/reference-26h2/shell-search-screen.png",
+          "sha256": "7bfda2c70ad0aaeec991b71b9326dbdb05bad51ac904086fae6b98fe31fcfe11",
+          "pixels": [
+            2560,
+            1600
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1600
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1066.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/shell-search.uia.tsv",
+          "uia_sha256": "62301cc4c7b85f9130bfa5f370f9043f07af5e8768b3da8e63fb13a40ce5242a"
+        }
+      ],
+      "states_missing": [
+        "query",
+        "loading",
+        "results",
+        "no results",
+        "error",
+        "keyboard selection"
+      ]
+    },
+    {
+      "id": "tray",
+      "family": "System tray",
+      "spec": "section 112 System tray",
+      "claimed": true,
+      "captures": [
+        {
+          "state": "default (inside taskbar strip)",
+          "path": "reports/artifacts/reference-26h2/taskbar-strip.png",
+          "sha256": "ab37ffafaf3ad883f65a087c10198f7cbf34ec4e1f37394aece03360c6b94cae",
+          "pixels": [
+            2560,
+            72
+          ],
+          "frame_physical": [
+            0,
+            1528,
+            2560,
+            72
+          ],
+          "frame_logical": [
+            0,
+            1018.67,
+            1706.67,
+            48
+          ],
+          "uia": "reports/artifacts/reference-26h2/taskbar.uia.tsv",
+          "uia_sha256": "586d2e6d5516c1ce4df0c4796a1a4ea0aab44b116eccbe4805c85dc1abea5e98"
+        }
+      ],
+      "geometry": [
+        {
+          "element": "Show Hidden Icons",
+          "physical": [
+            2081,
+            1528,
+            48,
+            72
+          ],
+          "logical": [
+            1387.33,
+            1018.67,
+            32,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "Input indicator",
+          "physical": [
+            2129,
+            1528,
+            66,
+            72
+          ],
+          "logical": [
+            1419.33,
+            1018.67,
+            44,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "Network",
+          "physical": [
+            2201,
+            1528,
+            36,
+            72
+          ],
+          "logical": [
+            1467.33,
+            1018.67,
+            24,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "Volume",
+          "physical": [
+            2243,
+            1528,
+            36,
+            72
+          ],
+          "logical": [
+            1495.33,
+            1018.67,
+            24,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "Power",
+          "physical": [
+            2285,
+            1528,
+            92,
+            72
+          ],
+          "logical": [
+            1523.33,
+            1018.67,
+            61.33,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "Clock",
+          "physical": [
+            2389,
+            1528,
+            105,
+            72
+          ],
+          "logical": [
+            1592.67,
+            1018.67,
+            70,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "Notifications",
+          "physical": [
+            2500,
+            1528,
+            36,
+            72
+          ],
+          "logical": [
+            1666.67,
+            1018.67,
+            24,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        },
+        {
+          "element": "Show Desktop",
+          "physical": [
+            2542,
+            1528,
+            18,
+            72
+          ],
+          "logical": [
+            1694.67,
+            1018.67,
+            12,
+            48
+          ],
+          "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv"
+        }
+      ],
+      "states_missing": [
+        "hidden-icon panel",
+        "app notifications",
+        "menus",
+        "unknown/offline device states"
+      ]
+    },
+    {
+      "id": "quick-settings",
+      "family": "Quick settings",
+      "spec": "section 112 Quick settings",
+      "claimed": false,
+      "exclusion": "One open-state screen capture; UIA exposes only the window (1 element), so control geometry is unmeasured. Network/audio are out of P14 scope (P15) and must show unavailable.",
+      "captures": [
+        {
+          "state": "open",
+          "path": "reports/artifacts/reference-26h2/shell-quicksettings-screen.png",
+          "sha256": "5d6d16b5845d154aa03f029323cf9f70ad08ee253d09e2470847a15728f88d3d",
+          "pixels": [
+            2560,
+            1600
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1600
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1066.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/shell-quicksettings.uia.tsv",
+          "uia_sha256": "ec6010ef3ece52b9c8d28779d5f2651b271805f5f7e422c4bf9f2954994ac1fb"
+        }
+      ],
+      "geometry": [
+        {
+          "element": "ControlCenterWindow",
+          "physical": [
+            1984,
+            0,
+            576,
+            1528
+          ],
+          "logical": [
+            1322.67,
+            0,
+            384,
+            1018.67
+          ],
+          "source": "reports/artifacts/reference-26h2/shell-quicksettings.uia.tsv"
+        }
+      ],
+      "states_missing": [
+        "control states",
+        "brightness/volume sliders",
+        "edit mode",
+        "unsupported capability"
+      ]
+    },
+    {
+      "id": "notifications-calendar",
+      "family": "Notification center/calendar",
+      "spec": "section 112 Notification center/calendar",
+      "claimed": false,
+      "exclusion": "Captured with the owner's private notifications (Do not disturb on); contents are private and uncontrolled. Calendar state not captured.",
+      "captures": [
+        {
+          "state": "open, do not disturb on",
+          "path": "reports/artifacts/reference-26h2/shell-notifications-screen.png",
+          "sha256": "4cf45215719b054e4f120dc4b549ec35ca6ffc8cbf37c46fb224f1bb938ff069",
+          "pixels": [
+            2560,
+            1600
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1600
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1066.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/shell-notifications.uia.tsv",
+          "uia_sha256": "1c19c33dc9a6129ea3bbd1b6632db0652159b3f38f76a04c808d67ae88896b0e"
+        }
+      ],
+      "geometry": [
+        {
+          "element": "NotificationCenterGrid",
+          "physical": [
+            2038,
+            12,
+            504,
+            794
+          ],
+          "logical": [
+            1358.67,
+            8,
+            336,
+            529.33
+          ],
+          "source": "reports/artifacts/reference-26h2/shell-notifications.uia.tsv"
+        },
+        {
+          "element": "Do Not Disturb toggle",
+          "physical": [
+            2363,
+            19,
+            60,
+            60
+          ],
+          "logical": [
+            1575.33,
+            12.67,
+            40,
+            40
+          ],
+          "source": "reports/artifacts/reference-26h2/shell-notifications.uia.tsv"
+        }
+      ],
+      "states_missing": [
+        "empty",
+        "grouped",
+        "dismiss",
+        "actions",
+        "calendar navigation",
+        "toast"
+      ]
+    },
+    {
+      "id": "task-switching",
+      "family": "Task switching",
+      "spec": "section 112 Task switching",
+      "claimed": false,
+      "exclusion": "Alt+Tab captured with private window thumbnails; Task view and virtual desktops not captured.",
+      "captures": [
+        {
+          "state": "Alt+Tab open",
+          "path": "reports/artifacts/reference-26h2/shell-alttab-screen.png",
+          "sha256": "cf962fd944888f237cd315cbd0047ade059d44e06e5160395239ad7393c2e1aa",
+          "pixels": [
+            2560,
+            1600
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1600
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1066.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/shell-alttab.uia.tsv",
+          "uia_sha256": "b078bb7ff8567225034da7b47581cca6681c47e770a2dc5260d07c9eec826bca"
+        }
+      ],
+      "geometry": [
+        {
+          "element": "SwitchItemListControl",
+          "physical": [
+            224,
+            502,
+            2112,
+            525
+          ],
+          "logical": [
+            149.33,
+            334.67,
+            1408,
+            350
+          ],
+          "source": "reports/artifacts/reference-26h2/shell-alttab.uia.tsv"
+        }
+      ],
+      "states_missing": [
+        "Task view",
+        "virtual desktops",
+        "close from switcher",
+        "focus restoration trace"
+      ]
+    },
+    {
+      "id": "window-management",
+      "family": "Snap and window management",
+      "spec": "section 112 Snap and window management",
+      "claimed": true,
+      "captures": [
+        {
+          "state": "Notepad inactive",
+          "path": "reports/artifacts/reference-26h2/notepad-window.png",
+          "sha256": "d19f8dd17a34cb10b96d1a11902c2dd23760af73bbbe88551e648d72cd147cdb",
+          "pixels": [
+            1906,
+            1111
+          ],
+          "frame_physical": [
+            273,
+            266,
+            1906,
+            1111
+          ],
+          "frame_logical": [
+            182,
+            177.33,
+            1270.67,
+            740.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/notepad-window.uia.tsv",
+          "uia_sha256": "9eec03710010ac1add1e1af25e5960ecdeaf6f699b316203fde933463de3febb"
+        },
+        {
+          "state": "Terminal active",
+          "path": "reports/artifacts/reference-26h2/terminal-window.png",
+          "sha256": "e1ec418f4ef73d40b1e6fc58c2b850a5f8b6980698819774ad695b5a352ca1b0",
+          "pixels": [
+            1734,
+            927
+          ],
+          "frame_physical": [
+            112,
+            114,
+            1734,
+            927
+          ],
+          "frame_logical": [
+            74.67,
+            76,
+            1156,
+            618
+          ],
+          "uia": "reports/artifacts/reference-26h2/terminal-window.uia.tsv",
+          "uia_sha256": "dc1ab10efe45ec5f478036dd09ef62d320ab5fd230d1ddf25a59992beafc75ae"
+        },
+        {
+          "state": "Photos inactive",
+          "path": "reports/artifacts/reference-26h2/photos-window.png",
+          "sha256": "576b7cd17e073574d06bae703baf009e3e0d61eee9bcaa61883c2a118b5aba49",
+          "pixels": [
+            1902,
+            1108
+          ],
+          "frame_physical": [
+            275,
+            266,
+            1902,
+            1108
+          ],
+          "frame_logical": [
+            183.33,
+            177.33,
+            1268,
+            738.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/photos-window.uia.tsv",
+          "uia_sha256": "831fde2f881906176b86e6b208e9025e7ba160271029169da74aa9c0c6000c06"
+        },
+        {
+          "state": "Photos inactive shadow over white (pad 120)",
+          "path": "reports/artifacts/reference-26h2/photos-shadow-white.png",
+          "sha256": "f9c0f8e9a58fdef55c9bd6cdbf906ab85a4c0decf45b4f1b4b1c2def1ce96a88",
+          "pixels": [
+            2142,
+            1348
+          ]
+        },
+        {
+          "state": "Explorer active shadow over white (pad 120)",
+          "path": "reports/artifacts/reference-26h2/explorer-shadow-active-white.png",
+          "sha256": "a893f6c466b7924c42898c0e01b31e041c052b47ff70c75c3c35baa9a71afe2d",
+          "pixels": [
+            2022,
+            1381
+          ]
+        }
+      ],
+      "geometry": [
+        {
+          "element": "Notepad TabView",
+          "physical": [
+            335,
+            280,
+            431,
+            48
+          ],
+          "logical": [
+            223.33,
+            186.67,
+            287.33,
+            32
+          ],
+          "source": "reports/artifacts/reference-26h2/notepad-window.uia.tsv"
+        },
+        {
+          "element": "Notepad command bar row",
+          "physical": [
+            275,
+            328,
+            1902,
+            50
+          ],
+          "logical": [
+            183.33,
+            218.67,
+            1268,
+            33.33
+          ],
+          "source": "reports/artifacts/reference-26h2/notepad-window.uia.tsv"
+        },
+        {
+          "element": "Terminal TabView",
+          "physical": [
+            114,
+            127,
+            480,
+            48
+          ],
+          "logical": [
+            76,
+            84.67,
+            320,
+            32
+          ],
+          "source": "reports/artifacts/reference-26h2/terminal-window.uia.tsv"
+        },
+        {
+          "element": "Settings caption buttons (each)",
+          "physical": [
+            2353,
+            0,
+            69,
+            48
+          ],
+          "logical": [
+            1568.67,
+            0,
+            46,
+            32
+          ],
+          "source": "reports/artifacts/reference-26h2/settings-home.uia.tsv"
+        }
+      ],
+      "shadows": {
+        "inactive": {
+          "extents_physical": [
+            47,
+            20,
+            47,
+            104
+          ],
+          "extents_logical": [
+            31,
+            13,
+            31,
+            69
+          ],
+          "darkest_below": "#C9C9C9",
+          "capture": "reports/artifacts/reference-26h2/photos-shadow-white.png"
+        },
+        "active": {
+          "extents_physical": [
+            60,
+            42,
+            62,
+            116
+          ],
+          "extents_logical": [
+            40,
+            28,
+            41,
+            77
+          ],
+          "darkest_below": "#6B6B6B",
+          "capture": "reports/artifacts/reference-26h2/explorer-shadow-active-white.png"
+        }
+      },
+      "states_missing": [
+        "snap layout flyout",
+        "snap preview",
+        "maximize/restore motion",
+        "edge snapping",
+        "multi-monitor"
+      ]
+    },
+    {
+      "id": "file-manager",
+      "family": "File manager",
+      "spec": "section 112 File manager",
+      "claimed": true,
+      "captures": [
+        {
+          "state": "Home",
+          "path": "reports/artifacts/reference-26h2/explorer-home.png",
+          "sha256": "4733c2e95e562559f9a1acdaa76ef7a45ebf212e09d3769e8d8daa804bda8d3b",
+          "pixels": [
+            1778,
+            1139
+          ],
+          "frame_physical": [
+            251,
+            160,
+            1778,
+            1139
+          ],
+          "frame_logical": [
+            167.33,
+            106.67,
+            1185.33,
+            759.33
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-home.uia.tsv",
+          "uia_sha256": "99d8d10bbf0d1be820b67fd94a8d047b1841cdf0a3c4def4f0fee1b651e2650c"
+        },
+        {
+          "state": "This PC",
+          "path": "reports/artifacts/reference-26h2/explorer-thispc.png",
+          "sha256": "a8d3531eb7793c5d77e83e8cd13e4ec0a817e4d7dd8627f27b40af28b2f8bad1",
+          "pixels": [
+            1778,
+            1139
+          ],
+          "frame_physical": [
+            251,
+            160,
+            1778,
+            1139
+          ],
+          "frame_logical": [
+            167.33,
+            106.67,
+            1185.33,
+            759.33
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-thispc.uia.tsv",
+          "uia_sha256": "8c4cd81df356c7242c8903c22dec154fcd646599f2ec19aa99d3c763d80d9ba2"
+        },
+        {
+          "state": "folder, default view",
+          "path": "reports/artifacts/reference-26h2/explorer-folder-default.png",
+          "sha256": "ae2ff9cd623e80fe3c1b7746b1cdda07a2a02f43e639d22d3ccc2caf032df23c",
+          "pixels": [
+            1778,
+            1139
+          ],
+          "frame_physical": [
+            251,
+            160,
+            1778,
+            1139
+          ],
+          "frame_logical": [
+            167.33,
+            106.67,
+            1185.33,
+            759.33
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-folder-default.uia.tsv",
+          "uia_sha256": "bbffc23b73363b2f965df5d90bbc24cd78a215eac88c305338fa1773d02f3a8e"
+        },
+        {
+          "state": "folder, details view",
+          "path": "reports/artifacts/reference-26h2/explorer-folder-details.png",
+          "sha256": "7faa6e1ee04c3d9904c88ff7affd27ebb0514e836f3104b0f3b2c2ea06621d6a",
+          "pixels": [
+            1778,
+            1139
+          ],
+          "frame_physical": [
+            251,
+            160,
+            1778,
+            1139
+          ],
+          "frame_logical": [
+            167.33,
+            106.67,
+            1185.33,
+            759.33
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-folder-details.uia.tsv",
+          "uia_sha256": "f18a56c64a5815c6fa39a0a47806f934ffdf9d57796de6e90cf17ea45969c1ee"
+        },
+        {
+          "state": "folder, tiles view",
+          "path": "reports/artifacts/reference-26h2/explorer-folder-tiles.png",
+          "sha256": "a9a0fa4845c8474b2af85fd1b6dbf2857d9f4e1737043889acb450f8cc1fccba",
+          "pixels": [
+            1778,
+            1139
+          ],
+          "frame_physical": [
+            251,
+            160,
+            1778,
+            1139
+          ],
+          "frame_logical": [
+            167.33,
+            106.67,
+            1185.33,
+            759.33
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-folder-tiles.uia.tsv",
+          "uia_sha256": "c746e8e59d79bedfca02e9b2f5701122368948f9fce34060a03b3e7d83bcc685"
+        },
+        {
+          "state": "View menu",
+          "path": "reports/artifacts/reference-26h2/explorer-view-popup-0.png",
+          "sha256": "ff768840e070d4df368a5cdb712b9059f9ee19bc14a56d256ebc00f0fa4c5dfe",
+          "pixels": [
+            316,
+            567
+          ],
+          "frame_physical": [
+            883,
+            369,
+            316,
+            567
+          ],
+          "frame_logical": [
+            588.67,
+            246,
+            210.67,
+            378
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-view-popup-0.uia.tsv",
+          "uia_sha256": "feab594ccfd342d0582f8ee6a984c219dee0b6feb3216d1c824585b2171728ec"
+        },
+        {
+          "state": "New menu",
+          "path": "reports/artifacts/reference-26h2/explorer-new-popup-0.png",
+          "sha256": "a54e481cd6e4afe35c28a1060edce40f4dde170a4a44130fb303a010ae3d0122",
+          "pixels": [
+            441,
+            699
+          ],
+          "frame_physical": [
+            245,
+            369,
+            441,
+            699
+          ],
+          "frame_logical": [
+            163.33,
+            246,
+            294,
+            466
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-new-popup-0.uia.tsv",
+          "uia_sha256": "35dad4d696ffbb25fe81df9653188f4c0bd7184691a803c4077b3f4450f38a6d"
+        },
+        {
+          "state": "file selected",
+          "path": "reports/artifacts/reference-26h2/explorer-file-selected.png",
+          "sha256": "135c232c5f6e960379a0d273a54324a0673ad977200348807897bd33cd34eacf",
+          "pixels": [
+            1782,
+            1141
+          ],
+          "frame_physical": [
+            249,
+            160,
+            1782,
+            1141
+          ],
+          "frame_logical": [
+            166,
+            106.67,
+            1188,
+            760.67
+          ]
+        },
+        {
+          "state": "context menu, modern",
+          "path": "reports/artifacts/reference-26h2/explorer-context-modern-0.png",
+          "sha256": "ae10ffe5ddee345bf0aaa874a765010934708626dd5045cd66c10723411d3805",
+          "pixels": [
+            591,
+            991
+          ],
+          "frame_physical": [
+            531,
+            519,
+            495,
+            895
+          ],
+          "frame_logical": [
+            354,
+            346,
+            330,
+            596.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-context-modern-0.uia.tsv",
+          "uia_sha256": "17aa6acc4307f030e546cded134578dc447517fe6c8e9c0bbcdcd130b4c769a1"
+        },
+        {
+          "state": "context menu, classic",
+          "path": "reports/artifacts/reference-26h2/explorer-context-classic-0.png",
+          "sha256": "ae10ffe5ddee345bf0aaa874a765010934708626dd5045cd66c10723411d3805",
+          "pixels": [
+            591,
+            991
+          ],
+          "frame_physical": [
+            531,
+            519,
+            495,
+            895
+          ],
+          "frame_logical": [
+            354,
+            346,
+            330,
+            596.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/explorer-context-classic-0.uia.tsv",
+          "uia_sha256": "17aa6acc4307f030e546cded134578dc447517fe6c8e9c0bbcdcd130b4c769a1"
+        }
+      ],
+      "geometry": [
+        {
+          "element": "CabinetWClass window",
+          "physical": [
+            240,
+            160,
+            1800,
+            1150
+          ],
+          "logical": [
+            160,
+            106.67,
+            1200,
+            766.67
+          ],
+          "source": "reports/artifacts/reference-26h2/explorer-home.uia.tsv"
+        },
+        {
+          "element": "Title bar scaffolding",
+          "physical": [
+            682,
+            160,
+            1347,
+            55
+          ],
+          "logical": [
+            454.67,
+            106.67,
+            898,
+            36.67
+          ],
+          "source": "reports/artifacts/reference-26h2/explorer-home.uia.tsv"
+        },
+        {
+          "element": "ShellTabWindowClass content",
+          "physical": [
+            251,
+            364,
+            1778,
+            935
+          ],
+          "logical": [
+            167.33,
+            242.67,
+            1185.33,
+            623.33
+          ],
+          "source": "reports/artifacts/reference-26h2/explorer-home.uia.tsv"
+        },
+        {
+          "element": "View MenuFlyout",
+          "physical": [
+            898,
+            372,
+            285,
+            537
+          ],
+          "logical": [
+            598.67,
+            248,
+            190,
+            358
+          ],
+          "source": "reports/artifacts/reference-26h2/explorer-view-popup-0.uia.tsv"
+        }
+      ],
+      "colours": {
+        "content_dark": {
+          "rgb": "#191919",
+          "sample": "explorer-home.png (900,600)"
+        },
+        "caption_dark": {
+          "rgb": "#2C2C2C",
+          "sample": "explorer-home.png (100,20)"
+        }
+      },
+      "states_missing": [
+        "tabs beyond one",
+        "sorting trace",
+        "keyboard selection",
+        "loading",
+        "error",
+        "empty folder"
+      ]
+    },
+    {
+      "id": "file-operations",
+      "family": "File operations",
+      "spec": "section 112 File operations",
+      "claimed": false,
+      "exclusion": "No copy/move progress, conflict, cancel or permission dialog captured (would require mutating owner files).",
+      "captures": [],
+      "states_missing": [
+        "conflict choices",
+        "progress",
+        "cancel",
+        "permission prompt",
+        "partial failure",
+        "completion"
+      ]
+    },
+    {
+      "id": "settings",
+      "family": "Settings",
+      "spec": "section 112 Settings",
+      "claimed": true,
+      "captures": [
+        {
+          "state": "Home",
+          "path": "reports/artifacts/reference-26h2/settings-home.png",
+          "sha256": "d4d757699e1bf757bf52e0a5457dc904e178038b3f6fddd85c64a4582634cb16",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-home.uia.tsv",
+          "uia_sha256": "510fca8f6856d9d5db1f645844e96a5183df67e674e2ae4746ad5593cc577b3e"
+        },
+        {
+          "state": "System > Display",
+          "path": "reports/artifacts/reference-26h2/settings-display.png",
+          "sha256": "917a8dd4ebbf0756b14dd3d63d2ca46d9fec1f83c04a9660b3bc7349db012138",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-display.uia.tsv",
+          "uia_sha256": "fc8a5caf030418129fdf0249978e85b273445256321f0e0fd92332484cca6f13"
+        },
+        {
+          "state": "Personalization",
+          "path": "reports/artifacts/reference-26h2/settings-personalization.png",
+          "sha256": "004a80ded624b24c94e862d9facee654b9a921d4f452817b7ff2d58bf84525ed",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-personalization.uia.tsv",
+          "uia_sha256": "969702db70569ddc259644d3a273b090835a8e67e0324055877909d471dd31eb"
+        },
+        {
+          "state": "Personalization > Colors",
+          "path": "reports/artifacts/reference-26h2/settings-colors.png",
+          "sha256": "d7f039aea3586420d2b134881f9b2215b8afc593c5d82c2085eb99102b37893a",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-colors.uia.tsv",
+          "uia_sha256": "83dcecf16688d508bcf238235ff0f7f26f25e10460c5b3058616dae133f9bc25"
+        },
+        {
+          "state": "Personalization > Taskbar",
+          "path": "reports/artifacts/reference-26h2/settings-taskbar.png",
+          "sha256": "2ed0ff3d3d2ab9a279af39729c58c2047c73e5198fdd2d008193aca8ef17f9df",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-taskbar.uia.tsv",
+          "uia_sha256": "1d7315b88b486849c72d8f00d64513b0d38bd3df9fa5b608d48cdf8472af0c7d"
+        },
+        {
+          "state": "Time & language > Date & time",
+          "path": "reports/artifacts/reference-26h2/settings-dateandtime.png",
+          "sha256": "c16abc6638152b2246daab9f2432b20fa20f9565af77f76152c21bcfc1eed147",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-dateandtime.uia.tsv",
+          "uia_sha256": "7f2b4b53051c53634fc3514e2256c2f2bd3e8d4bd1b4ea03cc3c3b961453e524"
+        },
+        {
+          "state": "Accessibility > Text size",
+          "path": "reports/artifacts/reference-26h2/settings-easeofaccess-display.png",
+          "sha256": "4cfa3bdec0737628294d17a434ad0e8b206cfed3568b3eb96a881ca8aa3f06df",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-easeofaccess-display.uia.tsv",
+          "uia_sha256": "3e626d863607fac6a82f918cb67f9e1f08327bd3324715ebc41044006600f04d"
+        },
+        {
+          "state": "Windows Update",
+          "path": "reports/artifacts/reference-26h2/settings-windowsupdate.png",
+          "sha256": "f27d505443e2f127aa7ffec5472173d2368b2a6ae157fe260ac901e7e1465f8c",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-windowsupdate.uia.tsv",
+          "uia_sha256": "dfed3a0a9435388c5a320ac82beb00bd3c81c691a264c1235707760f5c619135"
+        },
+        {
+          "state": "System > About",
+          "path": "reports/artifacts/reference-26h2/settings-about.png",
+          "sha256": "ee9996c07c49524bafed578eec67234f9db71492a417d4456e99991246f9f655",
+          "pixels": [
+            2560,
+            1528
+          ],
+          "frame_physical": [
+            0,
+            0,
+            2560,
+            1528
+          ],
+          "frame_logical": [
+            0,
+            0,
+            1706.67,
+            1018.67
+          ],
+          "uia": "reports/artifacts/reference-26h2/settings-about.uia.tsv",
+          "uia_sha256": "a3df2e03b59e60576d81bc908cd43ef47ffcf86a3574983f89c5b045bfbf1b50"
+        }
+      ],
+      "geometry": [
+        {
+          "element": "Title bar",
+          "physical": [
+            2278,
+            0,
+            282,
+            48
+          ],
+          "logical": [
+            1518.67,
+            0,
+            188,
+            32
+          ],
+          "source": "reports/artifacts/reference-26h2/settings-home.uia.tsv"
+        },
+        {
+          "element": "CommandSearchTextBox",
+          "physical": [
+            893,
+            12,
+            773,
+            49
+          ],
+          "logical": [
+            595.33,
+            8,
+            515.33,
+            32.67
+          ],
+          "source": "reports/artifacts/reference-26h2/settings-home.uia.tsv"
+        },
+        {
+          "element": "Navigation pane (PaneRoot)",
+          "physical": [
+            0,
+            0,
+            450,
+            1528
+          ],
+          "logical": [
+            0,
+            0,
+            300,
+            1018.67
+          ],
+          "source": "reports/artifacts/reference-26h2/settings-home.uia.tsv"
+        },
+        {
+          "element": "NavigationViewItem",
+          "physical": [
+            25,
+            215,
+            419,
+            54
+          ],
+          "logical": [
+            16.67,
+            143.33,
+            279.33,
+            36
+          ],
+          "source": "reports/artifacts/reference-26h2/settings-home.uia.tsv"
+        },
+        {
+          "element": "Navigation item icon",
+          "physical": [
+            40,
+            227,
+            30,
+            30
+          ],
+          "logical": [
+            26.67,
+            151.33,
+            20,
+            20
+          ],
+          "source": "reports/artifacts/reference-26h2/settings-home.uia.tsv"
+        },
+        {
+          "element": "Back button",
+          "physical": [
+            6,
+            9,
+            60,
+            54
+          ],
+          "logical": [
+            4,
+            6,
+            40,
+            36
+          ],
+          "source": "reports/artifacts/reference-26h2/settings-home.uia.tsv"
+        }
+      ],
+      "colours": {
+        "accent_toggle_on_dark": {
+          "rgb": "#DB9EE5",
+          "sample": "settings-home.png (2176,558)",
+          "status": "owner accent (#680081 palette Light2)"
+        },
+        "selected_nav_dark": {
+          "rgb": "#2B2E30",
+          "sample": "settings-home.png (320,243)"
+        },
+        "window_dark": {
+          "rgb": "#1A2033",
+          "sample": "settings-home.png (1280,1024)",
+          "status": "uncontrolled: Mica over the owner wallpaper"
+        }
+      },
+      "states_missing": [
+        "hover/pressed/focus close-ups",
+        "search results",
+        "unavailable states",
+        "apply/revert trace"
+      ]
+    },
+    {
+      "id": "common-dialogs",
+      "family": "Common dialogs",
+      "spec": "section 112 Common dialogs",
+      "claimed": false,
+      "exclusion": "Open/save/message/elevation dialogs not captured from the reference yet (P13 fixture dialogs are compared by the P13 suites).",
+      "captures": [],
+      "states_missing": [
+        "open",
+        "save",
+        "folder choice",
+        "message",
+        "error",
+        "credential/elevation prompt"
+      ]
+    },
+    {
+      "id": "lock-logon",
+      "family": "Lock/logon",
+      "spec": "section 112 Lock/logon",
+      "claimed": false,
+      "exclusion": "The lock and sign-in screens run on the secure desktop: the reference capture tool cannot capture them without locking the owner session, which the 2026-10-26 capture permission does not cover. Guest lock/sign-in captures are recorded by vis-01 as unmatched evidence.",
+      "captures": [],
+      "states_missing": [
+        "clock",
+        "account choice",
+        "password/PIN entry",
+        "reveal",
+        "wrong credential",
+        "lockout",
+        "accessibility",
+        "power"
+      ]
+    },
+    {
+      "id": "installation-recovery",
+      "family": "Installation/recovery",
+      "spec": "section 112 Installation/recovery",
+      "claimed": false,
+      "exclusion": "No installer or recovery environment in the P14 scope; the reference installer was not run.",
+      "captures": [],
+      "states_missing": [
+        "all"
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "id": "taskbar.height",
+      "dimension": "geometry",
+      "surface": "desktop",
+      "kind": "band_height",
+      "status": "frozen",
+      "params": {
+        "columns_fraction": [
+          0.05,
+          0.2
+        ],
+        "max_logical": 96
+      },
+      "compare": [
+        "height"
+      ],
+      "expected": {
+        "height": 48
+      },
+      "reference": {
+        "method": "uia",
+        "source": "reports/artifacts/reference-26h2/taskbar.uia.tsv",
+        "note": "Shell_TrayWnd 2560x72 at 150 %"
+      },
+      "spec": "section 112 Taskbar; DESKTOP-B"
+    },
+    {
+      "id": "start.width",
+      "dimension": "geometry",
+      "surface": "start",
+      "kind": "run_width",
+      "status": "uncontrolled",
+      "params": {
+        "region": {
+          "anchor": "center",
+          "x": -100,
+          "y": -60,
+          "w": 200,
+          "h": 120
+        }
+      },
+      "compare": [
+        "width"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/shell-start-screen.png",
+        "scale_percent": 150,
+        "measured": {
+          "rgb": "#292929",
+          "width": 826
+        }
+      },
+      "spec": "section 112 Start/launcher",
+      "expected": {
+        "width": 826
+      },
+      "uncontrolled_reason": "the run of uniform colour across Start depends on what its acrylic shows: the reference was captured over the owner's dark app windows, a guest shows the default wallpaper; calibrated 2026-11-12 (VIS-01 calibration, owner-approved)"
+    },
+    {
+      "id": "start.background",
+      "dimension": "colour",
+      "surface": "start",
+      "kind": "dominant_colour",
+      "status": "uncontrolled",
+      "params": {
+        "region": {
+          "anchor": "center",
+          "x": -100,
+          "y": -60,
+          "w": 200,
+          "h": 120
+        }
+      },
+      "compare": [
+        "rgb"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/shell-start-screen.png",
+        "scale_percent": 150,
+        "measured": {
+          "region_physical": [
+            1130,
+            710,
+            300,
+            180
+          ],
+          "rgb": "#292929",
+          "share": 0.98
+        }
+      },
+      "spec": "section 140.5 materials (dark acrylic fallback)",
+      "expected": {
+        "rgb": "#292929"
+      },
+      "uncontrolled_reason": "Start acrylic samples what lies behind it (the owner's dark app windows in the reference capture); calibrated 2026-11-12 (VIS-01 calibration, owner-approved)"
+    },
+    {
+      "id": "explorer.content",
+      "dimension": "colour",
+      "surface": "explorer",
+      "kind": "dominant_colour",
+      "status": "frozen",
+      "params": {
+        "region": {
+          "anchor": "center",
+          "x": -120,
+          "y": -60,
+          "w": 240,
+          "h": 120
+        }
+      },
+      "compare": [
+        "rgb"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/explorer-home.png",
+        "scale_percent": 150,
+        "measured": {
+          "region_physical": [
+            709,
+            480,
+            360,
+            180
+          ],
+          "rgb": "#191919",
+          "share": 0.946
+        }
+      },
+      "spec": "section 112 File manager",
+      "expected": {
+        "rgb": "#191919"
+      }
+    },
+    {
+      "id": "explorer.caption",
+      "dimension": "colour",
+      "surface": "explorer",
+      "kind": "dominant_colour",
+      "status": "uncontrolled",
+      "params": {
+        "region": {
+          "anchor": "top_left",
+          "x": 40,
+          "y": 4,
+          "w": 120,
+          "h": 16
+        }
+      },
+      "compare": [
+        "rgb"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/explorer-home.png",
+        "scale_percent": 150,
+        "measured": {
+          "region_physical": [
+            60,
+            6,
+            180,
+            24
+          ],
+          "rgb": "#2B2B2B",
+          "share": 0.708
+        }
+      },
+      "spec": "section 112 Snap and window management (title bar)",
+      "expected": {
+        "rgb": "#2B2B2B"
+      },
+      "uncontrolled_reason": "Mica title area tinted by the owner's wallpaper (uncontrolled input wallpaper-tinted-materials); calibrated 2026-11-12 (VIS-01 calibration, owner-approved)"
+    },
+    {
+      "id": "notes.editor",
+      "dimension": "colour",
+      "surface": "notes",
+      "kind": "dominant_colour",
+      "status": "frozen",
+      "params": {
+        "region": {
+          "anchor": "center",
+          "x": -120,
+          "y": -60,
+          "w": 240,
+          "h": 120
+        }
+      },
+      "compare": [
+        "rgb"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/notepad-window.png",
+        "scale_percent": 150,
+        "measured": {
+          "region_physical": [
+            773,
+            466,
+            360,
+            180
+          ],
+          "rgb": "#272727",
+          "share": 1
+        }
+      },
+      "spec": "section 63 editor; Notepad reference",
+      "expected": {
+        "rgb": "#272727"
+      }
+    },
+    {
+      "id": "taskbar.background",
+      "dimension": "colour",
+      "surface": "desktop",
+      "kind": "dominant_colour",
+      "status": "uncontrolled",
+      "params": {
+        "region": {
+          "anchor": "bottom_left",
+          "x": 16,
+          "y": -40,
+          "w": 160,
+          "h": 32
+        }
+      },
+      "compare": [
+        "rgb"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/taskbar-strip.png",
+        "scale_percent": 150,
+        "measured": {
+          "region_physical": [
+            24,
+            12,
+            240,
+            48
+          ],
+          "rgb": "#1B2322",
+          "share": 0.998
+        }
+      },
+      "spec": "section 140.5 materials",
+      "note": "acrylic over the owner wallpaper; reported, not pass/fail",
+      "expected": {
+        "rgb": "#1B2322"
+      }
+    },
+    {
+      "id": "taskbar.clock_text",
+      "dimension": "typography",
+      "surface": "desktop",
+      "kind": "ink_box",
+      "status": "frozen",
+      "params": {
+        "region": {
+          "anchor": "bottom_right",
+          "x": -150,
+          "y": -48,
+          "w": 142,
+          "h": 48
+        }
+      },
+      "compare": [
+        "height",
+        "centre_dy"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/taskbar-strip.png",
+        "scale_percent": 150,
+        "measured": {
+          "box_physical": [
+            2336,
+            17,
+            193,
+            39
+          ],
+          "centre_dx": -6,
+          "centre_dy": 0.33,
+          "height": 26,
+          "top": 11.33,
+          "width": 128.67
+        }
+      },
+      "spec": "section 112 Notification center/calendar (clock); type.caption",
+      "expected": {
+        "height": 26,
+        "centre_dy": 0.33
+      }
+    },
+    {
+      "id": "settings.page_title",
+      "dimension": "typography",
+      "surface": "settings",
+      "kind": "ink_box",
+      "status": "frozen",
+      "params": {
+        "region": {
+          "anchor": "top_left",
+          "x": 300,
+          "y": 44,
+          "w": 600,
+          "h": 60
+        }
+      },
+      "compare": [
+        "height",
+        "top"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/settings-colors.png",
+        "scale_percent": 150,
+        "measured": {
+          "box_physical": [
+            757,
+            96,
+            471,
+            31
+          ],
+          "centre_dx": 61.67,
+          "centre_dy": 0.33,
+          "height": 20.67,
+          "top": 20,
+          "width": 314
+        }
+      },
+      "spec": "section 112 Settings; type.title",
+      "expected": {
+        "height": 20.67,
+        "top": 20
+      }
+    },
+    {
+      "id": "taskbar.start_glyph",
+      "dimension": "iconography",
+      "surface": "desktop",
+      "kind": "first_ink_box",
+      "status": "frozen",
+      "params": {
+        "band_logical": 48,
+        "inset_logical": 2,
+        "start_fraction": 0.3,
+        "cluster_logical": 44
+      },
+      "compare": [
+        "height",
+        "centre_dy"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/taskbar-strip.png",
+        "scale_percent": 150,
+        "measured": {
+          "box_physical": [
+            1064,
+            19,
+            35,
+            35
+          ],
+          "centre_dy": 0.33,
+          "height": 23.33,
+          "width": 23.33
+        }
+      },
+      "spec": "sections 111 and 140.4: same control position, comparable visual weight",
+      "expected": {
+        "height": 23.33,
+        "centre_dy": 0.33
+      }
+    },
+    {
+      "id": "taskbar.start_glyph_width",
+      "dimension": "iconography",
+      "surface": "desktop",
+      "kind": "first_ink_box",
+      "status": "approved_deviation",
+      "params": {
+        "band_logical": 48,
+        "inset_logical": 2,
+        "start_fraction": 0.3,
+        "cluster_logical": 44
+      },
+      "compare": [
+        "width"
+      ],
+      "reference": {
+        "method": "harness",
+        "capture": "reports/artifacts/reference-26h2/taskbar-strip.png",
+        "scale_percent": 150,
+        "measured": {
+          "box_physical": [
+            1064,
+            19,
+            35,
+            35
+          ],
+          "centre_dy": 0.33,
+          "height": 23.33,
+          "width": 23.33
+        }
+      },
+      "spec": "sections 111 and 140.4",
+      "deviation": "door-mark: the original door mark (assets/branding/door-mask.svg, 18x20 optical area) replaces the four-pane Windows logo; its width is shape-dependent",
+      "expected": {
+        "width": 23.33
+      }
+    },
+    {
+      "id": "start.open",
+      "dimension": "motion",
+      "surface": "start-open",
+      "kind": "animation_ms",
+      "status": "frozen",
+      "params": {
+        "region": {
+          "anchor": "center",
+          "x": -200,
+          "y": -200,
+          "w": 400,
+          "h": 400
+        }
+      },
+      "compare": [
+        "duration_ms"
+      ],
+      "expected": {
+        "duration_ms": 163.7
+      },
+      "reference": {
+        "method": "sequence",
+        "sequence": "reports/artifacts/reference-26h2/motion/start-open/sequence.json",
+        "sequence_sha256": "cebe602d07d5aa4924bfbe224ddc1ddb222e36916b3bdf2c254f3bbb3ad5747e",
+        "scale_percent": 150,
+        "measured": {
+          "runs_ms": [
+            163.62,
+            163.72
+          ],
+          "duration_ms": 163.7,
+          "settle_from_trigger_ms": [
+            204.58,
+            202.41
+          ],
+          "sample_interval_ms": [
+            8.4,
+            7.5
+          ]
+        },
+        "note": "Owner-approved capture 2026-11-12: Windows key to open Start, CopyFromScreen of the centre 400x400 epx every ~8 ms; animation time from the first visible change to the settled frame (the input path before it is not animation; on a guest it includes the emulator input queue). A cold first open (still loading content, settled at 709 ms) is not kept."
+      },
+      "spec": "section 111 Motion capture; MOTION tokens motion.start_open"
+    }
+  ],
+  "motion_tracks": [
+    {
+      "id": "start-open",
+      "status": "captured",
+      "token": "motion.start_open",
+      "sequence": "reports/artifacts/reference-26h2/motion/start-open/sequence.json"
+    },
+    {
+      "id": "start-close",
+      "status": "not_captured",
+      "token": "motion.start_close"
+    },
+    {
+      "id": "flyout-open",
+      "status": "not_captured",
+      "token": "motion.flyout_open"
+    },
+    {
+      "id": "window-minimize",
+      "status": "not_captured",
+      "token": "motion.window_minimize"
+    },
+    {
+      "id": "window-restore",
+      "status": "not_captured",
+      "token": "motion.window_restore"
+    },
+    {
+      "id": "window-maximize",
+      "status": "not_captured",
+      "token": "motion.window_maximize"
+    },
+    {
+      "id": "snap-preview",
+      "status": "not_captured",
+      "token": "motion.snap_preview"
+    },
+    {
+      "id": "notification",
+      "status": "not_captured",
+      "token": "motion.notification"
+    },
+    {
+      "id": "settings-page-enter",
+      "status": "captured",
+      "token": "motion.page_enter",
+      "sequence": "reports/artifacts/reference-26h2/motion/settings-page/sequence.json"
+    },
+    {
+      "id": "lock-dismiss",
+      "status": "not_captured",
+      "token": "motion.lock_dismiss"
+    }
+  ],
+  "diff_document": null,
+  "verification_state": "not_run"
+}

@@ -1,0 +1,84 @@
+{
+  "file": "clock.ico",
+  "frames": 14,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "34b5f9f48ef68daad4dae4b264020ebe4308f17aa770a7ed3a203f23c2817093",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-16_altform-unplated.png",
+        "sha256": "0bc6dd1c5dc6b4390862a505cca0d537cf66d118c6b6765dd0f1f7ca3f894bfd",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-20_altform-unplated.png",
+        "sha256": "4a13ad7819d129703d7bc6c6295c26423688790162dae477c8c1d8e9dcb7e520",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-24_altform-unplated.png",
+        "sha256": "a8ae2c4211bda11f6c48cbce7c7710abbf3ca81492dff313203357960c624b68",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-30_altform-unplated.png",
+        "sha256": "1a5ff0a03f6cbeb9fa8163abb1a8c68547c8873b1936607a29329eb3ad052108",
+        "size": 30
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-32_altform-unplated.png",
+        "sha256": "5234646eac25bebfba4042774386297032406bc50cc0cb61ad812fc0e9408b6a",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-36_altform-unplated.png",
+        "sha256": "314b5775164bce84ea1042e98a0533497a4f3937b1b564a520b47aee9e02cc98",
+        "size": 36
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-40_altform-unplated.png",
+        "sha256": "a50c9e1cb2c90a796c592784ef9c4fddc6d119f9f50700b06cd4b298f258718b",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-48_altform-unplated.png",
+        "sha256": "40d6241ebcfcdcc1bc1fb6f2954635cf336b7fd3f480d7517f4036b027dde544",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-60_altform-unplated.png",
+        "sha256": "faf6ea1c6be415b1ec0d377f2f3fb2fc76d1b86dfecb80b5d3d97ec78a5600a1",
+        "size": 60
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-64_altform-unplated.png",
+        "sha256": "36fd50420b45ff9059971aedb2425a33bff2c8c3214aa087ad8996d4f467f67d",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-72_altform-unplated.png",
+        "sha256": "9408cd6389b82fcb634f2740dcae5b4034e093a2afee8ff27a3573289f368566",
+        "size": 72
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-80_altform-unplated.png",
+        "sha256": "64c70899d5af703a93583a4678a7ba70f934de799ba48557df5609c7b80cf24f",
+        "size": 80
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-96_altform-unplated.png",
+        "sha256": "e2622393c04cb4967b43fa32f26e2f1eed8d8ec90298278c043a57a3d5e02350",
+        "size": 96
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsAlarms_11.2607.6.0_x64__8wekyb3d8bbwe\\Assets\\AlarmsAppList.targetsize-256_altform-unplated.png",
+        "sha256": "9ad6f9ac0e06df7ade40988a37847d12a4caa6c67fb7b8c6e62c9ac7509cdf4e",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 14,
+  "use": "Owner-provided installed Windows reference; local development"
+}

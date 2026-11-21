@@ -1,0 +1,25 @@
+[package]
+name = "door-wireguard"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Sans-IO WireGuard (P15 VPN): Noise_IKpsk2 handshake, cookies, transport data, timers and wg-quick configuration"
+
+[dependencies]
+# Pinned RustCrypto primitives, shared with door-tls and the P14 sign-in
+# (MIT OR Apache-2.0; x25519-dalek BSD-3-Clause). BLAKE2s, HMAC-BLAKE2s and
+# keyed BLAKE2s come from blake2/hmac; ChaCha20-Poly1305 and
+# XChaCha20-Poly1305 (cookies) from chacha20poly1305.
+x25519-dalek = { version = "=2.0.1", default-features = false, features = ["static_secrets"] }
+chacha20poly1305 = { version = "=0.10.1", default-features = false, features = ["alloc"] }
+blake2 = { version = "=0.10.6", default-features = false }
+hmac = { version = "=0.12.1", default-features = false }
+
+[target.'cfg(not(target_os = "none"))'.dev-dependencies]
+# Host-only interoperability peer (Cloudflare's implementation, BSD-3-Clause);
+# never built for the guest.
+boringtun = { version = "=0.7.1", default-features = false }
+
+[lints]
+workspace = true

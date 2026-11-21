@@ -1,0 +1,16 @@
+[package]
+name = "door-msvcrt"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original scoped Windows C memory, string and heap runtime"
+[lib]
+name = "msvcrt"
+crate-type = ["rlib"]
+[features]
+guest-pe = []
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "asset": "Microsoft Selawik unmodified regular and semibold fonts",
+  "acquired_utc": "2026-10-17",
+  "release": "1.01",
+  "release_page": "https://github.com/microsoft/Selawik/releases/tag/1.01",
+  "release_commit": "b65ff9ce7c4673e75ec5c622924a6b6f61f2f876",
+  "archive": {
+    "url": "https://github.com/microsoft/Selawik/releases/download/1.01/Selawik_Release.zip",
+    "local_acquisition": "out/acquisitions/selawik-1.01/Selawik_Release.zip",
+    "sha256": "3f62c51e05e3b5a1e6241cf92a371f0be2ea1183aa87b30718bbd40832a8d423"
+  },
+  "license": {
+    "spdx": "OFL-1.1",
+    "file": "LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/microsoft/Selawik/b65ff9ce7c4673e75ec5c622924a6b6f61f2f876/LICENSE.txt",
+    "sha256": "77b7c2506d4efb22e09c8ccf10159f4956eab3ef7c007fef95de136bcf45300c",
+    "source_note": "Release ZIP contains font formats only; license acquired separately from exact release tag commit.",
+    "copyright": "Copyright 2015, Microsoft Corporation (www.microsoft.com), with Reserved Font Name Selawik.",
+    "reserved_font_name": "Selawik",
+    "redistribution_note": "Retain copyright and OFL license with redistributed/embedded fonts. Fonts are unchanged. No project-wide license is selected by this asset record."
+  },
+  "files": [
+    {
+      "path": "selawk.ttf",
+      "archive_member": "selawk.ttf",
+      "bytes": 44224,
+      "sha256": "e9d98518d8ac2817782a9a382430463a2e0793ea68350b695bb727d9a830ee1c",
+      "name_family": "Selawik",
+      "name_subfamily": "Regular",
+      "postscript_name": "Selawik-Regular",
+      "font_version": "Version 1.01"
+    },
+    {
+      "path": "selawksb.ttf",
+      "archive_member": "selawksb.ttf",
+      "bytes": 44192,
+      "sha256": "0a9e9d0549a10f24bef9b3a29e06fe6e0b5c21e7a784c503b048a307841a7783",
+      "name_family": "Selawik Semibold",
+      "name_subfamily": "Regular",
+      "postscript_name": "Selawik-Semibold",
+      "font_version": "Version 1.01"
+    }
+  ],
+  "inspection": "Only selected TTFs and exact pinned license extracted/read; TTF name-table metadata read independently. Other fonts/formats remain only in the ignored acquisition ZIP.",
+  "use": "P11 provisional readable original native UI typography, grayscale glyph coverage at 14 and 20 physical pixels. No Segoe UI Variable identity, shaping, hinting or Windows pixel-fidelity claim."
+}

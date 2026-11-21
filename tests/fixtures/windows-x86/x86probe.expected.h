@@ -1,0 +1,37 @@
+/* Generated from Windows 11 26H2's output of `x86probe.exe raw` on the owner's PC
+ * (one string per compared step). */
+    /* console */
+    "hello from x86 pointer=4\r\n"
+,
+    /* module */
+    "self=1 granular=1 machine=0x0000014c kernel32=1 below2g=1\r\n"
+    "exe=x86probe.exe\r\n"
+    "kernel32 folder=system32 name=kernel32.dll\r\n"
+,
+    /* memory */
+    "heap=1 aligned=1 below2g=1 zero=1 free=1\r\n"
+    "virtual=1 granular=1 below2g=1 last=42 free=1\r\n"
+,
+    /* tls */
+    "implicit=5 after=7 dynamic=1 value=1234\r\n"
+,
+    /* thread */
+    "thread=1 id=1 wait=0 code=7705042 mine=7 dynamic=1234\r\n"
+,
+    /* math */
+    "varargs=13000 x87=3605551 sse2=1414213\r\n"
+,
+    /* system */
+    "system arch=0 page=4096 min=0x00010000 max=0x7ffeffff type=586 granularity=0x00010000 cpus=1\r\n"
+    "native arch=9 page=4096 min=0x00010000 max=0xfffeffff type=8664 granularity=0x00010000 cpus=1\r\n"
+    "wow64=1 1 process2=1 machine=0x0000014c native=0x00008664\r\n"
+    "wow64dir=syswow64 length-ok=1 systemdir=system32\r\n"
+,
+    /* seh */
+    "av code=0xc0000005 parameters=2 read=0 raised=0xe0000001 count=2 first=0x00001234 value=0\r\n"
+,
+    /* unwind */
+    "unwind order=IOuR flags=0x00000002 continued=1\r\n"
+,
+    /* dll */
+    "dll loaded=1 export=1 relocated=1 seen=1,1,1,1 free=1 datafile=1 proc=1 resource=1 unload=1\r\n"

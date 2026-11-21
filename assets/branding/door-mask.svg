@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <!-- Door mark, monochrome mask variant (master specification 140.4).
+       24x24 design grid; the visible shape fills the centred 18x20 optical
+       area (x 3-21, y 2-22). A doorway frame (1.5-unit jambs and head, open
+       to the floor) on the right and a single door leaf swung toward the
+       viewer on the left, separated by 1.5 units of negative space. Edges sit
+       on the 1.5-unit grid so the opening stays a clear pixel column at 16 px.
+       One colour, no gradients, shadows, text or handle: the renderer applies
+       the control's foreground or accent colour to the exported coverage. -->
+  <path d="M12 21 V4 Q12 3 13 3 H20 Q21 3 21 4 V21 H19.5 V4.5 H13.5 V21 Z" fill="#000"/>
+  <path d="M10.5 2 V22 L3.6 19.7 Q3 19.5 3 18.9 V5.1 Q3 4.5 3.6 4.3 Z" fill="#000"/>
+</svg>

@@ -1,0 +1,19 @@
+[package]
+name = "door-pe-icon"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Windows icons: PE icon groups, .ico and .cur files, frame selection and DIB, PNG and QOI decoding, over ranged reads"
+
+[lints]
+workspace = true
+
+[features]
+# PNG frames (Vista and later 256 px icons) and QOI (Doors asset) decoding.
+png = ["dep:zune-png"]
+qoi = ["dep:qoi"]
+
+[dependencies]
+zune-png = { version = "=0.5.2", default-features = false, optional = true }
+qoi = { version = "=0.4.1", default-features = false, features = ["alloc"], optional = true }

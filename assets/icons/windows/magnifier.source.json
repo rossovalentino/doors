@@ -1,0 +1,15 @@
+{
+  "file": "magnifier.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "275fe09e01822d93fc7f4f98ed48678f35fae58091b42f75fc1fc496014178ce",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\Magnify.exe.mun",
+    "module_sha256": "566728a0e076cc4baa8061519ddafa8dedf498c44ddd1dd77362ec4aa41fce6c"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

@@ -1,0 +1,8 @@
+{
+    "source": "C:\\Program Files\\WindowsApps\\Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe\\Microsoft.Msn.Shell\\Themes\\Glyphs\\Font\\MSNMDL2.ttf",
+    "kind": "installed_windows_font_reference",
+    "retrieved": "2026-11-01",
+    "package": "Microsoft.BingWeather_4.54.63045.0_x64__8wekyb3d8bbwe",
+    "font_sha256": "79d11d3154c1a5ecddd963858cf6548ab8fc00b533c00eddcb18ca647323f066",
+    "use": "Owner-provided installed Windows reference; local development. Weather's navigation and command glyphs (assets/icons/windows-shell/manifest.json entries with font msn or msnx), rasterized offline; never redistributed."
+}

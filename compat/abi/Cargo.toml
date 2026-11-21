@@ -1,0 +1,20 @@
+[package]
+name = "door-windows-abi"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Pinned Windows x64 views and Door compatibility startup wire contract"
+
+[features]
+# PE compatibility DLLs only: the ntdll process heap as `#[global_allocator]`.
+guest-heap = []
+# Rust-only PE DLLs without a C runtime: panic handler, `_fltused`, `strlen`.
+guest-runtime = ["guest-heap"]
+
+# Workspace lints, except that `unsafe_code` is `deny` rather than `forbid` so
+# the feature-gated `allocator` FFI module alone can opt in.
+[lints.rust]
+unsafe_code = "deny"
+[lints.clippy]
+all = "warn"

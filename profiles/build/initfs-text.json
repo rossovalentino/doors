@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "record_kind": "initfs_inputs",
+  "entries": [
+    {"artifact":"door-console","destination":"bin/door-console.elf"},
+    {"artifact":"door-init","destination":"bin/door-init.elf"},
+    {"artifact":"door-session","destination":"bin/door-session.elf"},
+    {"artifact":"door-shell","destination":"bin/door-shell.elf"},
+    {"artifact":"door-storage","destination":"bin/door-storage.elf"},
+    {"artifact":"door-tools","destination":"seed/door-tools.elf"},
+    {"artifact":"tinybasic","class":"windows-fixture","destination":"seed/tinybasic.exe"},
+    {"source":"boot/config/session-boot.txt","destination":"system/boot.txt"},
+    {"source":"profiles/build/session-install.txt","destination":"system/install.manifest"},
+    {"source":"boot/config/session.conf","destination":"system/session.conf"},
+    {"artifact":"kernel32","class":"windows-dll","destination":"windows/kernel32.dll"},
+    {"artifact":"msvcrt","class":"windows-dll","destination":"windows/msvcrt.dll"},
+    {"artifact":"ntdll","class":"windows-dll","destination":"windows/ntdll.dll"}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "file": "voice-access.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "27bfefa634b99dc4f76f1733bb7ba585be89bc02afeeae23ff86d19dca5a85d7",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\VoiceAccess.exe",
+    "module_sha256": "0ac98d6ebf85929618382e3361afb0138b5dcf31e2ff13f3aadc7e673d224b02"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

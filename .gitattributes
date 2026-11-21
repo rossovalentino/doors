@@ -1,0 +1,34 @@
+* text=auto eol=lf
+DOOR_OS_MASTER_SPECIFICATION.md -text
+
+# Asset and fixture binaries: never line-ending normalized.
+*.a8 binary
+*.bgr binary
+*.bgra binary
+*.blob binary
+*.cab binary
+*.cat binary
+*.cur binary
+*.cursor binary
+*.deflate binary
+*.der binary
+*.dfa binary
+*.dict binary
+*.dll binary
+*.exe binary
+*.flac binary
+*.ico binary
+*.jpg binary
+*.mask binary
+*.msi binary
+*.png binary
+*.qoi binary
+*.raw binary
+*.u16 binary
+*.u8 binary
+*.zip binary
+*.tlb binary
+*.ttf binary
+# Raw Windows probe output and test data: kept byte for byte.
+**/tests/reference/** -text
+*.cdf -text

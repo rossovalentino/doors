@@ -1,0 +1,12 @@
+[package]
+name = "door-settings-map"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Settings route table, page sections and legacy command/URI redirects (allocation-free)"
+
+[dependencies]
+
+[lints]
+workspace = true

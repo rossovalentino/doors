@@ -1,0 +1,8 @@
+{
+    "source":  "C:\\Program Files\\WindowsApps\\Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe\\Assets\\PaintIcons.ttf",
+    "kind":  "installed_windows_font_reference",
+    "retrieved":  "2026-11-01",
+    "package":  "Microsoft.Paint_11.2605.81.0_x64__8wekyb3d8bbwe",
+    "font_sha256":  "cece1287e3760179989c27282320dfa0a15b62492aa94ee2e2a5e236c3d696a7",
+    "use":  "Owner-provided installed Windows reference; local development. Paint's menu-bar and ribbon glyphs (Paint Fluent Icons; assets/icons/windows-shell/manifest.json entries with font paint), rasterized offline; never redistributed."
+}

@@ -1,0 +1,15 @@
+{
+  "file": "on-screen-keyboard.ico",
+  "frames": 8,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "a2d614d61a195b55e894af0ab15fc17f56a98d83c6ef4c430e2b1344f3fb6fd9",
+  "sources": {
+    "group_id": 1,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\System32\\osk.exe",
+    "module_sha256": "e9becd8df5b2fef7c7f75d22f8c9df70e1440d4cb84dd1a948a64c630bbc23bd"
+  },
+  "supported_frames": 8,
+  "use": "Owner-provided installed Windows reference; local development"
+}

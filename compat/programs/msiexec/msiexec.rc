@@ -1,0 +1,35 @@
+// msiexec.exe's version resource: what File Explorer's Details and
+// Properties show, as Windows' msiexec.exe carries one (Doors' names; the
+// version is Doors' build, 26300.1, as `ver` reports it, with Windows
+// Installer's 5.0 product version).
+#pragma code_page(65001)
+#include <winver.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 5,0,26300,1
+ PRODUCTVERSION 5,0,26300,1
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "Macrohard Corporation"
+            VALUE "FileDescription", "Doors® installer"
+            VALUE "FileVersion", "5.0.26300.1"
+            VALUE "InternalName", "msiexec"
+            VALUE "LegalCopyright", "© Macrohard Corporation. All rights reserved."
+            VALUE "OriginalFilename", "msiexec.exe"
+            VALUE "ProductName", "Doors Installer - Unicode"
+            VALUE "ProductVersion", "5.0.26300.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END

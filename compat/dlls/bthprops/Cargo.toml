@@ -1,0 +1,22 @@
+[package]
+name = "door-bthprops"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original bthprops.cpl: Bluetooth APIs on a computer without a radio"
+
+[lib]
+name = "bthprops"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-windows-abi/guest-runtime"]
+
+[dependencies]
+door-windows-abi = { path = "../../abi", features = ["guest-heap"] }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

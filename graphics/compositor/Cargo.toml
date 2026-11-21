@@ -1,0 +1,12 @@
+[package]
+name = "door-graphics-core"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[dependencies]
+door-design-tokens = { path = "../../frameworks/design-tokens" }
+
+[lints]
+workspace = true

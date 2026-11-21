@@ -1,0 +1,46 @@
+// The DISPATCH-A type library: a dual interface, a plain automation
+// interface, an enum, a record and a coclass (MIDL builds doorsprobe.tlb).
+import "oaidl.idl";
+import "ocidl.idl";
+
+[uuid(D0025A10-C0A1-4E5B-8F00-436F6D50726F), version(1.2), helpstring("Doors Probe Type Library")]
+library DoorsProbeLib
+{
+    importlib("stdole2.tlb");
+
+    typedef [uuid(D0025A11-C0A1-4E5B-8F00-436F6D50726F), helpstring("Probe colors")]
+    enum ProbeColor { ProbeRed = 1, ProbeGreen = 2, ProbeBlue = 4 } ProbeColor;
+
+    typedef [uuid(D0025A12-C0A1-4E5B-8F00-436F6D50726F)]
+    struct ProbePoint { long x; long y; BSTR label; } ProbePoint;
+
+    [object, uuid(D0025A13-C0A1-4E5B-8F00-436F6D50726F), dual, oleautomation, nonextensible,
+     helpstring("The probe's dual interface")]
+    interface IDoorsProbe : IDispatch
+    {
+        [id(1), propget, helpstring("The name")] HRESULT Name([out, retval] BSTR *value);
+        [id(1), propput] HRESULT Name([in] BSTR value);
+        [id(2), helpstring("Adds two numbers")] HRESULT Add([in] long a, [in] long b, [out, retval] long *sum);
+        [id(3)] HRESULT Echo([in] VARIANT value, [out, retval] VARIANT *copy);
+        [id(4)] HRESULT Scale([in] double x, [in, defaultvalue(2.0)] double factor,
+                              [out, retval] double *result);
+        [id(5)] HRESULT Fail(void);
+        [id(6)] HRESULT Join([in] SAFEARRAY(BSTR) parts, [out, retval] BSTR *joined);
+        [id(7), propget] HRESULT Color([out, retval] ProbeColor *value);
+        [id(8)] HRESULT Count([in, optional] VARIANT start, [out, retval] long *n);
+    };
+
+    [object, uuid(D0025A14-C0A1-4E5B-8F00-436F6D50726F), oleautomation]
+    interface IDoorsCounter : IUnknown
+    {
+        HRESULT Next([out, retval] long *value);
+        HRESULT Reset([in] long start);
+    };
+
+    [uuid(D0025A15-C0A1-4E5B-8F00-436F6D50726F), helpstring("Doors Probe Object")]
+    coclass DoorsProbeObject
+    {
+        [default] interface IDoorsProbe;
+        interface IDoorsCounter;
+    };
+};

@@ -1,0 +1,22 @@
+[package]
+name = "door-setupapi"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original setupapi.dll: device installation queries over an empty device tree"
+
+[lib]
+name = "setupapi"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-windows-abi/guest-runtime"]
+
+[dependencies]
+door-windows-abi = { path = "../../abi", features = ["guest-heap"] }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

@@ -1,0 +1,171 @@
+{
+  "reviewer": "/root/rendering_critic",
+  "mode": "independent_read_only",
+  "recorded_by": "/root from reviewer's final structured response",
+  "scope": "P12 measured text navigation and visible-row pointer selection",
+  "verdict": "accepted_bounded",
+  "phase_closure": false,
+  "unresolved_actionable_findings": [],
+  "identities": {
+    "build": "3d8138320a2908a42f652ca483afebd55ca1ac4eb73c37e6217697956483733f",
+    "final": "f6da8bef4412d43a7d21e63f67f6fdb50a1e4407835b28cecc8cf87136bb6c7a",
+    "build_to_final_executable_delta": [
+      "tools/xtask/src/desktop/notes.rs"
+    ],
+    "scope": "Host geometry-oracle corrections only; guest artifacts unchanged",
+    "code_asset_profile_inputs_rehashed": 1010
+  },
+  "resolved_findings": [
+    "Rightward arrival visits upstream wrap position before downstream; symmetric traversal covered",
+    "Capture cancellation checked during held motion before button-up",
+    "Body comparisons include both wrap carets and leftmost caret column",
+    "Fixture follows actual full-width client geometry without invented one-pixel inset"
+  ],
+  "evidence": [
+    {
+      "path": "reports/runs/host-1792539359689866800-23084/report.json",
+      "sha256": "05d30c1324df451e34d85ee20cd822b1c5f2e61e97a43d2deefd88f2179fb5ad",
+      "scope": "build;26 artifact/rebuild files and5 independent application pairs",
+      "success": true,
+      "inputs_unchanged": true
+    },
+    {
+      "path": "reports/runs/host-1792539708096323300-12504/report.json",
+      "sha256": "3e2381b72efa2b5d745ee7ba751bc016a979a725e7e51ab51183da996395f864",
+      "scope": "579tests/33executables",
+      "success": true,
+      "inputs_unchanged": true
+    },
+    {
+      "path": "reports/runs/host-1792539708130836400-22652/report.json",
+      "sha256": "77a116d01039224032c867503930cfc5e95d111178f71e60d4a2af1b438ba8b1",
+      "scope": "Notes1x26checks/two boots/77file hashes",
+      "success": true,
+      "inputs_unchanged": true
+    },
+    {
+      "path": "reports/runs/host-1792539708138120900-10172/report.json",
+      "sha256": "e0227616298fa66af89a2943953a59e864b9c3b90bc79babc74c6eb60481eca4",
+      "scope": "Notes3x26checks/two boots/77file hashes",
+      "success": true,
+      "inputs_unchanged": true
+    },
+    {
+      "path": "reports/runs/host-1792539836382228100-24488/report.json",
+      "sha256": "c5f11ed2ef935cbbbf563fc366ab5245ffe83d09f415e95c742185d675025cc9",
+      "scope": "Files1x19checks/two boots/68file hashes",
+      "success": true,
+      "inputs_unchanged": true
+    },
+    {
+      "path": "reports/runs/host-1792539836410062100-3976/report.json",
+      "sha256": "84e0c1a587c83da8c647ce601470661a46aca5b6cd3887f5009e55923fab093b",
+      "scope": "Files3x19checks/two boots/68file hashes",
+      "success": true,
+      "inputs_unchanged": true
+    },
+    {
+      "path": "reports/runs/host-1792539492528254300-26144/report.json",
+      "sha256": "c7fbea00f80202665c5efcee3e7157a1f8df148063cbddd6d54d57a5562b60c7",
+      "scope": "Default WHPX/RAMFB4K16checks/39file hashes",
+      "success": true,
+      "inputs_unchanged": true
+    }
+  ],
+  "artifact_binding": {
+    "manifest_sha256": "52aeb93e1dbd7d5b59002ff488bfc4a4c8003e6c96a9f49585707d5bcd51b651",
+    "initfs_sha256": "06c9777b6015ee5d8546361861e564161b55173596fecfa41a5b8153e8c75ad9",
+    "only_artifact_changed_from22876": "door-workspace",
+    "workspace_sha256": "7407390b12fef9b9278fd64150ba9ebbbb0628c172c560a70f9e14287005061f",
+    "workspace_file_bytes": 11398928,
+    "workspace_load_span": 11337728,
+    "load_segments": 3,
+    "loader_limit": 16777216
+  },
+  "independent_native_audit": {
+    "new_boots": 9,
+    "argv_and_manifests_match": true,
+    "all_leaked": 0,
+    "device_pages_each": 8,
+    "notes_process_thread_counts": [
+      7,
+      6
+    ],
+    "files_process_thread_counts": [
+      8,
+      6
+    ],
+    "default_process_thread_count": 8,
+    "body_equalities_per_density": 11,
+    "comparison_rectangle": [
+      420,
+      327,
+      875,
+      510
+    ],
+    "caret_probes": [
+      [
+        420,
+        327
+      ],
+      [
+        865,
+        327
+      ],
+      [
+        420,
+        347
+      ]
+    ],
+    "wrap_first_row_bytes": 34,
+    "theme_backgrounds": [
+      255,
+      43
+    ],
+    "notes_raw_snapshots": 14,
+    "files_raw_snapshots": 6,
+    "all_catalog_and_journal_crcs_valid": true,
+    "journals_clean": true,
+    "notes_identity": {
+      "object": 26,
+      "inode": 17,
+      "generation": 1
+    },
+    "files_identity_preserved": true,
+    "remaining_qemu": 0,
+    "owner_volume_present": false
+  },
+  "retained_failures": [
+    {
+      "path": "reports/runs/host-1792539492553435300-16152/report.json",
+      "sha256": "e968975d0bdbc1ab331edf8188b72c183b826550e5dc635846b2edc969f2942a",
+      "reason": "Incorrect host caret-coordinate oracle; product caret correct",
+      "capture_png_sha256": "0811298ab5036d9224713d45d8524a72b2a60fd7f4ca7640634541f8aa35cee7"
+    },
+    {
+      "path": "reports/runs/host-1792539492592995700-19036/report.json",
+      "sha256": "ef62af0c32faa58399ed546355167be8033cd2a1680e9dd776e034f610f2b7aa",
+      "reason": "Same host geometry-oracle error at3x",
+      "capture_png_sha256": "7ef96e4389075a19bf2729e87e08abe799c32ad76c5a6de9022420f3186cbf9f"
+    }
+  ],
+  "inherited": {
+    "combined6840_sha256": "136943c300abefbef661f4493ac067abd72d24a0e6032607f8020875c68820aa",
+    "foundation25484_sha256": "17855ed3c57f3e1e13bb9352b6002e81d9689dc4e90cfea993a0ede0d0cdf588",
+    "scope": "Unchanged subsystem inputs/artifacts only; no fresh full combined/foundation claim"
+  },
+  "limits": [
+    "Visible-row drag; no Shift-click/double/triple click/edge autoscroll/unwrapped horizontal scrolling",
+    "ASCII/tab/CR/LF; no Unicode/shaping/IME/clipboard/accessibility",
+    "Atomic save/conflict prevention and modern Notepad fidelity remain separate",
+    "No FPS/latency-distribution/Microsoft ClearType equivalence/full Windows fidelity claim",
+    "Finite review cannot establish absence of all defects; P12 remains partial"
+  ],
+  "cumulative": {
+    "path": "reports/runs/host-1792540014952848700-11340/report.json",
+    "sha256": "fb33d50e99aad77adc343087fbda12ea1fa3598b043f3146728eade5fcbd0d70",
+    "success": false,
+    "inputs_unchanged": true,
+    "reason": "Original historical P00 report missing"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "file": "calculator.ico",
+  "frames": 14,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "f7c16958184e7d63178836826c405114d32b68cf4ccec4c611e4501e3c9707a0",
+  "sources": {
+    "files": [
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-16_altform-unplated.png",
+        "sha256": "cb5762d62b9d50ba7d173aa511193bc8aeb00c204003c6930c0160320b1b595a",
+        "size": 16
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-20_altform-unplated.png",
+        "sha256": "07fe2b8ad9afba7e5a5bf80c84ee025a98efef2781761a6bd2c126465ccd7195",
+        "size": 20
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-24_altform-unplated.png",
+        "sha256": "212adb49d66eaf4898ee9fda242fe00b2109e6b669b018212d6d113fb059784c",
+        "size": 24
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-30_altform-unplated.png",
+        "sha256": "2d78e0855725648530803a79caa2e726f177a8fe3468df5cc5c5c541ce0cc5eb",
+        "size": 30
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-32_altform-unplated.png",
+        "sha256": "d3e6693fc501e9402b4ab978ba856c268e8d285b897e2659782fe85744f1ce46",
+        "size": 32
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-36_altform-unplated.png",
+        "sha256": "2b40bfe80489c8d4c2dd116be8a0a072577a535d7ae98a41b25f542290e6149f",
+        "size": 36
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-40_altform-unplated.png",
+        "sha256": "3aff51d0814886e1409a35eff3b6491ee495fb5cc614209ddc460666ec80e7d1",
+        "size": 40
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-48_altform-unplated.png",
+        "sha256": "710ac2bdd505ccd2c9a2e3f48e3998c9da56eae3a275416deb33c5a23ed8ae40",
+        "size": 48
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-60_altform-unplated.png",
+        "sha256": "1872feaa87c66c402f7dae1b39c137799dc8252ff0fd558d762f98882b9b61da",
+        "size": 60
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-64_altform-unplated.png",
+        "sha256": "c36f7646eaf89926c692180dd3b27b118a1abc01efe2a192b5be0408fa8649e1",
+        "size": 64
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-72_altform-unplated.png",
+        "sha256": "45db9f8bb16daf15f8a3f18cf0d9722d3767c7318d85e4061d8a666b8d232fd3",
+        "size": 72
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-80_altform-unplated.png",
+        "sha256": "5d7ea46b30e9de3b5a716426e877d19d9033f38ffcc3edcff6d8a91c9d0a7ed7",
+        "size": 80
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-96_altform-unplated.png",
+        "sha256": "2610f1a84bc4f08f341ce7bd799a3c1ee9804f482a2063d96249d813d7821d24",
+        "size": 96
+      },
+      {
+        "path": "\\\\?\\C:\\Program Files\\WindowsApps\\Microsoft.WindowsCalculator_11.2607.0.0_x64__8wekyb3d8bbwe\\Assets\\CalculatorAppList.targetsize-256_altform-unplated.png",
+        "sha256": "47d531d0f1916c021015943a3c12738b2ca00c46968a4a47496fed3d16e65389",
+        "size": 256
+      }
+    ],
+    "method": "authored targetsize PNGs"
+  },
+  "supported_frames": 14,
+  "use": "Owner-provided installed Windows reference; local development"
+}

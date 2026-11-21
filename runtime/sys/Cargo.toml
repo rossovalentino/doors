@@ -1,0 +1,20 @@
+[package]
+name = "door-sys"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Allocation-free x64 Door Native ABI 1 syscall boundary"
+
+[features]
+# Explicitly selected only when building original PE DLLs for the Door kernel.
+# Ordinary host builds never issue a Door trap on Windows.
+door-personality = []
+
+[dependencies]
+door-abi = { path = "../abi" }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+[lints.clippy]
+all = "warn"

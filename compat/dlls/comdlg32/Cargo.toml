@@ -1,0 +1,24 @@
+[package]
+name = "door-comdlg32"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Original Open/Save common dialogs with Explorer-style hooks over user32 and the Door file service"
+
+[lib]
+name = "comdlg32"
+crate-type = ["rlib"]
+
+[features]
+guest-pe = ["door-windows-gui-guest/guest-pe"]
+
+[dependencies]
+door-windows-gui = { path = "../../gui" }
+door-windows-gui-guest = { path = "../../gui/guest" }
+door-windows-abi = { path = "../../abi", features = ["guest-heap"] }
+
+[lints.rust]
+unsafe_code = "allow"
+[lints.clippy]
+all = "warn"

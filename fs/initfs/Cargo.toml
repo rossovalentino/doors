@@ -1,0 +1,10 @@
+[package]
+name = "door-initfs"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Checked constrained read-only ustar boot archive"
+
+[lints]
+workspace = true

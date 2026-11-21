@@ -1,0 +1,15 @@
+{
+  "file": "file-certificate.ico",
+  "frames": 6,
+  "kind": "installed_windows_icon_reference",
+  "schema_version": 1,
+  "sha256": "08b70afc9dd60ba8768e2726667248d1b2e45b50a7e1e0e3cd443743ee9596a6",
+  "sources": {
+    "group_id": 3410,
+    "method": "checked PE RT_GROUP_ICON/RT_ICON bytes; no module loading",
+    "module": "\\\\?\\C:\\Windows\\SystemResources\\cryptui.dll.mun",
+    "module_sha256": "0bf23128b8e492df304bc7dc7f0ac6cfd4049f6cd41955b0e9b7d81240d2a760"
+  },
+  "supported_frames": 2,
+  "use": "Owner-provided installed Windows reference; local development"
+}

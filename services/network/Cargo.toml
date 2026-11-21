@@ -1,0 +1,37 @@
+[package]
+name = "door-network"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+
+[features]
+native = []
+
+[[bin]]
+name = "door-network"
+path = "src/main.rs"
+required-features = ["native"]
+test = false
+bench = false
+
+[dependencies]
+door-abi = { path = "../../runtime/abi" }
+door-rt = { path = "../../runtime/rt" }
+door-sys = { path = "../../runtime/sys" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+# The protected-service request loop (`server`), shared with Init and Storage.
+door-system-services = { path = ".." }
+# WireGuard VPN connections (P15): the sans-IO protocol.
+door-wireguard = { path = "../../crates/wireguard" }
+# Windows Defender Firewall rules and the allow/block decision (P15).
+door-firewall = { path = "../../crates/firewall" }
+# TCP/IP for the P15 network service: smoltcp, 0BSD, pinned, no std, IPv4
+# with DHCP and IPv6 with autoconfiguration (ipv6.rs), DNS, ICMP, UDP and
+# TCP over Ethernet; room for six addresses (IPv4, VPN, link-local, global).
+smoltcp = { version = "=0.12.0", default-features = false, features = ["alloc", "medium-ethernet", "proto-ipv4", "proto-dhcpv4", "proto-dns", "proto-ipv4-fragmentation", "proto-ipv6", "iface-max-addr-count-8", "iface-max-route-count-4", "iface-neighbor-cache-count-32", "socket-tcp", "socket-udp", "socket-icmp", "socket-raw", "socket-dhcpv4", "socket-dns", "multicast", "iface-max-multicast-group-count-16"] }
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+[lints.clippy]
+all = "warn"

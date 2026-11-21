@@ -1,0 +1,16 @@
+[package]
+name = "door-ui"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Door UI: retained native toolkit (widget tree, layout, display lists, events, focus, themes, controls, semantics)"
+
+[dependencies]
+door-accessibility = { path = "../accessibility" }
+door-graphics-core = { path = "../../graphics/compositor" }
+door-graphics-text = { path = "../text" }
+door-service-protocol = { path = "../../crates/service-protocol" }
+
+[lints]
+workspace = true
